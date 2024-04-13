@@ -1,0 +1,15 @@
+name: 笔记
+title: GoCalf 杂七杂八的笔记
+logo:
+  avatar: '[{config.avatar}](/about/)'
+  title: '[{config.title}](/notes/)'
+  subtitle: '杂七杂八的笔记 | 尽量留下点儿什么'
+# icon: # 列表页图标
+# cover: # 封面页大图
+# coverpage: [cover, title, description] # 封面页显示的内容
+coverpage: false
+base_dir: /notes/
+tree:
+  - index
+
+license: true # Seems not working.

@@ -1,0 +1,9 @@
+# https://www.svgviewer.dev/
+
+# https://iconduck.com/sets/solar-icon-set/styles/bold-duotone
+# - Delete svg.height and svg.width (or set to 32).
+# - Delete svg.fill.
+# - Update svg.g.fill to currentColor.
+
+solar:notebook-bold-duotone: <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="m3 8c0-2.82843 0-4.24264.87868-5.12132s2.29289-.87868 5.12132-.87868h6c2.8284 0 4.2426 0 5.1213.87868s.8787 2.29289.8787 5.12132v8c0 2.8284 0 4.2426-.8787 5.1213s-2.2929.8787-5.1213.8787h-6c-2.82843 0-4.24264 0-5.12132-.8787s-.87868-2.2929-.87868-5.1213z" opacity=".5"/><path clip-rule="evenodd" d="m8.75 2.01221v19.99889h-1.5v-19.99889z" fill-rule="evenodd"/><path clip-rule="evenodd" d="m1.25 8c0-.41421.33579-.75.75-.75h2c.41421 0 .75.33579.75.75s-.33579.75-.75.75h-2c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h2c.41421 0 .75.3358.75.75s-.33579.75-.75.75h-2c-.41421 0-.75-.3358-.75-.75zm0 4c0-.4142.33579-.75.75-.75h2c.41421 0 .75.3358.75.75s-.33579.75-.75.75h-2c-.41421 0-.75-.3358-.75-.75z" fill-rule="evenodd"/><path d="m10.75 6.5c0-.41421.3358-.75.75-.75h5c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-5c-.4142 0-.75-.33579-.75-.75z"/><path d="m10.75 10c0-.41421.3358-.75.75-.75h5c.4142 0 .75.33579.75.75 0 .4142-.3358.75-.75.75h-5c-.4142 0-.75-.3358-.75-.75z"/></g></svg>
+solar:user-bold-duotone: <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><circle cx="12" cy="6" r="4"/><path d="m20 17.5c0 2.4853 0 4.5-8 4.5s-8-2.0147-8-4.5 3.58172-4.5 8-4.5c4.4183 0 8 2.0147 8 4.5z" opacity=".5"/></g></svg>
