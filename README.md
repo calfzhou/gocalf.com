@@ -1,5 +1,11 @@
 # GoCalf
 
+## Preview
+
+``` bash
+npx hexo s
+```
+
 ## Writing
 
 ### Notes
