@@ -10,7 +10,7 @@ menu_id: notes
 
 <!-- node 2024 年 -->
 并没有放弃 Joplin。只是想着，乱七八糟的笔记中，或许有一些可以放在 GitHub 上，并生成静态站点。总比写博客省事儿。
-{% grid c:2 %}
+{% grid %}
 <!-- cell -->
 {% link https://hexo.io/ Hexo - A fast, simple & powerful blog framework icon:https://hexo.io/logo.svg %}
 <!-- cell -->
