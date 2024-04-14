@@ -1,7 +1,7 @@
 ---
 title: 笔记工具
 date: 2024-04-13 15:27:19
-update: 2024-04-13 15:27:19
+updated: 2024-04-13 15:27:19
 wiki: notes
 menu_id: notes
 ---

@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-update: {{ date }}
+updated: {{ date }}
 wiki: notes
 menu_id: notes
 ---
