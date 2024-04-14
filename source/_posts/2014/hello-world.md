@@ -1,39 +1,20 @@
 ---
 title: Hello World
 date: 2024-04-13 11:02:06
+update: 2024-04-14 23:12:28
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+{% quot 再次起航 %}
 
-## Quick Start
+[之前的博客](https://blog.gocalf.com/) 停更了十年。
 
-### Create a new post
+十一年前以为更新的慢是因为 WordPress 太重了，换成了基于 Pelican 的静态站点。
 
-``` bash
-$ hexo new "My New Post"
-```
+{% quot 很傻很天真 %}
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+当然如果一定要找一些理由，一方面是当时选了 reStructuredText，功能足够丰富但确实比 Markdown 要麻烦一些。另一方面，我从小就一直不爱也不会写作文，为什么要折磨自己写什么鬼的博客啊。
 
-### Run server
+这次选择了 Hexo + Markdown。虽然一般都是用这个做博客的，但我选了这个 [Stellar：开始您全新的博客之旅 - XAOXUU](https://xaoxuu.com/wiki/stellar/) 主题，内置了 wiki 系统。我只是想把一些整理过的 [笔记](/notes/) 放出来。
 
-``` bash
-$ hexo server
-```
+不说了。一定要减少仪式感，要不然就会再次放弃。
 
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+{% emoji blobcat ablobcatrainbow %}
