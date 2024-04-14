@@ -37,8 +37,8 @@ article:
 ######## Footer ########
 footer:
   content: |
-    本站由 [{author.name}](/) 使用 [Hexo](https://hexo.io/) 的 [{theme.name} {theme.version}]({theme.tree}) 主题创建。
     本站所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
+    本站由 [{author.name}](/) 使用 [Hexo](https://hexo.io/) 的 [{theme.name} {theme.version}]({theme.tree}) 主题创建。Copyright © 2011-2024 [gocalf.com](/) 保留所有权利。
 
 style:
   prefers_theme: auto # auto / light / dark
