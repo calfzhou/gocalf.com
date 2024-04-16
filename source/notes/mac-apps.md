@@ -49,6 +49,8 @@ updated: 2024-04-16 22:56:13
 
 - [Joplin](https://joplinapp.org/)
   - > Joplin is an open source note-taking app. Capture your thoughts and securely access them from any device.
+- [Heynote](https://heynote.com/)
+  - > A dedicated scratchpad for developers
 - 💰 ~~[Bear](https://bear.app/)~~
   - > Markdown notes you’ll love
 
@@ -110,8 +112,6 @@ updated: 2024-04-16 22:56:13
 ### 编辑器 / IDE
 
 - [Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
-- [Heynote](https://heynote.com/)
-  - > A dedicated scratchpad for developers
 - 💰 [Sublime Text - Text Editing, Done Right](https://www.sublimetext.com/)
 - [Zed - Code at the speed of thought](https://zed.dev/)
   - > Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. It's also open source.
