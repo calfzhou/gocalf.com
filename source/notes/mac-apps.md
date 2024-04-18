@@ -1,10 +1,11 @@
 ---
-title: 我最爱的 MacOS Apps
+title: macOS Apps
 wiki: notes
 menu_id: notes
 date: 2024-04-16 22:56:13
-updated: 2024-04-16 22:56:13
+updated: 2024-04-18 22:21:22
 ---
+
 ## 系统相关 / 实用工具
 
 - [AppCleaner](https://freemacsoft.net/appcleaner/)
@@ -200,3 +201,11 @@ updated: 2024-04-16 22:56:13
 
 - [Apache Directory - Welcome to Apache Directory Studio](https://directory.apache.org/studio/)
   - > The Eclipse-based LDAP browser and directory client
+
+### 游戏模拟器
+
+- [RetroArch](https://www.retroarch.com/)
+  - > RetroArch is a frontend for emulators, game engines and media players.
+  - > RetroArch can run on the usual platforms like Windows, macOS and Linux, but it stands alone in that it can support far more platforms beyond just that.
+- [OpenEmu - Multiple Video Game System](https://openemu.org/)
+  - > 🕹 Retro video game emulation for macOS
