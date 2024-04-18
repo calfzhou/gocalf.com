@@ -6,10 +6,15 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
   },
   "hexo": {
     "version": "7.1.1"
+  },
+  "lint-staged": {
+    "source/**/*.md": "hexo-update-time"
   },
   "dependencies": {
     "hexo": "^7.0.0",
@@ -22,5 +27,10 @@
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-stellar": "^1.27.0"
+  },
+  "devDependencies": {
+    "hexo-update-time": "^1.1.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2"
   }
 }
