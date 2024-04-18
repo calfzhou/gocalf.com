@@ -11,7 +11,7 @@
     "lint-staged": "lint-staged"
   },
   "hexo": {
-    "version": "7.1.1"
+    "version": "7.2.0"
   },
   "lint-staged": {
     "source/**/*.md": "hexo-update-time"
