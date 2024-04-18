@@ -3,8 +3,9 @@ title: 字体 font-family 选择
 wiki: notes
 menu_id: notes
 date: 2024-04-17 22:25:24
-updated: 2024-04-17 22:25:24
+updated: 2024-04-18 22:09:10
 ---
+
 ## 网页文本字体的选择
 
 一般在显示器上，使用无衬线体（sans-serif）会比较舒服，衬线体（serif）看着会比较累，或者说比较正式，也更适合印刷制品。
@@ -67,9 +68,9 @@ VS Code 无法实现这点，因为它是基于 Electron 也就是浏览器的 H
 
 [fonts/UbuntuMono at master · powerline/fonts](https://github.com/powerline/fonts/tree/master/UbuntuMono)
 
-- {% mark ✔ color:green %} 中英文比例严格，能对齐。
-- {% mark ✔ color:green %} 英文长宽比很协调，不会显得很瘦。
-- {% mark ✔ color:green %} 字符 `liLI10O` 区分明显，适合编程。
+- {% mark ✓ color:green %} 中英文比例严格，能对齐。
+- {% mark ✓ color:green %} 英文长宽比很协调，不会显得很瘦。
+- {% mark ✓ color:green %} 字符 `liLI10O` 区分明显，适合编程。
 
 PS. VS Code editor font family settings: `'Ubuntu Mono', Consolas, 'Courier New', monospace`.
 
@@ -79,13 +80,13 @@ PS. VS Code editor font family settings: `'Ubuntu Mono', Consolas, 'Courier New'
 
 Font Family: `Source Code Pro` or `Source Code Variable`
 
-- {% mark ✘ color:error %} 不支持中文，中文字符的宽度不等于两个英文字符
+- {% mark ✗ color:red %} 不支持中文，中文字符的宽度不等于两个英文字符
 
 ### Source Han Mono
 
 [GitHub - adobe-fonts/source-han-mono: Source Han Mono | 思源等宽 | 思源等寬 | 思源等寬 香港 | 源ノ等幅 | 본모노](https://github.com/adobe-fonts/source-han-mono)
 
-- {% mark ✘ color:error %} 中文字符的宽度不等于两个英文字符
+- {% mark ✗ color:red %} 中文字符的宽度不等于两个英文字符
 
 ### Inconsolata
 
@@ -109,7 +110,7 @@ Font Family: `Source Code Pro` or `Source Code Variable`
 
 Font Family: `M+ 1m`
 
-- {% mark ✘ color:error %} 英文字符太瘦了
+- {% mark ✗ color:red %} 英文字符太瘦了
 
 ## 本站字体选择
 
