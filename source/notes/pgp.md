@@ -3,7 +3,7 @@ title: PGP - Pretty Good Privacy
 wiki: notes
 menu_id: notes
 date: 2024-04-20 11:34:40
-updated: 2024-04-20 20:46:59
+updated: 2024-04-20 21:16:54
 mermaid: true
 references:
   - https://ulyc.github.io/2021/01/13/2021%E5%B9%B4-%E7%94%A8%E6%9B%B4%E7%8E%B0%E4%BB%A3%E7%9A%84%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8PGP-%E4%B8%8A/
@@ -289,7 +289,7 @@ git config --global user.signingkey SUBKEY-ID
 git config --global commit.gpgsign true # 开启默认使用签名（否则需要在 commit 的时候加 `-S` 参数
 ```
 
-### 签名和验签
+### 签名或验签
 
 用具有 S 用途的子密钥进行签名或验签，用私钥签名，公钥验签。
 
@@ -310,7 +310,7 @@ gpg -b -o SIGN ORIGIN-FILE # -b = --detach-sign
 gpg --verify SIGN ORIGIN-FILE
 ```
 
-### 文件加密或解密
+### 加密或解密文件
 
 用具有 E 用途的子密钥进行文件加密或解密，用公钥加密，私钥解密。
 
@@ -324,7 +324,7 @@ gpg -d -o ORIGIN-FILE ENCRYPTED-FILE
 
 如果在加密的同时还要加上签名，可以加 `-s` 参数。解密的时候会同时验证签名。
 
-### 用临时指定的密码对文件加密或解密
+### 用密码加密或解密文件
 
 即使不生成 PGP 密钥，也可以使用 gpg 命令对文件做加解密。
 
@@ -334,3 +334,7 @@ gpg -c -o ENCRYPTED-FILE ORIGIN-FILE # -c == --symmetric
 # 解密。用加密时的密码。
 gpg -d -o ORIGIN-FILE ENCRYPTED-FILE
 ```
+
+### 在公有云上加密保存 git 仓库
+
+把本地仓库推到 GitHub 上，如果是特别敏感的内容，推到 private 仓库也并不安全，可以利用 PGP 密钥结合相关的辅助工具，使得 push 到 GitHub 上面的内容全部都加密过。详情参见 [Git with Encryption](/notes/git-with-encryption)。
