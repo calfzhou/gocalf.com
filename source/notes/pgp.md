@@ -3,14 +3,13 @@ title: PGP - Pretty Good Privacy
 wiki: notes
 menu_id: notes
 date: 2024-04-20 11:34:40
-updated: 2024-04-20 15:45:44
+updated: 2024-04-20 19:25:47
 mermaid: true
 references:
   - https://ulyc.github.io/2021/01/13/2021%E5%B9%B4-%E7%94%A8%E6%9B%B4%E7%8E%B0%E4%BB%A3%E7%9A%84%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8PGP-%E4%B8%8A/
   - https://www.rectcircle.cn/posts/understand-and-use-gpg/
   - https://www.lixeon.com/blog/20220621-pgp/
 ---
-
 
 {% blockquote Bruce Schneier , - Applied Cryptography %}
 There are two kinds of cryptography in this world: cryptography that will stop your kid sister from reading your files, and cryptography that will stop major governments from reading your files.
@@ -251,6 +250,8 @@ Tails 调时区需要输入管理员密码，管理员密码需要在系统刚�
 
 在生成主密钥时，应生成一个吊销证书，并保存在更安全的地方，且最好多保存一份。这是一套密钥的最终兜底。
 
+打印出来存放是个不错的方式，不是很长，需要用到的时候，照着敲一次。
+
 ### 绑定 UID
 
 虽然一套密钥可以包含多个 UID（name + email + comment），还是建议为不同的身份创建不同的主密钥，如个人身份、某公司雇员身份应分别使用不同的主密钥。
@@ -261,10 +262,10 @@ Tails 调时区需要输入管理员密码，管理员密码需要在系统刚�
 
 ### 加密算法
 
-1. Certificate: RSA 4096 bits
-2. Encrypt: ECC ed25519
-3. Sign: ECC ed25519 / RSA 3072 bits
-4. Authenticate: RSA 3072 bits / ECC ed25519
+1. Certificate: RSA 4096 bits / ECC ed25519
+2. Encrypt: ECC cv25519 (?)
+3. Sign: ECC cv25519 (?) / RSA 3072 bits
+4. Authenticate: RSA 3072 bits / ECC cv25519 (?)
 
 ### 公布公钥
 
@@ -276,4 +277,15 @@ Tails 调时区需要输入管理员密码，管理员密码需要在系统刚�
 
 ## 使用场景
 
-TODO
+### Git commit 签名
+
+生成并添加一个仅用于签名（S）的子密钥。
+
+导出公钥，将文本内容配置到 GitHub 账号中 [Managing commit signature verification - GitHub Docs](https://docs.github.com/en/authentication/managing-commit-signature-verification)。
+
+执行 `gpg -k` 获取 S 用途的子密钥的 ID，配置到 git 配置文件中：
+
+``` bash
+git config --global user.signingkey THE-SUBKEY-ID
+git config --global commit.gpgsign true # 开启默认使用签名（否则需要在 commit 的时候加 `-S` 参数
+```
