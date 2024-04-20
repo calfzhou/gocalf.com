@@ -1,1 +1,2 @@
-pnpm run lint-staged
+# Disable this, since it always use `\r\n` as line ending.
+# pnpm run lint-staged
