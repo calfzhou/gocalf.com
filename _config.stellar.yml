@@ -68,3 +68,5 @@ style:
     body: '"LXGW WenKai Lite", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
     code: '"LXGW WenKai Lite", Monaco, Menlo, Consolas, "Courier New", monospace'
     codeblock: '"Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace'
+  border-radius:
+    image: revert
