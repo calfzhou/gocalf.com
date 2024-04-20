@@ -3,13 +3,14 @@ title: PGP - Pretty Good Privacy
 wiki: notes
 menu_id: notes
 date: 2024-04-20 11:34:40
-updated: 2024-04-20 11:34:40
+updated: 2024-04-20 15:45:44
 mermaid: true
 references:
   - https://ulyc.github.io/2021/01/13/2021%E5%B9%B4-%E7%94%A8%E6%9B%B4%E7%8E%B0%E4%BB%A3%E7%9A%84%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8PGP-%E4%B8%8A/
   - https://www.rectcircle.cn/posts/understand-and-use-gpg/
   - https://www.lixeon.com/blog/20220621-pgp/
 ---
+
 
 {% blockquote Bruce Schneier , - Applied Cryptography %}
 There are two kinds of cryptography in this world: cryptography that will stop your kid sister from reading your files, and cryptography that will stop major governments from reading your files.
@@ -69,7 +70,6 @@ flowchart LR
   public --- sec
   sec --- revoke
 ```
-
 
 ## 安装 GnuPG
 
@@ -228,6 +228,24 @@ gpg --import <FILE> # 可以是私钥文件，也可以是公钥文件
 - [Tails - Burning Tails on a DVD](https://tails.net/install/dvd/index.en.html)
 
 准备一个 8 GB 的 U 盘或 DVD 刻录盘，用于安装或烧录 Tails 系统。另外准备两个 U 盘，一个用于保存主私钥，存入后就离线保管好，另一个用于保存子私钥，以便导入到正常使用的系统中日常使用。
+
+U 盘上的 Tails 可以直接创建一个加密的持久化存储，详见 [Tails - Persistent Storage](https://tails.net/doc/persistent_storage/index.en.html)。虽然可以但尽量不要在其他系统里操作该持久化存储。
+
+{% box color:red %}
+Tails 出于隐私保护等原因，会把系统时区设置为 GMT，导致时间会超前（东半球）或落后（西半球）。
+
+生成的 pgp 密钥在正常的电脑上导入时，可能会报错：
+
+``` text
+gpg: key 0xHHHHHHHH was created NNN seconds in the future (time warp or clock problem)
+```
+
+可以等几个小时之后再导入……
+
+或者在创建密钥时，把 Tails 系统时区调到地球的另一边（如中国的就把系统时区调成 -8:00）。
+
+Tails 调时区需要输入管理员密码，管理员密码需要在系统刚启动的时候设置，启动之后就无法设置了 [Tails - Administration password](https://tails.net/doc/first_steps/welcome_screen/administration_password/)。
+{% endbox %}
 
 ### 生成吊销证书并妥善保管
 
