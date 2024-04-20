@@ -3,14 +3,13 @@ title: PGP - Pretty Good Privacy
 wiki: notes
 menu_id: notes
 date: 2024-04-20 11:34:40
-updated: 2024-04-20 19:25:47
+updated: 2024-04-20 20:46:59
 mermaid: true
 references:
   - https://ulyc.github.io/2021/01/13/2021%E5%B9%B4-%E7%94%A8%E6%9B%B4%E7%8E%B0%E4%BB%A3%E7%9A%84%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8PGP-%E4%B8%8A/
   - https://www.rectcircle.cn/posts/understand-and-use-gpg/
   - https://www.lixeon.com/blog/20220621-pgp/
 ---
-
 {% blockquote Bruce Schneier , - Applied Cryptography %}
 There are two kinds of cryptography in this world: cryptography that will stop your kid sister from reading your files, and cryptography that will stop major governments from reading your files.
 {% endblockquote %}
@@ -233,7 +232,7 @@ U 盘上的 Tails 可以直接创建一个加密的持久化存储，详见 [Tai
 {% box color:red %}
 Tails 出于隐私保护等原因，会把系统时区设置为 GMT，导致时间会超前（东半球）或落后（西半球）。
 
-生成的 pgp 密钥在正常的电脑上导入时，可能会报错：
+生成的 PGP 密钥在正常的电脑上导入时，可能会报错：
 
 ``` text
 gpg: key 0xHHHHHHHH was created NNN seconds in the future (time warp or clock problem)
@@ -281,11 +280,57 @@ Tails 调时区需要输入管理员密码，管理员密码需要在系统刚�
 
 生成并添加一个仅用于签名（S）的子密钥。
 
-导出公钥，将文本内容配置到 GitHub 账号中 [Managing commit signature verification - GitHub Docs](https://docs.github.com/en/authentication/managing-commit-signature-verification)。
+导出公钥，将文本内容配置到 GitHub 账号中 [Managing commit signature verification - GitHub Docs](https://docs.github.com/en/authentication/managing-commit-signature-verification)。TODO: 用子公钥好还是用整体公钥好？
 
 执行 `gpg -k` 获取 S 用途的子密钥的 ID，配置到 git 配置文件中：
 
 ``` bash
-git config --global user.signingkey THE-SUBKEY-ID
+git config --global user.signingkey SUBKEY-ID
 git config --global commit.gpgsign true # 开启默认使用签名（否则需要在 commit 的时候加 `-S` 参数
+```
+
+### 签名和验签
+
+用具有 S 用途的子密钥进行签名或验签，用私钥签名，公钥验签。
+
+``` bash
+# 签名，输出的文件中同时包含原始文件内容和签名信息。使用自己的私钥。
+# `-u` 指定用哪个 USER-ID 进行签名。
+gpg -s -o SIGNED-FILE ORIGIN-FILE
+# 验签并获取原始文件内容。使用签名者的公钥。
+gpg -d -o ORIGIN-FILE SIGNED-FILE
+
+# 签名，输出的文件中同时包含原始文件的原始内容和文本的签名信息。使用自己的私钥。
+gpg --clearsign -o SIGNED-FILE ORIGIN-FILE
+# 验签方式同上。
+
+# （推荐）签名，只生成签名文件。使用自己的私钥。
+gpg -b -o SIGN ORIGIN-FILE # -b = --detach-sign
+# 验签，需要同时获取到签名文件和被签名的原始文件。使用签名者的公钥。
+gpg --verify SIGN ORIGIN-FILE
+```
+
+### 文件加密或解密
+
+用具有 E 用途的子密钥进行文件加密或解密，用公钥加密，私钥解密。
+
+``` bash
+# 加密。使用公钥，可以是自己的（以后自己解密），也可以是别人的（发送给对方，对方解密）。
+gpg -e -r KEY-ID/UID -o ENCRYPTED-FILE ORIGIN-FILE
+# 解密。使用自己的私钥。
+# `-u` 指定用哪个 USER-ID 进行解密。
+gpg -d -o ORIGIN-FILE ENCRYPTED-FILE
+```
+
+如果在加密的同时还要加上签名，可以加 `-s` 参数。解密的时候会同时验证签名。
+
+### 用临时指定的密码对文件加密或解密
+
+即使不生成 PGP 密钥，也可以使用 gpg 命令对文件做加解密。
+
+``` bash
+# 加密。执行的时候会提示输入一个加密用的密码。
+gpg -c -o ENCRYPTED-FILE ORIGIN-FILE # -c == --symmetric
+# 解密。用加密时的密码。
+gpg -d -o ORIGIN-FILE ENCRYPTED-FILE
 ```
