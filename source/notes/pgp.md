@@ -1,0 +1,261 @@
+---
+title: PGP - Pretty Good Privacy
+wiki: notes
+menu_id: notes
+date: 2024-04-20 11:34:40
+updated: 2024-04-20 11:34:40
+mermaid: true
+references:
+  - https://ulyc.github.io/2021/01/13/2021%E5%B9%B4-%E7%94%A8%E6%9B%B4%E7%8E%B0%E4%BB%A3%E7%9A%84%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8PGP-%E4%B8%8A/
+  - https://www.rectcircle.cn/posts/understand-and-use-gpg/
+  - https://www.lixeon.com/blog/20220621-pgp/
+---
+
+{% blockquote Bruce Schneier , - Applied Cryptography %}
+There are two kinds of cryptography in this world: cryptography that will stop your kid sister from reading your files, and cryptography that will stop major governments from reading your files.
+{% endblockquote %}
+
+## 基本概念
+
+### 名词
+
+- PGP (Pretty Good Privacy): Philip R. Zimmermann 在 1991 年创造的加密信息、保护隐私的商业软件。但现在基本指代 OpenPGP 标准。
+- OpenPGP: 与最初 PGP 工具兼容的 IETF 标准。
+- GnuPG (Gnu Privacy Guard): 实现了 OpenPGP 标准的自由软件。
+  - [The GNU Privacy Guard](https://www.gnupg.org/)
+- gpg: GnuPG 的命令行工具。
+
+### 密钥的类型
+
+类型 | 全称 | 缩写
+--|--|--
+主私钥 | Secret Key | sec
+主公钥 | Public Key | pub
+子私钥 | Secret Sub Key | ssb
+子公钥 | Public Sub Key | sub
+
+### 密钥的用途 Capability
+
+缩写 | 全称 | 说明
+--|--|--
+C | Certificate | （限主密钥）管理证书，如添加/删除/吊销子密钥/UID，修改过期时间
+S | Sign | 签名，如文件数字签名、邮件签名、Git 提交
+A | Authenticate | 身份验证，如登录
+E | Encrypt | 加密
+
+### 架构
+
+``` mermaid
+flowchart LR
+  public["公钥\n（主公钥 & 所有子公钥）\n[C][S][A][E]"]
+  subgraph private [ ]
+    direction TB
+    sec["主私钥[C]"]
+    ssb_s1["子私钥[S]"]
+    ssb_s2["子私钥[S]"]
+    ssb_a1["子私钥[A]"]
+    ssb_a2["子私钥[A]"]
+    ssb_e1["子私钥[E]"]
+    ssb_e2["子私钥[E]"]
+    sec --- ssb_s1
+    sec --- ssb_s2
+    sec --- ssb_a1
+    sec --- ssb_a2
+    sec --- ssb_e1
+    sec --- ssb_e2
+  end
+  revoke[吊销证书]
+
+  public --- sec
+  sec --- revoke
+```
+
+
+## 安装 GnuPG
+
+``` bash
+brew install gpg
+gpg --version
+# gpg (GnuPG) 2.4.5
+# ...
+```
+
+## 密钥管理
+
+{% box color:green %}
+注：本文中
+
+- 密钥 = Key，一般指一对公私钥
+- 公钥 = Public Key
+- 私钥 = Private Key
+
+{% endbox %}
+
+### 生成主密钥
+
+``` bash
+gpg --full-generate-key
+```
+
+较早的版本 default 算法是 `(1) RSA and RSA`，2.4.x 开始就已经变成 `(9) ECC (sign and encrypt)` 了。
+
+如果选 RSA，建议使用 3072 bits 或者 4096 bits。
+
+不要设置为永久有效。不用担心有效期，在到期前都可以更改。
+
+如果打算使用 PGP 为 git 提交做认证，则要设置跟 git 提交一样的邮箱。
+
+要设置 passphrase，要足够复杂。
+
+### 列出密钥
+
+``` bash
+# 列出公钥
+gpg -k
+
+# 列出私钥
+gpg -K
+```
+
+最好创建 `~/.gnupg/gpg.conf` 文件，并输入内容：
+
+``` conf
+keyid-format 0xlong
+with-fingerprint
+```
+
+否则应该在上述命令后边追加两个参数 `--keyid-format long` 和 `--fingerprint`。
+
+### 生成吊销证书
+
+如果不慎失去了对主密钥的掌控（如私钥丢了、密码忘了、被别人拿到了私钥等），可以用吊销凭证对主密钥进行吊销，使其失效。
+
+``` bash
+# `revoke.pgp` 是要生成的吊销证书文件名。
+gpg --gen-revoke -ao revoke.pgp KEY-ID/UID
+```
+
+### 吊销主密钥
+
+可以用吊销证书来吊销主密钥。
+
+``` bash
+gpg --import revoke.pgp # 或其他吊销证书文件
+```
+
+操作之后再通过 `gpg -k` 或 `gpg -K` 列出密钥，可以看到该证书对应的密钥上会标记 `[revoked]`。
+
+### 添加子密钥
+
+``` bash
+gpg --edit-key KEY-ID/UID
+# or
+gpg --expert --edit-key KEY-ID/UID # 可以生成 A (Authenticate) 用途的子密钥
+> addkey
+# ...
+> save # 重要！否则什么都没变
+```
+
+### 删除子密钥
+
+``` bash
+gpg --edit-key KEY-ID/UID
+> key N # 选择第 N 个密钥（被选中的会标记星号，可以选中多个）
+> delkey
+# ...
+> save
+```
+
+### 吊销子密钥
+
+``` bash
+gpg --edit-key KEY-ID/UID
+> key N # 选择第 N 个密钥（被选中的会标记星号，可以选中多个）
+> revkey
+# ...
+> save
+```
+
+### 导出公钥
+
+``` bash
+gpg -a [-o public.pub] --export KEY-ID/UID
+```
+
+这会导出主公钥和所有的子公钥。
+
+### 导出私钥
+
+``` bash
+# 导出主私钥和所有子私钥（不建议）
+gpg -a [-o all.pri] --export-secret-keys KEY-ID
+# 导出主私钥（要在末尾加感叹号）
+gpg -a [-o primary.sec] --export-secret-keys KEY-ID!
+# 导出所有子私钥
+gpg -a [-o all.ssb] --export-secret-subkeys KEY-ID
+# 导出某个指定的子私钥（要在末尾加感叹号）
+gpg -a [-o all.ssb] --export-secret-subkeys KEY-ID！
+```
+
+### 删除密钥
+
+``` bash
+# 删除私钥
+gpg --delete-secret-keys KEY-ID/UID
+# 删除公钥
+gpg --delete-keys KEY-ID/UID
+```
+
+### 导入密钥
+
+``` bash
+gpg --import <FILE> # 可以是私钥文件，也可以是公钥文件
+```
+
+## 最佳实践
+
+### 安全地生成、使用主密钥
+
+最好在断网的机器上生成主密钥，将私钥导出离线保存在全盘加密的 U 盘上，保管好此 U 盘，不作他用。
+
+后续需要使用主私钥时（仅 添加/删除/吊销 子密钥/UID，修改过期时间等），也同样在断网的机器上，通过 U 盘导入主私钥后操作。
+
+注意在机器上要通过 `gpg --delete-secret-keys` 删除已经导出或用毕的主私钥，还需要对磁盘进行清理确保相关信息被彻底抹除。
+
+可以使用 [Tails](https://tails.net/) 操作系统（可能需要用科学的方式访问），做成系统 U 盘或者光盘直接断网运行，它不会在磁盘存储文件信息，省去了擦除私钥的麻烦。
+
+- [Tails - Install Tails from macOS](https://tails.net/install/mac/index.en.html)
+- [Tails - Burning Tails on a DVD](https://tails.net/install/dvd/index.en.html)
+
+准备一个 8 GB 的 U 盘或 DVD 刻录盘，用于安装或烧录 Tails 系统。另外准备两个 U 盘，一个用于保存主私钥，存入后就离线保管好，另一个用于保存子私钥，以便导入到正常使用的系统中日常使用。
+
+### 生成吊销证书并妥善保管
+
+在生成主密钥时，应生成一个吊销证书，并保存在更安全的地方，且最好多保存一份。这是一套密钥的最终兜底。
+
+### 绑定 UID
+
+虽然一套密钥可以包含多个 UID（name + email + comment），还是建议为不同的身份创建不同的主密钥，如个人身份、某公司雇员身份应分别使用不同的主密钥。
+
+### 密钥有效期
+
+为每个密钥设置适当的有效期（而不是无限期），在到期前都可以随时调整有效期。
+
+### 加密算法
+
+1. Certificate: RSA 4096 bits
+2. Encrypt: ECC ed25519
+3. Sign: ECC ed25519 / RSA 3072 bits
+4. Authenticate: RSA 3072 bits / ECC ed25519
+
+### 公布公钥
+
+可以（但不推荐）通过 Key Server 将公钥公布到网络上。或者简单点儿，放在自己所属的网站、GitHub 等地方即可。
+
+{% box color:red %}
+有些 Key Server 一旦公布将不能撤销，因此需要注意 UID 是否会泄漏个人隐私。
+{% endbox %}
+
+## 使用场景
+
+TODO
