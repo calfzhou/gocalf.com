@@ -3,7 +3,7 @@ title: Calf 的三阶魔方复原方法
 wiki: notes
 menu_id: notes
 date: 2024-04-21 16:13:27
-updated: 2024-04-21 16:13:27
+updated: 2024-04-21 20:00:44
 ---
 高中毕业的暑假，自己琢磨着复原魔方，不用背公式。当然最后几步是有固定的套路，可以稍微记一下，记不住就不停地把各种套路都试一试，也可以搞定。
 
@@ -34,9 +34,9 @@ updated: 2024-04-21 16:13:27
 
 {% grid c:5 %}
 <!-- cell -->
-6. ![0-6a](../notes/rubik-calf/0-5a.png) ![0-6b](../notes/rubik-calf/0-5b.png)
+6. ![0-6a](../notes/rubik-calf/0-6a.png) ![0-6b](../notes/rubik-calf/0-6b.png)
 <!-- cell -->
-7. ![0-7](../notes/rubik-calf/0-7.png)
+7. ![0-6a](../notes/rubik-calf/0-6a.png) ![0-7](../notes/rubik-calf/0-7.png)
 {% endgrid %}
 
 ## 一些标记
