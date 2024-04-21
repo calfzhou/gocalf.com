@@ -1,0 +1,82 @@
+---
+title: Hexo 相关问题
+wiki: notes
+menu_id: notes
+date: 2024-04-21 14:42:16
+updated: 2024-04-21 14:42:16
+---
+## Hexo
+
+[Hexo - A fast, simple & powerful blog framework](https://hexo.io/)
+
+{% badge_github hexojs hexo release:true %}
+
+> Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other markup languages) and Hexo generates static files with a beautiful theme in seconds.
+
+## Themes
+
+### Stellar
+
+[Stellar：开始您全新的博客之旅 - XAOXUU](https://xaoxuu.com/wiki/stellar/)
+
+{% badge_github xaoxuu hexo-theme-stellar release:true %}
+
+> Stellar 是一个内置文档系统的简约商务风 Hexo 主题，支持丰富的标签和动态数据组件，帮助您简单从容地应对各种表达需求，十分推荐内容创作者使用 Stellar 开始您全新的博客之旅。
+
+## Issues / Notices
+
+### 关于 Notes
+
+Hexo 还是以（博客）文章（posts）为核心的，虽然 Stellar 独创了文档（wiki）系统，也可以基于其实现笔记（notes）的功能，但还是有很多地方对非文章（posts）不是那么友好。
+
+- （博客）文章（posts）：一般是持续增加新页面，以时间排序。虽然也可以再更新，但一般后续更新只是小修小补。这个天生带着很强的创建时间属性。
+- 专栏（posts + topic）：本质还是文章（强调时间顺序性），但增强了同专栏下文章的前后关联关系。
+- 文档（wiki）：更像是项目级别的 wiki，强调目录树（手动指定顺序、分组）。
+- 笔记（notes）：虽然目前是基于 wiki 实现，但还是有极大区别的，应该更像以前的 MediaWiki，或者常见的桌面或在线笔记软件那样。文章之间的引用关系会更丰富，不像文章那样强调创建时间，而且内容一般是持续不断更新的。
+
+### License in Wiki
+
+[Stellar：如何使用文档系统 # 显示许可协议 - XAOXUU](https://xaoxuu.com/wiki/stellar/wiki-settings/#%E6%98%BE%E7%A4%BA%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE) 中提到可以给 wiki 开启 license 显示，或者指定协议内容。但实际没有显示出来。
+
+### 引用图片等 assets
+
+[Asset Folders | Hexo](https://hexo.io/zh-cn/docs/asset-folders) 中提到可以开启 `post_asset_folder` 以便让每篇文章的资源文件存放在其旁边的同名目录中，但这个对非文章（posts）类型的页面不起作用，包括 Stellar 中的 wiki。
+
+理想状态：不管是文章（posts）还是普通页面（pages），都可以优雅地引用与其相伴的资源文件，对于图片资源，最好还能直接在 Visual Studio Code 的 Markdown 预览中也能显示出来。
+
+调整 hexo 配置 `_config.yml`:
+
+引用图片可以有两种语法，一种是 Markdown 语法 `![alt](src)`，另一种是 Hexo 提供的标签插件 `{% asset_img slug [title] %}`。
+
+``` yaml
+post_asset_folder: true # https://hexo.io/docs/asset-folders#Post-Asset-Folder
+marked: # https://github.com/hexojs/hexo-renderer-marked
+  prependRoot: true
+  postAsset: true
+```
+
+Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=fantasy.vscode-hexo-utils)。
+
+#### 文章（Post）中引用图片
+
+Syntax | Slug / Src | Hexo | VS Code
+--|--|--|--
+Markdown | `filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %}
+Markdown | `post-slug/filename` | {% mark ✗ color:red %} 变成绝对路径了 | {% mark ✓ color:green %}
+Tag Plugin | `filename` | {% mark ✓ color:green %} | {% mark ✓ color:green %}
+
+#### 笔记（Note）中引用图片
+
+Syntax | Slug / Src | Hexo | VS Code
+--|--|--|--
+Markdown | `notes/note-slug/filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %}
+Markdown | `../notes/note-slug/filename` | {% mark ✓ color:green %} `/../` 没影响 | {% mark ✓ color:green %}
+Tag Plugin | `filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %}
+Tag Plugin | `notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✗ color:red %}
+Tag Plugin | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %}
+
+> 其他页面可能类似，待确认。
+
+### Mermaid
+
+当 Mermaid 图比较宽的时候，在手机上展示不全，且无法缩放、滑动。比如 [这里](/notes/pgp#架构)。
