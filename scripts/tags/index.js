@@ -20,5 +20,5 @@ hexo.extend.tag.register('badge_github', function (args) {
     parts.push(inlineImg('release', `https://img.shields.io/github/v/release/${user}/${repo}?label=`))
     parts.push(inlineImg('release date', `https://img.shields.io/github/release-date/${user}/${repo}?label=`))
   }
-  return parts.join(' ')
+  return '<p>' + parts.join(' ') + '</p>'
 })
