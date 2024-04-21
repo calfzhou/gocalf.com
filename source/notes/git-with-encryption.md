@@ -7,7 +7,7 @@ updated: 2024-04-20 21:16:54
 ---
 ## git-remote-gcrypt
 
-[<img alt="spwhitton/git-remote-gcrypt" src="https://img.shields.io/static/v1?label=spwhitton&message=git-remote-gcrypt&color=blue&logo=github" style="display: inline-block">](https://github.com/spwhitton/git-remote-gcrypt) <img alt="stars" src="https://img.shields.io/github/stars/spwhitton/git-remote-gcrypt?logo=.&style=social" style="display: inline-block"> <img alt="forks" src="https://img.shields.io/github/forks/spwhitton/git-remote-gcrypt?logo=.&style=social" style="display: inline-block"> <img alt="updated" src="https://img.shields.io/github/last-commit/spwhitton/git-remote-gcrypt?label=" style="display: inline-block">
+{% badge_github spwhitton git-remote-gcrypt %}
 
 > git-remote-gcrypt is a git remote helper to push and pull from repositories encrypted with [GnuPG](https://www.gnupg.org/), using a custom format. This remote helper handles URIs prefixed with `gcrypt::`.
 
