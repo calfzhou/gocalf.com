@@ -1,9 +1,5 @@
 'use strict'
 
-hexo.extend.tag.register('foo', function (args) {
-  return `<del>${args.join(' ')}</del>`
-})
-
 function inlineImg(alt, src) {
   return `<img alt="${alt}" src="${src}" style="border-radius: 0; display: inline-block;">`
 }
