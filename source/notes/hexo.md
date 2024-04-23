@@ -3,7 +3,7 @@ title: Hexo 相关问题
 wiki: notes
 menu_id: notes
 date: 2024-04-21 14:42:16
-updated: 2024-04-21 14:42:16
+updated: 2024-04-23 22:18:27
 ---
 ## Hexo
 
@@ -80,3 +80,7 @@ Tag Plugin | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>
 ### Mermaid
 
 当 Mermaid 图比较宽的时候，在手机上展示不全，且无法缩放、滑动。比如 [这里](/notes/pgp#架构)。
+
+### 明暗主题色
+
+目前可以通过配置文件指定 `prefers_theme` 是自动、亮色、还是暗色。还需要能够通过页面上的按钮手动切换的功能。
