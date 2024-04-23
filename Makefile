@@ -29,4 +29,7 @@ endif
 note: check-slug-and-title
 	hexo new note -p "../notes/$(slug)" "$(title)"
 
-.PHONY: ls install build server s note
+post: check-slug-and-title
+	hexo new post -p "$(shell date '+%Y')/$(slug)" "$(title)"
+
+.PHONY: ls install build server s note post
