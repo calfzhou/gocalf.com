@@ -36,8 +36,8 @@ dependencies:
     specifier: ^3.0.0
     version: 3.0.0
   hexo-theme-stellar:
-    specifier: ^1.27.0
-    version: 1.27.0
+    specifier: ^1.28.0
+    version: 1.28.0
 
 devDependencies:
   hexo-update-time:
@@ -818,8 +818,8 @@ packages:
       - supports-color
     dev: false
 
-  /hexo-theme-stellar@1.27.0:
-    resolution: {integrity: sha512-Bq2la67rA4KDYGIuKFG8mjp2VCXKFDJG4lItJQJfaqLZbB416Ml3cmK1kAQj/ikxokXCOeaYpJo0uCqUpyi/zA==}
+  /hexo-theme-stellar@1.28.0:
+    resolution: {integrity: sha512-L1uIkVXrHRwPWyFr93oX0RsRn4cDVcL5v5F2jgfsRgdyUANZyAYbm8djIziwwW4h9rDWChOj8qJdNA9ar8Wftw==}
     dependencies:
       hexo-renderer-ejs: 2.0.0
       hexo-renderer-stylus: 3.0.1
