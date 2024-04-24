@@ -3,7 +3,7 @@ title: Git with Encryption
 wiki: notes
 menu_id: notes
 date: 2024-04-20 21:16:54
-updated: 2024-04-21 11:46:47
+updated: 2024-04-24 19:36:21
 ---
 ## git-remote-gcrypt
 
@@ -59,6 +59,8 @@ git-remote-gcrypt 可以用的 backend：
 ``` bash
 git clone gcrypt::remote-url-or-path local-repo
 cd local-repo
+
+# 如果只是看代码，不 commit，可以不用执行下边的操作。
 
 git config remote.cryptremote.gcrypt-participants "UID/KEY-ID UID/KEY-ID"
 git config gcrypt.require-explicit-force-push true # 不是必须，但推荐，以确保 push 的时候一定加上 --force 参数
