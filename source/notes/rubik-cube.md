@@ -73,9 +73,9 @@ animcube3: true
 %}
 {% endfolding %}
 
-## 顶棱面位
+### 顶棱面位
 
-### ① ┓ 形
+#### ① ┓ 形
 
 {% grid c:5 %}
 <!-- cell -->
@@ -92,7 +92,7 @@ animcube3: true
 %}
 {% endfolding %}
 
-### ② ┅ 形
+#### ② ┅ 形
 
 {% grid c:5 %}
 <!-- cell -->
@@ -109,7 +109,7 @@ animcube3: true
 %}
 {% endfolding %}
 
-### ③ · 形
+#### ③ · 形
 
 {% grid c:5 %}
 <!-- cell -->
@@ -126,9 +126,9 @@ animcube3: true
 %}
 {% endfolding %}
 
-## 顶角面位
+### 顶角面位
 
-### ① 缺三逆向
+#### ① 缺三逆向
 
 {% grid c:5 %}
 <!-- cell -->
@@ -145,7 +145,7 @@ animcube3: true
 %}
 {% endfolding %}
 
-### ② 缺三顺向
+#### ② 缺三顺向
 
 {% grid c:5 %}
 <!-- cell -->
@@ -162,7 +162,7 @@ animcube3: true
 %}
 {% endfolding %}
 
-### ③ 缺二
+#### ③ 缺二
 
 {% grid c:5 %}
 <!-- cell -->
@@ -198,7 +198,7 @@ animcube3: true
 {% endgrid %}
 {% endfolding %}
 
-### ④ 缺四
+#### ④ 缺四
 
 {% grid c:5 %}
 <!-- cell -->
@@ -226,9 +226,9 @@ animcube3: true
 {% endgrid %}
 {% endfolding %}
 
-## 顶角归位
+### 顶角归位
 
-### ① 同色
+#### ① 同色
 
 {% grid c:5 %}
 <!-- cell -->
@@ -245,7 +245,7 @@ animcube3: true
 %}
 {% endfolding %}
 
-### ② 异色
+#### ② 异色
 
 {% grid c:5 %}
 <!-- cell -->
@@ -262,9 +262,9 @@ animcube3: true
 %}
 {% endfolding %}
 
-## 顶棱归位
+### 顶棱归位
 
-### ① 逆时针归位
+#### ① 逆时针归位
 
 {% grid c:5 %}
 <!-- cell -->
@@ -280,7 +280,7 @@ animcube3: true
 %}
 {% endfolding %}
 
-### ② 顺时针归位
+#### ② 顺时针归位
 
 {% grid c:5 %}
 <!-- cell -->
@@ -296,7 +296,7 @@ animcube3: true
 %}
 {% endfolding %}
 
-### ③ 交叉归位
+#### ③ 交叉归位
 
 {% grid c:5 %}
 <!-- cell -->
@@ -312,7 +312,7 @@ animcube3: true
 %}
 {% endfolding %}
 
-### ④ 平行归位
+#### ④ 平行归位
 
 {% grid c:5 %}
 <!-- cell -->
