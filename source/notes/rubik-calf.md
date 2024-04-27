@@ -3,12 +3,12 @@ title: Calf 的三阶魔方复原方法
 wiki: notes
 menu_id: notes
 date: 2024-04-21 16:13:27
-updated: 2024-04-23 22:45:01
+updated: 2024-04-27 23:06:22
 animcube3: true
 ---
 高中毕业的暑假，自己琢磨出来的魔方复原方法，不用背公式。当然最后几步是固定的套路，可以稍微记一下，记不住就不停地把各种套路都试一试，也可以搞定。
 
-{% image rubik-calf/img-5808.jpg 当时的笔记 width:320px fancybox:true %}
+{% image rubik-calf/img-5808-s.jpg 当时的笔记 width:320px fancybox:rubik-calf/img-5808.jpg %}
 
 ## 整体复原流程
 
