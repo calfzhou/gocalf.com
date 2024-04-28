@@ -1,14 +1,21 @@
 PATH  := node_modules/.bin:$(PATH)
 SHELL := /bin/bash
 
-ls:
-	ls
+list:
+	$(info Available targets:)
+	$(info )
+	@LC_ALL=C $(MAKE) -pRrq -f $(firstword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/(^|\n)# Files(\n|$$)/,/(^|\n)# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | grep -E -v -e '^[^[:alnum:]]' -e '^$@$$'
 
 install:
 	pnpm install
 
 build:
 	pnpm run build
+
+generate: build
+
+clean:
+	pnpm run clean
 
 server:
 	pnpm run server
@@ -32,4 +39,4 @@ note: check-slug-and-title
 post: check-slug-and-title
 	hexo new post -p "$(shell date '+%Y')/$(slug)" "$(title)"
 
-.PHONY: ls install build server s note post
+.PHONY: list install build generate clean server s note post
