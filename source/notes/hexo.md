@@ -3,7 +3,7 @@ title: Hexo 相关问题
 wiki: notes
 menu_id: notes
 date: 2024-04-21 14:42:16
-updated: 2024-04-23 22:18:27
+updated: 2024-05-06 23:13:48
 ---
 ## Hexo
 
@@ -84,3 +84,42 @@ Tag Plugin | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>
 ### 明暗主题色
 
 目前可以通过配置文件指定 `prefers_theme` 是自动、亮色、还是暗色。还需要能够通过页面上的按钮手动切换的功能。
+
+- 2024-04-28: 提了 [PR](https://github.com/xaoxuu/hexo-theme-stellar/pull/449) 以支持运行时切换明暗。
+
+## Stellar 主题增加 Notebook（笔记本）支持
+
+### 概念和预期效果
+
+- Notebooks: 指笔记本的列表。默认可以支持任意多个笔记本。
+- Notebook: 笔记本。
+- Note: （一篇）笔记，对应于 Hexo 中的一个 page，具体来说是一个在 front-matter 中指定了归属的 notebook 的 page。一篇笔记只能归属于一个笔记本。
+- Tag: 笔记标签。在一个笔记本内，所有的笔记可以通过 tag 来组织。一篇笔记可以对应任意多个 tag（也可以没有）。tag 支持层级结果，通过 `/` 分割，如 `it/web` 表示在 `it` 标签下有个 `web` 子标签。
+
+整体类似于 [Bear](https://bear.app/) 中的结构。Bear 中的数据相当于一个笔记本，笔记、tag 都是对应的。因为本身就是以网站形式呈现，暂时也就不支持归档、回收站等功能。
+
+会有以下一些路由：
+
+- /notebooks: 笔记本列表页。具体的地址可以通过配置修改。leftbar 中可以放所有笔记本中最近更新的内容。主体部分是笔记本列表，类似 wiki 列表。
+- /notebooks/xxx: ID 为 xxx 的笔记本的页面。具体地址可以通过该笔记本的配置文件修改。leftbar 可以放该笔记本的标签树、最近更新的内容（需要么？）。主体部分是笔记列表，类似博客列表页。无限加载最好，但可能不适合于静态站点，那就分页或者想博客的归档页那样列出所有。
+- /notebooks/xxx/tags/ttt: xxx 笔记本的 ttt 标签页面。跟笔记本页面类似，但标签树会高亮当前标签，最近更新（需要么？）和笔记列表都限定在该标签内。
+  - 父标签包含所有子标签里的笔记。比如一篇笔记的标签是 `t1/t2/t3`，那么在 `t1` 和 `t1/t2` 中都可以看到该笔记。
+- /notebooks/xxx/yyy: xxx 笔记本的 yyy 笔记页面。主体部分是该笔记本身。
+
+笔记本页或笔记本标签页，笔记的排序，至少支持按更新时间倒序排列。可以考虑允许配置按照更新时间、创建时间、标题的正序或倒序排列。可以支持笔记置顶，置顶的笔记始终排在最前面。
+
+### 代码结构和处理流程
+
+`scripts/generators` 目录中增加 `notebooks.js` 以定义 notebooks 相关的路由，如 `/notebooks`、`/notebooks/xxx`、`/notebooks/xxx/tags/ttt` 等。
+
+需要在这之前，对 notebooks 相关信息做预处理，在 `scripts/events/lib` 中增加 `notebooks.js`，并在 `scripts/events/index.js` 中引用（添加到 `generateBefore` 事件上）。这个文件要遍历 pages，把 notebooks 信息整理出来，并计算出每个 notebooks 中标签树的信息（标签本身、标签的层级关系、标签和页面的关联关系、页面排序等）。
+
+页面主体部分的渲染，在 `layout` 目录中增加 `notebooks.ejs` 渲染笔记本列表页，增加 `notebook.ejs` 渲染笔记本页和选中的标签页。
+
+笔记的渲染待定（处理正常的内容之外，考虑在主体部分或者侧边栏展示出该笔记所属的所有标签，并且标签中的每个层级都可以点击跳转到对应的标签页）。
+
+侧边栏最近更新能支持限定在所有笔记本（在笔记本列表页）或当前笔记本或当前标签（待定）。
+
+搜索框能支持限定在所有笔记本、当前笔记本、或当前标签。
+
+标签树组件，在 `layout/_partial/widgets` 中增加 `tagtree.ejs` 用来渲染标签树，还需要修改 `layout/_partial/sidebar` 中相应文件来应用在配置文件中定义的不同 layout 下的 sidebar 配置。
