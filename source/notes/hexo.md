@@ -3,7 +3,7 @@ title: Hexo 相关问题
 wiki: notes
 menu_id: notes
 date: 2024-04-21 14:42:16
-updated: 2024-05-06 23:13:48
+updated: 2024-05-08 21:53:59
 ---
 ## Hexo
 
@@ -37,6 +37,8 @@ Hexo 还是以（博客）文章（posts）为核心的，虽然 Stellar 独创�
 ### License in Wiki
 
 [Stellar：如何使用文档系统 # 显示许可协议 - XAOXUU](https://xaoxuu.com/wiki/stellar/wiki-settings/#%E6%98%BE%E7%A4%BA%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE) 中提到可以给 wiki 开启 license 显示，或者指定协议内容。但实际没有显示出来。
+
+- 2024-05-08: 提了 [PR](https://github.com/xaoxuu/hexo-theme-stellar/pull/460) 进行修复。
 
 ### 引用图片等 assets
 
@@ -114,7 +116,7 @@ Tag Plugin | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>
 
 需要在这之前，对 notebooks 相关信息做预处理，在 `scripts/events/lib` 中增加 `notebooks.js`，并在 `scripts/events/index.js` 中引用（添加到 `generateBefore` 事件上）。这个文件要遍历 pages，把 notebooks 信息整理出来，并计算出每个 notebooks 中标签树的信息（标签本身、标签的层级关系、标签和页面的关联关系、页面排序等）。
 
-页面主体部分的渲染，在 `layout` 目录中增加 `notebooks.ejs` 渲染笔记本列表页，增加 `notebook.ejs` 渲染笔记本页和选中的标签页。
+页面主体部分的渲染，在 `layout` 目录中增加 `notebooks.ejs` 渲染笔记本列表页，增加 `notes.ejs` 渲染笔记列表页（笔记本页和选中的标签页）。
 
 笔记的渲染待定（处理正常的内容之外，考虑在主体部分或者侧边栏展示出该笔记所属的所有标签，并且标签中的每个层级都可以点击跳转到对应的标签页）。
 
