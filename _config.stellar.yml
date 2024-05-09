@@ -38,6 +38,7 @@ inject:
 ######## Article ########
 article:
   license: '本文由 [Calf](/) 原创，采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
+  share: [link, wechat, email]
 
 ######## Comments ########
 comments:

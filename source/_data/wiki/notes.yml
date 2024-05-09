@@ -12,4 +12,5 @@ base_dir: /notes/
 tree:
   - index
 
-license: true # Seems not working.
+license: true
+share: true
