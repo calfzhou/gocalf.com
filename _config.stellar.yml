@@ -41,6 +41,7 @@ notebook:
     calf: tag:gocalf
     font: solar:text-linear
     game: solar:gamepad-minimalistic-bold
+    git: brand:git
     it: solar:code-linear
     mac: brand:apple
     math: solar:calculator-minimalistic-linear
