@@ -1,7 +1,7 @@
 ---
 title: Calf 的三阶魔方复原方法
 date: 2024-04-21 16:13:27
-updated: 2024-04-27 23:06:22
+updated: 2024-05-13 21:58:17
 notebook: notes
 tags:
   - calf
@@ -42,7 +42,41 @@ animcube3: true
 7. ![0-6a](../notes/rubik-calf/0-6a.png) ![0-7](../notes/rubik-calf/0-7.png)
 {% endgrid %}
 
-## 一些标记 & 操作组
+## 复原三面之前的一些操作
+
+关键就是要善于「躲避」，借助适当的「躲避」操作，可以在一组操作完成之后，已经复原的部分不会受到破坏，但有一定的进展。
+
+### 状态 4 → 状态 5
+
+这个阶段要逐个归位出发角对应的三个面（上边图中的红、黄、蓝）各自的棱块。
+
+{% folding 动画演示 %}
+
+注意看一组操作完成之后，除了多归位了一个黄色面的棱块，其他几个棱块都完全不受影响（只有倒 Y 形区域会发生变化，但现在不用考虑它们，动画中全部涂为灰色减少干扰）。
+
+{% grid %}
+<!-- cell -->
+情形一
+{% animcube width:100% config:rubik-calf/cube.conf
+  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
+  initmove:"y'"
+  move:"b'L'F'Lb"
+  initrevmove:#
+  movetext:0
+%}
+<!-- cell -->
+情形二
+{% animcube width:100% config:rubik-calf/cube.conf
+  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
+  initmove:"y'"
+  move:"b'L'F2Lb"
+  initrevmove:#
+  movetext:0
+%}
+{% endgrid %}
+{% endfolding %}
+
+## 复原三面到六面用的标记 & 操作组
 
 ### 记号说明
 
