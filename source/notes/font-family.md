@@ -1,9 +1,11 @@
 ---
 title: 字体 font-family 选择
-wiki: notes
-menu_id: notes
 date: 2024-04-17 22:25:24
 updated: 2024-04-24 21:50:58
+notebook: notes
+tags:
+  - calf
+  - it/font
 ---
 ## 网页文本字体的选择
 

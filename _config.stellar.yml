@@ -7,7 +7,7 @@ logo:
 
 # 侧边栏主功能导航菜单
 menubar:
-  columns: 4
+  columns: 3
   items:
     - id: post
       theme: '#FFA500'
@@ -19,11 +19,11 @@ menubar:
       icon: solar:notebook-bold-duotone
       title: 笔记
       url: /notes/
-    - id: wiki
-      theme: '#3DC550'
-      icon: solar:notebook-bookmark-bold-duotone
-      title: 文档
-      url: /wiki/
+    # - id: notebooks
+    #   theme: '#3DC550'
+    #   icon: solar:notebook-bookmark-bold-duotone
+    #   title: 所有笔记本
+    #   url: /notebooks/
     - id: about
       theme: '#2196F3'
       icon: solar:user-bold-duotone
@@ -34,6 +34,16 @@ inject:
   head:
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/source-code-pro@2.38.0/source-code-pro.min.css">
+
+######## Notebook ########
+notebook:
+  tagcons:
+    calf: tag:gocalf
+    font: solar:text-linear
+    game: solar:gamepad-minimalistic-bold
+    it: solar:code-linear
+    mac: brand:apple
+    math: solar:calculator-minimalistic-linear
 
 ######## Article ########
 article:
