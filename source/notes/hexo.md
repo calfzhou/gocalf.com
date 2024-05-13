@@ -3,7 +3,7 @@ title: Hexo 相关问题
 wiki: notes
 menu_id: notes
 date: 2024-04-21 14:42:16
-updated: 2024-05-08 21:53:59
+updated: 2024-05-13 22:08:52
 ---
 ## Hexo
 
@@ -114,14 +114,16 @@ Tag Plugin | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>
 
 `scripts/generators` 目录中增加 `notebooks.js` 以定义 notebooks 相关的路由，如 `/notebooks`、`/notebooks/xxx`、`/notebooks/xxx/tags/ttt` 等。
 
-需要在这之前，对 notebooks 相关信息做预处理，在 `scripts/events/lib` 中增加 `notebooks.js`，并在 `scripts/events/index.js` 中引用（添加到 `generateBefore` 事件上）。这个文件要遍历 pages，把 notebooks 信息整理出来，并计算出每个 notebooks 中标签树的信息（标签本身、标签的层级关系、标签和页面的关联关系、页面排序等）。
+需要在这之前，对 notebooks 相关信息做预处理，在 `scripts/events/lib` 中增加 `notebooks.js`，并在 `scripts/events/index.js` 中引用（添加到 `generateBefore` 事件上）。这个文件要遍历 pages，把 notebooks 信息整理出来，并计算出每个 notebooks 中标签树的信息（标签本身、标签的层级关系、标签和页面的关联关系等）。
 
 页面主体部分的渲染，在 `layout` 目录中增加 `notebooks.ejs` 渲染笔记本列表页，增加 `notes.ejs` 渲染笔记列表页（笔记本页和选中的标签页）。
 
-笔记的渲染待定（处理正常的内容之外，考虑在主体部分或者侧边栏展示出该笔记所属的所有标签，并且标签中的每个层级都可以点击跳转到对应的标签页）。
+笔记的渲染跟普通 page 类似，在内容底部增加该笔记的 tags 列表（增加 `layout/_partial/main/notebook/note_tags.ejs` 文件）。点击某个标签可以跳转到对应的标签页（归属于该标签的笔记列表页）。
 
-侧边栏最近更新能支持限定在所有笔记本（在笔记本列表页）或当前笔记本或当前标签（待定）。
+侧边栏最近更新能支持限定在所有笔记本（在笔记本列表页）或当前笔记本 ~~或当前标签（待定）~~。
 
-搜索框能支持限定在所有笔记本、当前笔记本、或当前标签。
+搜索框能支持限定在 ~~所有笔记本、~~ 当前笔记本 ~~、或当前标签~~。
 
 标签树组件，在 `layout/_partial/widgets` 中增加 `tagtree.ejs` 用来渲染标签树，还需要修改 `layout/_partial/sidebar` 中相应文件来应用在配置文件中定义的不同 layout 下的 sidebar 配置。
+
+- 2024-05-13: 提了 [PR](https://github.com/xaoxuu/hexo-theme-stellar/pull/464)，基本完成初版笔记系统。
