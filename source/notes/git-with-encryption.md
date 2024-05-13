@@ -1,11 +1,11 @@
 ---
 title: Git with Encryption
-date: 2024-04-20 21:16:54
-updated: 2024-04-24 19:36:21
 notebook: notes
 tags:
   - it/encryption
   - it/git
+date: 2024-04-20 21:16:54
+updated: 2024-04-24 19:36:21
 ---
 ## git-remote-gcrypt
 

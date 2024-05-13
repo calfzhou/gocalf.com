@@ -1,10 +1,10 @@
 ---
 title: 魔方手记
-date: 2024-04-25 22:36:21
-updated: 2024-04-25 22:36:21
 notebook: notes
 tags:
   - game/puzzle
+date: 2024-04-25 22:36:21
+updated: 2024-04-25 22:36:21
 animcube3: true
 ---
 ## 三阶 - 简易层先法

@@ -1,10 +1,10 @@
 ---
 title: PGP - Pretty Good Privacy
-date: 2024-04-20 11:34:40
-updated: 2024-04-20 21:16:54
 notebook: notes
 tags:
   - it/encryption
+date: 2024-04-20 11:34:40
+updated: 2024-04-20 21:16:54
 mermaid: true
 references:
   - https://ulyc.github.io/2021/01/13/2021%E5%B9%B4-%E7%94%A8%E6%9B%B4%E7%8E%B0%E4%BB%A3%E7%9A%84%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8PGP-%E4%B8%8A/
