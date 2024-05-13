@@ -7,7 +7,7 @@ logo:
 
 # 侧边栏主功能导航菜单
 menubar:
-  columns: 3
+  columns: 4
   items:
     - id: post
       theme: '#FFA500'
@@ -29,6 +29,11 @@ menubar:
       icon: calf:gocalf-duotone
       title: 关于
       url: /about/
+    - id: pgp
+      theme: '#FFD700'
+      icon: other:fingerprint-duotone
+      title: PGP
+      url: /pgp/
 
 inject:
   head:
