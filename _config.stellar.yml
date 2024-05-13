@@ -25,8 +25,8 @@ menubar:
     #   title: 所有笔记本
     #   url: /notebooks/
     - id: about
-      theme: '#2196F3'
-      icon: solar:user-bold-duotone
+      theme: '#3370FF'
+      icon: calf:gocalf-duotone
       title: 关于
       url: /about/
 
@@ -38,7 +38,7 @@ inject:
 ######## Notebook ########
 notebook:
   tagcons:
-    calf: tag:gocalf
+    calf: calf:gocalf
     font: solar:text-linear
     game: solar:gamepad-minimalistic-bold
     git: brand:git
