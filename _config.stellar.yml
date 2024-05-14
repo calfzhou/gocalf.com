@@ -19,21 +19,16 @@ menubar:
       icon: solar:notebook-bold-duotone
       title: 笔记
       url: /notes/
-    # - id: notebooks
-    #   theme: '#3DC550'
-    #   icon: solar:notebook-bookmark-bold-duotone
-    #   title: 所有笔记本
-    #   url: /notebooks/
+    - id: wiki
+      theme: '#3DC550'
+      icon: solar:notebook-bookmark-bold-duotone
+      title: Wiki
+      url: /wiki/
     - id: about
       theme: '#3370FF'
       icon: calf:gocalf-duotone
       title: 关于
       url: /about/
-    - id: pgp
-      theme: '#FFD700'
-      icon: other:fingerprint-duotone
-      title: PGP
-      url: /pgp/
 
 inject:
   head:
