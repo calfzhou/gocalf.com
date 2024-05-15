@@ -1,7 +1,8 @@
 ---
 title: Python 各版本变化
-wiki: notes
-menu_id: notes
+notebook: notes
+tags:
+  - it/python
 date: 2024-05-15 23:17:06
 updated: 2024-05-15 23:17:06
 references:
