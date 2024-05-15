@@ -36,7 +36,7 @@ inject:
     - <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=20240507">
     - <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=20240507">
     - <link rel="manifest" href="/favicon/site.webmanifest?v=20240507">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css">
+    - <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.min.css" />
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/source-code-pro@2.38.0/source-code-pro.min.css">
 
 ######## Article ########
@@ -83,9 +83,9 @@ style:
   font-size:
     root: 18px
   font-family:
-    logo: '"LXGW WenKai Lite", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
-    body: '"LXGW WenKai Lite", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
-    code: '"LXGW WenKai Lite", Monaco, Menlo, Consolas, "Courier New", monospace'
+    logo: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
+    body: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
+    code: '"LXGW WenKai", "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace'
     codeblock: '"Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace'
   border-radius:
     image: revert
