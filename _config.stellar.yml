@@ -49,6 +49,7 @@ notebook:
     it: solar:code-linear
     mac: brand:apple
     math: solar:calculator-minimalistic-linear
+    python: brand:python
 
 ######## Article ########
 article:
