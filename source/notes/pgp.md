@@ -4,12 +4,14 @@ notebook: notes
 tags:
   - it/encryption
 date: 2024-04-20 11:34:40
-updated: 2024-04-20 21:16:54
+updated: 2024-05-15 22:41:02
 mermaid: true
 references:
-  - https://ulyc.github.io/2021/01/13/2021%E5%B9%B4-%E7%94%A8%E6%9B%B4%E7%8E%B0%E4%BB%A3%E7%9A%84%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8PGP-%E4%B8%8A/
-  - https://www.rectcircle.cn/posts/understand-and-use-gpg/
-  - https://www.lixeon.com/blog/20220621-pgp/
+  - '[2021年，用更现代的方法使用PGP（上） - C的博客 |UlyC](https://ulyc.github.io/2021/01/13/2021%E5%B9%B4-%E7%94%A8%E6%9B%B4%E7%8E%B0%E4%BB%A3%E7%9A%84%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8PGP-%E4%B8%8A/)'
+  - '[2021年，用更现代的方法使用PGP（中） - C的博客 |UlyC](https://ulyc.github.io/2021/01/18/2021%E5%B9%B4-%E7%94%A8%E6%9B%B4%E7%8E%B0%E4%BB%A3%E7%9A%84%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8PGP-%E4%B8%AD/)'
+  - '[2021年，用更现代的方法使用PGP（下） - C的博客 |UlyC](https://ulyc.github.io/2021/01/26/2021%E5%B9%B4-%E7%94%A8%E6%9B%B4%E7%8E%B0%E4%BB%A3%E7%9A%84%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8PGP-%E4%B8%8B/)'
+  - '[理解和使用 GPG :: Rectcircle Blog](https://www.rectcircle.cn/posts/understand-and-use-gpg/)'
+  - "[一站式PGP使用 - Jing Li's Homepage](https://www.lixeon.com/blog/20220621-pgp/)"
 ---
 {% blockquote Bruce Schneier , - Applied Cryptography %}
 There are two kinds of cryptography in this world: cryptography that will stop your kid sister from reading your files, and cryptography that will stop major governments from reading your files.

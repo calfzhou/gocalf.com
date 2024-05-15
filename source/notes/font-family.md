@@ -120,7 +120,7 @@ Font Family: `M+ 1m`
 ``` yaml
 inject:
   head:
-    - <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.min.css" />
+    - <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-web/1.330.0/style.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/source-code-pro@2.38.0/source-code-pro.min.css">
 
 style:

@@ -36,7 +36,7 @@ inject:
     - <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=20240507">
     - <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=20240507">
     - <link rel="manifest" href="/favicon/site.webmanifest?v=20240507">
-    - <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.min.css" />
+    - <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-web/1.330.0/style.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/source-code-pro@2.38.0/source-code-pro.min.css">
 
 ######## Notebook ########
