@@ -34,7 +34,7 @@ updated: 2024-04-24 21:50:58
 4. 字体族
    1. 无衬线体 sans-serif
 
-另外在本站中，把最近发现的非常棒的字体 [LXGW WenKai / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai) 排在了最前边。甚至 inline code 也优先使用该字体。（实际使用的是其 [Lite 版本](https://github.com/lxgw/LxgwWenKai-Lite) 以尽量缩小字体文件体积。）
+另外在本站中，把最近发现的非常棒的字体 [LXGW WenKai / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai) 排在了最前边。甚至 inline code 也优先使用该字体。
 
 注：这部分极大地借鉴参考了 [如何优雅的选择字体(font-family) - 前端学习 - SegmentFault 思否](https://segmentfault.com/a/1190000006110417)。
 
@@ -120,13 +120,13 @@ Font Family: `M+ 1m`
 ``` yaml
 inject:
   head:
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css">
+    - <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.min.css" />
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/source-code-pro@2.38.0/source-code-pro.min.css">
 
 style:
   font-family:
-    logo: '"LXGW WenKai Lite", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
-    body: '"LXGW WenKai Lite", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
-    code: '"LXGW WenKai Lite", Monaco, Menlo, Consolas, "Courier New", monospace'
+    logo: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
+    body: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
+    code: '"LXGW WenKai", "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace'
     codeblock: '"Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace'
 ```
