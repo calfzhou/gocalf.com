@@ -73,10 +73,30 @@ footer:
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
 plugins:
+  animcube2:
+    enable: false
+    inject: |
+      <script src="/js/plugins/AnimCube2.js"></script>
   animcube3:
     enable: false
     inject: |
       <script src="/js/plugins/AnimCube3.js"></script>
+  animcube4:
+    enable: false
+    inject: |
+      <script src="/js/plugins/AnimCube4.js"></script>
+  animcube5:
+    enable: false
+    inject: |
+      <script src="/js/plugins/AnimCube5.js"></script>
+  animcube6:
+    enable: false
+    inject: |
+      <script src="/js/plugins/AnimCube6.js"></script>
+  animcube7:
+    enable: false
+    inject: |
+      <script src="/js/plugins/AnimCube7.js"></script>
 
 style:
   prefers_theme: auto # auto / light / dark

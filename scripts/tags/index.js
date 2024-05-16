@@ -23,12 +23,6 @@ hexo.extend.tag.register('badge_github', function (args) {
   return '<p>' + parts.join(' ') + '</p>'
 })
 
-hexo.extend.tag.register('load_animcube', function (args) {
-  args = hexo.args.map(args, ['size'])
-  const { size = '3' } = args
-  return `<script src="/js/plugins/AnimCube${size}.js"></script>`
-})
-
 hexo.extend.tag.register('animcube', function (args) {
   const cubeParamKeys = [
     'align',
@@ -77,6 +71,8 @@ hexo.extend.tag.register('animcube', function (args) {
     'troughcolor',
     'wca',
     'yz',
+    // My extra parameters.
+    'markers',
   ]
   args = hexo.args.map(args, ['size', 'width', 'height', ...cubeParamKeys])
   const { size = '3', width = '300px', height = '319px', others, ...cubeParams } = args
