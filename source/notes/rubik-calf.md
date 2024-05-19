@@ -5,7 +5,7 @@ tags:
   - calf
   - game/puzzle
 date: 2024-04-21 16:13:27
-updated: 2024-05-13 21:58:17
+updated: 2024-05-19 21:15:10
 animcube3: true
 ---
 高中毕业的暑假，自己琢磨出来的魔方复原方法，不用背公式。当然最后几步是固定的套路，可以稍微记一下，记不住就不停地把各种套路都试一试，也可以搞定。
@@ -59,6 +59,7 @@ animcube3: true
 情形一
 {% animcube width:100% config:rubik-calf/cube.conf
   facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
+  markers:000100000000000000000000000000000000000000000000000000
   initmove:"y'"
   move:"b'L'F'Lb"
   initrevmove:#
@@ -68,8 +69,9 @@ animcube3: true
 情形二
 {% animcube width:100% config:rubik-calf/cube.conf
   facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
+  markers:000100000000000000000000000000000000000000000000000000
   initmove:"y'"
-  move:"b'L'F2Lb"
+  move:"b'L'F2'Lb"
   initrevmove:#
   movetext:0
 %}
@@ -146,11 +148,13 @@ animcube3: true
 <!-- cell -->
 `ab` x 6
 {% animcube width:100% config:rubik-calf/cube.conf
+  markers:100000000111100100111001001000000001100100111001000000
   move:"{ab（蓝黄）①}D'LDL'.{ab（蓝黄）②}D'LDL'.{ab（蓝黄）③}D'LDL'.{ab（蓝黄）④}D'LDL'.{ab（蓝黄）⑤}D'LDL'.{ab（蓝黄）⑥}D'LDL'"
 %}
 <!-- cell -->
 `ba` x 6
 {% animcube width:100% config:rubik-calf/cube.conf
+  markers:100000000111100100111001001000000001100100111001000000
   move:"{ba（黄蓝）①}LD'L'D.{ba（黄蓝）②}LD'L'D.{ba（黄蓝）③}LD'L'D.{ba（黄蓝）④}LD'L'D.{ba（黄蓝）⑤}LD'L'D.{ba（黄蓝）⑥}LD'L'D"
 %}
 {% endgrid %}
@@ -256,6 +260,7 @@ animcube3: true
 
 {% animcube config:rubik-calf/cube.conf
   facelets:yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRRzggzggzzzBBBBBBBBB
+  markers:100000000000000000000000000000000000000000000000000000
   move:"{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'.{把 bc（黄红）转到顺手位置}y'z.{bc bc（黄红 黄红）}D'LDL'.D'LDL'.{回到原来的位置}z'y"
   initrevmove:#
 %}
@@ -277,6 +282,7 @@ animcube3: true
 
 {% animcube config:rubik-calf/cube.conf
   facelets:yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRRzggzggzzzBBBBBBBBB
+  markers:100000000000000000000000000000000000000000000000000000
   move:"{把 cb（红黄）转到顺手位置}y'z.{cb cb（红黄 红黄）}LD'L'D.LD'L'D.{把 ba（黄蓝）转到顺手位置}z'y.{ba ba（黄蓝 黄蓝）}LD'L'D.LD'L'D"
   initrevmove:#
 %}
@@ -311,12 +317,14 @@ animcube3: true
 先做 `b'a b ba`
 {% animcube width:100% config:rubik-calf/cube.conf
   facelets:yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggrzzBBBBBBBBB
+  markers:000000000000000000000000000000000000000000100000000000
   move:"{b'a（黄'蓝）}L'D'LD.{b（单独黄）}L.{ba（黄蓝）}LD'L'D"
 %}
 <!-- cell -->
 再恢复 b（黄色）面的棱
 {% animcube width:100% config:rubik-calf/cube.conf
   facelets:yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggrzzBBBBBBBBB
+  markers:000000000000000000000000000000000000000000100000000000
   move:"{恢复 b（黄）棱}r'B'L2Br"
   initmove:"{b'a（黄'蓝）}L'D'LD.{b（单独黄）}L.{ba（黄蓝）}LD'L'D"
 %}
@@ -325,6 +333,7 @@ animcube3: true
 {% animcube width:100% config:rubik-calf/cube.conf
   position:rrrddd
   facelets:yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggrzzBBBBBBBBB
+  markers:000000000000000000000000000000000000000000100000000000
   move:"{把 bc（黄红）转到顺手位置}y'z.{bc（黄红）}D'LDL'.{回到原来的位置}z'y.{ab ab ab（蓝黄 蓝黄 蓝黄）}D'LDL'.D'LDL'.D'LDL'"
   initmove:"{b'a（黄'蓝）}L'D'LD.{b（单独黄）}L.{ba（黄蓝）}LD'L'D..{恢复 b（黄）棱}r'B'L2Br"
 %}
@@ -353,6 +362,7 @@ animcube3: true
 {% animcube width:100% config:rubik-calf/cube.conf
   position:rrrddd
   facelets:yyyyyyyyyZWWGWWWWWogzooooooRRRRRRRRRgggwggzogBBBBBBBBB
+  markers:000000000020100000030001000000000000000300020000000000
   move:"{ba（黄蓝）}LD'L'D.{把 cb（红黄）转到顺手位置}y'z.{cb（红黄）}LD'L'D.{把 ac（蓝红）转到顺手位置}y'z.{ac（蓝红）}LD'L'D.{回到原来的位置}y'z"
 %}
 <!-- cell -->
@@ -360,6 +370,7 @@ animcube3: true
 {% animcube width:100% config:rubik-calf/cube.conf
   position:rrrddd
   facelets:yyyyyyyyyZWWGWWWWWogzooooooRRRRRRRRRgggwggzogBBBBBBBBB
+  markers:000000000020100000030001000000000000000300020000000000
   move:"{把 cb（红黄）转到顺手位置}y'z.{cb cb（红黄 红黄）}LD'L'D.LD'L'D.{把 ca（红蓝）转到顺手位置}y'z.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{把 ab（蓝黄）转到顺手位置}y'z.{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'"
   initmove:"{ba（黄蓝）}LD'L'D.{把 cb（红黄）转到顺手位置}y'z.{cb（红黄）}LD'L'D.{把 ac（蓝红）转到顺手位置}y'z.{ac（蓝红）}LD'L'D.{回到原来的位置}y'z"
 %}
@@ -384,6 +395,7 @@ animcube3: true
 {% animcube width:100% config:rubik-calf/cube.conf
   position:rrrddd
   facelets:yyyyyyyyyZOWGWWWWWoozoowoooRRRRRRRRRgggwggzggBBBBBBBBB
+  markers:000000000010300000020003000000000000000200010000000000
   move:"{ab（蓝黄）}D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca（红蓝）}D'LDL'.{把 bc（黄红）转到顺手位置}z'y.{bc（黄红）}D'LDL'.{回到原来的位置}z'y"
 %}
 <!-- cell -->
@@ -391,6 +403,7 @@ animcube3: true
 {% animcube width:100% config:rubik-calf/cube.conf
   position:rrrddd
   facelets:yyyyyyyyyZOWGWWWWWoozoowoooRRRRRRRRRgggwggzggBBBBBBBBB
+  markers:000000000010300000020003000000000000000200010000000000
   move:"{把 ca（红蓝）转到顺手位置}z'y.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{把 cb（红黄）转到顺手位置}z'y.{cb cb（红黄 红黄）}LD'L'D.LD'L'D.{把 ba（黄蓝）转到顺手位置}z'y.{ba ba（黄蓝 黄蓝）}LD'L'D.LD'L'D"
   initmove:"{ab（蓝黄）}D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca（红蓝）}D'LDL'.{把 bc（黄红）转到顺手位置}z'y.{bc（黄红）}D'LDL'.{回到原来的位置}z'y"
 %}
@@ -415,6 +428,7 @@ animcube3: true
 {% animcube width:100% config:rubik-calf/cube.conf
   position:rrrddd
   facelets:yyyyyyyyyZWWOWWWWWogzoowoooRRRRRRRRRgggoggzggBBBBBBBBB
+  markers:000000000000100000020001000000000000000200000000000000
   move:"{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{回到原来的位置}y'z"
 %}
 <!-- cell -->
@@ -422,6 +436,7 @@ animcube3: true
 {% animcube width:100% config:rubik-calf/cube.conf
   position:rrrddd
   facelets:yyyyyyyyyZWWOWWWWWogzoowoooRRRRRRRRRgggoggzggBBBBBBBBB
+  markers:000000000000100000020001000000000000000200000000000000
   move:"{ba ba（黄蓝 黄蓝）}LD'L'D.LD'L'D.{把 ac（蓝红）转到顺手位置}z'y.{ac ac（蓝红 蓝红）}LD'L'D.LD'L'D.{回到原来的位置}y'z"
   initmove:"{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{回到原来的位置}y'z"
 %}
@@ -434,10 +449,10 @@ animcube3: true
 事项 | 图示 | 操作 | 说明 / 后续
 --|--|--|--
 倒 Y 形区域 | ![axis](../notes/rubik-calf/axis.png) | | o-abc 直角坐标系<br>a 蓝 right<br>b 黄 top<br>c 红 back
-基本操作 | | `ab` | 蓝黄 `D' L D L'`
-基本操作 | | `ba` | 黄蓝 `L D' L' D`
-特殊操作 | | `b'a` | 黄'蓝 `L' D' L D`
-特殊操作 | | `b` | 黄 `L`
+基本操作 `ab` | | `D' L D L'` | 蓝黄
+基本操作 `ba` | | `L D' L' D` | 黄蓝
+特殊操作 `b'a` | | `L' D' L D` | 黄'蓝
+特殊操作 `b` | | `L` | 黄
 三① 角的朝向 | ![3-1](../notes/rubik-calf/3-1.png) | `ab ab bc bc` | a、c 两面完全不变
 三② 角的朝向 | ![3-2](../notes/rubik-calf/3-2.png) | `cb cb ba ba` | a、c 两面完全不变
 三③ 交换 `o` 和角 | ![2-1](../notes/rubik-calf/2-1.png) ![2-2](../notes/rubik-calf/2-2.png) ![2-3](../notes/rubik-calf/2-3.png) | `b'a b ba` | 再恢复 b 面的棱<br>再复原 a、b、c

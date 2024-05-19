@@ -5,9 +5,8 @@ tags:
   - calf
   - software/mac
 date: 2024-04-16 22:56:13
-updated: 2024-04-18 22:21:22
+updated: 2024-05-19 21:43:52
 ---
-
 ## 系统相关 / 实用工具
 
 - [AppCleaner](https://freemacsoft.net/appcleaner/)
@@ -173,8 +172,16 @@ updated: 2024-04-18 22:21:22
   - > Professional image editing tools that anyone can use.
 - [Krita | Digital Painting. Creative Freedom.](https://krita.org/en/)
   - > Krita is a professional FREE and open source painting program. It is made by artists that want to see affordable art tools for everyone.
+  - Adobe Photoshop 的开源替代
 - [Inkscape | Draw Freely](https://inkscape.org/)
   - > A powerful, free design tool
+  - Adobe Illustrator 的开源替代
+
+### 动画制作
+
+- [SynfigStudio](https://www.synfig.org/)
+  - > Open-source 2D Animation Software, for Windows, Linux and MacOS
+  - Adobe Animate 的开源替代
 
 ### 视频转换
 
