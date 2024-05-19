@@ -3,7 +3,7 @@ title: 字体 font-family 选择
 wiki: notes
 menu_id: notes
 date: 2024-04-17 22:25:24
-updated: 2024-04-24 21:50:58
+updated: 2024-05-19 11:14:52
 ---
 ## 网页文本字体的选择
 
@@ -59,7 +59,7 @@ updated: 2024-04-24 21:50:58
 
 VS Code 无法实现这点，因为它是基于 Electron 也就是浏览器的 HTML DOM 做的字符渲染，很难做到这种调整。（VS Code 自带的 terminal 里中英文是能对齐的，那就是个 canvas，完全是画出来的。）
 
-所以需要在 VS Code 是使用刚好是 0.5 宽度的英文等宽字体，但就会看起来觉得英文字符很瘦，需要适应。
+所以需要在 VS Code 中使用宽度刚好是 0.5 的英文等宽字体，但可能会看起来觉得英文字符很瘦，需要适应。
 
 ### Ubuntu Mono - 目前我的 VS Code 使用此字体
 
