@@ -3,7 +3,7 @@ title: Calf 的三阶魔方复原方法
 wiki: notes
 menu_id: notes
 date: 2024-04-21 16:13:27
-updated: 2024-05-19 21:04:15
+updated: 2024-05-19 21:15:10
 animcube3: true
 ---
 高中毕业的暑假，自己琢磨出来的魔方复原方法，不用背公式。当然最后几步是固定的套路，可以稍微记一下，记不住就不停地把各种套路都试一试，也可以搞定。
@@ -447,10 +447,10 @@ animcube3: true
 事项 | 图示 | 操作 | 说明 / 后续
 --|--|--|--
 倒 Y 形区域 | ![axis](../notes/rubik-calf/axis.png) | | o-abc 直角坐标系<br>a 蓝 right<br>b 黄 top<br>c 红 back
-基本操作 | | `ab` | 蓝黄 `D' L D L'`
-基本操作 | | `ba` | 黄蓝 `L D' L' D`
-特殊操作 | | `b'a` | 黄'蓝 `L' D' L D`
-特殊操作 | | `b` | 黄 `L`
+基本操作 `ab` | | `D' L D L'` | 蓝黄
+基本操作 `ba` | | `L D' L' D` | 黄蓝
+特殊操作 `b'a` | | `L' D' L D` | 黄'蓝
+特殊操作 `b` | | `L` | 黄
 三① 角的朝向 | ![3-1](../notes/rubik-calf/3-1.png) | `ab ab bc bc` | a、c 两面完全不变
 三② 角的朝向 | ![3-2](../notes/rubik-calf/3-2.png) | `cb cb ba ba` | a、c 两面完全不变
 三③ 交换 `o` 和角 | ![2-1](../notes/rubik-calf/2-1.png) ![2-2](../notes/rubik-calf/2-2.png) ![2-3](../notes/rubik-calf/2-3.png) | `b'a b ba` | 再恢复 b 面的棱<br>再复原 a、b、c
