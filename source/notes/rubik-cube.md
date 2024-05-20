@@ -391,7 +391,9 @@ katex: true
 
 更多变体：
 
-{% image rubik-cube/high-center-formula.png 中心块复原公式 %}
+{% invert %}
+{% image rubik-cube/high-center-formula.ink.svg 中心块复原公式 %}
+{% endinvert %}
 
 1. 第 ① 象限：`RU'L'` 或 `R'F'L`
    - `(αR U' βL' U) (αR' U' βL U)`
