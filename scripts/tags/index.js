@@ -86,5 +86,12 @@ hexo.extend.tag.register('invert', function (args, content) {
   args = hexo.args.map(args, ['when'])
   const { when = 'dark' } = args
   const inner = hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('')
-  return `<div class="invert-when-${when}">${inner}</div>`
+  const classes = []
+  if (when === 'dark' || when === 'always') {
+    classes.push('invert-when-dark')
+  }
+  if (when === 'light' || when === 'always') {
+    classes.push('invert-when-light')
+  }
+  return `<div class="${classes.join(' ')}">${inner}</div>`
 }, true)
