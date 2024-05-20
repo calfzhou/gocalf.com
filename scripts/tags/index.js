@@ -81,3 +81,10 @@ hexo.extend.tag.register('animcube', function (args) {
   return `<div id="${id}" style="width: ${width}; height: ${height}"><script>window.addEventListener('load', function(){ AnimCube${size}("id=${id}&${control}") })</script></div>`
   // return `<div style="width: ${width}; height: ${height}"><script>AnimCube${size}("${control}")</script></div>`
 })
+
+hexo.extend.tag.register('invert', function (args, content) {
+  args = hexo.args.map(args, ['when'])
+  const { when = 'dark' } = args
+  const inner = hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('')
+  return `<div class="invert-when-${when}">${inner}</div>`
+}, true)
