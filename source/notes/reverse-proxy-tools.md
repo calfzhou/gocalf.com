@@ -2,9 +2,8 @@
 title: 反向代理（内网穿透）工具
 notebook: notes
 tags:
+  - it/network
   - software
-wiki: notes
-menu_id: notes
 date: 2024-05-21 23:00:26
 updated: 2024-05-21 23:00:26
 ---
