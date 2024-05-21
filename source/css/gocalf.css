@@ -14,3 +14,7 @@
     filter: invert(1) hue-rotate(180deg);
   }
 }
+
+.widget-body.tag-tree .tag-subtree .tagcon {
+  opacity: 0.6;
+}
