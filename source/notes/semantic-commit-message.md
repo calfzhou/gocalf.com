@@ -3,8 +3,6 @@ title: Semantic Commit Message
 notebook: notes
 tags:
   - it/git
-wiki: notes
-menu_id: notes
 date: 2024-05-21 19:36:09
 updated: 2024-05-21 19:36:09
 references:
