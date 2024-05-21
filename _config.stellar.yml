@@ -45,7 +45,7 @@ notebook:
   tagcons:
     calf: calf:gocalf
     font: solar:text-linear
-    game: solar:gamepad-minimalistic-bold
+    game: solar:gamepad-linear
     git: brand:git
     it: solar:code-linear
     mac: brand:apple
