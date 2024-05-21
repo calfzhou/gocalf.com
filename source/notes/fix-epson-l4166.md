@@ -3,8 +3,6 @@ title: Epson L4166 打印机变砖修复
 notebook: notes
 tags:
   - hardware
-wiki: notes
-menu_id: notes
 date: 2024-05-21 23:40:41
 updated: 2024-05-21 23:40:41
 references:
