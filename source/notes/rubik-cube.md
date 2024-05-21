@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - game/puzzle
 date: 2024-04-25 22:36:21
-updated: 2024-05-19 22:24:23
+updated: 2024-05-19 23:21:18
 animcube3: true
 animcube4: true
 animcube6: true
@@ -19,6 +19,7 @@ katex: true
 
 - [三阶魔方公式图解--魔方乐园](http://www.mf100.org/base/about.php)
 - [WCA Regulations - Article 12: Notation | World Cube Association](https://www.worldcubeassociation.org/regulations/#article-12-notation)
+- [Singmaster notation](https://en.wikipedia.org/wiki/Rubik's_Cube#Singmaster_notation)
 
 以下配图与公式，基于的配色约定为：
 
