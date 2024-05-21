@@ -31,7 +31,7 @@
     "hexo-theme-stellar": "^1.28.1"
   },
   "devDependencies": {
-    "hexo-update-time": "^1.1.1",
+    "hexo-update-time": "github:calfzhou/hexo-update-time#v1.1.2-calf.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2"
   }

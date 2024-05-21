@@ -44,8 +44,8 @@ dependencies:
 
 devDependencies:
   hexo-update-time:
-    specifier: ^1.1.1
-    version: 1.1.1
+    specifier: github:calfzhou/hexo-update-time#v1.1.2-calf.1
+    version: github.com/calfzhou/hexo-update-time/b3c93f8bb31441a7b66a3202511bafaaf508d5ee
   husky:
     specifier: ^9.0.11
     version: 9.0.11
@@ -317,8 +317,8 @@ packages:
     deprecated: Cuid and other k-sortable and non-cryptographic ids (Ulid, ObjectId, KSUID, all UUIDs) are all insecure. Use @paralleldrive/cuid2 instead.
     dev: false
 
-  /dayjs@1.11.10:
-    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+  /dayjs@1.11.11:
+    resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==}
     dev: true
 
   /debug@2.6.9:
@@ -729,15 +729,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: false
-
-  /hexo-update-time@1.1.1:
-    resolution: {integrity: sha512-TiN8gZ4JuujXrAHNvg9lFVi4VlFBkt2hKgtiksOjilHEAq9UiDDGePURpgNSE45752jp7V1d4vu8H8FtMUoZ8w==}
-    hasBin: true
-    dependencies:
-      commander: 9.5.0
-      dayjs: 1.11.10
-      execa: 6.1.0
-    dev: true
 
   /hexo-util@3.3.0:
     resolution: {integrity: sha512-YvGngXijE2muEh5L/VI4Fmjqb+/yAkmY+VuyhWVoRwQu1X7bmWodsfYRXX7CUYhi5LqsvH8FAe/yBW1+f6ZX4Q==}
@@ -1645,4 +1636,15 @@ packages:
   /yaml@2.3.4:
     resolution: {integrity: sha512-8aAvwVUSHpfEqTQ4w/KMlf3HcRdt50E5ODIQJBw1fQ5RL34xabzxtUlzTXVqc4rkZsPbvrXKWnABCD7kWSmocA==}
     engines: {node: '>= 14'}
+    dev: true
+
+  github.com/calfzhou/hexo-update-time/b3c93f8bb31441a7b66a3202511bafaaf508d5ee:
+    resolution: {tarball: https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3c93f8bb31441a7b66a3202511bafaaf508d5ee}
+    name: hexo-update-time
+    version: 1.1.1
+    hasBin: true
+    dependencies:
+      commander: 9.5.0
+      dayjs: 1.11.11
+      execa: 6.1.0
     dev: true
