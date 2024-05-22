@@ -28,7 +28,7 @@
     "hexo-renderer-markdown-it": "^7.1.1",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
-    "hexo-theme-stellar": "^1.28.1"
+    "hexo-theme-stellar": "github:xaoxuu/hexo-theme-stellar#main"
   },
   "devDependencies": {
     "hexo-update-time": "github:calfzhou/hexo-update-time#v1.1.2-calf.1",

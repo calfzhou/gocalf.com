@@ -1,0 +1,10 @@
+name: 笔记
+title: 杂七杂八的笔记
+icon: /images/favicon.png
+description: 尽量留下点儿什么
+base_dir: /notes/
+
+license: true
+share: true
+
+menu_id: notes

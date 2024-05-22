@@ -1,7 +1,8 @@
 ---
 title: PGP - Pretty Good Privacy
-wiki: notes
-menu_id: notes
+notebook: notes
+tags:
+  - it/encryption
 date: 2024-04-20 11:34:40
 updated: 2024-05-15 22:41:02
 mermaid: true

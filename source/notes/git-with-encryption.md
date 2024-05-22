@@ -1,7 +1,9 @@
 ---
 title: Git with Encryption
-wiki: notes
-menu_id: notes
+notebook: notes
+tags:
+  - it/encryption
+  - it/git
 date: 2024-04-20 21:16:54
 updated: 2024-04-24 19:36:21
 ---

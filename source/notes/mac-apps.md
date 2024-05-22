@@ -1,7 +1,9 @@
 ---
 title: macOS Apps
-wiki: notes
-menu_id: notes
+notebook: notes
+tags:
+  - calf
+  - software/mac
 date: 2024-04-16 22:56:13
 updated: 2024-05-19 21:43:52
 ---

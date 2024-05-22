@@ -1,11 +1,12 @@
 ---
 title: 笔记工具
+notebook: notes
+tags:
+  - calf
+  - software
 date: 2024-04-13 15:27:19
 updated: 2024-04-13 15:27:19
-wiki: notes
-menu_id: notes
 ---
-
 {% timeline %}
 
 <!-- node 2024 年 -->

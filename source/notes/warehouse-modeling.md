@@ -1,7 +1,8 @@
 ---
 title: 数据仓库分层建模和规范
-wiki: notes
-menu_id: notes
+notebook: notes
+tags:
+  - it/bigdata
 date: 2024-04-13 21:27:05
 updated: 2024-04-13 21:27:05
 ---

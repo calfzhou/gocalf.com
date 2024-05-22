@@ -81,3 +81,17 @@ hexo.extend.tag.register('animcube', function (args) {
   return `<div id="${id}" style="width: ${width}; height: ${height}"><script>window.addEventListener('load', function(){ AnimCube${size}("id=${id}&${control}") })</script></div>`
   // return `<div style="width: ${width}; height: ${height}"><script>AnimCube${size}("${control}")</script></div>`
 })
+
+hexo.extend.tag.register('invert', function (args, content) {
+  args = hexo.args.map(args, ['when'])
+  const { when = 'dark' } = args
+  const inner = hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('')
+  const classes = []
+  if (when === 'dark' || when === 'always') {
+    classes.push('invert-when-dark')
+  }
+  if (when === 'light' || when === 'always') {
+    classes.push('invert-when-light')
+  }
+  return `<div class="${classes.join(' ')}">${inner}</div>`
+}, true)

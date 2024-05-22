@@ -1,7 +1,9 @@
 ---
 title: Calf 的三阶魔方复原方法
-wiki: notes
-menu_id: notes
+notebook: notes
+tags:
+  - calf
+  - game/puzzle
 date: 2024-04-21 16:13:27
 updated: 2024-05-19 21:15:10
 animcube3: true

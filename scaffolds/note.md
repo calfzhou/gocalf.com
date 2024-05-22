@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
+notebook: notes
+tags: []
 date: {{ date }}
 updated: {{ date }}
-wiki: notes
-menu_id: notes
 ---

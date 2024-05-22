@@ -1,7 +1,8 @@
 ---
 title: 魔方手记
-wiki: notes
-menu_id: notes
+notebook: notes
+tags:
+  - game/puzzle
 date: 2024-04-25 22:36:21
 updated: 2024-05-19 23:21:18
 animcube3: true
@@ -391,7 +392,9 @@ katex: true
 
 更多变体：
 
-{% image rubik-cube/high-center-formula.png 中心块复原公式 %}
+{% invert %}
+{% image rubik-cube/high-center-formula.ink.svg 中心块复原公式 %}
+{% endinvert %}
 
 1. 第 ① 象限：`RU'L'` 或 `R'F'L`
    - `(αR U' βL' U) (αR' U' βL U)`
