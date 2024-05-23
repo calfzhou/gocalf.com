@@ -18,3 +18,7 @@
 .widget-body.tag-tree .tag-subtree .tagcon {
   opacity: 0.6;
 }
+
+.widget-body.tag-tree .tag-subtree .toc-text {
+  width: 100%;
+}
