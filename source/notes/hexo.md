@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2024-05-13 22:08:52
+updated: 2024-05-23 22:59:11
 ---
 ## Hexo
 
@@ -89,6 +89,14 @@ Tag Plugin | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>
 目前可以通过配置文件指定 `prefers_theme` 是自动、亮色、还是暗色。还需要能够通过页面上的按钮手动切换的功能。
 
 - 2024-04-28: 提了 [PR](https://github.com/xaoxuu/hexo-theme-stellar/pull/449) 以支持运行时切换明暗。
+
+### Minify
+
+JS、CSS 文件可以用 [uiolee/hexo-esbuild: Minify JavaScripts, CSS files via esbuild](https://github.com/uiolee/hexo-esbuild)。
+
+HTML 文件可以用 [uiolee/hexo-htmlnano: Minify HTML files with htmlnano](https://github.com/uiolee/hexo-htmlnano)。
+
+还有一个同时支持 HTML、CSS、JS、Font、Image，[Lete114/hexo-minify: Hexo-minify is a Hexo compression plug-in that compresses HTML, CSS, JS, Font and Image(jpg,png,gif,webp,svg)](https://github.com/Lete114/hexo-minify)。但是太庞大了，一下子多引入小五百个 npm 包，累觉不爱。
 
 ## Stellar 主题增加 Notebook（笔记本）支持
 
