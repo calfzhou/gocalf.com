@@ -140,7 +140,7 @@ plugins:
       <script src="/js/plugins/AnimCube7.min.js"></script>
 
 style:
-  prefers_theme: auto # auto / light / dark
+  prefers_theme: dark # auto / light / dark
   font-size:
     root: 18px
   font-family:
