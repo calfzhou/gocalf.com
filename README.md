@@ -3,15 +3,15 @@
 ## Preview
 
 ``` bash
-npx hexo s
+make s
 ```
 
 ## Writing
 
 ### Notes
 
-To create a new note, use `pnpm run new-note`, e.g.:
+To create a new note, use `make note`, e.g.:
 
 ``` bash
-slug=new-note pnpm run new-note 'New Note'
+make note slug=new-note title='New Note'
 ```
