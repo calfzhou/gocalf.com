@@ -65,6 +65,10 @@ marked: # https://github.com/hexojs/hexo-renderer-marked
 
 markdown: # https://github.com/hexojs/hexo-renderer-markdown-it
   preset: 'default'
+  anchors:
+    permalink: true
+    permalinkClass: 'headerlink'
+    permalinkSymbol: ''
   plugins:
     - name: '@traptitech/markdown-it-katex'
       options: # see https://katex.org/docs/options.html
