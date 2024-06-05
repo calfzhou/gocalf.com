@@ -5,7 +5,7 @@ tags:
   - calf
   - software/mac
 date: 2024-04-16 22:56:13
-updated: 2024-05-19 21:43:52
+updated: 2024-06-05 19:56:49
 ---
 ## 系统相关 / 实用工具
 
@@ -114,7 +114,8 @@ updated: 2024-05-19 21:43:52
 ### 编辑器 / IDE
 
 - [Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
-- 💰 [Sublime Text - Text Editing, Done Right](https://www.sublimetext.com/)
+- [TextMate: Text editor for macOS](https://macromates.com/)
+- 💰 ~~[Sublime Text - Text Editing, Done Right](https://www.sublimetext.com/)~~
 - [Zed - Code at the speed of thought](https://zed.dev/)
   - > Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. It's also open source.
   - 刚开始接触
