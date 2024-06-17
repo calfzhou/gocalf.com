@@ -51,8 +51,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       hexo-theme-stellar:
-        specifier: github:xaoxuu/hexo-theme-stellar#main
-        version: https://codeload.github.com/xaoxuu/hexo-theme-stellar/tar.gz/5f9389806b0bc97010626db73ff34d01a65205e8
+        specifier: ^1.29.0
+        version: 1.29.0
       postcss:
         specifier: ^8.4.38
         version: 8.4.38
@@ -791,9 +791,8 @@ packages:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
 
-  hexo-theme-stellar@https://codeload.github.com/xaoxuu/hexo-theme-stellar/tar.gz/5f9389806b0bc97010626db73ff34d01a65205e8:
-    resolution: {tarball: https://codeload.github.com/xaoxuu/hexo-theme-stellar/tar.gz/5f9389806b0bc97010626db73ff34d01a65205e8}
-    version: 1.28.1
+  hexo-theme-stellar@1.29.0:
+    resolution: {integrity: sha512-FmtLEQRZUNNtJfxSeA2RVUSYD1eMwEC2CWANe0vMBvOZm/aRazxuEcY/SKJxfM4+RjLXUknHb6sooQlm21TQ+A==}
 
   hexo-update-time@https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3c93f8bb31441a7b66a3202511bafaaf508d5ee:
     resolution: {tarball: https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3c93f8bb31441a7b66a3202511bafaaf508d5ee}
@@ -2350,7 +2349,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  hexo-theme-stellar@https://codeload.github.com/xaoxuu/hexo-theme-stellar/tar.gz/5f9389806b0bc97010626db73ff34d01a65205e8:
+  hexo-theme-stellar@1.29.0:
     dependencies:
       hexo-renderer-ejs: 2.0.0
       hexo-renderer-stylus: 3.0.1
