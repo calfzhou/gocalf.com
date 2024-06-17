@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2024-05-23 22:59:11
+updated: 2024-06-17 22:59:55
 ---
 ## Hexo
 
@@ -40,6 +40,7 @@ Hexo 还是以（博客）文章（posts）为核心的，虽然 Stellar 独创�
 [Stellar：如何使用文档系统 # 显示许可协议 - XAOXUU](https://xaoxuu.com/wiki/stellar/wiki-settings/#%E6%98%BE%E7%A4%BA%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE) 中提到可以给 wiki 开启 license 显示，或者指定协议内容。但实际没有显示出来。
 
 - 2024-05-08: 提了 [PR](https://github.com/xaoxuu/hexo-theme-stellar/pull/460) 进行修复。
+- 2024-06-17: Stellar 1.29.0 版本中修复了。
 
 ### 引用图片等 assets
 
@@ -84,11 +85,14 @@ Tag Plugin | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>
 
 当 Mermaid 图比较宽的时候，在手机上展示不全，且无法缩放、滑动。比如 [这里](/notes/pgp#架构)。
 
+- 2024-06-17: Stellar 1.29.0 版本中修复了。
+
 ### 明暗主题色
 
 目前可以通过配置文件指定 `prefers_theme` 是自动、亮色、还是暗色。还需要能够通过页面上的按钮手动切换的功能。
 
 - 2024-04-28: 提了 [PR](https://github.com/xaoxuu/hexo-theme-stellar/pull/449) 以支持运行时切换明暗。
+- 2024-06-17: Stellar 1.29.0 版本中修复了。
 
 ### Minify
 
@@ -136,3 +140,4 @@ HTML 文件可以用 [uiolee/hexo-htmlnano: Minify HTML files with htmlnano](htt
 标签树组件，在 `layout/_partial/widgets` 中增加 `tagtree.ejs` 用来渲染标签树，还需要修改 `layout/_partial/sidebar` 中相应文件来应用在配置文件中定义的不同 layout 下的 sidebar 配置。
 
 - 2024-05-13: 提了 [PR](https://github.com/xaoxuu/hexo-theme-stellar/pull/464)，基本完成初版笔记系统。
+- 2024-06-17: Stellar 1.29.0 版本中包含笔记系统。
