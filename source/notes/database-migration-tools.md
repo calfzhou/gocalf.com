@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/database
 date: 2024-06-29 17:08:06
-updated: 2024-06-29 17:08:06
+updated: 2024-06-29 17:16:17
 ---
 ## golang-migrate
 
@@ -21,6 +21,8 @@ migrate --version
 # 4.15.0
 ```
 
+golang-migrate 会在目标库中创建一张 `schema_migrations` 表，记录当前的版本信息。
+
 ``` bash
 migrate create -seq -ext sql -dir PATH/TO/MIGRATION/FOLDER MIGRATION_NAME
 
@@ -30,7 +32,25 @@ migrate -path PATH/TO/MIGRATION/FOLDER -database URI -verbose down 1
 migrate -path PATH/TO/MIGRATION/FOLDER -database URI -verbose force N
 ```
 
-golang-migrate 会在目标库中创建一张 `schema_migrations` 表，记录当前的版本信息。
+常用命令：
+
+``` text
+Commands:
+  create [-ext E] [-dir D] [-seq] [-digits N] [-format] [-tz] NAME
+        Create a set of timestamped up/down migrations titled NAME, in directory D with extension E.
+        Use -seq option to generate sequential up/down migrations with N digits.
+        Use -format option to specify a Go time format string. Note: migrations with the same time cause "duplicate migration version" error.
+        Use -tz option to specify the timezone that will be used when generating non-sequential migrations (defaults: UTC).
+
+  goto V       Migrate to version V
+  up [N]       Apply all or N up migrations
+  down [N] [-all]    Apply all or N down migrations
+        Use -all to apply all down migrations
+  drop [-f]    Drop everything inside database
+        Use -f to bypass confirmation
+  force V      Set version V but don't run migration (ignores dirty state)
+  version      Print current migration version
+```
 
 - 已知的小遗憾是不太适配 ByteDance 出的 ByteHouse CDW（云数仓版），因为 ByteHouse CDW 的 `SHOW TABLES FROM "db" LIKE '...'` 语句查询的结果不正确。
 - 不确定用在 ClickHouse 的时候是否支持 multi-statements。
@@ -52,6 +72,8 @@ GOOSE_VERSION=3.21.1
 curl -fsSL https://raw.githubusercontent.com/pressly/goose/master/install.sh | sh -s v${GOOSE_VERSION}
 ```
 
+goose 会在目标数据库中创建一张 `goose_db_version` 表，用来记录执行过的版本变更列表。
+
 ``` bash
 goose -dir PATH/TO/MIGRATION/FOLDER -s create NAME sql
 goose -dir PATH/TO/MIGRATION/FOLDER URI status
@@ -61,8 +83,6 @@ goose -dir PATH/TO/MIGRATION/FOLDER URI status
 
 > Migrations created during the development process are timestamped and sequential versions are ran on production.
 > We believe this method will prevent the problem of conflicting versions when writing software in a team environment.
-
-goose 会在目标数据库中创建一张 `goose_db_version` 表，用来记录执行过的版本变更列表。
 
 常用命令：
 
