@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/database
 date: 2024-06-29 17:08:06
-updated: 2024-06-29 17:16:17
+updated: 2024-06-29 17:18:24
 ---
 ## golang-migrate
 
@@ -21,7 +21,7 @@ migrate --version
 # 4.15.0
 ```
 
-golang-migrate 会在目标库中创建一张 `schema_migrations` 表，记录当前的版本信息。
+golang-migrate 会在目标库中创建一张 `schema_migrations` 表，记录当前的版本信息。表中只有一行数据，记录最后的版本号。
 
 ``` bash
 migrate create -seq -ext sql -dir PATH/TO/MIGRATION/FOLDER MIGRATION_NAME
@@ -72,7 +72,7 @@ GOOSE_VERSION=3.21.1
 curl -fsSL https://raw.githubusercontent.com/pressly/goose/master/install.sh | sh -s v${GOOSE_VERSION}
 ```
 
-goose 会在目标数据库中创建一张 `goose_db_version` 表，用来记录执行过的版本变更列表。
+goose 会在目标数据库中创建一张 `goose_db_version` 表，用来记录执行过的版本变更列表。表里首先会初始化一条 `version = 0` 的初始数据，之后每个版本都会增加一条对应的数据。
 
 ``` bash
 goose -dir PATH/TO/MIGRATION/FOLDER -s create NAME sql
