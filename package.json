@@ -23,7 +23,7 @@
   "dependencies": {
     "@traptitech/markdown-it-katex": "^3.6.0",
     "@uiolee/hexo-htmlnano": "^0.1.2",
-    "cssnano": "^7.0.3",
+    "cssnano": "^7.0.4",
     "hexo": "^7.3.0",
     "hexo-esbuild": "^0.1.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
