@@ -20,6 +20,9 @@ importers:
       hexo:
         specifier: ^7.3.0
         version: 7.3.0(chokidar@3.6.0)
+      hexo-diagrams-net:
+        specifier: ^2024.4.1
+        version: 2024.4.1
       hexo-esbuild:
         specifier: ^0.1.0
         version: 0.1.0(esbuild@0.20.2)(micromatch@4.0.7)
@@ -727,6 +730,9 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  hexo-diagrams-net@2024.4.1:
+    resolution: {integrity: sha512-oDftScAbixuddm60PCR7uqq39++WgKLXaYbfYpmcK8jZaAUsmBDqvlyJQyFh1mMnjohzMv7QdBy9ptJrWyrklA==}
+
   hexo-esbuild@0.1.0:
     resolution: {integrity: sha512-J/l0JtygbOVyZFQFaAUZoxKwZQy9A4/KCESatUVtQBGnYUStQd6Isnitv/O5/0mS8vAeNcLdpVSVvhHfQ9bxfQ==}
     peerDependencies:
@@ -795,6 +801,9 @@ packages:
     resolution: {commit: b3c93f8bb31441a7b66a3202511bafaaf508d5ee, repo: git@github.com:calfzhou/hexo-update-time.git, type: git}
     version: 1.1.1
     hasBin: true
+
+  hexo-util-parse-tag-arguments@2021.1.2:
+    resolution: {integrity: sha512-JwM1pH1b9k553cxDOqFzCoGo/W39Cktf3YAIu7cBSCOaEmASSmpr0x4tYzyM8U2HtVnfmhfvi75kXDTw+gnOlg==}
 
   hexo-util@3.3.0:
     resolution: {integrity: sha512-YvGngXijE2muEh5L/VI4Fmjqb+/yAkmY+VuyhWVoRwQu1X7bmWodsfYRXX7CUYhi5LqsvH8FAe/yBW1+f6ZX4Q==}
@@ -2257,6 +2266,10 @@ snapshots:
       resolve: 1.22.8
       tildify: 2.0.0
 
+  hexo-diagrams-net@2024.4.1:
+    dependencies:
+      hexo-util-parse-tag-arguments: 2021.1.2
+
   hexo-esbuild@0.1.0(esbuild@0.20.2)(micromatch@4.0.7):
     dependencies:
       esbuild: 0.20.2
@@ -2355,6 +2368,8 @@ snapshots:
       commander: 9.5.0
       dayjs: 1.11.11
       execa: 6.1.0
+
+  hexo-util-parse-tag-arguments@2021.1.2: {}
 
   hexo-util@3.3.0:
     dependencies:
