@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2024-06-17 22:59:55
+updated: 2024-07-11 13:52:57
 ---
 ## Hexo
 
@@ -101,6 +101,24 @@ JS、CSS 文件可以用 [uiolee/hexo-esbuild: Minify JavaScripts, CSS files via
 HTML 文件可以用 [uiolee/hexo-htmlnano: Minify HTML files with htmlnano](https://github.com/uiolee/hexo-htmlnano)。
 
 还有一个同时支持 HTML、CSS、JS、Font、Image，[Lete114/hexo-minify: Hexo-minify is a Hexo compression plug-in that compresses HTML, CSS, JS, Font and Image(jpg,png,gif,webp,svg)](https://github.com/Lete114/hexo-minify)。但是太庞大了，一下子多引入小五百个 npm 包，累觉不爱。
+
+### diagrams.net / draw.io
+
+在文章内插入 diagrams.net / draw.io 图。
+
+[Diagrams.net | Kutt Katrea's plugins for Hexo](https://kuttkatrea.github.io/hexo-plugins/diagrams-net/)
+
+``` bash
+pnpm add hexo-diagrams-net
+```
+
+``` markdown
+{% diagramsnet ../notes/hexo/flowchart.drawio %}
+```
+
+{% diagramsnet ../notes/hexo/flowchart.drawio %}
+
+- 如何适配明暗主题？
 
 ## Stellar 主题增加 Notebook（笔记本）支持
 
