@@ -1,17 +1,30 @@
-:root[data-theme="dark"] .invert-when-dark img,
-:root[data-theme="light"] .invert-when-light img {
-  filter: invert(1) hue-rotate(180deg);
-}
+:root[data-theme="dark"] .invert-when-dark,
+:root[data-theme="light"] .invert-when-light {
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) .invert-when-dark img {
+  img,
+  svg {
     filter: invert(1) hue-rotate(180deg);
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .invert-when-dark {
+
+    img,
+    svg {
+      filter: invert(1) hue-rotate(180deg);
+    }
+  }
+}
+
 @media (prefers-color-scheme: light) {
-  :root:not([data-theme]) .invert-when-light img {
-    filter: invert(1) hue-rotate(180deg);
+
+  :root:not([data-theme]) .invert-when-light {
+
+    img,
+    svg {
+      filter: invert(1) hue-rotate(180deg);
+    }
   }
 }
 
