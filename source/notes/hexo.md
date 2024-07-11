@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2024-07-11 18:22:47
+updated: 2024-07-11 20:33:37
 ---
 ## Hexo
 
@@ -50,7 +50,11 @@ Hexo 还是以（博客）文章（posts）为核心的，虽然 Stellar 独创�
 
 调整 hexo 配置 `_config.yml`:
 
-引用图片可以有两种语法，一种是 Markdown 语法 `![alt](src)`，另一种是 Hexo 提供的标签插件 `{% asset_img slug [title] %}`。
+引用图片可以有几种语法：
+
+- Markdown 语法 `![alt](src)`
+- Hexo 提供的 `asset_img` 标签插件 `{% asset_img slug [title] %}`
+- Stellar 主题提供的 [`image` 标签插件](https://xaoxuu.com/wiki/stellar/tag-plugins/express/#image-%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE) `{% image src [description] %}`
 
 ``` yaml
 post_asset_folder: true # https://hexo.io/docs/asset-folders#Post-Asset-Folder
@@ -61,23 +65,33 @@ marked: # https://github.com/hexojs/hexo-renderer-marked
 
 Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=fantasy.vscode-hexo-utils)。
 
+> 不确定是因为 7.2 的一些改动，还是因为换了 renderer，下面两个表的效果发生了变化。
+> 目前是 2024-07-11 基于 Hexo 7.3 验证的结果。
+
 #### 文章（Post）中引用图片
 
 Syntax | Slug / Src | Hexo | VS Code
 --|--|--|--
 Markdown | `filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %}
-Markdown | `post-slug/filename` | {% mark ✗ color:red %} 变成绝对路径了 | {% mark ✓ color:green %}
-Tag Plugin | `filename` | {% mark ✓ color:green %} | {% mark ✓ color:green %}
+Markdown | `post-slug/filename` | {% mark ✗ color:red %} | {% mark ✓ color:green %}
+`asset_img` | `filename` | {% mark ✗ color:red %} | {% mark ✓ color:green %}
+`asset_img` | `post-slug/filename` | {% mark ✗ color:red %} | {% mark ✓ color:green %}
+`image` | `filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %}
+`image` | `post-slug/filename` | {% mark ✗ color:red %} | {% mark ✗ color:red %}
 
 #### 笔记（Note）中引用图片
 
-Syntax | Slug / Src | Hexo | VS Code
---|--|--|--
-Markdown | `notes/note-slug/filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %}
-Markdown | `../notes/note-slug/filename` | {% mark ✓ color:green %} `/../` 没影响 | {% mark ✓ color:green %}
-Tag Plugin | `filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %}
-Tag Plugin | `notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✗ color:red %}
-Tag Plugin | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %}
+Syntax | Slug / Src | Hexo | VS Code | Demo
+--|--|--|--|--
+Markdown | `note-slug/filename` | {% mark ✓ color:green %} | {% mark ✓ color:green %} | ![demo](hexo/demo.png)
+Markdown | `notes/note-slug/filename` | {% mark ✗ color:red %} | {% mark ✗ color:red %} | ![demo](notes/hexo/demo.png)
+Markdown | `../notes/note-slug/filename` | {% mark ✓ color:green %} ~~`/../` 没影响~~ | {% mark ✓ color:green %} | ![demo](../notes/hexo/demo.png)
+`asset_img` | `filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %} | {% asset_img demo.png %}
+`asset_img` | `note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %} | {% asset_img hexo/demo.png %}
+`asset_img` | `notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✗ color:red %} | {% asset_img notes/hexo/demo.png %}
+`asset_img` | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %} | {% asset_img ../notes/hexo/demo.png %}
+`image` | `note-slug/filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %} | {% image hexo/demo.png %}
+`image` | `../notes/note-slug/filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %} | {% image ../notes/hexo/demo.png %}
 
 > 其他页面可能类似，待确认。
 
@@ -113,11 +127,11 @@ pnpm add hexo-diagrams-net
 ```
 
 ``` markdown
-{% diagramsnet ../notes/hexo/flowchart.drawio %}
+{% diagramsnet hexo/flowchart.drawio %}
 ```
 
 {% invert [when:dark/light/always] %}
-{% diagramsnet ../notes/hexo/flowchart.drawio %}
+{% diagramsnet hexo/flowchart.drawio %}
 {% endinvert %}
 
 - 如何适配明暗主题？
