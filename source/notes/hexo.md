@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2024-07-11 13:52:57
+updated: 2024-07-11 18:04:12
 ---
 ## Hexo
 
@@ -119,6 +119,8 @@ pnpm add hexo-diagrams-net
 {% diagramsnet ../notes/hexo/flowchart.drawio %}
 
 - 如何适配明暗主题？
+  - 参考 <https://github.com/jgraph/drawio-integration/blob/master/inline.js>
+  - 效果 <http://jgraph.github.io/drawio-integration/inline.html>
 
 ## Stellar 主题增加 Notebook（笔记本）支持
 
