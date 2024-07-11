@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2024-07-11 20:33:37
+updated: 2024-07-11 20:50:21
 ---
 ## Hexo
 
@@ -67,6 +67,11 @@ Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](http
 
 > 不确定是因为 7.2 的一些改动，还是因为换了 renderer，下面两个表的效果发生了变化。
 > 目前是 2024-07-11 基于 Hexo 7.3 验证的结果。
+
+文章和笔记（或其他页面）的差异，应该是因为路由路径不同：
+
+- 文章 post-slug.md ⇒ `/path/to/post-slug/index.html`
+- 笔记 note-slug.md ⇒ `/path/to/note-slug.html`
 
 #### 文章（Post）中引用图片
 
