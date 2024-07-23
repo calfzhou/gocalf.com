@@ -5,7 +5,7 @@ tags:
   - calf
   - software/mac
 date: 2024-04-16 22:56:13
-updated: 2024-07-18 15:34:38
+updated: 2024-07-23 16:48:28
 ---
 ## 系统相关 / 实用工具
 
@@ -46,6 +46,8 @@ updated: 2024-07-18 15:34:38
   - > The browser built to be yours
 - [Get Firefox for desktop — Mozilla (US)](https://www.mozilla.org/en-US/firefox/new/)
   - 考虑到 Chrome 持续了十几年都没修的一个 bug [DevTools: XHR (and other resources) content not available after navigation. [40254754] - Chromium](https://issues.chromium.org/issues/40254754)，有时候还是需要用其他替代品以便调试
+- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+  - > Get the latest features, fast performance, and the development tools you need to build for the open web.
 - [DuckDuckGo — Privacy, simplified.](https://duckduckgo.com/)
   - > Free. Fast. Private. Get our browser on all your devices.
 
