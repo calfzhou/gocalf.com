@@ -28,6 +28,7 @@
     "hexo-diagrams-net": "^2024.4.1",
     "hexo-esbuild": "^0.1.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
+    "hexo-generator-alias": "^1.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
