@@ -1,10 +1,10 @@
 ---
-title: RIME 中州韵输入法引擎
+title: Rime 中州韵输入法引擎
 notebook: notes
 tags:
 - software
 date: 2024-07-26 21:38:51
-updated: 2024-07-26 21:38:51
+updated: 2024-07-27 22:27:14
 references:
 - '[自由输入法 RIME 简明配置指南 - 少数派](https://sspai.com/post/84373)'
 - "[RIME 输入法使用体验 - Hank's Blog](https://zhaohongxuan.github.io/2024/03/20/most-powerful-input-method-rime/)"
@@ -68,7 +68,7 @@ patch:
 
 ### 管理配置
 
-用「东风破」（plum）进行 RIME 配置管理。
+用「东风破」（plum）进行 Rime 配置管理。
 
 [rime/plum: 東風破 /plum/: Rime configuration manager and input schema repository](https://github.com/rime/plum)
 > **東風破** 是 [中州韻輸入法引擎](https://rime.im/) 的配置管理工具。
@@ -93,7 +93,7 @@ curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | bas
 - [stroke](https://github.com/rime/rime-stroke): 五筆畫 / five strokes
 - [cangjie](https://github.com/rime/rime-cangjie): 倉頡輸入法 / Cangjie input method
 
-「套装 packages」就是由 conf 文件定义的一组「配方 package」。「配方」又可以包含若干个「输入方案 ℞」或「RIME 配置 ℞」。
+「套装 packages」就是由 conf 文件定义的一组「配方 package」。「配方」又可以包含若干个「输入方案 ℞」或「Rime 配置 ℞」。
 
 或者直接 clone 仓库：
 
@@ -172,6 +172,48 @@ Recipes 里有：
 [如何在中英文混合输入情况下，输入后的英文单词前后自动加空格？ · Issue #536 · iDvel/rime-ice](https://github.com/iDvel/rime-ice/issues/536)
 
 效果不太理想，想要类似于搜狗输入法里那样的效果。
+
+### 搜狗输入法用户词库迁移
+
+#### 导出
+
+打开搜狗输入法的设置窗口，点击「我的 → 词库设置 → 中文用户词库 → 导出」，得到词库备份文件，比如叫 `搜狗词库备份_2024_07_26.bin`。
+
+#### 转换
+
+工具：[nopdan/rose: IME User Dictionary Converter. 输入法用户词库转换工具](https://github.com/nopdan/rose)
+
+{% badge_github nopdan rose release:true %}
+
+直接去 releases 中下载最新的版本。注意要下载 `rose.zip` 即预先编译好的二进制程序，还要下载 `data.zip`（目前知道 [v1.3.1](https://github.com/nopdan/rose/releases/tag/v1.3.1) 版本中有）。按照说明把 `data.zip` 解压到 `rose` 目录下。
+
+``` bash
+chmod +x rose-darwin-amd64
+./rose-darwin-amd64 搜狗词库备份_2024_07_26.bin sogou_bak:rime sougou.dict.yaml
+```
+
+可以手动编辑生成的 yaml 文件，删除或调整一些词条。
+
+#### 调整 Rime 词库文件格式
+
+rose 不会自动添加 Rime 词库文件的头部，所以需要手动添加，如：
+
+``` yaml
+---
+name: sougou
+version: '2024.07.26'
+sort: by_weight
+---
+```
+
+#### 引用词库
+
+把上边生成的 `sougou.dict.yaml` 放到 Rime 配置目录下，添加到当前词库的 `import_tables` 中，如：
+
+``` yaml
+import_tables:
+  - sogou
+```
 
 ## 其他
 
