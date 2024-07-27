@@ -18,6 +18,7 @@
     "version": "7.3.0"
   },
   "lint-staged": {
+    "source/_posts/**/*.md": "hexo-update-time",
     "source/notes/**/*.md": "hexo-update-time"
   },
   "dependencies": {
