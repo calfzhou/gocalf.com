@@ -4,10 +4,11 @@ notebook: notes
 tags:
 - software
 date: 2024-07-26 21:38:51
-updated: 2024-07-27 22:27:14
+updated: 2024-07-29 11:54:58
 references:
 - '[自由输入法 RIME 简明配置指南 - 少数派](https://sspai.com/post/84373)'
 - "[RIME 输入法使用体验 - Hank's Blog](https://zhaohongxuan.github.io/2024/03/20/most-powerful-input-method-rime/)"
+- '[Rime 输入法指北 | Jiz4oh's Life](https://jiz4oh.com/2020/10/how-to-use-rime/)'
 ---
 ## 基本信息
 
