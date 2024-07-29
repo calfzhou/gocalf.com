@@ -4,7 +4,7 @@ notebook: notes
 tags:
 - software
 date: 2024-07-26 21:38:51
-updated: 2024-07-29 11:54:58
+updated: 2024-07-29 16:40:58
 references:
 - '[自由输入法 RIME 简明配置指南 - 少数派](https://sspai.com/post/84373)'
 - "[RIME 输入法使用体验 - Hank's Blog](https://zhaohongxuan.github.io/2024/03/20/most-powerful-input-method-rime/)"
@@ -161,6 +161,7 @@ Recipes 里有：
 
 - 数字的各种格式（汉字、人民币大写等）：`R<number>`，如 `R1234.5678`。
 - 字母、数字的各种变体：`v<alpha|digit>`，如 `va`、`v1`。
+- 其他各种符号：`v<>`，如 `vjt` 各种箭头、`vss` 各种手势 emoji。
 - 拆字输入：`uU<各部件拼音>`，如 `uUbuhao` 得到 `孬`。
 - 以词定字：输入词组的拼音之后，按 `[` 或 `]` 上屏激活候选项的首字或尾字。
   - 快捷键通过 `default.yaml` 的 `key_binder/select_first_character` 和 `key_binder/select_last_character` 调整。
