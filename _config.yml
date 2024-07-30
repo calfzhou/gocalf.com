@@ -24,6 +24,12 @@ pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
+# Will be processed by `./scripts/generators/duplicates.js`.
+# Usage similar to https://github.com/hexojs/hexo-generator-alias
+# new route: source route
+duplicates:
+  /index.html: /notes/index.html
+
 # Directory
 source_dir: source
 public_dir: public
@@ -79,7 +85,7 @@ markdown: # https://github.com/hexojs/hexo-renderer-markdown-it
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: blog
   per_page: 8
   order_by: -date
 

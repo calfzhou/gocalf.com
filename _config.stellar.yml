@@ -9,16 +9,16 @@ logo:
 menubar:
   columns: 4
   items:
-    - id: post
-      theme: '#FFA500'
-      icon: solar:documents-bold-duotone
-      title: 博客
-      url: /
     - id: notes
       theme: '#1BCDFC'
       icon: solar:notebook-bold-duotone
       title: 笔记
       url: /notes/
+    - id: post
+      theme: '#FFA500'
+      icon: solar:documents-bold-duotone
+      title: 博客
+      url: /blog/
     - id: wiki
       theme: '#3DC550'
       icon: solar:notebook-bookmark-bold-duotone
