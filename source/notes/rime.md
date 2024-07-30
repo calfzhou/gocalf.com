@@ -4,7 +4,7 @@ notebook: notes
 tags:
 - software
 date: 2024-07-26 21:38:51
-updated: 2024-07-29 16:40:58
+updated: 2024-07-30 14:35:47
 references:
 - '[自由输入法 RIME 简明配置指南 - 少数派](https://sspai.com/post/84373)'
 - "[RIME 输入法使用体验 - Hank's Blog](https://zhaohongxuan.github.io/2024/03/20/most-powerful-input-method-rime/)"
@@ -126,9 +126,9 @@ patch:
 
 [LEOYoon-Tsaw/Squirrel-Designer: Squirrel Theme Simulator](https://github.com/LEOYoon-Tsaw/Squirrel-Designer)
 
-> Squirrel 皮肤设计软件
+[Rime 西米 for Squirrel](https://gjrobert.github.io/Rime-See-Me-squirrel/)
 
-不用这个也可以，直接在 `~/Library/Rime` 里找到 `squirrel.custom.yaml`（没有则自行创建），修改即可。
+通过工具生成了 theme 设定代码，在 `~/Library/Rime` 里找到 `squirrel.custom.yaml`（没有则自行创建），修改即可。
 
 ### 雾凇拼音
 
