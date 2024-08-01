@@ -4,7 +4,7 @@ notebook: notes
 tags:
 - software
 date: 2024-07-26 21:38:51
-updated: 2024-07-30 16:31:07
+updated: 2024-08-01 09:46:49
 references:
 - '[自由输入法 RIME 简明配置指南 - 少数派](https://sspai.com/post/84373)'
 - "[RIME 输入法使用体验 - Hank's Blog](https://zhaohongxuan.github.io/2024/03/20/most-powerful-input-method-rime/)"
@@ -215,6 +215,34 @@ sort: by_weight
 ``` yaml
 import_tables:
   - sogou
+```
+
+### Lua 脚本
+
+- [Home · hchunhui/librime-lua Wiki](https://github.com/hchunhui/librime-lua/wiki)
+- [Scripting · hchunhui/librime-lua Wiki](https://github.com/hchunhui/librime-lua/wiki/Scripting)
+
+四个的关键编程接口：
+
+``` lua
+function translator(input, seg, env)
+  -- yield Candidate
+end
+
+function filter(input, env, cands)
+  -- yield Candidate
+end
+
+function processor(key_event, env)
+  -- return 0 -- kRejected
+  -- return 1 -- kAccepted
+  -- return 2 -- kNoop
+end
+
+function segmentor(segmentation, env)
+  -- return true -- 交由下一个 segmentor 处理
+  -- return false -- 终止 segmentors 处理流程
+end
 ```
 
 ## 其他
