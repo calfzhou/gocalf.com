@@ -46,6 +46,6 @@
   "devDependencies": {
     "hexo-update-time": "github:calfzhou/hexo-update-time#v1.1.2-calf.1",
     "husky": "^9.1.4",
-    "lint-staged": "^15.2.7"
+    "lint-staged": "^15.2.8"
   }
 }
