@@ -13,7 +13,7 @@ importers:
         version: 3.6.0
       '@uiolee/hexo-htmlnano':
         specifier: ^0.1.2
-        version: 0.1.2(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.45))(postcss@8.4.45)(svgo@3.3.2)(terser@5.31.6))(micromatch@4.0.8)
+        version: 0.1.2(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.45))(postcss@8.4.45)(svgo@3.3.2)(terser@5.32.0))(micromatch@4.0.8)
       cssnano:
         specifier: ^7.0.6
         version: 7.0.6(postcss@8.4.45)
@@ -66,8 +66,8 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2
       terser:
-        specifier: ^5.31.6
-        version: 5.31.6
+        specifier: ^5.32.0
+        version: 5.32.0
     devDependencies:
       hexo-update-time:
         specifier: github:calfzhou/hexo-update-time#v1.1.2-calf.1
@@ -1597,8 +1597,8 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  terser@5.31.6:
-    resolution: {integrity: sha512-PQ4DAriWzKj+qgehQ7LK5bQqCFNMmlhjR2PFFLuqGCpuCAauxemVBWwWOxo3UIwWQx8+Pr61Df++r76wDmkQBg==}
+  terser@5.32.0:
+    resolution: {integrity: sha512-v3Gtw3IzpBJ0ugkxEX8U0W6+TnPKRRCWGh1jC/iM/e3Ki5+qvO1L1EAZ56bZasc64aXHwRHNIQEzm6//i5cemQ==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -1790,9 +1790,9 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
-  '@uiolee/hexo-htmlnano@0.1.2(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.45))(postcss@8.4.45)(svgo@3.3.2)(terser@5.31.6))(micromatch@4.0.8)':
+  '@uiolee/hexo-htmlnano@0.1.2(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.45))(postcss@8.4.45)(svgo@3.3.2)(terser@5.32.0))(micromatch@4.0.8)':
     dependencies:
-      htmlnano: 2.1.1(cssnano@7.0.6(postcss@8.4.45))(postcss@8.4.45)(svgo@3.3.2)(terser@5.31.6)
+      htmlnano: 2.1.1(cssnano@7.0.6(postcss@8.4.45))(postcss@8.4.45)(svgo@3.3.2)(terser@5.32.0)
       micromatch: 4.0.8
 
   a-sync-waterfall@1.0.1: {}
@@ -2449,7 +2449,7 @@ snapshots:
 
   highlight.js@11.9.0: {}
 
-  htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.45))(postcss@8.4.45)(svgo@3.3.2)(terser@5.31.6):
+  htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.45))(postcss@8.4.45)(svgo@3.3.2)(terser@5.32.0):
     dependencies:
       cosmiconfig: 9.0.0
       posthtml: 0.16.6
@@ -2458,7 +2458,7 @@ snapshots:
       cssnano: 7.0.6(postcss@8.4.45)
       postcss: 8.4.45
       svgo: 3.3.2
-      terser: 5.31.6
+      terser: 5.32.0
     transitivePeerDependencies:
       - typescript
 
@@ -3160,7 +3160,7 @@ snapshots:
       csso: 5.0.5
       picocolors: 1.0.0
 
-  terser@5.31.6:
+  terser@5.32.0:
     dependencies:
       '@jridgewell/source-map': 0.3.6
       acorn: 8.11.3
