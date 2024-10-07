@@ -12,8 +12,8 @@ importers:
         specifier: ^3.6.0
         version: 3.6.0
       '@uiolee/hexo-htmlnano':
-        specifier: ^0.1.2
-        version: 0.1.2(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.47))(postcss@8.4.47)(svgo@3.3.2)(terser@5.34.1))(micromatch@4.0.8)
+        specifier: ^1.0.0
+        version: 1.0.0(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.47))(postcss@8.4.47)(svgo@3.3.2)(terser@5.34.1))(micromatch@4.0.8)
       cssnano:
         specifier: ^7.0.6
         version: 7.0.6(postcss@8.4.47)
@@ -262,8 +262,8 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
 
-  '@uiolee/hexo-htmlnano@0.1.2':
-    resolution: {integrity: sha512-A7+SGYcJzWscJP/SEwtrkt/WOYljJLDPYazMEM5y4IOUF/vW8rPI+FIJTgnI7aDRJ3lNyZ8zR1segDtXZs7WNg==}
+  '@uiolee/hexo-htmlnano@1.0.0':
+    resolution: {integrity: sha512-w5Q/A0uJ8KZ2rAtTklJ/u/zyBBBzY0v1Yo2OiF5c7FudECnPHVW0EvEi8VZXO54qIOkzMgMNuLLd3aL2J79a3g==}
     engines: {node: '>=20'}
     peerDependencies:
       htmlnano: ^2.1.0
@@ -1797,7 +1797,7 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
-  '@uiolee/hexo-htmlnano@0.1.2(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.47))(postcss@8.4.47)(svgo@3.3.2)(terser@5.34.1))(micromatch@4.0.8)':
+  '@uiolee/hexo-htmlnano@1.0.0(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.47))(postcss@8.4.47)(svgo@3.3.2)(terser@5.34.1))(micromatch@4.0.8)':
     dependencies:
       htmlnano: 2.1.1(cssnano@7.0.6(postcss@8.4.47))(postcss@8.4.47)(svgo@3.3.2)(terser@5.34.1)
       micromatch: 4.0.8
