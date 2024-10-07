@@ -24,8 +24,8 @@ importers:
         specifier: ^2024.4.1
         version: 2024.4.1
       hexo-esbuild:
-        specifier: ^0.1.0
-        version: 0.1.0(esbuild@0.20.2)(micromatch@4.0.8)
+        specifier: ^1.0.0
+        version: 1.0.0(esbuild@0.20.2)(micromatch@4.0.8)
       hexo-filter-mermaid-diagrams:
         specifier: ^1.0.5
         version: 1.0.5
@@ -740,8 +740,8 @@ packages:
   hexo-diagrams-net@2024.4.1:
     resolution: {integrity: sha512-oDftScAbixuddm60PCR7uqq39++WgKLXaYbfYpmcK8jZaAUsmBDqvlyJQyFh1mMnjohzMv7QdBy9ptJrWyrklA==}
 
-  hexo-esbuild@0.1.0:
-    resolution: {integrity: sha512-J/l0JtygbOVyZFQFaAUZoxKwZQy9A4/KCESatUVtQBGnYUStQd6Isnitv/O5/0mS8vAeNcLdpVSVvhHfQ9bxfQ==}
+  hexo-esbuild@1.0.0:
+    resolution: {integrity: sha512-vk+hPK1DEciOe0hkMc6F0l2+CnGOQIfm6COUsjzBa145CQF/AKlGhyG81/GC+Du4Waxu7SXWFy0j8HUX7IdkkQ==}
     peerDependencies:
       esbuild: ^0.20.0
       micromatch: ^4.0.5
@@ -2299,7 +2299,7 @@ snapshots:
     dependencies:
       hexo-util-parse-tag-arguments: 2021.1.2
 
-  hexo-esbuild@0.1.0(esbuild@0.20.2)(micromatch@4.0.8):
+  hexo-esbuild@1.0.0(esbuild@0.20.2)(micromatch@4.0.8):
     dependencies:
       esbuild: 0.20.2
       micromatch: 4.0.8
