@@ -5,7 +5,7 @@ tags:
   - calf
   - software/mac
 date: 2024-04-16 22:56:13
-updated: 2024-07-23 16:48:28
+updated: 2024-11-06 11:28:56
 ---
 ## 系统相关 / 实用工具
 
@@ -120,8 +120,9 @@ updated: 2024-07-23 16:48:28
 - [Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
 - [TextMate: Text editor for macOS](https://macromates.com/)
 - 💰 ~~[Sublime Text - Text Editing, Done Right](https://www.sublimetext.com/)~~
-- [Zed - Code at the speed of thought](https://zed.dev/)
+- [Zed - The editor for what's next](https://zed.dev/)
   - > Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. It's also open source.
+  - > Zed is a next-generation code editor designed for high-performance collaboration with humans and AI.
   - 刚开始接触
 - [MacDown: The open source Markdown editor for macOS](https://macdown.uranusjr.com/)
   - > MacDown is an open source Markdown editor for macOS, released under the MIT License. It is heavily influenced by Chen Luo’s Mou.
