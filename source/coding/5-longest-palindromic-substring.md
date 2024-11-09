@@ -4,7 +4,7 @@ notebook: coding
 tags:
 - medium
 date: 2024-11-10 03:29:56
-updated: 2024-11-10 03:29:56
+updated: 2024-11-10 03:37:00
 ---
 ## Problem
 
@@ -57,3 +57,9 @@ Palindromic string（回文）一定是按中间位置对称的。注意奇数�
 ## Code
 
 [solution.py](5-longest-palindromic-substring/solution.py)
+
+## Extra
+
+有个严格 `O(n)` 时间复杂度（`O(n)` 空间复杂度）的算法，叫 [Manacher's algorithm](https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm)。
+
+比较复杂，先不看了。
