@@ -1,0 +1,10 @@
+name: Coding
+title: <Code author="Calf" />
+icon: /images/gocalf-code.png
+description: Talk is cheap. Show me the code.
+base_dir: /coding/
+
+license: true
+share: true
+
+menu_id: coding

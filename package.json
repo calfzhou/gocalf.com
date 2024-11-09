@@ -19,6 +19,7 @@
   },
   "lint-staged": {
     "source/_posts/**/*.md": "hexo-update-time",
+    "source/coding/**/*.md": "hexo-update-time",
     "source/notes/**/*.md": "hexo-update-time"
   },
   "dependencies": {

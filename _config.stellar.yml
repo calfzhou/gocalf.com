@@ -19,11 +19,11 @@ menubar:
       icon: solar:documents-bold-duotone
       title: 博客
       url: /blog/
-    - id: wiki
+    - id: coding
       theme: '#3DC550'
-      icon: solar:notebook-bookmark-bold-duotone
-      title: Wiki
-      url: /wiki/
+      icon: solar:sidebar-code-bold-duotone
+      title: Coding
+      url: /coding/
     - id: about
       theme: '#3370FF'
       icon: calf:gocalf-duotone

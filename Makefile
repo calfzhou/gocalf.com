@@ -39,4 +39,7 @@ note: check-slug-and-title
 post: check-slug-and-title
 	hexo new post -p "$(shell date '+%Y')/$(slug)" "$(title)"
 
-.PHONY: list install build generate clean server s note post
+coding: check-slug-and-title
+	hexo new coding -p "../coding/$(slug)" "$(title)"
+
+.PHONY: list install build generate clean server s note post coding
