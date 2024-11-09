@@ -3,6 +3,7 @@ import pytest
 from solution import Solution
 from solution2 import Solution as Solution2
 
+
 @pytest.mark.parametrize('s, expected', [
     ('abcabcbb', 3),
     ('bbbbb', 1),
