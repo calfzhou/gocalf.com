@@ -14,16 +14,16 @@ menubar:
       icon: solar:notebook-bold-duotone
       title: 笔记
       url: /notes/
-    - id: post
-      theme: '#FFA500'
-      icon: solar:documents-bold-duotone
-      title: 博客
-      url: /blog/
     - id: coding
       theme: '#3DC550'
       icon: solar:sidebar-code-bold-duotone
       title: Coding
       url: /coding/
+    - id: post
+      theme: '#FFA500'
+      icon: solar:documents-bold-duotone
+      title: 博客
+      url: /blog/
     - id: about
       theme: '#3370FF'
       icon: calf:gocalf-duotone
@@ -92,6 +92,7 @@ footer:
       - '[旧站](https://blog.gocalf.com/)'
     '内容':
       - '[笔记<span class="dot"></span>杂七杂八](/notes/)'
+      - '[笔记<span class="dot"></span>Coding](/coding/)'
       - '[博客<span class="dot"></span>近期发布](/)'
       - '[博客<span class="dot"></span>归档](/blog/archives/)'
       - '[所有 Wiki 项目](/wiki/)'
