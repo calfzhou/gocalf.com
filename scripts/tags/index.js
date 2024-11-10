@@ -95,3 +95,5 @@ hexo.extend.tag.register('invert', function (args, content) {
   }
   return `<div class="${classes.join(' ')}">${inner}</div>`
 }, true)
+
+hexo.extend.tag.register('asset_code', require('./asset_code')(hexo), { async: true })
