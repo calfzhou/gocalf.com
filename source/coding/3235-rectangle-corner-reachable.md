@@ -1,5 +1,5 @@
 ---
-title: 3235. 判断矩形的两个角落是否可达
+title: 3235. Check if the Rectangle Corner Is Reachable
 notebook: coding
 tags:
 - hard
@@ -11,42 +11,61 @@ updated: 2024-11-09 20:20:29
 
 <https://leetcode.cn/problems/check-if-the-rectangle-corner-is-reachable/description/>
 
-给你两个正整数 `xCorner` 和 `yCorner` 和一个二维整数数组 `circles` ，其中 `circles[i] = [xi, yi, ri]` 表示一个圆心在 `(xi, yi)` 半径为 `ri` 的圆。
+You are given two positive integers `xCorner` and `yCorner`, and a 2D array `circles`, where `circles[i] = [x_i, y_i, r_i]` denotes a circle with center at `(x_i, y_i)` and radius `r_i`.
 
-坐标平面内有一个左下角在原点，右上角在 `(xCorner, yCorner)` 的矩形。你需要判断是否存在一条从左下角到右上角的路径满足：路径 **完全** 在矩形内部，**不会** 触碰或者经过 **任何** 圆的内部和边界，同时 **只** 在起点和终点接触到矩形。
+There is a rectangle in the coordinate plane with its bottom left corner at the origin and top right corner at the coordinate `(xCorner, yCorner)`. You need to check whether there is a path from the bottom left corner to the top right corner such that the **entire path** lies inside the rectangle, **does not** touch or lie inside **any** circle, and touches the rectangle **only** at the two corners.
 
-如果存在这样的路径，请你返回 `true` ，否则返回 `false` 。
+Return `true` if such a path exists, and `false` otherwise.
 
-示例 1：
+**Example 1:**
 
-输入：X = 3, Y = 4, circles = [[2,1,1]]
+> Input: `xCorner = 3, yCorner = 4, circles = [[2,1,1]]`
+> Output: true
+> Explanation:
+> {% invert %}
+> {% image 3235-rectangle-corner-reachable/case1.png %}
+> {% endinvert %}
+> The curve shows a possible path between `(0, 0)` and `(3, 4)`.
 
-输出：true
+**Example 2:**
 
-示例 2：
+> Input: `xCorner = 3, yCorner = 3, circles = [[1,1,2]]`
+> Output: false
+> Explanation:
+> {% invert %}
+> {% image 3235-rectangle-corner-reachable/case2.png %}
+> {% endinvert %}
+> No path exists from `(0, 0)` to `(3, 3)`.
 
-输入：X = 3, Y = 3, circles = [[1,1,2]]
+**Example 3:**
 
-输出：false
+> Input: `xCorner = 3, yCorner = 3, circles = [[2,1,1],[1,2,1]]`
+> Output: false
+> Explanation:
+> {% invert %}
+> {% image 3235-rectangle-corner-reachable/case3.png %}
+> {% endinvert %}
+> No path exists from `(0, 0)` to `(3, 3)`.
 
-示例 3：
+**Example 4:**
 
-输入：X = 3, Y = 3, circles = [[2,1,1],[1,2,1]]
+> Input: `xCorner = 4, yCorner = 4, circles = [[5,5,1]]`
+> Output: true
+> Explanation:
+> {% invert %}
+> {% image 3235-rectangle-corner-reachable/case4.png %}
+> {% endinvert %}
 
-输出：false
-
-示例 4：
-
-输入：X = 4, Y = 4, circles = [[5,5,1]]
-
-输出：true
-
-**提示：**
+**Constraints:**
 
 - `3 <= xCorner, yCorner <= 10^9`
 - `1 <= circles.length <= 1000`
 - `circles[i].length == 3`
-- `1 <= xi, yi, ri <= 10^9`
+- `1 <= x_i, y_i, r_i <= 10^9`
+
+## Test Cases
+
+{% asset_code coding/3235-rectangle-corner-reachable/solution_test.py %}
 
 ## Thoughts
 
@@ -107,10 +126,10 @@ updated: 2024-11-09 20:20:29
 
 这是个平面几何数学知识点。
 
-## Test Cases
-
-[solution_test.py](3235-rectangle-corner-reachable/solution_test.py)
-
 ## Code
 
-[solution.py](3235-rectangle-corner-reachable/solution.py)
+{% asset_code coding/3235-rectangle-corner-reachable/solution.py %}
+
+Test cases for solution inner methods:
+
+{% asset_code coding/3235-rectangle-corner-reachable/solution_inner_test.py %}

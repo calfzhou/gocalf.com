@@ -14,19 +14,19 @@ Given a string `s`, find the length of the **longest substring** without repeati
 
 > A **substring** is a contiguous **non-empty** sequence of characters within a string.
 
-Example 1:
+**Example 1:**
 
 > Input: `s = "abcabcbb"`
 > Output: `3`
 > Explanation: The answer is "abc", with the length of 3.
 
-Example 2:
+**Example 2:**
 
 > Input: `s = "bbbbb"`
 > Output: `1`
 > Explanation: The answer is "b", with the length of 1.
 
-Example 3:
+**Example 3:**
 
 > Input: `s = "pwwkew"`
 > Output: `3`
@@ -40,7 +40,7 @@ Example 3:
 
 ## Test Cases
 
-[solution_test.py](3-longest-substring-without-repeating-characters/solution_test.py)
+{% asset_code coding/3-longest-substring-without-repeating-characters/solution_test.py %}
 
 ## Thoughts
 
@@ -48,15 +48,18 @@ Example 3:
 
 设当前的 substring 范围是 `[i, j]`。把范围向右扩大到 `[i, j+1]`，要检查是否包含 repeating chars 并做出调整。
 
-从 i 到 j 逐个与 j+1 位置的字符比较，假设 `s[k] == [j+1]`，则把范围缩小为 `[k+1, j+1]`。
+从 i 到 j 逐个与 j+1 位置的字符比较，假设 `s[k] == s[j+1]`，则把范围缩小为 `[k+1, j+1]`。
 
 用一个变量记录见到过的最长的 substring 长度。
 
 假设所求的 longest substring 长度为 m，时间复杂度为 `O(m*n)`，空间复杂度 `O(1)`。
 
-[solution.py](3-longest-substring-without-repeating-characters/solution.py)
+## Code
 
-如果用哈希表动态地记录当前 substring 中的字符（key 是字符，value 是位置下标），
-则时间复杂度为 `O(n)`（基本上每个字符都会入栈一次，出栈一次），空间复杂度为 `O(m)`。
+{% asset_code coding/3-longest-substring-without-repeating-characters/solution.py %}
 
-[solution2.py](3-longest-substring-without-repeating-characters/solution2.py)
+## 快一些
+
+如果用哈希表动态地记录当前 substring 中的字符（key 是字符，value 是位置下标），则时间复杂度为 `O(n)`（基本上每个字符都会入栈一次，出栈一次），空间复杂度为 `O(m)`。
+
+{% asset_code coding/3-longest-substring-without-repeating-characters/solution2.py %}

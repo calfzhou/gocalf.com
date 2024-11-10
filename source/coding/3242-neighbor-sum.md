@@ -22,7 +22,7 @@ Implement the `NeighborSum` class:
 {% image 3242-neighbor-sum/problem.png %}
 {% endinvert %}
 
-Example 1:
+**Example 1:**
 
 > Input:
 > `["NeighborSum", "adjacentSum", "adjacentSum", "diagonalSum", "diagonalSum"]`
@@ -38,7 +38,7 @@ Example 1:
 > - The diagonal neighbors of 4 are 0, 2, 6, and 8.
 > - The diagonal neighbor of 8 is 4.
 
-Example 2:
+**Example 2:**
 
 > Input:
 > `["NeighborSum", "adjacentSum", "diagonalSum"]`
@@ -62,7 +62,7 @@ Example 2:
 
 ## Test Cases
 
-[solution_test.py](3242-neighbor-sum/solution_test.py)
+{% asset_code coding/3242-neighbor-sum/solution_test.py %}
 
 ## Thoughts
 
@@ -81,4 +81,4 @@ Example 2:
 
 ## Code
 
-[solution.py](3242-neighbor-sum/solution.py)
+{% asset_code coding/3242-neighbor-sum/solution.py %}

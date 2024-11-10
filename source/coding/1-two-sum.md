@@ -10,24 +10,24 @@ updated: 2024-11-09 20:49:16
 
 <https://leetcode.com/problems/two-sum/description/>
 
-Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such that they add up to `target`.
+Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such that they add up to `target`_.
 
 You may assume that each input would have **_exactly_ one solution**, and you may not use the _same_ element twice.
 
 You can return the answer in any order.
 
-Example 1:
+**Example 1:**
 
 > Input: nums = [2,7,11,15], target = 9
 > Output: [0,1]
 > Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-Example 2:
+**Example 2:**
 
 > Input: nums = [3,2,4], target = 6
 > Output: [1,2]
 
-Example 3:
+**Example 3:**
 
 > Input: nums = [3,3], target = 6
 > Output: [0,1]
@@ -43,13 +43,11 @@ Example 3:
 
 ## Test Cases
 
-[solution_test.py](1-two-sum/solution_test.py)
+{% asset_code coding/1-two-sum/solution_test.py %}
 
 ## Thoughts
 
 一方面是要找到那两个相加等于目标值的数，另一方面需要能记录到这两数的原始索引下标。
-
-### 排序
 
 用 `O(n log n)` 时间对数组排序。
 
@@ -59,9 +57,11 @@ Example 3:
 
 需要记录数字在排序前的数组下标。
 
-[solution.py](1-two-sum/solution.py)
+## Code
 
-### 哈希
+{% asset_code coding/1-two-sum/solution.py %}
+
+## 快一些
 
 可以利用哈希表 `O(1)` 查询时间的特点，把所有数字放进哈希表，然后直接利用哈希表查找 target - v 是否存在。
 
@@ -69,4 +69,4 @@ Example 3:
 
 时间复杂度为 `O(n)`。
 
-[solution2.py](1-two-sum/solution2.py)
+{% asset_code coding/1-two-sum/solution2.py %}

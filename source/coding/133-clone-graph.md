@@ -31,7 +31,7 @@ For simplicity, each node's value is the same as the node's index (1-indexed). F
 
 The given node will always be the first node with `val = 1`. You must return the **copy of the given node** as a reference to the cloned graph.
 
-Example 1:
+**Example 1:**
 
 {% invert %}
 {% image 133-clone-graph/case1.png %}
@@ -45,7 +45,7 @@ Example 1:
 > 3rd node (val = 3)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
 > 4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
 
-Example 2:
+**Example 2:**
 
 {% invert %}
 {% image 133-clone-graph/case2.png %}
@@ -55,7 +55,7 @@ Example 2:
 > Output: `[[]]`
 > Explanation: Note that the input contains one empty list. The graph consists of only one node with val = 1 and it does not have any neighbors.
 
-Example 3:
+**Example 3:**
 
 > Input: `adjList = []`
 > Output: `[]`
@@ -71,7 +71,7 @@ Example 3:
 
 ## Test Cases
 
-[solution_test.py](133-clone-graph/solution_test.py)
+{% asset_code coding/133-clone-graph/solution_test.py %}
 
 ## Thoughts
 
@@ -89,4 +89,4 @@ Example 3:
 
 ## Code
 
-[solution.py](133-clone-graph/solution.py)
+{% asset_code coding/133-clone-graph/solution.py %}

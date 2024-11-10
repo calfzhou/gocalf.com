@@ -15,13 +15,13 @@ Given a string `s`, return _the longest palindromic substring_ in `s`.
 > A string is **palindromic** if it reads the same forward and backward.
 > A substring is a contiguous non-empty sequence of characters within a string.
 
-Example 1:
+**Example 1:**
 
 > Input: `s = "babad"`
 > Output: `"bab"`
 > Explanation: `"aba"` is also a valid answer.
 
-Example 2:
+**Example 2:**
 
 > Input: s = `"cbbd"`
 > Output: `"bb"`
@@ -33,7 +33,7 @@ Example 2:
 
 ## Test Cases
 
-[solution_test.py](5-longest-palindromic-substring/solution_test.py)
+{% asset_code coding/5-longest-palindromic-substring/solution_test.py %}
 
 ## Thoughts
 
@@ -56,7 +56,7 @@ Palindromic string（回文）一定是按中间位置对称的。注意奇数�
 
 ## Code
 
-[solution.py](5-longest-palindromic-substring/solution.py)
+{% asset_code coding/5-longest-palindromic-substring/solution.py %}
 
 ## Extra
 
