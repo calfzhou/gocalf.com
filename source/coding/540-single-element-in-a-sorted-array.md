@@ -8,13 +8,13 @@ updated: 2024-11-10 02:15:43
 ---
 ## Problem
 
-<https://leetcode.cn/problems/single-element-in-a-sorted-array/description/>
-
 You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once.
 
 Return _the single element that appears only once_.
 
 Your solution must run in `O(log n)` time and `O(1)` space.
+
+<https://leetcode.cn/problems/single-element-in-a-sorted-array/description/>
 
 **Example 1:**
 

@@ -8,11 +8,11 @@ updated: 2024-11-09 20:37:50
 ---
 ## Problem
 
-<https://leetcode.com/problems/longest-consecutive-sequence/description/>
-
 Given an unsorted array of integers `nums`, return _the length of the longest consecutive elements sequence._
 
 You must write an algorithm that runs in `O(n)` time.
+
+<https://leetcode.com/problems/longest-consecutive-sequence/description/>
 
 **Example 1:**
 

@@ -8,13 +8,13 @@ updated: 2024-11-09 20:49:16
 ---
 ## Problem
 
-<https://leetcode.com/problems/two-sum/description/>
-
 Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such that they add up to `target`_.
 
 You may assume that each input would have **_exactly_ one solution**, and you may not use the _same_ element twice.
 
 You can return the answer in any order.
+
+<https://leetcode.com/problems/two-sum/description/>
 
 **Example 1:**
 

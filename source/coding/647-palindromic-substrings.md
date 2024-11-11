@@ -8,13 +8,13 @@ updated: 2024-11-10 17:25:53
 ---
 ## Problem
 
-<https://leetcode.com/problems/palindromic-substrings/description/>
-
 Given a string `s`, return _the number of **palindromic substrings** in it_.
 
 A string is a **palindrome** when it reads the same backward as forward.
 
 A **substring** is a contiguous sequence of characters within the string.
+
+<https://leetcode.com/problems/palindromic-substrings/description/>
 
 **Example 1:**
 

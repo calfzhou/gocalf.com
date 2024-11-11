@@ -8,12 +8,12 @@ updated: 2024-11-10 03:40:23
 ---
 ## Problem
 
-<https://leetcode.com/problems/longest-palindromic-substring/description/>
-
 Given a string `s`, return _the longest palindromic substring_ in `s`.
 
 > A string is **palindromic** if it reads the same forward and backward.
 > A substring is a contiguous non-empty sequence of characters within a string.
+
+<https://leetcode.com/problems/longest-palindromic-substring/description/>
 
 **Example 1:**
 

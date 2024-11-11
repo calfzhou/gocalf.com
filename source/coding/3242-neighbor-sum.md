@@ -8,8 +8,6 @@ updated: 2024-11-09 22:15:20
 ---
 ## Problem
 
-<https://leetcode.cn/problems/design-neighbor-sum-service/description/>
-
 You are given a `n x n` 2D array `grid` containing **distinct** elements in the range `[0, n^2 - 1]`.
 
 Implement the `NeighborSum` class:
@@ -21,6 +19,8 @@ Implement the `NeighborSum` class:
 {% invert %}
 {% image 3242-neighbor-sum/problem.png %}
 {% endinvert %}
+
+<https://leetcode.cn/problems/design-neighbor-sum-service/description/>
 
 **Example 1:**
 

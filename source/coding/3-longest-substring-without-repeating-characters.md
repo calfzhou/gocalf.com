@@ -8,11 +8,11 @@ updated: 2024-11-10 01:06:36
 ---
 ## Problem
 
-<https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>
-
 Given a string `s`, find the length of the **longest substring** without repeating characters.
 
 > A **substring** is a contiguous **non-empty** sequence of characters within a string.
+
+<https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>
 
 **Example 1:**
 

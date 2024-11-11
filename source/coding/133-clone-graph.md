@@ -8,8 +8,6 @@ updated: 2024-11-10 15:35:08
 ---
 ## Problem
 
-<https://leetcode.com/problems/clone-graph/description/>
-
 Given a reference of a node in a **[connected](https://en.wikipedia.org/wiki/Connectivity_(graph_theory)#Connected_graph)** undirected graph.
 
 Return a [**deep copy**](https://en.wikipedia.org/wiki/Object_copying#Deep_copy) (clone) of the graph.
@@ -30,6 +28,8 @@ For simplicity, each node's value is the same as the node's index (1-indexed). F
 **An adjacency list** is a collection of unordered **lists** used to represent a finite graph. Each list describes the set of neighbors of a node in the graph.
 
 The given node will always be the first node with `val = 1`. You must return the **copy of the given node** as a reference to the cloned graph.
+
+<https://leetcode.com/problems/clone-graph/description/>
 
 **Example 1:**
 
