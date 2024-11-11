@@ -1,6 +1,7 @@
 import pytest
 
 from solution import Solution
+from solution2 import Solution as Solution2
 
 
 @pytest.mark.parametrize('height, expected', [
@@ -13,3 +14,11 @@ class Test:
     def test_solution(self, height, expected):
         sol = Solution()
         assert sol.maxArea(height) == expected
+
+    def test_solution2(self, height, expected):
+        sol = Solution2()
+        assert sol.maxArea(height) == expected
+
+    def test_solution2_simple(self, height, expected):
+        sol = Solution2()
+        assert sol.maxArea_simple(height) == expected

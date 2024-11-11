@@ -4,7 +4,7 @@ notebook: coding
 tags:
 - medium
 date: 2024-11-11 02:38:27
-updated: 2024-11-11 02:38:27
+updated: 2024-11-11 11:44:19
 katex: true
 ---
 ## Problem
@@ -79,3 +79,23 @@ Return _the maximum amount of water a container can store_.
 ## Code
 
 {% asset_code coding/11-container-with-most-water/solution.py %}
+
+## Improve
+
+先看最两边的竖线 i = 1、j = n 围起来的容器 $C_{i,j}$，是所有可能容器中最宽的，其高度为 $h_{i,j}=min\{h_i,h_j\}$。
+
+其他容器的宽度一定比这个窄，只有当高度更高时，才有可能比 $C_{i,j}$ 面积大。
+
+假设 $h_i\le h_j$，看 i 右边的竖线，如果 $h_{i+1}\le h_i$，那么 $C_{i+1,j}$ 的面积只会更小。
+
+从 i + 1 开始向依次右找，如果能找到一个 k（i < k < j），$h_k > h_i$，用竖线 k 和 j 围起来的容器 $C_{k,j}$ 高度更高，面积有可能更大一些。
+
+用同样的方法在竖线 k、j 之间继续一个一个找到高度更高的容器，直到两个竖线重合。
+
+在找到过的所有容器（从最宽最矮，到最窄最高）中，面积最大的那个就是题目所求的容器。
+
+整体只需要对所有竖线从两头往中间遍历一次，时间复杂度 `O(n)`，空间复杂度 `O(1)`。
+
+代码有两版实现，其中 `maxArea` 的逻辑复杂一些，但计算量小很多（仅在需要时计算容器面积），速度更快。`maxArea_simple` 逻辑更直接，但会计算每一个遇到的容器面积，速度略慢。
+
+{% asset_code coding/11-container-with-most-water/solution2.py %}
