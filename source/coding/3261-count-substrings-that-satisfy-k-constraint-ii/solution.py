@@ -30,6 +30,3 @@ class Solution:
             result[idx] = cnt1 + cnt2
 
         return result
-
-res = Solution().countKConstraintSubstrings('000', 1, [[1,1]])
-print(res)
