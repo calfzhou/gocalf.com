@@ -30,7 +30,3 @@ class Test:
             head = head.next
 
         return values
-
-t = Test()
-sol = Solution()
-sol.mergeTwoLists(t._build_list([1,2,4]), t._build_list([1,3,4]))
