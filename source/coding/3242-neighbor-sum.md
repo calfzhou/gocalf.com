@@ -30,8 +30,8 @@ Implement the `NeighborSum` class:
 > Output: `[null, 6, 16, 16, 4]`
 > Explanation:
 > {% invert %}
-> {% image 3242-neighbor-sum/case1.png %}
-> {% endinvert %}
+{% image 3242-neighbor-sum/case1.png %}
+{% endinvert %}
 >
 > - The adjacent neighbors of 1 are 0, 2, and 4.
 > - The adjacent neighbors of 4 are 1, 3, 5, and 7.
@@ -46,8 +46,8 @@ Implement the `NeighborSum` class:
 > Output: `[null, 23, 45]`
 > Explanation:
 > {% invert %}
-> {% image 3242-neighbor-sum/case2.png %}
-> {% endinvert %}
+{% image 3242-neighbor-sum/case2.png %}
+{% endinvert %}
 >
 > - The adjacent neighbors of 15 are 0, 10, 7, and 6.
 > - The diagonal neighbors of 9 are 4, 12, 14, and 15.
