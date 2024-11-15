@@ -67,4 +67,4 @@ You must write an algorithm with `O(log n)` runtime complexity.
 
 {% asset_code coding/33-search-in-rotated-sorted-array/solution.py %}
 
-这里 `while` 循环的终止条件可以直接用 `while l <= r`（[problem 153](/coding/153-find-minimum-in-rotated-sorted-array) 用的是 `while l < r - 1` 加收尾处理）。
+这里 `while` 循环的条件可以直接用 `while l <= r`（[problem 153](/coding/153-find-minimum-in-rotated-sorted-array) 用的是 `while l < r - 1` 加收尾处理）。
