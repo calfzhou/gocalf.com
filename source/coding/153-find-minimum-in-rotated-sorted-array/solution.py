@@ -8,9 +8,9 @@ class Solution:
             m = (l + r) >> 1
             if nums[l] < nums[r]:
                 return nums[l]
-            elif nums[m] > nums[l]:
+            elif nums[l] < nums[m]:
                 l = m + 1
-            else:
+            else: # nums[m] < nums[r]
                 r = m
 
         return min(nums[l], nums[r])
