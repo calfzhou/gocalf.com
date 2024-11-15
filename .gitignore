@@ -176,6 +176,7 @@ pyrightconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/python
 
 .pytest_cache
+*.drawio.bkp
 
 .DS_Store
 Thumbs.db
