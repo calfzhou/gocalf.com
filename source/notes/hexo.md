@@ -135,7 +135,7 @@ pnpm add hexo-diagrams-net
 {% diagramsnet hexo/flowchart.drawio %}
 ```
 
-{% invert [when:dark/light/always] %}
+{% invert %}
 {% diagramsnet hexo/flowchart.drawio %}
 {% endinvert %}
 
