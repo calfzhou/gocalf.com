@@ -28,7 +28,7 @@ class Solution:
                     largest = max(largest, *parts)
                 elif parts[2] >= 0: # Negative numbers' count is even (prod(mid) >= 0).
                     largest = max(largest, prod(*parts))
-                else: # Negative numbers' count is even.
+                else: # Negative numbers' count is odd.
                     largest = max(largest, prod(*parts[:3]), prod(*parts[2:]))
 
                 parts = [0]
