@@ -4,7 +4,7 @@ notebook: coding
 tags:
 - medium
 date: 2024-11-19 01:14:33
-updated: 2024-11-19 01:14:33
+updated: 2024-11-19 10:15:26
 katex: true
 ---
 ## Problem
@@ -74,9 +74,13 @@ $$
 可以直接用杨辉三角的计算公式（组合数）：
 
 $$
-u[m-1][n-1]=\binom{m+n-2}{m-1}=\frac{(m+n-2)!}{(m-1)!(n-1)!}
+u[i][j]=\binom{i+j}{i}=\frac{(i+j)!}{i!j!}
 $$
 
-如果 m、n 不是很大，可以直接利用阶乘函数 `math.factorial` 计算，否则也可以自己展开阶乘公式对分子分母约分之后计算。整体时间复杂度大约为 `O(m+n)`，空间复杂度 `O(1)`。
+实际上从 `[0][0]` 走到 `[i][j]`，一共需要移动 `i + j` 次，其中有 `i` 次向下，其余 `j` 次向右。那么所有的可能路径数量，就等于从 `i + j` 次移动中，任选 `i` 次（向下走）的可能数，即 `C(i+j, i)`。
+
+如果 i、j 不是很大，可以直接利用阶乘函数 `math.factorial` 计算，否则也可以自己展开阶乘公式对分子分母约分之后计算。不妨设 `j <= i`，可得：$C(i+j,i)=\frac{(i+1)(i+2)\cdots(i+j)}{1\times 2\times \cdots \times j}=(i+1)\div 1\times(i+2)\div 2\times(i+3)\div 3\times \cdots \times(i+j)\div j$。从左向右计算的时候，每次除法都一定能除尽，因为任意连续 n 个自然数中一定有一个是 n 的倍数。
+
+整体时间复杂度为 `O(min{m,n})`，空间复杂度 `O(1)`。
 
 {% asset_code coding/62-unique-paths/solution_math.py %}
