@@ -1,10 +1,20 @@
 # GoCalf
 
+## Setup
+
+``` bash
+make install
+```
+
 ## Preview
 
 ``` bash
 make s
 ```
+
+## Debugging Theme
+
+Clone hexo-theme-stellar at `themes/stellar`.
 
 ## Writing
 
