@@ -3,7 +3,6 @@ title: 143. Reorder List
 notebook: coding
 tags:
 - medium
-katex: false
 date: 2024-11-14 16:58:45
 updated: 2024-11-14 16:58:45
 ---

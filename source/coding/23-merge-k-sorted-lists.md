@@ -3,7 +3,6 @@ title: 23. Merge k Sorted Lists
 notebook: coding
 tags:
 - hard
-katex: false
 date: 2024-11-14 20:59:13
 updated: 2024-11-14 20:59:13
 ---

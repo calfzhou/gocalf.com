@@ -3,7 +3,6 @@ title: 3249. Count the Number of Good Nodes
 notebook: coding
 tags:
 - medium
-katex: false
 date: 2024-11-14 15:43:55
 updated: 2024-11-14 15:43:55
 ---

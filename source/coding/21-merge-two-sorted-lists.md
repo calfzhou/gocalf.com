@@ -3,7 +3,6 @@ title: 21. Merge Two Sorted Lists
 notebook: coding
 tags:
 - easy
-katex: false
 date: 2024-11-14 18:36:57
 updated: 2024-11-14 18:36:57
 ---
