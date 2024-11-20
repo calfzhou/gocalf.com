@@ -3,7 +3,6 @@ title: 3244. Shortest Distance After Road Addition Queries II
 notebook: coding
 tags:
 - hard
-katex: false
 date: 2024-11-20 11:32:39
 updated: 2024-11-20 11:32:39
 ---
