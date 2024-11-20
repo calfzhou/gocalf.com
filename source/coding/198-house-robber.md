@@ -4,7 +4,7 @@ notebook: coding
 tags:
 - medium
 date: 2024-11-20 17:39:05
-updated: 2024-11-20 17:39:05
+updated: 2024-11-20 17:42:44
 katex: true
 ---
 ## Problem
@@ -59,7 +59,7 @@ Given an integer array `nums` representing the amount of money of each house, re
 比如 `nums = [2, 7, 9, 3, 1, 2]`，当 `i = 5` 时可知 `t[2] = t[3] = 11`，而 `nums[4] < nums[5]`，导致房间 3 和 4 被连续放弃。
 
 $$
-\begin{array}{c:}
+\begin{array}{c:ccccc}
 \small rob & \blacktriangledown & & \blacktriangledown & & & \blacktriangledown \\
 \small nums & 2 & 7 & 9 & 3 & 1 & 2 \\
 \hline
@@ -90,7 +90,7 @@ $$
 比如上边例子 `nums = [2, 7, 9, 3, 1, 2]`，按 `t'` 计算的过程为：
 
 $$
-\begin{array}{c:}
+\begin{array}{c:ccccc}
 \small rob & \blacktriangledown & & \blacktriangledown & & & \blacktriangledown \\
 \small nums & 2 & 7 & 9 & 3 & 1 & 2 \\
 \hline
