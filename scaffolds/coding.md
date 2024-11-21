@@ -38,6 +38,10 @@ TODO
 
 ## Test Cases
 
+``` python
+TODO: initial solution code
+```
+
 {% asset_code coding/TODO/solution_test.py %}
 
 ## Thoughts
