@@ -14,7 +14,7 @@ Given an integer array `nums`, return _the length of the longest **strictly incr
 
 > A **subsequence** is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
 
-<https://leetcode.com/problems/longest-increasing-subsequence/description/>
+<https://leetcode.com/problems/longest-increasing-subsequence/>
 
 **Example 1:**
 

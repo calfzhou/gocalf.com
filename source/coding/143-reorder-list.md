@@ -18,7 +18,7 @@ _Reorder the list to be on the following form:_
 
 You may not modify the values in the list's nodes. Only nodes themselves may be changed.
 
-<https://leetcode.com/problems/reorder-list/description/>
+<https://leetcode.com/problems/reorder-list/>
 
 **Example 1:**
 

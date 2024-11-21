@@ -12,7 +12,7 @@ Given an unsorted array of integers `nums`, return _the length of the longest co
 
 You must write an algorithm that runs in `O(n)` time.
 
-<https://leetcode.com/problems/longest-consecutive-sequence/description/>
+<https://leetcode.com/problems/longest-consecutive-sequence/>
 
 **Example 1:**
 

@@ -16,7 +16,7 @@ Return `intervals` _after the insertion_.
 
 **Note** that you don't need to modify `intervals` in-place. You can make a new array and return it.
 
-<https://leetcode.com/problems/insert-interval/description/>
+<https://leetcode.com/problems/insert-interval/>
 
 **Example 1:**
 

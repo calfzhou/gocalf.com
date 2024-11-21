@@ -23,7 +23,7 @@ The cost of one cut is the length of the stick to be cut, the total cost is the 
 
 Return _the minimum total cost_ of the cuts.
 
-<https://leetcode.cn/problems/minimum-cost-to-cut-a-stick/description/>
+<https://leetcode.cn/problems/minimum-cost-to-cut-a-stick/>
 
 **Example 1:**
 

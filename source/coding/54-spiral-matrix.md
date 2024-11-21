@@ -10,7 +10,7 @@ updated: 2024-11-18 18:41:17
 
 Given an `m x n` `matrix`, return _all elements of the_ `matrix` _in spiral order_.
 
-<https://leetcode.com/problems/spiral-matrix/description/>
+<https://leetcode.com/problems/spiral-matrix/>
 
 **Example 1:**
 

@@ -12,7 +12,7 @@ Given an array of strings `strs`, group the anagrams together. You can return th
 
 > An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, using all the original letters exactly once.
 
-<https://leetcode.com/problems/group-anagrams/description/>
+<https://leetcode.com/problems/group-anagrams/>
 
 **Example 1:**
 

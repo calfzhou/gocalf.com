@@ -16,7 +16,7 @@ An **image smoother** is a filter of the size `3 x 3` that can be applied to eac
 
 Given an `m x n` integer matrix `img` representing the grayscale of an image, return _the image after applying the smoother on each cell of it_.
 
-<https://leetcode.cn/problems/image-smoother/description/>
+<https://leetcode.cn/problems/image-smoother/>
 
 **Example 1:**
 

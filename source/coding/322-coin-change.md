@@ -15,7 +15,7 @@ Return _the fewest number of coins that you need to make up that amount_. If tha
 
 You may assume that you have an infinite number of each kind of coin.
 
-<https://leetcode.com/problems/coin-change/description/>
+<https://leetcode.com/problems/coin-change/>
 
 **Example 1:**
 

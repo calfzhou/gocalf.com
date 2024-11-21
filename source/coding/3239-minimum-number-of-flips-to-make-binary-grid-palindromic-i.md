@@ -16,7 +16,7 @@ You can **flip** any number of cells in `grid` from `0` to `1`, or from `1` to `
 
 Return the **minimum** number of cells that need to be flipped to make **either** all rows **palindromic** or all columns **palindromic**.
 
-<https://leetcode.cn/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-i/description/>
+<https://leetcode.cn/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-i/>
 
 **Example 1:**
 

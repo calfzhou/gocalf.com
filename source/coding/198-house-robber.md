@@ -13,7 +13,7 @@ You are a professional robber planning to rob houses along a street. Each house 
 
 Given an integer array `nums` representing the amount of money of each house, return _the maximum amount of money you can rob tonight **without alerting the police**_.
 
-<https://leetcode.com/problems/house-robber/description/>
+<https://leetcode.com/problems/house-robber/>
 
 **Example 1:**
 

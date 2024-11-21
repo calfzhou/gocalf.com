@@ -19,7 +19,7 @@ Given the sorted rotated array `nums` of **unique** elements, return _the minimu
 
 You must write an algorithm that runs in `O(log n) time`.
 
-<https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/>
+<https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/>
 
 **Example 1:**
 

@@ -12,7 +12,7 @@ You are given an integer array `nums`. You are initially positioned at the array
 
 Return `true` _if you can reach the last index, or_ `false` _otherwise_.
 
-<https://leetcode.com/problems/jump-game/description/>
+<https://leetcode.com/problems/jump-game/>
 
 **Example 1:**
 

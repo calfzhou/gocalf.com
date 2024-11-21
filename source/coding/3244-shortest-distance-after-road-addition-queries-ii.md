@@ -18,7 +18,7 @@ There are no two queries such that `queries[i][0] < queries[j][0] < queries[i][1
 
 Return an array `answer` where for each `i` in the range `[0, queries.length - 1]`, `answer[i]` is the _length of the shortest path_ from city `0` to city `n - 1` after processing the **first** `i + 1` queries.
 
-<https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-ii/description/>
+<https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-ii/>
 
 **Example 1:**
 

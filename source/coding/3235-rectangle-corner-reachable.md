@@ -15,7 +15,7 @@ There is a rectangle in the coordinate plane with its bottom left corner at the 
 
 Return `true` if such a path exists, and `false` otherwise.
 
-<https://leetcode.cn/problems/check-if-the-rectangle-corner-is-reachable/description/>
+<https://leetcode.cn/problems/check-if-the-rectangle-corner-is-reachable/>
 
 **Example 1:**
 

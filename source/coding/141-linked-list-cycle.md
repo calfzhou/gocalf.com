@@ -15,7 +15,7 @@ There is a cycle in a linked list if there is some node in the list that can be 
 
 Return `true` _if there is a cycle in the linked list_. Otherwise, return `false`.
 
-<https://leetcode.com/problems/linked-list-cycle/description/>
+<https://leetcode.com/problems/linked-list-cycle/>
 
 **Example 1:**
 

@@ -16,7 +16,7 @@ You can **flip** any number of cells in `grid` from `0` to `1`, or from `1` to `
 
 Return the **minimum** number of cells that need to be flipped to make **all** rows and columns **palindromic**, and the total number of `1`'s in `grid` **divisible** by `4`.
 
-<https://leetcode.cn/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-ii/description/>
+<https://leetcode.cn/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-ii/>
 
 **Example 1:**
 

@@ -16,7 +16,7 @@ A node is **good** if all the subtrees rooted at its children have the same size
 
 Return the number of **good** nodes in the given tree.
 
-<https://leetcode.cn/problems/count-the-number-of-good-nodes/description/>
+<https://leetcode.cn/problems/count-the-number-of-good-nodes/>
 
 **Example 1:**
 

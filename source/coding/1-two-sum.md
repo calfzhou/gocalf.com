@@ -14,7 +14,7 @@ You may assume that each input would have **_exactly_ one solution**, and you ma
 
 You can return the answer in any order.
 
-<https://leetcode.com/problems/two-sum/description/>
+<https://leetcode.com/problems/two-sum/>
 
 **Example 1:**
 

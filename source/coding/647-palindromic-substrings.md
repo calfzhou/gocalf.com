@@ -14,7 +14,7 @@ A string is a **palindrome** when it reads the same backward as forward.
 
 A **substring** is a contiguous sequence of characters within the string.
 
-<https://leetcode.com/problems/palindromic-substrings/description/>
+<https://leetcode.com/problems/palindromic-substrings/>
 
 **Example 1:**
 

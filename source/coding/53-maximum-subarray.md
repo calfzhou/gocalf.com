@@ -12,7 +12,7 @@ Given an integer array `nums`, find the subarray with the largest sum, and retur
 
 > A **subarray** is a contiguous **non-empty** sequence of elements within an array.
 
-<https://leetcode.com/problems/maximum-subarray/description/>
+<https://leetcode.com/problems/maximum-subarray/>
 
 **Example 1:**
 

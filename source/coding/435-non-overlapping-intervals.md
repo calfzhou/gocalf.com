@@ -13,7 +13,7 @@ Given an array of intervals `intervals` where `intervals[i] = [start_i, end_i]`,
 
 **Note** that intervals which only touch at a point are **non-overlapping**. For example, `[1, 2]` and `[2, 3]` are non-overlapping.
 
-<https://leetcode.com/problems/non-overlapping-intervals/description/>
+<https://leetcode.com/problems/non-overlapping-intervals/>
 
 **Example 1:**
 

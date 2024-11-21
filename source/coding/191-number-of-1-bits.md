@@ -12,7 +12,7 @@ Given a positive integer `n`, write a function that returns the number of set bi
 
 > A **set bit** refers to a bit in the binary representation of a number that has a value of `1`.
 
-<https://leetcode.com/problems/number-of-1-bits/description/>
+<https://leetcode.com/problems/number-of-1-bits/>
 
 **Example 1:**
 

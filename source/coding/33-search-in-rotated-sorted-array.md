@@ -16,7 +16,7 @@ Given the array `nums` **after** the possible rotation and an integer `target`, 
 
 You must write an algorithm with `O(log n)` runtime complexity.
 
-<https://leetcode.com/problems/search-in-rotated-sorted-array/description/>
+<https://leetcode.com/problems/search-in-rotated-sorted-array/>
 
 **Example 1:**
 

@@ -15,7 +15,7 @@ Given the two integers `m` and `n`, return _the number of possible unique paths 
 
 The test cases are generated so that the answer will be less than or equal to `2 * 10^9`.
 
-<https://leetcode.com/problems/unique-paths/description/>
+<https://leetcode.com/problems/unique-paths/>
 
 **Example 1:**
 

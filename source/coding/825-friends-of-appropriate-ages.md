@@ -22,7 +22,7 @@ Note that if `x` sends a request to `y`, `y` will not necessarily send a request
 
 Return _the total number of friend requests made_.
 
-<https://leetcode.cn/problems/friends-of-appropriate-ages/description/>
+<https://leetcode.cn/problems/friends-of-appropriate-ages/>
 
 **Example 1:**
 

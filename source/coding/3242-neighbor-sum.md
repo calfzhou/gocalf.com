@@ -20,7 +20,7 @@ Implement the `NeighborSum` class:
 {% image 3242-neighbor-sum/problem.png %}
 {% endinvert %}
 
-<https://leetcode.cn/problems/design-neighbor-sum-service/description/>
+<https://leetcode.cn/problems/design-neighbor-sum-service/>
 
 **Example 1:**
 

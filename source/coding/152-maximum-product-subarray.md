@@ -14,7 +14,7 @@ Given an integer array `nums`, find a subarray that has the largest product, and
 
 The test cases are generated so that the answer will fit in a **32-bit** integer.
 
-<https://leetcode.com/problems/maximum-product-subarray/description/>
+<https://leetcode.com/problems/maximum-product-subarray/>
 
 **Example 1:**
 

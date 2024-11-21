@@ -14,7 +14,7 @@ Return _the single element that appears only once_.
 
 Your solution must run in `O(log n)` time and `O(1)` space.
 
-<https://leetcode.cn/problems/single-element-in-a-sorted-array/description/>
+<https://leetcode.cn/problems/single-element-in-a-sorted-array/>
 
 **Example 1:**
 

@@ -20,7 +20,7 @@ Return an integer denoting the number of substrings of `s` that satisfy the **k-
 
 > A substring is a contiguous non-empty sequence of characters within a string.
 
-<https://leetcode.cn/problems/count-substrings-that-satisfy-k-constraint-i/description/>
+<https://leetcode.cn/problems/count-substrings-that-satisfy-k-constraint-i/>
 
 **Example 1:**
 

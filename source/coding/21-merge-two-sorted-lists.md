@@ -14,7 +14,7 @@ Merge the two lists into one **sorted** list. The list should be made by splicin
 
 Return _the head of the merged linked list_.
 
-<https://leetcode.com/problems/merge-two-sorted-lists/description/>
+<https://leetcode.com/problems/merge-two-sorted-lists/>
 
 **Example 1:**
 

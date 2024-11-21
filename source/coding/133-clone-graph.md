@@ -29,7 +29,7 @@ For simplicity, each node's value is the same as the node's index (1-indexed). F
 
 The given node will always be the first node with `val = 1`. You must return the **copy of the given node** as a reference to the cloned graph.
 
-<https://leetcode.com/problems/clone-graph/description/>
+<https://leetcode.com/problems/clone-graph/>
 
 **Example 1:**
 

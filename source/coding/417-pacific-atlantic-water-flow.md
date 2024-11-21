@@ -16,7 +16,7 @@ The island receives a lot of rain, and the rain water can flow to neighboring ce
 
 Return _a **2D list** of grid coordinates_ `result` _where_ `result[i] = [ri, ci]` _denotes that rain water can flow from cell_ `(ri, ci)` _to **both** the Pacific and Atlantic oceans_.
 
-<https://leetcode.com/problems/pacific-atlantic-water-flow/description/>
+<https://leetcode.com/problems/pacific-atlantic-water-flow/>
 
 **Example 1:**
 

@@ -22,7 +22,7 @@ Return an integer array `answer`, where `answer[i]` is the number of substrings 
 
 > A substring is a contiguous non-empty sequence of characters within a string.
 
-<https://leetcode.cn/problems/count-substrings-that-satisfy-k-constraint-ii/description/>
+<https://leetcode.cn/problems/count-substrings-that-satisfy-k-constraint-ii/>
 
 **Example 1:**
 

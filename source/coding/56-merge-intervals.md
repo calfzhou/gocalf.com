@@ -10,7 +10,7 @@ updated: 2024-11-18 20:55:28
 
 Given an array of `intervals` where `intervals[i] = [start_i, end_i]`, merge all overlapping intervals, and return _an array of the non-overlapping intervals that cover all the intervals in the input_.
 
-<https://leetcode.com/problems/merge-intervals/description/>
+<https://leetcode.com/problems/merge-intervals/>
 
 **Example 1:**
 
