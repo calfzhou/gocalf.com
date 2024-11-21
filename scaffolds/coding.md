@@ -39,7 +39,7 @@ TODO
 ## Test Cases
 
 ``` python
-TODO: initial solution code
+TODO: default code definition
 ```
 
 {% asset_code coding/TODO/solution_test.py %}
