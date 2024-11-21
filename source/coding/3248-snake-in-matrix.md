@@ -45,6 +45,11 @@ Return the position of the final cell where the snake ends up after executing `c
 
 ## Test Cases
 
+``` python
+class Solution:
+    def finalPositionOfSnake(self, n: int, commands: List[str]) -> int:
+```
+
 {% asset_code coding/3248-snake-in-matrix/solution_test.py %}
 
 ## Thoughts

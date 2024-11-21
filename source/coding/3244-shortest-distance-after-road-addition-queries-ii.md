@@ -64,6 +64,11 @@ Return an array `answer` where for each `i` in the range `[0, queries.length - 1
 
 ## Test Cases
 
+``` python
+class Solution:
+    def shortestDistanceAfterQueries(self, n: int, queries: List[List[int]]) -> List[int]:
+```
+
 {% asset_code coding/3244-shortest-distance-after-road-addition-queries-ii/solution_test.py %}
 
 ## Thoughts

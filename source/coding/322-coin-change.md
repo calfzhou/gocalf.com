@@ -41,6 +41,11 @@ You may assume that you have an infinite number of each kind of coin.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+```
+
 {% asset_code coding/322-coin-change/solution_test.py %}
 
 ## Thoughts

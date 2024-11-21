@@ -56,6 +56,11 @@ Return _the minimum total cost_ of the cuts.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def minCost(self, n: int, cuts: List[int]) -> int:
+```
+
 {% asset_code coding/1547-minimum-cost-to-cut-a-stick/solution_test.py %}
 
 ## Thoughts

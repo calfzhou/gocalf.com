@@ -32,6 +32,11 @@ Given an array of `intervals` where `intervals[i] = [start_i, end_i]`, merge a
 
 ## Test Cases
 
+``` python
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+```
+
 {% asset_code coding/56-merge-intervals/solution_test.py %}
 
 ## Thoughts

@@ -50,6 +50,11 @@ Return _the total number of friend requests made_.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def numFriendRequests(self, ages: List[int]) -> int:
+```
+
 {% asset_code coding/825-friends-of-appropriate-ages/solution_test.py %}
 
 ## Thoughts

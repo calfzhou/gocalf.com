@@ -52,6 +52,16 @@ _Merge all the linked-lists into one sorted linked-list and return it._
 
 ## Test Cases
 
+``` python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+```
+
 {% asset_code coding/23-merge-k-sorted-lists/solution_test.py %}
 
 ## Thoughts

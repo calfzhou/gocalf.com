@@ -65,6 +65,11 @@ Return `true` if such a path exists, and `false` otherwise.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def canReachCorner(self, xCorner: int, yCorner: int, circles: List[List[int]]) -> bool:
+```
+
 {% asset_code coding/3235-rectangle-corner-reachable/solution_test.py %}
 
 ## Thoughts

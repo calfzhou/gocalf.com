@@ -91,6 +91,11 @@ $$
 
 ## Code
 
+``` python
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+```
+
 {% asset_code coding/300-longest-increasing-subsequence/solution.py %}
 
 ## Faster - O(n log n)

@@ -43,6 +43,11 @@ You must write an algorithm with `O(log n)` runtime complexity.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+```
+
 {% asset_code coding/33-search-in-rotated-sorted-array/solution_test.py %}
 
 ## Thoughts

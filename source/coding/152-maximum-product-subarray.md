@@ -36,6 +36,11 @@ The test cases are generated so that the answer will fit in a **32-bit** integer
 
 ## Test Cases
 
+``` python
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+```
+
 {% asset_code coding/152-maximum-product-subarray/solution_test.py %}
 
 ## Thoughts

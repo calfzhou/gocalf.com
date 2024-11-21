@@ -54,6 +54,11 @@ Return the **minimum** number of cells that need to be flipped to make **either*
 
 ## Test Cases
 
+``` python
+class Solution:
+    def minFlips(self, grid: List[List[int]]) -> int:
+```
+
 {% asset_code coding/3239-minimum-number-of-flips-to-make-binary-grid-palindromic-i/solution_test.py %}
 
 ## Thoughts

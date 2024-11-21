@@ -43,6 +43,11 @@ Given a string `s` and a dictionary of strings `wordDict`, return `true` if `s` 
 
 ## Test Cases
 
+``` python
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+```
+
 {% asset_code coding/139-word-break/solution_test.py %}
 
 ## Thoughts

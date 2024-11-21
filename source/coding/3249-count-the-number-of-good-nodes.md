@@ -58,6 +58,11 @@ Return the number of **good** nodes in the given tree.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def countGoodNodes(self, edges: List[List[int]]) -> int:
+```
+
 {% asset_code coding/3249-count-the-number-of-good-nodes/solution_test.py %}
 
 ## Thoughts

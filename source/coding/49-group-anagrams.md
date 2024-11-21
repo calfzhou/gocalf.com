@@ -42,6 +42,11 @@ Given an array of strings `strs`, group the anagrams together. You can return th
 
 ## Test Cases
 
+``` python
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+```
+
 {% asset_code coding/49-group-anagrams/solution_test.py %}
 
 ## Thoughts

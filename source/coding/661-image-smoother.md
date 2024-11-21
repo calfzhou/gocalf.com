@@ -53,6 +53,11 @@ Given an `m x n` integer matrix `img` representing the grayscale of an image, re
 
 ## Test Cases
 
+``` python
+class Solution:
+    def imageSmoother(self, img: List[List[int]]) -> List[List[int]]:
+```
+
 {% asset_code coding/661-image-smoother/solution_test.py %}
 
 ## Thoughts

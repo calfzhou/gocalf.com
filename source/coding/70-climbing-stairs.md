@@ -40,6 +40,11 @@ Each time you can either climb `1` or `2` steps. In how many distinct ways can y
 
 ## Test Cases
 
+``` python
+class Solution:
+    def climbStairs(self, n: int) -> int:
+```
+
 {% asset_code coding/70-climbing-stairs/solution_test.py %}
 
 ## Thoughts

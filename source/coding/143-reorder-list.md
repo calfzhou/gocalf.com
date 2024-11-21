@@ -45,6 +45,19 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 
 ## Test Cases
 
+``` python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reorderList(self, head: Optional[ListNode]) -> None:
+        """
+        Do not return anything, modify head in-place instead.
+        """
+```
+
 {% asset_code coding/143-reorder-list/solution_test.py %}
 
 ## Thoughts

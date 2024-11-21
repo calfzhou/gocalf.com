@@ -40,6 +40,14 @@ You have to rotate the image [**in-place**](https://en.wikipedia.org/wiki/In-pla
 
 ## Test Cases
 
+``` python
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+```
+
 {% asset_code coding/48-rotate-image/solution_test.py %}
 
 ## Thoughts

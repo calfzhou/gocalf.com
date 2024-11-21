@@ -39,6 +39,11 @@ Given an `m x n` `matrix`, return _all elements of the_ `matrix` _in spiral orde
 
 ## Test Cases
 
+``` python
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+```
+
 {% asset_code coding/54-spiral-matrix/solution_test.py %}
 
 ## Thoughts

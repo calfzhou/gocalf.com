@@ -36,6 +36,11 @@ Return _the length of the longest substring containing the same letter you can g
 
 ## Test Cases
 
+``` python
+class Solution:
+    def characterReplacement(self, s: str, k: int) -> int:
+```
+
 {% asset_code coding/424-longest-repeating-character-replacement/solution_test.py %}
 
 ## Thoughts

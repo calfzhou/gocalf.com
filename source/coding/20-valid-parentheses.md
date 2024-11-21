@@ -45,6 +45,11 @@ An input string is valid if:
 
 ## Test Cases
 
+``` python
+class Solution:
+    def isValid(self, s: str) -> bool:
+```
+
 {% asset_code coding/20-valid-parentheses/solution_test.py %}
 
 ## Thoughts

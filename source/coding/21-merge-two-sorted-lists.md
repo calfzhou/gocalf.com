@@ -43,6 +43,16 @@ Return _the head of the merged linked list_.
 
 ## Test Cases
 
+``` python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+```
+
 {% asset_code coding/21-merge-two-sorted-lists/solution_test.py %}
 
 ## Thoughts

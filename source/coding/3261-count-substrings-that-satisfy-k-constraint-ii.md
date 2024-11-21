@@ -50,6 +50,11 @@ Return an integer array `answer`, where `answer[i]` is the number of substrings 
 
 ## Test Cases
 
+``` python
+class Solution:
+    def countKConstraintSubstrings(self, s: str, k: int, queries: List[List[int]]) -> List[int]:
+```
+
 {% asset_code coding/3261-count-substrings-that-satisfy-k-constraint-ii/solution_test.py %}
 
 ## Thoughts

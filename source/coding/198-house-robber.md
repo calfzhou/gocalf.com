@@ -36,6 +36,11 @@ Given an integer array `nums` representing the amount of money of each house, re
 
 ## Test Cases
 
+``` python
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+```
+
 {% asset_code coding/198-house-robber/solution_test.py %}
 
 ## Thoughts

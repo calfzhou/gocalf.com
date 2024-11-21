@@ -49,6 +49,11 @@ You must write an algorithm that runs in `O(log n) time`.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+```
+
 {% asset_code coding/153-find-minimum-in-rotated-sorted-array/solution_test.py %}
 
 ## Thoughts

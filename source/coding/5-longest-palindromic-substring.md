@@ -33,6 +33,11 @@ Given a string `s`, return _the longest palindromic substring_ in `s`.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+```
+
 {% asset_code coding/5-longest-palindromic-substring/solution_test.py %}
 
 ## Thoughts

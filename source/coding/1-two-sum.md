@@ -43,6 +43,11 @@ You can return the answer in any order.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+```
+
 {% asset_code coding/1-two-sum/solution_test.py %}
 
 ## Thoughts

@@ -35,6 +35,11 @@ A **substring** is a contiguous sequence of characters within the string.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def countSubstrings(self, s: str) -> int:
+```
+
 {% asset_code coding/647-palindromic-substrings/solution_test.py %}
 
 ## Thoughts

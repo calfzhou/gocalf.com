@@ -33,6 +33,11 @@ Your solution must run in `O(log n)` time and `O(1)` space.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def singleNonDuplicate(self, nums: List[int]) -> int:
+```
+
 {% asset_code coding/540-single-element-in-a-sorted-array/solution_test.py %}
 
 ## Thoughts

@@ -48,6 +48,11 @@ Reverse bits of a given 32 bits unsigned integer.
 
 ## Code
 
+``` python
+class Solution:
+    def reverseBits(self, n: int) -> int:
+```
+
 {% asset_code coding/190-reverse-bits/solution.py %}
 
 ## Faster

@@ -40,6 +40,11 @@ Given a string `s`, find the length of the **longest substring** without repeati
 
 ## Test Cases
 
+``` python
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+```
+
 {% asset_code coding/3-longest-substring-without-repeating-characters/solution_test.py %}
 
 ## Thoughts

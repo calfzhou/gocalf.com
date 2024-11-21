@@ -42,6 +42,11 @@ The test cases are generated so that the answer will be less than or equal to `2
 
 ## Test Cases
 
+``` python
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+```
+
 {% asset_code coding/62-unique-paths/solution_test.py %}
 
 ## Thoughts

@@ -51,6 +51,11 @@ Given a positive integer `n`, write a function that returns the number of set bi
 
 ## Code
 
+``` python
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+```
+
 {% asset_code coding/191-number-of-1-bits/solution.py %}
 
 ## Faster

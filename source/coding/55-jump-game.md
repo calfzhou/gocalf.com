@@ -33,6 +33,11 @@ Return `true` _if you can reach the last index, or_ `false` _otherwise_.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+```
+
 {% asset_code coding/55-jump-game/solution_test.py %}
 
 ## Thoughts

@@ -57,6 +57,17 @@ Return `true` _if there is a cycle in the linked list_. Otherwise, return `fals
 
 ## Test Cases
 
+``` python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+```
+
 {% asset_code coding/141-linked-list-cycle/solution_test.py %}
 
 ## Thoughts

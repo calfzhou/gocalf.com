@@ -40,6 +40,16 @@ Given the `head` of a linked list, remove the `n^th` node from the end of the li
 
 ## Test Cases
 
+``` python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+```
+
 {% asset_code coding/19-remove-nth-node-from-end-of-list/solution_test.py %}
 
 ## Thoughts

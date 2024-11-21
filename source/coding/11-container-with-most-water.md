@@ -42,6 +42,11 @@ Return _the maximum amount of water a container can store_.
 
 ## Test Case
 
+``` python
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+```
+
 {% asset_code coding/11-container-with-most-water/solution_test.py %}
 
 ## Thoughts

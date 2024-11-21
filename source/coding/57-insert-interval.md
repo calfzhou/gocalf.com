@@ -40,6 +40,11 @@ Return `intervals` _after the insertion_.
 
 ## Test Cases
 
+``` python
+class Solution:
+    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+```
+
 {% asset_code coding/57-insert-interval/solution_test.py %}
 
 ## Thoughts
