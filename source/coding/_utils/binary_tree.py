@@ -28,3 +28,21 @@ def build_tree(values: list[int | None]) -> TreeNode | None:
         queue.append((child, 'right'))
 
     return virtual.left
+
+
+def print_tree(root: TreeNode | None) -> list[int | None]:
+    values = []
+    queue = collections.deque()
+    queue.append(root)
+    while len(queue) > 0:
+        root = queue.popleft()
+        if root is None:
+            values.append(None)
+        else:
+            values.append(root.val)
+            queue.append(root.left)
+            queue.append(root.right)
+
+    while values and values[-1] is None:
+        values.pop()
+    return values
