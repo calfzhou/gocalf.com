@@ -46,3 +46,10 @@ def print_tree(root: TreeNode | None) -> list[int | None]:
     while values and values[-1] is None:
         values.pop()
     return values
+
+
+def bst_find(root: TreeNode | None, value: int) -> TreeNode | None:
+    while root and root.val != value:
+        root = root.left if value < root.val else root.right
+
+    return root
