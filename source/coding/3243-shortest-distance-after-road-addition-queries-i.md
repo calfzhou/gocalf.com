@@ -17,6 +17,8 @@ There are `n` cities numbered from `0` to `n - 1`. Initially, there is a **unidi
 
 Return an array `answer` where for each `i` in the range `[0, queries.length - 1]`, `answer[i]` is the _length of the shortest path_ from city `0` to city `n - 1` after processing the **first** `i + 1` queries.
 
+<https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/>
+
 <https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-i/>
 
 **Example 1:**
