@@ -25,7 +25,7 @@ Given a non-negative integer `c`, decide whether there're two integers `a` and `
 
 **Constraints:**
 
-- `0 <= c <= 2^31 - 1`
+- `0 <= c <= 2³¹ - 1`
 
 ## Test Cases
 

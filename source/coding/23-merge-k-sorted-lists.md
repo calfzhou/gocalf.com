@@ -44,11 +44,11 @@ _Merge all the linked-lists into one sorted linked-list and return it._
 **Constraints:**
 
 - `k == lists.length`
-- `0 <= k <= 10^4`
+- `0 <= k <= 10⁴`
 - `0 <= lists[i].length <= 500`
-- `-10^4 <= lists[i][j] <= 10^4`
+- `-10⁴ <= lists[i][j] <= 10⁴`
 - `lists[i]` is sorted in **ascending order**.
-- The sum of `lists[i].length` will not exceed `10^4`.
+- The sum of `lists[i].length` will not exceed `10⁴`.
 
 ## Test Cases
 

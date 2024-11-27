@@ -60,7 +60,7 @@ Return the number of **alternating** groups.
 
 **Constraints:**
 
-- `3 <= colors.length <= 10^5`
+- `3 <= colors.length <= 10⁵`
 - `0 <= colors[i] <= 1`
 - `3 <= k <= colors.length`
 

@@ -22,8 +22,8 @@ Return the _number of changes_ needed to make `n` equal to `k`. If it is impossi
 > Input: `n = 13, k = 4`
 > Output: `2`
 > Explanation:
-> Initially, the binary representations of `n` and `k` are `n = (1101)_2` and `k = (0100)_2`.
-> We can change the first and fourth bits of `n`. The resulting integer is `n = (0100)_2 = k`.
+> Initially, the binary representations of `n` and `k` are `n = 1101₂` and `k = 0100₂`.
+> We can change the first and fourth bits of `n`. The resulting integer is `n = 0100₂ = k`.
 
 **Example 2:**
 
@@ -41,7 +41,7 @@ Return the _number of changes_ needed to make `n` equal to `k`. If it is impossi
 
 **Constraints:**
 
-- `1 <= n, k <= 10^6`
+- `1 <= n, k <= 10⁶`
 
 ## Test Cases
 

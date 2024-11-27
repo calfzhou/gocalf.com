@@ -33,7 +33,7 @@ We define the range `[a, b]` is smaller than range `[c, d]` if `b - a < d - c` *
 - `nums.length == k`
 - `1 <= k <= 3500`
 - `1 <= nums[i].length <= 50`
-- `-10^5 <= nums[i][j] <= 10^5`
+- `-10⁵ <= nums[i][j] <= 10⁵`
 - `nums[i]` is sorted in **non-decreasing** order.
 
 ## Test Cases

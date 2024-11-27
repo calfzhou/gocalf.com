@@ -49,7 +49,7 @@ Return the **minimum** number of cells that need to be flipped to make **all** r
 
 - `m == grid.length`
 - `n == grid[i].length`
-- `1 <= m * n <= 2 * 10^5`
+- `1 <= m * n <= 2 * 10⁵`
 - `0 <= grid[i][j] <= 1`
 
 ## Test Cases

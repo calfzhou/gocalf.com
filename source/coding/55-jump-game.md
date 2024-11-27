@@ -28,8 +28,8 @@ Return `true` _if you can reach the last index, or_ `false` _otherwise_.
 
 **Constraints:**
 
-- `1 <= nums.length <= 10^4`
-- `0 <= nums[i] <= 10^5`
+- `1 <= nums.length <= 10⁴`
+- `0 <= nums[i] <= 10⁵`
 
 ## Test Cases
 

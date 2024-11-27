@@ -36,10 +36,10 @@ You must write an algorithm with `O(log n)` runtime complexity.
 **Constraints:**
 
 - `1 <= nums.length <= 5000`
-- `-10^4 <= nums[i] <= 10^4`
+- `-10⁴ <= nums[i] <= 10⁴`
 - All values of `nums` are **unique**.
 - `nums` is an ascending array that is possibly rotated.
-- `-10^4 <= target <= 10^4`
+- `-10⁴ <= target <= 10⁴`
 
 ## Test Cases
 

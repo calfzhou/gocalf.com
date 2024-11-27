@@ -13,7 +13,7 @@ There is a robot on an `m x n` grid. The robot is initially located at the **top
 
 Given the two integers `m` and `n`, return _the number of possible unique paths that the robot can take to reach the bottom-right corner_.
 
-The test cases are generated so that the answer will be less than or equal to `2 * 10^9`.
+The test cases are generated so that the answer will be less than or equal to `2 * 10⁹`.
 
 <https://leetcode.com/problems/unique-paths/>
 

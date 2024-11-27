@@ -8,7 +8,7 @@ updated: 2024-11-09 22:15:20
 ---
 ## Problem
 
-You are given a `n x n` 2D array `grid` containing **distinct** elements in the range `[0, n^2 - 1]`.
+You are given a `n x n` 2D array `grid` containing **distinct** elements in the range `[0, n² - 1]`.
 
 Implement the `NeighborSum` class:
 
@@ -55,10 +55,10 @@ Implement the `NeighborSum` class:
 **Constraints:**
 
 - `3 <= n == grid.length == grid[0].length <= 10`
-- `0 <= grid[i][j] <= n^2 - 1`
+- `0 <= grid[i][j] <= n² - 1`
 - All `grid[i][j]` are distinct.
-- `value` in `adjacentSum` and `diagonalSum` will be in the range `[0, n^2 - 1]`.
-- At most `2 * n^2` calls will be made to `adjacentSum` and `diagonalSum`.
+- `value` in `adjacentSum` and `diagonalSum` will be in the range `[0, n² - 1]`.
+- At most `2 * n²` calls will be made to `adjacentSum` and `diagonalSum`.
 
 ## Test Cases
 
@@ -87,11 +87,11 @@ class NeighborSum:
 
 在初始化的时候直接把所有格子的 adjacentSum 和 diagonalSum 计算好保存下来。
 
-因为元素的值刚好是 0 到 `n^2 - 1`，可以直接用作数组，元素值即为数字下标。
+因为元素的值刚好是 0 到 `n² - 1`，可以直接用作数组，元素值即为数字下标。
 
 每次查询的时间复杂度为 `O(1)`。
 
-构造的时间复杂度为 `O(n ^ 2)`，空间复杂度亦然。
+构造的时间复杂度为 `O(n²)`，空间复杂度亦然。
 
 构造的计算有两个方向，一是遍历到一个格子时，计算它的 adjacent 格子和 diagonal 格子的数字之和。
 另一是遍历到一个格子时，计算它对周围格子的 adjacentSum 和 diagonalSum 的贡献。

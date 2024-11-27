@@ -36,8 +36,8 @@ A subtree of a binary tree `tree` is a tree that consists of a node in `tree` an
 
 - The number of nodes in the `root` tree is in the range `[1, 2000]`.
 - The number of nodes in the `subRoot` tree is in the range `[1, 1000]`.
-- `-10^4 <= root.val <= 10^4`
-- `-10^4 <= subRoot.val <= 10^4`
+- `-10⁴ <= root.val <= 10⁴`
+- `-10⁴ <= subRoot.val <= 10⁴`
 
 ## Test Cases
 

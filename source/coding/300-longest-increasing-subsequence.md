@@ -35,7 +35,7 @@ Given an integer array `nums`, return _the length of the longest **strictly incr
 **Constraints:**
 
 - `1 <= nums.length <= 2500`
-- `-10^4 <= nums[i] <= 10^4`
+- `-10⁴ <= nums[i] <= 10⁴`
 
 **Follow up:** Can you come up with an algorithm that runs in `O(n log(n))` time complexity?
 
@@ -87,7 +87,7 @@ $$
 
 题目的答案是 $max_{0\le i<n}l[i]$。
 
-空间复杂度是 `O(n)`，时间复杂度是 `O(n^2)`。
+空间复杂度是 `O(n)`，时间复杂度是 `O(n²)`。
 
 ## Code
 

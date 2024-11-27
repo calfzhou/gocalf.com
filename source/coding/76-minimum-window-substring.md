@@ -39,7 +39,7 @@ The testcases will be generated such that the answer is **unique**.
 
 - `m == s.length`
 - `n == t.length`
-- `1 <= m, n <= 10^5`
+- `1 <= m, n <= 10⁵`
 - `s` and `t` consist of uppercase and lowercase English letters.
 
 ## Test Cases

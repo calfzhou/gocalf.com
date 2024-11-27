@@ -38,7 +38,7 @@ Each word must be constructed from letters of sequentially adjacent cells, where
 - `n == board[i].length`
 - `1 <= m, n <= 12`
 - `board[i][j]` is a lowercase English letter.
-- `1 <= words.length <= 3 * 10^4`
+- `1 <= words.length <= 3 * 10⁴`
 - `1 <= words[i].length <= 10`
 - `words[i]` consists of lowercase English letters.
 - All the strings of `words` are unique.
@@ -66,7 +66,7 @@ class Solution:
 
 另外在增加和删除单词的时候，记录和更新 trie 树中存储的单词总数，如果所有的词都找到了，就直接结束。
 
-设一共有 W 个单词，单词的平均长度为 w。建立 trie 树的时间复杂度是 `O(W * w)`，空间复杂度也是。在 `board` 查找所有单词的时间复杂度跟只找一个单词是一样的，都是 `O(m * n * 4^w)`，空间复杂度 `O(w)`。
+设一共有 W 个单词，单词的平均长度为 w。建立 trie 树的时间复杂度是 `O(W * w)`，空间复杂度也是。在 `board` 查找所有单词的时间复杂度跟只找一个单词是一样的，都是 `O(m * n * 4ʷ)`，空间复杂度 `O(w)`。
 
 ## Code
 

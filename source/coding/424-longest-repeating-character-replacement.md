@@ -30,7 +30,7 @@ Return _the length of the longest substring containing the same letter you can g
 
 **Constraints:**
 
-- `1 <= s.length <= 10^5`
+- `1 <= s.length <= 10⁵`
 - `s` consists of only uppercase English letters.
 - `0 <= k <= s.length`
 

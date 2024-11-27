@@ -8,7 +8,7 @@ updated: 2024-11-23 22:14:01
 ---
 ## Problem
 
-Given the `root` of a binary search tree, and an integer `k`, return _the_ `k^th` _smallest value (**1-indexed**) of all the values of the nodes in the tree_.
+Given the `root` of a binary search tree, and an integer `k`, return _the_ `kᵗʰ` _smallest value (**1-indexed**) of all the values of the nodes in the tree_.
 
 <https://leetcode.com/problems/kth-smallest-element-in-a-bst/>
 
@@ -33,8 +33,8 @@ Given the `root` of a binary search tree, and an integer `k`, return _the_ `k^th
 **Constraints:**
 
 - The number of nodes in the tree is `n`.
-- `1 <= k <= n <= 10^4`
-- `0 <= Node.val <= 10^4`
+- `1 <= k <= n <= 10⁴`
+- `0 <= Node.val <= 10⁴`
 
 **Follow up:** If the BST is modified often (i.e., we can do insert and delete operations) and you need to find the kth smallest frequently, how would you optimize?
 

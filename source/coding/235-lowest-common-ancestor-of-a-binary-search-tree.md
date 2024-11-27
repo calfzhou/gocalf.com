@@ -41,8 +41,8 @@ According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/
 
 **Constraints:**
 
-- The number of nodes in the tree is in the range `[2, 10^5]`.
-- `-10^9 <= Node.val <= 10^9`
+- The number of nodes in the tree is in the range `[2, 10⁵]`.
+- `-10⁹ <= Node.val <= 10⁹`
 - All `Node.val` are **unique**.
 - `p != q`
 - `p` and `q` will exist in the BST.

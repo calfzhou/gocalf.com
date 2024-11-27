@@ -39,7 +39,7 @@ Given the `root` of a binary tree, return _the maximum **path sum** of any **non
 
 **Constraints:**
 
-- The number of nodes in the tree is in the range `[1, 3 * 10^4]`.
+- The number of nodes in the tree is in the range `[1, 3 * 10⁴]`.
 - `-1000 <= Node.val <= 1000`
 
 ## Test Cases

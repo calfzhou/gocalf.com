@@ -8,7 +8,7 @@ updated: 2024-11-18 20:55:28
 ---
 ## Problem
 
-Given an array of `intervals` where `intervals[i] = [start_i, end_i]`, merge all overlapping intervals, and return _an array of the non-overlapping intervals that cover all the intervals in the input_.
+Given an array of `intervals` where `intervals[i] = [startᵢ, endᵢ]`, merge all overlapping intervals, and return _an array of the non-overlapping intervals that cover all the intervals in the input_.
 
 <https://leetcode.com/problems/merge-intervals/>
 
@@ -26,9 +26,9 @@ Given an array of `intervals` where `intervals[i] = [start_i, end_i]`, merge a
 
 **Constraints:**
 
-- `1 <= intervals.length <= 10^4`
+- `1 <= intervals.length <= 10⁴`
 - `intervals[i].length == 2`
-- `0 <= start_i <= end_i <= 10^4`
+- `0 <= startᵢ <= endᵢ <= 10⁴`
 
 ## Test Cases
 

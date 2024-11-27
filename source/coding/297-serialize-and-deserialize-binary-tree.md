@@ -32,7 +32,7 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
 
 **Constraints:**
 
-- The number of nodes in the tree is in the range `[0, 10^4]`.
+- The number of nodes in the tree is in the range `[0, 10⁴]`.
 - `-1000 <= Node.val <= 1000`
 
 ## Test Cases

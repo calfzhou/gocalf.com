@@ -34,8 +34,8 @@ Given an integer array `nums`, find the subarray with the largest sum, and retur
 
 **Constraints:**
 
-- `1 <= nums.length <= 10^5`
-- `-10^4 <= nums[i] <= 10^4`
+- `1 <= nums.length <= 10⁵`
+- `-10⁴ <= nums[i] <= 10⁴`
 
 ## Test Cases
 

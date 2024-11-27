@@ -40,7 +40,7 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 
 **Constraints:**
 
-- The number of nodes in the list is in the range `[1, 5 * 10^4]`.
+- The number of nodes in the list is in the range `[1, 5 * 10⁴]`.
 - `1 <= Node.val <= 1000`
 
 ## Test Cases

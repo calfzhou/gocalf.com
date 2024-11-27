@@ -56,7 +56,7 @@ Return _a **2D list** of grid coordinates_ `result` _where_ `result[i] = [ri, ci
 - `m == heights.length`
 - `n == heights[r].length`
 - `1 <= m, n <= 200`
-- `0 <= heights[r][c] <= 10^5`
+- `0 <= heights[r][c] <= 10⁵`
 
 ## Test Cases
 

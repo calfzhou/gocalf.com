@@ -8,7 +8,7 @@ updated: 2024-11-17 09:50:39
 ---
 ## Problem
 
-There are `n` persons on a social media website. You are given an integer array `ages` where `ages[i]` is the age of the `i^th` person.
+There are `n` persons on a social media website. You are given an integer array `ages` where `ages[i]` is the age of the `iᵗʰ` person.
 
 A Person `x` will not send a friend request to a person `y` (`x != y`) if any of the following conditions is true:
 
@@ -45,7 +45,7 @@ Return _the total number of friend requests made_.
 **Constraints:**
 
 - `n == ages.length`
-- `1 <= n <= 2 * 10^4`
+- `1 <= n <= 2 * 10⁴`
 - `1 <= ages[i] <= 120`
 
 ## Test Cases

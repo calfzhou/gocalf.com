@@ -9,7 +9,7 @@ updated: 2024-11-09 20:20:29
 
 ## Problem
 
-You are given two positive integers `xCorner` and `yCorner`, and a 2D array `circles`, where `circles[i] = [x_i, y_i, r_i]` denotes a circle with center at `(x_i, y_i)` and radius `r_i`.
+You are given two positive integers `xCorner` and `yCorner`, and a 2D array `circles`, where `circles[i] = [xᵢ, yᵢ, rᵢ]` denotes a circle with center at `(xᵢ, yᵢ)` and radius `rᵢ`.
 
 There is a rectangle in the coordinate plane with its bottom left corner at the origin and top right corner at the coordinate `(xCorner, yCorner)`. You need to check whether there is a path from the bottom left corner to the top right corner such that the **entire path** lies inside the rectangle, **does not** touch or lie inside **any** circle, and touches the rectangle **only** at the two corners.
 
@@ -58,10 +58,10 @@ Return `true` if such a path exists, and `false` otherwise.
 
 **Constraints:**
 
-- `3 <= xCorner, yCorner <= 10^9`
+- `3 <= xCorner, yCorner <= 10⁹`
 - `1 <= circles.length <= 1000`
 - `circles[i].length == 3`
-- `1 <= x_i, y_i, r_i <= 10^9`
+- `1 <= xᵢ, yᵢ, rᵢ <= 10⁹`
 
 ## Test Cases
 
@@ -111,7 +111,7 @@ class Solution:
 记录已经处理过的圆组成的相连的团簇，对于每个圆，跟所有已有的团簇的圆判定是否相连（注意可能会同时跟多
 个团簇相连，导致团簇合并）。
 
-复杂度 `O(n^2)`，n 是 圆的个数。
+复杂度 `O(n²)`，n 是 圆的个数。
 
 降低复杂度关键：如何快速计算出所有的团簇，裁剪掉不必要的比较，比如用四叉树。
 

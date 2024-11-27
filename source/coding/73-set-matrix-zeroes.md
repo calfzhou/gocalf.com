@@ -37,7 +37,7 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 - `m == matrix.length`
 - `n == matrix[0].length`
 - `1 <= m, n <= 200`
-- `-2^31 <= matrix[i][j] <= 2^31 - 1`
+- `-2³¹ <= matrix[i][j] <= 2³¹ - 1`
 
 **Follow up:**
 

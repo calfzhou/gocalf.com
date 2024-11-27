@@ -8,7 +8,7 @@ updated: 2024-11-14 17:47:46
 ---
 ## Problem
 
-Given the `head` of a linked list, remove the `n^th` node from the end of the list and return its head.
+Given the `head` of a linked list, remove the `nᵗʰ` node from the end of the list and return its head.
 
 <https://leetcode.com/problems/remove-nth-node-from-end-of-list/>
 

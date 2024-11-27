@@ -41,8 +41,8 @@ A **valid BST** is defined as follows:
 
 **Constraints:**
 
-- The number of nodes in the tree is in the range `[1, 10^4]`.
-- `-2^31 <= Node.val <= 2^31 - 1`
+- The number of nodes in the tree is in the range `[1, 10⁴]`.
+- `-2³¹ <= Node.val <= 2³¹ - 1`
 
 ## Test Cases
 

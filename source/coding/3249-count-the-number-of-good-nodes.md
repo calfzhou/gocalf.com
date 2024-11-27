@@ -8,7 +8,7 @@ updated: 2024-11-14 15:43:55
 ---
 ## Problem
 
-There is an **undirected** tree with `n` nodes labeled from `0` to `n - 1`, and rooted at node `0`. You are given a 2D integer array `edges` of length `n - 1`, where `edges[i] = [a_i, b_i]` indicates that there is an edge between nodes `a_i` and `b_i` in the tree.
+There is an **undirected** tree with `n` nodes labeled from `0` to `n - 1`, and rooted at node `0`. You are given a 2D integer array `edges` of length `n - 1`, where `edges[i] = [aᵢ, bᵢ]` indicates that there is an edge between nodes `aᵢ` and `bᵢ` in the tree.
 
 A node is **good** if all the subtrees rooted at its children have the same size.
 
@@ -50,10 +50,10 @@ Return the number of **good** nodes in the given tree.
 
 **Constraints:**
 
-- `2 <= n <= 10^5`
+- `2 <= n <= 10⁵`
 - `edges.length == n - 1`
 - `edges[i].length == 2`
-- `0 <= a_i, b_i < n`
+- `0 <= aᵢ, bᵢ < n`
 - The input is generated such that `edges` represents a valid tree.
 
 ## Test Cases

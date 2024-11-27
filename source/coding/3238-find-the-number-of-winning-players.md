@@ -8,7 +8,7 @@ updated: 2024-11-23 09:27:54
 ---
 ## Problem
 
-You are given an integer `n` representing the number of players in a game and a 2D array `pick` where `pick[i] = [x_i, y_i]` represents that the player `x_i` picked a ball of color `y_i`.
+You are given an integer `n` representing the number of players in a game and a 2D array `pick` where `pick[i] = [xᵢ, yᵢ]` represents that the player `xᵢ` picked a ball of color `yᵢ`.
 
 Player `i` **wins** the game if they pick **strictly more** than `i` balls of the **same** color. In other words,
 
@@ -49,8 +49,8 @@ Return the number of players who **win** the game.
 - `2 <= n <= 10`
 - `1 <= pick.length <= 100`
 - `pick[i].length == 2`
-- `0 <= x_i <= n - 1`
-- `0 <= y_i <= 10`
+- `0 <= xᵢ <= n - 1`
+- `0 <= yᵢ <= 10`
 
 ## Test Cases
 

@@ -36,7 +36,7 @@ Return the count of numbers in the range `[l, r]` that are **not** **special**.
 
 **Constraints:**
 
-- `1 <= l <= r <= 10^9`
+- `1 <= l <= r <= 10⁹`
 
 ## Test Cases
 
@@ -61,7 +61,7 @@ class Solution:
 
 判断 `[l', r']` 内质数的个数，如果不缓存已知的质数表，需要时间大约是 $\sum_{i=l'}^{r'}\sqrt i$。如果要用质数表，需要从 1 开始构建，需要的时间大约是 $\sum_{i=1}^{r'}(\sqrt i/\ln\sqrt i)$。
 
-粗估下来，对于限定的 `1 <= l <= r <= 10^9` 范围，当 `r' > l' + 10` 时，从 1 开始构建质数表就更划算。
+粗估下来，对于限定的 `1 <= l <= r <= 10⁹` 范围，当 `r' > l' + 10` 时，从 1 开始构建质数表就更划算。
 
 ## Code
 

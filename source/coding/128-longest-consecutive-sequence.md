@@ -27,8 +27,8 @@ You must write an algorithm that runs in `O(n)` time.
 
 **Constraints:**
 
-- `0 <= nums.length <= 10^5`
-- `-10^9 <= nums[i] <= 10^9`
+- `0 <= nums.length <= 10⁵`
+- `-10⁹ <= nums[i] <= 10⁹`
 
 ## Test Cases
 
@@ -45,7 +45,7 @@ class Solution:
 
 限制 `O(n)` 是最大的难度。
 
-初步考虑用散列排序。虽然 `O(10^9) + O(n)` 依然算 `O(n)`，但实际的速度就过于慢了，内存占用也大。
+初步考虑用散列排序。虽然 `O(10⁹) + O(n)` 依然算 `O(n)`，但实际的速度就过于慢了，内存占用也大。
 
 需要借助哈希表，假设哈希表的查找是 `O(1)` 时间。
 

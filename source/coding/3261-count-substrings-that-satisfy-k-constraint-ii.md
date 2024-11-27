@@ -11,14 +11,14 @@ updated: 2024-11-13 22:54:53
 
 You are given a **binary** string `s` and an integer `k`.
 
-You are also given a 2D integer array `queries`, where `queries[i] = [l_i, r_i]`.
+You are also given a 2D integer array `queries`, where `queries[i] = [lᵢ, rᵢ]`.
 
 A **binary string** satisfies the **k-constraint** if **either** of the following conditions holds:
 
 - The number of `0`'s in the string is at most `k`.
 - The number of `1`'s in the string is at most `k`.
 
-Return an integer array `answer`, where `answer[i]` is the number of substrings of `s[li..ri]` that satisfy the **k-constraint**.
+Return an integer array `answer`, where `answer[i]` is the number of substrings of `s[lᵢ..rᵢ]` that satisfy the **k-constraint**.
 
 > A substring is a contiguous non-empty sequence of characters within a string.
 
@@ -40,12 +40,12 @@ Return an integer array `answer`, where `answer[i]` is the number of substrings 
 
 **Constraints:**
 
-- `1 <= s.length <= 10^5`
+- `1 <= s.length <= 10⁵`
 - `s[i]` is either `'0'` or `'1'`.
 - `1 <= k <= s.length`
-- `1 <= queries.length <= 10^5`
-- `queries[i] == [l_i, r_i]`
-- `0 <= l_i <= r_i < s.length`
+- `1 <= queries.length <= 10⁵`
+- `queries[i] == [lᵢ, rᵢ]`
+- `0 <= lᵢ <= rᵢ < s.length`
 - All queries are distinct.
 
 ## Test Cases

@@ -8,9 +8,9 @@ updated: 2024-11-18 22:38:58
 ---
 ## Problem
 
-You are given an array of non-overlapping intervals `intervals` where `intervals[i] = [start_i, end_i]` represent the start and the end of the `i^th` interval and `intervals` is sorted in ascending order by `start_i`. You are also given an interval `newInterval = [start, end]` that represents the start and end of another interval.
+You are given an array of non-overlapping intervals `intervals` where `intervals[i] = [startᵢ, endᵢ]` represent the start and the end of the `iᵗʰ` interval and `intervals` is sorted in ascending order by `startᵢ`. You are also given an interval `newInterval = [start, end]` that represents the start and end of another interval.
 
-Insert `newInterval` into `intervals` such that `intervals` is still sorted in ascending order by `start_i` and `intervals` still does not have any overlapping intervals (merge overlapping intervals if necessary).
+Insert `newInterval` into `intervals` such that `intervals` is still sorted in ascending order by `startᵢ` and `intervals` still does not have any overlapping intervals (merge overlapping intervals if necessary).
 
 Return `intervals` _after the insertion_.
 
@@ -31,12 +31,12 @@ Return `intervals` _after the insertion_.
 
 **Constraints:**
 
-- `0 <= intervals.length <= 10^4`
+- `0 <= intervals.length <= 10⁴`
 - `intervals[i].length == 2`
-- `0 <= start_i <= end_i <= 10^5`
-- `intervals` is sorted by `start_i` in **ascending** order.
+- `0 <= startᵢ <= endᵢ <= 10⁵`
+- `intervals` is sorted by `startᵢ` in **ascending** order.
 - `newInterval.length == 2`
-- `0 <= start <= end <= 10^5`
+- `0 <= start <= end <= 10⁵`
 
 ## Test Cases
 

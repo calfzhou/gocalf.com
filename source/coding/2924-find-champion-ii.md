@@ -10,7 +10,7 @@ updated: 2024-11-26 21:56:28
 
 There are `n` teams numbered from `0` to `n - 1` in a tournament; each team is also a node in a **DAG**.
 
-You are given the integer `n` and a **0-indexed** 2D integer array `edges` of length `m` representing the **DAG**, where `edges[i] = [u_i, v_i]` indicates that there is a directed edge from team `u_i` to team `v_i` in the graph.
+You are given the integer `n` and a **0-indexed** 2D integer array `edges` of length `m` representing the **DAG**, where `edges[i] = [uᵢ, vᵢ]` indicates that there is a directed edge from team `uᵢ` to team `vᵢ` in the graph.
 
 A directed edge from `a` to `b` in the graph means that team `a` is **stronger** than team `b` and team `b` is **weaker** than team `a`.
 
@@ -20,7 +20,7 @@ Return _the team that will be the **champion** of the tournament if there is a *
 
 **Notes:**
 
-- A **cycle** is a series of nodes `a_1, a_2, ..., a_n, a_{n+1}` such that node `a_1` is the same node as node `a_{n+1}`, the nodes `a_1, a_2, ..., a_n` are distinct, and there is a directed edge from the node `a_i` to node `a_{i+1}` for every `i` in the range `[1, n]`.
+- A **cycle** is a series of nodes `a₁, a₂, ..., aₙ, aₙ₊₁` such that node `a₁` is the same node as node `aₙ₊₁`, the nodes `a₁, a₂, ..., aₙ` are distinct, and there is a directed edge from the node `aᵢ` to node `aᵢ₊₁` for every `i` in the range `[1, n]`.
 - A **DAG** is a directed graph that does not have any **cycle**.
 
 <https://leetcode.com/problems/find-champion-ii/>

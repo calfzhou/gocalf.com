@@ -37,7 +37,7 @@ Given a positive integer `n`, write a function that returns the number of set bi
 
 **Constraints:**
 
-- `1 <= n <= 2^31 - 1`
+- `1 <= n <= 2³¹ - 1`
 
 **Follow up:** If this function is called many times, how would you optimize it?
 

@@ -9,7 +9,7 @@ updated: 2024-11-18 15:57:32
 ---
 ## Problem
 
-Given an array of intervals `intervals` where `intervals[i] = [start_i, end_i]`, return _the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping_.
+Given an array of intervals `intervals` where `intervals[i] = [startᵢ, endᵢ]`, return _the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping_.
 
 **Note** that intervals which only touch at a point are **non-overlapping**. For example, `[1, 2]` and `[2, 3]` are non-overlapping.
 
@@ -35,9 +35,9 @@ Given an array of intervals `intervals` where `intervals[i] = [start_i, end_i]`,
 
 **Constraints:**
 
-- `1 <= intervals.length <= 10^5`
+- `1 <= intervals.length <= 10⁵`
 - `intervals[i].length == 2`
-- `-5 * 10^4 <= start_i < end_i <= 5 * 10^4`
+- `-5 * 10⁴ <= startᵢ < endᵢ <= 5 * 10⁴`
 
 ## Test Cases
 
@@ -72,7 +72,7 @@ $$
 
 最终从 `c[0]` 到 `c[n-1]` 中取最大，就是最多剩余的区间数，和区间总数的差值记为最少移除的区间数。
 
-时间复杂度 `O(n ^ 2)`，空间复杂度 `O(n)`。
+时间复杂度 `O(n²)`，空间复杂度 `O(n)`。
 
 太慢了。
 

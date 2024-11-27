@@ -39,8 +39,8 @@ Return the **maximum** total energy boost you can gain in the next `n` hours.
 **Constraints:**
 
 - `n == energyDrinkA.length == energyDrinkB.length`
-- `3 <= n <= 10^5`
-- `1 <= energyDrinkA[i], energyDrinkB[i] <= 10^5`
+- `3 <= n <= 10⁵`
+- `1 <= energyDrinkA[i], energyDrinkB[i] <= 10⁵`
 
 ## Test Cases
 

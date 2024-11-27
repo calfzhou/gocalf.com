@@ -40,7 +40,7 @@ An input string is valid if:
 
 **Constraints:**
 
-- `1 <= s.length <= 10^4`
+- `1 <= s.length <= 10⁴`
 - `s` consists of parentheses only `'()[]{}'`.
 
 ## Test Cases
