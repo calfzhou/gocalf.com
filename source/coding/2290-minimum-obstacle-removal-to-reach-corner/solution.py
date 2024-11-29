@@ -12,7 +12,7 @@ class Solution:
 
         # Dijkstra.
         dists[0][0] = 0
-        queue = [(dists[i][j], i, j) for j in range(n) for i in range(m)] # A min-heap queue.
+        queue = [(0, 0, 0)] # A min-heap queue of (dists[i][j], i, j)
         while queue:
             # Get the best start vertex u = (ui, uj).
             dist, ui, uj = heappop(queue)
