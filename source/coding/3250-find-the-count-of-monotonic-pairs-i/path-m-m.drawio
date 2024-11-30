@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
   <diagram name="Page-1" id="TRO4hgrUE51s8_r4tUzr">
-    <mxGraphModel dx="403" dy="330" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1008" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -111,12 +111,6 @@
               <mxPoint x="200" y="120" />
             </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="HszbxwqYKFemfIMENuIi-49" value="↙&amp;nbsp; &amp;nbsp; ↙" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;dashed=1;dashPattern=1 1;" parent="1" vertex="1">
-          <mxGeometry x="160" y="50" width="80" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="HszbxwqYKFemfIMENuIi-50" value="↙&amp;nbsp; &amp;nbsp; ↙" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;dashed=1;dashPattern=1 1;" parent="1" vertex="1">
-          <mxGeometry x="240" y="160" width="80" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
