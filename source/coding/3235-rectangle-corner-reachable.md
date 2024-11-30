@@ -3,6 +3,7 @@ title: 3235. Check if the Rectangle Corner Is Reachable
 notebook: coding
 tags:
 - hard
+- difficult
 date: 2024-11-09 20:20:29
 updated: 2024-11-09 20:20:29
 ---
