@@ -12,6 +12,8 @@ from solution import Solution
     ("babbab", 5, 1),
     ("aabaabbcbbbaccc", 6, 4),
     ("abcdefghijklmnopqrstuvwxyz", 16, 10),
+    ("aaaaabaaaaafffwfff", 2, 5),
+    ("aabcccbcaabbbbcbcb", 11, 2),
 ])
 class Test:
     def test_solution(self, s, k, expected):
