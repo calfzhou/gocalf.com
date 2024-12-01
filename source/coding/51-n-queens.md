@@ -4,7 +4,7 @@ notebook: coding
 tags:
 - hard
 date: 2024-12-01 01:45:08
-updated: 2024-12-01 01:45:08
+updated: 2024-12-01 10:16:19
 ---
 ## Problem
 
@@ -62,11 +62,11 @@ class Solution:
 
 ## Code
 
-> 都不是很快啊，可能细节上还可以优化。
-
 ### Recursively
 
 {% asset_code coding/51-n-queens/solution.py %}
+
+> 可以把列的占用缓存起来，以便快速跳过同列已有其他皇后的情况。
 
 ### Iteratively
 
