@@ -68,8 +68,6 @@ class Solution:
 
 {% asset_code coding/51-n-queens/solution.py %}
 
-> 可以把列的占用缓存起来，以便快速跳过同列已有其他皇后的情况。
-
 ### Iteratively
 
 {% asset_code coding/51-n-queens/solution2.py %}
