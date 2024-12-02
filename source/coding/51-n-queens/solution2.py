@@ -1,22 +1,27 @@
 class Solution:
     def solveNQueens(self, n: int) -> list[list[str]]:
         results = []
-        queens: list[int] = [0] * n # queens[i] = j, means there is a queue in (i, j).
-        kill = lambda i: any(queens[r] == queens[i] or abs(r - i) == abs(queens[r] - queens[i]) for r in range(i))
+        q: list[int] = [0] * n # q[i] = j, means there is a queue in (i, j).
+        cols = [False] * n
+        slashes = [False] * ((n<<1) - 1)
+        backslashes = list(slashes)
 
         i = 0
-        while queens[0] < n:
-            if queens[i] == n:
+        while q[0] < n:
+            if q[i] == n:
                 i -= 1
-                queens[i] += 1
-            elif kill(i):
-                queens[i] += 1
+                cols[q[i]] = slashes[i+q[i]] = backslashes[i-q[i]] = False
+                q[i] += 1
+            elif any((cols[q[i]], slashes[i+q[i]], backslashes[i-q[i]])):
+                q[i] += 1
             elif i < n - 1:
+                cols[q[i]] = slashes[i+q[i]] = backslashes[i-q[i]] = True
                 i += 1
-                queens[i] = 0
+                q[i] = 0
             else:
-                results.append(['Q'.rjust(j+1, '.').ljust(n, '.') for j in queens])
+                results.append(['Q'.rjust(j+1, '.').ljust(n, '.') for j in q])
                 i -= 1
-                queens[i] += 1
+                cols[q[i]] = slashes[i+q[i]] = backslashes[i-q[i]] = False
+                q[i] += 1
 
         return results

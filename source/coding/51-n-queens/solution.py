@@ -2,8 +2,9 @@ class Solution:
     def solveNQueens(self, n: int) -> list[list[str]]:
         results = []
         queens: list[int] = [None] * n # queens[i] = j, means there is a queue in (i, j).
-        remains = set(range(n))
-        kill = lambda i, j: any(abs(r - i) == abs(queens[r] - j) for r in range(i))
+        cols = [False] * n
+        slashes = [False] * ((n<<1) - 1)
+        backslashes = list(slashes)
 
         def backtrace(i: int):
             if i == n:
@@ -11,11 +12,11 @@ class Solution:
                 return
 
             for j in range(n):
-                if j not in remains or kill(i, j): continue
+                if any((cols[j], slashes[i+j], backslashes[i-j])): continue
                 queens[i] = j
-                remains.remove(j)
+                cols[j] = slashes[i+j] = backslashes[i-j] = True
                 backtrace(i + 1)
-                remains.add(j)
+                cols[j] = slashes[i+j] = backslashes[i-j] = False
 
         backtrace(0)
         return results
