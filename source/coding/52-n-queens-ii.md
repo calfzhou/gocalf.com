@@ -40,7 +40,7 @@ class Solution:
     def totalNQueens(self, n: int) -> int:
 ```
 
-{% asset_code coding/TODO/solution_test.py %}
+{% asset_code coding/52-n-queens-ii/solution_test.py %}
 
 ## Thoughts
 
