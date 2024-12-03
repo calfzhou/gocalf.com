@@ -17,7 +17,7 @@ Each word must be constructed from letters of sequentially adjacent cells, where
 **Example 1:**
 
 {% invert %}
-{% image 212-word-search-ii/case1.png %}
+![case1](212-word-search-ii/case1.png)
 {% endinvert %}
 
 > Input: `board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]`
@@ -26,7 +26,7 @@ Each word must be constructed from letters of sequentially adjacent cells, where
 **Example 2:**
 
 {% invert %}
-{% image 212-word-search-ii/case2.png %}
+![case2](212-word-search-ii/case2.png)
 {% endinvert %}
 
 > Input: `board = [["a","b"],["c","d"]], words = ["abcb"]`

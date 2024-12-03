@@ -15,7 +15,7 @@ Given the `root` of a binary tree, return _the level order traversal of its node
 **Example 1:**
 
 {% invert %}
-{% image 102-binary-tree-level-order-traversal/case1.png %}
+![case1](102-binary-tree-level-order-traversal/case1.png)
 {% endinvert %}
 
 > Input: `root = [3,9,20,null,null,15,7]`

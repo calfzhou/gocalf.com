@@ -24,7 +24,7 @@ Return the number of **good** nodes in the given tree.
 > Output: `7`
 > Explanation:
 > {% invert %}
-{% image 3249-count-the-number-of-good-nodes/case1.png %}
+![case1](3249-count-the-number-of-good-nodes/case1.png)
 {% endinvert %}
 > All of the nodes of the given tree are good.
 
@@ -34,7 +34,7 @@ Return the number of **good** nodes in the given tree.
 > Output: `6`
 > Explanation:
 > {% invert %}
-{% image 3249-count-the-number-of-good-nodes/case2.png %}
+![case2](3249-count-the-number-of-good-nodes/case2.png)
 {% endinvert %}
 > There are 6 good nodes in the given tree. They are colored in the image above.
 
@@ -44,7 +44,7 @@ Return the number of **good** nodes in the given tree.
 > Output: `12`
 > Explanation:
 > {% invert %}
-{% image 3249-count-the-number-of-good-nodes/case3.png %}
+![case3](3249-count-the-number-of-good-nodes/case3.png)
 {% endinvert %}
 > All nodes except node 9 are good.
 

@@ -17,7 +17,7 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 **Example 1:**
 
 {% invert %}
-{% image 79-word-search/case1.png %}
+![case1](79-word-search/case1.png)
 {% endinvert %}
 
 > Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"`
@@ -26,7 +26,7 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 **Example 2:**
 
 {% invert %}
-{% image 79-word-search/case2.png %}
+![case2](79-word-search/case2.png)
 {% endinvert %}
 
 > Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"`
@@ -35,7 +35,7 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 **Example 3:**
 
 {% invert %}
-{% image 79-word-search/case3.png %}
+![case3](79-word-search/case3.png)
 {% endinvert %}
 
 > Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"`

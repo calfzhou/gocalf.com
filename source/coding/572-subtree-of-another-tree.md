@@ -17,7 +17,7 @@ A subtree of a binary tree `tree` is a tree that consists of a node in `tree` an
 **Example 1:**
 
 {% invert %}
-{% image 572-subtree-of-another-tree/case1.png %}
+![case1](572-subtree-of-another-tree/case1.png)
 {% endinvert %}
 
 > Input: `root = [3,4,5,1,2], subRoot = [4,1,2]`
@@ -26,7 +26,7 @@ A subtree of a binary tree `tree` is a tree that consists of a node in `tree` an
 **Example 2:**
 
 {% invert %}
-{% image 572-subtree-of-another-tree/case2.png %}
+![case2](572-subtree-of-another-tree/case2.png)
 {% endinvert %}
 
 > Input: `root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]`

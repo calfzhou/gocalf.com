@@ -15,7 +15,7 @@ Given the `head` of a linked list, remove the `nᵗʰ` node from the end of the 
 **Example 1:**
 
 {% invert %}
-{% image 19-remove-nth-node-from-end-of-list/case1.png %}
+![case1](19-remove-nth-node-from-end-of-list/case1.png)
 {% endinvert %}
 
 > Input: `head = [1,2,3,4,5], n = 2`

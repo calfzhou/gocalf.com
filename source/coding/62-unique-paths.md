@@ -20,7 +20,7 @@ The test cases are generated so that the answer will be less than or equal to `2
 **Example 1:**
 
 {% invert %}
-{% image 62-unique-paths/case1.png %}
+![case1](62-unique-paths/case1.png)
 {% endinvert %}
 
 > Input: `m = 3, n = 7`

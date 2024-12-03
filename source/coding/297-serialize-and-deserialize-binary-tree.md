@@ -19,7 +19,7 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
 **Example 1:**
 
 {% invert %}
-{% image 297-serialize-and-deserialize-binary-tree/case1.png %}
+![case1](297-serialize-and-deserialize-binary-tree/case1.png)
 {% endinvert %}
 
 > Input: `root = [1,2,3,null,null,4,5]`

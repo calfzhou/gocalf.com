@@ -15,7 +15,7 @@ Given the `head` of a singly linked list, reverse the list, and return _the reve
 **Example 1:**
 
 {% invert %}
-{% image 206-reverse-linked-list/case1.png %}
+![case1](206-reverse-linked-list/case1.png)
 {% endinvert %}
 
 > Input: `head = [1,2,3,4,5]`
@@ -24,7 +24,7 @@ Given the `head` of a singly linked list, reverse the list, and return _the reve
 **Example 2:**
 
 {% invert %}
-{% image 206-reverse-linked-list/case2.png %}
+![case2](206-reverse-linked-list/case2.png)
 {% endinvert %}
 
 > Input: `head = [1,2]`

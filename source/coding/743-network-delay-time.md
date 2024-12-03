@@ -17,7 +17,7 @@ We will send a signal from a given node `k`. Return _the **minimum** time it tak
 **Example 1:**
 
 {% invert %}
-{% image 743-network-delay-time/case1.png %}
+![case1](743-network-delay-time/case1.png)
 {% endinvert %}
 
 > Input: `times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2`

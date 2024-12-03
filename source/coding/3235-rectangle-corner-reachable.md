@@ -24,7 +24,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Output: true
 > Explanation:
 > {% invert %}
-{% image 3235-rectangle-corner-reachable/case1.png %}
+![case1](3235-rectangle-corner-reachable/case1.png)
 {% endinvert %}
 > The curve shows a possible path between `(0, 0)` and `(3, 4)`.
 
@@ -34,7 +34,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Output: false
 > Explanation:
 > {% invert %}
-{% image 3235-rectangle-corner-reachable/case2.png %}
+![case2](3235-rectangle-corner-reachable/case2.png)
 {% endinvert %}
 > No path exists from `(0, 0)` to `(3, 3)`.
 
@@ -44,7 +44,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Output: false
 > Explanation:
 > {% invert %}
-{% image 3235-rectangle-corner-reachable/case3.png %}
+![case3](3235-rectangle-corner-reachable/case3.png)
 {% endinvert %}
 > No path exists from `(0, 0)` to `(3, 3)`.
 
@@ -54,7 +54,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Output: true
 > Explanation:
 > {% invert %}
-{% image 3235-rectangle-corner-reachable/case4.png %}
+![case4](3235-rectangle-corner-reachable/case4.png)
 {% endinvert %}
 
 **Constraints:**

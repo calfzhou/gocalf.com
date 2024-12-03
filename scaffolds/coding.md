@@ -10,13 +10,13 @@ katex: false
 
 TODO
 
-{% invert %}
-{% image TODO/problem.png %}
-{% endinvert %}
-
 <https://todo>
 
 **Example 1:**
+
+{% invert %}
+![case1](TODO/case1.png)
+{% endinvert %}
 
 > Input: TODO
 > Output: TODO

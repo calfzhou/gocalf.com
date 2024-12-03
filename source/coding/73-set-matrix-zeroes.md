@@ -17,7 +17,7 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 **Example 1:**
 
 {% invert %}
-{% image 73-set-matrix-zeroes/case1.png %}
+![case1](73-set-matrix-zeroes/case1.png)
 {% endinvert %}
 
 > Input: `matrix = [[1,1,1],[1,0,1],[1,1,1]]`
@@ -26,7 +26,7 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 **Example 2:**
 
 {% invert %}
-{% image 73-set-matrix-zeroes/case2.png %}
+![case2](73-set-matrix-zeroes/case2.png)
 {% endinvert %}
 
 > Input: `matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]`

@@ -15,7 +15,7 @@ Given the `root` of a binary tree, invert the tree, and return _its root_.
 **Example 1:**
 
 {% invert %}
-{% image 226-invert-binary-tree/case1.png %}
+![case1](226-invert-binary-tree/case1.png)
 {% endinvert %}
 
 > Input: `root = [4,2,7,1,3,6,9]`
@@ -24,7 +24,7 @@ Given the `root` of a binary tree, invert the tree, and return _its root_.
 **Example 2:**
 
 {% invert %}
-{% image 226-invert-binary-tree/case2.png %}
+![case2](226-invert-binary-tree/case2.png)
 {% endinvert %}
 
 > Input: `root = [4,2,7,1,3,6,9]`

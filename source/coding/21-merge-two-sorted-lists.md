@@ -19,7 +19,7 @@ Return _the head of the merged linked list_.
 **Example 1:**
 
 {% invert %}
-{% image 21-merge-two-sorted-lists/case1.png %}
+![case1](21-merge-two-sorted-lists/case1.png)
 {% endinvert %}
 
 > Input: `list1 = [1,2,4], list2 = [1,3,4]`

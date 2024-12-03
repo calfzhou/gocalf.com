@@ -8,7 +8,7 @@ date: 2024-05-21 14:48:24
 
 比如在暗色主题下出现下面这样一张图：
 
-{% image /notes/rubik-cube/high-center-formula.png %}
+![high-center-formula.png](/notes/rubik-cube/high-center-formula.png)
 
 即便在亮色主题下，页面背景色往往不是纯白的，也会出现一块明显与背景色不一致的区域，不比暗色主题下好太多。
 
@@ -61,7 +61,7 @@ filter: invert(1) hue-rotate(180deg);
 
 ``` markdown
 {% invert [when:dark/light/always] %}
-{% image src ... %}
+![alt](src)
 {% endinvert %}
 ```
 
@@ -70,5 +70,5 @@ filter: invert(1) hue-rotate(180deg);
 本文开头提到的图片，按照这个逻辑处理完，看到的效果是：
 
 {% invert %}
-{% image /notes/rubik-cube/high-center-formula.ink.svg %}
+![high-center-formula.ink.svg](/notes/rubik-cube/high-center-formula.ink.svg)
 {% endinvert %}

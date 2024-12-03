@@ -22,7 +22,7 @@ Return _the maximum amount of water a container can store_.
 **Example 1:**
 
 {% invert %}
-{% image 11-container-with-most-water/case1.png %}
+![case1](11-container-with-most-water/case1.png)
 {% endinvert %}
 
 > Input: `height = [1,8,6,2,5,4,8,3,7]`
