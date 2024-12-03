@@ -1,3 +1,5 @@
+'use strict'
+
 // Inspired by https://github.com/hexojs/hexo-generator-alias, but will duplicate the content instead of redirecting.
 hexo.extend.generator.register('duplicates', function (locals) {
   const routes = []
