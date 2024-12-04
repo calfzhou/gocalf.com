@@ -55,7 +55,7 @@ class Solution:
 
 ## Thoughts
 
-相当于 [322. Coin Change](/coding/322-coin-change) 的进阶版，从找到最少的硬币数量，改为找出所有可能的方案总数。
+相当于 [322. Coin Change](322-coin-change) 的进阶版，从找到最少的硬币数量，改为找出所有可能的方案总数。
 
 对于一个整数 t，记能组合出 t 的方法总数为 `cw(t)`。显然有：
 
@@ -67,7 +67,7 @@ cw(t)=\begin{cases}
 \end{cases}
 $$
 
-跟 [problem 322](/coding/322-coin-change) 几乎一模一样，只是把初始值 `1` 改成 `0`，无解值 $\infty$ 改成 `0`，`1 + min` 改成 `sum`。
+跟 [problem 322](322-coin-change) 几乎一模一样，只是把初始值 `1` 改成 `0`，无解值 $\infty$ 改成 `0`，`1 + min` 改成 `sum`。
 
 代码也直接照搬过来改一下。
 

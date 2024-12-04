@@ -75,7 +75,7 @@ class Solution:
 
 ## Thoughts
 
-[3206. Alternating Groups I](/coding/3206-alternating-groups-i) 的进阶版，k 从固定的 3 变成任意值。
+[3206. Alternating Groups I](3206-alternating-groups-i) 的进阶版，k 从固定的 3 变成任意值。
 
 直接按同样的方式做，时间复杂度是 `O(n * k)`。其中有很多判定是重复的。
 

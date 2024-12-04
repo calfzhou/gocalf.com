@@ -66,7 +66,7 @@ class Solution:
 
 ## Thoughts
 
-相当于是 [70. Climbing Stairs](/coding/70-climbing-stairs) 的进阶版，想象每个台阶上写了一个数字。只不过增加了限制，只有满足条件的一个或两个台阶才能迈过。
+相当于是 [70. Climbing Stairs](70-climbing-stairs) 的进阶版，想象每个台阶上写了一个数字。只不过增加了限制，只有满足条件的一个或两个台阶才能迈过。
 
 定义 `w[i]` 是数字子串 `s[0:i+1]` 可行的解码方案总数。
 

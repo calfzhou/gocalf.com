@@ -47,7 +47,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [23. Merge k Sorted Lists](/coding/23-merge-k-sorted-lists) 差不多。
+跟 [23. Merge k Sorted Lists](23-merge-k-sorted-lists) 差不多。
 
 同样拿 k 个数组的第一个数字构建大小为 k 的最小堆。堆顶数值就是当前区间的左端点。右端点可以在这 k 个数字进堆的时候记录下来最大值得到。
 

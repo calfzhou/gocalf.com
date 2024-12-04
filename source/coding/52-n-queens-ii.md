@@ -44,7 +44,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [51. N-Queens](/coding/51-n-queens) 差不多，只是不用输出皇后的摆放结果，直接记录方案数量即可。
+跟 [51. N-Queens](51-n-queens) 差不多，只是不用输出皇后的摆放结果，直接记录方案数量即可。
 
 ## Code
 

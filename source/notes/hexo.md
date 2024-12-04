@@ -102,7 +102,7 @@ Markdown | `../notes/note-slug/filename` | {% mark ✓ color:green %} ~~`/../` �
 
 ### Mermaid
 
-当 Mermaid 图比较宽的时候，在手机上展示不全，且无法缩放、滑动。比如 [这里](/notes/pgp#架构)。
+当 Mermaid 图比较宽的时候，在手机上展示不全，且无法缩放、滑动。比如 [这里](pgp#架构)。
 
 - 2024-06-17: Stellar 1.29.0 版本中修复了。
 

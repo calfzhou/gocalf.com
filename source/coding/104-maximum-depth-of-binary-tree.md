@@ -52,7 +52,7 @@ class Solution:
 
 ## Thoughts
 
-相当于 [102. Binary Tree Level Order Traversal](/coding/102-binary-tree-level-order-traversal) 的简化版，只记录层数，不输出节点的值。
+相当于 [102. Binary Tree Level Order Traversal](102-binary-tree-level-order-traversal) 的简化版，只记录层数，不输出节点的值。
 
 直接用层序（level-order）遍历二叉树，或者其他顺序也行。
 

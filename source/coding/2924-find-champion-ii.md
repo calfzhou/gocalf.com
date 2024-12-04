@@ -67,7 +67,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [2923. Find Champion I](/coding/2923-find-champion-i) 差不多。
+跟 [2923. Find Champion I](2923-find-champion-i) 差不多。
 
 冠军组的入度为 0。扫描所有的边，记录入度大于零的节点，剩下的就是入度为 0 的节点。如果刚好只有一个，那就是冠军组，否则没有冠军组。
 

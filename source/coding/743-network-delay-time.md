@@ -60,7 +60,7 @@ class Solution:
 
 使用广度优先遍历有可能得到更多的剪枝，广度优先可以用队列。尤其如果使用带优先级的队列，每次处理信号最早到达的节点，能加大剪枝的概率。最小堆是很适合的数据结构，堆顶就是最快到达的节点，每次把堆顶推出。
 
-> 做完 [2290. Minimum Obstacle Removal to Reach Corner](/coding/2290-minimum-obstacle-removal-to-reach-corner) 发现其实就是实现了 Dijkstra 算法（基于优先队列优化的）。
+> 做完 [2290. Minimum Obstacle Removal to Reach Corner](2290-minimum-obstacle-removal-to-reach-corner) 发现其实就是实现了 Dijkstra 算法（基于优先队列优化的）。
 
 时间复杂度 `O(e + n log n)`（每个节点进入队列时要恢复堆的结构），空间复杂度 `O(n)`（队列大小）。`e` 是边的数量，即 `times` 数组的长度。
 

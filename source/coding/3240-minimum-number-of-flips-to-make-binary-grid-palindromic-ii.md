@@ -63,7 +63,7 @@ class Solution:
 
 ## Thoughts
 
-[3239. Minimum Number of Flips to Make Binary Grid Palindromic I](/coding/3239-minimum-number-of-flips-to-make-binary-grid-palindromic-i) 的进阶版。增加的要求除了行和列要同时是回文，还要求 `1` 的个数能被 4 整除。
+[3239. Minimum Number of Flips to Make Binary Grid Palindromic I](3239-minimum-number-of-flips-to-make-binary-grid-palindromic-i) 的进阶版。增加的要求除了行和列要同时是回文，还要求 `1` 的个数能被 4 整除。
 
 翻转后的 grid，相对于中央水平线和垂直线是轴对称的。
 

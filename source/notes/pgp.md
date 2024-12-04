@@ -340,4 +340,4 @@ gpg -d -o ORIGIN-FILE ENCRYPTED-FILE
 
 ### 在公有云上加密保存 git 仓库
 
-把本地仓库推到 GitHub 上，如果是特别敏感的内容，推到 private 仓库也并不安全，可以利用 PGP 密钥结合相关的辅助工具，使得 push 到 GitHub 上面的内容全部都加密过。详情参见 [Git with Encryption](/notes/git-with-encryption)。
+把本地仓库推到 GitHub 上，如果是特别敏感的内容，推到 private 仓库也并不安全，可以利用 PGP 密钥结合相关的辅助工具，使得 push 到 GitHub 上面的内容全部都加密过。详情参见 [Git with Encryption](git-with-encryption)。
