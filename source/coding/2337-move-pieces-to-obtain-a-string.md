@@ -26,6 +26,7 @@ Return `true` _if it is possible to obtain the string_ `target` _by moving the p
 > - Move the first piece one step to the left, start becomes equal to `"L___R__R_"`.
 > - Move the last piece one step to the right, start becomes equal to `"L___R___R"`.
 > - Move the second piece three steps to the right, start becomes equal to `"L______RR"`.
+>
 > Since it is possible to get the string target from start, we return true.
 
 **Example 2:**
@@ -76,6 +77,8 @@ class Solution:
 4. `start` 当前 piece 是 `L`：如果 `L` 的需求量为 0 则失败；否则 `L` 需求量减一。
 
 注意边界条件要求 2 必须在 1 之后判定，4 必须在 3 之后判定。
+
+最后如过还有遗留的 `L` 的需求量或 `R` 的数量，则失败。
 
 也是 `O(n)` 时间，`O(1)` 空间。
 
