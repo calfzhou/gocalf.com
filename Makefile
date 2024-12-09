@@ -41,5 +41,6 @@ post: check-slug-and-title
 
 coding: check-slug-and-title
 	hexo new coding -p "../coding/$(slug)" "$(title)"
+	cp scaffolds/coding/* source/coding/$(slug)/
 
 .PHONY: list install build generate clean server s note post coding
