@@ -62,7 +62,7 @@ class Solution:
 
 > 做完 [2290. Minimum Obstacle Removal to Reach Corner](2290-minimum-obstacle-removal-to-reach-corner) 发现其实就是实现了 Dijkstra 算法（基于优先队列优化的）。
 
-时间复杂度 `O(e + n log n)`（每个节点进入队列时要恢复堆的结构），空间复杂度 `O(n)`（队列大小）。`e` 是边的数量，即 `times` 数组的长度。
+时间复杂度 `O((e + n) log n)`（每个节点进入队列时要恢复堆的结构），空间复杂度 `O(n)`（队列大小）。`e` 是边的数量，即 `times` 数组的长度。
 
 ## Code
 
