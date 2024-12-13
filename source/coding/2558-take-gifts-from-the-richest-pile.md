@@ -64,7 +64,7 @@ class Solution:
 
 Python 内置的 [heapq](https://docs.python.org/3/library/heapq.html) 实现的是最小堆，所以给 `gifts` 里所有的值加上负号来模拟最大堆。
 
-时间复杂度 `O(k log n)`，空间复杂度 `O(n)`（构建单独的堆空间）或 `O(1)` 直接利用 `gifts` 原有空间。
+时间复杂度 `O((n + k) log n)`，空间复杂度 `O(n)`（构建单独的堆空间）或 `O(1)` 直接利用 `gifts` 原有空间。
 
 ## Code
 
