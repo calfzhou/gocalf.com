@@ -65,7 +65,7 @@ class Solution:
 
 跟 [2558. Take Gifts From the Richest Pile](2558-take-gifts-from-the-richest-pile) 几乎一模一样，最大的区别就是这道题在有遇到重复数字的时候需要保持原有顺序，而且最后还要按原始顺序返回结果数组。那就也是用最小堆，但把数组下标和元素数值一起作为堆中的元素，这样当数值相等时，可以让数组下标小的排在前边。最后也可以根据这些下边构建结果数组。
 
-时间复杂度 `O(n + k log n)`，空间复杂度 `O(n)`。
+时间复杂度 `O((n + k) log n)`，空间复杂度 `O(n)`。
 
 当然这道题限定的 n 极小，那么跟 [2931. Maximum Spending After Buying Items](2931-maximum-spending-after-buying-items) 类似，用堆的常数系数过大导致实际运行速度并不一定快，直接在每次循环里遍历数组查找最小值也问题不大，时间复杂度 `O(k * n)`，空间复杂度 `O(1)`（直接在原数组上修改）。
 
