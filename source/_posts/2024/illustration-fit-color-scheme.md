@@ -43,6 +43,28 @@ filter: invert(1) hue-rotate(180deg);
 {% endgrid %}
 {% endfolding %}
 
+比如 500 值的各个颜色：
+
+| Color Name | 颜色名 | RGB (hex) |
+|------------|--------|-----------|
+| Red        | 红色   | `#ef4444` |
+| Orange     | 橙色   | `#f97316` |
+| Amber      | 琥珀色 | `#f59e0b` |
+| Yellow     | 黄色   | `#eab308` |
+| Lime       | 石灰色 | `#84cc16` |
+| Green      | 绿色   | `#22c55e` |
+| Emerald    | 祖母绿 | `#10b981` |
+| Teal       | 水鸭色 | `#14b8a6` |
+| Cyan       | 青色   | `#06b6d4` |
+| Sky        | 天蓝色 | `#0ea5e9` |
+| Blue       | 蓝色   | `#3b82f6` |
+| Indigo     | 靛蓝色 | `#6366f1` |
+| Violet     | 紫罗兰 | `#8b5cf6` |
+| Purple     | 紫色   | `#a855f7` |
+| Fuchsia    | 紫红色 | `#d946ef` |
+| Pink       | 粉色   | `#ec4899` |
+| Rose       | 玫瑰色 | `#f43f5e` |
+
 ## 当前的方案
 
 目前通过一些操作来提高这种类型插图的展示体验。
