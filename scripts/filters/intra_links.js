@@ -15,7 +15,10 @@ module.exports.preProcess = data => {
 module.exports.processSite = data => {
   for (const match of data.content.matchAll(linkRe)) {
     let link = match[1] || match[2]
-    link = new URL(link, data.permalink).href
+    const url = new URL(link, data.permalink)
+    url.hash = ''
+    url.search = ''
+    link = url.href
     if (link != data.permalink && posts.has(link)) {
       data._mentions?.add(link)
       posts.get(link)._backlinks?.add(data.permalink)
