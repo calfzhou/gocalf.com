@@ -5,7 +5,7 @@ tags:
 - it/ui
 katex: true
 date: 2024-12-15 10:08:14
-updated: 2024-12-15 10:08:14
+updated: 2024-12-15 20:35:53
 ---
 ## Tailwind Color Palette
 
@@ -37,3 +37,18 @@ updated: 2024-12-15 10:08:14
 | Fuchsia    | 紫红色 | $\textcolor{d946ef}{\blacksquare}$ `#d946ef` |
 | Pink       | 粉色   | $\textcolor{ec4899}{\blacksquare}$ `#ec4899` |
 | Rose       | 玫瑰色 | $\textcolor{f43f5e}{\blacksquare}$ `#f43f5e` |
+
+## Hexo Stellar
+
+[Stellar：表达类标签组件 - 彩色备注块](https://xaoxuu.com/wiki/stellar/tag-plugins/express/#note-%E5%A4%87%E6%B3%A8%E5%9D%97)
+
+| Color Name | 颜色名 | RGB (hex)                                    |
+|------------|--------|----------------------------------------------|
+| Red        | 红色   | $\textcolor{f44336}{\blacksquare}$ `#f44336` |
+| Orange     | 橙色   | $\textcolor{fa6400}{\blacksquare}$ `#fa6400` |
+| Amber      | 琥珀色 | $\textcolor{ffbd2b}{\blacksquare}$ `#ffbd2b` |
+| Yellow     | 黄色   | $\textcolor{f2e03d}{\blacksquare}$ `#f2e03d` |
+| Green      | 绿色   | $\textcolor{3dc550}{\blacksquare}$ `#3dc550` |
+| Cyan       | 青色   | $\textcolor{1bcdfc}{\blacksquare}$ `#1bcdfc` |
+| Blue       | 蓝色   | $\textcolor{2196f3}{\blacksquare}$ `#2196f3` |
+| Purple     | 紫色   | $\textcolor{9c27b0}{\blacksquare}$ `#9c27b0` |
