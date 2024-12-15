@@ -4,7 +4,7 @@ notebook: coding
 tags:
 - medium
 date: 2024-12-15 22:47:02
-updated: 2024-12-15 22:47:02
+updated: 2024-12-15 23:06:27
 ---
 ## Problem
 
@@ -55,11 +55,11 @@ class Solution:
 
 [121. Best Time to Buy and Sell Stock](121-best-time-to-buy-and-sell-stock) 的进阶版，可以买入卖出多次了（且同一天内可以既买也卖，但最多只能持有一份）。
 
-如果当前未持有股票，而明天的价格更高，那么今天就可以买入。
+如果明天的价格高，那么就今天买、明天卖，赚了这一笔差价。否则（明天价格低），今天就不买。
 
-如果当前持有股票，而明天价格更低，那么今天就卖掉。
+扫描数组，只要 `nums[i+1]` 比 `nums[i]` 大，就在第 i 天买入并在第 `i + 1` 天卖出，将差值累加都已有收益上。最终得到总的收益。
 
-扫描数组，只要 `nums[i+1]` 比 `nums[i]` 大，就在第 i 天买入并在第 `i + 1` 天卖出，差值则为部分收益。累加所有收益即可。
+> 感觉比 [121. Best Time to Buy and Sell Stock](121-best-time-to-buy-and-sell-stock) 简单呢。
 
 ## Code
 
