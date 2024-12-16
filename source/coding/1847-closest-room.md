@@ -4,7 +4,7 @@ notebook: coding
 tags:
 - hard
 date: 2024-12-16 23:50:39
-updated: 2024-12-16 23:50:39
+updated: 2024-12-17 00:04:44
 ---
 ## Problem
 
@@ -61,11 +61,11 @@ class Solution:
 
 对于一个 query，可以把所有 `size >= minSize` 的房间找出来，在这些房间中找距离 `preferred` 最近的编号。如果这些房间是按照编号排序的，就可以用二分查找。
 
-如果下一个 query 的 `minSize` 更小一些，那么可以往这个房间集合中再加入那些 `size` 不小于新 query 的 `minSize` 房间，如果还能保持按编号排序，就还可以用二分查找。
+如果下一个 query 的 `minSize` 更小一些，那么可以往这个房间集合中再加入那些 `size` 不小于新 query 的 `minSize` 的房间，如果还能保持按编号排序，就还可以用二分查找。
 
 所以对 `queries` 按 `minSize` 降序排列，这样每下一个 query 的 `minSize` 都不会比前一个大。对 `rooms` 也按 `size` 降序排列，用两个下标分别跟踪 `queries` 和 `rooms`，可以方便地对每个新 query 找出增量的房间。
 
-关键在于用一个「能保持有序的容器」保存按 `minSize` 筛出来的房间。
+关键在于用一个「能保持有序」的容器保存按 `minSize` 筛出来的房间，在不断加入新房间的同时保持按房间编号排序。
 
 暂不考虑 [grantjenks/python-sortedcontainers: Python Sorted Container Types: Sorted List, Sorted Dict, and Sorted Set](https://github.com/grantjenks/python-sortedcontainers) 之类的第三方工具，很容易想到的是二叉查找树（Binary Search Tree），或其变体如 AVL 树（Georgy **A**delson-**V**elsky and Evgenii **L**andis Tree）、红黑树（Red Black Tree）等。
 
