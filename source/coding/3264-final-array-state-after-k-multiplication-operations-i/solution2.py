@@ -1,6 +1,3 @@
-from heapq import heapify, heapreplace
-
-
 class Solution:
     def getFinalState(self, nums: list[int], k: int, multiplier: int) -> list[int]:
         if multiplier == 1: return nums
