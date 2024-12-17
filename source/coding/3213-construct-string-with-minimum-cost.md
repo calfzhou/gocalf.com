@@ -4,7 +4,9 @@ notebook: coding
 tags:
 - hard
 date: 2024-12-17 21:39:12
-updated: 2024-12-17 23:32:56
+updated: 2024-12-17 23:48:27
+references:
+- '[Aho-Corasick Algorithm in Python - GeeksforGeeks](https://www.geeksforgeeks.org/aho-corasick-algorithm-in-python/)'
 ---
 ## Problem
 
