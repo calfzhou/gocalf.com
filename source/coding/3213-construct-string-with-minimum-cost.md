@@ -3,9 +3,8 @@ title: 3213. Construct String with Minimum Cost
 notebook: coding
 tags:
 - hard
-- todo
 date: 2024-12-17 21:39:12
-updated: 2024-12-17 21:39:12
+updated: 2024-12-17 23:32:56
 ---
 ## Problem
 
@@ -77,14 +76,36 @@ class Solution:
 
 [solution_trie.py](3213-construct-string-with-minimum-cost/solution_trie.py)
 
+实际上还可以定义 `dp'(i)` 表示子字符串 `target[:i]` 的最小 cost。并为了方便，定义 `dp'(0) = 0`，其他值均初始化为 ∞，最终所求结果为 `dp'(n)`。
+
+令 i 从 0 递增到 `n - 1`。对于当前的 i，如果 `dp'[i] = ∞`，说明 `target[:i]` 无法由 words 中的单词拼接而成。否则看从位置 i 开始可以匹配到哪些单词，比如 `target[i:j]` 是一个单词，那么 `dp'(j) = min{dp'(j), dp'(i) + cost(target[i:j])}`。Trie 相关的代码不变，只是递推的部分变为：
+
+``` python
+dp = [-1] * (n + 1)
+dp[0] = 0
+for i in range(n):
+    if dp[i] < 0: continue
+    for j, cost in trie_lookup(i):
+        if dp[j] < 0 or dp[j] > dp[i] + cost:
+            dp[j] = dp[i] + cost
+
+return dp[n]
+```
+
 ### AC Algorithm
 
 上边直接利用 trie 树，慢在对于每一个 `target[i:]`，都要去 trie 树中进行搜索。这就很像在一个字符串中查找另一个字符串，暴力查找需要的时间是两个字符串长度之积，但用 KMP 算法（[Knuth–Morris–Pratt algorithm](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)）则时间为两个字符串长度之和。这里是一个字符串和另外若干个字符串的匹配（多模式匹配？），AC 自动机（[Aho–Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm)）比较适合。
 
-利用 AC 自动机，可以用平均 `O(mk + n)` 时间找出 target 中所有能匹配到的单词。
+利用 AC 自动机，可以用平均 `O(mk + n)` 时间找出 target 中所有能匹配到的单词。AC 自动机的实现细节跳过。
 
-TODO
+让 AC 自动机按照从前到后的顺序返回 target 中所有能匹配到的单词，对于每个匹配，可以知道匹配区域的起止下标，以及对应单词的 cost，剩下的事情就跟上边的 `dp'` 完全一致。
+
+整体的时间复杂度为 `O(mk + n)`，空间复杂度为 `O(mk + n)`。
 
 ## Code
 
-TODO
+{% asset_code coding/3213-construct-string-with-minimum-cost/solution.py %}
+
+附：针对 AC 自动机的构建和多模式匹配的 test cases：
+
+{% asset_code coding/3213-construct-string-with-minimum-cost/solution_ac_test.py %}

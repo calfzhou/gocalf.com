@@ -1,6 +1,6 @@
 import pytest
 
-from solution import Solution
+from solution_trie import Solution
 
 
 @pytest.mark.parametrize('target, words, costs, expected', [
