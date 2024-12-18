@@ -4,7 +4,7 @@ notebook: coding
 tags:
 - easy
 date: 2024-12-18 16:42:28
-updated: 2024-12-18 16:42:28
+updated: 2024-12-18 23:33:05
 ---
 ## Problem
 
@@ -65,4 +65,10 @@ class Solution:
 
 ## Code
 
+### Backward Iteration
+
 {% asset_code coding/496-next-greater-element-i/solution.py %}
+
+### Forward Iteration
+
+{% asset_code coding/496-next-greater-element-i/solution2.py %}

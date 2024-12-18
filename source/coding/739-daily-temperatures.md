@@ -4,7 +4,7 @@ notebook: coding
 tags:
 - medium
 date: 2024-12-18 17:20:13
-updated: 2024-12-18 17:20:13
+updated: 2024-12-18 23:33:05
 ---
 ## Problem
 
@@ -47,4 +47,12 @@ class Solution:
 
 ## Code
 
+### Backward Iteration
+
 {% asset_code coding/739-daily-temperatures/solution.py %}
+
+### Forward Iteration
+
+{% asset_code coding/739-daily-temperatures/solution2.py %}
+
+这里用正向循环就可以做 in-place 修改。
