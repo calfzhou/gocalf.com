@@ -14,6 +14,3 @@ class Solution:
                 stack.append(val) # val is greater than stack[-1].
 
         return result
-
-
-Solution().nextGreaterElements([1,2,3,4,3])
