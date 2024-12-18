@@ -89,6 +89,8 @@ $$
 
 即要么在昨天（或之前）就已经卖出了，要么今天卖出（对应的买入价应该是昨天（或之前）的最低买入价）。
 
+显然 `buy1` 和 `sell1` 的计算逻辑，就等价于 [121. Best Time to Buy and Sell Stock](121-best-time-to-buy-and-sell-stock) 中记录的 `min_price` 和 `max_profit`。
+
 $$
 buy2_i=\max\{buy2_{i-1},sell1_{i-1}-price[i]\}
 $$
