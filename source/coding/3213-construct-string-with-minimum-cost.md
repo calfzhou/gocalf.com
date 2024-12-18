@@ -3,6 +3,7 @@ title: 3213. Construct String with Minimum Cost
 notebook: coding
 tags:
 - hard
+- difficult
 date: 2024-12-17 21:39:12
 updated: 2024-12-17 23:48:27
 references:
