@@ -68,7 +68,7 @@ class Solution:
 
 先尝试直观但是很慢的方法。
 
-看以位置 i 开头的子字符串 `target[i:]`，记 `dp(i)` 表示该子问题的最小 cost。从位置 i 开始能够在 `words` 中匹配到哪些单词，设 `target[i:j]` 是 words 中的一个单词，那么 `dp(i) = min{cost(target[i:j]) + dp[j]}`。
+看以位置 i 开头的子字符串 `target[i:]`，记 `dp(i)` 表示该子问题的最小 cost。从位置 i 开始能够在 `words` 中匹配到哪些单词，设 `target[i:j]` 是 words 中的一个单词，那么 `dp(i) = min{cost(target[i:j]) + dp(j)}`。
 
 用 words 和 costs 构建前缀树（参见 [208. Implement Trie (Prefix Tree)](208-implement-trie-prefix-tree)），把单词的 cost 记录在词尾节点上。加一个 lookup 方法（类似于 [139. Word Break](139-word-break#Improve)），找出 `target[i:]` 中以位置 i 开头所有可以匹配到的单词。
 
@@ -80,7 +80,7 @@ class Solution:
 
 实际上还可以定义 `dp'(i)` 表示子字符串 `target[:i]` 的最小 cost。并为了方便，定义 `dp'(0) = 0`，其他值均初始化为 ∞，最终所求结果为 `dp'(n)`。
 
-令 i 从 0 递增到 `n - 1`。对于当前的 i，如果 `dp'[i] = ∞`，说明 `target[:i]` 无法由 words 中的单词拼接而成。否则看从位置 i 开始可以匹配到哪些单词，比如 `target[i:j]` 是一个单词，那么 `dp'(j) = min{dp'(j), dp'(i) + cost(target[i:j])}`。Trie 相关的代码不变，只是递推的部分变为：
+令 i 从 0 递增到 `n - 1`。对于当前的 i，如果 `dp'(i) = ∞`，说明 `target[:i]` 无法由 words 中的单词拼接而成。否则看从位置 i 开始可以匹配到哪些单词，比如 `target[i:j]` 是一个单词，那么 `dp'(j) = min{dp'(j), dp'(i) + cost(target[i:j])}`。Trie 相关的代码不变，只是递推的部分变为：
 
 ``` python
 dp = [-1] * (n + 1)

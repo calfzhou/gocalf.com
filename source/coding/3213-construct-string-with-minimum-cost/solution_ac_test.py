@@ -13,7 +13,7 @@ from solution import TrieTree
     ("r", ["r","r","r","r"], [1,6,3,3], [(0,1,1)]),
 ])
 class Test:
-    def test_solution(self, target, words, costs, expected):
+    def test_ac(self, target, words, costs, expected):
         trie = TrieTree()
         for word, cost in zip(words, costs): trie.add(word, cost)
         trie.build_ac()

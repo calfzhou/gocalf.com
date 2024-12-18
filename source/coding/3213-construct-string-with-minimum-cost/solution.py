@@ -56,7 +56,7 @@ class TrieTree:
                 node = self._root
                 continue
 
-            # Move to the next node base on current character.
+            # Move to the next node based on current character.
             node = node.children[c]
             for word, cost in node.words.items():
                 yield i + 1 - len(word), i + 1, cost
