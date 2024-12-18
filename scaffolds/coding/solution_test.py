@@ -4,8 +4,9 @@ from solution import Solution
 
 
 @pytest.mark.parametrize('param, expected', [
-    (0, 0),
-    (1, 1),
+    (100, 100),
+    (200, 200),
+    (300, 300),
 ])
 @pytest.mark.parametrize('sol', [Solution()])
 class Test:
