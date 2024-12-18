@@ -4,10 +4,9 @@ notebook: coding
 tags:
 - medium
 - hard
-- todo
 katex: true
 date: 2024-12-17 16:11:08
-updated: 2024-12-17 16:11:08
+updated: 2024-12-18 16:23:05
 ---
 ## Problem
 
@@ -91,4 +90,20 @@ $$
 
 ## Faster - AC 自动机
 
-TODO
+在 [3213. Construct String with Minimum Cost](3213-construct-string-with-minimum-cost) 中实现了 AC 自动机，利用 AC 自动机，可以用平均 `O(km + n)` 时间找出 target 中所有能匹配到的单词。
+
+但这里只是需要有前缀，可以不是完全匹配，需要稍微修改一下 [problem 3213](3213-construct-string-with-minimum-cost) 中 AC 自动机的 match 方法。match 方法在匹配路径的终点返回构造时记录的所有单词，从而得到所有匹配到的单词。实际上即使没到终点，路径上的任何一个位置，都是一个前缀。所以把路径上的位置都输出即可。新的方法命名为 prefix。
+
+仿照 [problem 3213](3213-construct-string-with-minimum-cost) 中正向的动态规划 `dp'`，重新定义本题的 dp：`dp(i)` 表示可以拼接出子字符串 `target[:i]` 的最小前缀个数，定义 `dp(0) = 0`，其他值均初始化为 ∞，最终所求结果为 `dp(n)`。
+
+令 i 从 0 递增到 `n - 1`。对于当前的 i，如果 `dp(i) = ∞`，说明 `target[:i]` 无法由前缀拼接而成，跳过。否则看从位置 i 开始可以匹配到哪些前缀，比如 `target[i:j]` 是一个前缀，那么 `dp(j) = min{dp(j), dp(i) + 1}`。
+
+注意到对于 `0 ≤ i < k < j < n`，如果 `target[i:k]` 和 `target[i:j]` 都是前缀，那么即使 `target[k:j]` 是前缀也不需要考虑，因为把 `target[k:j]` 与左边的 `target[i:k]` 拼成一个新的前缀，所用的前缀数量更少。而上边基于 AC 自动机 match 方法改造出来的前缀搜索方法 prefix，刚好不会输出 `target[k:j]`（这么巧吗？）。
+
+时间复杂度 `O(km + n)`，空间复杂度 `O(km + n)`。
+
+{% asset_code coding/3291-minimum-number-of-valid-strings-to-form-target-i/solution_ac.py %}
+
+附：针对 AC 自动机的构建和多模式前缀搜索的 test cases：
+
+{% asset_code coding/3291-minimum-number-of-valid-strings-to-form-target-i/solution_ac_test.py %}
