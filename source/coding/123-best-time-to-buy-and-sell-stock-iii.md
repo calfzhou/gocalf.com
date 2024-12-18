@@ -3,9 +3,9 @@ title: 123. Best Time to Buy and Sell Stock III
 notebook: coding
 tags:
 - hard
-- todo
+katex: true
 date: 2024-12-16 00:25:54
-updated: 2024-12-16 00:25:54
+updated: 2024-12-18 17:56:21
 ---
 ## Problem
 
@@ -67,4 +67,40 @@ class Solution:
 
 {% asset_code coding/123-best-time-to-buy-and-sell-stock-iii/solution.py %}
 
-更加「动态规划」的方法之后补充。
+## DP
+
+定义 `buy1(i)`、`buy2(i)` 分别表示在第 i 天结束前，至少买入 1 次，至多买入 1 次或 2 次，最大的现金余额（不妨设可以借钱买股票，初始余额为 0，按 price 价格买入则余额为 -price）（因为买入一定会让现金变少，为避免始终不买，这里要求至少要买入 1 次）。定义 `buy2(i)`、`sell2(i)` 分别表示在第 i 天结束前，至多卖出 1 次或 2 次，最大的现金余额。
+
+因为假设初始现金额为 0，那么最后 `sell2(n)` 就是最多交易两次的最大收益。
+
+初始值 `buy1(0) = buy2(0) = -price[0]`，`sell1(0) = sell2(0) = 0`。
+
+递推关系为：
+
+$$
+buy1_i=\max\{buy1_{i-1},-price[i]\}
+$$
+
+即哪天价格低就在哪天买入。
+
+$$
+sell1_i=\max\{sell1_{i-1},buy1_{i-1}+price[i]\}
+$$
+
+即要么在昨天（或之前）就已经卖出了，要么今天卖出（对应的买入价应该是昨天（或之前）的最低买入价）。
+
+$$
+buy2_i=\max\{buy2_{i-1},sell1_{i-1}-price[i]\}
+$$
+
+即要么昨天（或之前）已经买入了，要么今天第二次买入（实际上也是哪天价格低就在哪天买入）。
+
+$$
+sell2_i=\max\{sell2_{i-1},buy2_{i-1}+price[i]\}
+$$
+
+即要么在昨天（或之前）已经卖出了，要么今天卖出。
+
+实际计算的时候，只需要保留前一天的四个状态值即可，空间复杂度 `O(1)`，时间复杂度 `O(n)`。
+
+{% asset_code coding/123-best-time-to-buy-and-sell-stock-iii/solution2.py %}

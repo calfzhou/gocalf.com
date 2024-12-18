@@ -1,6 +1,7 @@
 import pytest
 
 from solution import Solution
+from solution2 import Solution as Solution2
 
 
 @pytest.mark.parametrize('prices, expected', [
@@ -14,4 +15,8 @@ from solution import Solution
 class Test:
     def test_solution(self, prices, expected):
         sol = Solution()
+        assert sol.maxProfit(prices) == expected
+
+    def test_solution2(self, prices, expected):
+        sol = Solution2()
         assert sol.maxProfit(prices) == expected
