@@ -5,7 +5,7 @@ tags:
 - medium
 katex: true
 date: 2024-12-19 22:28:05
-updated: 2024-12-19 22:28:05
+updated: 2024-12-19 22:39:02
 ---
 ## Problem
 
@@ -111,3 +111,5 @@ $$
 最终结果取 `max{ty(root), tn(root)}`。
 
 {% asset_code coding/337-house-robber-iii/solution2.py %}
+
+PS：上边是记录 `ty(u)` 和 `tn(u)` 这两个值，也可以考虑记录 `t(u)` 和 `tn(u)`，其中 `t(u) = max{ty(u), tn(u)}`，代码见 [solution3.py](337-house-robber-iii/solution3.py)。
