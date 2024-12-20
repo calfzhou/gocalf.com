@@ -102,4 +102,4 @@ class Solution:
 
 Test cases for solution inner methods: [solution_inner_test.py](770-basic-calculator-iv/solution_inner_test.py)。
 
-一个小的优化是可以用字典来表示一个多项式，key 是已经排序的自变量元组，value 是系数。可以省去合并同类项时候的排序时间。只需要在输出最终计算的时候对 key 排序一次即可，不过在本题限定的规模下没什么区别。代码参见 [solution2.py](770-basic-calculator-iv/solution.py)。
+一个小的优化是可以用字典来表示一个多项式，key 是已经排序的自变量元组，value 是系数。可以省去合并同类项时候的排序时间。只需要在输出最终计算的时候对 key 排序一次即可，不过在本题限定的规模下没什么区别。代码参见 [solution2.py](770-basic-calculator-iv/solution2.py)。
