@@ -9,6 +9,5 @@ from solution import Solution
     (300, 300),
 ])
 @pytest.mark.parametrize('sol', [Solution()])
-class Test:
-    def test_solution(self, sol, param, expected):
-        assert sol.foo(param) == expected
+def test_solution(sol, param, expected):
+    assert sol.foo(param) == expected
