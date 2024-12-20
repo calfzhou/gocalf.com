@@ -5,7 +5,7 @@ tags:
 - medium
 katex: true
 date: 2024-12-20 23:58:17
-updated: 2024-12-20 23:58:17
+updated: 2024-12-21 00:34:18
 ---
 ## Problem
 
@@ -57,3 +57,24 @@ $$
 ## Code
 
 {% asset_code coding/96-unique-binary-search-trees/solution.py %}
+
+## Math
+
+卡塔兰数（[Catalan number](https://en.wikipedia.org/wiki/Catalan_number)）的数学定义是：
+
+$$
+\begin{cases}
+  C_0=1 \\
+  C_n=\sum_{i=1}^n{C_{i-1}C_{n-i}} & \text{for }n>0
+\end{cases}
+$$
+
+显然上边定义的 `f(n)` 就是卡塔兰数（`f(n) = Cₙ`），可以用数学方法直接计算。
+
+$$
+f(n)=C_n=\frac{1}{n+1}\binom{2n}{n}=\frac{(2n)!}{(n+1)!n!}
+$$
+
+本题的 n 不是很大，可以直接用 Python 内置的阶乘函数（[`math.factorial`](https://docs.python.org/3/library/math.html#math.factorial)）计算，，时间复杂度 `O(n)`，空间复杂度 `O(1)`。如果 n 比较大，也可以参考 [62. Unique Paths](62-unique-paths) 中的 [方法](62-unique-paths#Math) 计算 $\binom{2n}{n}$。
+
+{% asset_code coding/96-unique-binary-search-trees/solution2.py %}
