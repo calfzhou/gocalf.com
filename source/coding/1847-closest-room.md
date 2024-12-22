@@ -75,7 +75,7 @@ AVL 树的详细信息参见 [DSA AVL Trees](https://www.w3schools.com/dsa/dsa_d
 
 稍微修改一下树的查找方法，如果目标数字找不到，就返回小于目标数的最大值、以及大于目标树的最小值，这对于 BST 或其变体都很简单。
 
-时间复杂度是 `O(n log n + k log g + k log n)`，其中 `O(n log n)` 是排序 `rooms` 和不断构建可选房间的有序集合的时间；`O(k log k)` 是排序 `queries` 的时间；`O(k log n)` 是对所有 queries，借助 BST 查找等于或最接近 query 中 `preferred` 房间编号的时间。
+时间复杂度是 `O(n log n + k log k + k log n)`，其中 `O(n log n)` 是排序 `rooms` 和不断构建可选房间的有序集合的时间；`O(k log k)` 是排序 `queries` 的时间；`O(k log n)` 是对所有 queries，借助 BST 查找等于或最接近 query 中 `preferred` 房间编号的时间。
 
 空间复杂度是 `O(n + k)`，其中 `O(n)` 是可选房间有序集合的空间（`rooms` 可以 in-place 排序）；`O(k)` 是对 `queries` 排序但需要保留原始下标所需的空间。
 
