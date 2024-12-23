@@ -107,7 +107,7 @@ class Solution:
 {% diagramsnet 2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/find_loops.drawio %}
 {% endinvert %}
 
-所以原始的数组需要进行 `8 - 4 = 4` 次两两交换（实际上就是图中从左到右且不自成圈的箭头）。
+所以原始的数组需要进行 `8 - 4 = 4` 次两两交换。
 
 整体最坏时间复杂度是 `O(n log n)`，空间复杂度 `O(n)`。
 
