@@ -3,9 +3,8 @@ title: 2127. Maximum Employees to Be Invited to a Meeting
 notebook: coding
 tags:
 - hard
-- todo
 date: 2024-12-23 23:44:04
-updated: 2024-12-23 23:44:04
+updated: 2024-12-24 15:09:14
 ---
 ## Problem
 
@@ -109,4 +108,20 @@ class Solution:
 
 {% asset_code coding/2127-maximum-employees-to-be-invited-to-a-meeting/solution.py %}
 
-提交跑下来比较慢，可能系数太大了。而且显然第一步做的并查集并没有太大帮助，计算量基本都浪费了，可以考虑优化。TODO。
+提交跑下来比较慢，可能系数太大了。而且显然第一步做的并查集并没有太大帮助，计算量基本都浪费了，可以考虑优化。
+
+## Faster
+
+可以用拓扑排序。
+
+先计算出每个顶点的入度（此人的粉丝数量），将入度为 0 的顶点放在队列中。每次从队列弹出一个入度为 0 的顶点，将其指向的顶点的入度减一。如果后者的入度降为 0，则加入队列。当队列清空的时候，剩下的就是若干个环。
+
+另外在这个过程中，很容易跟踪记录，对于环上的每个顶点，指向它的无环边的最大长度。记 `d(u)` 表示指向顶点 u 的无环边的最大长度，那么当见到一条边 `(u, v)`，有 `d(v) = max{d(v), d(u) + 1}`。`d(u)` 的初始值为 0。
+
+对于剩下的那些环，任取环上的一个顶点，沿着环路走一圈即可求出环长。
+
+如果顶点 u 和 v 构成一个长度为 2 的环（`favorite[u] = v, favorite[v] = u`），那么 `2 + d(u) + d(v)` 就是这一对 couple 及其粉丝们可以上桌的最大数量。
+
+时间复杂度和空间复杂度还是 `O(n)`。
+
+{% asset_code coding/2127-maximum-employees-to-be-invited-to-a-meeting/solution2.py %}
