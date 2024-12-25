@@ -2,6 +2,7 @@ import pytest
 
 from solution import Solution
 from solution_fast import Solution as SolutionFast
+from solution3 import Solution as Solution3
 
 
 @pytest.mark.parametrize('rooms, queries, expected', [
@@ -21,4 +22,8 @@ class Test:
 
     def test_solution_fast(self, rooms, queries, expected):
         sol = SolutionFast()
+        assert sol.closestRoom(rooms.copy(), queries.copy()) == expected
+
+    def test_solution3(self, rooms, queries, expected):
+        sol = Solution3()
         assert sol.closestRoom(rooms.copy(), queries.copy()) == expected
