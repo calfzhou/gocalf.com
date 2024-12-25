@@ -4,7 +4,7 @@ notebook: coding
 tags:
 - hard
 date: 2024-12-22 16:30:11
-updated: 2024-12-22 16:30:11
+updated: 2024-12-25 21:50:23
 ---
 ## Problem
 
@@ -72,3 +72,35 @@ class Solution:
 ## Code
 
 {% asset_code coding/2940-find-building-where-alice-and-bob-can-meet/solution.py %}
+
+## Monotonic Stack
+
+在 [1475. Final Prices With a Special Discount in a Shop](1475-final-prices-with-a-special-discount-in-a-shop) 中提到，找左侧/右侧第一个比当前元素小/大的问题，可以用单调栈线性时间求解。不过这里并不是找右侧第一个比当前元素大的，而是找更大的（因为 `heights[aᵢ] ≥ heights[bᵢ]`）。
+
+实际上在通过单调栈遍历原数组的时候，如果按照 [逆序扫描数组](1475-final-prices-with-a-special-discount-in-a-shop#O-n) 的逻辑，任何时候，栈里存放的都是比当前元素大的，而且是排序的。那就可以对栈做二分查找。
+
+每个 query 都可以转换成 `(heights[aᵢ], bᵢ)` 格式，在转换的同时记录 `heights` 中每个位置对应的所有查询。然后配合单调栈逆序扫描 `heights` 数组，在处理到某个位置的时候，用二分法在栈中查找 `heights[aᵢ]` 即可。
+
+时间复杂度 `O(n + m * log n)`，空间复杂度 `O(n + m)`。
+
+但是提交之后，比上边慢一倍，可能是测试用例比较奇怪吧。
+
+实现的时候有个地方要注意，Python 自带的 [bisect](https://docs.python.org/3/library/bisect.html) 库是对非降序排列的数组做二分搜索，但本题单调栈其实是降序排列的，相当于需要先把栈 reverse，然后用 `bisect_right` 查找，找完再 reverse 回去，如：
+
+``` python
+stack.reverse()
+idx = bisect_right(stack, h, key=lambda k: heights[k])
+if idx < len(stack):
+    answer[j] = stack[idx]
+stack.reverse()
+```
+
+当然这样做没意义，因为 reverse 是 `O(n)` 时间。可以类似于用最小堆 + 负数模拟最大堆那样，用降序 + 负数来模拟升序的二分搜索，但是需要注意边界条件的差异。比如上边的代码，等价于下边，但下边的时间复杂度是 `O(log n)`：
+
+``` python
+idx = bisect_left(stack, -h, key=lambda k: -heights[k]) - 1
+if idx >= 0:
+    answer[j] = stack[idx]
+```
+
+{% asset_code coding/2940-find-building-where-alice-and-bob-can-meet/solution2.py %}

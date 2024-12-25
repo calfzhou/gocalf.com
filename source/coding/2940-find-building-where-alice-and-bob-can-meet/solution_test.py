@@ -1,6 +1,7 @@
 import pytest
 
 from solution import Solution
+from solution2 import Solution as Solution2
 
 
 @pytest.mark.parametrize('heights, queries, expected', [
@@ -13,6 +14,6 @@ from solution import Solution
         [0,1,3,3,5,5,1,1,-1,-1,-1,-1,3,-1,2,3,5,5,3,-1,3,3,-1,-1,5,-1,5,-1,4,5,5,-1,5,-1,5,5]
     ),
 ])
-@pytest.mark.parametrize('sol', [Solution()])
+@pytest.mark.parametrize('sol', [Solution(), Solution2()])
 def test_solution(sol, heights, queries, expected):
     assert sol.leftmostBuildingQueries(heights.copy(), queries.copy()) == expected
