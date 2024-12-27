@@ -1,7 +1,7 @@
 class Solution:
     def isBipartite(self, graph: list[list[int]]) -> bool:
         n = len(graph)
-        colors = [-1] * len(graph)
+        colors = [-1] * n
 
         for u in range(n):
             if colors[u] >= 0: continue
