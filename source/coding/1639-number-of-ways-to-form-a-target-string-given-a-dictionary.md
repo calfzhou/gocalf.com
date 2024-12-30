@@ -77,7 +77,7 @@ class Solution:
 
 对于 target 中的每个位置 i（`0 ≤ i < m`），最多可以从 word 的 `n' = n - m + 1` 个字符位置（即 `[i, i + n - m + 1]`）中选择，因为要给 i 前后的其他位置留下选择的空间。对于 i（`0 ≤ i < m`）和 j（`i ≤ j ≤ i + n - m + 1`），可选的 word 数量为 `occ(j, target[i])`。
 
-为了方便，可以把每个 i 的可选区间左对齐，得到一个 m 行 `n'` 列的 grid（如下图）。用 `j'` 表示可选区间的第 `j'` 个位置，其对应于第 `(i + j')`ᵗʰ 字符，格子内的数值为 `occ(i+j, target[i])`。。
+为了方便，可以把每个 i 的可选区间左对齐，得到一个 m 行 `n'` 列的 grid（如下图）。用 `j'` 表示可选区间的第 `j'` 个位置，其对应于第 `(i + j')`ᵗʰ 字符，格子内的数值为 `occ(i+j', target[i])`。。
 
 {% invert %}
 {% diagramsnet 1639-number-of-ways-to-form-a-target-string-given-a-dictionary/choose-from.drawio %}
