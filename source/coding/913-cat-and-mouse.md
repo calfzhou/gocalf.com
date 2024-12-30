@@ -128,6 +128,8 @@ dfs(1, 2, MOUSE)
 
 最后检查初始状态 `initial = (1, 2, MOUSE)` 是否得到了确定的结果即可。
 
+不同的状态的量级为 `O(n²)`。最坏情况下需要对每个状态遍历其所有上游状态和下游状态，一个状态的上游和下游状态数量取决于该状态老鼠和猫所在顶点的度数，`O(n * degree) = O(E)`，所以 `O(n² * degree) = O(n * E)`。整体时间复杂度 `O(n * E)`，空间复杂度 `O(n²)`。
+
 ## Code
 
 {% asset_code coding/913-cat-and-mouse/solution.py %}
