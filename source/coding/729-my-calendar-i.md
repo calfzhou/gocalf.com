@@ -63,7 +63,7 @@ class MyCalendar:
 
 ## Thoughts
 
-用一个数组记录所有已知的 events。
+用一个数组记录所有已知的 events，且按开始时间排序。
 
 对于想要 book 的一个 event，用二分搜索找到可以插入的位置。用 Python 的 [`bisect.bisect_left`](https://docs.python.org/3/library/bisect.html#bisect.bisect_left)，返回的 i 满足 `∀events[:i] < event`、`∀events[i:] ≥ event`。这时候只要检查 `events[i-1]` 是否在 event 之前结束、event 是否在 `events[i]` 之前结束。如果都符合，则可以将 event 插入到位置 i。
 
