@@ -1,7 +1,7 @@
 name: Coding
 title: <Code author="Calf" />
 icon: /images/gocalf-code.png
-description: Talk is cheap. Show me the code.
+description: Keep mind sharp, keep code clean.
 base_dir: /coding/
 
 order_by: -date
