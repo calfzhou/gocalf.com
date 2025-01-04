@@ -1,6 +1,7 @@
 import pytest
 
 from solution import Solution
+from solution2 import Solution as Solution2
 
 
 @pytest.mark.parametrize('s, numOps, expected', [
@@ -11,6 +12,6 @@ from solution import Solution
     ("000", 0, 3),
     ("00011", 1, 2),
 ])
-@pytest.mark.parametrize('sol', [Solution()])
+@pytest.mark.parametrize('sol', [Solution(), Solution2()])
 def test_solution(sol, s, numOps, expected):
     assert sol.minLength(s, numOps) == expected

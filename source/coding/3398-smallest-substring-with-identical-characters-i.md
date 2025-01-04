@@ -5,7 +5,7 @@ tags:
 - hard
 katex: true
 date: 2025-01-04 15:28:44
-updated: 2025-01-04 15:28:44
+updated: 2025-01-04 16:05:25
 ---
 ## Problem
 
@@ -85,8 +85,24 @@ class Solution:
 
 最坏时间复杂度 `O(n log n)`，但平均情况远小于此。空间复杂度 `O(n)`。提交之后 runtime 只用了 3 ms，远低于一般的几十到几千 ms。
 
-另外 [problem 3264](3264-final-array-state-after-k-multiplication-operations-i) 后边还提到了 [二分的处理方法](1760-minimum-limit-of-balls-in-a-bag#二分法) ，显然因为本题跟它几乎一致，也是可以套用一样的二分法，具体略。
-
 ## Code
 
 {% asset_code coding/3398-smallest-substring-with-identical-characters-i/solution.py %}
+
+## 二分法
+
+另外 [problem 3264](3264-final-array-state-after-k-multiplication-operations-i) 后边还提到了 [二分的处理方法](1760-minimum-limit-of-balls-in-a-bag#二分法) ，显然因为本题跟它几乎一致，也是可以套用一样的二分法。
+
+前置的处理逻辑是一样的，先判断 `numOps` 是否足够把 s 改成完全 '0'、'1' 交替的字符串，可以的话就直接返回 1。
+
+然后也是扫描 s，记录所有连续段落的长度，同样可以忽略掉长度为 2 的那些，而且可以把相同长度的段落视为同样的，只保留长度和个数。
+
+二分法实际上是要尝试不同的结果值，看哪一个刚好能够在 `numOps` 次操作下可以实现。显然下界 l 就是 2，而上界 r 就是扫描 s 得到的初始时最大的连续段落长度（显然小于等于 n）。
+
+每次取 l 和 r 的中间值 mid，看 `numOps` 次操作是否足够。对所有长度超过 mid 的连续段落执行操作，如果该段落长度为 m，则需要操作 $\lceil\frac{m-mid}{mid+1}\rceil$ 次；如果有 cnt 个长度为 m 的段落，再乘以 cnt 即可。
+
+可以事先对所有的段落长度数组排序，就可以用二分法快速找到大于 mid 的起点位置，遍历右半个数组即可。
+
+时间复杂度也是 `O(n log n)`，实际跑下来速度跟上边最大堆方法差不多。
+
+{% asset_code coding/3398-smallest-substring-with-identical-characters-i/solution2.py %}
