@@ -3,10 +3,9 @@ title: 3395. Subsequences with a Unique Middle Mode I
 notebook: coding
 tags:
 - hard
-- todo
 katex: true
 date: 2025-01-04 22:29:23
-updated: 2025-01-04 23:01:26
+updated: 2025-01-05 22:24:20
 ---
 ## Problem
 
@@ -75,7 +74,7 @@ class Solution:
 
 位置 i 的左边有 `l = i` 个数字，右边有 `r = n - i` 个数字。从左右两边各任选两个数字，组成一个子序列，一共有 $\binom{l}{2}⋅\binom{r}{2}$ 种方案。但所有这些方案中有一些不符合「唯一中间众数」的要求，需要排除掉。不妨设 `nums[i] = a`。
 
-另外记 $l_x$ 表示在 nums 中 i 的左边，数字 x 的个数，$r_x$ 表示在 nums 中 i 的右边，数字 x 的个数。可以先遍历一遍 nums，记录所有数字的总数，即为 $r_x$ 的初值（$l_x$ 初值为 0），然后在遍历 i 的过程中，根据 `nums[i]` 的值不断更新 $l_{nums[i]}$ 和 $r_{nums[i]}$（给 $r_{nums[i]}$ 减去 1，加到 $l_{nums[i]}$ 上）。
+另外记 $l_x$ 表示在 nums 中 i 的左边，数字 x 的个数，$r_x$ 表示在 nums 中 i 的右边，数字 x 的个数（如果 i 是变量，则即为 $l_{x,i}$、$r_{x,i}$）。可以先遍历一遍 nums，记录所有数字的总数，即为 $r_x$ 的初值（$l_x$ 初值为 0），然后在遍历 i 的过程中，根据 `nums[i]` 的值不断更新 $l_{nums[i]}$ 和 $r_{nums[i]}$（给 $r_{nums[i]}$ 减去 1，加到 $l_{nums[i]}$ 上）。
 
 1. 子序列的左边和右边都没有 a：共 $(l-l_a)⋅(r-r_a)$ 种。
 2. 子序列的一边是 a 和一个任意其他（非 a）数字 b，另一边是 b 和任意其他（非 a、非 b）数字 c。
@@ -93,4 +92,46 @@ class Solution:
 
 {% asset_code coding/3395-subsequences-with-a-unique-middle-mode-i/solution.py %}
 
-> 这里其实有大量计算是重复的，因为 bl、br 并不是每次都变，还可以进一步优化。TODO。
+> 这里其实有大量计算是重复的，因为 lb、rb 并不是每次都变，还可以进一步优化。
+
+## O(n)
+
+重新看一下上边复杂度最高的计算部分：
+
+$$
+\begin{array}{rcl}
+  \sum_{b\ne a}( & & l_a⋅l_b⋅r_b⋅(r-r_a-r_b) \\
+  & + & l_b⋅(l-l_a-l_b)⋅r_a⋅r_b \\
+  & + & l_a⋅(l-l_a)⋅\binom{r_b}{2} \\
+  & + & \binom{l_b}{2}⋅r_a⋅(r-r_a) \\
+  ) & &
+\end{array}
+$$
+
+展开得到：
+
+$$
+\begin{array}{rcl}
+  \sum_{b\ne a}( & & r⋅l_a⋅l_b⋅r_b - l_a⋅r_a⋅l_b⋅r_b - l_a⋅l_b⋅r_b^2 \\
+  & + & l⋅r_a⋅l_b⋅r_b - l_a⋅r_a⋅l_b⋅r_b - r_a⋅l_b^2⋅r_b \\
+  & + & \frac{1}{2}(l⋅l_a⋅r_b^2 - l⋅l_a⋅r_b - l_a^2⋅r_b^2 + l_a^2⋅r_b) \\
+  & + & \frac{1}{2}(r⋅r_a⋅l_b^2 - r_a^2⋅l_b^2 - r⋅r_a⋅l_b + r_a^2⋅l_b) \\
+  ) & & \\
+  \\
+  = & & (r⋅l_a + l⋅r_a - 2⋅l_a⋅r_a)\sum_{b\ne a}l_b⋅r_b \\
+  & - & l_a\sum_{b\ne a}l_b⋅r_b^2 \\
+  & - & r_a\sum_{b\ne a}l_b^2⋅r_b \\
+  & + & \frac{1}{2}(r⋅r_a - r_a^2)\sum_{b\ne a}l_b^2-l_b \\
+  & + & \frac{1}{2}(l⋅l_a - l_a^2)\sum_{b\ne a}r_b^2-r_b
+\end{array}
+$$
+
+其中的每一项 $\sum_{b\ne a}$ 都需要从 `O(K) ≈ O(n)` 时间复杂度改造成 `O(1)` 时间复杂度。
+
+以 $l_b⋅r_b$ 为例，记 $A(i)=\sum_{b}l_{b,i}⋅r_{b,i}$（注意这里还没有 a 呢，所以 b 表示 nums 中所有的数字）。假设已经有了 $A(i-1)$ 的值，看循环到 i 的时候应该怎么处理。循环到 i 时，依然设 `nums[i] = a`，显然其他任意的 b，$l_b$ 和 $r_b$ 都没变，这时候只需要减去 a（在 `i - 1` 处）相关的值，即 $\sum_{b\ne a}l_b⋅r_b=A(i-1)-l_{a,i-1}⋅r_{a,i-1}$（注意 $l_{a,i}=l_{a,i-1}$、$r_{a,i}=r_{a,i-1}-1$）。在循环 i 结束前，需要把 $A(i)$ 计算出来备用，只需要把 a（在 `i + 1` 处）相关的新值加回去即可，即 $A(i)=l_{a,i+1}⋅r_{a,i+1}+\sum_{b\ne a}l_b⋅r_b$（注意 $l_{a,i+1}=l_{a,i}+1$、$r_{a,i+1}=r_{a,i}$）（这里 $A(i)$ 的值跟定义其实有小区别，但这样计算比较方便）。
+
+> 说难吧倒是真的没多难，但是 **实 在 是 太 繁 琐 了**！稍不留神就错，错一点儿可能只会让部分 case 失败，排查的时候还得手算模拟对比。实在太考验心智了。
+
+最终时间复杂度 `O(n)`，空间复杂度 `O(K) ≈ O(n)`。Runtime beats 100%，还算没辜负眼花缭乱的一天。
+
+{% asset_code coding/3395-subsequences-with-a-unique-middle-mode-i/solution2.py %}
