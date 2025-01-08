@@ -1,6 +1,8 @@
 import pytest
 
 from solution import Solution
+from solution2 import Solution as Solution2
+from solution3 import Solution as Solution3
 
 
 @pytest.mark.parametrize('nums, expected', [
@@ -11,4 +13,12 @@ from solution import Solution
 class Test:
     def test_solution(self, nums, expected):
         sol = Solution()
+        assert sol.maxSubArray(nums) == expected
+
+    def test_solution2(self, nums, expected):
+        sol = Solution2()
+        assert sol.maxSubArray(nums) == expected
+
+    def test_solution3(self, nums, expected):
+        sol = Solution3()
         assert sol.maxSubArray(nums) == expected

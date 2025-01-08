@@ -3,8 +3,9 @@ title: 53. Maximum Subarray
 notebook: coding
 tags:
 - medium
+katex: true
 date: 2024-11-18 17:51:38
-updated: 2024-11-18 17:51:38
+updated: 2025-01-08 17:35:14
 ---
 ## Problem
 
@@ -55,3 +56,37 @@ class Solution:
 ## Code
 
 {% asset_code coding/53-maximum-subarray/solution.py %}
+
+## Another DP
+
+在 [1186. Maximum Subarray Sum with One Deletion](1186-maximum-subarray-sum-with-one-deletion) 中提到上边计算逻辑的状态定义和状态转移：`s(i)` 表示以 i 为右端点的最大 subarray 和（至少包含 `nums[i]`），即：
+
+$$
+\begin{cases}
+  s(0)=nums[0] \\
+  s(i)=\max\{s(i-1),0\}+nums[i]
+\end{cases}
+$$
+
+那么 nums 的最大 subarray 和为 $largest=\max_{0\le i<n}{s(i)}$。
+
+上边代码在关于 i 的循环开始的时候计算了 `s(i)`，在循环结束前把 `max{s(i), 0}` 先算好，到 `i + 1` 的循环里直接用。也可以写成如下形式，逻辑是完全一致的，跟公式更接近一些：
+
+{% asset_code coding/53-maximum-subarray/solution2.py %}
+
+为了能理解 [3410. Maximize Subarray Sum After Removing All Occurrences of One Element](3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element)，这里对上述 DP 做一些调整，可以得到相同的结果。
+
+这次直接记录数组的前缀和，即 `ps(i) = Σnums[0...i]`，同时用 `low(i)` 记录 `ps(0)...ps(i)` 的（小于等于零的）最小值，即：
+
+$$
+\begin{array}{rcl}
+  ps(i) & = &\sum_{j=0}^{i}nums[j] \\
+  low(i) & = & \min\{0, \min_{0\le j\le i}ps(j)\}
+\end{array}
+$$
+
+显然 $s(i)=ps(i)-low(i-1)$。可得 $largest=\max_{0\le i<n}{s(i)}=\max_{0\le i<n}\{ps(i)-low(i-1)\}$（令 `low(-1) = 0`）。
+
+{% asset_code coding/53-maximum-subarray/solution3.py %}
+
+> 这样改造之后，[problem 3410](3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element) 比较容易在此基础上进行扩展。
