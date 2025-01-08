@@ -2,6 +2,7 @@ import pytest
 
 from solution import Solution
 from solution2 import Solution as Solution2
+from solution3 import Solution as Solution3
 
 
 @pytest.mark.parametrize('arr, expected', [
@@ -17,6 +18,6 @@ from solution2 import Solution as Solution2
 
     ([-50], -50),
 ])
-@pytest.mark.parametrize('sol', [Solution(), Solution2()])
+@pytest.mark.parametrize('sol', [Solution(), Solution2(), Solution3()])
 def test_solution(sol, arr, expected):
     assert sol.maximumSum(arr) == expected

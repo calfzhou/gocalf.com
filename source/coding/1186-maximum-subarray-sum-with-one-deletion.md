@@ -5,7 +5,7 @@ tags:
 - medium
 katex: true
 date: 2025-01-06 16:05:11
-updated: 2025-01-06 16:05:11
+updated: 2025-01-08 17:35:33
 ---
 ## Problem
 
@@ -128,3 +128,56 @@ $$
 {% asset_code coding/1186-maximum-subarray-sum-with-one-deletion/solution2.py %}
 
 > 开始没直接用这个办法是没想好怎么处理「至多删除一个」数字，因为在 subarray 之外的数字，删不删是没影响的。实际上 dd 表示的就是「至多」删除一次，不是一定要删除一次，只要在递推过程中不会多删除就可以了，至于删了更大还是不删更大，是自适应的。
+
+## Another DP
+
+在 [53. Maximum Subarray](53-maximum-subarray) 定义的 [第二种 DP](53-maximum-subarray#Another-DP) 的基础上，重新看如何解本题。沿用那边定义的 `ps(i) = Σarr[0...i]` 和 `low(i)`（`arr[0...i]` 的（小于等于零的）最小前缀和）。
+
+$$
+\begin{array}{rcl}
+  ps(i) & = &\sum_{j=0}^{i}arr[j] \\
+  low(i) & = & \min\{0, \min_{0\le j\le i}ps(j)\}
+\end{array}
+$$
+
+[上边](1186-maximum-subarray-sum-with-one-deletion#Less-Space) 定义的 dl 可以用 ps 和 low 重写为：$dl(i)=ps(i)-low(i-1)$（不用 `low(i)` 因为需要保证 subarray 不为空）。
+
+然后把 dd 也改造成在 ps 里减去一个值的形式，如 `dd = ps - low2`，可得：
+
+$$
+\begin{array}{rl}
+  low2(i) & =ps(i)-dd(i) \\
+  & =ps(i)-\max\{dl(i-1),dd(i-1)+arr[i]\} \\
+  & =\min\begin{cases}
+    ps(i)-dl(i-1) \\
+    ps(i)-dd(i-1)-arr[i]
+  \end{cases} \\
+  & =\min\begin{cases}
+    ps(i)-(ps(i-1)-low(i-2)) \\
+    (ps(i-1)+arr[i])-dd(i-1)-arr[i]
+  \end{cases} \\
+  & =\min\begin{cases}
+    low(i-2)+arr[i] \\
+    low2(i-1)
+  \end{cases}
+\end{array}
+$$
+
+其中 $low(i-2)+arr[i]$ 对应了删掉 `arr[i]`（那就至少保留 `arr[i-1]`）的情况。
+
+可见 `low2(i)` 的含义是 `arr[0...i]` 的（小于等于零的）最小前缀和再加上额外被删掉的数字所能得到的最小值，在 `ps(i)` 中减去此最小值，就是以 i 为右端点但是删掉至多一个数字之后的最大 subarray 和。
+
+最后整个 arr 允许删除至多一个数字情况下的最大 subarray 和为：
+
+$$
+\begin{array}{rl}
+  & \max\begin{cases}
+    \max_{0\le i<n}{dl(i)} \\
+    \max_{0\le i<n}{dd(i)}
+  \end{cases} \\
+  = & \max_{0\le i<n}\{ps(i)-\min\{low(i-1),low2(i)\}\}
+\end{array}
+
+$$
+
+{% asset_code coding/1186-maximum-subarray-sum-with-one-deletion/solution3.py %}
