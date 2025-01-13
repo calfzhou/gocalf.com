@@ -89,7 +89,7 @@ res[i+1]=\max\{c[i+1],res[i]\}
 \end{cases}
 $$
 
-唯一的问题是需要确定 j 的值，显然可以对 `intervals[0]` 到 `intervals[j]` 用二分法求出。
+唯一的问题是需要确定 j 的值，显然可以对 `intervals[0]` 到 `intervals[i]` 用二分法求出。
 
 最后结果取 `n - res[n - 1]`。
 
