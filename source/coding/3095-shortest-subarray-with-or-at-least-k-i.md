@@ -65,6 +65,8 @@ class Solution:
 
 时间复杂度 `O(n log k)`，空间复杂度 `O(log k)`。
 
+> PS: `O(n)` 时间的算法参见 [3097. Shortest Subarray With OR at Least K II](3097-shortest-subarray-with-or-at-least-k-ii)，同样适用本题。
+
 ## Code
 
 {% asset_code coding/3095-shortest-subarray-with-or-at-least-k-i/solution.py %}
