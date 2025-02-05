@@ -14,17 +14,17 @@ class WordDictionary:
     def search(self, word: str) -> bool:
         n = len(word)
 
-        def backtrace(i: int, node: dict[str, dict]) -> bool:
+        def backtrack(i: int, node: dict[str, dict]) -> bool:
             if i == n:
                 return '#' in node
             elif (c := word[i]) == '.':
-                return any(backtrace(i + 1, child) for key, child in node.items() if key != '#')
+                return any(backtrack(i + 1, child) for key, child in node.items() if key != '#')
             elif c not in node:
                 return False
             else:
-                return backtrace(i + 1, node[c])
+                return backtrack(i + 1, node[c])
 
-        return backtrace(0, self._root)
+        return backtrack(0, self._root)
 
 
 # Your WordDictionary object will be instantiated and called as such:

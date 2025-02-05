@@ -6,7 +6,7 @@ class Solution:
         slashes = [False] * ((n<<1) - 1)
         backslashes = list(slashes)
 
-        def backtrace(i: int):
+        def backtrack(i: int):
             if i == n:
                 results.append(['Q'.rjust(j+1, '.').ljust(n, '.') for j in queens])
                 return
@@ -15,8 +15,8 @@ class Solution:
                 if any((cols[j], slashes[i+j], backslashes[i-j])): continue
                 queens[i] = j
                 cols[j] = slashes[i+j] = backslashes[i-j] = True
-                backtrace(i + 1)
+                backtrack(i + 1)
                 cols[j] = slashes[i+j] = backslashes[i-j] = False
 
-        backtrace(0)
+        backtrack(0)
         return results
