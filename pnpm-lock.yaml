@@ -13,7 +13,7 @@ importers:
         version: 3.6.0
       '@uiolee/hexo-htmlnano':
         specifier: ^1.0.0
-        version: 1.0.0(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.5.1))(postcss@8.5.1)(svgo@3.3.2)(terser@5.37.0))(micromatch@4.0.8)
+        version: 1.0.0(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.5.1))(postcss@8.5.1)(svgo@3.3.2)(terser@5.38.1))(micromatch@4.0.8)
       cssnano:
         specifier: ^7.0.6
         version: 7.0.6(postcss@8.5.1)
@@ -66,8 +66,8 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2
       terser:
-        specifier: ^5.37.0
-        version: 5.37.0
+        specifier: ^5.38.1
+        version: 5.38.1
     devDependencies:
       hexo-update-time:
         specifier: github:calfzhou/hexo-update-time#v1.1.2-calf.1
@@ -230,8 +230,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@jridgewell/gen-mapping@0.3.5':
-    resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
+  '@jridgewell/gen-mapping@0.3.8':
+    resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
     engines: {node: '>=6.0.0'}
 
   '@jridgewell/resolve-uri@3.1.2':
@@ -245,8 +245,8 @@ packages:
   '@jridgewell/source-map@0.3.6':
     resolution: {integrity: sha512-1ZJTZebgqllO79ue2bm3rIGud/bOe0pP5BjSRCRxxYkEZS8STV7zN84UBbiYu7jy+eCKSnVIUgoWWE/tt+shMQ==}
 
-  '@jridgewell/sourcemap-codec@1.4.15':
-    resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
+  '@jridgewell/sourcemap-codec@1.5.0':
+    resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
@@ -276,8 +276,8 @@ packages:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
     engines: {node: '>= 0.6'}
 
-  acorn@8.11.3:
-    resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
+  acorn@8.14.0:
+    resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -1575,8 +1575,8 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  terser@5.37.0:
-    resolution: {integrity: sha512-B8wRRkmre4ERucLM/uXx4MOV5cbnOlVAqUst+1+iLKPI0dOgFO28f84ptoQt9HEI537PMzfYa/d+GEPKTRXmYA==}
+  terser@5.38.1:
+    resolution: {integrity: sha512-GWANVlPM/ZfYzuPHjq0nxT+EbOEDDN3Jwhwdg1D8TU8oSkktp8w64Uq4auuGLxFSoNTRDncTq2hQHX1Ld9KHkA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -1734,10 +1734,10 @@ snapshots:
   '@esbuild/win32-x64@0.20.2':
     optional: true
 
-  '@jridgewell/gen-mapping@0.3.5':
+  '@jridgewell/gen-mapping@0.3.8':
     dependencies:
       '@jridgewell/set-array': 1.2.1
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
       '@jridgewell/trace-mapping': 0.3.25
 
   '@jridgewell/resolve-uri@3.1.2': {}
@@ -1746,15 +1746,15 @@ snapshots:
 
   '@jridgewell/source-map@0.3.6':
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.5
+      '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@jridgewell/sourcemap-codec@1.4.15': {}
+  '@jridgewell/sourcemap-codec@1.5.0': {}
 
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   '@traptitech/markdown-it-katex@3.6.0':
     dependencies:
@@ -1762,9 +1762,9 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
-  '@uiolee/hexo-htmlnano@1.0.0(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.5.1))(postcss@8.5.1)(svgo@3.3.2)(terser@5.37.0))(micromatch@4.0.8)':
+  '@uiolee/hexo-htmlnano@1.0.0(htmlnano@2.1.1(cssnano@7.0.6(postcss@8.5.1))(postcss@8.5.1)(svgo@3.3.2)(terser@5.38.1))(micromatch@4.0.8)':
     dependencies:
-      htmlnano: 2.1.1(cssnano@7.0.6(postcss@8.5.1))(postcss@8.5.1)(svgo@3.3.2)(terser@5.37.0)
+      htmlnano: 2.1.1(cssnano@7.0.6(postcss@8.5.1))(postcss@8.5.1)(svgo@3.3.2)(terser@5.38.1)
       micromatch: 4.0.8
 
   a-sync-waterfall@1.0.1: {}
@@ -1776,7 +1776,7 @@ snapshots:
       mime-types: 2.1.35
       negotiator: 0.6.3
 
-  acorn@8.11.3: {}
+  acorn@8.14.0: {}
 
   ansi-escapes@7.0.0:
     dependencies:
@@ -2407,7 +2407,7 @@ snapshots:
 
   highlight.js@11.9.0: {}
 
-  htmlnano@2.1.1(cssnano@7.0.6(postcss@8.5.1))(postcss@8.5.1)(svgo@3.3.2)(terser@5.37.0):
+  htmlnano@2.1.1(cssnano@7.0.6(postcss@8.5.1))(postcss@8.5.1)(svgo@3.3.2)(terser@5.38.1):
     dependencies:
       cosmiconfig: 9.0.0
       posthtml: 0.16.6
@@ -2416,7 +2416,7 @@ snapshots:
       cssnano: 7.0.6(postcss@8.5.1)
       postcss: 8.5.1
       svgo: 3.3.2
-      terser: 5.37.0
+      terser: 5.38.1
     transitivePeerDependencies:
       - typescript
 
@@ -3116,10 +3116,10 @@ snapshots:
       csso: 5.0.5
       picocolors: 1.0.0
 
-  terser@5.37.0:
+  terser@5.38.1:
     dependencies:
       '@jridgewell/source-map': 0.3.6
-      acorn: 8.11.3
+      acorn: 8.14.0
       commander: 2.20.3
       source-map-support: 0.5.21
 
