@@ -1,4 +1,4 @@
-from typing import Iterator
+from typing import Iterable
 
 Token = str|int
 
@@ -22,7 +22,7 @@ class Solution:
 
         return stack[0]
 
-    def tokenize(self, expr: str) -> Iterator[Token]:
+    def tokenize(self, expr: str) -> Iterable[Token]:
         n = len(expr)
         left = 0
         for i, c in enumerate(expr):
@@ -37,7 +37,7 @@ class Solution:
         if left < n:
             yield int(expr[left:]) # The last number.
 
-    def reverse_polish(self, tokens: Iterator[Token]) -> Iterator[Token]:
+    def reverse_polish(self, tokens: Iterable[Token]) -> Iterable[Token]:
         ops = []
         levels= {'(': -2, ')': -1, '+': 1, '-': 1, 'n': 9}
         prev = ''
