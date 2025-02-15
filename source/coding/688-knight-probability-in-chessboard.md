@@ -66,7 +66,7 @@ class Solution:
 
 ## Code
 
-### Backtrace with Cache
+### Backtrack with Cache
 
 {% asset_code coding/688-knight-probability-in-chessboard/solution.py %}
 
