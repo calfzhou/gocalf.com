@@ -8,11 +8,6 @@ class TreeNode:
         self.left = left
         self.right = right
 
-    def __repr__(self) -> str:
-        left = str(self.left.val) if self.left else 'X'
-        right = str(self.right.val) if self.right else 'X'
-        return f'{left} <- {self.val} -> {right}'
-
 
 class Solution:
     def constructFromPrePost(self, preorder: list[int], postorder: list[int]) -> Optional[TreeNode]:
