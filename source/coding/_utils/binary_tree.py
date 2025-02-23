@@ -53,3 +53,27 @@ def bst_find(root: TreeNode | None, value: int) -> TreeNode | None:
         root = root.left if value < root.val else root.right
 
     return root
+
+
+def traverse_tree(root: TreeNode | None) -> tuple[list[int], list[int], list[int]]:
+    preorder = []
+    inorder = []
+    postorder = []
+    stack = []
+    prev = None
+    while root or stack:
+        if root:
+            preorder.append(root.val)
+            stack.append(root)
+            root = root.left
+        elif stack[-1].right != prev:
+            inorder.append(stack[-1].val)
+            root = stack[-1].right
+            prev = None
+        else:
+            if prev is None:
+                inorder.append(stack[-1].val)
+            prev = stack.pop()
+            postorder.append(prev.val)
+
+    return preorder, inorder, postorder
