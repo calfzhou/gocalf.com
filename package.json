@@ -42,7 +42,7 @@
     "hexo-theme-stellar": "^1.29.1",
     "postcss": "^8.5.3",
     "svgo": "^3.3.2",
-    "terser": "^5.38.1"
+    "terser": "^5.39.0"
   },
   "devDependencies": {
     "hexo-update-time": "github:calfzhou/hexo-update-time#v1.1.2-calf.1",
