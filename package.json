@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@traptitech/markdown-it-katex": "^3.6.0",
-    "@uiolee/hexo-htmlnano": "^1.0.0",
+    "@uiolee/hexo-htmlnano": "^1.0.1",
     "cssnano": "^7.0.6",
     "hexo": "^7.3.0",
     "hexo-diagrams-net": "^2024.4.1",
@@ -40,9 +40,9 @@
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-stellar": "^1.29.1",
-    "postcss": "^8.5.1",
+    "postcss": "^8.5.3",
     "svgo": "^3.3.2",
-    "terser": "^5.38.1"
+    "terser": "^5.39.0"
   },
   "devDependencies": {
     "hexo-update-time": "github:calfzhou/hexo-update-time#v1.1.2-calf.1",
