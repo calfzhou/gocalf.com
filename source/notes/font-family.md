@@ -5,7 +5,7 @@ tags:
   - calf
   - it/font
 date: 2024-04-17 22:25:24
-updated: 2024-05-19 11:14:52
+updated: 2025-04-01 20:57:38
 ---
 ## 网页文本字体的选择
 
@@ -120,7 +120,7 @@ Font Family: `M+ 1m`
 ``` yaml
 inject:
   head:
-    - <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-web/1.330.0/style.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/source-code-pro@2.38.0/source-code-pro.min.css">
 
 style:
