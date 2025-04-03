@@ -5,11 +5,15 @@ tags:
   - calf
   - software
 date: 2024-04-13 15:27:19
-updated: 2024-04-13 15:27:19
+updated: 2025-04-04 00:02:23
 ---
 {% timeline %}
 
-<!-- node 2024 年 -->
+<!-- node 2025 年 -->
+最终还是无法忍受 Joplin 的同步问题，几乎不敢在手机上编辑，桌面端的同步状态也经常卡死。换手机之后，即便手机数据整体迁移到新手机，进入 Joplin 依然要重新从头开始同步，极慢且反复出错。换成 Obsidian，甚爱。
+{% link https://obsidian.md/ Obsidian - Sharpen your thinking icon:https://obsidian.md/images/obsidian-logo-gradient.svg %}
+
+<!-- node 2024 年（For 公开的笔记） -->
 并没有放弃 Joplin。只是想着，乱七八糟的笔记中，或许有一些可以放在 GitHub 上，并生成静态站点。总比写博客省事儿。
 {% grid %}
 <!-- cell -->
