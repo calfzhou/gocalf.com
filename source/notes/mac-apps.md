@@ -5,7 +5,7 @@ tags:
   - calf
   - software/mac
 date: 2024-04-16 22:56:13
-updated: 2024-11-06 11:28:56
+updated: 2025-04-07 21:22:55
 ---
 ## 系统相关 / 实用工具
 
@@ -53,7 +53,9 @@ updated: 2024-11-06 11:28:56
 
 ### 笔记
 
-- [Joplin](https://joplinapp.org/)
+- [Obsidian - Sharpen your thinking](https://obsidian.md/)
+  - > The free and flexible app for your private thoughts.
+- ~~[Joplin](https://joplinapp.org/)~~
   - > Joplin is an open source note-taking app. Capture your thoughts and securely access them from any device.
 - [Heynote](https://heynote.com/)
   - > A dedicated scratchpad for developers
