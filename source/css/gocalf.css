@@ -1,6 +1,5 @@
 :root[data-theme="dark"] .invert-when-dark,
 :root[data-theme="light"] .invert-when-light {
-
   img,
   svg {
     filter: invert(1) hue-rotate(180deg);
@@ -9,7 +8,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) .invert-when-dark {
-
     img,
     svg {
       filter: invert(1) hue-rotate(180deg);
@@ -18,9 +16,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-
   :root:not([data-theme]) .invert-when-light {
-
     img,
     svg {
       filter: invert(1) hue-rotate(180deg);
@@ -34,4 +30,13 @@
 
 .widget-body.tag-tree .tag-subtree .toc-text {
   width: 100%;
+}
+
+article.content a[target="_blank"]:not(.link-card):after {
+  rotate: -90deg;
+  content: '⇲';
+  display: inline-block;
+  margin-left: 0.2em;
+  font-size: 0.8em;
+  color: var(--theme-link);
 }
