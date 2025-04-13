@@ -5,7 +5,7 @@ tags:
   - calf
   - software/mac
 date: 2024-04-16 22:56:13
-updated: 2025-04-07 21:22:55
+updated: 2025-04-13 22:42:07
 ---
 ## 系统相关 / 实用工具
 
@@ -27,8 +27,6 @@ updated: 2025-04-07 21:22:55
   - > AltTab brings the power of Windows’s “alt-tab” window switcher to macOS.
 - [OmniDiskSweeper - The Omni Group](https://www.omnigroup.com/more)
   - > Quickly find large, unwanted files and sweep them into the trash
-- [Unsplash Wallpapers on the Mac App Store](https://apps.apple.com/us/app/unsplash-wallpapers/id1284863847?mt=12)
-  - > A breathtaking photo for your desktop wallpaper, every day.
 - [http-server - npm](https://www.npmjs.com/package/http-server)
   - > http-server is a simple, zero-configuration command-line static HTTP server.
   - `brew install http-server`
@@ -78,10 +76,10 @@ updated: 2025-04-07 21:22:55
 
 ### 聊天 / 沟通
 
-- [飞书](https://www.feishu.cn/)
 - [WeChat - Free messaging and calling app](https://www.wechat.com/)
-- [腾讯会议官方——腾讯会议 会开会](https://meeting.tencent.com/)
 - [QQ-轻松做自己](https://im.qq.com/index/)
+- [飞书](https://www.feishu.cn/)
+- [腾讯会议官方——腾讯会议 会开会](https://meeting.tencent.com/)
 - [DingTalk](https://www.dingtalk.com/)
 - [Telegram for macOS](https://macos.telegram.org/)
   - 直接下载 .dmg 安装的版本可以关闭敏感过滤。
@@ -120,12 +118,9 @@ updated: 2025-04-07 21:22:55
 ### 编辑器 / IDE
 
 - [Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
-- [TextMate: Text editor for macOS](https://macromates.com/)
-- 💰 ~~[Sublime Text - Text Editing, Done Right](https://www.sublimetext.com/)~~
 - [Zed - The editor for what's next](https://zed.dev/)
   - > Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. It's also open source.
   - > Zed is a next-generation code editor designed for high-performance collaboration with humans and AI.
-  - 刚开始接触
 - [MacDown: The open source Markdown editor for macOS](https://macdown.uranusjr.com/)
   - > MacDown is an open source Markdown editor for macOS, released under the MIT License. It is heavily influenced by Chen Luo’s Mou.
   - 仅在 Visual Studio Code 无法满足时使用。
@@ -171,6 +166,10 @@ updated: 2025-04-07 21:22:55
   - > The world's most popular network protocol analyzer
 
 ## 其他专业
+
+### 磁盘数据恢复
+
+- 💰 [Disk Drill - Best Free Mac Data Recovery Software in 2025!](https://www.cleverfiles.com/)
 
 ### AIGC
 
