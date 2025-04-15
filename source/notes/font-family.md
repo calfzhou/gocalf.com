@@ -5,7 +5,7 @@ tags:
   - calf
   - it/font
 date: 2024-04-17 22:25:24
-updated: 2025-04-01 20:57:38
+updated: 2025-04-15 23:47:20
 ---
 ## 网页文本字体的选择
 
@@ -15,7 +15,9 @@ updated: 2025-04-01 20:57:38
 
 比较优雅的处理方式是把英文字体排在前边，可以让英文和数字更好看一些，避免选择的中文字体中英文部分不是特别漂亮。然后列出中文字体，最好兼顾到不同的操作系统。最后可以列上字体族（如无衬线体）作为兜底。
 
-我目前一般的排列为：
+目前倾向的排列为：
+
+> 注：参考 [如何优雅的选择字体(font-family) - 前端学习 - SegmentFault 思否](https://segmentfault.com/a/1190000006110417)。
 
 1. 英文字体在前
    1. "Helvetica Neue"
@@ -34,24 +36,21 @@ updated: 2025-04-01 20:57:38
 4. 字体族
    1. 无衬线体 sans-serif
 
-另外在本站中，把最近发现的非常棒的字体 [LXGW WenKai / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai) 排在了最前边。甚至 inline code 也优先使用该字体。
-
-注：这部分极大地借鉴参考了 [如何优雅的选择字体(font-family) - 前端学习 - SegmentFault 思否](https://segmentfault.com/a/1190000006110417)。
+本站把 ["LXGW WenKai" / 霞鹜(Wù)文楷](https://github.com/lxgw/LxgwWenKai) 排在最前边，甚至 inline code 也使用该字体。
 
 ## 网页中等宽字体的选择
 
-展示代码片段的时候，用等宽字体看起来更符合习惯。一般代码中中文不多，就没有太考虑中文渲染的部分。
+展示代码片段的时候，用等宽字体看起来更符合习惯。一般代码中中文不多，可以不考虑中文部分。
 
-我目前一般的排列为：
+目前倾向的排列为：
 
-1. ["Source Code Pro"](https://github.com/adobe-fonts/source-code-pro)
-2. Monaco
-3. Menlo
-4. Consolas
-5. "Courier New"
-6. monospace
+1. Monaco
+2. Menlo
+3. Consolas
+4. "Courier New"
+5. monospace
 
-在本站中，考虑到有些时候 inline code 并不一定都是代码或者纯英文和数字，所以也把 [LXGW WenKai / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai) 排在了最前边。
+本站把 ["Source Code Pro"](https://github.com/adobe-fonts/source-code-pro) 和 ["LXGW WenKai Mono" / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai) 排在最前边。
 
 ## Visual Studio Code 里中英文对不齐的问题
 
@@ -63,7 +62,20 @@ VS Code 无法实现这点，因为它是基于 Electron 也就是浏览器的 H
 
 所以需要在 VS Code 中使用宽度刚好是 0.5 的英文等宽字体，但可能会看起来觉得英文字符很瘦，需要适应。
 
-### Ubuntu Mono - 目前我的 VS Code 使用此字体
+> 其他基于 HTML DOM 渲染字符的软件，包括浏览器，也都有同样的问题。
+
+试试看是否能对齐：
+
+``` text
+liLI10Oo
+你好中文
+```
+
+## 编程用的等宽字体的选择
+
+VS Code `editor.fontFamily` setting: `'Ubuntu Mono', 'Source Code Pro', 'LXGW WenKai Mono', Consolas, 'Courier New', monospace`.
+
+### Ubuntu Mono
 
 [Ubuntu Mono - Google Fonts](https://fonts.google.com/specimen/Ubuntu+Mono)
 
@@ -73,7 +85,15 @@ VS Code 无法实现这点，因为它是基于 Electron 也就是浏览器的 H
 - {% mark ✓ color:green %} 英文长宽比很协调，不会显得很瘦。
 - {% mark ✓ color:green %} 字符 `liLI10O` 区分明显，适合编程。
 
-PS. VS Code editor font family settings: `'Ubuntu Mono', Consolas, 'Courier New', monospace`.
+VS Code 最适宜的字体。
+
+### LXGW WenKai Mono
+
+[LXGW WenKai / 霞鹜(Wù)文楷](https://github.com/lxgw/LxgwWenKai)
+
+霞鹜文楷中的等宽字体，中英文可以对齐的，但是可能看习惯了 Ubuntu Mono，觉得 LXGW WenKai Mono 的英文字符过细。
+
+VS Code 中文部分最适宜的字体。
 
 ### Source Code Pro
 
@@ -83,17 +103,19 @@ Font Family: `Source Code Pro` or `Source Code Variable`
 
 - {% mark ✗ color:red %} 不支持中文，中文字符的宽度不等于两个英文字符
 
-### Source Han Mono
-
-[GitHub - adobe-fonts/source-han-mono: Source Han Mono | 思源等宽 | 思源等寬 | 思源等寬 香港 | 源ノ等幅 | 본모노](https://github.com/adobe-fonts/source-han-mono)
-
-- {% mark ✗ color:red %} 中文字符的宽度不等于两个英文字符
+非 HTML DOM 渲染的软件（如 iTerm2 等）最适宜的字体。
 
 ### Inconsolata
 
 [Inconsolata - Google Fonts](https://fonts.google.com/specimen/Inconsolata)
 
 这个是宽度为 0.5 的等宽字体，同时比较漂亮，不会显得英文字符特别瘦。
+
+### Source Han Mono
+
+[GitHub - adobe-fonts/source-han-mono: Source Han Mono | 思源等宽 | 思源等寬 | 思源等寬 香港 | 源ノ等幅 | 본모노](https://github.com/adobe-fonts/source-han-mono)
+
+- {% mark ✗ color:red %} 中文字符的宽度不等于两个英文字符
 
 ### Noto Sans Mono
 
@@ -128,5 +150,5 @@ style:
     logo: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
     body: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
     code: '"LXGW WenKai", "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace'
-    codeblock: '"Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace'
+    codeblock: '"Source Code Pro", "LXGW WenKai Mono", Monaco, Menlo, Consolas, "Courier New", monospace'
 ```
