@@ -5,7 +5,7 @@ tags:
   - hardware
   - calf
 date: 2024-06-11 16:52:29
-updated: 2024-06-11 16:52:29
+updated: 2025-04-22 23:17:50
 ---
 ## 背景
 
@@ -20,15 +20,14 @@ HHKB Professional 2 Type-S 静电容键盘，2015 年购入，型号 `PD-KB400WS
 需要自行拆开键盘后盖，替换掉原厂主控板。按宝贝详情页的说明操作即可，无需焊接。
 
 - [YDKB Document](https://ydkb.io/help/#/)
-- [HHKB BLE Mod](https://ydkb.io/help/#/kb-mods/hhkb-ble)
-- [YD Keymap Builder. Not for everyone, Just for somebody.](https://ydkb.io/)
+- [YD Keymap Builder for HHKB BLE](https://ydkb.io/?hhkb_ble)
 
 ### 主要特性
 
 - 整个改装无需焊接，只需要拧螺丝拔排线换主控，非常容易。
 - USB / 蓝牙 4.0 双模，插线时可在有线或蓝牙间切换，充电也是直接通过 USB 接口。
 - USB 下支持全键无冲（可通过左右 {% kbd Shift %} + {% kbd N %} 切换），蓝牙下支持任意 6 键无冲。
-- 全键位都支持自定义，固件功能基于 tmk，使用 ydkb.io 图形化工具，简单易懂。
+- 全键位都支持自定义，固件功能基于 tmk，使用 [ydkb.io](https://ydkb.io/) 图形化工具，简单易懂。
 - 使用标准 3.7v 锂电（默认不带电池），可自备，也可选购买本店定制的 2500mAh 电池。
 - 支持自动节能，极速唤醒。独创 Lock Mode，可防止键盘放包里按键被压耗电，携带更轻松。
 - 大部分系统支持电量显示（Mac 需要第三方软件或用文字输出）。键盘也自带有低电量提醒。
@@ -77,11 +76,33 @@ HHKB Professional 2 Type-S 静电容键盘，2015 年购入，型号 `PD-KB400WS
 
 [YDKB 固件更新 - 查看当前固件版本](https://ydkb.io/help/#/firmware?id=%e6%9f%a5%e7%9c%8b%e5%bd%93%e5%89%8d%e5%9b%ba%e4%bb%b6%e7%89%88%e6%9c%ac)
 
-通过 USB 线连接到电脑上，在设备管理里 USB 设备中查看设备名。好像直接用 type-C 线连到电脑的 type-C 口上不行，用 type-C 转 USB 的 hub 加上 usb 转 type-C 的连线可以。
+通过 USB 线连接到电脑上，在设备管理里 USB 设备中查看设备名，如 `HHKB BLE (USB_DL9M)`，其中 `L9M` 对应了固件的版本日期 2021-09-22。
 
-2024-06-11 今天看了下，设备名是 `HHKB BLE (USB_DL9M)`，即 [2021-09-22 (DL9M) 版本](https://ydkb.io/help/#/changelog/hhkb_ble?id=_2021-09-22-dl9m)。可见之前至少操作过的两次升级固件都没有实际升级上去？
+> 好像直接用 type-C 线连到电脑的 type-C 口上不行，用 type-C 转 USB 的 hub 加上 usb 转 type-C 的连线可以。
 
-访问 [YD Keymap Builder. Not for everyone, Just for somebody.](https://ydkb.io/)，找到 HHKB BLE，可以查看最新固件版本号、固件更新历史，下载最新版固件文件（HHKB_BLE.BIN）。
+三位日期计法速查表：
+
+| 年   | 19 | 20 | 21 | 22 | 23  | 24 | 25 | 26 |
+|------|----|----|----|----|-----|----|----|----|
+| 计法 | J  | K  | L  | M  | N   | O  | P  | Q  |
+| 年   | 27 | 28 | 29 | 30 | ... |    |    |    |
+| 计法 | R  | S  | T  | U  | ... |    |    |    |
+
+| 月   | 1...9 | 10 | 11 | 12 |
+|------|-------|----|----|----|
+| 计法 | 1...9 | A  | B  | C  |
+
+| 日 | 1...9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 |
+|----|-------|----|----|----|----|----|----|----|
+| 计 | 1...9 | A  | B  | C  | D  | E  | F  | G  |
+| 日 | 17    | 18 | 19 | 20 | 21 | 22 | 23 | 24 |
+| 计 | H     | I  | J  | K  | L  | M  | N  | O  |
+| 日 | 25    | 26 | 27 | 28 | 29 | 30 | 31 |    |
+| 计 | P     | Q  | R  | S  | T  | U  | V  |    |
+
+[HHKB BLE 固件记录](https://ydkb.io/help/#/changelog/hhkb_ble)
+
+访问 [YD Keymap Builder for HHKB BLE](https://ydkb.io/?hhkb_ble)，可以查看最新固件版本号、固件更新历史，下载最新版固件文件（HHKB_BLE.BIN）。
 
 macOS 13 以上的系统，需要按照 [Bootloader, Flash Firmware - Reflash firmware in Mac](https://ydkb.io/help/#/en/bootloader/msd-bootloader?id=reflash-firmware-in-mac) 进行固件刷新。
 
@@ -90,6 +111,18 @@ macOS 13 以上的系统，需要按照 [Bootloader, Flash Firmware - Reflash fi
 3. `diskutil umount /Volumes/HHKB_BLE`
    1. 会提示 `Volume HHKB_BLE on disk2 unmounted`，其中 `disk2` 可能会不一样。
 4. `sudo dd if=./HHKB_BLE.BIN of=/dev/disk2 seek=4`，注意如果上一步提示的不是 `disk2` 则需要替换一下。
+
+Windows 简单一些，按照 [Bootloader, Flash Firmware - Reflash firmware in Windows](https://ydkb.io/help/#/en/bootloader/msd-bootloader?id=reflash-firmware-in-windows) 操作即可。
+
+1. 下载最新的固件文件 `HHKB_BLE.BIN`。
+2. 按住 {% kbd ESC %} 键的同时，插入 USB 连线。电脑上会出现名为 `HHKB_BLE` 的磁盘。
+3. 把 `HHKB_BLE.BIN` 拖到该磁盘根目录，覆盖掉同名文件，然后弹出设备（一般会自动弹出）即可。
+
+### 修改按键
+
+修改按键对应的功能，跟刷固件的操作一致。只要在 [YD Keymap Builder for HHKB BLE](https://ydkb.io/?hhkb_ble) 页面里先做好期望的调整，再下载的固件文件中就包含所做的设置。
+
+比如在习惯了 macOS 之后，如果在 Windows 中用 HHKB，经常按错快捷键，可以考虑把 {% kbd Ctrl %} 键和 {% kbd ⌘ Cmd %}（即 {% kbd ⊞ Win %} 键）互换。
 
 ### 蓝牙连接无法自动连上
 
