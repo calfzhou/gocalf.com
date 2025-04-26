@@ -4,7 +4,7 @@ notebook: notes
 tags:
 - software
 date: 2024-07-26 21:38:51
-updated: 2024-08-01 09:46:49
+updated: 2025-04-26 12:33:02
 references:
 - '[自由输入法 RIME 简明配置指南 - 少数派](https://sspai.com/post/84373)'
 - "[RIME 输入法使用体验 - Hank's Blog](https://zhaohongxuan.github.io/2024/03/20/most-powerful-input-method-rime/)"
@@ -251,11 +251,4 @@ end
 
 [也许你该试试双拼输入法 - Hank's Blog](https://zhaohongxuan.github.io/2023/06/30/how-i-learn-shuang-pin/)
 
-> 这个推荐「[小鹤双拼 flypy](https://flypy.com/)」。
-> 小鹤的零声母方案把韵母的首字母当作声母 ：
-> 单字母韵母，零声母 + 韵母所在键，如： 啊＝aa 哦=oo 额=ee
-> 双字母韵母，零声母 + 韵母末字母，如： 爱＝ai 恩=en 欧=ou
-> 三字母韵母，零声母 + 韵母所在键，如： 昂＝ah
-> 小鹤方案更加符合直觉，虽然需要记忆，但是要比其他方案顺手。
-
-官方的记忆口诀：[小鹤入门](https://flypy.cc/)
+推荐：[小鹤双拼](flypy)
