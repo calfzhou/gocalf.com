@@ -5,7 +5,7 @@ tags:
   - hardware
   - calf
 date: 2024-06-11 16:52:29
-updated: 2025-04-23 00:01:29
+updated: 2025-04-26 09:12:46
 ---
 ## 背景
 
@@ -139,3 +139,5 @@ Windows 简单一些，按照 [Bootloader, Flash Firmware - Reflash firmware in 
 1. 先删除电脑上已经配对的该蓝牙键盘。
 2. 在键盘上按 {% kbd LShift %} + {% kbd RShift %} + {% kbd LCtrl %} + {% kbd R %}，清除键盘端保存的配对信息。
 3. 设备搜索键盘，重新配对一次。
+
+> 2025-04-25 再次遇到。换电脑后容易出现这种情况，尤其 Windows 台式机开机之后无法自动蓝牙连接，可以按上述操作清除配对信息后再重新配对。
