@@ -5,7 +5,7 @@ tags:
   - calf
   - it/font
 date: 2024-04-17 22:25:24
-updated: 2025-04-15 23:47:20
+updated: 2025-04-26 12:04:00
 ---
 ## 网页文本字体的选择
 
@@ -50,7 +50,7 @@ updated: 2025-04-15 23:47:20
 4. "Courier New"
 5. monospace
 
-本站把 ["Source Code Pro"](https://github.com/adobe-fonts/source-code-pro) 和 ["LXGW WenKai Mono" / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai) 排在最前边。
+本站把 ["Source Code Pro"](https://github.com/adobe-fonts/source-code-pro) 排在最前边；把 ["LXGW WenKai Mono" / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai) 排在最后边用于渲染中文。
 
 ## Visual Studio Code 里中英文对不齐的问题
 
@@ -73,7 +73,7 @@ liLI10Oo
 
 ## 编程用的等宽字体的选择
 
-VS Code `editor.fontFamily` setting: `'Ubuntu Mono', 'Source Code Pro', 'LXGW WenKai Mono', Consolas, 'Courier New', monospace`.
+VS Code `editor.fontFamily` setting: `'Ubuntu Mono', 'Source Code Pro', Consolas, 'Courier New', monospace, 'LXGW WenKai Mono'`.
 
 ### Ubuntu Mono
 
@@ -150,5 +150,5 @@ style:
     logo: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
     body: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
     code: '"LXGW WenKai", "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace'
-    codeblock: '"Source Code Pro", "LXGW WenKai Mono", Monaco, Menlo, Consolas, "Courier New", monospace'
+    codeblock: '"Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace, "LXGW WenKai Mono"'
 ```
