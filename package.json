@@ -37,9 +37,10 @@
     "hexo-generator-tag": "^2.0.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-markdown-it": "^7.1.1",
-    "hexo-renderer-stylus": "^3.0.0",
+    "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-stellar": "^1.29.1",
+    "markdown-it-obsidian-callouts": "^0.3.2",
     "postcss": "^8.5.3",
     "svgo": "^3.3.2",
     "terser": "^5.39.0"
