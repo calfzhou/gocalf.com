@@ -17,8 +17,8 @@ hexo.extend.tag.register('badge_github', function (args) {
   parts.push(inlineImg('forks', `https://img.shields.io/github/forks/${user}/${repo}?logo=.&style=social`))
   parts.push(inlineImg('updated', `https://img.shields.io/github/last-commit/${user}/${repo}?label=`))
   if (release) {
-    parts.push(inlineImg('release', `https://img.shields.io/github/v/release/${user}/${repo}?label=&sort=semver`))
-    parts.push(inlineImg('release date', `https://img.shields.io/github/release-date/${user}/${repo}?label=&sort=semver`))
+    parts.push(inlineImg('release', `https://img.shields.io/github/v/release/${user}/${repo}?label=`))
+    parts.push(inlineImg('release date', `https://img.shields.io/github/release-date/${user}/${repo}?label=`))
   }
   return '<p>' + parts.join(' ') + '</p>'
 })
