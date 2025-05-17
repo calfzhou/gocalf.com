@@ -15,9 +15,10 @@ updated: 2024-04-24 19:36:21
 
 > git-remote-gcrypt is a git remote helper to push and pull from repositories encrypted with [GnuPG](https://www.gnupg.org/), using a custom format. This remote helper handles URIs prefixed with `gcrypt::`.
 
-{% box color:yellow %}
-This tool only does *REMOTE* encryption. The *LOCAL* repository is *NOT* encrypted.
-{% endbox %}
+<!-- -->
+
+> [!tip]
+> This tool only does *REMOTE* encryption. The *LOCAL* repository is *NOT* encrypted.
 
 ### 本地已有仓库推送到远程
 
@@ -88,7 +89,8 @@ brew install git-crypt
 
 ## git-encrypt
 
-{% note DEPRECATED! 此项目 2014 年之后就不在维护了。Since Sept. 2023, it is actually not working anymore with newer openssl on MacOS. color:error %}
+> [!warning]
+> DEPRECATED! 此项目 2014 年之后就不在维护了。Since Sept. 2023, it is actually not working anymore with newer openssl on MacOS.
 
 [shadowhand/git-encrypt at legacy](https://github.com/shadowhand/git-encrypt/tree/legacy)
 

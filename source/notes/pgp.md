@@ -83,14 +83,12 @@ gpg --version
 
 ## 密钥管理
 
-{% box color:green %}
-注：本文中
-
-- 密钥 = Key，一般指一对公私钥
-- 公钥 = Public Key
-- 私钥 = Private Key
-
-{% endbox %}
+> [!note]
+> 注：本文中
+>
+> - 密钥 = Key，一般指一对公私钥
+> - 公钥 = Public Key
+> - 私钥 = Private Key
 
 ### 生成主密钥
 
@@ -232,21 +230,20 @@ gpg --import <FILE> # 可以是私钥文件，也可以是公钥文件
 
 U 盘上的 Tails 可以直接创建一个加密的持久化存储，详见 [Tails - Persistent Storage](https://tails.net/doc/persistent_storage/index.en.html)。虽然可以但尽量不要在其他系统里操作该持久化存储。
 
-{% box color:red %}
-Tails 出于隐私保护等原因，会把系统时区设置为 GMT，导致时间会超前（东半球）或落后（西半球）。
-
-生成的 PGP 密钥在正常的电脑上导入时，可能会报错：
-
-``` text
-gpg: key 0xHHHHHHHH was created NNN seconds in the future (time warp or clock problem)
-```
-
-可以等几个小时之后再导入……
-
-或者在创建密钥时，把 Tails 系统时区调到地球的另一边（如中国的就把系统时区调成 -8:00）。
-
-Tails 调时区需要输入管理员密码，管理员密码需要在系统刚启动的时候设置，启动之后就无法设置了 [Tails - Administration password](https://tails.net/doc/first_steps/welcome_screen/administration_password/)。
-{% endbox %}
+> [!tip]
+> Tails 出于隐私保护等原因，会把系统时区设置为 GMT，导致时间会超前（东半球）或落后（西半球）。
+>
+> 生成的 PGP 密钥在正常的电脑上导入时，可能会报错：
+>
+> ``` text
+> gpg: key 0xHHHHHHHH was created NNN seconds in the future (time warp or clock problem)
+> ```
+>
+> 可以等几个小时之后再导入……
+>
+> 或者在创建密钥时，把 Tails 系统时区调到地球的另一边（如中国的就把系统时区调成 -8:00）。
+>
+> Tails 调时区需要输入管理员密码，管理员密码需要在系统刚启动的时候设置，启动之后就无法设置了 [Tails - Administration password](https://tails.net/doc/first_steps/welcome_screen/administration_password/)。
 
 ### 生成吊销证书并妥善保管
 
@@ -273,9 +270,8 @@ Tails 调时区需要输入管理员密码，管理员密码需要在系统刚�
 
 可以（但不推荐）通过 Key Server 将公钥公布到网络上。或者简单点儿，放在自己所属的网站、GitHub 等地方即可。
 
-{% box color:red %}
-有些 Key Server 一旦公布将不能撤销，因此需要注意 UID 是否会泄漏个人隐私。
-{% endbox %}
+> [!caution]
+> 有些 Key Server 一旦公布将不能撤销，因此需要注意 UID 是否会泄漏个人隐私。
 
 ## 使用场景
 
