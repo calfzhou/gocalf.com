@@ -5,7 +5,7 @@ tags:
   - calf
   - software/mac
 date: 2024-04-16 22:56:13
-updated: 2025-04-13 22:42:07
+updated: 2025-05-17 13:35:07
 ---
 ## 系统相关 / 实用工具
 
@@ -150,8 +150,12 @@ updated: 2025-04-13 22:42:07
 
 ### API
 
+- [Bruno](https://www.usebruno.com/)
+  - > Bruno is a Git-integrated, fully offline, and open-source API client.
 - [Postman API Platform](https://www.postman.com/)
   - > Postman is an API platform for building and using APIs.
+- [REST Client - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+  - > REST Client allows you to send HTTP request and view the response in Visual Studio Code directly.
 
 ### Devops
 
