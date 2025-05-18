@@ -4,7 +4,7 @@ notebook: notes
 tags:
 - software
 date: 2024-07-26 21:38:51
-updated: 2025-04-26 12:33:02
+updated: 2025-05-18 11:21:53
 references:
 - '[自由输入法 RIME 简明配置指南 - 少数派](https://sspai.com/post/84373)'
 - "[RIME 输入法使用体验 - Hank's Blog](https://zhaohongxuan.github.io/2024/03/20/most-powerful-input-method-rime/)"
@@ -16,19 +16,27 @@ references:
 
 客户端：
 
-- [rime/squirrel: 【鼠鬚管】Rime for macOS](https://github.com/rime/squirrel)
+- macOS: [rime/squirrel: 【鼠鬚管】Rime for macOS](https://github.com/rime/squirrel)
   - {% badge_github rime squirrel release:true %}
   - 配置存储路径：`~/Library/Rime`
-- iOS: Hamster（仓）
+- iOS: Hamster [仓输入法 on the App Store](https://apps.apple.com/us/app/%E4%BB%93%E8%BE%93%E5%85%A5%E6%B3%95/id6446617683)
+  - [欢迎使用「仓输入法」 | 「仓输入法」使用指南](https://ihsiao.com/apps/hamster/docs/)
+- Windows: [rime/weasel: 【小狼毫】Rime for Windows](https://github.com/rime/weasel)
+  - {% badge_github rime weasel release:true %}
+  - 配置存储路径：`%AppData%\Rime` → `C:\Users\<USER>\AppData\Roaming\Rime`
+  - ⚠️ 自带的加载三方输入方案的功能有问题，不会拷贝子目录，导致方案无法正常加载。
 
 现成的配置方案：
 
 - ℞ [iDvel/rime-ice: Rime 配置：雾凇拼音 | 长期维护的简体词库](https://github.com/iDvel/rime-ice)
   - {% badge_github iDvel rime-ice release:true %}
-- ℞ [gaboolic/rime-shuangpin-fuzhuma: 墨奇音形，打造最强双拼辅助码rime输入方案](https://github.com/gaboolic/rime-shuangpin-fuzhuma)
-  - {% badge_github gaboolic rime-shuangpin-fuzhuma release:true %}
-  - > 重磅发布：墨奇音形，支持自然码、小鹤、搜狗、微软双拼。墨奇音形是一个基于字形描述信息、递归拆分，最后取首末双形音托的码表开源的方案。详见 [墨奇码拆分规则](https://github.com/gaboolic/rime-shuangpin-fuzhuma/wiki/%E5%A2%A8%E5%A5%87%E7%A0%81%E6%8B%86%E5%88%86%E8%A7%84%E5%88%99)。[墨奇码](https://github.com/gaboolic/moqima-tables) 的拆分码表已开源，目前已经拆分完成全部的通用规范汉字、常用繁体字，总计支持 4 万字（方案选单中支持大字集和小字集切换）。未来准备支持 gb18030-2022 标准的 8 万字。墨奇音形的方案支持 ctrl+p 开关显示墨奇辅助码 + 首末字形，ctrl+l 开关显示墨奇拆字的拆分。
-  - > 重磅发布 2：现在词库独立演进维护，改为使用 745396750 字的高质量语料，进行分词，重新统计字频、词频，归一化的 [白霜词库](https://github.com/gaboolic/rime-frost)，白霜词库是目前 rime 方案下最好的词库，在不使用智能模型的情况下可以超越使用智能模型的词库方案。
+  - > 雾凇拼音提供了一套开箱即用的完整配置，包含输入方案（全拼、常见双拼）、长期维护的开源词库及各项扩展功能。
+- ℞ [gaboolic/rime-frost: 白霜拼音：蒹葭苍苍，白露为霜](https://github.com/gaboolic/rime-frost)
+  - {% badge_github gaboolic rime-frost release:true %}
+  - > 白霜拼音使用使用 745396750 字的高质量语料，进行分词，重新统计字频、词频，归一化，打造纯净、词频准确、智能的词库。白霜词库是目前 rime 方案下最好的开源词库，立志于打造不输于商业输入法的输入体验。
+
+> [!tip]
+> 关于符号 ℞ 的知识参见 [Medical prescription - Wikipedia](https://en.wikipedia.org/wiki/Medical_prescription)，原本就是用来表示「处方」的。
 
 ## 实际使用
 
@@ -140,6 +148,7 @@ patch:
 bash rime-install iDvel/rime-ice:others/recipes/full
 ```
 
+> [!important]
 > 注意这个会修改掉原本的 `default.yaml`。而且也会写入 `squirrel.yaml` 等文件，以更高的版本号覆盖掉客户端内置的配置。
 
 Recipes 里有：
@@ -158,6 +167,8 @@ Recipes 里有：
   - `ziguang`: 紫光双拼
 
 #### 一些操作技巧
+
+详见 [dotfiles/rime/README.md](https://github.com/calfzhou/dotfiles/blob/master/rime/README.md)
 
 - 数字的各种格式（汉字、人民币大写等）：`R<number>`，如 `R1234.5678`。
 - 字母、数字的各种变体：`v<alpha|digit>`，如 `va`、`v1`。
@@ -244,6 +255,49 @@ function segmentor(segmentation, env)
   -- return false -- 终止 segmentors 处理流程
 end
 ```
+
+## 多端同步
+
+Rime 客户端里「Sync user data」的同步逻辑是：
+
+- 历史行为数据（动态词频）是双向同步，自动合并
+- 用户自定义配置是单向同步，不会下载或合并
+
+可能是因为如果配置文件发生冲突，就必须人工处理，而且不同设备不同系统的配置可能本来也不一样。
+
+用 GitHub 同步配置文件（如 [dotfiles/rime](https://github.com/calfzhou/dotfiles/tree/master/rime)），内置 sync + 云存储（iCloud）同步行为数据。
+
+> Background: macOS 为主电脑（可能多台），iOS 为主移动端（可能多台），Windows 为辅电脑。
+
+### 配置同步
+
+配置文件放在 GitHub 仓库里做版本控制，[dotfiles/rime at master · calfzhou/dotfiles](https://github.com/calfzhou/dotfiles/tree/master/rime)。各端要手动拉取最新代码并部署。
+
+macOS 的 Squirrel：可以直接把仓库目录软链到 `~/Library/Rime`：
+
+``` bash
+ln -s $DOTFILES_HOME/rime ~/Library/Rime
+```
+
+Windows 的 Weasel：初次安装的时候可以选择数据的存储路径，直接选到仓库所在目录即可。如果已经安装了，也可以再把默认的数据目录改成仓库目录的软链。注意要把 build 等文件和目录从原本的数据目录添加到仓库目录中，否则切换后可能 Weasel 无法使用。
+
+iOS 的 Hamster：在手机上点开「Wi-Fi 上传方案」，通过电脑浏览器访问，把电脑上仓库目录里的配置文件上传到手机。
+
+### 词频数据同步
+
+在各端的 Rime 数据目录里，都会有一个 `installation.yaml` 文件，在文件中添加 `sync_dir` 字段，指向云存储的目录（默认是当前目录）。
+
+iOS 上仓输入法只能访问属于他自己的目录。在应用里进入 RIME 页面，选择同步路径，在 iCloud Drive 里找到 Hamster 目录，可以在里面创建一个目录比如叫 `sync`。该目录在 iOS 里的地址是 `/private/var/mobile/Library/Mobile Documents/iCloud~dev~fuxiao~app~hamsterapp/Documents/sync`，在 macOS 里是 `~/Library/Mobile Documents/iCloud~dev~fuxiao~app~hamsterapp/Documents/sync`。
+
+Windows 上安装 iCloud 客户端，然后找到 `Hamster/sync` 目录的路径，写到 `installation.yaml` 里。
+
+`installation.yaml` 里自动会有 `installation_id` 字段，值是一个 UUID，表示当前设备的唯一标识符。执行 Rime 的数据同步是，会在 `sync_dir` 目录下创建一个 `installation_id` 的子目录，存放当前设备的配置文件和词频数据。
+
+可以把这个值改成统一的 ID，这样不同设备都会读写 `sync_dir` 目录下的同一个子目录，实现多端同步。但受限于云存储的同步机制，可能会导致文件冲突（比如云端的更新还没有同步下来，本地就已经写入的新的内容，导致冲突），越是急着同步反倒越是同步不了。
+
+实际上 Rime 同步的时候，还会检查 `sync_dir` 目录下其他的子目录，如果其他子目录下也有对应的词频数据文件，也是会读取合并进来的。（可以把随机生成的 UUID 改成易懂的值，比如 `mbp-1`、`mbp-2` 等）。
+
+比如设备 A 的 `installation_id` 是 `A`，B 的 `installation_id` 是 `B`。设备 A 先同步，其词频数据文件是（`sync_dir` 目录下的）`A/rime_ice.userdb.txt`。设备 B 同步的时候会把 `B/rime_ice.userdb.txt`、`A/rime_ice.userdb.txt` 以及本地 Rime 数据目录里 `rime_ice.userdb` 目录里的信息都合并，然后写入 `B/rime_ice.userdb.txt`，并更新本地 Rime 数据目录里的 `rime_ice.userdb`。
 
 ## 其他
 
