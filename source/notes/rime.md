@@ -4,7 +4,7 @@ notebook: notes
 tags:
 - software
 date: 2024-07-26 21:38:51
-updated: 2025-05-18 11:21:53
+updated: 2025-05-18 23:48:03
 references:
 - '[自由输入法 RIME 简明配置指南 - 少数派](https://sspai.com/post/84373)'
 - "[RIME 输入法使用体验 - Hank's Blog](https://zhaohongxuan.github.io/2024/03/20/most-powerful-input-method-rime/)"
@@ -281,7 +281,10 @@ ln -s $DOTFILES_HOME/rime ~/Library/Rime
 
 Windows 的 Weasel：初次安装的时候可以选择数据的存储路径，直接选到仓库所在目录即可。如果已经安装了，也可以再把默认的数据目录改成仓库目录的软链。注意要把 build 等文件和目录从原本的数据目录添加到仓库目录中，否则切换后可能 Weasel 无法使用。
 
-iOS 的 Hamster：在手机上点开「Wi-Fi 上传方案」，通过电脑浏览器访问，把电脑上仓库目录里的配置文件上传到手机。
+iOS 的 Hamster：一种方式是直接在手机上点开「Wi-Fi 上传方案」，通过电脑浏览器访问，把电脑上仓库目录里的配置文件上传到手机。更方便的方式是开启 iCloud 同步（但不用点「拷贝应用文件至 iCloud」），以后可以通过电脑在 iCloud 里 Hamster 目录（路径是 `~/Library/Mobile Documents/iCloud~dev~fuxiao~app~hamsterapp/Documents`）里的 `RIME/Rime` 子目录中放置所有的配置文件（可以从 GitHub 仓库直接复制过来），然后在 Hamster 里操作「RIME 部署」的时候会自动读取 iCloud 里的配置文件并更新到应用文件目录中。参考 [词库同步 » iCloud 同步 | 「仓输入法」使用指南](https://ihsiao.com/apps/hamster/docs/guides/sync/#icloud-%E5%90%8C%E6%AD%A5) 和 [开启iCloud备份后的使用说明 · imfuxiao/Hamster Wiki](https://github.com/imfuxiao/Hamster/wiki/%E5%BC%80%E5%90%AFiCloud%E5%A4%87%E4%BB%BD%E5%90%8E%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)。
+
+> [!caution]
+> 开启 iCloud 同步后，就不要再直接修改应用文件目录中的内容，而是应该修改 iCloud `<Hamster>/RIME/Rime` 目录中的内容。
 
 ### 词频数据同步
 
@@ -291,11 +294,11 @@ iOS 上仓输入法只能访问属于他自己的目录。在应用里进入 RIM
 
 Windows 上安装 iCloud 客户端，然后找到 `Hamster/sync` 目录的路径，写到 `installation.yaml` 里。
 
-`installation.yaml` 里自动会有 `installation_id` 字段，值是一个 UUID，表示当前设备的唯一标识符。执行 Rime 的数据同步是，会在 `sync_dir` 目录下创建一个 `installation_id` 的子目录，存放当前设备的配置文件和词频数据。
+`installation.yaml` 里自动会有 `installation_id` 字段，值是一个 UUID，表示当前设备的唯一标识符。执行 Rime 的数据同步时，会在 `sync_dir` 目录下创建一个 `installation_id` 的子目录，存放当前设备的配置文件和词频数据。
 
 可以把这个值改成统一的 ID，这样不同设备都会读写 `sync_dir` 目录下的同一个子目录，实现多端同步。但受限于云存储的同步机制，可能会导致文件冲突（比如云端的更新还没有同步下来，本地就已经写入的新的内容，导致冲突），越是急着同步反倒越是同步不了。
 
-实际上 Rime 同步的时候，还会检查 `sync_dir` 目录下其他的子目录，如果其他子目录下也有对应的词频数据文件，也是会读取合并进来的。（可以把随机生成的 UUID 改成易懂的值，比如 `mbp-1`、`mbp-2` 等）。
+实际上 Rime 同步的时候，还会检查 `sync_dir` 目录下其他的子目录，如果其他子目录下也有对应的词频数据文件，也是会读取合并进来的。参考 [多设备同步 » 用户词典迁移 | oh-my-rime输入法](https://www.mintimate.cc/zh/guide/deviceSync.html#%E7%94%A8%E6%88%B7%E8%AF%8D%E5%85%B8%E8%BF%81%E7%A7%BB)。另外可以把随机生成的 UUID 改成易懂的值，比如 `mbp-1`、`mbp-2` 等。
 
 比如设备 A 的 `installation_id` 是 `A`，B 的 `installation_id` 是 `B`。设备 A 先同步，其词频数据文件是（`sync_dir` 目录下的）`A/rime_ice.userdb.txt`。设备 B 同步的时候会把 `B/rime_ice.userdb.txt`、`A/rime_ice.userdb.txt` 以及本地 Rime 数据目录里 `rime_ice.userdb` 目录里的信息都合并，然后写入 `B/rime_ice.userdb.txt`，并更新本地 Rime 数据目录里的 `rime_ice.userdb`。
 
