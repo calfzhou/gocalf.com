@@ -80,6 +80,7 @@ markdown: # https://github.com/hexojs/hexo-renderer-markdown-it
       options: # see https://katex.org/docs/options.html
         skipDelimitersCheck: true
     - name: 'markdown-it-obsidian-callouts'
+    - name: 'markdown-it-obsidian-imgsize'
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
