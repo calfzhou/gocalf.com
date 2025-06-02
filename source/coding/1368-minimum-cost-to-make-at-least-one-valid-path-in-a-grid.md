@@ -28,7 +28,7 @@ Return _the minimum cost to make the grid have at least one valid path_.
 **Example 1:**
 
 {% invert %}
-{% image 1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case1.png width:400px %}
+![case1|400](1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case1.png)
 {% endinvert %}
 
 > Input: `grid = [[1,1,1,1],[2,2,2,2],[1,1,1,1],[2,2,2,2]]`
@@ -40,7 +40,7 @@ Return _the minimum cost to make the grid have at least one valid path_.
 **Example 2:**
 
 {% invert %}
-{% image 1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case2.png width:350px %}
+![case2|350](1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case2.png)
 {% endinvert %}
 
 > Input: `grid = [[1,1,3],[3,2,2],[1,1,4]]`
@@ -50,7 +50,7 @@ Return _the minimum cost to make the grid have at least one valid path_.
 **Example 3:**
 
 {% invert %}
-{% image 1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case3.png width:200px %}
+![case3|200](1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case3.png)
 {% endinvert %}
 
 > Input: `grid = [[1,2],[4,3]]`

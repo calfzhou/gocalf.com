@@ -32,7 +32,7 @@ Return _the **maximum** net income Alice can have if she travels towards the opt
 **Example 1:**
 
 {% invert %}
-{% image 2467-most-profitable-path-in-a-tree/case1.png width:275px %}
+![case1|275](2467-most-profitable-path-in-a-tree/case1.png)
 {% endinvert %}
 
 > Input: `edges = [[0,1],[1,2],[1,3],[3,4]], bob = 3, amount = [-2,4,2,-4,6]`
@@ -58,7 +58,7 @@ Return _the **maximum** net income Alice can have if she travels towards the opt
 **Example 2:**
 
 {% invert %}
-{% image 2467-most-profitable-path-in-a-tree/case2.png width:250px %}
+![case2|250](2467-most-profitable-path-in-a-tree/case2.png)
 {% endinvert %}
 
 > Input: `edges = [[0,1]], bob = 1, amount = [-7280,2350]`

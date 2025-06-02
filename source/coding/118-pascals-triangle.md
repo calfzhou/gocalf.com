@@ -15,7 +15,7 @@ In **Pascal's triangle**, each number is the sum of the two numbers directly abo
 <https://leetcode.cn/problems/pascals-triangle/>
 
 {% invert %}
-{% image 119-pascals-triangle-ii/pascal.gif width:240px %}
+![pascal](119-pascals-triangle-ii/pascal.gif)
 {% endinvert %}
 
 **Example 1:**

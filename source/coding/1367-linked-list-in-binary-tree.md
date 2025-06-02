@@ -19,7 +19,7 @@ In this context downward path means a path that starts at some node and goes dow
 **Example 1:**
 
 {% invert %}
-{% image 1367-linked-list-in-binary-tree/case1.png width:220px %}
+![case1|220](1367-linked-list-in-binary-tree/case1.png)
 {% endinvert %}
 
 > Input: `head = [4,2,8], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`
@@ -29,7 +29,7 @@ In this context downward path means a path that starts at some node and goes dow
 **Example 2:**
 
 {% invert %}
-{% image 1367-linked-list-in-binary-tree/case2.png width:220px %}
+![case2|220](1367-linked-list-in-binary-tree/case2.png)
 {% endinvert %}
 
 > Input: `head = [1,4,2,6], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`

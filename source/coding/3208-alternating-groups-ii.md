@@ -26,15 +26,15 @@ Return the number of **alternating** groups.
 > Input: `colors = [0,1,0,1,0], k = 3`
 > Output: `3`
 > Explanation:
-> {% image 3208-alternating-groups-ii/case1-0.png width:150px %}
+> ![case1-0|150](3208-alternating-groups-ii/case1-0.png)
 > Alternating groups:
 > {% grid w:150px %}
 <!-- cell -->
-{% image 3208-alternating-groups-ii/case1-1.png width:150px %}
+> ![case1-1|150](3208-alternating-groups-ii/case1-1.png)
 <!-- cell -->
-{% image 3208-alternating-groups-ii/case1-2.png width:150px %}
+> ![case1-2|150](3208-alternating-groups-ii/case1-2.png)
 <!-- cell -->
-{% image 3208-alternating-groups-ii/case1-3.png width:150px %}
+> ![case1-3|150](3208-alternating-groups-ii/case1-3.png)
 {% endgrid %}
 
 **Example 2:**
@@ -42,13 +42,13 @@ Return the number of **alternating** groups.
 > Input: `colors = [0,1,0,0,1,0,1], k = 6`
 > Output: `2`
 > Explanation:
-> {% image 3208-alternating-groups-ii/case2-0.png width:150px %}
+> ![case2-0|150](3208-alternating-groups-ii/case2-0.png)
 > Alternating groups:
 > {% grid w:150px %}
 <!-- cell -->
-{% image 3208-alternating-groups-ii/case2-1.png width:150px %}
+> ![case2-1|150](3208-alternating-groups-ii/case2-1.png)
 <!-- cell -->
-{% image 3208-alternating-groups-ii/case2-2.png width:150px %}
+> ![case2-2|150](3208-alternating-groups-ii/case2-2.png)
 {% endgrid %}
 
 **Example 3:**
@@ -56,7 +56,7 @@ Return the number of **alternating** groups.
 > Input: `colors = [1,1,0,1], k = 4`
 > Output: `0`
 > Explanation:
-> {% image 3208-alternating-groups-ii/case3.png width:150px %}
+> ![case3|150](3208-alternating-groups-ii/case3.png.png)
 
 **Constraints:**
 

@@ -22,7 +22,7 @@ Return _the **minimum** number of white tiles still visible._
 
 **Example 1:**
 
-{% image 2209-minimum-white-tiles-after-covering-with-carpets/case1.png width:400px %}
+![case1|400](2209-minimum-white-tiles-after-covering-with-carpets/case1.png)
 
 > Input: `floor = "10110101", numCarpets = 2, carpetLen = 2`
 > Output: `2`

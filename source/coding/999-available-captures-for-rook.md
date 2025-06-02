@@ -20,7 +20,7 @@ Return the **number of pawns** the white rook is **attacking**.
 
 **Example 1:**
 
-{% image 999-available-captures-for-rook/case1.png width:300px %}
+![case1|300](999-available-captures-for-rook/case1.png)
 
 > Input: `board = [[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".","R",".",".",".","p"],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."]]`
 > Output: `3`
@@ -29,7 +29,7 @@ Return the **number of pawns** the white rook is **attacking**.
 
 **Example 2:**
 
-{% image 999-available-captures-for-rook/case2.png width:300px %}
+![case2|300](999-available-captures-for-rook/case2.png)
 
 > Input: `board = [[".",".",".",".",".",".",".","."],[".","p","p","p","p","p",".","."],[".","p","p","B","p","p",".","."],[".","p","B","R","B","p",".","."],[".","p","p","B","p","p",".","."],[".","p","p","p","p","p",".","."],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."]]`
 > Output: `0`
@@ -38,7 +38,7 @@ Return the **number of pawns** the white rook is **attacking**.
 
 **Example 3:**
 
-{% image 999-available-captures-for-rook/case3.png width:300px %}
+![case3|300](999-available-captures-for-rook/case3.png)
 
 > Input: `board = [[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".","p",".",".",".","."],["p","p",".","R",".","p","B","."],[".",".",".",".",".",".",".","."],[".",".",".","B",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".",".",".",".",".","."]]`
 > Output: `3`

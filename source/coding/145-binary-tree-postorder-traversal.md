@@ -18,7 +18,7 @@ Given the `root` of a binary tree, return _the postorder traversal of its nodes
 > Output: `[3,2,1]`
 > Explanation:
 > {% invert %}
-{% image 145-binary-tree-postorder-traversal/case1.png width:200px %}
+![case1|200](145-binary-tree-postorder-traversal/case1.png)
 {% endinvert %}
 
 **Example 2:**
@@ -27,7 +27,7 @@ Given the `root` of a binary tree, return _the postorder traversal of its nodes
 > Output: `[4,6,7,5,2,9,8,3,1]`
 > Explanation:
 > {% invert %}
-{% image 145-binary-tree-postorder-traversal/case2.png width:350px %}
+![case2|350](145-binary-tree-postorder-traversal/case2.png)
 {% endinvert %}
 
 **Example 3:**

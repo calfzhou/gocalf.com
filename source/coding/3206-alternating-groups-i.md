@@ -26,22 +26,22 @@ Return the number of **alternating** groups.
 > Input: `colors = [1,1,1]`
 > Output: `0`
 > Explanation:
-> {% image 3206-alternating-groups-i/case1.png width:150px %}
+> ![case1|150](3206-alternating-groups-i/case1.png)
 
 **Example 2:**
 
 > Input: `colors = [0,1,0,0,1]`
 > Output: `3`
 > Explanation:
-> {% image 3206-alternating-groups-i/case2-0.png width:150px %}
+> ![case2-0|150](3206-alternating-groups-i/case2-0.png)
 > Alternating groups:
 > {% grid w:150px %}
 <!-- cell -->
-{% image 3206-alternating-groups-i/case2-1.png width:150px %}
+> ![case2-1|150](3206-alternating-groups-i/case2-1.png)
 <!-- cell -->
-{% image 3206-alternating-groups-i/case2-2.png width:150px %}
+> ![case2-2|150](3206-alternating-groups-i/case2-2.png)
 <!-- cell -->
-{% image 3206-alternating-groups-i/case2-3.png width:150px %}
+> ![case2-3|150](3206-alternating-groups-i/case2-3.png)
 {% endgrid %}
 
 **Constraints:**

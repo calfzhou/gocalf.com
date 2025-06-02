@@ -24,7 +24,7 @@ Return _an array_ `answer` _of size_ `n` _where_ `answer[i]` _is the column that
 **Example 1:**
 
 {% invert %}
-{% image 1706-where-will-the-ball-fall/case1.jpg width:500px %}
+![case1|500](1706-where-will-the-ball-fall/case1.jpg)
 {% endinvert %}
 
 > Input: `grid = [[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]`
