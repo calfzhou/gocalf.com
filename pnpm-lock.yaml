@@ -57,8 +57,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       hexo-theme-stellar:
-        specifier: ^1.29.1
-        version: 1.29.1
+        specifier: ^1.30.0
+        version: 1.30.0
       markdown-it-obsidian-callouts:
         specifier: ^0.3.2
         version: 0.3.2(markdown-it@13.0.2)
@@ -789,8 +789,8 @@ packages:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
 
-  hexo-theme-stellar@1.29.1:
-    resolution: {integrity: sha512-6OetnuydRZ0ZYrpGeFj5D1kABLgRign6X7Jaz1xNwqso8S51X1cSZgSmdivaYPDYIDHvZD6czmErj1TS+gAlKg==}
+  hexo-theme-stellar@1.30.0:
+    resolution: {integrity: sha512-3GABFI3mD/AvGdLW4wAclEWB9Sk3/c4IhIem9Dc8LIAcwk66q5yqCrOkgy3eDurWArZkpWZXKUuPgqRH7dvWQg==}
 
   hexo-update-time@https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3c93f8bb31441a7b66a3202511bafaaf508d5ee:
     resolution: {tarball: https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3c93f8bb31441a7b66a3202511bafaaf508d5ee}
@@ -2338,7 +2338,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  hexo-theme-stellar@1.29.1:
+  hexo-theme-stellar@1.30.0:
     dependencies:
       hexo-renderer-ejs: 2.0.0
       hexo-renderer-stylus: 3.0.1
