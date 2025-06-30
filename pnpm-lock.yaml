@@ -21,8 +21,8 @@ importers:
         specifier: ^7.3.0
         version: 7.3.0(chokidar@3.6.0)
       hexo-diagrams-net:
-        specifier: ^2024.4.1
-        version: 2024.4.1
+        specifier: ^2025.6.1
+        version: 2025.6.1
       hexo-esbuild:
         specifier: ^2.0.0
         version: 2.0.0(esbuild@0.25.5)(micromatch@4.0.8)
@@ -721,8 +721,8 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  hexo-diagrams-net@2024.4.1:
-    resolution: {integrity: sha512-oDftScAbixuddm60PCR7uqq39++WgKLXaYbfYpmcK8jZaAUsmBDqvlyJQyFh1mMnjohzMv7QdBy9ptJrWyrklA==}
+  hexo-diagrams-net@2025.6.1:
+    resolution: {integrity: sha512-n0dFqm9nFWWEas2VXqXD7R3DQ+fCeOceQdlf41Pe8zpuMUqiKQ4d5BvWBxFu+Cu0iIzKGS2ZffZjnx7AanvYTg==}
 
   hexo-esbuild@2.0.0:
     resolution: {integrity: sha512-/9N7++fyhED02dvGpLcm8pnd6CTNWilI0m02TC9XheCgk8DJAt5fix+KcoQxootox6ehYKOvgeECyMndV9mTlA==}
@@ -2244,7 +2244,7 @@ snapshots:
       resolve: 1.22.8
       tildify: 2.0.0
 
-  hexo-diagrams-net@2024.4.1:
+  hexo-diagrams-net@2025.6.1:
     dependencies:
       hexo-util-parse-tag-arguments: 2021.1.2
 
