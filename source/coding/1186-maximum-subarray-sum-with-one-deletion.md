@@ -45,7 +45,7 @@ class Solution:
     def maximumSum(self, arr: List[int]) -> int:
 ```
 
-{% asset_code coding/1186-maximum-subarray-sum-with-one-deletion/solution_test.py %}
+{% asset_code coding/assets/1186-maximum-subarray-sum-with-one-deletion/solution_test.py %}
 
 ## Thoughts
 
@@ -92,7 +92,7 @@ $$
 
 ## Code
 
-{% asset_code coding/1186-maximum-subarray-sum-with-one-deletion/solution.py %}
+{% asset_code coding/assets/1186-maximum-subarray-sum-with-one-deletion/solution.py %}
 
 ## Less Space
 
@@ -125,7 +125,7 @@ $$
 
 时间复杂度 `O(n)`，空间复杂度 `O(1)`。
 
-{% asset_code coding/1186-maximum-subarray-sum-with-one-deletion/solution2.py %}
+{% asset_code coding/assets/1186-maximum-subarray-sum-with-one-deletion/solution2.py %}
 
 > 开始没直接用这个办法是没想好怎么处理「至多删除一个」数字，因为在 subarray 之外的数字，删不删是没影响的。实际上 dd 表示的就是「至多」删除一次，不是一定要删除一次，只要在递推过程中不会多删除就可以了，至于删了更大还是不删更大，是自适应的。
 
@@ -180,4 +180,4 @@ $$
 
 $$
 
-{% asset_code coding/1186-maximum-subarray-sum-with-one-deletion/solution3.py %}
+{% asset_code coding/assets/1186-maximum-subarray-sum-with-one-deletion/solution3.py %}

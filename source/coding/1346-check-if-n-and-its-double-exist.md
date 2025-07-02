@@ -40,7 +40,7 @@ class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
 ```
 
-{% asset_code coding/1346-check-if-n-and-its-double-exist/solution_test.py %}
+{% asset_code coding/assets/1346-check-if-n-and-its-double-exist/solution_test.py %}
 
 ## Thoughts
 
@@ -54,6 +54,6 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1346-check-if-n-and-its-double-exist/solution.py %}
+{% asset_code coding/assets/1346-check-if-n-and-its-double-exist/solution.py %}
 
-{% asset_code coding/1346-check-if-n-and-its-double-exist/solution2.py %}
+{% asset_code coding/assets/1346-check-if-n-and-its-double-exist/solution2.py %}

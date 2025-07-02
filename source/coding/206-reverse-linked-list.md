@@ -15,7 +15,7 @@ Given the `head` of a singly linked list, reverse the list, and return _the reve
 **Example 1:**
 
 {% invert %}
-![case1](206-reverse-linked-list/case1.png)
+![case1](assets/206-reverse-linked-list/case1.png)
 {% endinvert %}
 
 > Input: `head = [1,2,3,4,5]`
@@ -24,7 +24,7 @@ Given the `head` of a singly linked list, reverse the list, and return _the reve
 **Example 2:**
 
 {% invert %}
-![case2](206-reverse-linked-list/case2.png)
+![case2](assets/206-reverse-linked-list/case2.png)
 {% endinvert %}
 
 > Input: `head = [1,2]`
@@ -54,7 +54,7 @@ class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 ```
 
-{% asset_code coding/206-reverse-linked-list/solution_test.py %}
+{% asset_code coding/assets/206-reverse-linked-list/solution_test.py %}
 
 ## Thoughts
 
@@ -66,8 +66,8 @@ class Solution:
 
 ### Iteratively
 
-{% asset_code coding/206-reverse-linked-list/solution.py %}
+{% asset_code coding/assets/206-reverse-linked-list/solution.py %}
 
 ### Recursively
 
-{% asset_code coding/206-reverse-linked-list/solution_recursive.py %}
+{% asset_code coding/assets/206-reverse-linked-list/solution_recursive.py %}

@@ -46,7 +46,7 @@ class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
 ```
 
-{% asset_code coding/322-coin-change/solution_test.py %}
+{% asset_code coding/assets/322-coin-change/solution_test.py %}
 
 ## Thoughts
 
@@ -70,4 +70,4 @@ $$
 
 ## Code
 
-{% asset_code coding/322-coin-change/solution.py %}
+{% asset_code coding/assets/322-coin-change/solution.py %}

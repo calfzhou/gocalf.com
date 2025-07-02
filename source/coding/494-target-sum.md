@@ -49,7 +49,7 @@ class Solution:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
 ```
 
-{% asset_code coding/494-target-sum/solution_test.py %}
+{% asset_code coding/assets/494-target-sum/solution_test.py %}
 
 ## Thoughts
 
@@ -80,4 +80,4 @@ $$
 
 ## Code
 
-{% asset_code coding/494-target-sum/solution.py %}
+{% asset_code coding/assets/494-target-sum/solution.py %}

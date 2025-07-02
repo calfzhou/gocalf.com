@@ -43,7 +43,7 @@ class Solution:
     def maxAbsoluteSum(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/1749-maximum-absolute-sum-of-any-subarray/solution_test.py %}
+{% asset_code coding/assets/1749-maximum-absolute-sum-of-any-subarray/solution_test.py %}
 
 ## Thoughts
 
@@ -53,7 +53,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1749-maximum-absolute-sum-of-any-subarray/solution.py %}
+{% asset_code coding/assets/1749-maximum-absolute-sum-of-any-subarray/solution.py %}
 
 ## Another Way
 
@@ -61,4 +61,4 @@ class Solution:
 
 时间复杂度 `O(n)`，空间复杂度 `O(n)`（也可以直接边累加边求 mx 和 mn，那么空间复杂度也是 `O(1)`）。
 
-{% asset_code coding/1749-maximum-absolute-sum-of-any-subarray/solution2.py %}
+{% asset_code coding/assets/1749-maximum-absolute-sum-of-any-subarray/solution2.py %}

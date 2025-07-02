@@ -17,7 +17,7 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 **Example 1:**
 
 {% invert %}
-![case1](79-word-search/case1.png)
+![case1](assets/79-word-search/case1.png)
 {% endinvert %}
 
 > Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"`
@@ -26,7 +26,7 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 **Example 2:**
 
 {% invert %}
-![case2](79-word-search/case2.png)
+![case2](assets/79-word-search/case2.png)
 {% endinvert %}
 
 > Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"`
@@ -35,7 +35,7 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 **Example 3:**
 
 {% invert %}
-![case3](79-word-search/case3.png)
+![case3](assets/79-word-search/case3.png)
 {% endinvert %}
 
 > Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"`
@@ -58,7 +58,7 @@ class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
 ```
 
-{% asset_code coding/79-word-search/solution_test.py %}
+{% asset_code coding/assets/79-word-search/solution_test.py %}
 
 ## Thoughts
 
@@ -72,7 +72,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/79-word-search/solution.py %}
+{% asset_code coding/assets/79-word-search/solution.py %}
 
 ## Follow up - Pruning
 
@@ -83,7 +83,7 @@ class Solution:
 比如下图的 `board`，目标 `word = "ABCDA"`。
 
 {% invert %}
-{% diagramsnet 79-word-search/abcda.drawio %}
+{% diagramsnet assets/79-word-search/abcda.drawio %}
 {% endinvert %}
 
 从 `board[0][1] = 'A'` 出发时，会发现 `board[1][1] = 'B'` 无法串出 `word[1:] = "BCDA"`；但是如果从 `board[1][0] = 'A'` 出发却可以。

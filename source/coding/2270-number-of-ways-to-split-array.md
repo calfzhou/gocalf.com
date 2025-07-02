@@ -54,7 +54,7 @@ Tclass Solution:
     def waysToSplitArray(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/2270-number-of-ways-to-split-array/solution_test.py %}
+{% asset_code coding/assets/2270-number-of-ways-to-split-array/solution_test.py %}
 
 ## Thoughts
 
@@ -64,4 +64,4 @@ Tclass Solution:
 
 ## Code
 
-{% asset_code coding/2270-number-of-ways-to-split-array/solution.py %}
+{% asset_code coding/assets/2270-number-of-ways-to-split-array/solution.py %}

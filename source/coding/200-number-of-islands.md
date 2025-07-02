@@ -58,7 +58,7 @@ class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
 ```
 
-{% asset_code coding/200-number-of-islands/solution_test.py %}
+{% asset_code coding/assets/200-number-of-islands/solution_test.py %}
 
 ## Thoughts
 
@@ -70,4 +70,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/200-number-of-islands/solution.py %}
+{% asset_code coding/assets/200-number-of-islands/solution.py %}

@@ -28,7 +28,7 @@ Return _the minimum cost to make the grid have at least one valid path_.
 **Example 1:**
 
 {% invert %}
-![case1|400](1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case1.png)
+![case1](assets/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case1.png)
 {% endinvert %}
 
 > Input: `grid = [[1,1,1,1],[2,2,2,2],[1,1,1,1],[2,2,2,2]]`
@@ -40,7 +40,7 @@ Return _the minimum cost to make the grid have at least one valid path_.
 **Example 2:**
 
 {% invert %}
-![case2|350](1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case2.png)
+![case2](assets/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case2.png)
 {% endinvert %}
 
 > Input: `grid = [[1,1,3],[3,2,2],[1,1,4]]`
@@ -50,7 +50,7 @@ Return _the minimum cost to make the grid have at least one valid path_.
 **Example 3:**
 
 {% invert %}
-![case3|200](1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case3.png)
+![case3](assets/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/case3.png)
 {% endinvert %}
 
 > Input: `grid = [[1,2],[4,3]]`
@@ -70,7 +70,7 @@ class Solution:
     def minCost(self, grid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/solution_test.py %}
+{% asset_code coding/assets/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/solution_test.py %}
 
 ## Thoughts
 
@@ -84,4 +84,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/solution.py %}
+{% asset_code coding/assets/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/solution.py %}

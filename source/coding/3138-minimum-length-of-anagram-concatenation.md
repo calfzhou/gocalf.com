@@ -42,7 +42,7 @@ class Solution:
     def minAnagramLength(self, s: str) -> int:
 ```
 
-{% asset_code coding/3138-minimum-length-of-anagram-concatenation/solution_test.py %}
+{% asset_code coding/assets/3138-minimum-length-of-anagram-concatenation/solution_test.py %}
 
 ## Thoughts
 
@@ -58,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3138-minimum-length-of-anagram-concatenation/solution.py %}
+{% asset_code coding/assets/3138-minimum-length-of-anagram-concatenation/solution.py %}

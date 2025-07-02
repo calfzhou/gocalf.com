@@ -47,7 +47,7 @@ class Solution:
     def maxConsecutive(self, bottom: int, top: int, special: List[int]) -> int:
 ```
 
-{% asset_code coding/2274-maximum-consecutive-floors-without-special-floors/solution_test.py %}
+{% asset_code coding/assets/2274-maximum-consecutive-floors-without-special-floors/solution_test.py %}
 
 ## Thoughts
 
@@ -55,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2274-maximum-consecutive-floors-without-special-floors/solution.py %}
+{% asset_code coding/assets/2274-maximum-consecutive-floors-without-special-floors/solution.py %}

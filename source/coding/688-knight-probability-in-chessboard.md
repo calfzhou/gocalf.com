@@ -12,7 +12,7 @@ On an `n x n` chessboard, a knight starts at the cell `(row, column)` and attemp
 
 A chess knight has eight possible moves it can make, as illustrated below. Each move is two cells in a cardinal direction, then one cell in an orthogonal direction.
 
-![problem|300](688-knight-probability-in-chessboard/problem.png)
+![problem](assets/688-knight-probability-in-chessboard/problem.png)
 
 Each time the knight is to move, it chooses one of eight possible moves uniformly at random (even if the piece would go off the chessboard) and moves there.
 
@@ -48,7 +48,7 @@ class Solution:
     def knightProbability(self, n: int, k: int, row: int, column: int) -> float:
 ```
 
-{% asset_code coding/688-knight-probability-in-chessboard/solution_test.py %}
+{% asset_code coding/assets/688-knight-probability-in-chessboard/solution_test.py %}
 
 ## Thoughts
 
@@ -68,8 +68,8 @@ class Solution:
 
 ### Backtrack with Cache
 
-{% asset_code coding/688-knight-probability-in-chessboard/solution.py %}
+{% asset_code coding/assets/688-knight-probability-in-chessboard/solution.py %}
 
 ### DP
 
-{% asset_code coding/688-knight-probability-in-chessboard/solution2.py %}
+{% asset_code coding/assets/688-knight-probability-in-chessboard/solution2.py %}

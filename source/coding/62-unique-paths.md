@@ -20,7 +20,7 @@ The test cases are generated so that the answer will be less than or equal to `2
 **Example 1:**
 
 {% invert %}
-![case1](62-unique-paths/case1.png)
+![case1](assets/62-unique-paths/case1.png)
 {% endinvert %}
 
 > Input: `m = 3, n = 7`
@@ -47,7 +47,7 @@ class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
 ```
 
-{% asset_code coding/62-unique-paths/solution_test.py %}
+{% asset_code coding/assets/62-unique-paths/solution_test.py %}
 
 ## Thoughts
 
@@ -66,14 +66,14 @@ $$
 
 ## Code
 
-{% asset_code coding/62-unique-paths/solution.py %}
+{% asset_code coding/assets/62-unique-paths/solution.py %}
 
 ## Math
 
 如果把所有的 `u[i][j]` 都写下来，很容易发现这就是个斜的杨辉三角，`u[i][j]` 就对应于杨辉三角中 `i + j` 行（注意顶行是「行 0」）的 `i` 或 `j` 列（同样最左列也是「列 0」）。
 
 {% invert %}
-{% diagramsnet 62-unique-paths/pascal.drawio %}
+{% diagramsnet assets/62-unique-paths/pascal.drawio %}
 {% endinvert %}
 
 可以直接用杨辉三角的计算公式（组合数）：
@@ -88,4 +88,4 @@ $$
 
 整体时间复杂度为 `O(min{m,n})`，空间复杂度 `O(1)`。
 
-{% asset_code coding/62-unique-paths/solution_math.py %}
+{% asset_code coding/assets/62-unique-paths/solution_math.py %}

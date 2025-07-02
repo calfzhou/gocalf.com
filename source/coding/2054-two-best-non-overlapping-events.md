@@ -20,7 +20,7 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 **Example 1:**
 
 {% invert %}
-![case1|400](2054-two-best-non-overlapping-events/case1.png)
+![case1](assets/2054-two-best-non-overlapping-events/case1.png)
 {% endinvert %}
 
 > Input: `events = [[1,3,2],[4,5,2],[2,4,3]]`
@@ -30,7 +30,7 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 **Example 2:**
 
 {% invert %}
-![case2|400](2054-two-best-non-overlapping-events/case2.png)
+![case2](assets/2054-two-best-non-overlapping-events/case2.png)
 {% endinvert %}
 
 > Input: `events = [[1,3,2],[4,5,2],[1,5,5]]`
@@ -40,7 +40,7 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 **Example 3:**
 
 {% invert %}
-![case3|400](2054-two-best-non-overlapping-events/case3.png)
+![case3](assets/2054-two-best-non-overlapping-events/case3.png)
 {% endinvert %}
 
 > Input: `events = [[1,5,3],[1,5,1],[6,6,5]]`
@@ -61,7 +61,7 @@ class Solution:
     def maxTwoEvents(self, events: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2054-two-best-non-overlapping-events/solution_test.py %}
+{% asset_code coding/assets/2054-two-best-non-overlapping-events/solution_test.py %}
 
 ## Thoughts
 
@@ -77,6 +77,6 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2054-two-best-non-overlapping-events/solution.py %}
+{% asset_code coding/assets/2054-two-best-non-overlapping-events/solution.py %}
 
 不是很快，才 `34+%`，回头再优化。

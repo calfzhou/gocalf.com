@@ -44,7 +44,7 @@ class Solution:
     def lenLongestFibSubseq(self, arr: List[int]) -> int:
 ```
 
-{% asset_code coding/873-length-of-longest-fibonacci-subsequence/solution_test.py %}
+{% asset_code coding/assets/873-length-of-longest-fibonacci-subsequence/solution_test.py %}
 
 ## Thoughts
 
@@ -54,7 +54,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/873-length-of-longest-fibonacci-subsequence/solution.py %}
+{% asset_code coding/assets/873-length-of-longest-fibonacci-subsequence/solution.py %}
 
 ## Faster
 
@@ -77,4 +77,4 @@ $$
 
 时间复杂度 `O(n²)`，空间复杂度 `O(n²)`。
 
-{% asset_code coding/873-length-of-longest-fibonacci-subsequence/solution2.py %}
+{% asset_code coding/assets/873-length-of-longest-fibonacci-subsequence/solution2.py %}

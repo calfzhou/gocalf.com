@@ -22,7 +22,7 @@ Return _the **minimum** number of **obstacles** to **remove** so you can move fr
 **Example 1:**
 
 {% invert %}
-![case1](2290-minimum-obstacle-removal-to-reach-corner/case1.png)
+![case1](assets/2290-minimum-obstacle-removal-to-reach-corner/case1.png)
 {% endinvert %}
 
 > Input: `grid = [[0,1,1],[1,1,0],[1,1,0]]`
@@ -34,7 +34,7 @@ Return _the **minimum** number of **obstacles** to **remove** so you can move fr
 **Example 2:**
 
 {% invert %}
-![case2](2290-minimum-obstacle-removal-to-reach-corner/case2.png)
+![case2](assets/2290-minimum-obstacle-removal-to-reach-corner/case2.png)
 {% endinvert %}
 
 > Input: `grid = [[0,1,0,0,0],[0,1,0,1,0],[0,0,0,1,0]]`
@@ -57,7 +57,7 @@ class Solution:
     def minimumObstacles(self, grid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2290-minimum-obstacle-removal-to-reach-corner/solution_test.py %}
+{% asset_code coding/assets/2290-minimum-obstacle-removal-to-reach-corner/solution_test.py %}
 
 ## Thoughts
 
@@ -87,4 +87,4 @@ Dijkstra 算法详解参见 [DSA Dijkstra's Algorithm](https://www.w3schools.com
 
 ## Code
 
-{% asset_code coding/2290-minimum-obstacle-removal-to-reach-corner/solution.py %}
+{% asset_code coding/assets/2290-minimum-obstacle-removal-to-reach-corner/solution.py %}

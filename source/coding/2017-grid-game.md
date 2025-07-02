@@ -21,7 +21,7 @@ The **first** robot wants to **minimize** the number of points collected by the 
 **Example 1:**
 
 {% invert %}
-![case1](2017-grid-game/case1.png)
+![case1](assets/2017-grid-game/case1.png)
 {% endinvert %}
 
 > Input: `grid = [[2,5,4],[1,5,1]]`
@@ -33,7 +33,7 @@ The **first** robot wants to **minimize** the number of points collected by the 
 **Example 2:**
 
 {% invert %}
-![case2](2017-grid-game/case2.png)
+![case2](assets/2017-grid-game/case2.png)
 {% endinvert %}
 
 > Input: `grid = [[3,3,1],[8,5,2]]`
@@ -45,7 +45,7 @@ The **first** robot wants to **minimize** the number of points collected by the 
 **Example 3:**
 
 {% invert %}
-![case3](2017-grid-game/case3.png)
+![case3](assets/2017-grid-game/case3.png)
 {% endinvert %}
 
 > Input: `grid = [[1,3,1,15],[1,3,3,1]]`
@@ -68,7 +68,7 @@ class Solution:
     def gridGame(self, grid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2017-grid-game/solution_test.py %}
+{% asset_code coding/assets/2017-grid-game/solution_test.py %}
 
 ## Thoughts
 
@@ -84,4 +84,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2017-grid-game/solution.py %}
+{% asset_code coding/assets/2017-grid-game/solution.py %}

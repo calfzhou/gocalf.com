@@ -51,7 +51,7 @@ class Solution:
     def getHappyString(self, n: int, k: int) -> str:
 ```
 
-{% asset_code coding/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/solution_test.py %}
+{% asset_code coding/assets/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/solution_test.py %}
 
 ## Thoughts
 
@@ -65,4 +65,4 @@ Happy string 除了第一位有 `'a'`、`'b'`、`'c'` 三个选择外，之后�
 
 ## Code
 
-{% asset_code coding/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/solution.py %}
+{% asset_code coding/assets/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/solution.py %}

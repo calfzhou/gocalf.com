@@ -35,7 +35,7 @@ Given a `graph`, and assuming both players play optimally, return
 **Example 1:**
 
 {% invert %}
-![case1|300](913-cat-and-mouse/case1.png)
+![case1](assets/913-cat-and-mouse/case1.png)
 {% endinvert %}
 
 > Input: graph = [[2,5],[3],[0,4,5],[1,4,5],[2,3],[0,2,3]]
@@ -44,7 +44,7 @@ Given a `graph`, and assuming both players play optimally, return
 **Example 2:**
 
 {% invert %}
-![case2|200](913-cat-and-mouse/case2.png)
+![case2](assets/913-cat-and-mouse/case2.png)
 {% endinvert %}
 
 > Input: graph = [[1,3],[0],[3],[0,2]]
@@ -66,7 +66,7 @@ class Solution:
     def catMouseGame(self, graph: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/913-cat-and-mouse/solution_test.py %}
+{% asset_code coding/assets/913-cat-and-mouse/solution_test.py %}
 
 ## Thoughts
 
@@ -132,4 +132,4 @@ dfs(1, 2, MOUSE)
 
 ## Code
 
-{% asset_code coding/913-cat-and-mouse/solution.py %}
+{% asset_code coding/assets/913-cat-and-mouse/solution.py %}

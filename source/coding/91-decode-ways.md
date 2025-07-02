@@ -62,7 +62,7 @@ class Solution:
     def numDecodings(self, s: str) -> int:
 ```
 
-{% asset_code coding/91-decode-ways/solution_test.py %}
+{% asset_code coding/assets/91-decode-ways/solution_test.py %}
 
 ## Thoughts
 
@@ -103,4 +103,4 @@ $$
 
 ## Code
 
-{% asset_code coding/91-decode-ways/solution.py %}
+{% asset_code coding/assets/91-decode-ways/solution.py %}

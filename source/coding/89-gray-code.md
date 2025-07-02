@@ -55,7 +55,7 @@ class Solution:
     def grayCode(self, n: int) -> List[int]:
 ```
 
-{% asset_code coding/89-gray-code/solution_test.py %}
+{% asset_code coding/assets/89-gray-code/solution_test.py %}
 
 ## Thoughts
 
@@ -67,4 +67,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/89-gray-code/solution.py %}
+{% asset_code coding/assets/89-gray-code/solution.py %}

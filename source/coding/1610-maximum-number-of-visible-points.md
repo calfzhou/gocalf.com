@@ -25,7 +25,7 @@ Return _the maximum number of points you can see_.
 **Example 1:**
 
 {% invert %}
-![case1](1610-maximum-number-of-visible-points/case1.png)
+![case1](assets/1610-maximum-number-of-visible-points/case1.png)
 {% endinvert %}
 
 > Input: `points = [[2,1],[2,2],[3,3]], angle = 90, location = [1,1]`
@@ -41,7 +41,7 @@ Return _the maximum number of points you can see_.
 **Example 3:**
 
 {% invert %}
-![case3](1610-maximum-number-of-visible-points/case3.png)
+![case3](assets/1610-maximum-number-of-visible-points/case3.png)
 {% endinvert %}
 
 > Input: `points = [[1,0],[2,1]], angle = 13, location = [1,1]`
@@ -63,7 +63,7 @@ class Solution:
     def visiblePoints(self, points: List[List[int]], angle: int, location: List[int]) -> int:
 ```
 
-{% asset_code coding/1610-maximum-number-of-visible-points/solution_test.py %}
+{% asset_code coding/assets/1610-maximum-number-of-visible-points/solution_test.py %}
 
 ## Thoughts
 
@@ -83,4 +83,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1610-maximum-number-of-visible-points/solution.py %}
+{% asset_code coding/assets/1610-maximum-number-of-visible-points/solution.py %}

@@ -40,7 +40,7 @@ Given a `rows x cols` matrix `grid` and two integers `catJump` and `mouseJump`, 
 **Example 1:**
 
 {% invert %}
-![case1|580](1728-cat-and-mouse-ii/case1.png)
+![case1](assets/1728-cat-and-mouse-ii/case1.png)
 {% endinvert %}
 
 > Input: `grid = ["####F","#C...","M...."], catJump = 1, mouseJump = 2`
@@ -50,7 +50,7 @@ Given a `rows x cols` matrix `grid` and two integers `catJump` and `mouseJump`, 
 **Example 2:**
 
 {% invert %}
-![case2|580](1728-cat-and-mouse-ii/case2.png)
+![case2](assets/1728-cat-and-mouse-ii/case2.png)
 {% endinvert %}
 
 > Input: `grid = ["M.C...F"], catJump = 1, mouseJump = 4`
@@ -77,7 +77,7 @@ class Solution:
     def canMouseWin(self, grid: List[str], catJump: int, mouseJump: int) -> bool:
 ```
 
-{% asset_code coding/1728-cat-and-mouse-ii/solution_test.py %}
+{% asset_code coding/assets/1728-cat-and-mouse-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -99,4 +99,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1728-cat-and-mouse-ii/solution.py %}
+{% asset_code coding/assets/1728-cat-and-mouse-ii/solution.py %}

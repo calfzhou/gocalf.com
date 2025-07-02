@@ -15,7 +15,7 @@ Given the `root` of a binary search tree, and an integer `k`, return _the_ `kᵗ
 **Example 1:**
 
 {% invert %}
-![case1](230-kth-smallest-element-in-a-bst/case1.png)
+![case1](assets/230-kth-smallest-element-in-a-bst/case1.png)
 {% endinvert %}
 
 > Input: `root = [3,1,4,null,2], k = 1`
@@ -24,7 +24,7 @@ Given the `root` of a binary search tree, and an integer `k`, return _the_ `kᵗ
 **Example 2:**
 
 {% invert %}
-![case2](230-kth-smallest-element-in-a-bst/case2.png)
+![case2](assets/230-kth-smallest-element-in-a-bst/case2.png)
 {% endinvert %}
 
 > Input: `root = [5,3,6,2,4,null,null,1], k = 3`
@@ -51,7 +51,7 @@ class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
 ```
 
-{% asset_code coding/230-kth-smallest-element-in-a-bst/solution_test.py %}
+{% asset_code coding/assets/230-kth-smallest-element-in-a-bst/solution_test.py %}
 
 ## Thoughts
 
@@ -63,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/230-kth-smallest-element-in-a-bst/solution.py %}
+{% asset_code coding/assets/230-kth-smallest-element-in-a-bst/solution.py %}

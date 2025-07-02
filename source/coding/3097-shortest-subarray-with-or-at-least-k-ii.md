@@ -25,7 +25,7 @@ class Solution:
     def minimumSubarrayLength(self, nums: List[int], k: int) -> int:
 ```
 
-{% asset_code coding/3097-shortest-subarray-with-or-at-least-k-ii/solution_test.py %}
+{% asset_code coding/assets/3097-shortest-subarray-with-or-at-least-k-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -47,4 +47,4 @@ dp 中只有区间 `[l, r')` 的值可用，当 l 右移到 `r'` 时，就需要
 
 ## Code
 
-{% asset_code coding/3097-shortest-subarray-with-or-at-least-k-ii/solution.py %}
+{% asset_code coding/assets/3097-shortest-subarray-with-or-at-least-k-ii/solution.py %}

@@ -50,7 +50,7 @@ class Solution:
     def maximumWeight(self, intervals: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/3414-maximum-score-of-non-overlapping-intervals/solution_test.py %}
+{% asset_code coding/assets/3414-maximum-score-of-non-overlapping-intervals/solution_test.py %}
 
 ## Thoughts
 
@@ -83,4 +83,4 @@ $$
 
 ## Code
 
-{% asset_code coding/3414-maximum-score-of-non-overlapping-intervals/solution.py %}
+{% asset_code coding/assets/3414-maximum-score-of-non-overlapping-intervals/solution.py %}

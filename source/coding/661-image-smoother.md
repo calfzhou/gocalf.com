@@ -11,7 +11,7 @@ updated: 2024-11-18 17:05:10
 An **image smoother** is a filter of the size `3 x 3` that can be applied to each cell of an image by rounding down the average of the cell and the eight surrounding cells (i.e., the average of the nine cells in the blue smoother). If one or more of the surrounding cells of a cell is not present, we do not consider it in the average (i.e., the average of the four cells in the red smoother).
 
 {% invert %}
-![problem](661-image-smoother/problem.png)
+![problem](assets/661-image-smoother/problem.png)
 {% endinvert %}
 
 Given an `m x n` integer matrix `img` representing the grayscale of an image, return _the image after applying the smoother on each cell of it_.
@@ -21,7 +21,7 @@ Given an `m x n` integer matrix `img` representing the grayscale of an image, re
 **Example 1:**
 
 {% invert %}
-![case1](661-image-smoother/case1.png)
+![case1](assets/661-image-smoother/case1.png)
 {% endinvert %}
 
 > Input: `img = [[1,1,1],[1,0,1],[1,1,1]]`
@@ -34,7 +34,7 @@ Given an `m x n` integer matrix `img` representing the grayscale of an image, re
 **Example 2:**
 
 {% invert %}
-![case2](661-image-smoother/case2.png)
+![case2](assets/661-image-smoother/case2.png)
 {% endinvert %}
 
 > Input: `img = [[100,200,100],[200,50,200],[100,200,100]]`
@@ -58,7 +58,7 @@ class Solution:
     def imageSmoother(self, img: List[List[int]]) -> List[List[int]]:
 ```
 
-{% asset_code coding/661-image-smoother/solution_test.py %}
+{% asset_code coding/assets/661-image-smoother/solution_test.py %}
 
 ## Thoughts
 
@@ -70,4 +70,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/661-image-smoother/solution.py %}
+{% asset_code coding/assets/661-image-smoother/solution.py %}

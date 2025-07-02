@@ -49,7 +49,7 @@ class Solution:
     def minWindow(self, s: str, t: str) -> str:
 ```
 
-{% asset_code coding/76-minimum-window-substring/solution_test.py %}
+{% asset_code coding/assets/76-minimum-window-substring/solution_test.py %}
 
 ## Thoughts
 
@@ -71,8 +71,8 @@ class Solution:
 
 > 👇 单一循环体
 
-{% asset_code coding/76-minimum-window-substring/solution.py %}
+{% asset_code coding/assets/76-minimum-window-substring/solution.py %}
 
 > 👇 循环套循环
 
-{% asset_code coding/76-minimum-window-substring/solution2.py %}
+{% asset_code coding/assets/76-minimum-window-substring/solution2.py %}

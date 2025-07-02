@@ -41,7 +41,7 @@ Given an integer array `nums`, return _the length of the longest **strictly incr
 
 ## Test Cases
 
-{% asset_code coding/300-longest-increasing-subsequence/solution_test.py %}
+{% asset_code coding/assets/300-longest-increasing-subsequence/solution_test.py %}
 
 ## Thoughts
 
@@ -96,7 +96,7 @@ class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/300-longest-increasing-subsequence/solution.py %}
+{% asset_code coding/assets/300-longest-increasing-subsequence/solution.py %}
 
 ## Faster - O(n log n)
 
@@ -263,7 +263,7 @@ $$
 连线的时候，任何一个数都只能跟它右边一列中，不高于它所在行，且高于它下边数字所在行的数字相连。
 
 {% invert %}
-{% diagramsnet 300-longest-increasing-subsequence/lic-algo.drawio %}
+{% diagramsnet assets/300-longest-increasing-subsequence/lic-algo.drawio %}
 {% endinvert %}
 
 从图中可以看出，数组 `[6, 3, 5, 10, 11, 2, 9, 14, 13, 7, 4, 8, 12]` 的 LIS 长度是 5，如 `3 - 5 - 10 - 11 - 14`、`3 - 5 - 10 - 11 - 13` 或 `3 - 5 - 7 - 8 - 12`（不止这些）。
@@ -272,8 +272,8 @@ $$
 
 总的时间复杂度是 `O(n log L)`（`L` 是 LIS 长度）最坏情况下是 `O(n log n)`。空间复杂度 `O(L)`，最坏情况 `O(n)`。
 
-{% asset_code coding/300-longest-increasing-subsequence/solution_nlogn.py %}
+{% asset_code coding/assets/300-longest-increasing-subsequence/solution_nlogn.py %}
 
 其中 `buffer` 的长度始终不会超出当前处理完的原数组长度，于是可以直接利用原数组的空间，额外的空间复杂度 `O(1)`。
 
-{% asset_code coding/300-longest-increasing-subsequence/solution_nlogn_1.py %}
+{% asset_code coding/assets/300-longest-increasing-subsequence/solution_nlogn_1.py %}

@@ -56,7 +56,7 @@ class Solution:
     def removeOccurrences(self, s: str, part: str) -> str:
 ```
 
-{% asset_code coding/1910-remove-all-occurrences-of-a-substring/solution_test.py %}
+{% asset_code coding/assets/1910-remove-all-occurrences-of-a-substring/solution_test.py %}
 
 ## Thoughts
 
@@ -68,4 +68,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1910-remove-all-occurrences-of-a-substring/solution.py %}
+{% asset_code coding/assets/1910-remove-all-occurrences-of-a-substring/solution.py %}

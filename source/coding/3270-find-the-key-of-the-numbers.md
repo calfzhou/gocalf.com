@@ -54,10 +54,10 @@ class Solution:
     def generateKey(self, num1: int, num2: int, num3: int) -> int:
 ```
 
-{% asset_code coding/3270-find-the-key-of-the-numbers/solution_test.py %}
+{% asset_code coding/assets/3270-find-the-key-of-the-numbers/solution_test.py %}
 
 ## Thoughts
 
 ## Code
 
-{% asset_code coding/3270-find-the-key-of-the-numbers/solution.py %}
+{% asset_code coding/assets/3270-find-the-key-of-the-numbers/solution.py %}

@@ -59,7 +59,7 @@ class Solution:
     def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:
 ```
 
-{% asset_code coding/3264-final-array-state-after-k-multiplication-operations-i/solution_test.py %}
+{% asset_code coding/assets/3264-final-array-state-after-k-multiplication-operations-i/solution_test.py %}
 
 ## Thoughts
 
@@ -73,8 +73,8 @@ class Solution:
 
 ## Min Heap
 
-{% asset_code coding/3264-final-array-state-after-k-multiplication-operations-i/solution.py %}
+{% asset_code coding/assets/3264-final-array-state-after-k-multiplication-operations-i/solution.py %}
 
 ## Find Directly
 
-{% asset_code coding/3264-final-array-state-after-k-multiplication-operations-i/solution2.py %}
+{% asset_code coding/assets/3264-final-array-state-after-k-multiplication-operations-i/solution2.py %}

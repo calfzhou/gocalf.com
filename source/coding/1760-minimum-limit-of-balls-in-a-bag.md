@@ -58,7 +58,7 @@ class Solution:
     def minimumSize(self, nums: List[int], maxOperations: int) -> int:
 ```
 
-{% asset_code coding/1760-minimum-limit-of-balls-in-a-bag/solution_test.py %}
+{% asset_code coding/assets/1760-minimum-limit-of-balls-in-a-bag/solution_test.py %}
 
 ## Thoughts
 
@@ -82,7 +82,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1760-minimum-limit-of-balls-in-a-bag/solution.py %}
+{% asset_code coding/assets/1760-minimum-limit-of-balls-in-a-bag/solution.py %}
 
 ## 二分法
 
@@ -98,4 +98,4 @@ class Solution:
 
 时间复杂度应该小于 `O(n log n)`（循环 `log n` 次，每次用 `O(n)` 时间计算所有数字拆到目标值需要的次数），空间复杂度 `O(1)`。实际跑的时间跟上边差不多，略快一些些。
 
-{% asset_code coding/1760-minimum-limit-of-balls-in-a-bag/solution2.py %}
+{% asset_code coding/assets/1760-minimum-limit-of-balls-in-a-bag/solution2.py %}

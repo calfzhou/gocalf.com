@@ -40,7 +40,7 @@ class Solution:
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
 ```
 
-{% asset_code coding/1092-shortest-common-supersequence/solution_test.py %}
+{% asset_code coding/assets/1092-shortest-common-supersequence/solution_test.py %}
 
 ## Thoughts
 
@@ -53,7 +53,7 @@ class Solution:
 以 `str1 = "abac"`、`str2 = "cab"` 为例，根据 `lcs(i, j)` 表格求出 LCS 和 SCS 的过程如下图示：
 
 {% invert %}
-{% diagramsnet 1092-shortest-common-supersequence/lcs_scs.drawio %}
+{% diagramsnet assets/1092-shortest-common-supersequence/lcs_scs.drawio %}
 {% endinvert %}
 
 按上边提到的规则，找到从 `(m, n)` 到 `(0, 0)` 的路径。对于除了终点的任何一个格子，向上走的取所在行对应的字符（取自 str1），向左走的取所在列对应的字符（取自 str2），斜向左上走的说明所在行和列的字符相同。
@@ -62,4 +62,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1092-shortest-common-supersequence/solution.py %}
+{% asset_code coding/assets/1092-shortest-common-supersequence/solution.py %}

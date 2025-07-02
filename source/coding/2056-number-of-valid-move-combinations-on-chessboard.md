@@ -49,7 +49,7 @@ Return _the number of **valid** move combinations_.
 **Example 1:**
 
 {% invert %}
-![case1](2056-number-of-valid-move-combinations-on-chessboard/case1.png)
+![case1](assets/2056-number-of-valid-move-combinations-on-chessboard/case1.png)
 {% endinvert %}
 
 > Input: `pieces = ["rook"], positions = [[1,1]]`
@@ -59,7 +59,7 @@ Return _the number of **valid** move combinations_.
 **Example 2:**
 
 {% invert %}
-![case1](2056-number-of-valid-move-combinations-on-chessboard/case2.png)
+![case1](assets/2056-number-of-valid-move-combinations-on-chessboard/case2.png)
 {% endinvert %}
 
 > Input: `pieces = ["queen"], positions = [[1,1]]`
@@ -69,7 +69,7 @@ Return _the number of **valid** move combinations_.
 **Example 3:**
 
 {% invert %}
-![case1](2056-number-of-valid-move-combinations-on-chessboard/case3.png)
+![case1](assets/2056-number-of-valid-move-combinations-on-chessboard/case3.png)
 {% endinvert %}
 
 > Input: `pieces = ["bishop"], positions = [[4,3]]`
@@ -79,7 +79,7 @@ Return _the number of **valid** move combinations_.
 **Example 4:**
 
 {% invert %}
-![case1](2056-number-of-valid-move-combinations-on-chessboard/case4.png)
+![case1](assets/2056-number-of-valid-move-combinations-on-chessboard/case4.png)
 {% endinvert %}
 
 > `输入：pieces = ["rook","rook"], positions = [[1,1],[8,8]]`
@@ -96,7 +96,7 @@ Return _the number of **valid** move combinations_.
 **Example 5:**
 
 {% invert %}
-![case1](2056-number-of-valid-move-combinations-on-chessboard/case5.png)
+![case1](assets/2056-number-of-valid-move-combinations-on-chessboard/case5.png)
 {% endinvert %}
 
 > `输入：pieces = ["queen","bishop"], positions = [[5,7],[3,4]]`
@@ -126,7 +126,7 @@ class Solution:
     def countCombinations(self, pieces: List[str], positions: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2056-number-of-valid-move-combinations-on-chessboard/solution_test.py %}
+{% asset_code coding/assets/2056-number-of-valid-move-combinations-on-chessboard/solution_test.py %}
 
 ## Thoughts
 
@@ -166,4 +166,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2056-number-of-valid-move-combinations-on-chessboard/solution.py %}
+{% asset_code coding/assets/2056-number-of-valid-move-combinations-on-chessboard/solution.py %}

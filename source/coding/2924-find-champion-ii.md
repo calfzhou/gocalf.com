@@ -28,7 +28,7 @@ Return _the team that will be the **champion** of the tournament if there is a *
 **Example 1:**
 
 {% invert %}
-![case1](2924-find-champion-ii/case1.png)
+![case1](assets/2924-find-champion-ii/case1.png)
 {% endinvert %}
 
 > Input: `n = 3, edges = [[0,1],[1,2]]`
@@ -38,7 +38,7 @@ Return _the team that will be the **champion** of the tournament if there is a *
 **Example 2:**
 
 {% invert %}
-![case2](2924-find-champion-ii/case2.png)
+![case2](assets/2924-find-champion-ii/case2.png)
 {% endinvert %}
 
 Input: `n = 4, edges = [[0,2],[1,3],[1,2]]`
@@ -63,7 +63,7 @@ class Solution:
     def findChampion(self, n: int, edges: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2924-find-champion-ii/solution_test.py %}
+{% asset_code coding/assets/2924-find-champion-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -75,4 +75,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2924-find-champion-ii/solution.py %}
+{% asset_code coding/assets/2924-find-champion-ii/solution.py %}

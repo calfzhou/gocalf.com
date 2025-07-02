@@ -60,7 +60,7 @@ class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
 ```
 
-{% asset_code coding/1298-maximum-candies-you-can-get-from-boxes/solution_test.py %}
+{% asset_code coding/assets/1298-maximum-candies-you-can-get-from-boxes/solution_test.py %}
 
 ## Thoughts
 
@@ -74,4 +74,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1298-maximum-candies-you-can-get-from-boxes/solution.py %}
+{% asset_code coding/assets/1298-maximum-candies-you-can-get-from-boxes/solution.py %}

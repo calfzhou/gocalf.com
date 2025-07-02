@@ -46,7 +46,7 @@ class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/435-non-overlapping-intervals/solution_test.py %}
+{% asset_code coding/assets/435-non-overlapping-intervals/solution_test.py %}
 
 ## Thoughts
 
@@ -97,7 +97,7 @@ $$
 
 ## Code
 
-{% asset_code coding/435-non-overlapping-intervals/solution.py %}
+{% asset_code coding/assets/435-non-overlapping-intervals/solution.py %}
 
 ## Faster
 
@@ -133,4 +133,4 @@ $$
 
 虽然总的时间复杂度还是 `O(n log n)`，但遍历部分下降到 `O(n)`，还是能快一些。如果用 in-place 排序，附加的空间复杂度降为 `O(1)`。
 
-{% asset_code coding/435-non-overlapping-intervals/solution2.py %}
+{% asset_code coding/assets/435-non-overlapping-intervals/solution2.py %}

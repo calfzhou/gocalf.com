@@ -73,7 +73,7 @@ class Solution:
     def minimumCoins(self, prices: List[int]) -> int:
 ```
 
-{% asset_code coding/2944-minimum-number-of-coins-for-fruits/solution_test.py %}
+{% asset_code coding/assets/2944-minimum-number-of-coins-for-fruits/solution_test.py %}
 
 ## Thoughts
 
@@ -102,7 +102,7 @@ $$
 
 ## Code
 
-{% asset_code coding/2944-minimum-number-of-coins-for-fruits/solution.py %}
+{% asset_code coding/assets/2944-minimum-number-of-coins-for-fruits/solution.py %}
 
 ## Faster
 
@@ -127,4 +127,4 @@ $$
 
 时间复杂度 `O(n)`，空间复杂度 `O(n)`。
 
-{% asset_code coding/2944-minimum-number-of-coins-for-fruits/solution2.py %}
+{% asset_code coding/assets/2944-minimum-number-of-coins-for-fruits/solution2.py %}

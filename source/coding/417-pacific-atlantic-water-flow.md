@@ -20,7 +20,7 @@ Return _a **2D list** of grid coordinates_ `result` _where_ `result[i] = [ri, ci
 
 **Example 1:**
 
-![case1](417-pacific-atlantic-water-flow/case1.png)
+![case1](assets/417-pacific-atlantic-water-flow/case1.png)
 
 > Input: `heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]`
 > Output: `[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]`
@@ -65,7 +65,7 @@ class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
 ```
 
-{% asset_code coding/417-pacific-atlantic-water-flow/solution_test.py %}
+{% asset_code coding/assets/417-pacific-atlantic-water-flow/solution_test.py %}
 
 ## Thoughts
 
@@ -79,4 +79,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/417-pacific-atlantic-water-flow/solution.py %}
+{% asset_code coding/assets/417-pacific-atlantic-water-flow/solution.py %}

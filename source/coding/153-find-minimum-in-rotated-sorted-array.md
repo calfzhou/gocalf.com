@@ -54,7 +54,7 @@ class Solution:
     def findMin(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/153-find-minimum-in-rotated-sorted-array/solution_test.py %}
+{% asset_code coding/assets/153-find-minimum-in-rotated-sorted-array/solution_test.py %}
 
 ## Thoughts
 
@@ -68,4 +68,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/153-find-minimum-in-rotated-sorted-array/solution.py %}
+{% asset_code coding/assets/153-find-minimum-in-rotated-sorted-array/solution.py %}

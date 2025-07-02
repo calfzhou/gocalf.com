@@ -23,7 +23,7 @@ Return the _2D grid_ after applying shift operation `k` times.
 **Example 1:**
 
 {% invert %}
-![case1|400](1260-shift-2d-grid/case1.png)
+![case1](assets/1260-shift-2d-grid/case1.png)
 {% endinvert %}
 
 > Input: `grid = [[1,2,3],[4,5,6],[7,8,9]], k = 1`
@@ -32,7 +32,7 @@ Return the _2D grid_ after applying shift operation `k` times.
 **Example 2:**
 
 {% invert %}
-![case2|400](1260-shift-2d-grid/case2.png)
+![case2](assets/1260-shift-2d-grid/case2.png)
 {% endinvert %}
 
 > Input: `grid = [[3,8,1,9],[19,7,2,5],[4,6,11,10],[12,0,21,13]], k = 4`
@@ -59,7 +59,7 @@ class Solution:
     def shiftGrid(self, grid: List[List[int]], k: int) -> List[List[int]]:
 ```
 
-{% asset_code coding/1260-shift-2d-grid/solution_test.py %}
+{% asset_code coding/assets/1260-shift-2d-grid/solution_test.py %}
 
 ## Thoughts
 
@@ -67,4 +67,4 @@ In-place 轮换比较麻烦，一般的实现方式也是需要用 `O(m * n)` �
 
 ## Code
 
-{% asset_code coding/1260-shift-2d-grid/solution.py %}
+{% asset_code coding/assets/1260-shift-2d-grid/solution.py %}

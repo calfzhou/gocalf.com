@@ -66,7 +66,7 @@ class Solution:
     def countBalls(self, lowLimit: int, highLimit: int) -> int:
 ```
 
-{% asset_code coding/1742-maximum-number-of-balls-in-a-box/solution_test.py %}
+{% asset_code coding/assets/1742-maximum-number-of-balls-in-a-box/solution_test.py %}
 
 ## Thoughts
 
@@ -78,4 +78,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1742-maximum-number-of-balls-in-a-box/solution.py %}
+{% asset_code coding/assets/1742-maximum-number-of-balls-in-a-box/solution.py %}

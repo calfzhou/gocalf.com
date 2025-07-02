@@ -42,7 +42,7 @@ class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
 ```
 
-{% asset_code coding/46-permutations/solution_test.py %}
+{% asset_code coding/assets/46-permutations/solution_test.py %}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/46-permutations/solution.py %}
+{% asset_code coding/assets/46-permutations/solution.py %}

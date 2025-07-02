@@ -20,7 +20,7 @@ Given the `root` of a binary tree, return _the maximum **path sum** of any **non
 **Example 1:**
 
 {% invert %}
-![case1](124-binary-tree-maximum-path-sum/case1.png)
+![case1](assets/124-binary-tree-maximum-path-sum/case1.png)
 {% endinvert %}
 
 > Input: `root = [1,2,3]`
@@ -30,7 +30,7 @@ Given the `root` of a binary tree, return _the maximum **path sum** of any **non
 **Example 2:**
 
 {% invert %}
-![case2](124-binary-tree-maximum-path-sum/case2.png)
+![case2](assets/124-binary-tree-maximum-path-sum/case2.png)
 {% endinvert %}
 
 > Input: `root = [-10,9,20,null,null,15,7]`
@@ -55,7 +55,7 @@ class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
 ```
 
-{% asset_code coding/124-binary-tree-maximum-path-sum/solution_test.py %}
+{% asset_code coding/assets/124-binary-tree-maximum-path-sum/solution_test.py %}
 
 ## Thoughts
 
@@ -83,4 +83,4 @@ $$
 
 ## Code
 
-{% asset_code coding/124-binary-tree-maximum-path-sum/solution.py %}
+{% asset_code coding/assets/124-binary-tree-maximum-path-sum/solution.py %}

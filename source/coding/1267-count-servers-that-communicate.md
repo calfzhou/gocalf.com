@@ -17,7 +17,7 @@ Return the number of servers that communicate with any other server.
 **Example 1:**
 
 {% invert %}
-![case1](1267-count-servers-that-communicate/case1.png)
+![case1](assets/1267-count-servers-that-communicate/case1.png)
 {% endinvert %}
 
 > Input: `grid = [[1,0],[0,1]]`
@@ -27,7 +27,7 @@ Return the number of servers that communicate with any other server.
 **Example 2:**
 
 {% invert %}
-![case2](1267-count-servers-that-communicate/case2.png)
+![case2](assets/1267-count-servers-that-communicate/case2.png)
 {% endinvert %}
 
 > Input: `grid = [[1,0],[1,1]]`
@@ -37,7 +37,7 @@ Return the number of servers that communicate with any other server.
 **Example 3:**
 
 {% invert %}
-![case3](1267-count-servers-that-communicate/case3.png)
+![case3](assets/1267-count-servers-that-communicate/case3.png)
 {% endinvert %}
 
 > Input: `grid = [[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]]`
@@ -59,7 +59,7 @@ class Solution:
     def countServers(self, grid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/1267-count-servers-that-communicate/solution_test.py %}
+{% asset_code coding/assets/1267-count-servers-that-communicate/solution_test.py %}
 
 ## Thoughts
 
@@ -73,4 +73,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1267-count-servers-that-communicate/solution.py %}
+{% asset_code coding/assets/1267-count-servers-that-communicate/solution.py %}

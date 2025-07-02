@@ -45,7 +45,7 @@ class Solution:
     def jump(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/45-jump-game-ii/solution_test.py %}
+{% asset_code coding/assets/45-jump-game-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -65,7 +65,7 @@ $$
 
 ## Code
 
-{% asset_code coding/45-jump-game-ii/solution.py %}
+{% asset_code coding/assets/45-jump-game-ii/solution.py %}
 
 ## Faster
 

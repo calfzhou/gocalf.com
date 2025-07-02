@@ -47,7 +47,7 @@ class Solution:
     def evenOddBit(self, n: int) -> List[int]:
 ```
 
-{% asset_code coding/2595-number-of-even-and-odd-bits/solution_test.py %}
+{% asset_code coding/assets/2595-number-of-even-and-odd-bits/solution_test.py %}
 
 ## Thoughts
 
@@ -55,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2595-number-of-even-and-odd-bits/solution.py %}
+{% asset_code coding/assets/2595-number-of-even-and-odd-bits/solution.py %}

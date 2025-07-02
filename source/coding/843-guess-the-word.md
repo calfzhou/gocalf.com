@@ -67,7 +67,7 @@ class Solution:
     def findSecretWord(self, words: List[str], master: 'Master') -> None:
 ```
 
-{% asset_code coding/843-guess-the-word/solution_test.py %}
+{% asset_code coding/assets/843-guess-the-word/solution_test.py %}
 
 ## Thoughts
 
@@ -81,7 +81,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/843-guess-the-word/solution.py %}
+{% asset_code coding/assets/843-guess-the-word/solution.py %}
 
 ## Faster but May Fail
 
@@ -89,4 +89,4 @@ class Solution:
 
 每次随机挑一个候选单词去猜测，然后删掉匹配度不一致的其他候选词。时间复杂度是 `O(k * n)`，空间复杂度 `O(n)`。但是猜测的数量就不太稳定，有时候提交后测试会失败（猜测数量达到上限）。
 
-{% asset_code coding/843-guess-the-word/solution2.py %}
+{% asset_code coding/assets/843-guess-the-word/solution2.py %}

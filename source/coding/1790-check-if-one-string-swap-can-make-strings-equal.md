@@ -45,7 +45,7 @@ class Solution:
     def areAlmostEqual(self, s1: str, s2: str) -> bool:
 ```
 
-{% asset_code coding/1790-check-if-one-string-swap-can-make-strings-equal/solution_test.py %}
+{% asset_code coding/assets/1790-check-if-one-string-swap-can-make-strings-equal/solution_test.py %}
 
 ## Thoughts
 
@@ -61,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1790-check-if-one-string-swap-can-make-strings-equal/solution.py %}
+{% asset_code coding/assets/1790-check-if-one-string-swap-can-make-strings-equal/solution.py %}

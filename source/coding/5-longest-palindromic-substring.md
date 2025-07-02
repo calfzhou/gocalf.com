@@ -38,7 +38,7 @@ class Solution:
     def longestPalindrome(self, s: str) -> str:
 ```
 
-{% asset_code coding/5-longest-palindromic-substring/solution_test.py %}
+{% asset_code coding/assets/5-longest-palindromic-substring/solution_test.py %}
 
 ## Thoughts
 
@@ -61,7 +61,7 @@ Palindromic string（回文）一定是按中间位置对称的。注意奇数�
 
 ## Code
 
-{% asset_code coding/5-longest-palindromic-substring/solution.py %}
+{% asset_code coding/assets/5-longest-palindromic-substring/solution.py %}
 
 ## Extra
 

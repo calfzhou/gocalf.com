@@ -15,7 +15,7 @@ Given an binary array `nums` and an integer `k`, return `true` _if all_ `1`_'s a
 **Example 1:**
 
 {% invert %}
-![case1](1437-check-if-all-1s-are-at-least-length-k-places-away/case1.png)
+![case1](assets/1437-check-if-all-1s-are-at-least-length-k-places-away/case1.png)
 {% endinvert %}
 
 > Input: `nums = [1,0,0,0,1,0,0,1], k = 2`
@@ -25,7 +25,7 @@ Given an binary array `nums` and an integer `k`, return `true` _if all_ `1`_'s a
 **Example 2:**
 
 {% invert %}
-![case2](1437-check-if-all-1s-are-at-least-length-k-places-away/case2.png)
+![case2](assets/1437-check-if-all-1s-are-at-least-length-k-places-away/case2.png)
 {% endinvert %}
 
 > Input: `nums = [1,0,0,1,0,1], k = 2`
@@ -45,7 +45,7 @@ class Solution:
     def kLengthApart(self, nums: List[int], k: int) -> bool:
 ```
 
-{% asset_code coding/1437-check-if-all-1s-are-at-least-length-k-places-away/solution_test.py %}
+{% asset_code coding/assets/1437-check-if-all-1s-are-at-least-length-k-places-away/solution_test.py %}
 
 ## Thoughts
 
@@ -53,4 +53,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1437-check-if-all-1s-are-at-least-length-k-places-away/solution.py %}
+{% asset_code coding/assets/1437-check-if-all-1s-are-at-least-length-k-places-away/solution.py %}

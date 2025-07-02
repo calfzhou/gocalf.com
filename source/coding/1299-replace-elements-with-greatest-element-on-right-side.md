@@ -45,7 +45,7 @@ class Solution:
     def replaceElements(self, arr: List[int]) -> List[int]:
 ```
 
-{% asset_code coding/1299-replace-elements-with-greatest-element-on-right-side/solution_test.py %}
+{% asset_code coding/assets/1299-replace-elements-with-greatest-element-on-right-side/solution_test.py %}
 
 ## Thoughts
 
@@ -55,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1299-replace-elements-with-greatest-element-on-right-side/solution.py %}
+{% asset_code coding/assets/1299-replace-elements-with-greatest-element-on-right-side/solution.py %}

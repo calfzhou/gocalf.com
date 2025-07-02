@@ -17,7 +17,7 @@ We will send a signal from a given node `k`. Return _the **minimum** time it tak
 **Example 1:**
 
 {% invert %}
-![case1](743-network-delay-time/case1.png)
+![case1](assets/743-network-delay-time/case1.png)
 {% endinvert %}
 
 > Input: `times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2`
@@ -50,7 +50,7 @@ class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
 ```
 
-{% asset_code coding/743-network-delay-time/solution_test.py %}
+{% asset_code coding/assets/743-network-delay-time/solution_test.py %}
 
 ## Thoughts
 
@@ -68,4 +68,4 @@ class Solution:
 
 > 这里直接借助 Python 自带的 [heapq](https://docs.python.org/3/library/heapq.html) 辅助堆的操作。
 
-{% asset_code coding/743-network-delay-time/solution.py %}
+{% asset_code coding/assets/743-network-delay-time/solution.py %}

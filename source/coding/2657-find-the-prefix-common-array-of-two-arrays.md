@@ -48,7 +48,7 @@ class Solution:
     def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
 ```
 
-{% asset_code coding/2657-find-the-prefix-common-array-of-two-arrays/solution_test.py %}
+{% asset_code coding/assets/2657-find-the-prefix-common-array-of-two-arrays/solution_test.py %}
 
 ## Thoughts
 
@@ -60,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2657-find-the-prefix-common-array-of-two-arrays/solution.py %}
+{% asset_code coding/assets/2657-find-the-prefix-common-array-of-two-arrays/solution.py %}

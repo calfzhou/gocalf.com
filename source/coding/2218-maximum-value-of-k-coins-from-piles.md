@@ -20,7 +20,7 @@ Given a list `piles`, where `piles[i]` is a list of integers denoting the compos
 **Example 1:**
 
 {% invert %}
-![case1|600](2218-maximum-value-of-k-coins-from-piles/case1.png)
+![case1](assets/2218-maximum-value-of-k-coins-from-piles/case1.png)
 {% endinvert %}
 
 > Input: `piles = [[1,100,3],[7,8,9]], k = 2`
@@ -50,7 +50,7 @@ class Solution:
     def maxValueOfCoins(self, piles: List[List[int]], k: int) -> int:
 ```
 
-{% asset_code coding/2218-maximum-value-of-k-coins-from-piles/solution_test.py %}
+{% asset_code coding/assets/2218-maximum-value-of-k-coins-from-piles/solution_test.py %}
 
 ## Thoughts
 
@@ -83,4 +83,4 @@ $$
 
 ## Code
 
-{% asset_code coding/2218-maximum-value-of-k-coins-from-piles/solution.py %}
+{% asset_code coding/assets/2218-maximum-value-of-k-coins-from-piles/solution.py %}

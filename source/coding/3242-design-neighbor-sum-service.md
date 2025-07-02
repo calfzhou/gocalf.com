@@ -17,7 +17,7 @@ Implement the `NeighborSum` class:
 - `int diagonalSum(int value)` returns the **sum** of elements which are diagonal neighbors of `value`, that is either to the top-left, top-right, bottom-left, or bottom-right of `value` in `grid`.
 
 {% invert %}
-![problem](3242-design-neighbor-sum-service/problem.png)
+![problem](assets/3242-design-neighbor-sum-service/problem.png)
 {% endinvert %}
 
 <https://leetcode.cn/problems/design-neighbor-sum-service/>
@@ -30,7 +30,7 @@ Implement the `NeighborSum` class:
 > Output: `[null, 6, 16, 16, 4]`
 > Explanation:
 > {% invert %}
-![case1](3242-design-neighbor-sum-service/case1.png)
+![case1](assets/3242-design-neighbor-sum-service/case1.png)
 {% endinvert %}
 >
 > - The adjacent neighbors of 1 are 0, 2, and 4.
@@ -46,7 +46,7 @@ Implement the `NeighborSum` class:
 > Output: `[null, 23, 45]`
 > Explanation:
 > {% invert %}
-![case2](3242-design-neighbor-sum-service/case2.png)
+![case2](assets/3242-design-neighbor-sum-service/case2.png)
 {% endinvert %}
 >
 > - The adjacent neighbors of 15 are 0, 10, 7, and 6.
@@ -81,7 +81,7 @@ class NeighborSum:
 # param_2 = obj.diagonalSum(value)
 ```
 
-{% asset_code coding/3242-design-neighbor-sum-service/solution_test.py %}
+{% asset_code coding/assets/3242-design-neighbor-sum-service/solution_test.py %}
 
 ## Thoughts
 
@@ -100,4 +100,4 @@ class NeighborSum:
 
 ## Code
 
-{% asset_code coding/3242-design-neighbor-sum-service/solution.py %}
+{% asset_code coding/assets/3242-design-neighbor-sum-service/solution.py %}

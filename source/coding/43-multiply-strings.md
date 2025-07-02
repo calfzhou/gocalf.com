@@ -37,7 +37,7 @@ class Solution:
     def multiply(self, num1: str, num2: str) -> str:
 ```
 
-{% asset_code coding/43-multiply-strings/solution_test.py %}
+{% asset_code coding/assets/43-multiply-strings/solution_test.py %}
 
 ## Thoughts
 
@@ -47,4 +47,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/43-multiply-strings/solution.py %}
+{% asset_code coding/assets/43-multiply-strings/solution.py %}

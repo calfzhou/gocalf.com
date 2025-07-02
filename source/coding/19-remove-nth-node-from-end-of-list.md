@@ -15,7 +15,7 @@ Given the `head` of a linked list, remove the `nᵗʰ` node from the end of the 
 **Example 1:**
 
 {% invert %}
-![case1](19-remove-nth-node-from-end-of-list/case1.png)
+![case1](assets/19-remove-nth-node-from-end-of-list/case1.png)
 {% endinvert %}
 
 > Input: `head = [1,2,3,4,5], n = 2`
@@ -50,7 +50,7 @@ class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
 ```
 
-{% asset_code coding/19-remove-nth-node-from-end-of-list/solution_test.py %}
+{% asset_code coding/assets/19-remove-nth-node-from-end-of-list/solution_test.py %}
 
 ## Thoughts
 
@@ -60,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/19-remove-nth-node-from-end-of-list/solution.py %}
+{% asset_code coding/assets/19-remove-nth-node-from-end-of-list/solution.py %}

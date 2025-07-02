@@ -42,7 +42,7 @@ class Solution:
     def findClosestNumber(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/2239-find-closest-number-to-zero/solution_test.py %}
+{% asset_code coding/assets/2239-find-closest-number-to-zero/solution_test.py %}
 
 ## Thoughts
 
@@ -50,4 +50,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2239-find-closest-number-to-zero/solution.py %}
+{% asset_code coding/assets/2239-find-closest-number-to-zero/solution.py %}

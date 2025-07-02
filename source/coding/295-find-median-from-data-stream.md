@@ -72,7 +72,7 @@ class MedianFinder:
 # param_2 = obj.findMedian()
 ```
 
-{% asset_code coding/295-find-median-from-data-stream/solution_test.py %}
+{% asset_code coding/assets/295-find-median-from-data-stream/solution_test.py %}
 
 ## Thoughts
 
@@ -90,7 +90,7 @@ class MedianFinder:
 
 ## Code
 
-{% asset_code coding/295-find-median-from-data-stream/solution.py %}
+{% asset_code coding/assets/295-find-median-from-data-stream/solution.py %}
 
 ## Follow up 1
 
@@ -100,7 +100,7 @@ class MedianFinder:
 
 `addNum` 和 `findMedian` 的时间和空间复杂度都是 `O(1)`。
 
-{% asset_code coding/295-find-median-from-data-stream/solution_follow1.py %}
+{% asset_code coding/assets/295-find-median-from-data-stream/solution_follow1.py %}
 
 ## Follow up 2
 

@@ -18,7 +18,7 @@ Given the `root` of a binary tree, return _the postorder traversal of its nodes
 > Output: `[3,2,1]`
 > Explanation:
 > {% invert %}
-![case1|200](145-binary-tree-postorder-traversal/case1.png)
+![case1](assets/145-binary-tree-postorder-traversal/case1.png)
 {% endinvert %}
 
 **Example 2:**
@@ -27,7 +27,7 @@ Given the `root` of a binary tree, return _the postorder traversal of its nodes
 > Output: `[4,6,7,5,2,9,8,3,1]`
 > Explanation:
 > {% invert %}
-![case2|350](145-binary-tree-postorder-traversal/case2.png)
+![case2](assets/145-binary-tree-postorder-traversal/case2.png)
 {% endinvert %}
 
 **Example 3:**
@@ -60,7 +60,7 @@ class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
 ```
 
-{% asset_code coding/145-binary-tree-postorder-traversal/solution_test.py %}
+{% asset_code coding/assets/145-binary-tree-postorder-traversal/solution_test.py %}
 
 ## Thoughts
 
@@ -68,4 +68,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/145-binary-tree-postorder-traversal/solution.py %}
+{% asset_code coding/assets/145-binary-tree-postorder-traversal/solution.py %}

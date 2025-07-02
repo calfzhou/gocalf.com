@@ -38,7 +38,7 @@ class Solution:
     def rotateString(self, s: str, goal: str) -> bool:
 ```
 
-{% asset_code coding/796-rotate-string/solution_test.py %}
+{% asset_code coding/assets/796-rotate-string/solution_test.py %}
 
 ## Thoughts
 
@@ -48,4 +48,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/796-rotate-string/solution.py %}
+{% asset_code coding/assets/796-rotate-string/solution.py %}

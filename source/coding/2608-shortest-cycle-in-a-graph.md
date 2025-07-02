@@ -19,7 +19,7 @@ A cycle is a path that starts and ends at the same node, and each edge in the pa
 **Example 1:**
 
 {% invert %}
-![case1](2608-shortest-cycle-in-a-graph/case1.png)
+![case1](assets/2608-shortest-cycle-in-a-graph/case1.png)
 {% endinvert %}
 
 > Input: `n = 7, edges = [[0,1],[1,2],[2,0],[3,4],[4,5],[5,6],[6,3]]`
@@ -29,7 +29,7 @@ A cycle is a path that starts and ends at the same node, and each edge in the pa
 **Example 2:**
 
 {% invert %}
-![case2](2608-shortest-cycle-in-a-graph/case2.png)
+![case2](assets/2608-shortest-cycle-in-a-graph/case2.png)
 {% endinvert %}
 
 > Input: `n = 4, edges = [[0,1],[0,2]]`
@@ -52,7 +52,7 @@ class Solution:
     def findShortestCycle(self, n: int, edges: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2608-shortest-cycle-in-a-graph/solution_test.py %}
+{% asset_code coding/assets/2608-shortest-cycle-in-a-graph/solution_test.py %}
 
 ## Thoughts
 
@@ -61,13 +61,13 @@ class Solution:
 如果 r 刚好在环上，则环长等于 `d(u) + d(v) + 1`，而且易知这就是经过 r 的最小的环。如：
 
 {% invert %}
-{% diagramsnet 2608-shortest-cycle-in-a-graph/bfs-1.drawio %}
+{% diagramsnet assets/2608-shortest-cycle-in-a-graph/bfs-1.drawio %}
 {% endinvert %}
 
 如果 r 不在环上，则环长小于 `d(u) + d(v) + 1`。如：
 
 {% invert %}
-{% diagramsnet 2608-shortest-cycle-in-a-graph/bfs-2.drawio %}
+{% diagramsnet assets/2608-shortest-cycle-in-a-graph/bfs-2.drawio %}
 {% endinvert %}
 
 对所有的顶点进行同样的处理，一定可以（当起点是最小环上的某个顶点的时候）得到最小的环长。
@@ -76,7 +76,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2608-shortest-cycle-in-a-graph/solution.py %}
+{% asset_code coding/assets/2608-shortest-cycle-in-a-graph/solution.py %}
 
 ## Faster
 
@@ -86,4 +86,4 @@ class Solution:
 
 最坏时间复杂度是 `O(E * n)`。空间复杂度 `O(n + E)`。
 
-{% asset_code coding/2608-shortest-cycle-in-a-graph/solution2.py %}
+{% asset_code coding/assets/2608-shortest-cycle-in-a-graph/solution2.py %}

@@ -11,7 +11,7 @@ updated: 2025-01-19 21:21:24
 
 Alice is texting Bob using her phone. The **mapping** of digits to letters is shown in the figure below.
 
-![telephone|200](2266-count-number-of-texts/telephone.png)
+![telephone](assets/2266-count-number-of-texts/telephone.png)
 
 In order to **add** a letter, Alice has to **press** the key of the corresponding digit `i` times, where `i` is the position of the letter in the key.
 
@@ -57,7 +57,7 @@ class Solution:
     def countTexts(self, pressedKeys: str) -> int:
 ```
 
-{% asset_code coding/2266-count-number-of-texts/solution_test.py %}
+{% asset_code coding/assets/2266-count-number-of-texts/solution_test.py %}
 
 ## Thoughts
 
@@ -75,4 +75,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2266-count-number-of-texts/solution.py %}
+{% asset_code coding/assets/2266-count-number-of-texts/solution.py %}

@@ -52,7 +52,7 @@ class Solution:
     def validSubstringCount(self, word1: str, word2: str) -> int:
 ```
 
-{% asset_code coding/3297-count-substrings-that-can-be-rearranged-to-contain-a-string-i/solution_test.py %}
+{% asset_code coding/assets/3297-count-substrings-that-can-be-rearranged-to-contain-a-string-i/solution_test.py %}
 
 ## Thoughts
 
@@ -66,4 +66,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3297-count-substrings-that-can-be-rearranged-to-contain-a-string-i/solution.py %}
+{% asset_code coding/assets/3297-count-substrings-that-can-be-rearranged-to-contain-a-string-i/solution.py %}
