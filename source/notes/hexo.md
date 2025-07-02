@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2024-07-11 20:50:21
+updated: 2025-07-02 23:04:33
 ---
 ## Hexo
 
@@ -52,7 +52,7 @@ Hexo 还是以（博客）文章（posts）为核心的，虽然 Stellar 独创�
 
 引用图片可以有几种语法：
 
-- Markdown 语法 `![alt](src)`
+- Markdown 语法 `![alt](assets/src)`
 - Hexo 提供的 `asset_img` 标签插件 `{% asset_img slug [title] %}`
 - Stellar 主题提供的 [`image` 标签插件](https://xaoxuu.com/wiki/stellar/tag-plugins/express/#image-%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE) `{% image src [description] %}`
 
@@ -86,17 +86,19 @@ Markdown | `post-slug/filename` | {% mark ✗ color:red %} | {% mark ✓ color:g
 
 #### 笔记（Note）中引用图片
 
+> TODO: 关于 assets 目录的变化。
+
 Syntax | Slug / Src | Hexo | VS Code | Demo
 --|--|--|--|--
-Markdown | `note-slug/filename` | {% mark ✓ color:green %} | {% mark ✓ color:green %} | ![demo](hexo/demo.png)
-Markdown | `notes/note-slug/filename` | {% mark ✗ color:red %} | {% mark ✗ color:red %} | ![demo](notes/hexo/demo.png)
-Markdown | `../notes/note-slug/filename` | {% mark ✓ color:green %} ~~`/../` 没影响~~ | {% mark ✓ color:green %} | ![demo](../notes/hexo/demo.png)
-`asset_img` | `filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %} | {% asset_img demo.png %}
-`asset_img` | `note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %} | {% asset_img hexo/demo.png %}
-`asset_img` | `notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✗ color:red %} | {% asset_img notes/hexo/demo.png %}
-`asset_img` | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %} | {% asset_img ../notes/hexo/demo.png %}
-`image` | `note-slug/filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %} | {% image hexo/demo.png %}
-`image` | `../notes/note-slug/filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %} | {% image ../notes/hexo/demo.png %}
+Markdown | `note-slug/filename` | {% mark ✓ color:green %} | {% mark ✓ color:green %} | ![demo](assets/hexo/demo.png)
+Markdown | `notes/note-slug/filename` | {% mark ✗ color:red %} | {% mark ✗ color:red %} | ![demo](assets/notes/hexo/demo.png)
+Markdown | `../notes/note-slug/filename` | {% mark ✓ color:green %} ~~`/../` 没影响~~ | {% mark ✓ color:green %} | ![demo](../notes/assets/hexo/demo.png)
+`asset_img` | `filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %} | {% asset_img assets/demo.png %}
+`asset_img` | `note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %} | {% asset_img assets/hexo/demo.png %}
+`asset_img` | `notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✗ color:red %} | {% asset_img notes/assets/hexo/demo.png %}
+`asset_img` | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %} | {% asset_img ../notes/assets/hexo/demo.png %}
+`image` | `note-slug/filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %} | {% image assets/hexo/demo.png %}
+`image` | `../notes/note-slug/filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %} | {% image ../notes/assets/hexo/demo.png %}
 
 > 其他页面可能类似，待确认。
 
@@ -132,11 +134,11 @@ pnpm add hexo-diagrams-net
 ```
 
 ``` markdown
-{% diagramsnet hexo/flowchart.drawio %}
+{% diagramsnet assets/hexo/flowchart.drawio %}
 ```
 
 {% invert %}
-{% diagramsnet hexo/flowchart.drawio %}
+{% diagramsnet assets/hexo/flowchart.drawio %}
 {% endinvert %}
 
 - 如何适配明暗主题？

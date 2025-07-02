@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - software
 date: 2025-04-26 12:32:08
-updated: 2025-04-26 12:32:08
+updated: 2025-07-02 23:04:33
 ---
 [小鹤音形 flypy](https://flypy.cc/)
 
@@ -27,7 +27,7 @@ updated: 2025-04-26 12:32:08
 ### 键位图
 
 {% invert %}
-![小鹤双拼键位图](flypy/heup.png)
+![小鹤双拼键位图](assets/flypy/heup.png)
 {% endinvert %}
 
 ### 记忆口诀
@@ -56,7 +56,7 @@ Windows Registry Editor Version 5.00
 
 > 注意：reg 文件需要用 GBK 编码，CRLF 换行。
 
-可以直接用的 reg 文件：[plypy.reg](flypy/flypy.reg)。
+可以直接用的 reg 文件：[plypy.reg](assets/flypy/flypy.reg)。
 
 或者直接在 cmd 中运行：
 
