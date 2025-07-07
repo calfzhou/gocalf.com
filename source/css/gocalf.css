@@ -2,7 +2,7 @@
 :root[data-theme="light"] .invert-when-light {
   img,
   svg {
-    filter: invert(1) hue-rotate(180deg);
+    filter: invert(1) hue-rotate(180deg) !important;
   }
 }
 
@@ -10,7 +10,7 @@
   :root:not([data-theme]) .invert-when-dark {
     img,
     svg {
-      filter: invert(1) hue-rotate(180deg);
+      filter: invert(1) hue-rotate(180deg) !important;
     }
   }
 }
