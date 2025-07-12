@@ -47,6 +47,8 @@ E | Encrypt | 加密
 
 ### 架构
 
+{% invert %}
+
 ``` mermaid
 flowchart LR
   public["公钥\n（主公钥 & 所有子公钥）\n[C][S][A][E]"]
@@ -71,6 +73,8 @@ flowchart LR
   public --- sec
   sec --- revoke
 ```
+
+{% endinvert %}
 
 ## 安装 GnuPG
 
