@@ -121,6 +121,9 @@ exclude: []
 ignore:
   - __pycache__/**
   - .pytest_cache/**
+  - .obsidian/**
+  - _templates/**
+  - .trash/**
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
