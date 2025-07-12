@@ -1,0 +1,2354 @@
+{
+  "NandGame:Levels:SIGN": {
+    "nodes": [{ "type": "SPLIT16", "x": 64.5, "y": 560, "id": "0" }],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:STACK_SUB": {
+    "code": "pop.D\npop.A\nD = A - D\npush.D",
+    "testCode": "init.stack\npush.value x0008\npush.value x0005\nsub\n# inspect top of stack. Should be 0003.\n"
+  },
+  "NandGame:Levels:READ_KEYBOARD": {
+    "code": "DEFINE KBD 0x6000\nDEFINE W_ADDR 0xFFF\n\n# Variable: the writing addr\nA = 0x1000\nD = A\nA = W_ADDR\n*A = D\n\n# Waiting for key press\nLABEL WAIT_KEY_PRESS\nA = KBD\nD = *A\nA = WAIT_KEY_PRESS\nD ; JEQ\n\n# Some key is pressing\n# Write it to next free memory\nA = W_ADDR\nA = *A\n*A = D\nA = W_ADDR\n*A = *A + 1\n\n# Waiting for key release\nLABEL WAIT_KEY_RELEASE\nA = KBD\nD = *A\nA = WAIT_KEY_RELEASE\nD ; JNE\n\n# The key has released\nA = WAIT_KEY_PRESS\nJMP\n"
+  },
+  "NandGame:Levels:STACK_IF_GOTO": {
+    "code": "pop.D\nA = label\nD ; JNE\n",
+    "testCode": "init.stack\npush.value 0\nif.goto end\n# this line should be execued\npush.value 1\nif.goto end\n# this line should not be executed:\npush.value x17\nlabel end:\n"
+  },
+  "NandGame:Levels:DFF2": {
+    "nodes": [
+      { "type": "DFF", "x": 105.5, "y": 401, "id": "0" },
+      { "type": "DFF", "x": 275.5, "y": 406, "id": "1" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:SHL": {
+    "nodes": [
+      { "type": "SPLIT16", "x": 13.5, "y": 312, "id": "0" },
+      { "type": "BUNDLE16", "x": 37.5, "y": 151, "id": "1" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "4" }, "target": { "nodeId": "1", "connectorId": "3" } },
+      { "source": { "nodeId": "0", "connectorId": "5" }, "target": { "nodeId": "1", "connectorId": "4" } },
+      { "source": { "nodeId": "0", "connectorId": "6" }, "target": { "nodeId": "1", "connectorId": "5" } },
+      { "source": { "nodeId": "0", "connectorId": "7" }, "target": { "nodeId": "1", "connectorId": "6" } },
+      { "source": { "nodeId": "0", "connectorId": "8" }, "target": { "nodeId": "1", "connectorId": "7" } },
+      { "source": { "nodeId": "0", "connectorId": "9" }, "target": { "nodeId": "1", "connectorId": "8" } },
+      { "source": { "nodeId": "0", "connectorId": "10" }, "target": { "nodeId": "1", "connectorId": "9" } },
+      { "source": { "nodeId": "0", "connectorId": "11" }, "target": { "nodeId": "1", "connectorId": "10" } },
+      { "source": { "nodeId": "0", "connectorId": "12" }, "target": { "nodeId": "1", "connectorId": "11" } },
+      { "source": { "nodeId": "0", "connectorId": "13" }, "target": { "nodeId": "1", "connectorId": "12" } },
+      { "source": { "nodeId": "0", "connectorId": "14" }, "target": { "nodeId": "1", "connectorId": "13" } },
+      { "source": { "nodeId": "0", "connectorId": "15" }, "target": { "nodeId": "1", "connectorId": "14" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:ASSEMBLER_NETWORK_RECEIVE": {
+    "code": "DEFINE C_NET_ADDR 0x6001\nDEFINE C_NET_DATA 0x01\nDEFINE C_NET_SYNC 0x02\nDEFINE C_STACK_BOTTOM_ADDR 0x1FF\n\nDEFINE V_STACK_TOP_ADDR 0x100\nDEFINE V_WRITE_ADDR 0x101\nDEFINE V_IMG_WORD 0x102\nDEFINE V_BIT_MASK 0x103\nDEFINE V_PREV_NET_SYNC 0x104\nDEFINE V_NET_DATA 0x105\n\n# Init net `sync` state\nA = C_NET_ADDR\nD = *A\nA = C_NET_SYNC\nD = D & A\nA = V_PREV_NET_SYNC\n*A = D\n\n# Init stack\nA = C_STACK_BOTTOM_ADDR\nD = A\nA = V_STACK_TOP_ADDR\n*A = D\n\n# Init image write address\nA = 0x4000\nD = A\nA = V_WRITE_ADDR\n*A = D\n\nLABEL L_IMAGE_WORD_LOOP\n\n# Call F_RECEIVE_BIT to receive the control bit\nA = L_001\nD = A\nA = V_STACK_TOP_ADDR\n*A = *A + 1\nA = *A\n*A = D\nA = F_RECEIVE_BIT\nJMP\n\nLABEL L_001\n\n# End if no more data\nA = V_NET_DATA\nD = *A\nA = L_END\nD ; JEQ\n\n# Init for receiving a word\nA = V_IMG_WORD\n*A = 0\nA = V_BIT_MASK\n*A = 1\n\n# Loop to receive 16 bits\nLABEL L_RECEIVE_BIT_LOOP\n\n# Call F_RECEIVE_BIT to receive a single bit\nA = L_002\nD = A\nA = V_STACK_TOP_ADDR\n*A = *A + 1\nA = *A\n*A = D\nA = F_RECEIVE_BIT\nJMP\n\nLABEL L_002\n\n# Skip if data is `0`\nA = V_NET_DATA\nD = *A\nA = L_AFTER_BIT\nD ; JEQ\n\n# Merge the received bit into the word\nA = V_BIT_MASK\nD = *A\nA = V_IMG_WORD\n*A = D | *A\n\nLABEL L_AFTER_BIT\n\n# Shift the bit mask left\nA = V_BIT_MASK\nD = *A\nD = D + *A\n*A = D\n\n# Check if we have received 16 bits\nA = L_RECEIVE_BIT_LOOP\nD ; JNE\n\n# Write the received word to the image\nA = V_IMG_WORD\nD = *A\nA = V_WRITE_ADDR\nA = *A\n*A = D\n\n# Increment the write address\nA = 0x20\nD = A\nA = V_WRITE_ADDR\n*A = D + *A\n\nA = L_IMAGE_WORD_LOOP\nJMP\n\n\n# Function\n# Receives a single bit from net\nLABEL F_RECEIVE_BIT\n\n# Wait for next bit\nLABEL L_WAIT_NET_DATA\nA = C_NET_ADDR\nD = *A\nA = C_NET_SYNC\nD = D & A\nA = V_PREV_NET_SYNC\nD = D ^ *A\nA = L_WAIT_NET_DATA\nD ; JEQ\n\n# Store the current net `sync`\nLABEL F_STORE_NET_SYNC\nA = C_NET_ADDR\nD = *A\nA = C_NET_SYNC\nD = D & A\nA = V_PREV_NET_SYNC\n*A = D\n\n# Store the current net data\nA = C_NET_ADDR\nD = *A\nA = C_NET_DATA\nD = D & A\nA = V_NET_DATA\n*A = D\n\n# Return\nA = V_STACK_TOP_ADDR\nA = *A\nD = *A\nA = V_STACK_TOP_ADDR\n*A = *A - 1\nA = D\nJMP\n\n\nLABEL L_END\n"
+  },
+  "NandGame:Levels:FLOAT_ADD": {
+    "nodes": [
+      { "type": "FLOAT_PACK", "x": 248.5, "y": 135, "id": "0" },
+      { "type": "FLOAT_ALIGN", "x": 300.5, "y": 419, "id": "1" },
+      { "type": "ADD_SIGNED_MAGNITUDE", "x": 141.5, "y": 262, "id": "2" },
+      { "type": "FLOAT_UNPACK", "x": 169.5, "y": 584, "id": "3" },
+      { "type": "FLOAT_UNPACK", "x": 290.5, "y": 576, "id": "4" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "3", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "4", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "4", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "3" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "1" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "3" } },
+      { "source": { "nodeId": "1", "connectorId": "2" }, "target": { "nodeId": "2", "connectorId": "4" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:SHARED_STACK_CONSTANTS": {
+    "constants": [
+      { "name": "SP", "value": "0" },
+      { "name": "ARGS", "value": "1" },
+      { "name": "LOCALS", "value": "2" },
+      { "name": "RETVAL", "value": "6" }
+    ]
+  },
+  "NandGame:Levels:STACK_PUSH_VALUE": {
+    "code": "A = value\nD = A\npush.D",
+    "testCode": "init.stack\npush.value 0x7c89\n# Inspect stack: top should be 0x7c89"
+  },
+  "NandGame:Levels:FLOAT_VERIFY_EXPONENT": {
+    "nodes": [
+      { "type": "SELECT16", "x": 98.5, "y": 123, "id": "0" },
+      { "type": "CONST", "x": 365.5, "y": 148, "id": "1", "state": 31 },
+      { "type": "SPLIT16", "x": 359.5, "y": 504, "id": "2" },
+      { "type": "BUNDLE16", "x": 216.5, "y": 331, "id": "3" },
+      { "type": "ISZERO", "x": 38.5, "y": 232, "id": "4" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "5" } },
+      { "source": { "nodeId": "2", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "6" } },
+      { "source": { "nodeId": "2", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "7" } },
+      { "source": { "nodeId": "2", "connectorId": "3" }, "target": { "nodeId": "3", "connectorId": "8" } },
+      { "source": { "nodeId": "2", "connectorId": "4" }, "target": { "nodeId": "3", "connectorId": "9" } },
+      { "source": { "nodeId": "2", "connectorId": "5" }, "target": { "nodeId": "3", "connectorId": "10" } },
+      { "source": { "nodeId": "2", "connectorId": "6" }, "target": { "nodeId": "3", "connectorId": "11" } },
+      { "source": { "nodeId": "2", "connectorId": "7" }, "target": { "nodeId": "3", "connectorId": "12" } },
+      { "source": { "nodeId": "2", "connectorId": "8" }, "target": { "nodeId": "3", "connectorId": "13" } },
+      { "source": { "nodeId": "2", "connectorId": "9" }, "target": { "nodeId": "3", "connectorId": "14" } },
+      { "source": { "nodeId": "2", "connectorId": "10" }, "target": { "nodeId": "3", "connectorId": "15" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:PROGRAM1": { "code": [32912, 2, 34064, 32775] },
+  "NandGame:Levels:OR": {
+    "nodes": [
+      { "type": "INV", "x": 60.5, "y": 634, "id": "0" },
+      { "type": "INV", "x": 194.5, "y": 637, "id": "1" },
+      { "type": "NAND", "x": 129.5, "y": 488, "id": "2" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:ADD2": {
+    "nodes": [
+      { "type": "ADDC", "x": 229.5, "y": 500, "id": "0" },
+      { "type": "ADDC", "x": 101.5, "y": 342, "id": "1" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "2" } }
+    ]
+  },
+  "NandGame:Levels:CS_REGISTER": {
+    "nodes": [
+      { "type": "DFF16", "x": 237.3240929909013, "y": 152.53748404234693, "id": "0" },
+      { "type": "DFF16", "x": 528.5321437773308, "y": 160.50768238781413, "id": "1" },
+      { "type": "SELECT16", "x": 248.22776060622078, "y": 328.8201372054219, "id": "2" },
+      { "type": "SELECT16", "x": 543.403349416349, "y": 355.6899914277794, "id": "3" },
+      { "type": "SELECT16", "x": 317.8951296357031, "y": 481.51151853756164, "id": "4" },
+      { "type": "INV", "x": 510.8009043394693, "y": 675.6776222897214, "id": "5" },
+      { "type": "AND", "x": 193.58168171286496, "y": 492.20819647664825, "id": "6" },
+      { "type": "INV", "x": 495.1534440684005, "y": 549.9261368612969, "id": "7" },
+      { "type": "NAND", "x": 682.7107905703556, "y": 370.9374476268438, "id": "8" },
+      { "type": "NAND", "x": 723.6204649545065, "y": 522.4779374911293, "id": "9" },
+      { "type": "INV", "x": 126.5, "y": 608.0205188933147, "id": "10" },
+      { "type": "NAND", "x": 112.5, "y": 274.4356335450533, "id": "11" },
+      { "type": "NAND", "x": 55.5, "y": 399.91635267520724, "id": "12" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "11", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "4", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "7", "connectorId": "0" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "0" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "9", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "10", "connectorId": "0" } },
+      { "source": { "nodeId": "12", "connectorId": "0" }, "target": { "nodeId": "11", "connectorId": "0" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "11", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "12", "connectorId": "0" } },
+      { "source": { "nodeId": "10", "connectorId": "0" }, "target": { "nodeId": "12", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:STACK_OR": {
+    "code": "pop.D\npop.A\nD = D | A\npush.D",
+    "testCode": "init.stack\npush.value x0F0F\npush.value x00FF\nor\n# inspect top of stack. Should be 0FFF.\n"
+  },
+  "NandGame:Levels:CS_PROGRAM_COUNTER": {
+    "nodes": [
+      { "type": "CS_REGISTER", "x": 162.61288944411092, "y": 182.70772641243087, "id": "0" },
+      { "type": "INC16", "x": 445.9925207261872, "y": 216.12398439869082, "id": "1" },
+      { "type": "SELECT16", "x": 213.5, "y": 402, "id": "2" },
+      { "type": "INV", "x": 65.5, "y": 374, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "3" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "0", "connectorId": "4" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "0", "connectorId": "6" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:MUL16": {
+    "nodes": [
+      { "type": "SHL", "x": 595.6913290927351, "y": 647.2182509245309, "id": "0" },
+      { "type": "SPLIT16", "x": 13.339805825242719, "y": 623.2600534173401, "id": "1" },
+      { "type": "SHL", "x": 689.5299631737529, "y": 649.1158813861115, "id": "2" },
+      { "type": "SHL", "x": 782.4486106461333, "y": 647.431550472538, "id": "3" },
+      { "type": "SELECT16", "x": 515.6524941412789, "y": 544.3061224489795, "id": "4" },
+      { "type": "SELECT16", "x": 601.2112487445597, "y": 547.0459183673469, "id": "5" },
+      { "type": "SELECT16", "x": 689.5299631737529, "y": 546.1326530612245, "id": "6" },
+      { "type": "SELECT16", "x": 780.6086374288584, "y": 544.3061224489795, "id": "7" },
+      { "type": "SELECT16", "x": 873.5272849012387, "y": 544.3061224489795, "id": "8" },
+      { "type": "SELECT16", "x": 964.6059591563442, "y": 546.1326530612245, "id": "9" },
+      { "type": "SELECT16", "x": 1057.5246066287245, "y": 545.219387755102, "id": "10" },
+      { "type": "SELECT16", "x": 1149.5232674924673, "y": 544.3061224489795, "id": "11" },
+      { "type": "SELECT16", "x": 1.3799799129561432, "y": 231.05612244897958, "id": "12" },
+      { "type": "SELECT16", "x": 95.21861399397389, "y": 230.14285714285714, "id": "13" },
+      { "type": "SELECT16", "x": 188.1372614663542, "y": 228.31632653061223, "id": "14" },
+      { "type": "SELECT16", "x": 275.53598928690997, "y": 228.31632653061223, "id": "15" },
+      { "type": "SELECT16", "x": 367.53465015065285, "y": 226.48979591836735, "id": "16" },
+      { "type": "SELECT16", "x": 464.1332440575829, "y": 224.66326530612244, "id": "17" },
+      { "type": "SELECT16", "x": 558.8918647472381, "y": 224.66326530612244, "id": "18" },
+      { "type": "SELECT16", "x": 654.5704720455307, "y": 224.66326530612244, "id": "19" },
+      { "type": "ADDC16", "x": 14.259792433880147, "y": 115.98469387755101, "id": "20" },
+      { "type": "ADDC16", "x": 114.25845329762303, "y": 118.81122448979592, "id": "21" },
+      { "type": "ADDC16", "x": 216.17710077000336, "y": 118.72448979591836, "id": "22" },
+      { "type": "ADDC16", "x": 316.1757616337462, "y": 117.81122448979592, "id": "23" },
+      { "type": "ADDC16", "x": 418.09440910612653, "y": 115.98469387755101, "id": "24" },
+      { "type": "ADDC16", "x": 520.0930699698695, "y": 114.07142857142857, "id": "25" },
+      { "type": "ADDC16", "x": 624.0117174422497, "y": 112.24489795918367, "id": "26" },
+      { "type": "ADDC16", "x": 730.9303649146301, "y": 109.41836734693877, "id": "27" },
+      { "type": "ADDC16", "x": 762.6488115165719, "y": 437.7142857142857, "id": "28" },
+      { "type": "SHL", "x": 3.219953130231001, "y": 337.9081632653061, "id": "29" },
+      { "type": "SHL", "x": 97.97857381988618, "y": 341.5612244897959, "id": "30" },
+      { "type": "SHL", "x": 185.3773016404419, "y": 343.3877551020408, "id": "31" },
+      { "type": "SHL", "x": 273.6960160696351, "y": 340.64795918367344, "id": "32" },
+      { "type": "SHL", "x": 366.6146635420154, "y": 336.0816326530612, "id": "33" },
+      { "type": "SHL", "x": 464.1332440575829, "y": 331.515306122449, "id": "34" },
+      { "type": "SHL", "x": 559.8118513558754, "y": 331.515306122449, "id": "35" },
+      { "type": "SHL", "x": 661.0103783059926, "y": 329.68877551020404, "id": "36" },
+      { "type": "ADDC16", "x": 1174.2433880147305, "y": 435.62755102040813, "id": "37" },
+      { "type": "ADDC16", "x": 1070.3247405423501, "y": 438.28061224489795, "id": "38" },
+      { "type": "ADDC16", "x": 966.3260796786074, "y": 438.28061224489795, "id": "39" },
+      { "type": "ADDC16", "x": 863.407432206227, "y": 434.7142857142857, "id": "40" },
+      { "type": "ADDC16", "x": 658.7301640441915, "y": 436.62755102040813, "id": "41" },
+      { "type": "ADDC16", "x": 555.7315031804486, "y": 443.7142857142857, "id": "42" },
+      { "type": "SHL", "x": 880.8871777703381, "y": 645.6785714285714, "id": "43" },
+      { "type": "SHL", "x": 970.1258788081687, "y": 647.5051020408163, "id": "44" },
+      { "type": "SHL", "x": 1062.1245396719116, "y": 647.5051020408163, "id": "45" },
+      { "type": "SHL", "x": 1155.9631737529294, "y": 652.984693877551, "id": "46" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "15" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "14" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "13" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "12" }, "target": { "nodeId": "7", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "11" }, "target": { "nodeId": "8", "connectorId": "0" } },
+      { "source": { "nodeId": "43", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "10" }, "target": { "nodeId": "9", "connectorId": "0" } },
+      { "source": { "nodeId": "44", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "9" }, "target": { "nodeId": "10", "connectorId": "0" } },
+      { "source": { "nodeId": "45", "connectorId": "0" }, "target": { "nodeId": "10", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "8" }, "target": { "nodeId": "11", "connectorId": "0" } },
+      { "source": { "nodeId": "46", "connectorId": "0" }, "target": { "nodeId": "11", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "12", "connectorId": "0" } },
+      { "source": { "nodeId": "29", "connectorId": "0" }, "target": { "nodeId": "12", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "1" }, "target": { "nodeId": "13", "connectorId": "0" } },
+      { "source": { "nodeId": "30", "connectorId": "0" }, "target": { "nodeId": "13", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "2" }, "target": { "nodeId": "14", "connectorId": "0" } },
+      { "source": { "nodeId": "31", "connectorId": "0" }, "target": { "nodeId": "14", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "3" }, "target": { "nodeId": "15", "connectorId": "0" } },
+      { "source": { "nodeId": "32", "connectorId": "0" }, "target": { "nodeId": "15", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "4" }, "target": { "nodeId": "16", "connectorId": "0" } },
+      { "source": { "nodeId": "33", "connectorId": "0" }, "target": { "nodeId": "16", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "5" }, "target": { "nodeId": "17", "connectorId": "0" } },
+      { "source": { "nodeId": "34", "connectorId": "0" }, "target": { "nodeId": "17", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "6" }, "target": { "nodeId": "18", "connectorId": "0" } },
+      { "source": { "nodeId": "35", "connectorId": "0" }, "target": { "nodeId": "18", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "7" }, "target": { "nodeId": "19", "connectorId": "0" } },
+      { "source": { "nodeId": "36", "connectorId": "0" }, "target": { "nodeId": "19", "connectorId": "1" } },
+      { "source": { "nodeId": "12", "connectorId": "0" }, "target": { "nodeId": "20", "connectorId": "0" } },
+      { "source": { "nodeId": "21", "connectorId": "1" }, "target": { "nodeId": "20", "connectorId": "1" } },
+      { "source": { "nodeId": "21", "connectorId": "0" }, "target": { "nodeId": "20", "connectorId": "2" } },
+      { "source": { "nodeId": "13", "connectorId": "0" }, "target": { "nodeId": "21", "connectorId": "0" } },
+      { "source": { "nodeId": "22", "connectorId": "1" }, "target": { "nodeId": "21", "connectorId": "1" } },
+      { "source": { "nodeId": "22", "connectorId": "0" }, "target": { "nodeId": "21", "connectorId": "2" } },
+      { "source": { "nodeId": "14", "connectorId": "0" }, "target": { "nodeId": "22", "connectorId": "0" } },
+      { "source": { "nodeId": "23", "connectorId": "1" }, "target": { "nodeId": "22", "connectorId": "1" } },
+      { "source": { "nodeId": "23", "connectorId": "0" }, "target": { "nodeId": "22", "connectorId": "2" } },
+      { "source": { "nodeId": "15", "connectorId": "0" }, "target": { "nodeId": "23", "connectorId": "0" } },
+      { "source": { "nodeId": "24", "connectorId": "1" }, "target": { "nodeId": "23", "connectorId": "1" } },
+      { "source": { "nodeId": "24", "connectorId": "0" }, "target": { "nodeId": "23", "connectorId": "2" } },
+      { "source": { "nodeId": "16", "connectorId": "0" }, "target": { "nodeId": "24", "connectorId": "0" } },
+      { "source": { "nodeId": "25", "connectorId": "1" }, "target": { "nodeId": "24", "connectorId": "1" } },
+      { "source": { "nodeId": "25", "connectorId": "0" }, "target": { "nodeId": "24", "connectorId": "2" } },
+      { "source": { "nodeId": "17", "connectorId": "0" }, "target": { "nodeId": "25", "connectorId": "0" } },
+      { "source": { "nodeId": "26", "connectorId": "1" }, "target": { "nodeId": "25", "connectorId": "1" } },
+      { "source": { "nodeId": "26", "connectorId": "0" }, "target": { "nodeId": "25", "connectorId": "2" } },
+      { "source": { "nodeId": "18", "connectorId": "0" }, "target": { "nodeId": "26", "connectorId": "0" } },
+      { "source": { "nodeId": "27", "connectorId": "1" }, "target": { "nodeId": "26", "connectorId": "1" } },
+      { "source": { "nodeId": "27", "connectorId": "0" }, "target": { "nodeId": "26", "connectorId": "2" } },
+      { "source": { "nodeId": "19", "connectorId": "0" }, "target": { "nodeId": "27", "connectorId": "0" } },
+      { "source": { "nodeId": "37", "connectorId": "1" }, "target": { "nodeId": "27", "connectorId": "1" } },
+      { "source": { "nodeId": "37", "connectorId": "0" }, "target": { "nodeId": "27", "connectorId": "2" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "28", "connectorId": "0" } },
+      { "source": { "nodeId": "41", "connectorId": "1" }, "target": { "nodeId": "28", "connectorId": "1" } },
+      { "source": { "nodeId": "41", "connectorId": "0" }, "target": { "nodeId": "28", "connectorId": "2" } },
+      { "source": { "nodeId": "30", "connectorId": "0" }, "target": { "nodeId": "29", "connectorId": "0" } },
+      { "source": { "nodeId": "31", "connectorId": "0" }, "target": { "nodeId": "30", "connectorId": "0" } },
+      { "source": { "nodeId": "32", "connectorId": "0" }, "target": { "nodeId": "31", "connectorId": "0" } },
+      { "source": { "nodeId": "33", "connectorId": "0" }, "target": { "nodeId": "32", "connectorId": "0" } },
+      { "source": { "nodeId": "34", "connectorId": "0" }, "target": { "nodeId": "33", "connectorId": "0" } },
+      { "source": { "nodeId": "35", "connectorId": "0" }, "target": { "nodeId": "34", "connectorId": "0" } },
+      { "source": { "nodeId": "36", "connectorId": "0" }, "target": { "nodeId": "35", "connectorId": "0" } },
+      { "source": { "nodeId": "46", "connectorId": "0" }, "target": { "nodeId": "36", "connectorId": "0" } },
+      { "source": { "nodeId": "11", "connectorId": "0" }, "target": { "nodeId": "37", "connectorId": "0" } },
+      { "source": { "nodeId": "38", "connectorId": "1" }, "target": { "nodeId": "37", "connectorId": "1" } },
+      { "source": { "nodeId": "38", "connectorId": "0" }, "target": { "nodeId": "37", "connectorId": "2" } },
+      { "source": { "nodeId": "10", "connectorId": "0" }, "target": { "nodeId": "38", "connectorId": "0" } },
+      { "source": { "nodeId": "39", "connectorId": "1" }, "target": { "nodeId": "38", "connectorId": "1" } },
+      { "source": { "nodeId": "39", "connectorId": "0" }, "target": { "nodeId": "38", "connectorId": "2" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "39", "connectorId": "0" } },
+      { "source": { "nodeId": "40", "connectorId": "1" }, "target": { "nodeId": "39", "connectorId": "1" } },
+      { "source": { "nodeId": "40", "connectorId": "0" }, "target": { "nodeId": "39", "connectorId": "2" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "40", "connectorId": "0" } },
+      { "source": { "nodeId": "28", "connectorId": "1" }, "target": { "nodeId": "40", "connectorId": "1" } },
+      { "source": { "nodeId": "28", "connectorId": "0" }, "target": { "nodeId": "40", "connectorId": "2" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "41", "connectorId": "0" } },
+      { "source": { "nodeId": "42", "connectorId": "1" }, "target": { "nodeId": "41", "connectorId": "1" } },
+      { "source": { "nodeId": "42", "connectorId": "0" }, "target": { "nodeId": "41", "connectorId": "2" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "42", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "42", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "43", "connectorId": "0" } },
+      { "source": { "nodeId": "43", "connectorId": "0" }, "target": { "nodeId": "44", "connectorId": "0" } },
+      { "source": { "nodeId": "44", "connectorId": "0" }, "target": { "nodeId": "45", "connectorId": "0" } },
+      { "source": { "nodeId": "45", "connectorId": "0" }, "target": { "nodeId": "46", "connectorId": "0" } },
+      { "source": { "nodeId": "20", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:STACK_ADD": {
+    "code": "pop.D\npop.A\nD = D + A\npush.D",
+    "testCode": "init.stack\npush.value x0008\npush.value x0005\nadd\n# inspect top of stack. Should be 000d.\n"
+  },
+  "NandGame:Levels:SHARED_COMPILER_CONFIG": {
+    "lexical": [
+      { "type": 1, "pattern": "[ ]+", "action": 0 },
+      { "type": 1, "pattern": "[0-9]+", "action": 3, "label": "Number" },
+      { "type": 0, "pattern": "+ - ( )", "action": 2 }
+    ],
+    "rules": [
+      { "lhs": "Expression", "rhs": "Number", "codegen": "push.value [Number]" },
+      { "lhs": "Expression", "rhs": "- Expression", "codegen": "[Expression]\nneg" },
+      { "lhs": "Expression", "rhs": "( Expression )", "codegen": "[Expression]" },
+      { "lhs": "Expression", "rhs": "Expression + Expression", "codegen": "[Expression 1]\n[Expression 2]\nadd" },
+      { "lhs": "Expression", "rhs": "Expression - Expression", "codegen": "[Expression 1]\n[Expression 2]\nsub" }
+    ],
+    "runtimeLibrary": ""
+  },
+  "NandGame:Levels:FLOAT_PACK": {
+    "nodes": [
+      { "type": "FLOAT_VERIFY_EXPONENT", "x": 156, "y": 413, "id": "0" },
+      { "type": "SPLIT16", "x": -165.5, "y": 246, "id": "1" },
+      { "type": "BUNDLE16", "x": 61.5, "y": 94, "id": "2" },
+      { "type": "SPLIT16", "x": 83.5, "y": 305, "id": "3" },
+      { "type": "FLOAT_NORMALIZE_UNDERFLOW", "x": 186, "y": 557, "id": "4" },
+      { "type": "FLOAT_NORMALIZE_OVERFLOW", "x": 244, "y": 692, "id": "5" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "11" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "12" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "1", "connectorId": "13" }, "target": { "nodeId": "2", "connectorId": "3" } },
+      { "source": { "nodeId": "1", "connectorId": "14" }, "target": { "nodeId": "2", "connectorId": "4" } },
+      { "source": { "nodeId": "1", "connectorId": "15" }, "target": { "nodeId": "2", "connectorId": "5" } },
+      { "source": { "nodeId": "3", "connectorId": "6" }, "target": { "nodeId": "2", "connectorId": "6" } },
+      { "source": { "nodeId": "3", "connectorId": "7" }, "target": { "nodeId": "2", "connectorId": "7" } },
+      { "source": { "nodeId": "3", "connectorId": "8" }, "target": { "nodeId": "2", "connectorId": "8" } },
+      { "source": { "nodeId": "3", "connectorId": "9" }, "target": { "nodeId": "2", "connectorId": "9" } },
+      { "source": { "nodeId": "3", "connectorId": "10" }, "target": { "nodeId": "2", "connectorId": "10" } },
+      { "source": { "nodeId": "3", "connectorId": "11" }, "target": { "nodeId": "2", "connectorId": "11" } },
+      { "source": { "nodeId": "3", "connectorId": "12" }, "target": { "nodeId": "2", "connectorId": "12" } },
+      { "source": { "nodeId": "3", "connectorId": "13" }, "target": { "nodeId": "2", "connectorId": "13" } },
+      { "source": { "nodeId": "3", "connectorId": "14" }, "target": { "nodeId": "2", "connectorId": "14" } },
+      { "source": { "nodeId": "3", "connectorId": "15" }, "target": { "nodeId": "2", "connectorId": "15" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "1" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:LATCH": {
+    "nodes": [
+      { "type": "NAND", "x": 36.633849380352146, "y": 236.39401496259353, "id": "0" },
+      { "type": "NAND", "x": 132.6544738767615, "y": 358.8229426433915, "id": "1" },
+      { "type": "SR_LATCH", "x": 116.5, "y": 129, "id": "2" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:CS_CONTROL_UNIT": {
+    "nodes": [
+      { "type": "CONTROL_UNIT", "x": 549.5, "y": 393, "id": "0" },
+      { "type": "SELECT16", "x": 566.5, "y": 716, "id": "1" },
+      { "type": "SELECT16", "x": 872.5, "y": 695, "id": "2" },
+      { "type": "SELECT16", "x": 1174.5, "y": 590, "id": "3" },
+      { "type": "SELECT16", "x": 1428.5, "y": 472, "id": "4" },
+      { "type": "SPLIT16", "x": 23.5, "y": 738, "id": "5" },
+      { "type": "SELECT16", "x": 870.5, "y": 449, "id": "6" },
+      { "type": "SELECT16", "x": 1100.5, "y": 448, "id": "7" },
+      { "type": "SELECT16", "x": 983.5, "y": 285, "id": "8" },
+      { "type": "AND", "x": 13.5, "y": 473, "id": "9" },
+      { "type": "INV", "x": 67.5, "y": 574, "id": "10" },
+      { "type": "SELECT", "x": 30.5, "y": 129, "id": "11" },
+      { "type": "SELECT", "x": 129.5, "y": 128, "id": "12" },
+      { "type": "SELECT", "x": 230.5, "y": 128, "id": "13" },
+      { "type": "SELECT", "x": 577.5, "y": 130, "id": "14" },
+      { "type": "SELECT16", "x": 452.5, "y": 127, "id": "15" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "3" } },
+      { "source": { "nodeId": "5", "connectorId": "9" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "5", "connectorId": "9" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "5", "connectorId": "9" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "7" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      { "source": { "nodeId": "5", "connectorId": "9" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "9" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "8" }, "target": { "nodeId": "4", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "8" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "2" } },
+      { "source": { "nodeId": "5", "connectorId": "8" }, "target": { "nodeId": "7", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "2" } },
+      { "source": { "nodeId": "5", "connectorId": "7" }, "target": { "nodeId": "8", "connectorId": "0" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "1" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "2" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "0" } },
+      { "source": { "nodeId": "10", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "1" } },
+      { "source": { "nodeId": "5", "connectorId": "1" }, "target": { "nodeId": "10", "connectorId": "0" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "11", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "10" }, "target": { "nodeId": "11", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "11", "connectorId": "2" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "12", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "11" }, "target": { "nodeId": "12", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "2" }, "target": { "nodeId": "12", "connectorId": "2" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "13", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "12" }, "target": { "nodeId": "13", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "3" }, "target": { "nodeId": "13", "connectorId": "2" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "14", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "14" }, "target": { "nodeId": "14", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "4" }, "target": { "nodeId": "14", "connectorId": "2" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "15", "connectorId": "0" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "15", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "15", "connectorId": "2" } },
+      { "source": { "nodeId": "11", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "12", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } },
+      { "source": { "nodeId": "13", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "2" } },
+      { "source": { "nodeId": "5", "connectorId": "13" }, "target": { "nodeId": "output", "connectorId": "3" } },
+      { "source": { "nodeId": "5", "connectorId": "15" }, "target": { "nodeId": "output", "connectorId": "4" } },
+      { "source": { "nodeId": "15", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "5" } },
+      { "source": { "nodeId": "14", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "6" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "7" } },
+      { "source": { "nodeId": "5", "connectorId": "2" }, "target": { "nodeId": "output", "connectorId": "8" } }
+    ]
+  },
+  "NandGame:Levels:CS_TRIGGER": {
+    "nodes": [
+      { "type": "COUNTER", "x": 170.5, "y": 297, "id": "0" },
+      { "type": "SPLIT16", "x": 63.5, "y": 205, "id": "1" },
+      { "type": "INV", "x": 90.5, "y": 468, "id": "2" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "1", "connectorId": "7" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "7" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:CMOS_NAND": {
+    "nodes": [
+      { "type": "PMOS", "x": 35.5, "y": 584, "id": "0" },
+      { "type": "PMOS", "x": 165.5, "y": 588, "id": "1" },
+      { "type": "TRINARY_LOGIC_WIRE_JUNCTION", "x": 107.5, "y": 471, "id": "2" },
+      { "type": "TRINARY_LOGIC_WIRE_JUNCTION", "x": 220.5, "y": 344, "id": "3" },
+      { "type": "NMOS", "x": 345.5, "y": 665, "id": "4" },
+      { "type": "NMOS", "x": 316.5, "y": 550, "id": "5" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:RAM": {
+    "nodes": [
+      { "type": "DFF16", "x": 178.5, "y": 347, "id": "0" },
+      { "type": "DFF16", "x": 396.5, "y": 349, "id": "1" },
+      { "type": "SELECT16", "x": 58.5, "y": 137, "id": "2" },
+      { "type": "DEMUX", "x": 164.5, "y": 544, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "3", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:CONTROL_UNIT": {
+    "nodes": [
+      { "type": "SPLIT16", "x": 180.9947299077734, "y": 463.3993288590604, "id": "0" },
+      { "type": "ALU_INSTRUCTION", "x": 585.457619675011, "y": 443.2097315436242, "id": "1" },
+      { "type": "SELECT16", "x": 84.46420729029425, "y": 222.08557046979865, "id": "2" },
+      { "type": "NAND", "x": 631.8678085199824, "y": 275.46812080536915, "id": "3" },
+      { "type": "INV", "x": 569.5, "y": 169.75503355704697, "id": "4" },
+      { "type": "NAND", "x": 523.0597277119016, "y": 266.91442953020135, "id": "5" },
+      { "type": "INV", "x": 457.5, "y": 163, "id": "6" },
+      { "type": "NAND", "x": 408.5, "y": 258, "id": "7" },
+      { "type": "INV", "x": 346.5, "y": 157, "id": "8" },
+      { "type": "INV", "x": 292.5, "y": 257, "id": "9" },
+      { "type": "NAND", "x": 217.5, "y": 148, "id": "10" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "3" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "4" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "3" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "2" }, "target": { "nodeId": "7", "connectorId": "1" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "1" }, "target": { "nodeId": "9", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "10", "connectorId": "0" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "10", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "10", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "2" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "3" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "4" } }
+    ]
+  },
+  "NandGame:Levels:FLOAT_MUL_UNPACKED": {
+    "nodes": [
+      { "type": "XOR", "x": 11.76978706307754, "y": 437, "id": "0" },
+      { "type": "MUL32", "x": 565.1767778224187, "y": 477, "id": "1" },
+      { "type": "SPLIT22", "x": 425.55644837284046, "y": 402, "id": "2" },
+      { "type": "BUNDLE16", "x": 383.19566090799515, "y": 172, "id": "3" },
+      { "type": "ADD16", "x": 96.33788670148654, "y": 391, "id": "4" },
+      { "type": "SUB16", "x": 146.03254319003617, "y": 142, "id": "5" },
+      { "type": "BUNDLE16", "x": 53.6179188429088, "y": 266, "id": "6" },
+      { "type": "INV", "x": 264.60224989955805, "y": 409, "id": "7" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "4" } },
+      { "source": { "nodeId": "2", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "5" } },
+      { "source": { "nodeId": "2", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "6" } },
+      { "source": { "nodeId": "2", "connectorId": "3" }, "target": { "nodeId": "3", "connectorId": "7" } },
+      { "source": { "nodeId": "2", "connectorId": "4" }, "target": { "nodeId": "3", "connectorId": "8" } },
+      { "source": { "nodeId": "2", "connectorId": "5" }, "target": { "nodeId": "3", "connectorId": "9" } },
+      { "source": { "nodeId": "2", "connectorId": "6" }, "target": { "nodeId": "3", "connectorId": "10" } },
+      { "source": { "nodeId": "2", "connectorId": "7" }, "target": { "nodeId": "3", "connectorId": "11" } },
+      { "source": { "nodeId": "2", "connectorId": "8" }, "target": { "nodeId": "3", "connectorId": "12" } },
+      { "source": { "nodeId": "2", "connectorId": "9" }, "target": { "nodeId": "3", "connectorId": "13" } },
+      { "source": { "nodeId": "2", "connectorId": "10" }, "target": { "nodeId": "3", "connectorId": "14" } },
+      { "source": { "nodeId": "2", "connectorId": "11" }, "target": { "nodeId": "3", "connectorId": "15" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "12" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "13" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "14" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "15" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "2" } }
+    ]
+  },
+  "NandGame:Levels:TOKENIZE_EXPRESSION": { "source": "2 + 2" },
+  "NandGame:Levels:COUNTER": {
+    "nodes": [
+      { "type": "DFF16", "x": 105.5, "y": 121, "id": "0" },
+      { "type": "SELECT16", "x": 131.5, "y": 302, "id": "1" },
+      { "type": "INC16", "x": 354.5, "y": 185, "id": "2" },
+      { "type": "INV", "x": 17.5, "y": 318, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:SHL16": {
+    "nodes": [
+      { "type": "SELECT16", "x": 21.196357284797557, "y": 128.52941176470588, "id": "0" },
+      { "type": "SHL", "x": 556.1240269849507, "y": 664.2914438502675, "id": "1" },
+      { "type": "SELECT16", "x": 367.3705241307732, "y": 641.0026737967914, "id": "2" },
+      { "type": "SELECT16", "x": 248.5, "y": 487, "id": "3" },
+      { "type": "SHL", "x": 595.5, "y": 513, "id": "4" },
+      { "type": "SHL", "x": 438.5, "y": 506, "id": "5" },
+      { "type": "SELECT16", "x": 124.5, "y": 321, "id": "6" },
+      { "type": "SHL", "x": 282.5, "y": 332, "id": "7" },
+      { "type": "SHL", "x": 440.5, "y": 339, "id": "8" },
+      { "type": "SHL", "x": 590.5, "y": 339, "id": "9" },
+      { "type": "SHL", "x": 740.5, "y": 349, "id": "10" },
+      { "type": "SHL", "x": 139.5, "y": 147, "id": "11" },
+      { "type": "SHL", "x": 245.5, "y": 152, "id": "12" },
+      { "type": "SHL", "x": 365.5, "y": 148, "id": "13" },
+      { "type": "SHL", "x": 481.5, "y": 147, "id": "14" },
+      { "type": "SHL", "x": 593.5, "y": 148, "id": "15" },
+      { "type": "SHL", "x": 704.5, "y": 142, "id": "16" },
+      { "type": "SHL", "x": 818.5, "y": 145, "id": "17" },
+      { "type": "SHL", "x": 933.5, "y": 146, "id": "18" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "11", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "2" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "0" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "0" } },
+      { "source": { "nodeId": "10", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "10", "connectorId": "0" } },
+      { "source": { "nodeId": "12", "connectorId": "0" }, "target": { "nodeId": "11", "connectorId": "0" } },
+      { "source": { "nodeId": "13", "connectorId": "0" }, "target": { "nodeId": "12", "connectorId": "0" } },
+      { "source": { "nodeId": "14", "connectorId": "0" }, "target": { "nodeId": "13", "connectorId": "0" } },
+      { "source": { "nodeId": "15", "connectorId": "0" }, "target": { "nodeId": "14", "connectorId": "0" } },
+      { "source": { "nodeId": "16", "connectorId": "0" }, "target": { "nodeId": "15", "connectorId": "0" } },
+      { "source": { "nodeId": "17", "connectorId": "0" }, "target": { "nodeId": "16", "connectorId": "0" } },
+      { "source": { "nodeId": "18", "connectorId": "0" }, "target": { "nodeId": "17", "connectorId": "0" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "18", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:CS_MAPPED_MEMORY": {
+    "nodes": [
+      { "type": "GP_MEMORY_512K", "x": 47.5, "y": 87.41289437585733, "id": "0" },
+      { "type": "BUNDLE18", "x": 224.5, "y": 132.04389574759944, "id": "1" },
+      { "type": "SPLIT16", "x": 157.5, "y": 682.838134430727, "id": "2" },
+      { "type": "SPLIT16", "x": 827.5, "y": 675.3731138545953, "id": "3" },
+      { "type": "NAND", "x": 553.5, "y": 348.1838134430727, "id": "4" },
+      { "type": "NAND", "x": 514.5, "y": 443.6680384087791, "id": "5" },
+      { "type": "NAND", "x": 593.5, "y": 443.6858710562414, "id": "6" },
+      { "type": "INV", "x": 559.5, "y": 546.1879286694102, "id": "7" },
+      { "type": "NAND", "x": 728.5, "y": 335.16598079561044, "id": "8" },
+      { "type": "NAND", "x": 683.5, "y": 443.6680384087791, "id": "9" },
+      { "type": "NAND", "x": 764.5, "y": 443.6680384087791, "id": "10" },
+      { "type": "INV", "x": 728.5, "y": 549.2057613168724, "id": "11" },
+      { "type": "NAND", "x": 898.5, "y": 313.2194787379973, "id": "12" },
+      { "type": "NAND", "x": 858.5, "y": 442.6680384087791, "id": "13" },
+      { "type": "NAND", "x": 939.5, "y": 441.6858710562414, "id": "14" },
+      { "type": "INV", "x": 897.5, "y": 548.1700960219479, "id": "15" },
+      { "type": "NAND", "x": 81.5, "y": 520.6145404663923, "id": "16" },
+      { "type": "NAND", "x": 6.5, "y": 519.6145404663923, "id": "17" },
+      { "type": "INV", "x": 41.5, "y": 617.0274348422497, "id": "18" },
+      { "type": "AND", "x": 61.5, "y": 342, "id": "19" },
+      { "type": "SPLIT16", "x": 1476.5, "y": 705, "id": "20" },
+      { "type": "AND", "x": 36.5, "y": 428, "id": "21" },
+      { "type": "BUNDLE18", "x": 1414.5, "y": 95, "id": "22" },
+      { "type": "NAND", "x": 1048.5, "y": 187, "id": "23" },
+      { "type": "NAND", "x": 1008.5, "y": 300, "id": "24" },
+      { "type": "NAND", "x": 1088.5, "y": 300, "id": "25" },
+      { "type": "INV", "x": 1060.5, "y": 411, "id": "26" },
+      { "type": "NAND", "x": 1216.5, "y": 203, "id": "27" },
+      { "type": "NAND", "x": 1180.5, "y": 299, "id": "28" },
+      { "type": "NAND", "x": 1261.5, "y": 299, "id": "29" },
+      { "type": "INV", "x": 1226.5, "y": 415, "id": "30" },
+      { "type": "NAND", "x": 1398.5, "y": 199, "id": "31" },
+      { "type": "NAND", "x": 1355.5, "y": 298, "id": "32" },
+      { "type": "NAND", "x": 1436.5, "y": 298, "id": "33" },
+      { "type": "INV", "x": 1417.5, "y": 420, "id": "34" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "19", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "22", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "3" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "0", "connectorId": "4" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "12", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "2", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "3" } },
+      { "source": { "nodeId": "2", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "4" } },
+      { "source": { "nodeId": "2", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "5" } },
+      { "source": { "nodeId": "2", "connectorId": "4" }, "target": { "nodeId": "1", "connectorId": "6" } },
+      { "source": { "nodeId": "2", "connectorId": "5" }, "target": { "nodeId": "1", "connectorId": "7" } },
+      { "source": { "nodeId": "2", "connectorId": "6" }, "target": { "nodeId": "1", "connectorId": "8" } },
+      { "source": { "nodeId": "2", "connectorId": "7" }, "target": { "nodeId": "1", "connectorId": "9" } },
+      { "source": { "nodeId": "2", "connectorId": "8" }, "target": { "nodeId": "1", "connectorId": "10" } },
+      { "source": { "nodeId": "2", "connectorId": "9" }, "target": { "nodeId": "1", "connectorId": "11" } },
+      { "source": { "nodeId": "2", "connectorId": "10" }, "target": { "nodeId": "1", "connectorId": "12" } },
+      { "source": { "nodeId": "2", "connectorId": "11" }, "target": { "nodeId": "1", "connectorId": "13" } },
+      { "source": { "nodeId": "2", "connectorId": "12" }, "target": { "nodeId": "1", "connectorId": "14" } },
+      { "source": { "nodeId": "2", "connectorId": "13" }, "target": { "nodeId": "1", "connectorId": "15" } },
+      { "source": { "nodeId": "2", "connectorId": "14" }, "target": { "nodeId": "1", "connectorId": "16" } },
+      { "source": { "nodeId": "2", "connectorId": "15" }, "target": { "nodeId": "1", "connectorId": "17" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "1" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "5" }, "target": { "nodeId": "6", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "0" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "0" } },
+      { "source": { "nodeId": "10", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "2" }, "target": { "nodeId": "9", "connectorId": "1" } },
+      { "source": { "nodeId": "11", "connectorId": "0" }, "target": { "nodeId": "10", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "6" }, "target": { "nodeId": "10", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "11", "connectorId": "0" } },
+      { "source": { "nodeId": "13", "connectorId": "0" }, "target": { "nodeId": "12", "connectorId": "0" } },
+      { "source": { "nodeId": "14", "connectorId": "0" }, "target": { "nodeId": "12", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "13", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "3" }, "target": { "nodeId": "13", "connectorId": "1" } },
+      { "source": { "nodeId": "15", "connectorId": "0" }, "target": { "nodeId": "14", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "7" }, "target": { "nodeId": "14", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "15", "connectorId": "0" } },
+      { "source": { "nodeId": "18", "connectorId": "0" }, "target": { "nodeId": "16", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "4" }, "target": { "nodeId": "16", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "17", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "17", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "18", "connectorId": "0" } },
+      { "source": { "nodeId": "21", "connectorId": "0" }, "target": { "nodeId": "19", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "19", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "20", "connectorId": "0" } },
+      { "source": { "nodeId": "17", "connectorId": "0" }, "target": { "nodeId": "21", "connectorId": "0" } },
+      { "source": { "nodeId": "16", "connectorId": "0" }, "target": { "nodeId": "21", "connectorId": "1" } },
+      { "source": { "nodeId": "23", "connectorId": "0" }, "target": { "nodeId": "22", "connectorId": "0" } },
+      { "source": { "nodeId": "27", "connectorId": "0" }, "target": { "nodeId": "22", "connectorId": "1" } },
+      { "source": { "nodeId": "31", "connectorId": "0" }, "target": { "nodeId": "22", "connectorId": "2" } },
+      { "source": { "nodeId": "20", "connectorId": "1" }, "target": { "nodeId": "22", "connectorId": "3" } },
+      { "source": { "nodeId": "20", "connectorId": "2" }, "target": { "nodeId": "22", "connectorId": "4" } },
+      { "source": { "nodeId": "20", "connectorId": "3" }, "target": { "nodeId": "22", "connectorId": "5" } },
+      { "source": { "nodeId": "20", "connectorId": "4" }, "target": { "nodeId": "22", "connectorId": "6" } },
+      { "source": { "nodeId": "20", "connectorId": "5" }, "target": { "nodeId": "22", "connectorId": "7" } },
+      { "source": { "nodeId": "20", "connectorId": "6" }, "target": { "nodeId": "22", "connectorId": "8" } },
+      { "source": { "nodeId": "20", "connectorId": "7" }, "target": { "nodeId": "22", "connectorId": "9" } },
+      { "source": { "nodeId": "20", "connectorId": "8" }, "target": { "nodeId": "22", "connectorId": "10" } },
+      { "source": { "nodeId": "20", "connectorId": "9" }, "target": { "nodeId": "22", "connectorId": "11" } },
+      { "source": { "nodeId": "20", "connectorId": "10" }, "target": { "nodeId": "22", "connectorId": "12" } },
+      { "source": { "nodeId": "20", "connectorId": "11" }, "target": { "nodeId": "22", "connectorId": "13" } },
+      { "source": { "nodeId": "20", "connectorId": "12" }, "target": { "nodeId": "22", "connectorId": "14" } },
+      { "source": { "nodeId": "20", "connectorId": "13" }, "target": { "nodeId": "22", "connectorId": "15" } },
+      { "source": { "nodeId": "20", "connectorId": "14" }, "target": { "nodeId": "22", "connectorId": "16" } },
+      { "source": { "nodeId": "20", "connectorId": "15" }, "target": { "nodeId": "22", "connectorId": "17" } },
+      { "source": { "nodeId": "24", "connectorId": "0" }, "target": { "nodeId": "23", "connectorId": "0" } },
+      { "source": { "nodeId": "25", "connectorId": "0" }, "target": { "nodeId": "23", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "9" }, "target": { "nodeId": "24", "connectorId": "0" } },
+      { "source": { "nodeId": "20", "connectorId": "0" }, "target": { "nodeId": "24", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "13" }, "target": { "nodeId": "25", "connectorId": "0" } },
+      { "source": { "nodeId": "26", "connectorId": "0" }, "target": { "nodeId": "25", "connectorId": "1" } },
+      { "source": { "nodeId": "20", "connectorId": "0" }, "target": { "nodeId": "26", "connectorId": "0" } },
+      { "source": { "nodeId": "28", "connectorId": "0" }, "target": { "nodeId": "27", "connectorId": "0" } },
+      { "source": { "nodeId": "29", "connectorId": "0" }, "target": { "nodeId": "27", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "10" }, "target": { "nodeId": "28", "connectorId": "0" } },
+      { "source": { "nodeId": "20", "connectorId": "0" }, "target": { "nodeId": "28", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "14" }, "target": { "nodeId": "29", "connectorId": "0" } },
+      { "source": { "nodeId": "30", "connectorId": "0" }, "target": { "nodeId": "29", "connectorId": "1" } },
+      { "source": { "nodeId": "20", "connectorId": "0" }, "target": { "nodeId": "30", "connectorId": "0" } },
+      { "source": { "nodeId": "32", "connectorId": "0" }, "target": { "nodeId": "31", "connectorId": "0" } },
+      { "source": { "nodeId": "33", "connectorId": "0" }, "target": { "nodeId": "31", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "11" }, "target": { "nodeId": "32", "connectorId": "0" } },
+      { "source": { "nodeId": "20", "connectorId": "0" }, "target": { "nodeId": "32", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "15" }, "target": { "nodeId": "33", "connectorId": "0" } },
+      { "source": { "nodeId": "34", "connectorId": "0" }, "target": { "nodeId": "33", "connectorId": "1" } },
+      { "source": { "nodeId": "20", "connectorId": "0" }, "target": { "nodeId": "34", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:DFF": {
+    "nodes": [
+      { "type": "LATCH", "x": 175.5, "y": 491, "id": "0" },
+      { "type": "AND", "x": 81.5, "y": 606, "id": "1" },
+      { "type": "LATCH", "x": 239.5, "y": 291, "id": "2" },
+      { "type": "INV", "x": 348.5, "y": 581, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:STACK_AND": {
+    "code": "pop.D\npop.A\nD = D & A\npush.D",
+    "testCode": "init.stack\npush.value x0FF0\npush.value x0F0F\nand\n# inspect top of stack. Should be 0F00.\n"
+  },
+  "NandGame:Levels:STACK_LT": {
+    "code": "pop.D\npop.A\nD = A - D\nA = WHEN_TRUE\nD ; JLT\npush.value 0\nA = END\nJMP\n\nLABEL WHEN_TRUE\nD = 0\nD = ~D\npush.D\n\nLABEL END",
+    "testCode": "init.stack\npush.value x0008\npush.value x0005\nlt\n# inspect top of stack. Should be FFFF.\n"
+  },
+  "NandGame:Levels:INV": {
+    "nodes": [{ "type": "NAND", "x": 86.5, "y": 565, "id": "0" }],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:RETURN": {
+    "code": "pop.static RETVAL\n\nA = LOCALS\nD = *A\nA = SP\n*A = D\n\npop.A\nJMP",
+    "testCode": ""
+  },
+  "NandGame:Levels:STACK_POP_D": {
+    "code": "A = SP\n*A = *A - 1\nA = *A\nD = *A\n",
+    "testCode": "init.stack\nD = 1\npush.d\nA = 0x48\nD = A\npop.D\n# inspect D. Should be 1.\n"
+  },
+  "NandGame:Levels:STACK_EQ": {
+    "code": "pop.D\npop.A\nD = D - A\nA = WHEN_TRUE\nD ; JEQ\npush.value 0\nA = END\nJMP\n\nLABEL WHEN_TRUE\nD = 0\nD = ~D\npush.D\n\nLABEL END",
+    "testCode": "init.stack\npush.value 7\npush.value 7\neq\n# inspect top of stack. Should be xFFFF.\nD = 0\npush.D\neq"
+  },
+  "NandGame:Levels:CALL": {
+    "code": "push.static ARGS\npush.static LOCALS\npush.value AFTER_CALL\n\n# Calculate a new ARGS address\nA = SP\nD = *A\nA = argumentCount\nD = D - A\nA = 3\nD = D - A\nA = ARGS\n*A = D\n\nA = functionName\nJMP\n\n# After the function call is executed\nLABEL AFTER_CALL\n\n# Store the current ARGS value in a temporary slot\nDEFINE TEMP_SLOT 0x10\nA = ARGS\nD = *A\nA = TEMP_SLOT\n*A = D\n\npop.static LOCALS\npop.static ARGS\n\n# Set SP to the previous ARGS value\nA = TEMP_SLOT\nD = *A\nA = SP\n*A = D\n\npush.static RETVAL",
+    "testCode": ""
+  },
+  "NandGame:Levels:STACK_GOTO": {
+    "code": "A = label\nJMP\n",
+    "testCode": "init.stack\npush.value x42\ngoto end\n# this line should not be executed:\npush.value x17\nlabel end:\n# top of stack should be x42\n"
+  },
+  "NandGame:Levels:STACK_GT": {
+    "code": "pop.D\npop.A\nD = A - D\nA = WHEN_TRUE\nD ; JGT\npush.value 0\nA = END\nJMP\n\nLABEL WHEN_TRUE\nD = 0\nD = ~D\npush.D\n\nLABEL END",
+    "testCode": "init.stack\npush.value 30\npush.value 5\ngt\n# inspect top of stack. Should be 0.\n"
+  },
+  "NandGame:Levels:CONDITION": {
+    "nodes": [
+      { "type": "ISZERO", "x": 411.5, "y": 647.189603822885, "id": "0" },
+      { "type": "ISNEG", "x": 278.5, "y": 651.1941999265841, "id": "1" },
+      { "type": "NAND", "x": 68.5, "y": 343.4811273611791, "id": "2" },
+      { "type": "NAND", "x": 10.5, "y": 456.28940293926195, "id": "3" },
+      { "type": "NAND", "x": 137.5, "y": 464.2609796756314, "id": "4" },
+      { "type": "NAND", "x": 284.5, "y": 244.79813274789876, "id": "5" },
+      { "type": "OR", "x": 425.5, "y": 493.56989057233386, "id": "6" },
+      { "type": "INV", "x": 362.5, "y": 368.9176498720207, "id": "7" },
+      { "type": "NAND", "x": 211.5, "y": 105.97653011261627, "id": "8" },
+      { "type": "INV", "x": 124.5, "y": 234.3092976443066, "id": "9" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "1" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "0" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "0" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:SAR": {
+    "nodes": [
+      { "type": "SPLIT16", "x": 43.5, "y": 314, "id": "0" },
+      { "type": "BUNDLE16", "x": 20.5, "y": 148, "id": "1" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "3" } },
+      { "source": { "nodeId": "0", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "4" } },
+      { "source": { "nodeId": "0", "connectorId": "4" }, "target": { "nodeId": "1", "connectorId": "5" } },
+      { "source": { "nodeId": "0", "connectorId": "5" }, "target": { "nodeId": "1", "connectorId": "6" } },
+      { "source": { "nodeId": "0", "connectorId": "6" }, "target": { "nodeId": "1", "connectorId": "7" } },
+      { "source": { "nodeId": "0", "connectorId": "7" }, "target": { "nodeId": "1", "connectorId": "8" } },
+      { "source": { "nodeId": "0", "connectorId": "8" }, "target": { "nodeId": "1", "connectorId": "9" } },
+      { "source": { "nodeId": "0", "connectorId": "9" }, "target": { "nodeId": "1", "connectorId": "10" } },
+      { "source": { "nodeId": "0", "connectorId": "10" }, "target": { "nodeId": "1", "connectorId": "11" } },
+      { "source": { "nodeId": "0", "connectorId": "11" }, "target": { "nodeId": "1", "connectorId": "12" } },
+      { "source": { "nodeId": "0", "connectorId": "12" }, "target": { "nodeId": "1", "connectorId": "13" } },
+      { "source": { "nodeId": "0", "connectorId": "13" }, "target": { "nodeId": "1", "connectorId": "14" } },
+      { "source": { "nodeId": "0", "connectorId": "14" }, "target": { "nodeId": "1", "connectorId": "15" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:STACK_PUSH_LOCAL": {
+    "code": "A = LOCALS\nD = *A\nA = index\nD = D + A\npush.D\npush.memory",
+    "testCode": ""
+  },
+  "NandGame:Levels:HALFADD": {
+    "nodes": [
+      { "type": "NAND", "x": 252.5, "y": 547.4009241540836, "id": "0" },
+      { "type": "NAND", "x": 175.5, "y": 411.6582259416359, "id": "1" },
+      { "type": "NAND", "x": 284.5, "y": 272.29003509602114, "id": "2" },
+      { "type": "NAND", "x": 411.5, "y": 445.1492001825792, "id": "3" },
+      { "type": "INV", "x": 27.5, "y": 419.48109152569106, "id": "4" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:INC": {
+    "nodes": [
+      { "type": "ADDC16", "x": 126.5, "y": 399, "id": "0" },
+      { "type": "ZERO", "x": 284.5, "y": 662, "id": "1" },
+      { "type": "INV", "x": 231.5, "y": 533, "id": "2" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:CustomComponents": [],
+  "NandGame:Levels:XOR": {
+    "nodes": [
+      { "type": "NAND", "x": 142.5, "y": 613.5394402035623, "id": "0" },
+      { "type": "NAND", "x": 14.5, "y": 447.203562340967, "id": "1" },
+      { "type": "NAND", "x": 149.5, "y": 278.0636132315522, "id": "2" },
+      { "type": "NAND", "x": 277.5, "y": 452, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:SUB": {
+    "nodes": [
+      { "type": "INV16", "x": 253.5, "y": 597, "id": "0" },
+      { "type": "ADDC16", "x": 173.5, "y": 381, "id": "1" },
+      { "type": "ZERO", "x": 441.5, "y": 668, "id": "2" },
+      { "type": "INV", "x": 385.5, "y": 550, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:FLOAT_UNPACK": {
+    "nodes": [
+      { "type": "SPLIT16", "x": 242.5, "y": 497, "id": "0" },
+      { "type": "BUNDLE16", "x": 30.5, "y": 303, "id": "1" },
+      { "type": "BUNDLE16", "x": 314.5, "y": 107, "id": "2" },
+      { "type": "ISZERO", "x": 240.5, "y": 195, "id": "3" },
+      { "type": "INV", "x": 345.5, "y": 211, "id": "4" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "11" } },
+      { "source": { "nodeId": "0", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "12" } },
+      { "source": { "nodeId": "0", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "13" } },
+      { "source": { "nodeId": "0", "connectorId": "4" }, "target": { "nodeId": "1", "connectorId": "14" } },
+      { "source": { "nodeId": "0", "connectorId": "5" }, "target": { "nodeId": "1", "connectorId": "15" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "5" } },
+      { "source": { "nodeId": "0", "connectorId": "6" }, "target": { "nodeId": "2", "connectorId": "6" } },
+      { "source": { "nodeId": "0", "connectorId": "7" }, "target": { "nodeId": "2", "connectorId": "7" } },
+      { "source": { "nodeId": "0", "connectorId": "8" }, "target": { "nodeId": "2", "connectorId": "8" } },
+      { "source": { "nodeId": "0", "connectorId": "9" }, "target": { "nodeId": "2", "connectorId": "9" } },
+      { "source": { "nodeId": "0", "connectorId": "10" }, "target": { "nodeId": "2", "connectorId": "10" } },
+      { "source": { "nodeId": "0", "connectorId": "11" }, "target": { "nodeId": "2", "connectorId": "11" } },
+      { "source": { "nodeId": "0", "connectorId": "12" }, "target": { "nodeId": "2", "connectorId": "12" } },
+      { "source": { "nodeId": "0", "connectorId": "13" }, "target": { "nodeId": "2", "connectorId": "13" } },
+      { "source": { "nodeId": "0", "connectorId": "14" }, "target": { "nodeId": "2", "connectorId": "14" } },
+      { "source": { "nodeId": "0", "connectorId": "15" }, "target": { "nodeId": "2", "connectorId": "15" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "2" } }
+    ]
+  },
+  "NandGame:Levels:ISZERO": {
+    "nodes": [
+      { "type": "OR", "x": 123.5, "y": 563, "id": "0" },
+      { "type": "OR", "x": 249.5, "y": 563, "id": "1" },
+      { "type": "OR", "x": 187.5, "y": 405, "id": "2" },
+      { "type": "INV", "x": 186.5, "y": 248, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:ASSEMBLER1": {
+    "code": "# Assembler code \nA = 0x7FFF\n*A = 1\n*A = ~*A\n*A = ~*A\n*A = ~*A\n*A = ~*A\n*A = ~*A"
+  },
+  "NandGame:Levels:RELAY_NAND": {
+    "nodes": [
+      { "type": "RELAY-OFF", "x": 160.4921875, "y": 578, "id": "0" },
+      { "type": "RELAY-ON", "x": 190.4921875, "y": 387, "id": "1" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:CMOS_NOR": {
+    "nodes": [
+      { "type": "NMOS", "x": 300.5, "y": 605, "id": "0" },
+      { "type": "NMOS", "x": 538.5, "y": 602, "id": "1" },
+      { "type": "TRINARY_LOGIC_WIRE_JUNCTION", "x": 480.5, "y": 470, "id": "2" },
+      { "type": "PMOS", "x": 177.5, "y": 590, "id": "3" },
+      { "type": "PMOS", "x": 49.5, "y": 475, "id": "4" },
+      { "type": "TRINARY_LOGIC_WIRE_JUNCTION", "x": 248.5, "y": 296, "id": "5" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:CPU3": {
+    "nodes": [
+      { "type": "ROM", "x": 293.5, "y": 409, "id": "0", "state": { "words": [1, 2, 3, 4, 5, 6, 7, 8] } },
+      { "type": "COUNTER", "x": 342.5, "y": 202, "id": "1" },
+      { "type": "CLOCK", "x": 760.5, "y": 538, "id": "2" },
+      { "type": "STATE", "x": 639.5, "y": 157, "id": "3" },
+      { "type": "CONTROL_UNIT", "x": 614.5, "y": 542, "id": "4" }
+    ],
+    "connections": [
+      {
+        "source": { "nodeId": "1", "connectorId": "0" },
+        "target": { "nodeId": "0", "connectorId": "0" },
+        "points": [
+          { "x": 275, "y": 670 },
+          { "x": 276, "y": 163 }
+        ]
+      },
+      { "source": { "nodeId": "4", "connectorId": "4" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "4", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "4", "connectorId": "3" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "3" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "4" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      {
+        "source": { "nodeId": "3", "connectorId": "0" },
+        "target": { "nodeId": "4", "connectorId": "1" },
+        "points": [
+          { "x": 532, "y": 691 },
+          { "x": 517, "y": 99 }
+        ]
+      },
+      {
+        "source": { "nodeId": "3", "connectorId": "1" },
+        "target": { "nodeId": "4", "connectorId": "2" },
+        "points": [
+          { "x": 562, "y": 698 },
+          { "x": 550, "y": 84 }
+        ]
+      },
+      {
+        "source": { "nodeId": "3", "connectorId": "2" },
+        "target": { "nodeId": "4", "connectorId": "3" },
+        "points": [
+          { "x": 592, "y": 703 },
+          { "x": 584, "y": 75 }
+        ]
+      }
+    ]
+  },
+  "NandGame:Levels:GRAMMAR_EXPRESSION": { "source": "2 + 2" },
+  "NandGame:Levels:STACK_POP_ARG": {
+    "code": "A = ARGS\nD = *A\nA = index\nD = D + A\n\npop.A\n\n# Needs exchange the value of A and D, since currently D holds the address, A holds the data\nA = D ^ A\nD = D ^ A\nA = D ^ A\n\n*A = D",
+    "testCode": ""
+  },
+  "NandGame:Levels:STACK_PUSH_MEMORY": {
+    "code": "pop.A\nD = *A\npush.D",
+    "testCode": "init.stack\n# store 42 at address 16\nA = 42\nD = A\nA = 16\n*A = D\n\npush.value 16\npush.memory\n# top of stack should have value 42\n"
+  },
+  "NandGame:Levels:STACK_POP_MEMORY": {
+    "code": "pop.D\npop.A\n*A = D",
+    "testCode": "init.stack\npush.value 16\npush.value 42\npop.memory\n# address 16 should have value 42\n"
+  },
+  "NandGame:Levels:CS_REGISTER_BLOCK": {
+    "nodes": [
+      { "type": "CS_REGISTER", "x": 157.5, "y": 169, "id": "0" },
+      { "type": "CS_REGISTER", "x": 478.5, "y": 175, "id": "1" },
+      { "type": "CS_REGISTER", "x": 799.5, "y": 169, "id": "2" },
+      { "type": "CS_PC", "x": 1129.5, "y": 173, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "8" }, "target": { "nodeId": "0", "connectorId": "3" } },
+      { "source": { "nodeId": "input", "connectorId": "7" }, "target": { "nodeId": "0", "connectorId": "4" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "5" } },
+      { "source": { "nodeId": "input", "connectorId": "10" }, "target": { "nodeId": "0", "connectorId": "6" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "8" }, "target": { "nodeId": "1", "connectorId": "3" } },
+      { "source": { "nodeId": "input", "connectorId": "7" }, "target": { "nodeId": "1", "connectorId": "4" } },
+      { "source": { "nodeId": "input", "connectorId": "9" }, "target": { "nodeId": "1", "connectorId": "5" } },
+      { "source": { "nodeId": "input", "connectorId": "10" }, "target": { "nodeId": "1", "connectorId": "6" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "8" }, "target": { "nodeId": "2", "connectorId": "3" } },
+      { "source": { "nodeId": "input", "connectorId": "7" }, "target": { "nodeId": "2", "connectorId": "4" } },
+      { "source": { "nodeId": "input", "connectorId": "10" }, "target": { "nodeId": "2", "connectorId": "6" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "8" }, "target": { "nodeId": "3", "connectorId": "3" } },
+      { "source": { "nodeId": "input", "connectorId": "7" }, "target": { "nodeId": "3", "connectorId": "4" } },
+      { "source": { "nodeId": "input", "connectorId": "10" }, "target": { "nodeId": "3", "connectorId": "5" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "2" } },
+      { "source": { "nodeId": "1", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "3" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "4" } },
+      { "source": { "nodeId": "2", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "5" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "6" } },
+      { "source": { "nodeId": "3", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "7" } }
+    ]
+  },
+  "NandGame:Levels:STACK_POP_LOCAL": {
+    "code": "A = LOCALS\nD = *A\nA = index\nD = D + A\n\npop.A\n\n# Needs exchange the value of A and D, since currently D holds the address, A holds the data\nA = D ^ A\nD = D ^ A\nA = D ^ A\n\n*A = D",
+    "testCode": ""
+  },
+  "NandGame:Levels:MULTIPLEXER": {
+    "nodes": [
+      { "type": "INV", "x": 160.5, "y": 573, "id": "0" },
+      { "type": "NAND", "x": 57.5, "y": 411, "id": "1" },
+      { "type": "NAND", "x": 143.5, "y": 224, "id": "2" },
+      { "type": "NAND", "x": 247.5, "y": 405, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:FLOAT_MUL": {
+    "nodes": [
+      { "type": "FLOAT_UNPACK", "x": 127.5, "y": 367, "id": "0" },
+      { "type": "FLOAT_UNPACK", "x": 250.5, "y": 374, "id": "1" },
+      { "type": "FLOAT_MUL_UNPACKED", "x": 157.5, "y": 241, "id": "2" },
+      { "type": "FLOAT_PACK", "x": 159.5, "y": 114, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "2" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "3" } },
+      { "source": { "nodeId": "1", "connectorId": "1" }, "target": { "nodeId": "2", "connectorId": "4" } },
+      { "source": { "nodeId": "1", "connectorId": "2" }, "target": { "nodeId": "2", "connectorId": "5" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:ADD_SIGNED_MAGNITUDE": {
+    "nodes": [
+      { "type": "XOR", "x": 297.5, "y": 429, "id": "0" },
+      { "type": "SELECT16", "x": 362.5, "y": 96, "id": "1" },
+      { "type": "XOR", "x": 166.5, "y": 430, "id": "2" },
+      { "type": "ISNEG", "x": 201.5, "y": 287, "id": "3" },
+      { "type": "ADD16", "x": 516.5, "y": 482, "id": "4" },
+      { "type": "SUB16", "x": 397.5, "y": 481, "id": "5" },
+      { "type": "SELECT16", "x": 439.5, "y": 352, "id": "6" },
+      { "type": "XOR", "x": 61.5, "y": 287, "id": "7" },
+      { "type": "SUB16", "x": 323.5, "y": 232, "id": "8" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "1" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "7", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "1" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "1" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:ALU_INSTRUCTION": {
+    "nodes": [
+      { "type": "ALU2", "x": 64.5, "y": 204, "id": "0" },
+      { "type": "CONDITION2", "x": 418.5, "y": 192, "id": "1" },
+      { "type": "SPLIT16", "x": 15.5, "y": 544, "id": "2" },
+      { "type": "SELECT16", "x": 494.5, "y": 386, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "2", "connectorId": "5" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "6" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "7" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "2", "connectorId": "8" }, "target": { "nodeId": "0", "connectorId": "3" } },
+      { "source": { "nodeId": "2", "connectorId": "9" }, "target": { "nodeId": "0", "connectorId": "4" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "0", "connectorId": "5" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "6" } },
+      { "source": { "nodeId": "2", "connectorId": "13" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "14" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "15" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "3" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "3" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "10" }, "target": { "nodeId": "output", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "11" }, "target": { "nodeId": "output", "connectorId": "2" } },
+      { "source": { "nodeId": "2", "connectorId": "12" }, "target": { "nodeId": "output", "connectorId": "3" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "4" } }
+    ]
+  },
+  "NandGame:Levels:FLOAT_NORMALIZE_UNDERFLOW": {
+    "nodes": [
+      { "type": "SPLIT16", "x": -26.5, "y": 684, "id": "0" },
+      { "type": "SHL", "x": 430.5, "y": 245, "id": "1" },
+      { "type": "SHL", "x": 534.5, "y": 244, "id": "2" },
+      { "type": "SHL", "x": 641.5, "y": 243, "id": "3" },
+      { "type": "SHL", "x": 749.5, "y": 243, "id": "4" },
+      { "type": "SHL", "x": 1063.5, "y": 244, "id": "5" },
+      { "type": "SHL", "x": 1166.5, "y": 241, "id": "6" },
+      { "type": "SHL", "x": 855.5, "y": 245, "id": "7" },
+      { "type": "SHL", "x": 962.5, "y": 245, "id": "8" },
+      { "type": "SELECT16", "x": 386.5, "y": 124, "id": "9" },
+      { "type": "SELECT16", "x": 492.5, "y": 125, "id": "10" },
+      { "type": "OR", "x": 509.5, "y": 595, "id": "11" },
+      { "type": "OR", "x": 620.5, "y": 591, "id": "12" },
+      { "type": "SELECT16", "x": 603.5, "y": 125, "id": "13" },
+      { "type": "SELECT16", "x": 711.5, "y": 125, "id": "14" },
+      { "type": "SELECT16", "x": 814.5, "y": 126, "id": "15" },
+      { "type": "SELECT16", "x": 920.5, "y": 127, "id": "16" },
+      { "type": "SELECT16", "x": 1028.5, "y": 125, "id": "17" },
+      { "type": "SHL", "x": 1273.5, "y": 233, "id": "18" },
+      { "type": "SELECT16", "x": 1133.5, "y": 125, "id": "19" },
+      { "type": "SELECT16", "x": 1236.5, "y": 93, "id": "20" },
+      { "type": "OR", "x": 725.5, "y": 593, "id": "21" },
+      { "type": "OR", "x": 828.5, "y": 593, "id": "22" },
+      { "type": "OR", "x": 937.5, "y": 594, "id": "23" },
+      { "type": "OR", "x": 1040.5, "y": 590, "id": "24" },
+      { "type": "OR", "x": 1145.5, "y": 589, "id": "25" },
+      { "type": "OR", "x": 1261.5, "y": 587, "id": "26" },
+      { "type": "OR", "x": 406.5, "y": 608, "id": "27" },
+      { "type": "SHL", "x": 327.5, "y": 245, "id": "28" },
+      { "type": "SELECT16", "x": 281.5, "y": 123, "id": "29" },
+      { "type": "INV16", "x": 45.5, "y": 495, "id": "30" },
+      { "type": "INC16", "x": 339.5, "y": 486, "id": "31" },
+      { "type": "INC16", "x": 447.5, "y": 478, "id": "32" },
+      { "type": "SELECT16", "x": 297.5, "y": 365, "id": "33" },
+      { "type": "SELECT16", "x": 401.5, "y": 368, "id": "34" },
+      { "type": "INC16", "x": 553.5, "y": 478, "id": "35" },
+      { "type": "INC16", "x": 660.5, "y": 479, "id": "36" },
+      { "type": "INC16", "x": 765.5, "y": 480, "id": "37" },
+      { "type": "INC16", "x": 867.5, "y": 476, "id": "38" },
+      { "type": "INC16", "x": 977.5, "y": 476, "id": "39" },
+      { "type": "INC16", "x": 1081.5, "y": 476, "id": "40" },
+      { "type": "INC16", "x": 1188.5, "y": 473, "id": "41" },
+      { "type": "INC16", "x": 1303.5, "y": 467, "id": "42" },
+      { "type": "SELECT16", "x": 503.5, "y": 374, "id": "43" },
+      { "type": "SELECT16", "x": 611.5, "y": 374, "id": "44" },
+      { "type": "SELECT16", "x": 715.5, "y": 379, "id": "45" },
+      { "type": "SELECT16", "x": 822.5, "y": 378, "id": "46" },
+      { "type": "SELECT16", "x": 929.5, "y": 379, "id": "47" },
+      { "type": "SELECT16", "x": 1032.5, "y": 378, "id": "48" },
+      { "type": "SELECT16", "x": 1140.5, "y": 373, "id": "49" },
+      { "type": "SELECT16", "x": 1254.5, "y": 355, "id": "50" },
+      { "type": "INV16", "x": 134.5, "y": 256, "id": "51" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "28", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "0" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "0" } },
+      { "source": { "nodeId": "27", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "0" } },
+      { "source": { "nodeId": "29", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "2" } },
+      { "source": { "nodeId": "11", "connectorId": "0" }, "target": { "nodeId": "10", "connectorId": "0" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "10", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "10", "connectorId": "2" } },
+      { "source": { "nodeId": "27", "connectorId": "0" }, "target": { "nodeId": "11", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "7" }, "target": { "nodeId": "11", "connectorId": "1" } },
+      { "source": { "nodeId": "11", "connectorId": "0" }, "target": { "nodeId": "12", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "8" }, "target": { "nodeId": "12", "connectorId": "1" } },
+      { "source": { "nodeId": "12", "connectorId": "0" }, "target": { "nodeId": "13", "connectorId": "0" } },
+      { "source": { "nodeId": "10", "connectorId": "0" }, "target": { "nodeId": "13", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "13", "connectorId": "2" } },
+      { "source": { "nodeId": "21", "connectorId": "0" }, "target": { "nodeId": "14", "connectorId": "0" } },
+      { "source": { "nodeId": "13", "connectorId": "0" }, "target": { "nodeId": "14", "connectorId": "1" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "14", "connectorId": "2" } },
+      { "source": { "nodeId": "22", "connectorId": "0" }, "target": { "nodeId": "15", "connectorId": "0" } },
+      { "source": { "nodeId": "14", "connectorId": "0" }, "target": { "nodeId": "15", "connectorId": "1" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "15", "connectorId": "2" } },
+      { "source": { "nodeId": "23", "connectorId": "0" }, "target": { "nodeId": "16", "connectorId": "0" } },
+      { "source": { "nodeId": "15", "connectorId": "0" }, "target": { "nodeId": "16", "connectorId": "1" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "16", "connectorId": "2" } },
+      { "source": { "nodeId": "24", "connectorId": "0" }, "target": { "nodeId": "17", "connectorId": "0" } },
+      { "source": { "nodeId": "16", "connectorId": "0" }, "target": { "nodeId": "17", "connectorId": "1" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "17", "connectorId": "2" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "18", "connectorId": "0" } },
+      { "source": { "nodeId": "25", "connectorId": "0" }, "target": { "nodeId": "19", "connectorId": "0" } },
+      { "source": { "nodeId": "17", "connectorId": "0" }, "target": { "nodeId": "19", "connectorId": "1" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "19", "connectorId": "2" } },
+      { "source": { "nodeId": "26", "connectorId": "0" }, "target": { "nodeId": "20", "connectorId": "0" } },
+      { "source": { "nodeId": "19", "connectorId": "0" }, "target": { "nodeId": "20", "connectorId": "1" } },
+      { "source": { "nodeId": "18", "connectorId": "0" }, "target": { "nodeId": "20", "connectorId": "2" } },
+      { "source": { "nodeId": "12", "connectorId": "0" }, "target": { "nodeId": "21", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "9" }, "target": { "nodeId": "21", "connectorId": "1" } },
+      { "source": { "nodeId": "21", "connectorId": "0" }, "target": { "nodeId": "22", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "10" }, "target": { "nodeId": "22", "connectorId": "1" } },
+      { "source": { "nodeId": "22", "connectorId": "0" }, "target": { "nodeId": "23", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "11" }, "target": { "nodeId": "23", "connectorId": "1" } },
+      { "source": { "nodeId": "23", "connectorId": "0" }, "target": { "nodeId": "24", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "12" }, "target": { "nodeId": "24", "connectorId": "1" } },
+      { "source": { "nodeId": "24", "connectorId": "0" }, "target": { "nodeId": "25", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "13" }, "target": { "nodeId": "25", "connectorId": "1" } },
+      { "source": { "nodeId": "25", "connectorId": "0" }, "target": { "nodeId": "26", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "14" }, "target": { "nodeId": "26", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "5" }, "target": { "nodeId": "27", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "6" }, "target": { "nodeId": "27", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "28", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "5" }, "target": { "nodeId": "29", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "29", "connectorId": "1" } },
+      { "source": { "nodeId": "28", "connectorId": "0" }, "target": { "nodeId": "29", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "30", "connectorId": "0" } },
+      { "source": { "nodeId": "30", "connectorId": "0" }, "target": { "nodeId": "31", "connectorId": "0" } },
+      { "source": { "nodeId": "31", "connectorId": "0" }, "target": { "nodeId": "32", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "5" }, "target": { "nodeId": "33", "connectorId": "0" } },
+      { "source": { "nodeId": "30", "connectorId": "0" }, "target": { "nodeId": "33", "connectorId": "1" } },
+      { "source": { "nodeId": "31", "connectorId": "0" }, "target": { "nodeId": "33", "connectorId": "2" } },
+      { "source": { "nodeId": "27", "connectorId": "0" }, "target": { "nodeId": "34", "connectorId": "0" } },
+      { "source": { "nodeId": "33", "connectorId": "0" }, "target": { "nodeId": "34", "connectorId": "1" } },
+      { "source": { "nodeId": "32", "connectorId": "0" }, "target": { "nodeId": "34", "connectorId": "2" } },
+      { "source": { "nodeId": "32", "connectorId": "0" }, "target": { "nodeId": "35", "connectorId": "0" } },
+      { "source": { "nodeId": "35", "connectorId": "0" }, "target": { "nodeId": "36", "connectorId": "0" } },
+      { "source": { "nodeId": "36", "connectorId": "0" }, "target": { "nodeId": "37", "connectorId": "0" } },
+      { "source": { "nodeId": "37", "connectorId": "0" }, "target": { "nodeId": "38", "connectorId": "0" } },
+      { "source": { "nodeId": "38", "connectorId": "0" }, "target": { "nodeId": "39", "connectorId": "0" } },
+      { "source": { "nodeId": "39", "connectorId": "0" }, "target": { "nodeId": "40", "connectorId": "0" } },
+      { "source": { "nodeId": "40", "connectorId": "0" }, "target": { "nodeId": "41", "connectorId": "0" } },
+      { "source": { "nodeId": "41", "connectorId": "0" }, "target": { "nodeId": "42", "connectorId": "0" } },
+      { "source": { "nodeId": "11", "connectorId": "0" }, "target": { "nodeId": "43", "connectorId": "0" } },
+      { "source": { "nodeId": "34", "connectorId": "0" }, "target": { "nodeId": "43", "connectorId": "1" } },
+      { "source": { "nodeId": "35", "connectorId": "0" }, "target": { "nodeId": "43", "connectorId": "2" } },
+      { "source": { "nodeId": "12", "connectorId": "0" }, "target": { "nodeId": "44", "connectorId": "0" } },
+      { "source": { "nodeId": "43", "connectorId": "0" }, "target": { "nodeId": "44", "connectorId": "1" } },
+      { "source": { "nodeId": "36", "connectorId": "0" }, "target": { "nodeId": "44", "connectorId": "2" } },
+      { "source": { "nodeId": "21", "connectorId": "0" }, "target": { "nodeId": "45", "connectorId": "0" } },
+      { "source": { "nodeId": "44", "connectorId": "0" }, "target": { "nodeId": "45", "connectorId": "1" } },
+      { "source": { "nodeId": "37", "connectorId": "0" }, "target": { "nodeId": "45", "connectorId": "2" } },
+      { "source": { "nodeId": "22", "connectorId": "0" }, "target": { "nodeId": "46", "connectorId": "0" } },
+      { "source": { "nodeId": "45", "connectorId": "0" }, "target": { "nodeId": "46", "connectorId": "1" } },
+      { "source": { "nodeId": "38", "connectorId": "0" }, "target": { "nodeId": "46", "connectorId": "2" } },
+      { "source": { "nodeId": "23", "connectorId": "0" }, "target": { "nodeId": "47", "connectorId": "0" } },
+      { "source": { "nodeId": "46", "connectorId": "0" }, "target": { "nodeId": "47", "connectorId": "1" } },
+      { "source": { "nodeId": "39", "connectorId": "0" }, "target": { "nodeId": "47", "connectorId": "2" } },
+      { "source": { "nodeId": "24", "connectorId": "0" }, "target": { "nodeId": "48", "connectorId": "0" } },
+      { "source": { "nodeId": "47", "connectorId": "0" }, "target": { "nodeId": "48", "connectorId": "1" } },
+      { "source": { "nodeId": "40", "connectorId": "0" }, "target": { "nodeId": "48", "connectorId": "2" } },
+      { "source": { "nodeId": "25", "connectorId": "0" }, "target": { "nodeId": "49", "connectorId": "0" } },
+      { "source": { "nodeId": "48", "connectorId": "0" }, "target": { "nodeId": "49", "connectorId": "1" } },
+      { "source": { "nodeId": "41", "connectorId": "0" }, "target": { "nodeId": "49", "connectorId": "2" } },
+      { "source": { "nodeId": "26", "connectorId": "0" }, "target": { "nodeId": "50", "connectorId": "0" } },
+      { "source": { "nodeId": "49", "connectorId": "0" }, "target": { "nodeId": "50", "connectorId": "1" } },
+      { "source": { "nodeId": "42", "connectorId": "0" }, "target": { "nodeId": "50", "connectorId": "2" } },
+      { "source": { "nodeId": "50", "connectorId": "0" }, "target": { "nodeId": "51", "connectorId": "0" } },
+      { "source": { "nodeId": "51", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "20", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:SHR": {
+    "nodes": [
+      { "type": "SPLIT16", "x": 42.5, "y": 307, "id": "0" },
+      { "type": "BUNDLE16", "x": 19.5, "y": 140, "id": "1" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "3" } },
+      { "source": { "nodeId": "0", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "4" } },
+      { "source": { "nodeId": "0", "connectorId": "4" }, "target": { "nodeId": "1", "connectorId": "5" } },
+      { "source": { "nodeId": "0", "connectorId": "5" }, "target": { "nodeId": "1", "connectorId": "6" } },
+      { "source": { "nodeId": "0", "connectorId": "6" }, "target": { "nodeId": "1", "connectorId": "7" } },
+      { "source": { "nodeId": "0", "connectorId": "7" }, "target": { "nodeId": "1", "connectorId": "8" } },
+      { "source": { "nodeId": "0", "connectorId": "8" }, "target": { "nodeId": "1", "connectorId": "9" } },
+      { "source": { "nodeId": "0", "connectorId": "9" }, "target": { "nodeId": "1", "connectorId": "10" } },
+      { "source": { "nodeId": "0", "connectorId": "10" }, "target": { "nodeId": "1", "connectorId": "11" } },
+      { "source": { "nodeId": "0", "connectorId": "11" }, "target": { "nodeId": "1", "connectorId": "12" } },
+      { "source": { "nodeId": "0", "connectorId": "12" }, "target": { "nodeId": "1", "connectorId": "13" } },
+      { "source": { "nodeId": "0", "connectorId": "13" }, "target": { "nodeId": "1", "connectorId": "14" } },
+      { "source": { "nodeId": "0", "connectorId": "14" }, "target": { "nodeId": "1", "connectorId": "15" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:ASSEMBLER_DISPLAY": {
+    "code": "\n# Generated assembly instructions from hex data\n# Each line processes two 16-bit hex numbers and stores them at incrementing addresses\n\n# Line 1: 0400 0020\nA = 0x0400\nD = A\nA = 0x4E0F\n*A = D\nA = 0x0020\nD = A\nA = 0x4E10\n*A = D\n\n# Line 2: 0E00 0070\nA = 0x0E00\nD = A\nA = 0x4E2F\n*A = D\nA = 0x0070\nD = A\nA = 0x4E30\n*A = D\n\n# Line 3: 0700 00E0\nA = 0x0700\nD = A\nA = 0x4E4F\n*A = D\nA = 0x00E0\nD = A\nA = 0x4E50\n*A = D\n\n# Line 4: 078F F1E0\nA = 0x078F\nD = A\nA = 0x4E6F\n*A = D\nA = 0x0E1F\nD = ~A\nA = 0x4E70\n*A = D\n\n# Line 5: 07FF FFE0\nA = 0x07FF\nD = A\nA = 0x4E8F\n*A = D\nA = 0x001F\nD = ~A\nA = 0x4E90\n*A = D\n\n# Line 6: 03FF FFC0\nA = 0x03FF\nD = A\nA = 0x4EAF\n*A = D\nA = 0x003F\nD = ~A\nA = 0x4EB0\n*A = D\n\n# Line 7: 03FF FFC0\nA = 0x03FF\nD = A\nA = 0x4ECF\n*A = D\nA = 0x003F\nD = ~A\nA = 0x4ED0\n*A = D\n\n# Line 8: 03FF FFC0\nA = 0x03FF\nD = A\nA = 0x4EEF\n*A = D\nA = 0x003F\nD = ~A\nA = 0x4EF0\n*A = D\n\n# Line 9: 07FE 7FE0\nA = 0x07FE\nD = A\nA = 0x4F0F\n*A = D\nA = 0x7FE0\nD = A\nA = 0x4F10\n*A = D\n\n# Line 10: 07F0 0FE0\nA = 0x07F0\nD = A\nA = 0x4F2F\n*A = D\nA = 0x0FE0\nD = A\nA = 0x4F30\n*A = D\n\n# Line 11: 0FE0 07F0\nA = 0x0FE0\nD = A\nA = 0x4F4F\n*A = D\nA = 0x07F0\nD = A\nA = 0x4F50\n*A = D\n\n# Line 12: 0FC0 03C0\nA = 0x0FC0\nD = A\nA = 0x4F6F\n*A = D\nA = 0x03C0\nD = A\nA = 0x4F70\n*A = D\n\n# Line 13: 1F80 0100\nA = 0x1F80\nD = A\nA = 0x4F8F\n*A = D\nA = 0x0100\nD = A\nA = 0x4F90\n*A = D\n\n# Line 14: 1F00 0000\nA = 0x1F00\nD = A\nA = 0x4FAF\n*A = D\nA = 0x0000\nD = A\nA = 0x4FB0\n*A = D\n\n# Line 15: 1F00 0000\nA = 0x1F00\nD = A\nA = 0x4FCF\n*A = D\nA = 0x0000\nD = A\nA = 0x4FD0\n*A = D\n\n# Line 16: 1F00 0000\nA = 0x1F00\nD = A\nA = 0x4FEF\n*A = D\nA = 0x0000\nD = A\nA = 0x4FF0\n*A = D\n\n# Line 17: 3F00 0000\nA = 0x3F00\nD = A\nA = 0x500F\n*A = D\nA = 0x0000\nD = A\nA = 0x5010\n*A = D\n\n# Line 18: 3F00 0000\nA = 0x3F00\nD = A\nA = 0x502F\n*A = D\nA = 0x0000\nD = A\nA = 0x5030\n*A = D\n\n# Line 19: 3F00 0000\nA = 0x3F00\nD = A\nA = 0x504F\n*A = D\nA = 0x0000\nD = A\nA = 0x5050\n*A = D\n\n# Line 20: 1F00 0000\nA = 0x1F00\nD = A\nA = 0x506F\n*A = D\nA = 0x0000\nD = A\nA = 0x5070\n*A = D\n\n# Line 21: 1F00 0000\nA = 0x1F00\nD = A\nA = 0x508F\n*A = D\nA = 0x0000\nD = A\nA = 0x5090\n*A = D\n\n# Line 22: 1F80 0000\nA = 0x1F80\nD = A\nA = 0x50AF\n*A = D\nA = 0x0000\nD = A\nA = 0x50B0\n*A = D\n\n# Line 23: 1F80 0180\nA = 0x1F80\nD = A\nA = 0x50CF\n*A = D\nA = 0x0180\nD = A\nA = 0x50D0\n*A = D\n\n# Line 24: 0FC0 03E0\nA = 0x0FC0\nD = A\nA = 0x50EF\n*A = D\nA = 0x03E0\nD = A\nA = 0x50F0\n*A = D\n\n# Line 25: 0FE0 07F0\nA = 0x0FE0\nD = A\nA = 0x510F\n*A = D\nA = 0x07F0\nD = A\nA = 0x5110\n*A = D\n\n# Line 26: 07F8 1FE0\nA = 0x07F8\nD = A\nA = 0x512F\n*A = D\nA = 0x1FE0\nD = A\nA = 0x5130\n*A = D\n\n# Line 27: 07FF FFE0\nA = 0x07FF\nD = A\nA = 0x514F\n*A = D\nA = 0x001F\nD = ~A\nA = 0x5150\n*A = D\n\n# Line 28: 03FF FFC0\nA = 0x03FF\nD = A\nA = 0x516F\n*A = D\nA = 0x003F\nD = ~A\nA = 0x5170\n*A = D\n\n# Line 29: 01FF FF80\nA = 0x01FF\nD = A\nA = 0x518F\n*A = D\nA = 0x007F\nD = ~A\nA = 0x5190\n*A = D\n\n# Line 30: 007F FE00\nA = 0x007F\nD = A\nA = 0x51AF\n*A = D\nA = 0x01FF\nD = ~A\nA = 0x51B0\n*A = D\n\n# Line 31: 003F FC00\nA = 0x003F\nD = A\nA = 0x51CF\n*A = D\nA = 0x03FF\nD = ~A\nA = 0x51D0\n*A = D\n\n# Line 32: 0003 C000\nA = 0x0003\nD = A\nA = 0x51EF\n*A = D\nA = 0x3FFF\nD = ~A\nA = 0x51F0\n*A = D\n"
+  },
+  "NandGame:Levels:STACK_POP_STATIC": {
+    "code": "pop.D\nA = address\n*A = D",
+    "testCode": "init.stack\npush.value x42\npop.static x16\n# address 16 should have value 42\n"
+  },
+  "NandGame:Levels:AND": {
+    "nodes": [
+      { "type": "NAND", "x": 124.5, "y": 642, "id": "0" },
+      { "type": "INV", "x": 123.5, "y": 523, "id": "1" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:ESCAPE": {
+    "code": "# Assembler code\nDEFINE IO 0x7FFF\nDEFINE C_FRONT_WALL 0x100\nDEFINE C_IS_BUSY 0x600\nDEFINE C_MOVE_FORWARD 0x04\nDEFINE C_TURN_LEFT 0x08\nDEFINE C_TURN_RIGHT 0x10\nDEFINE F_IS_WALL 0x100\nDEFINE ONE_STACK 0xFF\n\nLABEL GOTO_BEGIN\n\n# Detect current front and remeber\nA = C_FRONT_WALL\nD = A\nA = IO\nD = D & *A\nA = F_IS_WALL\n*A = D\n\n# Turn right\nA = GOTO_1\nD = A\nA = ONE_STACK\n*A = D\nA = C_TURN_RIGHT\nD = A\nA = FUNC_EXEC_ACTION\nJMP\n\nLABEL GOTO_1\n\n# Detect current front (previous right)\nA = C_FRONT_WALL\nD = A\nA = IO\nD = D & *A\nA = CASE_3\nD ; JEQ\n\n# Check previous front status\nA = F_IS_WALL\nD = *A\nA = CASE_1\nD ; JEQ\n\n# Case 2: turn left twice\nLABEL CASE_2\nA = GOTO_2\nD = A\nA = ONE_STACK\n*A = D\nA = C_TURN_LEFT\nD = A\nA = FUNC_EXEC_ACTION\nJMP\n\nLABEL GOTO_2\n\nA = GOTO_BEGIN\nD = A\nA = ONE_STACK\n*A = D\nA = C_TURN_LEFT\nD = A\nA = FUNC_EXEC_ACTION\nJMP\n\n# Case 1: turn left then move forward\nLABEL CASE_1\nA = GOTO_3\nD = A\nA = ONE_STACK\n*A = D\nA = C_TURN_LEFT\nD = A\nA = FUNC_EXEC_ACTION\nJMP\n\nLABEL GOTO_3\n\nA = GOTO_BEGIN\nD = A\nA = ONE_STACK\n*A = D\nA = C_MOVE_FORWARD\nD = A\nA = FUNC_EXEC_ACTION\nJMP\n\n# Case 3: move forward now\nLABEL CASE_3\nA = GOTO_BEGIN\nD = A\nA = ONE_STACK\n*A = D\nA = C_MOVE_FORWARD\nD = A\nA = FUNC_EXEC_ACTION\nJMP\n\n# A function\n# Performs the move/turn action specified by D\n# Waits until the move/turn complete\n# Jump to *ONE_STACK\nLABEL FUNC_EXEC_ACTION\nA = IO\n*A = D | *A\nLABEL WHILE_BUSY\nA = C_IS_BUSY\nD = A\nA = IO\nD = D & *A\nA = WHILE_BUSY\nD ; JNE\nA = ONE_STACK\nA = *A\nJMP\n"
+  },
+  "NandGame:Levels:ALU_LOGIC": {
+    "nodes": [
+      { "type": "AND16", "x": 645.5, "y": 523, "id": "0" },
+      { "type": "OR16", "x": 503.5, "y": 525, "id": "1" },
+      { "type": "XOR16", "x": 361.5, "y": 527, "id": "2" },
+      { "type": "INV16", "x": 231.5, "y": 530, "id": "3" },
+      { "type": "SELECT16", "x": 524.5, "y": 338, "id": "4" },
+      { "type": "SELECT16", "x": 191.5, "y": 338, "id": "5" },
+      { "type": "SELECT16", "x": 119.5, "y": 170, "id": "6" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      {
+        "source": { "nodeId": "input", "connectorId": "1" },
+        "target": { "nodeId": "4", "connectorId": "0" },
+        "points": [{ "x": 207, "y": 500 }]
+      },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "1" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "2" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:STACK_PUSH_ARG": {
+    "code": "A = ARGS\nD = *A\nA = index\nD = D + A\npush.D\npush.memory",
+    "testCode": ""
+  },
+  "NandGame:Levels:CMOS_INV": {
+    "nodes": [
+      { "type": "NMOS", "x": 237.5, "y": 621, "id": "0" },
+      { "type": "PMOS", "x": 74.5, "y": 620, "id": "1" },
+      { "type": "TRINARY_LOGIC_WIRE_JUNCTION", "x": 156.5, "y": 482, "id": "2" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:ALU_ARITHMETIC": {
+    "nodes": [
+      { "type": "ADD16", "x": 289.5, "y": 276, "id": "0" },
+      { "type": "SUB16", "x": 103.5, "y": 272, "id": "1" },
+      { "type": "SELECT16", "x": 36.5, "y": 126, "id": "2" },
+      { "type": "SELECT16", "x": 481.5, "y": 443, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:FLOAT_NORMALIZE_OVERFLOW": {
+    "nodes": [
+      { "type": "SPLIT16", "x": 251.5, "y": 502, "id": "0" },
+      { "type": "BUNDLE16", "x": 287.5, "y": 291, "id": "1" },
+      { "type": "SELECT16", "x": 191.5, "y": 183, "id": "2" },
+      { "type": "ADD16", "x": 41.5, "y": 312, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "4" }, "target": { "nodeId": "1", "connectorId": "5" } },
+      { "source": { "nodeId": "0", "connectorId": "5" }, "target": { "nodeId": "1", "connectorId": "6" } },
+      { "source": { "nodeId": "0", "connectorId": "6" }, "target": { "nodeId": "1", "connectorId": "7" } },
+      { "source": { "nodeId": "0", "connectorId": "7" }, "target": { "nodeId": "1", "connectorId": "8" } },
+      { "source": { "nodeId": "0", "connectorId": "8" }, "target": { "nodeId": "1", "connectorId": "9" } },
+      { "source": { "nodeId": "0", "connectorId": "9" }, "target": { "nodeId": "1", "connectorId": "10" } },
+      { "source": { "nodeId": "0", "connectorId": "10" }, "target": { "nodeId": "1", "connectorId": "11" } },
+      { "source": { "nodeId": "0", "connectorId": "11" }, "target": { "nodeId": "1", "connectorId": "12" } },
+      { "source": { "nodeId": "0", "connectorId": "12" }, "target": { "nodeId": "1", "connectorId": "13" } },
+      { "source": { "nodeId": "0", "connectorId": "13" }, "target": { "nodeId": "1", "connectorId": "14" } },
+      { "source": { "nodeId": "0", "connectorId": "14" }, "target": { "nodeId": "1", "connectorId": "15" } },
+      { "source": { "nodeId": "0", "connectorId": "4" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "4" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:STACK_POP_A": {
+    "code": "A = SP\n*A = *A - 1\nA = *A\nA = *A",
+    "testCode": "init.stack\nD = 1\npush.D\nA = 0x48\nD = A\npop.A\n# inspect A. Should be 1.\n# inspect D - should be 0x42\n"
+  },
+  "NandGame:Levels:OPCODES2": {
+    "destinations": [
+      { "key": "", "value": [false, false, false] },
+      { "key": "A =", "value": [true, false, false] },
+      { "key": "D =", "value": [false, true, false] },
+      { "key": "*A =", "value": [false, false, true] },
+      { "key": "A, D =", "value": [true, true, false] },
+      { "key": "D, *A =", "value": [false, true, true] },
+      { "key": "A, D, *A =", "value": [true, true, true] }
+    ],
+    "calculations": [
+      { "key": "D+A", "value": [true, false, false, false, false] },
+      { "key": "D-A", "value": [true, true, false, false, false] },
+      { "key": "A-D", "value": [true, true, false, false, true] },
+      { "key": "D+1", "value": [true, false, true, false, false] },
+      { "key": "A+1", "value": [true, false, true, false, true] },
+      { "key": "D-1", "value": [true, true, true, false, false] },
+      { "key": "A-1", "value": [true, true, true, false, true] },
+      { "key": "-D", "value": [true, true, false, true, true] },
+      { "key": "-A", "value": [true, true, false, true, false] },
+      { "key": "-1", "value": [true, true, true, true, false] },
+      { "key": "1", "value": [true, false, true, true, false] },
+      { "key": "D", "value": [true, false, false, true, true] },
+      { "key": "A", "value": [true, false, false, true, false] },
+      { "key": "D&A", "value": [false, false, false, false, false] },
+      { "key": "D|A", "value": [false, false, true, false, false] },
+      { "key": "~D", "value": [false, true, true, false, false] },
+      { "key": "~A", "value": [false, true, true, false, true] },
+      { "key": "0", "value": [false, false, false, true, false] }
+    ],
+    "jumps": [
+      { "key": "", "value": [false, false, false] },
+      { "key": "; JLT", "value": [true, false, false] },
+      { "key": "; JEQ", "value": [false, true, false] },
+      { "key": "; JGT", "value": [false, false, true] },
+      { "key": "; JLE", "value": [true, true, false] },
+      { "key": "; JGE", "value": [false, true, true] },
+      { "key": "; JMP", "value": [true, true, true] }
+    ]
+  },
+  "NandGame:Levels:STACK_PUSH_D": {
+    "code": "A = SP\nA = *A\n*A = D\nA = SP\n*A = *A + 1\n",
+    "testCode": "init.stack\nD = 1\npush.d\n# inspect top of stack. Should be 1.\n"
+  },
+  "NandGame:Levels:CONTROL_SELECTOR": {
+    "nodes": [
+      { "type": "SELECT16", "x": 108.5, "y": 197, "id": "0" },
+      { "type": "SELECT", "x": 272.5, "y": 197, "id": "1" },
+      { "type": "SELECT", "x": 422.5, "y": 194, "id": "2" },
+      { "type": "SELECT", "x": 566.5, "y": 194, "id": "3" },
+      { "type": "SELECT", "x": 717.5, "y": 195, "id": "4" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "7" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "8" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "9" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "10" }, "target": { "nodeId": "4", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "2" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "3" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "4" } }
+    ]
+  },
+  "NandGame:Levels:ALU2": {
+    "nodes": [
+      { "type": "SELECT16", "x": 426.5, "y": 594, "id": "0" },
+      { "type": "SELECT16", "x": 607.5, "y": 593, "id": "1" },
+      { "type": "SELECT16", "x": 359.5, "y": 482, "id": "2" },
+      { "type": "SELECT16", "x": 152.5, "y": 146, "id": "3" },
+      { "type": "ARITHMETIC_UNIT", "x": 291, "y": 299, "id": "4" },
+      { "type": "LOGIC_UNIT", "x": 580.5, "y": 295, "id": "5" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      {
+        "source": { "nodeId": "input", "connectorId": "1" },
+        "target": { "nodeId": "4", "connectorId": "0" },
+        "points": [{ "x": 198, "y": 435 }]
+      },
+      {
+        "source": { "nodeId": "input", "connectorId": "2" },
+        "target": { "nodeId": "4", "connectorId": "1" },
+        "points": [{ "x": 261, "y": 423 }]
+      },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "2" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "3" } },
+      {
+        "source": { "nodeId": "input", "connectorId": "1" },
+        "target": { "nodeId": "5", "connectorId": "0" },
+        "points": [{ "x": 198, "y": 470 }]
+      },
+      {
+        "source": { "nodeId": "input", "connectorId": "2" },
+        "target": { "nodeId": "5", "connectorId": "1" },
+        "points": [{ "x": 262, "y": 468 }]
+      },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "2" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "3" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels": [
+    "RELAY_NAND",
+    "INV",
+    "AND",
+    "OR",
+    "XOR",
+    "HALFADD",
+    "FULLADD",
+    "ADD2",
+    "INC",
+    "SUB",
+    "ISZERO",
+    "SIGN",
+    "MULTIPLEXER",
+    "DEMUX",
+    "ALU_LOGIC",
+    "ALU_ARITHMETIC",
+    "ALU2",
+    "CONDITION",
+    "SR_LATCH",
+    "LATCH",
+    "DFF",
+    "DFF2",
+    "COUNTER",
+    "RAM",
+    "CPU_STATE",
+    "ALU_INSTRUCTION",
+    "CONTROL_SELECTOR",
+    "CONTROL_UNIT",
+    "CPU3",
+    "IO2",
+    "PROGRAM1",
+    "OPCODES2",
+    "ASSEMBLER1",
+    "READ_KEYBOARD",
+    "ESCAPE",
+    "ASSEMBLER_DISPLAY",
+    "ASSEMBLER_NETWORK_RECEIVE",
+    "STACK_INIT",
+    "STACK_PUSH_D",
+    "STACK_POP_D",
+    "STACK_POP_A",
+    "STACK_PUSH_VALUE",
+    "STACK_ADD",
+    "STACK_SUB",
+    "STACK_NEG",
+    "STACK_AND",
+    "STACK_OR",
+    "TOKENIZE_EXPRESSION",
+    "GRAMMAR_EXPRESSION",
+    "CODEGEN_EXPRESSION",
+    "STACK_EQ",
+    "STACK_GT",
+    "STACK_LT",
+    "STACK_NOT",
+    "STACK_GOTO",
+    "STACK_IF_GOTO",
+    "STACK_PUSH_MEMORY",
+    "STACK_POP_MEMORY",
+    "STACK_PUSH_STATIC",
+    "STACK_POP_STATIC",
+    "CALL",
+    "FUNCTION",
+    "RETURN",
+    "STACK_PUSH_ARG",
+    "STACK_POP_ARG",
+    "STACK_PUSH_LOCAL",
+    "STACK_POP_LOCAL",
+    "CMOS_NAND",
+    "CMOS_INV",
+    "CMOS_NOR",
+    "XNOR",
+    "SHL",
+    "SHR",
+    "SAR",
+    "SHL16",
+    "MAX16",
+    "MUL16",
+    "FLOAT_UNPACK",
+    "FLOAT_MUL_UNPACKED",
+    "FLOAT_NORMALIZE_OVERFLOW",
+    "FLOAT_VERIFY_EXPONENT",
+    "FLOAT_ALIGN",
+    "ADD_SIGNED_MAGNITUDE",
+    "FLOAT_NORMALIZE_UNDERFLOW",
+    "FLOAT_PACK",
+    "FLOAT_MUL",
+    "FLOAT_ADD",
+    "CS_TRIGGER",
+    "CS_MODE",
+    "CS_REGISTER",
+    "CS_PROGRAM_COUNTER",
+    "CS_REGISTER_BLOCK",
+    "CS_GENERAL_MEMORY",
+    "CS_MAPPED_MEMORY",
+    "CS_CONTROL_UNIT",
+    "CS_COMBINE"
+  ],
+  "NandGame:Levels:CS_GENERAL_MEMORY": {
+    "nodes": [
+      { "type": "DFF16", "x": 55.5, "y": 373, "id": "0" },
+      { "type": "DFF16", "x": 359.5, "y": 379, "id": "1" },
+      { "type": "DFF16", "x": 507.5, "y": 379, "id": "2" },
+      { "type": "DFF16", "x": 800.5, "y": 378, "id": "3" },
+      { "type": "DEMUX", "x": 253.5, "y": 617, "id": "4" },
+      { "type": "SELECT16", "x": 167.5, "y": 231, "id": "5" },
+      { "type": "SELECT16", "x": 638.5, "y": 237, "id": "6" },
+      { "type": "SELECT16", "x": 268.5, "y": 102, "id": "7" },
+      { "type": "SELECT16", "x": 294.5, "y": 233, "id": "8" },
+      { "type": "SELECT16", "x": 751.5, "y": 242, "id": "9" },
+      { "type": "SELECT16", "x": 554.5, "y": 98, "id": "10" },
+      { "type": "DEMUX", "x": 687.5, "y": 497, "id": "11" },
+      { "type": "DEMUX", "x": 229.5, "y": 498, "id": "12" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "12", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "12", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "11", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "11", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "6" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "1" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "8", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "9", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "9", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "10", "connectorId": "0" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "10", "connectorId": "1" } },
+      { "source": { "nodeId": "9", "connectorId": "0" }, "target": { "nodeId": "10", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "11", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "1" }, "target": { "nodeId": "11", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "12", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "12", "connectorId": "1" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "10", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:XNOR": {
+    "nodes": [
+      { "type": "OR", "x": 250.5, "y": 487, "id": "0" },
+      { "type": "NAND", "x": 123.5, "y": 156, "id": "1" },
+      { "type": "NAND", "x": 39.5, "y": 489, "id": "2" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:IO2": {
+    "nodes": [
+      { "type": "LAMP", "x": 412.5, "y": 151.9491235078094, "id": "0" },
+      { "type": "SPLIT16", "x": 11.5, "y": 458.87088322875695, "id": "1" },
+      { "type": "BUTTON", "x": 71.9296875, "y": 240.58599933566595, "id": "2" },
+      { "type": "BUNDLE16", "x": 20.5, "y": 106.8091083287459, "id": "3" },
+      { "type": "AND", "x": 327.5, "y": 269.73336621763667, "id": "4" },
+      { "type": "AND", "x": 470.5, "y": 279.0667006888351, "id": "5" },
+      { "type": "AND", "x": 461.5, "y": 431.20005256937065, "id": "6" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "14" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "15" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "6", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:STACK_NOT": {
+    "code": "pop.D\nD = ~D\npush.D",
+    "testCode": "init.stack\npush.value x0F0F\nnot\n# inspect top of stack. Should be F0F0.\n"
+  },
+  "NandGame:Levels:SR_LATCH": {
+    "nodes": [
+      { "type": "NAND", "x": 195.5, "y": 288, "id": "0" },
+      { "type": "NAND", "x": 48.5, "y": 291, "id": "1" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:CPU_STATE": {
+    "nodes": [
+      { "type": "RAM", "x": 460.5, "y": 141, "id": "0" },
+      { "type": "DFF16", "x": 88.5, "y": 402, "id": "1" },
+      { "type": "DFF16", "x": 239.5, "y": 407, "id": "2" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "0", "connectorId": "3" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "1", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "2" } }
+    ]
+  },
+  "NandGame:Levels:FUNCTION": {
+    "code": "LABEL functionName\n\nA = SP\nD = *A\nA = LOCALS\n*A = D\n\nA = localsCount\nD = A\nA = SP\nD = D + *A\n*A = D",
+    "testCode": ""
+  },
+  "NandGame:Levels:FULLADD": {
+    "nodes": [
+      { "type": "NAND", "x": 114.5, "y": 673.0336078541211, "id": "0" },
+      { "type": "NAND", "x": 11.5, "y": 535.5263488738449, "id": "1" },
+      { "type": "NAND", "x": 133.5, "y": 420.80741149363604, "id": "2" },
+      { "type": "NAND", "x": 233.5, "y": 538.5320084849785, "id": "3" },
+      { "type": "NAND", "x": 357.5, "y": 414.38125013855694, "id": "4" },
+      { "type": "NAND", "x": 313.5, "y": 260.4096234181222, "id": "5" },
+      { "type": "NAND", "x": 368.5, "y": 155.83744223352684, "id": "6" },
+      { "type": "NAND", "x": 483.5, "y": 290.71773677231766, "id": "7" },
+      { "type": "NAND", "x": 34.5, "y": 243.41408241664905, "id": "8" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "0" } },
+      { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "6", "connectorId": "1" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "7", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "7", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "8", "connectorId": "1" } },
+      { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "6", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:CS_COMBINE": {
+    "nodes": [
+      { "type": "CS_MAPPED_MEMORY", "x": 791.5, "y": 158, "id": "0" },
+      { "type": "CS_REGISTER_BLOCK", "x": 270.5, "y": 403, "id": "1" },
+      { "type": "CS_MODE", "x": 465.5, "y": 754, "id": "2" },
+      { "type": "CS_CONTROL_UNIT", "x": 296.5, "y": 183, "id": "3" },
+      { "type": "CLOCK", "x": 939.5, "y": 529, "id": "4" },
+      { "type": "CS_TRIGGER", "x": 838.5, "y": 692, "id": "5" }
+    ],
+    "connections": [
+      {
+        "source": { "nodeId": "1", "connectorId": "0" },
+        "target": { "nodeId": "0", "connectorId": "0" },
+        "points": [
+          { "x": 797, "y": 432 },
+          { "x": 615, "y": 300 }
+        ]
+      },
+      {
+        "source": { "nodeId": "3", "connectorId": "2" },
+        "target": { "nodeId": "0", "connectorId": "1" },
+        "points": [
+          { "x": 820, "y": 429 },
+          { "x": 523, "y": 80 }
+        ]
+      },
+      {
+        "source": { "nodeId": "3", "connectorId": "5" },
+        "target": { "nodeId": "0", "connectorId": "2" },
+        "points": [
+          { "x": 839, "y": 437 },
+          { "x": 624, "y": 86 }
+        ]
+      },
+      {
+        "source": { "nodeId": "1", "connectorId": "6" },
+        "target": { "nodeId": "0", "connectorId": "3" },
+        "points": [
+          { "x": 834, "y": 533 },
+          { "x": 605, "y": 373 }
+        ]
+      },
+      {
+        "source": { "nodeId": "1", "connectorId": "4" },
+        "target": { "nodeId": "0", "connectorId": "4" },
+        "points": [
+          { "x": 879, "y": 515 },
+          { "x": 604, "y": 326 }
+        ]
+      },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "5" } },
+      {
+        "source": { "nodeId": "3", "connectorId": "5" },
+        "target": { "nodeId": "1", "connectorId": "0" },
+        "points": [
+          { "x": 287, "y": 694 },
+          { "x": 189, "y": 683 },
+          { "x": 187, "y": 159 },
+          { "x": 448, "y": 141 }
+        ]
+      },
+      {
+        "source": { "nodeId": "3", "connectorId": "0" },
+        "target": { "nodeId": "1", "connectorId": "1" },
+        "points": [
+          { "x": 299, "y": 715 },
+          { "x": 167, "y": 704 },
+          { "x": 161, "y": 193 }
+        ]
+      },
+      {
+        "source": { "nodeId": "3", "connectorId": "1" },
+        "target": { "nodeId": "1", "connectorId": "2" },
+        "points": [
+          { "x": 318, "y": 733 },
+          { "x": 144, "y": 724 },
+          { "x": 140, "y": 144 },
+          { "x": 349, "y": 130 }
+        ]
+      },
+      {
+        "source": { "nodeId": "3", "connectorId": "3" },
+        "target": { "nodeId": "1", "connectorId": "3" },
+        "points": [
+          { "x": 338, "y": 753 },
+          { "x": 122, "y": 741 },
+          { "x": 117, "y": 127 },
+          { "x": 395, "y": 114 }
+        ]
+      },
+      {
+        "source": { "nodeId": "3", "connectorId": "7" },
+        "target": { "nodeId": "1", "connectorId": "4" },
+        "points": [
+          { "x": 362, "y": 770 },
+          { "x": 99, "y": 761 },
+          { "x": 89, "y": 107 },
+          { "x": 503, "y": 97 }
+        ]
+      },
+      {
+        "source": { "nodeId": "3", "connectorId": "6" },
+        "target": { "nodeId": "1", "connectorId": "5" },
+        "points": [
+          { "x": 384, "y": 789 },
+          { "x": 71, "y": 784 },
+          { "x": 68, "y": 89 },
+          { "x": 475, "y": 80 }
+        ]
+      },
+      {
+        "source": { "nodeId": "3", "connectorId": "4" },
+        "target": { "nodeId": "1", "connectorId": "6" },
+        "points": [
+          { "x": 585, "y": 751 },
+          { "x": 579, "y": 81 }
+        ]
+      },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "7" } },
+      { "source": { "nodeId": "2", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "8" } },
+      { "source": { "nodeId": "2", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "9" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "10" } },
+      {
+        "source": { "nodeId": "3", "connectorId": "8" },
+        "target": { "nodeId": "2", "connectorId": "0" },
+        "points": [
+          { "x": 637, "y": 742 },
+          { "x": 637, "y": 148 }
+        ]
+      },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      {
+        "source": { "nodeId": "0", "connectorId": "1" },
+        "target": { "nodeId": "3", "connectorId": "0" },
+        "points": [
+          { "x": 308, "y": 363 },
+          { "x": 618, "y": 276 },
+          { "x": 851, "y": 107 }
+        ]
+      },
+      {
+        "source": { "nodeId": "0", "connectorId": "0" },
+        "target": { "nodeId": "3", "connectorId": "1" },
+        "points": [
+          { "x": 327, "y": 328 },
+          { "x": 611, "y": 248 },
+          { "x": 803, "y": 111 }
+        ]
+      },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "2" } },
+      { "source": { "nodeId": "1", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "3" } },
+      { "source": { "nodeId": "1", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "4" } },
+      { "source": { "nodeId": "1", "connectorId": "3" }, "target": { "nodeId": "3", "connectorId": "5" } },
+      { "source": { "nodeId": "1", "connectorId": "4" }, "target": { "nodeId": "3", "connectorId": "6" } },
+      { "source": { "nodeId": "1", "connectorId": "5" }, "target": { "nodeId": "3", "connectorId": "7" } },
+      { "source": { "nodeId": "1", "connectorId": "6" }, "target": { "nodeId": "3", "connectorId": "8" } },
+      { "source": { "nodeId": "1", "connectorId": "7" }, "target": { "nodeId": "3", "connectorId": "9" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:CS_MODE": {
+    "nodes": [
+      { "type": "BUNDLE16", "x": 226.81059119150905, "y": 151.9722280111994, "id": "0" },
+      { "type": "XOR", "x": 22.5, "y": 350.1102362204724, "id": "1" },
+      { "type": "DFF", "x": 44.5, "y": 173.7244094488189, "id": "2" },
+      { "type": "NAND", "x": 320.5, "y": 274.8110236220472, "id": "3" },
+      { "type": "INV", "x": 95.5, "y": 466.39107611548553, "id": "4" },
+      { "type": "NAND", "x": 176.5, "y": 306.39107611548553, "id": "5" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "14" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "15" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "2" } }
+    ]
+  },
+  "NandGame:Levels:FLOAT_ALIGN": {
+    "nodes": [
+      { "type": "MAX16", "x": 85.5, "y": 259, "id": "0" },
+      { "type": "BARREL_SHR", "x": 317.5, "y": 132, "id": "1" },
+      { "type": "BARREL_SHR", "x": 474.5, "y": 137, "id": "2" },
+      { "type": "SUB16", "x": 184.5, "y": 138, "id": "3" },
+      { "type": "SUB16", "x": 392.5, "y": 252, "id": "4" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "4", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "4", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "2" } }
+    ]
+  },
+  "NandGame:Levels:DEMUX": {
+    "nodes": [
+      { "type": "NAND", "x": 98.5, "y": 507, "id": "0" },
+      { "type": "INV", "x": 25.5, "y": 314, "id": "1" },
+      { "type": "AND", "x": 217.5, "y": 305, "id": "2" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } }
+    ]
+  },
+  "NandGame:Levels:STACK_PUSH_STATIC": {
+    "code": "A = address\nD = *A\npush.D",
+    "testCode": "init.stack\n# store 42 at address 16\nA = 42\nD = A\nA = 16\n*A = D\npush.static 16\n# top of stack should be 42\n"
+  },
+  "NandGame:Levels:STACK_INIT": { "code": "A = 0x0100\nD = A\nA = SP\n*A = D", "testCode": "\ninit.stack\n" },
+  "NandGame:Levels:STACK_NEG": {
+    "code": "pop.D\nD = -D\npush.D",
+    "testCode": "init.stack\npush.value x0007\nneg\n# inspect top of stack. Should be FFF8.\n"
+  },
+  "NandGame:Levels:MAX16": {
+    "nodes": [
+      { "type": "SUB16", "x": 100.5, "y": 534, "id": "0" },
+      { "type": "ISNEG", "x": 94.5, "y": 400, "id": "1" },
+      { "type": "SELECT16", "x": 221.5, "y": 255, "id": "2" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  }
+}
