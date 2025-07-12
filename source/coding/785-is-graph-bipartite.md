@@ -24,7 +24,7 @@ Return `true` _if and only if it is **bipartite**_.
 **Example 1:**
 
 {% invert %}
-![case1](785-is-graph-bipartite/case1.png)
+![case1](assets/785-is-graph-bipartite/case1.png)
 {% endinvert %}
 
 > Input: `graph = [[1,2,3],[0,2],[0,1,3],[0,2]]`
@@ -34,7 +34,7 @@ Return `true` _if and only if it is **bipartite**_.
 **Example 2:**
 
 {% invert %}
-![case2](785-is-graph-bipartite/case2.png)
+![case2](assets/785-is-graph-bipartite/case2.png)
 {% endinvert %}
 
 > Input: `graph = [[1,3],[0,2],[1,3],[0,2]]`
@@ -58,7 +58,7 @@ class Solution:
     def isBipartite(self, graph: List[List[int]]) -> bool:
 ```
 
-{% asset_code coding/785-is-graph-bipartite/solution_test.py %}
+{% asset_code coding/assets/785-is-graph-bipartite/solution_test.py %}
 
 ## Thoughts
 
@@ -68,4 +68,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/785-is-graph-bipartite/solution.py %}
+{% asset_code coding/assets/785-is-graph-bipartite/solution.py %}

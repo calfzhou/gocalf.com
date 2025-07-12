@@ -26,22 +26,22 @@ Return the number of **alternating** groups.
 > Input: `colors = [1,1,1]`
 > Output: `0`
 > Explanation:
-> ![case1|150](3206-alternating-groups-i/case1.png)
+> ![case1](assets/3206-alternating-groups-i/case1.png)
 
 **Example 2:**
 
 > Input: `colors = [0,1,0,0,1]`
 > Output: `3`
 > Explanation:
-> ![case2-0|150](3206-alternating-groups-i/case2-0.png)
+> ![case2-0](assets/3206-alternating-groups-i/case2-0.png)
 > Alternating groups:
 > {% grid w:150px %}
 <!-- cell -->
-> ![case2-1|150](3206-alternating-groups-i/case2-1.png)
+> ![case2-1](assets/3206-alternating-groups-i/case2-1.png)
 <!-- cell -->
-> ![case2-2|150](3206-alternating-groups-i/case2-2.png)
+> ![case2-2](assets/3206-alternating-groups-i/case2-2.png)
 <!-- cell -->
-> ![case2-3|150](3206-alternating-groups-i/case2-3.png)
+> ![case2-3](assets/3206-alternating-groups-i/case2-3.png)
 {% endgrid %}
 
 **Constraints:**
@@ -56,7 +56,7 @@ class Solution:
     def numberOfAlternatingGroups(self, colors: List[int]) -> int:
 ```
 
-{% asset_code coding/3206-alternating-groups-i/solution_test.py %}
+{% asset_code coding/assets/3206-alternating-groups-i/solution_test.py %}
 
 ## Thoughts
 
@@ -64,4 +64,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3206-alternating-groups-i/solution.py %}
+{% asset_code coding/assets/3206-alternating-groups-i/solution.py %}

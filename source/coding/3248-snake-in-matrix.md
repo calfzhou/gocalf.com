@@ -24,7 +24,7 @@ Return the position of the final cell where the snake ends up after executing `c
 > Output: `3`
 > Explanation:
 > {% invert %}
-{% diagramsnet 3248-snake-in-matrix/case1.drawio %}
+{% diagramsnet assets/3248-snake-in-matrix/case1.drawio %}
 {% endinvert %}
 
 **Example 2:**
@@ -33,7 +33,7 @@ Return the position of the final cell where the snake ends up after executing `c
 > Output: `1`
 > Explanation:
 > {% invert %}
-{% diagramsnet 3248-snake-in-matrix/case2.drawio %}
+{% diagramsnet assets/3248-snake-in-matrix/case2.drawio %}
 {% endinvert %}
 
 **Constraints:**
@@ -50,7 +50,7 @@ class Solution:
     def finalPositionOfSnake(self, n: int, commands: List[str]) -> int:
 ```
 
-{% asset_code coding/3248-snake-in-matrix/solution_test.py %}
+{% asset_code coding/assets/3248-snake-in-matrix/solution_test.py %}
 
 ## Thoughts
 
@@ -63,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3248-snake-in-matrix/solution.py %}
+{% asset_code coding/assets/3248-snake-in-matrix/solution.py %}

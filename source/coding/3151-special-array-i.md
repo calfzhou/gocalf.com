@@ -47,10 +47,10 @@ class Solution:
     def isArraySpecial(self, nums: List[int]) -> bool:
 ```
 
-{% asset_code coding/3151-special-array-i/solution_test.py %}
+{% asset_code coding/assets/3151-special-array-i/solution_test.py %}
 
 ## Thoughts
 
 ## Code
 
-{% asset_code coding/3151-special-array-i/solution.py %}
+{% asset_code coding/assets/3151-special-array-i/solution.py %}

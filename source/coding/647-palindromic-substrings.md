@@ -40,7 +40,7 @@ class Solution:
     def countSubstrings(self, s: str) -> int:
 ```
 
-{% asset_code coding/647-palindromic-substrings/solution_test.py %}
+{% asset_code coding/assets/647-palindromic-substrings/solution_test.py %}
 
 ## Thoughts
 
@@ -54,4 +54,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/647-palindromic-substrings/solution.py %}
+{% asset_code coding/assets/647-palindromic-substrings/solution.py %}

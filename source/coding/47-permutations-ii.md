@@ -40,7 +40,7 @@ class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
 ```
 
-{% asset_code coding/47-permutations-ii/solution_test.py %}
+{% asset_code coding/assets/47-permutations-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -54,4 +54,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/47-permutations-ii/solution.py %}
+{% asset_code coding/assets/47-permutations-ii/solution.py %}

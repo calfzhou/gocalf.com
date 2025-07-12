@@ -1,0 +1,19 @@
+{
+  "showLineNumber": true,
+  "useTab": false,
+  "tabSize": 2,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true,
+  "userIgnoreFilters": [
+    "/^_.+/",
+    "css/",
+    "favicon/",
+    "images/",
+    "js/",
+    "wiki/"
+  ],
+  "showInlineTitle": true,
+  "propertiesInDocument": "hidden"
+}

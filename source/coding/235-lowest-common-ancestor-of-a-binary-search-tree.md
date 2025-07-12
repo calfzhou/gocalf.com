@@ -17,7 +17,7 @@ According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/
 **Example 1:**
 
 {% invert %}
-![case1](235-lowest-common-ancestor-of-a-binary-search-tree/case1.png)
+![case1](assets/235-lowest-common-ancestor-of-a-binary-search-tree/case1.png)
 {% endinvert %}
 
 > Input: `root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8`
@@ -27,7 +27,7 @@ According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/
 **Example 2:**
 
 {% invert %}
-![case2](235-lowest-common-ancestor-of-a-binary-search-tree/case1.png)
+![case2](assets/235-lowest-common-ancestor-of-a-binary-search-tree/case1.png)
 {% endinvert %}
 
 > Input: `root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4`
@@ -61,7 +61,7 @@ class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
 ```
 
-{% asset_code coding/235-lowest-common-ancestor-of-a-binary-search-tree/solution_test.py %}
+{% asset_code coding/assets/235-lowest-common-ancestor-of-a-binary-search-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -71,4 +71,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/235-lowest-common-ancestor-of-a-binary-search-tree/solution.py %}
+{% asset_code coding/assets/235-lowest-common-ancestor-of-a-binary-search-tree/solution.py %}

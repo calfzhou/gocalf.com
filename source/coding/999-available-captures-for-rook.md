@@ -20,7 +20,7 @@ Return the **number of pawns** the white rook is **attacking**.
 
 **Example 1:**
 
-![case1|300](999-available-captures-for-rook/case1.png)
+![case1](assets/999-available-captures-for-rook/case1.png)
 
 > Input: `board = [[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".","R",".",".",".","p"],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."]]`
 > Output: `3`
@@ -29,7 +29,7 @@ Return the **number of pawns** the white rook is **attacking**.
 
 **Example 2:**
 
-![case2|300](999-available-captures-for-rook/case2.png)
+![case2](assets/999-available-captures-for-rook/case2.png)
 
 > Input: `board = [[".",".",".",".",".",".",".","."],[".","p","p","p","p","p",".","."],[".","p","p","B","p","p",".","."],[".","p","B","R","B","p",".","."],[".","p","p","B","p","p",".","."],[".","p","p","p","p","p",".","."],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."]]`
 > Output: `0`
@@ -38,7 +38,7 @@ Return the **number of pawns** the white rook is **attacking**.
 
 **Example 3:**
 
-![case3|300](999-available-captures-for-rook/case3.png)
+![case3](assets/999-available-captures-for-rook/case3.png)
 
 > Input: `board = [[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".","p",".",".",".","."],["p","p",".","R",".","p","B","."],[".",".",".",".",".",".",".","."],[".",".",".","B",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".",".",".",".",".","."]]`
 > Output: `3`
@@ -59,7 +59,7 @@ class Solution:
     def numRookCaptures(self, board: List[List[str]]) -> int:
 ```
 
-{% asset_code coding/999-available-captures-for-rook/solution_test.py %}
+{% asset_code coding/assets/999-available-captures-for-rook/solution_test.py %}
 
 ## Thoughts
 
@@ -67,4 +67,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/999-available-captures-for-rook/solution.py %}
+{% asset_code coding/assets/999-available-captures-for-rook/solution.py %}

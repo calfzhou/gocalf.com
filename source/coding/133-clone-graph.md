@@ -34,7 +34,7 @@ The given node will always be the first node with `val = 1`. You must return the
 **Example 1:**
 
 {% invert %}
-![case1](133-clone-graph/case1.png)
+![case1](assets/133-clone-graph/case1.png)
 {% endinvert %}
 
 > Input: `adjList = [[2,4],[1,3],[2,4],[1,3]]`
@@ -48,7 +48,7 @@ The given node will always be the first node with `val = 1`. You must return the
 **Example 2:**
 
 {% invert %}
-![case2](133-clone-graph/case2.png)
+![case2](assets/133-clone-graph/case2.png)
 {% endinvert %}
 
 > Input: `adjList = [[]]`
@@ -85,7 +85,7 @@ class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
 ```
 
-{% asset_code coding/133-clone-graph/solution_test.py %}
+{% asset_code coding/assets/133-clone-graph/solution_test.py %}
 
 ## Thoughts
 
@@ -103,4 +103,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/133-clone-graph/solution.py %}
+{% asset_code coding/assets/133-clone-graph/solution.py %}

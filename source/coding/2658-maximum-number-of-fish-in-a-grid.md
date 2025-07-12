@@ -27,7 +27,7 @@ An **adjacent** cell of the cell `(r, c)`, is one of the cells `(r, c + 1)`, `(r
 **Example 1:**
 
 {% invert %}
-![case1](2658-maximum-number-of-fish-in-a-grid/case1.png)
+![case1](assets/2658-maximum-number-of-fish-in-a-grid/case1.png)
 {% endinvert %}
 
 > Input: `grid = [[0,2,1,0],[4,0,0,3],[1,0,0,4],[0,3,2,0]]`
@@ -37,7 +37,7 @@ An **adjacent** cell of the cell `(r, c)`, is one of the cells `(r, c + 1)`, `(r
 **Example 2:**
 
 {% invert %}
-![case2](2658-maximum-number-of-fish-in-a-grid/case2.png)
+![case2](assets/2658-maximum-number-of-fish-in-a-grid/case2.png)
 {% endinvert %}
 
 > Input: `grid = [[1,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,1]]`
@@ -58,7 +58,7 @@ class Solution:
     def findMaxFish(self, grid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2658-maximum-number-of-fish-in-a-grid/solution_test.py %}
+{% asset_code coding/assets/2658-maximum-number-of-fish-in-a-grid/solution_test.py %}
 
 ## Thoughts
 
@@ -70,4 +70,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2658-maximum-number-of-fish-in-a-grid/solution.py %}
+{% asset_code coding/assets/2658-maximum-number-of-fish-in-a-grid/solution.py %}

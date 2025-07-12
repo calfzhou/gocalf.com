@@ -21,7 +21,7 @@ The **diameter** of a tree is the length of the _longest_ path between any two n
 **Example 1:**
 
 {% invert %}
-![case1](3203-find-minimum-diameter-after-merging-two-trees/case1.png)
+![case1](assets/3203-find-minimum-diameter-after-merging-two-trees/case1.png)
 {% endinvert %}
 
 > Input: `edges1 = [[0,1],[0,2],[0,3]], edges2 = [[0,1]]`
@@ -30,7 +30,7 @@ The **diameter** of a tree is the length of the _longest_ path between any two n
 > We can obtain a tree of diameter 3 by connecting node 0 from the first tree with any node from the second tree.
 
 {% invert %}
-![case2](3203-find-minimum-diameter-after-merging-two-trees/case2.png)
+![case2](assets/3203-find-minimum-diameter-after-merging-two-trees/case2.png)
 {% endinvert %}
 
 **Example 2:**
@@ -59,7 +59,7 @@ class Solution:
     def minimumDiameterAfterMerge(self, edges1: List[List[int]], edges2: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/3203-find-minimum-diameter-after-merging-two-trees/solution_test.py %}
+{% asset_code coding/assets/3203-find-minimum-diameter-after-merging-two-trees/solution_test.py %}
 
 ## Thoughts
 
@@ -73,4 +73,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3203-find-minimum-diameter-after-merging-two-trees/solution.py %}
+{% asset_code coding/assets/3203-find-minimum-diameter-after-merging-two-trees/solution.py %}

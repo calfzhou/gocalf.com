@@ -19,7 +19,7 @@ Return _the **minimum** time required in which you can visit the bottom-right ce
 **Example 1:**
 
 {% invert %}
-![case1](2577-minimum-time-to-visit-a-cell-in-a-grid/case1.png)
+![case1](assets/2577-minimum-time-to-visit-a-cell-in-a-grid/case1.png)
 {% endinvert %}
 
 > Input: `grid = [[0,1,3,2],[5,1,2,5],[4,3,8,6]]`
@@ -39,7 +39,7 @@ Return _the **minimum** time required in which you can visit the bottom-right ce
 **Example 2:**
 
 {% invert %}
-![case2](2577-minimum-time-to-visit-a-cell-in-a-grid/case2.png)
+![case2](assets/2577-minimum-time-to-visit-a-cell-in-a-grid/case2.png)
 {% endinvert %}
 
 > Input: `grid = [[0,2,4],[3,2,1],[1,0,4]]`
@@ -62,7 +62,7 @@ class Solution:
     def minimumTime(self, grid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2577-minimum-time-to-visit-a-cell-in-a-grid/solution_test.py %}
+{% asset_code coding/assets/2577-minimum-time-to-visit-a-cell-in-a-grid/solution_test.py %}
 
 ## Thoughts
 
@@ -82,4 +82,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2577-minimum-time-to-visit-a-cell-in-a-grid/solution.py %}
+{% asset_code coding/assets/2577-minimum-time-to-visit-a-cell-in-a-grid/solution.py %}

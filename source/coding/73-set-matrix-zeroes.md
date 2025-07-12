@@ -17,7 +17,7 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 **Example 1:**
 
 {% invert %}
-![case1](73-set-matrix-zeroes/case1.png)
+![case1](assets/73-set-matrix-zeroes/case1.png)
 {% endinvert %}
 
 > Input: `matrix = [[1,1,1],[1,0,1],[1,1,1]]`
@@ -26,7 +26,7 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 **Example 2:**
 
 {% invert %}
-![case2](73-set-matrix-zeroes/case2.png)
+![case2](assets/73-set-matrix-zeroes/case2.png)
 {% endinvert %}
 
 > Input: `matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]`
@@ -55,7 +55,7 @@ class Solution:
         """
 ```
 
-{% asset_code coding/73-set-matrix-zeroes/solution_test.py %}
+{% asset_code coding/assets/73-set-matrix-zeroes/solution_test.py %}
 
 ## Thoughts
 
@@ -69,10 +69,10 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/73-set-matrix-zeroes/solution.py %}
+{% asset_code coding/assets/73-set-matrix-zeroes/solution.py %}
 
 ## Follow Up
 
 可以直接用 `matrix` 的第一行和第一列记录需要全部换成 `0` 的列和行。唯一需要注意的是 `matrix[0][0]` 是公共的元素，为了避免冲突，可以用单独的变量记录第一行和第一列是否需要换。
 
-{% asset_code coding/73-set-matrix-zeroes/solution2.py %}
+{% asset_code coding/assets/73-set-matrix-zeroes/solution2.py %}

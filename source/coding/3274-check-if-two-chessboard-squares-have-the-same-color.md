@@ -12,7 +12,7 @@ You are given two strings, `coordinate1` and `coordinate2`, representing the coo
 
 Below is the chessboard for reference.
 
-![problem|400](3274-check-if-two-chessboard-squares-have-the-same-color/problem.png)
+![problem](assets/3274-check-if-two-chessboard-squares-have-the-same-color/problem.png)
 
 Return `true` if these two squares have the same color and `false` otherwise.
 
@@ -47,7 +47,7 @@ class Solution:
     def checkTwoChessboards(self, coordinate1: str, coordinate2: str) -> bool:
 ```
 
-{% asset_code coding/3274-check-if-two-chessboard-squares-have-the-same-color/solution_test.py %}
+{% asset_code coding/assets/3274-check-if-two-chessboard-squares-have-the-same-color/solution_test.py %}
 
 ## Thoughts
 
@@ -57,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3274-check-if-two-chessboard-squares-have-the-same-color/solution.py %}
+{% asset_code coding/assets/3274-check-if-two-chessboard-squares-have-the-same-color/solution.py %}

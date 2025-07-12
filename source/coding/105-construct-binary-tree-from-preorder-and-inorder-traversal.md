@@ -15,7 +15,7 @@ Given two integer arrays `preorder` and `inorder` where `preorder` is the preord
 **Example 1:**
 
 {% invert %}
-![case1](105-construct-binary-tree-from-preorder-and-inorder-traversal/case1.png)
+![case1](assets/105-construct-binary-tree-from-preorder-and-inorder-traversal/case1.png)
 {% endinvert %}
 
 > Input: `preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]`
@@ -49,7 +49,7 @@ class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
 ```
 
-{% asset_code coding/105-construct-binary-tree-from-preorder-and-inorder-traversal/solution_test.py %}
+{% asset_code coding/assets/105-construct-binary-tree-from-preorder-and-inorder-traversal/solution_test.py %}
 
 ## Thoughts
 
@@ -80,7 +80,7 @@ LNR: 1, 7, 6, 4, 0, 2, 3, 5
 ```
 
 {% invert %}
-{% diagramsnet 105-construct-binary-tree-from-preorder-and-inorder-traversal/demo1-01.drawio %}
+{% diagramsnet assets/105-construct-binary-tree-from-preorder-and-inorder-traversal/demo1-01.drawio %}
 {% endinvert %}
 
 NLR 的下一个数字 6，LNR 的下一个数字 7，二者不一样，说明 6 是一棵子树的树根，7 是这棵子树的最左节点。而 6 的父节点应该就是当前栈里的最后一个节点 1。注意栈里的节点都是待确定右子节点的，所以 6 是 1 的右子节点（一旦确定了右子节点就可以出栈了）。
@@ -95,7 +95,7 @@ LNR: 1, 7, 6, 4, 0, 2, 3, 5
 ```
 
 {% invert %}
-{% diagramsnet 105-construct-binary-tree-from-preorder-and-inorder-traversal/demo1-02.drawio %}
+{% diagramsnet assets/105-construct-binary-tree-from-preorder-and-inorder-traversal/demo1-02.drawio %}
 {% endinvert %}
 
 LNR 的下一个数字是 6，是栈里倒数第二个数字（即 7 的父节点），说明 7 没有右子节点，只需要把 7 出栈即可。同理再下一个数字是 4，也是栈里倒数第二个数字，说明 6 也没有右子节点，直接出栈。
@@ -108,7 +108,7 @@ LNR: 1, 7, 6, 4, 0, 2, 3, 5
 ```
 
 {% invert %}
-{% diagramsnet 105-construct-binary-tree-from-preorder-and-inorder-traversal/demo1-03.drawio %}
+{% diagramsnet assets/105-construct-binary-tree-from-preorder-and-inorder-traversal/demo1-03.drawio %}
 {% endinvert %}
 
 然后 NLR 的 2、0 以及 LNR 的 0 也是类似，说明 2 是 4（栈里最后一个节点）的右子节点，0 是 2 的左子节点。
@@ -121,7 +121,7 @@ LNR: 1, 7, 6, 4, 0, 2, 3, 5
 ```
 
 {% invert %}
-{% diagramsnet 105-construct-binary-tree-from-preorder-and-inorder-traversal/demo1-04.drawio %}
+{% diagramsnet assets/105-construct-binary-tree-from-preorder-and-inorder-traversal/demo1-04.drawio %}
 {% endinvert %}
 
 LNR 后边的数字 2、3，分别说明栈里最后的 0、2 都没有右子节点，直接出栈。
@@ -136,7 +136,7 @@ LNR: 1, 7, 6, 4, 0, 2, 3, 5
 ```
 
 {% invert %}
-{% diagramsnet 105-construct-binary-tree-from-preorder-and-inorder-traversal/demo1-05.drawio %}
+{% diagramsnet assets/105-construct-binary-tree-from-preorder-and-inorder-traversal/demo1-05.drawio %}
 {% endinvert %}
 
 NLR 和 LNR 都遍历结束，所有节点都添加完毕。这时候唯一要做的是找到整棵二叉树的根节点。一个简单的办法是事先准备一个虚的初始节点，在遍历结束的时候，该初始节点的左子节点就是二叉树的根节点。
@@ -155,4 +155,4 @@ NLR 和 LNR 都遍历结束，所有节点都添加完毕。这时候唯一要�
 
 ## Code
 
-{% asset_code coding/105-construct-binary-tree-from-preorder-and-inorder-traversal/solution.py %}
+{% asset_code coding/assets/105-construct-binary-tree-from-preorder-and-inorder-traversal/solution.py %}

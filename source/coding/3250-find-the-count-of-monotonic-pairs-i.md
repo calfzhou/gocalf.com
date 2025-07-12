@@ -53,7 +53,7 @@ class Solution:
     def countOfPairs(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/3250-find-the-count-of-monotonic-pairs-i/solution_test.py %}
+{% asset_code coding/assets/3250-find-the-count-of-monotonic-pairs-i/solution_test.py %}
 
 ## Thoughts
 
@@ -66,7 +66,7 @@ class Solution:
 不妨设 `nums[i-1]` 在 `arr1` 中的值为 $a_{i-1}$，其取值范围是 $[a_{i-1}^{min},a_{i-1}^{max}]$（相应地在 `arr2` 中的值为 $b_{i-1}$，范围是 $[b_{i-1}^{min},b_{i-1}^{max}]$，其中 $a_{i-1}^{min}+b_{i-1}^{max} = a_{i-1}^{max}+b_{i-1}^{min} = nums[i-1]$）。
 
 {% invert %}
-{% diagramsnet 3250-find-the-count-of-monotonic-pairs-i/cnt-i-a.drawio %}
+{% diagramsnet assets/3250-find-the-count-of-monotonic-pairs-i/cnt-i-a.drawio %}
 {% endinvert %}
 
 显然有：
@@ -116,7 +116,7 @@ $$
 
 ## Code
 
-{% asset_code coding/3250-find-the-count-of-monotonic-pairs-i/solution.py %}
+{% asset_code coding/assets/3250-find-the-count-of-monotonic-pairs-i/solution.py %}
 
 ## Math
 
@@ -125,7 +125,7 @@ $$
 可以看作是有两行棋子，每行都有 m 个。划一条竖线，竖线左边的棋子数量非递减变化（即 `arr1`），右边的棋子数量非递增变化（即 `arr2`）。
 
 {% invert %}
-{% diagramsnet 3250-find-the-count-of-monotonic-pairs-i/path-m-m.drawio %}
+{% diagramsnet assets/3250-find-the-count-of-monotonic-pairs-i/path-m-m.drawio %}
 {% endinvert %}
 
 如上图。这里把棋子上下对齐，让竖线变成折线，效果是一样的（后边称之为「界线」）。在界线左边的棋子数分别是 2 和 4，是非递减的；右边是 3 和 1，是非递增的。
@@ -133,7 +133,7 @@ $$
 不同的拆分方案对应于不同的界线。把界线改造成下图的样子，让它从左上角 `(0, 0)` 出发，到右下角 `(n, m)` 结束。
 
 {% invert %}
-{% diagramsnet 3250-find-the-count-of-monotonic-pairs-i/path-m-m-2.drawio %}
+{% diagramsnet assets/3250-find-the-count-of-monotonic-pairs-i/path-m-m-2.drawio %}
 {% endinvert %}
 
 为了始终符合单调数组对的要求，这条界线就只能往右走或往下走。这就跟 [62. Unique Paths](62-unique-paths) 完全一样。可知从 `(0, 0)` 到 `(n, m)` 可能的界线数量为 `C(m+n, n) = C(m+n, m)`。
@@ -141,7 +141,7 @@ $$
 再看第一行棋子多一些的情况，比如第一行有 `m + d` 个，第二行有 `m` 个。
 
 {% invert %}
-{% diagramsnet 3250-find-the-count-of-monotonic-pairs-i/path-md-m.drawio %}
+{% diagramsnet assets/3250-find-the-count-of-monotonic-pairs-i/path-md-m.drawio %}
 {% endinvert %}
 
 为了确保符合单调数组对的要求，第一行多的 `d` 个棋子，只能排在最右侧（永远在界线右边）。界线仍然是从 `(0, 0)` 到 `(n, m)`，共 `C(m+n, n)` 种。
@@ -149,7 +149,7 @@ $$
 接着看第二行棋子多一些的情况，比如第一行有 `m` 个，第二行有 `m + d` 个。
 
 {% invert %}
-{% diagramsnet 3250-find-the-count-of-monotonic-pairs-i/path-m-md.drawio %}
+{% diagramsnet assets/3250-find-the-count-of-monotonic-pairs-i/path-m-md.drawio %}
 {% endinvert %}
 
 这时候需要把第二行多的 `d` 个棋子排在最左边（永远在界线左边）。那么界线就需要从 `(0, d)` 开始，到 `(n, m+d)` 结束，可行的方案数量刚好还是 `C(m+n, n)` 种。
@@ -159,7 +159,7 @@ $$
 看个四行的例子 `[5, 7, 5, 7]`：
 
 {% invert %}
-{% diagramsnet 3250-find-the-count-of-monotonic-pairs-i/path-n.drawio %}
+{% diagramsnet assets/3250-find-the-count-of-monotonic-pairs-i/path-n.drawio %}
 {% endinvert %}
 
 可见界线始终是从第一行第一个棋子的左上角出发，到最后一行最后一个棋子的右下角结束。不妨设最后一行的棋子数为 `m`。每相邻两行，如果上一行的棋子数量偏少，就需要把上一行往右挪一些，挪的格数等于两行之差。如果上一行的棋子数偏多，则左侧直接对齐即可。最终第一行第一个棋子左上角，到最后一行最后一个棋子右下角，之间横向距离为 $m-\sum_{i=1}^{n-1}\{\max\{0,nums[i]-nums[i-1]\}\}$。记 $\sum_{i=1}^{n-1}\{\max\{0,nums[i]-nums[i-1]\}\}$ 为 `D`，那么界线的方案数量为 `C(m-D+n, n)`。
@@ -168,4 +168,4 @@ $$
 
 计算 `C(m-D+n, n)` 的方法可以参考 [62. Unique Paths](62-unique-paths)。时间复杂度 `O(n)`（需要遍历 `nums` 算出 `D`，然后计算 `C(m-D+n, n)` 的时间为 `O(min{n, m-D}) < O(n)`），空间复杂度 `O(1)`。
 
-{% asset_code coding/3250-find-the-count-of-monotonic-pairs-i/solution2.py %}
+{% asset_code coding/assets/3250-find-the-count-of-monotonic-pairs-i/solution2.py %}

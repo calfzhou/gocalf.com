@@ -17,7 +17,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 **Example 1:**
 
 {% invert %}
-![case1](2-add-two-numbers/case1.png)
+![case1](assets/2-add-two-numbers/case1.png)
 {% endinvert %}
 
 > Input: `l1 = [2,4,3], l2 = [5,6,4]`
@@ -52,7 +52,7 @@ class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
 ```
 
-{% asset_code coding/2-add-two-numbers/solution_test.py %}
+{% asset_code coding/assets/2-add-two-numbers/solution_test.py %}
 
 ## Thoughts
 
@@ -62,4 +62,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2-add-two-numbers/solution.py %}
+{% asset_code coding/assets/2-add-two-numbers/solution.py %}

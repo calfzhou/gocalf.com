@@ -63,7 +63,7 @@ class Solution:
 
 ```
 
-{% asset_code coding/26-remove-duplicates-from-sorted-array/solution_test.py %}
+{% asset_code coding/assets/26-remove-duplicates-from-sorted-array/solution_test.py %}
 
 ## Thoughts
 
@@ -75,4 +75,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/26-remove-duplicates-from-sorted-array/solution.py %}
+{% asset_code coding/assets/26-remove-duplicates-from-sorted-array/solution.py %}

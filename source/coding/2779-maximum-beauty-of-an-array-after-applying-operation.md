@@ -56,7 +56,7 @@ class Solution:
     def maximumBeauty(self, nums: List[int], k: int) -> int:
 ```
 
-{% asset_code coding/2779-maximum-beauty-of-an-array-after-applying-operation/solution_test.py %}
+{% asset_code coding/assets/2779-maximum-beauty-of-an-array-after-applying-operation/solution_test.py %}
 
 ## Thoughts
 
@@ -68,7 +68,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2779-maximum-beauty-of-an-array-after-applying-operation/solution.py %}
+{% asset_code coding/assets/2779-maximum-beauty-of-an-array-after-applying-operation/solution.py %}
 
 一个可选的优化是窗口在移动过程中，即使（在数轴上的）宽度已经超过 `2 * k`，也并不需要真的缩小窗口，而是维持之前的大小继续往右移动。直到移动到某个位置，（在数轴上的）宽度又小于 `2 * k`，再扩大窗口。也就是说窗口的大小只增不减，直接用自身记录可行窗口的最大大小。
 
@@ -76,4 +76,4 @@ class Solution:
 
 时间复杂度不变，可以减少一些操作次数。
 
-{% asset_code coding/2779-maximum-beauty-of-an-array-after-applying-operation/solution2.py %}
+{% asset_code coding/assets/2779-maximum-beauty-of-an-array-after-applying-operation/solution2.py %}

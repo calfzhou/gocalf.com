@@ -47,7 +47,7 @@ class Solution:
     def minOperations(self, boxes: str) -> List[int]:
 ```
 
-{% asset_code coding/1769-minimum-number-of-operations-to-move-all-balls-to-each-box/solution_test.py %}
+{% asset_code coding/assets/1769-minimum-number-of-operations-to-move-all-balls-to-each-box/solution_test.py %}
 
 ## Thoughts
 
@@ -92,4 +92,4 @@ $$
 
 ## Code
 
-{% asset_code coding/1769-minimum-number-of-operations-to-move-all-balls-to-each-box/solution.py %}
+{% asset_code coding/assets/1769-minimum-number-of-operations-to-move-all-balls-to-each-box/solution.py %}

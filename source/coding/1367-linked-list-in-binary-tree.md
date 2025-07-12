@@ -19,7 +19,7 @@ In this context downward path means a path that starts at some node and goes dow
 **Example 1:**
 
 {% invert %}
-![case1|220](1367-linked-list-in-binary-tree/case1.png)
+![case1](assets/1367-linked-list-in-binary-tree/case1.png)
 {% endinvert %}
 
 > Input: `head = [4,2,8], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`
@@ -29,7 +29,7 @@ In this context downward path means a path that starts at some node and goes dow
 **Example 2:**
 
 {% invert %}
-![case2|220](1367-linked-list-in-binary-tree/case2.png)
+![case2](assets/1367-linked-list-in-binary-tree/case2.png)
 {% endinvert %}
 
 > Input: `head = [1,4,2,6], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`
@@ -65,7 +65,7 @@ class Solution:
     def isSubPath(self, head: Optional[ListNode], root: Optional[TreeNode]) -> bool:
 ```
 
-{% asset_code coding/1367-linked-list-in-binary-tree/solution_test.py %}
+{% asset_code coding/assets/1367-linked-list-in-binary-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -77,4 +77,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1367-linked-list-in-binary-tree/solution.py %}
+{% asset_code coding/assets/1367-linked-list-in-binary-tree/solution.py %}

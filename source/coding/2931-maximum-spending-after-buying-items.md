@@ -68,7 +68,7 @@ class Solution:
     def maxSpending(self, values: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2931-maximum-spending-after-buying-items/solution_test.py %}
+{% asset_code coding/assets/2931-maximum-spending-after-buying-items/solution_test.py %}
 
 ## Thoughts
 
@@ -86,8 +86,8 @@ class Solution:
 
 ### Merge Sort with Min Heap
 
-{% asset_code coding/2931-maximum-spending-after-buying-items/solution.py %}
+{% asset_code coding/assets/2931-maximum-spending-after-buying-items/solution.py %}
 
 ### Sort All Directly
 
-{% asset_code coding/2931-maximum-spending-after-buying-items/solution2.py %}
+{% asset_code coding/assets/2931-maximum-spending-after-buying-items/solution2.py %}

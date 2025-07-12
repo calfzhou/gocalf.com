@@ -1,0 +1,18 @@
+# workspace cache
+.obsidian/workspace.json
+
+# workspace cache specific to mobile devices
+.obsidian/workspace-mobile.json
+
+# OS settings and caches
+.DS_Store
+
+# Obsidian's trash
+.trash/
+
+# some plugins' cache
+.obsidian/plugins/recent-files-obsidian/data.json
+.obsidian/plugins/update-time-on-edit/data.json
+
+# Edit History plugin generated edit history files
+*.edtz

@@ -70,7 +70,7 @@ class Trie:
 # param_3 = obj.startsWith(prefix)
 ```
 
-{% asset_code coding/208-implement-trie-prefix-tree/solution_test.py %}
+{% asset_code coding/assets/208-implement-trie-prefix-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -78,4 +78,4 @@ class Trie:
 
 ## Code
 
-{% asset_code coding/208-implement-trie-prefix-tree/solution.py %}
+{% asset_code coding/assets/208-implement-trie-prefix-tree/solution.py %}

@@ -55,7 +55,7 @@ class Solution:
     def canMakeSubsequence(self, str1: str, str2: str) -> bool:
 ```
 
-{% asset_code coding/2825-make-string-a-subsequence-using-cyclic-increments/solution_test.py %}
+{% asset_code coding/assets/2825-make-string-a-subsequence-using-cyclic-increments/solution_test.py %}
 
 ## Thoughts
 
@@ -63,4 +63,4 @@ Python 里负数对正数取余数，结果也是正数，比如 `-25 % 26 = 1`�
 
 ## Code
 
-{% asset_code coding/2825-make-string-a-subsequence-using-cyclic-increments/solution.py %}
+{% asset_code coding/assets/2825-make-string-a-subsequence-using-cyclic-increments/solution.py %}

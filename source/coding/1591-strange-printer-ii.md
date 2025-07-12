@@ -22,7 +22,7 @@ Return `true` _if it is possible to print the matrix_ `targetGrid`_,_ _otherwise
 **Example 1:**
 
 {% invert %}
-![case1](1591-strange-printer-ii/case1.png)
+![case1](assets/1591-strange-printer-ii/case1.png)
 {% endinvert %}
 
 > Input: `targetGrid = [[1,1,1,1],[1,2,2,1],[1,2,2,1],[1,1,1,1]]`
@@ -31,7 +31,7 @@ Return `true` _if it is possible to print the matrix_ `targetGrid`_,_ _otherwise
 **Example 2:**
 
 {% invert %}
-![case2](1591-strange-printer-ii/case2.png)
+![case2](assets/1591-strange-printer-ii/case2.png)
 {% endinvert %}
 
 > Input: `targetGrid = [[1,1,1,1],[1,1,3,3],[1,1,3,4],[5,5,1,4]]`
@@ -57,7 +57,7 @@ class Solution:
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
 ```
 
-{% asset_code coding/1591-strange-printer-ii/solution_test.py %}
+{% asset_code coding/assets/1591-strange-printer-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -75,7 +75,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1591-strange-printer-ii/solution.py %}
+{% asset_code coding/assets/1591-strange-printer-ii/solution.py %}
 
 ## Faster
 
@@ -91,8 +91,8 @@ class Solution:
 
 最坏情况时间复杂度都是 `O(m * n * k²)`。
 
-{% asset_code coding/1591-strange-printer-ii/solution2.py %}
+{% asset_code coding/assets/1591-strange-printer-ii/solution2.py %}
 
-{% asset_code coding/1591-strange-printer-ii/solution3.py %}
+{% asset_code coding/assets/1591-strange-printer-ii/solution3.py %}
 
 > 实际提交之后的运行时间，`solution.py > solution2.py > solution3.py`（基本都是差 3 倍），但时间复杂度都差不多。尤其 solution2 和 solution3 哪个跑得快，跟测试用例的情况也有较大关系。

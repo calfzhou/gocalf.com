@@ -39,7 +39,7 @@ class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
 ```
 
-{% asset_code coding/78-subsets/solution_test.py %}
+{% asset_code coding/assets/78-subsets/solution_test.py %}
 
 ## Thoughts
 
@@ -51,4 +51,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/78-subsets/solution.py %}
+{% asset_code coding/assets/78-subsets/solution.py %}

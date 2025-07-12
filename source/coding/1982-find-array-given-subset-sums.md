@@ -61,7 +61,7 @@ class Solution:
     def recoverArray(self, n: int, sums: List[int]) -> List[int]:
 ```
 
-{% asset_code coding/1982-find-array-given-subset-sums/solution_test.py %}
+{% asset_code coding/assets/1982-find-array-given-subset-sums/solution_test.py %}
 
 ## Thoughts
 
@@ -97,4 +97,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1982-find-array-given-subset-sums/solution.py %}
+{% asset_code coding/assets/1982-find-array-given-subset-sums/solution.py %}

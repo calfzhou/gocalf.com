@@ -50,7 +50,7 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 ```
 
-{% asset_code coding/122-best-time-to-buy-and-sell-stock-ii/solution_test.py %}
+{% asset_code coding/assets/122-best-time-to-buy-and-sell-stock-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -64,7 +64,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/122-best-time-to-buy-and-sell-stock-ii/solution.py %}
+{% asset_code coding/assets/122-best-time-to-buy-and-sell-stock-ii/solution.py %}
 
 ## DP
 
@@ -95,4 +95,4 @@ $$
 
 其实上边的解法中，变量 prev 就等价于这里的 hold，`max_profit` 就等价于这里的 `empty`。
 
-{% asset_code coding/122-best-time-to-buy-and-sell-stock-ii/solution2.py %}
+{% asset_code coding/assets/122-best-time-to-buy-and-sell-stock-ii/solution2.py %}

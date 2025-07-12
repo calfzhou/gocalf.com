@@ -15,7 +15,7 @@ Given the `root` of a binary tree, invert the tree, and return _its root_.
 **Example 1:**
 
 {% invert %}
-![case1](226-invert-binary-tree/case1.png)
+![case1](assets/226-invert-binary-tree/case1.png)
 {% endinvert %}
 
 > Input: `root = [4,2,7,1,3,6,9]`
@@ -24,7 +24,7 @@ Given the `root` of a binary tree, invert the tree, and return _its root_.
 **Example 2:**
 
 {% invert %}
-![case2](226-invert-binary-tree/case2.png)
+![case2](assets/226-invert-binary-tree/case2.png)
 {% endinvert %}
 
 > Input: `root = [4,2,7,1,3,6,9]`
@@ -53,7 +53,7 @@ class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
 ```
 
-{% asset_code coding/226-invert-binary-tree/solution_test.py %}
+{% asset_code coding/assets/226-invert-binary-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -61,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/226-invert-binary-tree/solution.py %}
+{% asset_code coding/assets/226-invert-binary-tree/solution.py %}

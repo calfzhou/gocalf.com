@@ -21,7 +21,7 @@ A cycle is a path that starts and ends at the **same** node.
 **Example 1:**
 
 {% invert %}
-![case1](2360-longest-cycle-in-a-graph/case1.png)
+![case1](assets/2360-longest-cycle-in-a-graph/case1.png)
 {% endinvert %}
 
 > Input: `edges = [3,3,4,2,3]`
@@ -32,7 +32,7 @@ A cycle is a path that starts and ends at the **same** node.
 **Example 2:**
 
 {% invert %}
-![case2](2360-longest-cycle-in-a-graph/case2.png)
+![case2](assets/2360-longest-cycle-in-a-graph/case2.png)
 {% endinvert %}
 
 > Input: `edges = [2,-1,3,1]`
@@ -53,7 +53,7 @@ class Solution:
     def longestCycle(self, edges: List[int]) -> int:
 ```
 
-{% asset_code coding/2360-longest-cycle-in-a-graph/solution_test.py %}
+{% asset_code coding/assets/2360-longest-cycle-in-a-graph/solution_test.py %}
 
 ## Thoughts
 
@@ -65,7 +65,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2360-longest-cycle-in-a-graph/solution.py %}
+{% asset_code coding/assets/2360-longest-cycle-in-a-graph/solution.py %}
 
 ## Simpler
 
@@ -76,7 +76,7 @@ class Solution:
 如下图，从 u 出发，记出发时间为 `t = 1`。第一次经过 v 的时间是 `t = 3`，到 `t = 8` 时再次访问 v，说明有环，且环长为 `8 - 3 = 5`。
 
 {% invert %}
-{% diagramsnet 2360-longest-cycle-in-a-graph/visit-time.drawio %}
+{% diagramsnet assets/2360-longest-cycle-in-a-graph/visit-time.drawio %}
 {% endinvert %}
 
 为了避免重复处理，每个顶点经过的时间都记录下来，曾经访问过的顶点就不再访问了。
@@ -85,4 +85,4 @@ class Solution:
 
 时间和空间复杂度都是 O(n)。
 
-{% asset_code coding/2360-longest-cycle-in-a-graph/solution2.py %}
+{% asset_code coding/assets/2360-longest-cycle-in-a-graph/solution2.py %}

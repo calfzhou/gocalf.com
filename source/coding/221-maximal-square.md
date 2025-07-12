@@ -16,7 +16,7 @@ Given an `m x n` binary `matrix` filled with `0`'s and `1`'s, _find the largest 
 **Example 1:**
 
 {% invert %}
-![case1](221-maximal-square/case1.png)
+![case1](assets/221-maximal-square/case1.png)
 {% endinvert %}
 
 > Input: `matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]`
@@ -25,7 +25,7 @@ Given an `m x n` binary `matrix` filled with `0`'s and `1`'s, _find the largest 
 **Example 2:**
 
 {% invert %}
-![case2](221-maximal-square/case2.png)
+![case2](assets/221-maximal-square/case2.png)
 {% endinvert %}
 
 > Input: `matrix = [["0","1"],["1","0"]]`
@@ -50,7 +50,7 @@ class Solution:
     def maximalSquare(self, matrix: List[List[str]]) -> int:
 ```
 
-{% asset_code coding/221-maximal-square/solution_test.py %}
+{% asset_code coding/assets/221-maximal-square/solution_test.py %}
 
 ## Thoughts
 
@@ -94,4 +94,4 @@ $$
 
 ## Code
 
-{% asset_code coding/221-maximal-square/solution.py %}
+{% asset_code coding/assets/221-maximal-square/solution.py %}

@@ -50,7 +50,7 @@ class Solution:
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/1029-two-city-scheduling/solution_test.py %}
+{% asset_code coding/assets/1029-two-city-scheduling/solution_test.py %}
 
 ## Thoughts
 
@@ -62,4 +62,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1029-two-city-scheduling/solution.py %}
+{% asset_code coding/assets/1029-two-city-scheduling/solution.py %}

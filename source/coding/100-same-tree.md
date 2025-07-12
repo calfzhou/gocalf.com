@@ -17,7 +17,7 @@ Two binary trees are considered the same if they are structurally identical, and
 **Example 1:**
 
 {% invert %}
-![case1](100-same-tree/case1.png)
+![case1](assets/100-same-tree/case1.png)
 {% endinvert %}
 
 > Input: `p = [1,2,3], q = [1,2,3]`
@@ -26,7 +26,7 @@ Two binary trees are considered the same if they are structurally identical, and
 **Example 2:**
 
 {% invert %}
-![case2](100-same-tree/case2.png)
+![case2](assets/100-same-tree/case2.png)
 {% endinvert %}
 
 > Input: `p = [1,2,3], q = [1,2,3]`
@@ -35,7 +35,7 @@ Two binary trees are considered the same if they are structurally identical, and
 **Example 3:**
 
 {% invert %}
-![case3](100-same-tree/case3.png)
+![case3](assets/100-same-tree/case3.png)
 {% endinvert %}
 
 > Input: `p = [1,2,1], q = [1,1,2]`
@@ -59,7 +59,7 @@ class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
 ```
 
-{% asset_code coding/100-same-tree/solution_test.py %}
+{% asset_code coding/assets/100-same-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -69,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/100-same-tree/solution.py %}
+{% asset_code coding/assets/100-same-tree/solution.py %}

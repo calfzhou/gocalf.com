@@ -21,7 +21,7 @@ The testcases are generated so that the answer will be less than or equal to `2 
 **Example 1:**
 
 {% invert %}
-![case1](63-unique-paths-ii/case1.png)
+![case1](assets/63-unique-paths-ii/case1.png)
 {% endinvert %}
 
 > Input: `obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]`
@@ -35,7 +35,7 @@ The testcases are generated so that the answer will be less than or equal to `2 
 **Example 2:**
 
 {% invert %}
-![case2](63-unique-paths-ii/case2.png)
+![case2](assets/63-unique-paths-ii/case2.png)
 {% endinvert %}
 
 > Input: `obstacleGrid = [[0,1],[0,0]]`
@@ -55,7 +55,7 @@ class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/63-unique-paths-ii/solution_test.py %}
+{% asset_code coding/assets/63-unique-paths-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -69,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/63-unique-paths-ii/solution.py %}
+{% asset_code coding/assets/63-unique-paths-ii/solution.py %}

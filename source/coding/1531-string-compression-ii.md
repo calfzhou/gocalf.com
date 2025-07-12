@@ -51,7 +51,7 @@ class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
 ```
 
-{% asset_code coding/1531-string-compression-ii/solution_test.py %}
+{% asset_code coding/assets/1531-string-compression-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -141,7 +141,7 @@ $$
 
 ## Code
 
-{% asset_code coding/1531-string-compression-ii/solution.py %}
+{% asset_code coding/assets/1531-string-compression-ii/solution.py %}
 
 ## Wrong Greedy
 

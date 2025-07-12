@@ -48,7 +48,7 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 ```
 
-{% asset_code coding/1-two-sum/solution_test.py %}
+{% asset_code coding/assets/1-two-sum/solution_test.py %}
 
 ## Thoughts
 
@@ -64,7 +64,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1-two-sum/solution.py %}
+{% asset_code coding/assets/1-two-sum/solution.py %}
 
 ## 快一些
 
@@ -74,4 +74,4 @@ class Solution:
 
 时间复杂度为 `O(n)`。
 
-{% asset_code coding/1-two-sum/solution2.py %}
+{% asset_code coding/assets/1-two-sum/solution2.py %}

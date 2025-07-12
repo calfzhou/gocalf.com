@@ -35,12 +35,14 @@ endif
 
 note: check-slug-and-title
 	hexo new note -p "../notes/$(slug)" "$(title)"
+	mv "source/notes/$(slug)" "source/notes/assets/$(slug)"
 
 post: check-slug-and-title
 	hexo new post -p "$(shell date '+%Y')/$(slug)" "$(title)"
 
 coding: check-slug-and-title
 	hexo new coding -p "../coding/$(slug)" "$(title)"
-	cp scaffolds/coding/* source/coding/$(slug)/
+	cp scaffolds/coding/* "source/coding/$(slug)/"
+	mv "source/coding/$(slug)" "source/coding/assets/$(slug)"
 
 .PHONY: list install build generate clean server s note post coding

@@ -45,7 +45,7 @@ class Solution:
     def findDifferentBinaryString(self, nums: List[str]) -> str:
 ```
 
-{% asset_code coding/1980-find-unique-binary-string/solution_test.py %}
+{% asset_code coding/assets/1980-find-unique-binary-string/solution_test.py %}
 
 ## Thoughts
 
@@ -57,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1980-find-unique-binary-string/solution.py %}
+{% asset_code coding/assets/1980-find-unique-binary-string/solution.py %}

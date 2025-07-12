@@ -19,7 +19,7 @@ Return _the head of the merged linked list_.
 **Example 1:**
 
 {% invert %}
-![case1](21-merge-two-sorted-lists/case1.png)
+![case1](assets/21-merge-two-sorted-lists/case1.png)
 {% endinvert %}
 
 > Input: `list1 = [1,2,4], list2 = [1,3,4]`
@@ -53,7 +53,7 @@ class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
 ```
 
-{% asset_code coding/21-merge-two-sorted-lists/solution_test.py %}
+{% asset_code coding/assets/21-merge-two-sorted-lists/solution_test.py %}
 
 ## Thoughts
 
@@ -61,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/21-merge-two-sorted-lists/solution.py %}
+{% asset_code coding/assets/21-merge-two-sorted-lists/solution.py %}

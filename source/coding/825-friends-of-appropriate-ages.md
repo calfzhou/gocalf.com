@@ -55,14 +55,14 @@ class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
 ```
 
-{% asset_code coding/825-friends-of-appropriate-ages/solution_test.py %}
+{% asset_code coding/assets/825-friends-of-appropriate-ages/solution_test.py %}
 
 ## Thoughts
 
 第三个条件似乎没用？当 `age[y] > 100 && age[x] < 100` 成立的时候，第二条的 `age[y] > age[x]` 一定成立。
 
 {% invert %}
-{% diagramsnet 825-friends-of-appropriate-ages/condition.drawio %}
+{% diagramsnet assets/825-friends-of-appropriate-ages/condition.drawio %}
 {% endinvert %}
 
 条件一对应图中斜线下方的梯形区域，条件二对应对角线上方的三角形区域，条件三是条件二区域内部靠上部分的那个长条矩形。
@@ -77,4 +77,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/825-friends-of-appropriate-ages/solution.py %}
+{% asset_code coding/assets/825-friends-of-appropriate-ages/solution.py %}

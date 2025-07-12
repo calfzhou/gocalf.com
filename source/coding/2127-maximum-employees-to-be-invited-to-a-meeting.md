@@ -19,7 +19,7 @@ Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the 
 **Example 1:**
 
 {% invert %}
-![case1|236](2127-maximum-employees-to-be-invited-to-a-meeting/case1.png)
+![case1](assets/2127-maximum-employees-to-be-invited-to-a-meeting/case1.png)
 {% endinvert %}
 
 > Input: `favorite = [2,2,1,2]`
@@ -47,7 +47,7 @@ Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the 
 **Example 3:**
 
 {% invert %}
-![case3|219](2127-maximum-employees-to-be-invited-to-a-meeting/case3.png)
+![case3](assets/2127-maximum-employees-to-be-invited-to-a-meeting/case3.png)
 {% endinvert %}
 
 > Input: `favorite = [3,0,1,4,1]`
@@ -72,7 +72,7 @@ class Solution:
     def maximumInvitations(self, favorite: List[int]) -> int:
 ```
 
-{% asset_code coding/2127-maximum-employees-to-be-invited-to-a-meeting/solution_test.py %}
+{% asset_code coding/assets/2127-maximum-employees-to-be-invited-to-a-meeting/solution_test.py %}
 
 ## Thoughts
 
@@ -89,13 +89,13 @@ class Solution:
 如果环的长度超过 2，那么只能是让环上的所有人围成一圈，其他任何人都无法插入进去。
 
 {% invert %}
-{% diagramsnet 2127-maximum-employees-to-be-invited-to-a-meeting/big-circle.drawio %}
+{% diagramsnet assets/2127-maximum-employees-to-be-invited-to-a-meeting/big-circle.drawio %}
 {% endinvert %}
 
 但如果环的长度为 2（即两个人双向奔赴），他俩的两边都可以挂一串粉丝链路。而且如果有多个这样的 couple + 粉丝组合，全都可以围成一圈，仍然满足所有人都跟自己的最爱挨着坐。
 
 {% invert %}
-{% diagramsnet 2127-maximum-employees-to-be-invited-to-a-meeting/couples.drawio %}
+{% diagramsnet assets/2127-maximum-employees-to-be-invited-to-a-meeting/couples.drawio %}
 {% endinvert %}
 
 所以对于每一个环长度为 2 的子图，需要找出分别以两个顶点为终点的最长的路径（acyclic chain），可以用深度优先遍历处理。
@@ -106,7 +106,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2127-maximum-employees-to-be-invited-to-a-meeting/solution.py %}
+{% asset_code coding/assets/2127-maximum-employees-to-be-invited-to-a-meeting/solution.py %}
 
 提交跑下来比较慢，可能系数太大了。而且显然第一步做的并查集并没有太大帮助，计算量基本都浪费了，可以考虑优化。
 
@@ -124,4 +124,4 @@ class Solution:
 
 时间复杂度和空间复杂度还是 `O(n)`。
 
-{% asset_code coding/2127-maximum-employees-to-be-invited-to-a-meeting/solution2.py %}
+{% asset_code coding/assets/2127-maximum-employees-to-be-invited-to-a-meeting/solution2.py %}

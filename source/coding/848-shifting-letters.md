@@ -48,7 +48,7 @@ class Solution:
     def shiftingLetters(self, s: str, shifts: List[int]) -> str:
 ```
 
-{% asset_code coding/848-shifting-letters/solution_test.py %}
+{% asset_code coding/assets/848-shifting-letters/solution_test.py %}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/848-shifting-letters/solution.py %}
+{% asset_code coding/assets/848-shifting-letters/solution.py %}

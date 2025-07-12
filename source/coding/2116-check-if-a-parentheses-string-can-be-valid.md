@@ -26,7 +26,7 @@ Return `true` _if you can make `s` a valid parentheses string_. Otherwise, retur
 **Example 1:**
 
 {% invert %}
-![case1](2116-check-if-a-parentheses-string-can-be-valid/case1.png)
+![case1](assets/2116-check-if-a-parentheses-string-can-be-valid/case1.png)
 {% endinvert %}
 
 > Input: `s = "))()))", locked = "010100"`
@@ -61,7 +61,7 @@ class Solution:
     def canBeValid(self, s: str, locked: str) -> bool:
 ```
 
-{% asset_code coding/2116-check-if-a-parentheses-string-can-be-valid/solution_test.py %}
+{% asset_code coding/assets/2116-check-if-a-parentheses-string-can-be-valid/solution_test.py %}
 
 ## Thoughts
 
@@ -75,4 +75,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2116-check-if-a-parentheses-string-can-be-valid/solution.py %}
+{% asset_code coding/assets/2116-check-if-a-parentheses-string-can-be-valid/solution.py %}

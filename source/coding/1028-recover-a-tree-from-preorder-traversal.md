@@ -21,7 +21,7 @@ Given the output `traversal` of this traversal, recover the tree and return _its
 **Example 1:**
 
 {% invert %}
-![case1|423](1028-recover-a-tree-from-preorder-traversal/case1.png)
+![case1](assets/1028-recover-a-tree-from-preorder-traversal/case1.png)
 {% endinvert %}
 
 > Input: `traversal = "1-2--3--4-5--6--7"`
@@ -30,7 +30,7 @@ Given the output `traversal` of this traversal, recover the tree and return _its
 **Example 2:**
 
 {% invert %}
-![case2|423](1028-recover-a-tree-from-preorder-traversal/case2.png)
+![case2](assets/1028-recover-a-tree-from-preorder-traversal/case2.png)
 {% endinvert %}
 
 > Input: `traversal = "1-2--3---4-5--6---7"`
@@ -39,7 +39,7 @@ Given the output `traversal` of this traversal, recover the tree and return _its
 **Example 3:**
 
 {% invert %}
-![case3|305](1028-recover-a-tree-from-preorder-traversal/case3.png)
+![case3](assets/1028-recover-a-tree-from-preorder-traversal/case3.png)
 {% endinvert %}
 
 > Input: `traversal = "1-401--349---90--88"`
@@ -63,7 +63,7 @@ class Solution:
     def recoverFromPreorder(self, traversal: str) -> Optional[TreeNode]:
 ```
 
-{% asset_code coding/1028-recover-a-tree-from-preorder-traversal/solution_test.py %}
+{% asset_code coding/assets/1028-recover-a-tree-from-preorder-traversal/solution_test.py %}
 
 ## Thoughts
 
@@ -75,8 +75,8 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1028-recover-a-tree-from-preorder-traversal/solution.py %}
+{% asset_code coding/assets/1028-recover-a-tree-from-preorder-traversal/solution.py %}
 
 Test cases for solution inner methods:
 
-{% asset_code coding/1028-recover-a-tree-from-preorder-traversal/solution_inner_test.py %}
+{% asset_code coding/assets/1028-recover-a-tree-from-preorder-traversal/solution_inner_test.py %}

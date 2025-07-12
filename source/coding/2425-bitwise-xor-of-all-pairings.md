@@ -45,7 +45,7 @@ class Solution:
     def xorAllNums(self, nums1: List[int], nums2: List[int]) -> int:
 ```
 
-{% asset_code coding/2425-bitwise-xor-of-all-pairings/solution_test.py %}
+{% asset_code coding/assets/2425-bitwise-xor-of-all-pairings/solution_test.py %}
 
 ## Thoughts
 
@@ -88,4 +88,4 @@ $$
 
 ## Code
 
-{% asset_code coding/2425-bitwise-xor-of-all-pairings/solution.py %}
+{% asset_code coding/assets/2425-bitwise-xor-of-all-pairings/solution.py %}

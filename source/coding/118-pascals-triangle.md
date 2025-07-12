@@ -15,7 +15,7 @@ In **Pascal's triangle**, each number is the sum of the two numbers directly abo
 <https://leetcode.cn/problems/pascals-triangle/>
 
 {% invert %}
-![pascal](119-pascals-triangle-ii/pascal.gif)
+![pascal](assets/119-pascals-triangle-ii/pascal.gif)
 {% endinvert %}
 
 **Example 1:**
@@ -39,7 +39,7 @@ class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
 ```
 
-{% asset_code coding/118-pascals-triangle/solution_test.py %}
+{% asset_code coding/assets/118-pascals-triangle/solution_test.py %}
 
 ## Thoughts
 
@@ -47,4 +47,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/118-pascals-triangle/solution.py %}
+{% asset_code coding/assets/118-pascals-triangle/solution.py %}

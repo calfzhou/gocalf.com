@@ -41,7 +41,7 @@ class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
 ```
 
-{% asset_code coding/424-longest-repeating-character-replacement/solution_test.py %}
+{% asset_code coding/assets/424-longest-repeating-character-replacement/solution_test.py %}
 
 ## Thoughts
 
@@ -59,6 +59,6 @@ PS：之前用这种滑窗法的时候，写循环的时候总是被边界条件
 
 ## Code
 
-{% asset_code coding/424-longest-repeating-character-replacement/solution.py %}
+{% asset_code coding/assets/424-longest-repeating-character-replacement/solution.py %}
 
 > 似乎不是很快，先这样吧。

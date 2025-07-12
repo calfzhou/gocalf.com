@@ -46,7 +46,7 @@ class Solution:
     def maxChunksToSorted(self, arr: List[int]) -> int:
 ```
 
-{% asset_code coding/769-max-chunks-to-make-sorted/solution_test.py %}
+{% asset_code coding/assets/769-max-chunks-to-make-sorted/solution_test.py %}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/769-max-chunks-to-make-sorted/solution.py %}
+{% asset_code coding/assets/769-max-chunks-to-make-sorted/solution.py %}

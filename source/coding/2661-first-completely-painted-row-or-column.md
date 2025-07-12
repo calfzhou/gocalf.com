@@ -19,7 +19,7 @@ Return _the smallest index_ `i` _at which either a row or a column will be compl
 **Example 1:**
 
 {% invert %}
-![case1](2661-first-completely-painted-row-or-column/case1.png)
+![case1](assets/2661-first-completely-painted-row-or-column/case1.png)
 {% endinvert %}
 
 > Input: `arr = [1,3,4,2], mat = [[1,4],[2,3]]`
@@ -29,7 +29,7 @@ Return _the smallest index_ `i` _at which either a row or a column will be compl
 **Example 2:**
 
 {% invert %}
-![case2](2661-first-completely-painted-row-or-column/case2.png)
+![case2](assets/2661-first-completely-painted-row-or-column/case2.png)
 {% endinvert %}
 
 > Input: `arr = [2,8,7,4,1,3,5,6,9], mat = [[3,2,5],[1,4,6],[8,7,9]]`
@@ -54,7 +54,7 @@ class Solution:
     def firstCompleteIndex(self, arr: List[int], mat: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2661-first-completely-painted-row-or-column/solution_test.py %}
+{% asset_code coding/assets/2661-first-completely-painted-row-or-column/solution_test.py %}
 
 ## Thoughts
 
@@ -66,4 +66,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2661-first-completely-painted-row-or-column/solution.py %}
+{% asset_code coding/assets/2661-first-completely-painted-row-or-column/solution.py %}

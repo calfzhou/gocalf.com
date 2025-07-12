@@ -10,7 +10,7 @@ updated: 2024-12-09 09:34:57
 
 You are given `coordinates`, a string that represents the coordinates of a square of the chessboard. Below is a chessboard for your reference.
 
-![problem|400](3274-check-if-two-chessboard-squares-have-the-same-color/problem.png)
+![problem](assets/3274-check-if-two-chessboard-squares-have-the-same-color/problem.png)
 
 Return `true` _if the square is white, and_ `false` _if the square is black_.
 
@@ -48,7 +48,7 @@ class Solution:
     def squareIsWhite(self, coordinates: str) -> bool:
 ```
 
-{% asset_code coding/1812-determine-color-of-a-chessboard-square/solution_test.py %}
+{% asset_code coding/assets/1812-determine-color-of-a-chessboard-square/solution_test.py %}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1812-determine-color-of-a-chessboard-square/solution.py %}
+{% asset_code coding/assets/1812-determine-color-of-a-chessboard-square/solution.py %}

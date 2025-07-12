@@ -15,7 +15,7 @@ Given the `root` of a binary tree, return _the level order traversal of its node
 **Example 1:**
 
 {% invert %}
-![case1](102-binary-tree-level-order-traversal/case1.png)
+![case1](assets/102-binary-tree-level-order-traversal/case1.png)
 {% endinvert %}
 
 > Input: `root = [3,9,20,null,null,15,7]`
@@ -49,7 +49,7 @@ class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
 ```
 
-{% asset_code coding/102-binary-tree-level-order-traversal/solution_test.py %}
+{% asset_code coding/assets/102-binary-tree-level-order-traversal/solution_test.py %}
 
 ## Thoughts
 
@@ -57,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/102-binary-tree-level-order-traversal/solution.py %}
+{% asset_code coding/assets/102-binary-tree-level-order-traversal/solution.py %}

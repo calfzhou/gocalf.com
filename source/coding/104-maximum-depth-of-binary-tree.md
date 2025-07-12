@@ -17,7 +17,7 @@ A binary tree's **maximum depth** is the number of nodes along the longest path
 **Example 1:**
 
 {% invert %}
-![case1](104-maximum-depth-of-binary-tree/case1.png)
+![case1](assets/104-maximum-depth-of-binary-tree/case1.png)
 {% endinvert %}
 
 > Input: `root = [3,9,20,null,null,15,7]`
@@ -48,7 +48,7 @@ class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
 ```
 
-{% asset_code coding/104-maximum-depth-of-binary-tree/solution_test.py %}
+{% asset_code coding/assets/104-maximum-depth-of-binary-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -58,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/104-maximum-depth-of-binary-tree/solution.py %}
+{% asset_code coding/assets/104-maximum-depth-of-binary-tree/solution.py %}

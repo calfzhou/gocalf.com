@@ -46,7 +46,7 @@ class Solution:
     def missingNumber(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/268-missing-number/solution_test.py %}
+{% asset_code coding/assets/268-missing-number/solution_test.py %}
 
 ## Thoughts
 
@@ -58,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/268-missing-number/solution.py %}
+{% asset_code coding/assets/268-missing-number/solution.py %}

@@ -51,7 +51,7 @@ class Solution:
     def maximumLength(self, s: str) -> int:
 ```
 
-{% asset_code coding/2981-find-longest-special-substring-that-occurs-thrice-i/solution_test.py %}
+{% asset_code coding/assets/2981-find-longest-special-substring-that-occurs-thrice-i/solution_test.py %}
 
 ## Thoughts
 
@@ -79,4 +79,4 @@ $$
 
 ## Code
 
-{% asset_code coding/2981-find-longest-special-substring-that-occurs-thrice-i/solution.py %}
+{% asset_code coding/assets/2981-find-longest-special-substring-that-occurs-thrice-i/solution.py %}

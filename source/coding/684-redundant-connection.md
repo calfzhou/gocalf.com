@@ -19,7 +19,7 @@ Return _an edge that can be removed so that the resulting graph is a tree of_ `n
 **Example 1:**
 
 {% invert %}
-![case1](684-redundant-connection/case1.png)
+![case1](assets/684-redundant-connection/case1.png)
 {% endinvert %}
 
 > Input: `edges = [[1,2],[1,3],[2,3]]`
@@ -28,7 +28,7 @@ Return _an edge that can be removed so that the resulting graph is a tree of_ `n
 **Example 2:**
 
 {% invert %}
-![case2](684-redundant-connection/case2.png)
+![case2](assets/684-redundant-connection/case2.png)
 {% endinvert %}
 
 > Input: `edges = [[1,2],[2,3],[3,4],[1,4],[1,5]]`
@@ -51,7 +51,7 @@ class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/684-redundant-connection/solution_test.py %}
+{% asset_code coding/assets/684-redundant-connection/solution_test.py %}
 
 ## Thoughts
 
@@ -69,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/684-redundant-connection/solution.py %}
+{% asset_code coding/assets/684-redundant-connection/solution.py %}

@@ -19,7 +19,7 @@ Given the integer array `position` and the integer `m`. Return _the required for
 **Example 1:**
 
 {% invert %}
-![case1](1552-magnetic-force-between-two-balls/case1.png)
+![case1](assets/1552-magnetic-force-between-two-balls/case1.png)
 {% endinvert %}
 
 > Input: `position = [1,2,3,4,7], m = 3`
@@ -47,7 +47,7 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
 ```
 
-{% asset_code coding/1552-magnetic-force-between-two-balls/solution_test.py %}
+{% asset_code coding/assets/1552-magnetic-force-between-two-balls/solution_test.py %}
 
 ## Thoughts
 
@@ -63,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1552-magnetic-force-between-two-balls/solution.py %}
+{% asset_code coding/assets/1552-magnetic-force-between-two-balls/solution.py %}

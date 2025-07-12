@@ -44,7 +44,7 @@ class Solution:
     def constructDistancedSequence(self, n: int) -> List[int]:
 ```
 
-{% asset_code coding/1718-construct-the-lexicographically-largest-valid-sequence/solution_test.py %}
+{% asset_code coding/assets/1718-construct-the-lexicographically-largest-valid-sequence/solution_test.py %}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1718-construct-the-lexicographically-largest-valid-sequence/solution.py %}
+{% asset_code coding/assets/1718-construct-the-lexicographically-largest-valid-sequence/solution.py %}

@@ -51,7 +51,7 @@ class Solution:
     def combinationSum4(self, nums: List[int], target: int) -> int:
 ```
 
-{% asset_code coding/377-combination-sum-iv/solution_test.py %}
+{% asset_code coding/assets/377-combination-sum-iv/solution_test.py %}
 
 ## Thoughts
 
@@ -75,4 +75,4 @@ $$
 
 ## Code
 
-{% asset_code coding/377-combination-sum-iv/solution.py %}
+{% asset_code coding/assets/377-combination-sum-iv/solution.py %}

@@ -49,7 +49,7 @@ class Solution:
     def ambiguousCoordinates(self, s: str) -> List[str]:
 ```
 
-{% asset_code coding/816-ambiguous-coordinates/solution_test.py %}
+{% asset_code coding/assets/816-ambiguous-coordinates/solution_test.py %}
 
 ## Thoughts
 
@@ -67,4 +67,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/816-ambiguous-coordinates/solution.py %}
+{% asset_code coding/assets/816-ambiguous-coordinates/solution.py %}

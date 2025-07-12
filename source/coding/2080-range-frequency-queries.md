@@ -61,7 +61,7 @@ class RangeFreqQuery:
 # param_1 = obj.query(left,right,value)
 ```
 
-{% asset_code coding/2080-range-frequency-queries/solution_test.py %}
+{% asset_code coding/assets/2080-range-frequency-queries/solution_test.py %}
 
 ## Thoughts
 
@@ -73,4 +73,4 @@ class RangeFreqQuery:
 
 ## Code
 
-{% asset_code coding/2080-range-frequency-queries/solution.py %}
+{% asset_code coding/assets/2080-range-frequency-queries/solution.py %}

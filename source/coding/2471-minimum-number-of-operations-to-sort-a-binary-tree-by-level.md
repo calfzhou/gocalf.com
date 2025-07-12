@@ -21,7 +21,7 @@ The **level** of a node is the number of edges along the path between it and the
 **Example 1:**
 
 {% invert %}
-![case1|500](2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/case1.png)
+![case1](assets/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/case1.png)
 {% endinvert %}
 
 > Input: `root = [1,4,3,7,6,8,5,null,null,null,null,9,null,10]`
@@ -38,7 +38,7 @@ The **level** of a node is the number of edges along the path between it and the
 **Example 2:**
 
 {% invert %}
-![case2|400](2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/case2.png)
+![case2](assets/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/case2.png)
 {% endinvert %}
 
 > Input: `root = [1,3,2,7,6,5,4]`
@@ -55,7 +55,7 @@ The **level** of a node is the number of edges along the path between it and the
 **Example 3:**
 
 {% invert %}
-![case3|400](2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/case3.png)
+![case3](assets/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/case3.png)
 {% endinvert %}
 
 > Input: `root = [1,2,3,4,5,6]`
@@ -81,7 +81,7 @@ class Solution:
     def minimumOperations(self, root: Optional[TreeNode]) -> int:
 ```
 
-{% asset_code coding/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/solution_test.py %}
+{% asset_code coding/assets/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/solution_test.py %}
 
 ## Thoughts
 
@@ -98,13 +98,13 @@ class Solution:
 比如 `m = 8` 个数字为 `[5, 1, 3, 2, 4, 7, 6, 8]`，按数字大小排序的下标为 `[1, 3, 2, 4, 0, 6, 5, 7]`：
 
 {% invert %}
-{% diagramsnet 2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/sort_indices.drawio %}
+{% diagramsnet assets/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/sort_indices.drawio %}
 {% endinvert %}
 
 对按数字排序的下标数组找出轮换循环，易知共有四个轮换循环组：
 
 {% invert %}
-{% diagramsnet 2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/find_loops.drawio %}
+{% diagramsnet assets/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/find_loops.drawio %}
 {% endinvert %}
 
 所以原始的数组需要进行 `8 - 4 = 4` 次两两交换。
@@ -113,4 +113,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/solution.py %}
+{% asset_code coding/assets/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/solution.py %}

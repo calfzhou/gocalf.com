@@ -45,7 +45,7 @@ class Solution:
     def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
 ```
 
-{% asset_code coding/721-accounts-merge/solution_test.py %}
+{% asset_code coding/assets/721-accounts-merge/solution_test.py %}
 
 ## Thoughts
 
@@ -57,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/721-accounts-merge/solution.py %}
+{% asset_code coding/assets/721-accounts-merge/solution.py %}

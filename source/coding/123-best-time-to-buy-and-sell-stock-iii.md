@@ -49,7 +49,7 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 ```
 
-{% asset_code coding/123-best-time-to-buy-and-sell-stock-iii/solution_test.py %}
+{% asset_code coding/assets/123-best-time-to-buy-and-sell-stock-iii/solution_test.py %}
 
 ## Thoughts
 
@@ -65,7 +65,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/123-best-time-to-buy-and-sell-stock-iii/solution.py %}
+{% asset_code coding/assets/123-best-time-to-buy-and-sell-stock-iii/solution.py %}
 
 ## DP
 
@@ -105,4 +105,4 @@ $$
 
 实际计算的时候，只需要保留前一天的四个状态值即可，空间复杂度 `O(1)`，时间复杂度 `O(n)`。
 
-{% asset_code coding/123-best-time-to-buy-and-sell-stock-iii/solution2.py %}
+{% asset_code coding/assets/123-best-time-to-buy-and-sell-stock-iii/solution2.py %}

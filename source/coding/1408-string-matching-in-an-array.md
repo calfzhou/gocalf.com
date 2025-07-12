@@ -47,7 +47,7 @@ class Solution:
     def stringMatching(self, words: List[str]) -> List[str]:
 ```
 
-{% asset_code coding/1408-string-matching-in-an-array/solution_test.py %}
+{% asset_code coding/assets/1408-string-matching-in-an-array/solution_test.py %}
 
 ## Thoughts
 
@@ -59,4 +59,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1408-string-matching-in-an-array/solution.py %}
+{% asset_code coding/assets/1408-string-matching-in-an-array/solution.py %}

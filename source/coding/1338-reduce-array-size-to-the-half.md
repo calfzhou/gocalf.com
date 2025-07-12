@@ -41,7 +41,7 @@ class Solution:
     def minSetSize(self, arr: List[int]) -> int:
 ```
 
-{% asset_code coding/1338-reduce-array-size-to-the-half/solution_test.py %}
+{% asset_code coding/assets/1338-reduce-array-size-to-the-half/solution_test.py %}
 
 ## Thoughts
 
@@ -49,4 +49,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1338-reduce-array-size-to-the-half/solution.py %}
+{% asset_code coding/assets/1338-reduce-array-size-to-the-half/solution.py %}

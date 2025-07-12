@@ -62,7 +62,7 @@ class Solution:
     def minValidStrings(self, words: List[str], target: str) -> int:
 ```
 
-{% asset_code coding/3291-minimum-number-of-valid-strings-to-form-target-i/solution_test.py %}
+{% asset_code coding/assets/3291-minimum-number-of-valid-strings-to-form-target-i/solution_test.py %}
 
 ## Thoughts
 
@@ -86,7 +86,7 @@ $$
 
 ## Code
 
-{% asset_code coding/3291-minimum-number-of-valid-strings-to-form-target-i/solution.py %}
+{% asset_code coding/assets/3291-minimum-number-of-valid-strings-to-form-target-i/solution.py %}
 
 ## Faster - AC 自动机
 
@@ -102,8 +102,8 @@ $$
 
 时间复杂度 `O(km + n)`，空间复杂度 `O(km + n)`。
 
-{% asset_code coding/3291-minimum-number-of-valid-strings-to-form-target-i/solution_ac.py %}
+{% asset_code coding/assets/3291-minimum-number-of-valid-strings-to-form-target-i/solution_ac.py %}
 
 附：针对 AC 自动机的构建和多模式前缀搜索的 test cases：
 
-{% asset_code coding/3291-minimum-number-of-valid-strings-to-form-target-i/solution_ac_test.py %}
+{% asset_code coding/assets/3291-minimum-number-of-valid-strings-to-form-target-i/solution_ac_test.py %}

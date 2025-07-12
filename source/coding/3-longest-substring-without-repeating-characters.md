@@ -45,7 +45,7 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
 ```
 
-{% asset_code coding/3-longest-substring-without-repeating-characters/solution_test.py %}
+{% asset_code coding/assets/3-longest-substring-without-repeating-characters/solution_test.py %}
 
 ## Thoughts
 
@@ -61,10 +61,10 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3-longest-substring-without-repeating-characters/solution.py %}
+{% asset_code coding/assets/3-longest-substring-without-repeating-characters/solution.py %}
 
 ## 快一些
 
 如果用哈希表动态地记录当前 substring 中的字符（key 是字符，value 是位置下标），则时间复杂度为 `O(n)`（基本上每个字符都会入栈一次，出栈一次），空间复杂度为 `O(m)`。
 
-{% asset_code coding/3-longest-substring-without-repeating-characters/solution2.py %}
+{% asset_code coding/assets/3-longest-substring-without-repeating-characters/solution2.py %}

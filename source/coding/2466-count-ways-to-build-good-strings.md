@@ -48,7 +48,7 @@ class Solution:
     def countGoodStrings(self, low: int, high: int, zero: int, one: int) -> int:
 ```
 
-{% asset_code coding/2466-count-ways-to-build-good-strings/solution_test.py %}
+{% asset_code coding/assets/2466-count-ways-to-build-good-strings/solution_test.py %}
 
 ## Thoughts
 
@@ -64,4 +64,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2466-count-ways-to-build-good-strings/solution.py %}
+{% asset_code coding/assets/2466-count-ways-to-build-good-strings/solution.py %}

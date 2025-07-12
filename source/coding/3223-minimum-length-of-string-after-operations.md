@@ -50,7 +50,7 @@ class Solution:
     def minimumLength(self, s: str) -> int:
 ```
 
-{% asset_code coding/3223-minimum-length-of-string-after-operations/solution_test.py %}
+{% asset_code coding/assets/3223-minimum-length-of-string-after-operations/solution_test.py %}
 
 ## Thoughts
 
@@ -58,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3223-minimum-length-of-string-after-operations/solution.py %}
+{% asset_code coding/assets/3223-minimum-length-of-string-after-operations/solution.py %}

@@ -51,7 +51,7 @@ class Solution:
     def minimumTime(self, nums1: List[int], nums2: List[int], x: int) -> int:
 ```
 
-{% asset_code coding/2809-minimum-time-to-make-array-sum-at-most-x/solution_test.py %}
+{% asset_code coding/assets/2809-minimum-time-to-make-array-sum-at-most-x/solution_test.py %}
 
 ## Thoughts
 
@@ -105,15 +105,15 @@ $$
 > 显然 t > i 的情况是不用考虑的，因为如果会对位置 i 操作，一定不能在大于 i 的时刻 t 进行操作。
 
 {% invert %}
-{% diagramsnet 2809-minimum-time-to-make-array-sum-at-most-x/ai_plus_t_bi.drawio %}
+{% diagramsnet assets/2809-minimum-time-to-make-array-sum-at-most-x/ai_plus_t_bi.drawio %}
 {% endinvert %}
 
 下表是按递推式算出来的所有 `f(t, i)`。其中红色的值取自 $a_i+t\times b_i+f(t-1,i-1)$（表示被选中），蓝色的值取自 $f(t,i-1)$（表示不选中）。
 
 {% invert %}
-{% diagramsnet 2809-minimum-time-to-make-array-sum-at-most-x/f_t_i.drawio %}
+{% diagramsnet assets/2809-minimum-time-to-make-array-sum-at-most-x/f_t_i.drawio %}
 {% endinvert %}
 
 ## Code
 
-{% asset_code coding/2809-minimum-time-to-make-array-sum-at-most-x/solution.py %}
+{% asset_code coding/assets/2809-minimum-time-to-make-array-sum-at-most-x/solution.py %}

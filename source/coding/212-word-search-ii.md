@@ -17,7 +17,7 @@ Each word must be constructed from letters of sequentially adjacent cells, where
 **Example 1:**
 
 {% invert %}
-![case1](212-word-search-ii/case1.png)
+![case1](assets/212-word-search-ii/case1.png)
 {% endinvert %}
 
 > Input: `board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]`
@@ -26,7 +26,7 @@ Each word must be constructed from letters of sequentially adjacent cells, where
 **Example 2:**
 
 {% invert %}
-![case2](212-word-search-ii/case2.png)
+![case2](assets/212-word-search-ii/case2.png)
 {% endinvert %}
 
 > Input: `board = [["a","b"],["c","d"]], words = ["abcb"]`
@@ -50,7 +50,7 @@ class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
 ```
 
-{% asset_code coding/212-word-search-ii/solution_test.py %}
+{% asset_code coding/assets/212-word-search-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -70,4 +70,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/212-word-search-ii/solution.py %}
+{% asset_code coding/assets/212-word-search-ii/solution.py %}

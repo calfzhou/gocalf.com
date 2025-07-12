@@ -49,7 +49,7 @@ class Solution:
     def finalPrices(self, prices: List[int]) -> List[int]:
 ```
 
-{% asset_code coding/1475-final-prices-with-a-special-discount-in-a-shop/solution_test.py %}
+{% asset_code coding/assets/1475-final-prices-with-a-special-discount-in-a-shop/solution_test.py %}
 
 ## Thoughts
 
@@ -59,7 +59,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1475-final-prices-with-a-special-discount-in-a-shop/solution.py %}
+{% asset_code coding/assets/1475-final-prices-with-a-special-discount-in-a-shop/solution.py %}
 
 ## O(n log n)
 
@@ -71,7 +71,7 @@ class Solution:
 
 不过实际提交跑就很慢，可能系数太大了。
 
-{% asset_code coding/1475-final-prices-with-a-special-discount-in-a-shop/solution_nlogn.py %}
+{% asset_code coding/assets/1475-final-prices-with-a-special-discount-in-a-shop/solution_nlogn.py %}
 
 ## O(n)
 
@@ -89,7 +89,7 @@ class Solution:
 4. 第 -4 个元素 4：栈顶 6 大于 4，弹出。栈顶变为 2，小于等于 6，说明 2 就是其右边第一个不大于它的元素，即为相应的折扣。将 4 入栈（即 `[2, 4]`）。
 5. 第 -5 个元素 8：栈顶 4 小于等于 8，即为相应折扣。将 8 入栈（即 `[2, 4, 8]`）。
 
-{% asset_code coding/1475-final-prices-with-a-special-discount-in-a-shop/solution_n.py %}
+{% asset_code coding/assets/1475-final-prices-with-a-special-discount-in-a-shop/solution_n.py %}
 
 ## Another O(n)
 
@@ -107,4 +107,4 @@ class Solution:
 
 正向扫描优点还挺多的，首先扫描方向更符合直觉，其次代码简洁很多，再次如果做 in-place 修改，修改操作发生在被修改元素（的下标）出栈的时候，修改之后也就不会被访问到，比较安全（节省空间）。而逆向扫描，修改操作发生在入栈的时候，需要注意入栈的应该是修改前的值。但有些场景需要入栈下标（如 [739. Daily Temperatures](739-daily-temperatures)），那么通过下标再引用对应元素值的时候，就要注意应该取到修改前还是修改后的值，从而考虑是否必需开辟额外的存储空间记录修改后的值。
 
-{% asset_code coding/1475-final-prices-with-a-special-discount-in-a-shop/solution_n2.py %}
+{% asset_code coding/assets/1475-final-prices-with-a-special-discount-in-a-shop/solution_n2.py %}

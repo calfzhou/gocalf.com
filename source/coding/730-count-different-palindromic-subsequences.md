@@ -44,7 +44,7 @@ class Solution:
     def countPalindromicSubsequences(self, s: str) -> int:
 ```
 
-{% asset_code coding/730-count-different-palindromic-subsequences/solution_test.py %}
+{% asset_code coding/assets/730-count-different-palindromic-subsequences/solution_test.py %}
 
 ## Thoughts
 
@@ -78,4 +78,4 @@ $$
 
 ## Code
 
-{% asset_code coding/730-count-different-palindromic-subsequences/solution.py %}
+{% asset_code coding/assets/730-count-different-palindromic-subsequences/solution.py %}

@@ -54,7 +54,7 @@ class Solution:
     def punishmentNumber(self, n: int) -> int:
 ```
 
-{% asset_code coding/2698-find-the-punishment-number-of-an-integer/solution_test.py %}
+{% asset_code coding/assets/2698-find-the-punishment-number-of-an-integer/solution_test.py %}
 
 ## Thoughts
 
@@ -72,4 +72,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2698-find-the-punishment-number-of-an-integer/solution.py %}
+{% asset_code coding/assets/2698-find-the-punishment-number-of-an-integer/solution.py %}

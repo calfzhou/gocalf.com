@@ -23,7 +23,7 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 **Example 1:**
 
 {% invert %}
-![case1](143-reorder-list/case1.png)
+![case1](assets/143-reorder-list/case1.png)
 {% endinvert %}
 
 > Input: `head = [1,2,3,4]`
@@ -32,7 +32,7 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 **Example 2:**
 
 {% invert %}
-![case2](143-reorder-list/case2.png)
+![case2](assets/143-reorder-list/case2.png)
 {% endinvert %}
 
 > Input: `head = [1,2,3,4,5]`
@@ -58,7 +58,7 @@ class Solution:
         """
 ```
 
-{% asset_code coding/143-reorder-list/solution_test.py %}
+{% asset_code coding/assets/143-reorder-list/solution_test.py %}
 
 ## Thoughts
 
@@ -74,4 +74,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/143-reorder-list/solution.py %}
+{% asset_code coding/assets/143-reorder-list/solution.py %}

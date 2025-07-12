@@ -72,7 +72,7 @@ class Solution:
     def isCircularSentence(self, sentence: str) -> bool:
 ```
 
-{% asset_code coding/2490-circular-sentence/solution_test.py %}
+{% asset_code coding/assets/2490-circular-sentence/solution_test.py %}
 
 ## Thoughts
 
@@ -80,4 +80,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2490-circular-sentence/solution.py %}
+{% asset_code coding/assets/2490-circular-sentence/solution.py %}

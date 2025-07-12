@@ -62,7 +62,7 @@ class Solution:
     def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:
 ```
 
-{% asset_code coding/3266-final-array-state-after-k-multiplication-operations-ii/solution_test.py %}
+{% asset_code coding/assets/3266-final-array-state-after-k-multiplication-operations-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -159,4 +159,4 @@ def clog(a: int, b: int) -> int:
 
 ## Code
 
-{% asset_code coding/3266-final-array-state-after-k-multiplication-operations-ii/solution.py %}
+{% asset_code coding/assets/3266-final-array-state-after-k-multiplication-operations-ii/solution.py %}

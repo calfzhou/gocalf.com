@@ -51,7 +51,7 @@ class Solution:
     def smallestNumber(self, pattern: str) -> str:
 ```
 
-{% asset_code coding/2375-construct-smallest-number-from-di-string/solution_test.py %}
+{% asset_code coding/assets/2375-construct-smallest-number-from-di-string/solution_test.py %}
 
 ## Thoughts
 
@@ -65,7 +65,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2375-construct-smallest-number-from-di-string/solution.py %}
+{% asset_code coding/assets/2375-construct-smallest-number-from-di-string/solution.py %}
 
 ## Faster
 
@@ -81,4 +81,4 @@ class Solution:
 
 时间复杂度 `O(n)`，空间复杂度 `O(n)`。
 
-{% asset_code coding/2375-construct-smallest-number-from-di-string/solution2.py %}
+{% asset_code coding/assets/2375-construct-smallest-number-from-di-string/solution2.py %}

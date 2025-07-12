@@ -24,7 +24,7 @@ Return an array `result` of length `n`, where `result[i]` denotes the number of 
 > Output: `[1,2,2,3]`
 > Explanation:
 > {% invert %}
-![case1](3160-find-the-number-of-distinct-colors-among-the-balls/case1.gif)
+![case1](assets/3160-find-the-number-of-distinct-colors-among-the-balls/case1.gif)
 {% endinvert %}
 >
 > - After query 0, ball 1 has color 4.
@@ -38,7 +38,7 @@ Return an array `result` of length `n`, where `result[i]` denotes the number of 
 > Output: `[1,2,2,3,4]`
 > Explanation:
 > {% invert %}
-![case2](3160-find-the-number-of-distinct-colors-among-the-balls/case2.gif)
+![case2](assets/3160-find-the-number-of-distinct-colors-among-the-balls/case2.gif)
 {% endinvert %}
 >
 > - After query 0, ball 0 has color 1.
@@ -62,7 +62,7 @@ class Solution:
     def queryResults(self, limit: int, queries: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/3160-find-the-number-of-distinct-colors-among-the-balls/solution_test.py %}
+{% asset_code coding/assets/3160-find-the-number-of-distinct-colors-among-the-balls/solution_test.py %}
 
 ## Thoughts
 
@@ -76,4 +76,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3160-find-the-number-of-distinct-colors-among-the-balls/solution.py %}
+{% asset_code coding/assets/3160-find-the-number-of-distinct-colors-among-the-balls/solution.py %}

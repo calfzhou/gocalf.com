@@ -24,7 +24,7 @@ Return _an array_ `answer` _of size_ `n` _where_ `answer[i]` _is the column that
 **Example 1:**
 
 {% invert %}
-![case1|500](1706-where-will-the-ball-fall/case1.jpg)
+![case1](assets/1706-where-will-the-ball-fall/case1.jpg)
 {% endinvert %}
 
 > Input: `grid = [[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]`
@@ -61,7 +61,7 @@ class Solution:
     def findBall(self, grid: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/1706-where-will-the-ball-fall/solution_test.py %}
+{% asset_code coding/assets/1706-where-will-the-ball-fall/solution_test.py %}
 
 ## Thoughts
 
@@ -73,4 +73,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1706-where-will-the-ball-fall/solution.py %}
+{% asset_code coding/assets/1706-where-will-the-ball-fall/solution.py %}

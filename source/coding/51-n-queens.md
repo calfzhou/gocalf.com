@@ -19,7 +19,7 @@ Each solution contains a distinct board configuration of the n-queens' placement
 **Example 1:**
 
 {% invert %}
-![case1](51-n-queens/case1.png)
+![case1](assets/51-n-queens/case1.png)
 {% endinvert %}
 
 > Input: `n = 4`
@@ -42,7 +42,7 @@ class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
 ```
 
-{% asset_code coding/51-n-queens/solution_test.py %}
+{% asset_code coding/assets/51-n-queens/solution_test.py %}
 
 ## Thoughts
 
@@ -66,10 +66,10 @@ class Solution:
 
 ### Recursively
 
-{% asset_code coding/51-n-queens/solution.py %}
+{% asset_code coding/assets/51-n-queens/solution.py %}
 
 ### Iteratively
 
-{% asset_code coding/51-n-queens/solution2.py %}
+{% asset_code coding/assets/51-n-queens/solution2.py %}
 
 不用递归的话，需要注意缓存的更新时机，避免设置了但没有清理，或者漏了设置。

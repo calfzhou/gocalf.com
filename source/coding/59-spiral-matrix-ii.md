@@ -15,7 +15,7 @@ Given a positive integer `n`, generate an `n x n` `matrix` filled with elements 
 **Example 1:**
 
 {% invert %}
-![case1](59-spiral-matrix-ii/case1.png)
+![case1](assets/59-spiral-matrix-ii/case1.png)
 {% endinvert %}
 
 > Input: `n = 3`
@@ -37,7 +37,7 @@ class Solution:
     def generateMatrix(self, n: int) -> List[List[int]]:
 ```
 
-{% asset_code coding/59-spiral-matrix-ii/solution_test.py %}
+{% asset_code coding/assets/59-spiral-matrix-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -45,4 +45,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/59-spiral-matrix-ii/solution.py %}
+{% asset_code coding/assets/59-spiral-matrix-ii/solution.py %}

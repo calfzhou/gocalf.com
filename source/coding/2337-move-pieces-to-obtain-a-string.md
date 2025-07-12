@@ -55,7 +55,7 @@ class Solution:
     def canChange(self, start: str, target: str) -> bool:
 ```
 
-{% asset_code coding/2337-move-pieces-to-obtain-a-string/solution_test.py %}
+{% asset_code coding/assets/2337-move-pieces-to-obtain-a-string/solution_test.py %}
 
 ## Thoughts
 
@@ -84,6 +84,6 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2337-move-pieces-to-obtain-a-string/solution.py %}
+{% asset_code coding/assets/2337-move-pieces-to-obtain-a-string/solution.py %}
 
-{% asset_code coding/2337-move-pieces-to-obtain-a-string/solution2.py %}
+{% asset_code coding/assets/2337-move-pieces-to-obtain-a-string/solution2.py %}

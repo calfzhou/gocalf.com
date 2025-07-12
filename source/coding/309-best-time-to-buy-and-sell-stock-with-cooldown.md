@@ -42,7 +42,7 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 ```
 
-{% asset_code coding/309-best-time-to-buy-and-sell-stock-with-cooldown/solution_test.py %}
+{% asset_code coding/assets/309-best-time-to-buy-and-sell-stock-with-cooldown/solution_test.py %}
 
 ## Thoughts
 
@@ -70,4 +70,4 @@ $$
 
 ## Code
 
-{% asset_code coding/309-best-time-to-buy-and-sell-stock-with-cooldown/solution.py %}
+{% asset_code coding/assets/309-best-time-to-buy-and-sell-stock-with-cooldown/solution.py %}

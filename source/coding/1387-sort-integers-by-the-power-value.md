@@ -54,7 +54,7 @@ class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
 ```
 
-{% asset_code coding/1387-sort-integers-by-the-power-value/solution_test.py %}
+{% asset_code coding/assets/1387-sort-integers-by-the-power-value/solution_test.py %}
 
 ## Thoughts
 
@@ -64,4 +64,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1387-sort-integers-by-the-power-value/solution.py %}
+{% asset_code coding/assets/1387-sort-integers-by-the-power-value/solution.py %}

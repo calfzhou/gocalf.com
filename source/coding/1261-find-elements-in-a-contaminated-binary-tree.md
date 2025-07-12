@@ -27,7 +27,7 @@ Implement the `FindElements` class:
 **Example 1:**
 
 {% invert %}
-![case1](1261-find-elements-in-a-contaminated-binary-tree/case1.png)
+![case1](assets/1261-find-elements-in-a-contaminated-binary-tree/case1.png)
 {% endinvert %}
 
 > Input
@@ -46,7 +46,7 @@ Implement the `FindElements` class:
 **Example 2:**
 
 {% invert %}
-![case2](1261-find-elements-in-a-contaminated-binary-tree/case2.png)
+![case2](assets/1261-find-elements-in-a-contaminated-binary-tree/case2.png)
 {% endinvert %}
 
 > Input
@@ -66,7 +66,7 @@ Implement the `FindElements` class:
 **Example 3:**
 
 {% invert %}
-![case3](1261-find-elements-in-a-contaminated-binary-tree/case3.png)
+![case3](assets/1261-find-elements-in-a-contaminated-binary-tree/case3.png)
 {% endinvert %}
 
 > Input
@@ -115,7 +115,7 @@ class FindElements:
 # param_1 = obj.find(target)
 ```
 
-{% asset_code coding/1261-find-elements-in-a-contaminated-binary-tree/solution_test.py %}
+{% asset_code coding/assets/1261-find-elements-in-a-contaminated-binary-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -131,8 +131,8 @@ class FindElements:
 
 ### Less Space
 
-{% asset_code coding/1261-find-elements-in-a-contaminated-binary-tree/solution.py %}
+{% asset_code coding/assets/1261-find-elements-in-a-contaminated-binary-tree/solution.py %}
 
 ### Less Time
 
-{% asset_code coding/1261-find-elements-in-a-contaminated-binary-tree/solution2.py %}
+{% asset_code coding/assets/1261-find-elements-in-a-contaminated-binary-tree/solution2.py %}

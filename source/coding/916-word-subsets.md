@@ -44,7 +44,7 @@ class Solution:
     def wordSubsets(self, words1: List[str], words2: List[str]) -> List[str]:
 ```
 
-{% asset_code coding/916-word-subsets/solution_test.py %}
+{% asset_code coding/assets/916-word-subsets/solution_test.py %}
 
 ## Thoughts
 
@@ -58,8 +58,8 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/916-word-subsets/solution.py %}
+{% asset_code coding/assets/916-word-subsets/solution.py %}
 
 用 [collections.Counter](https://docs.python.org/3/library/collections.html#collections.Counter) 会慢一些：
 
-{% asset_code coding/916-word-subsets/solution2.py %}
+{% asset_code coding/assets/916-word-subsets/solution2.py %}
