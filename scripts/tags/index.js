@@ -85,7 +85,7 @@ hexo.extend.tag.register('animcube', function (args) {
 hexo.extend.tag.register('invert', function (args, content) {
   args = hexo.args.map(args, ['when'])
   const { when = 'dark' } = args
-  const inner = hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('')
+  const inner = hexo.render.renderSync({ text: content, engine: 'markdown' }) //.split('\n').join('')
   const classes = []
   if (when === 'dark' || when === 'always') {
     classes.push('invert-when-dark')
