@@ -123,6 +123,8 @@ footer:
 plugins:
   katex:
     enable: true # This is required to include katex related stylesheets.
+  mermaid:
+    js: https://cdn.jsdelivr.net/npm/mermaid@11.8.1/dist/mermaid.min.js
   animcube2:
     enable: false
     inject: |
