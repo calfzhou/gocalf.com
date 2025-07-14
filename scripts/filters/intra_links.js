@@ -2,7 +2,7 @@
 
 const { escapeHTML, relative_url } = require('hexo-util')
 
-const posts = new Map()
+const posts = new Map() // post permalink -> post data
 const linkRe = /(?<!\!)\[[^\]]+\]\(([^)]+)\)|<([^>]+)>/g
 
 module.exports.preProcess = data => {
