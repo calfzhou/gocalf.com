@@ -27,6 +27,12 @@ updated: 2025-07-12 20:34:28
 
 附 - 所有关卡状态存档：[state-exported.json](assets/the-nand-game/state-exported.json)
 
+## All Levels
+
+- [The Nand Game](the-nand-game.md) - Hardware Levels
+- [The Nand Game - Software Levels](the-nand-game-software-levels.md)
+- [The Nand Game - Optional Levels](the-nand-game-optional-levels.md)
+
 ## Logical Operators
 
 [Logic gate - Wikipedia](https://en.wikipedia.org/wiki/Logic_gate)

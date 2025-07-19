@@ -12,6 +12,7 @@ updated: 2025-07-15 23:38:35
 
 - [The Nand Game](the-nand-game.md) - Hardware Levels
 - [The Nand Game - Software Levels](the-nand-game-software-levels.md)
+- [The Nand Game - Optional Levels](the-nand-game-optional-levels.md)
 
 ## Assembler Quick Reference
 
