@@ -27,7 +27,7 @@
     "@uiolee/hexo-htmlnano": "^1.0.1",
     "cssnano": "^7.1.0",
     "hexo": "^7.3.0",
-    "hexo-diagrams-net": "^2024.4.1",
+    "hexo-diagrams-net": "^2025.6.1",
     "hexo-esbuild": "^2.0.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
     "hexo-generator-alias": "^1.0.0",
