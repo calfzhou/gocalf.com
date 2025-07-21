@@ -15,5 +15,6 @@
     "wiki/"
   ],
   "showInlineTitle": true,
-  "propertiesInDocument": "hidden"
+  "propertiesInDocument": "hidden",
+  "trashOption": "local"
 }
