@@ -25,7 +25,7 @@
   "dependencies": {
     "@traptitech/markdown-it-katex": "^3.6.0",
     "@uiolee/hexo-htmlnano": "^1.0.1",
-    "cssnano": "^7.1.0",
+    "cssnano": "^7.1.1",
     "hexo": "^7.3.0",
     "hexo-diagrams-net": "^2025.6.1",
     "hexo-esbuild": "^2.0.0",
