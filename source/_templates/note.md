@@ -1,9 +1,10 @@
 ---
 <%*
-let title = tp.file.title
-if (title.startsWith('Untitled')) {
-  title = await tp.system.prompt('Slug:')
-  await tp.file.rename(title)
+let slug = tp.file.title
+if (slug.startsWith('Untitled')) {
+  slug = await tp.system.prompt('Slug:')
+  title = await tp.system.prompt('Title:', slug)
+  await tp.file.rename(slug)
 }
 %>
 title: <% title %>
