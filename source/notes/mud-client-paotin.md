@@ -4,8 +4,9 @@ notebook: notes
 tags:
   - software
 date: 2025-11-27 23:23:12
-updated: 2025-11-27 23:23:12
+updated: 2025-11-27 23:28:18
 ---
+
 
 ## Info
 
@@ -61,8 +62,8 @@ paotin
 
 ![20251127-231718.png](assets/mud-client-paotin/20251127-231718.png)
 
-解决（2025-11-27）：换 `beta` 版本的 image。
+解决：换 `beta` 版本（2025-11-27）的 image。
 
 ### 无法选取文本和复制
 
-TODO
+解决：按住 Option 键就可以选取了，选取到的文本自动被复制（iTerm2）。
