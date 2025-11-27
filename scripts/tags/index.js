@@ -5,17 +5,17 @@ function inlineImg(alt, src) {
 }
 
 hexo.extend.tag.register('badge_github', function (args) {
-  args = hexo.args.map(args, ['release'], ['user', 'repo'])
-  const { user, repo, release } = args
+  args = hexo.args.map(args, ['release', 'branch'], ['user', 'repo'])
+  const { user, repo, release, branch } = args
   const parts = []
   const repoImg = inlineImg(
-    `${user}/${repo}`,
-    `https://img.shields.io/static/v1?label=${user}&message=${repo}&color=blue&logo=github`
+    `${user}/${repo}${branch ? ` (${branch})` : ''}`,
+    `https://img.shields.io/static/v1?label=${user}&message=${repo}${branch? ` (${branch})` : ''}&color=blue&logo=github`
   )
   parts.push(`<a href="https://github.com/${user}/${repo}">${repoImg}</a>`)
   parts.push(inlineImg('stars', `https://img.shields.io/github/stars/${user}/${repo}?logo=.&style=social`))
   parts.push(inlineImg('forks', `https://img.shields.io/github/forks/${user}/${repo}?logo=.&style=social`))
-  parts.push(inlineImg('updated', `https://img.shields.io/github/last-commit/${user}/${repo}?label=`))
+  parts.push(inlineImg('updated', `https://img.shields.io/github/last-commit/${user}/${repo}${branch ? `/${branch}` : ''}?label=`))
   if (release) {
     parts.push(inlineImg('release', `https://img.shields.io/github/v/release/${user}/${repo}?label=`))
     parts.push(inlineImg('release date', `https://img.shields.io/github/release-date/${user}/${repo}?label=`))
