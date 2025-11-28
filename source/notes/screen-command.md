@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/terminal
 date: 2025-11-28 19:53:32
-updated: 2025-11-28 19:53:32
+updated: 2025-11-28 20:21:35
 references:
   - '[linux screen 命令详解 - David_Tang - 博客园](https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html)'
 ---
@@ -22,7 +22,7 @@ screen -S yourname # 新建一个叫 yourname 的 session
 screen -US yourname # 新建一个叫 yourname 的 UTF8 编码的 session
 screen -ls # 列出当前所有的 session
 screen -r yourname # 回到 yourname 这个 session
-screen -Ur yourname # 回到y ourname 这个 session（UTF8 编码）
+screen -Ur yourname # 回到 yourname 这个 session（UTF8 编码）
 screen -d yourname # 远程 detach 某个 session
 screen -d -r yourname # 结束当前 session 并回到 yourname 这个 session
 ```
