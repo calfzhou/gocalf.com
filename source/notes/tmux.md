@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/terminal
 date: 2025-11-28 20:32:11
-updated: 2025-11-28 20:32:11
+updated: 2025-11-30 00:27:49
 references:
   - '[Tmux 使用教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2019/10/tmux.html)'
 ---
@@ -25,6 +25,8 @@ Tmux 是一个终端复用器（terminal multiplexer）。
 
 Tmux 和 screen 都是会话与窗口的「解绑」工具，将它们彻底分离。
 
+进阶：[Welcome to tao-of-tmux’s documentation! — tao-of-tmux v1.0.2 documentation](https://tao-of-tmux.readthedocs.io/en/latest/)
+
 ## 常用命令和快捷键
 
 ``` bash
@@ -35,6 +37,9 @@ tumx list-session # 同上
 tmux attach -t session-name # 重新接入 session-name 这个会话
 tmux switch -t session-name # 切换到名为 session-name 的会话
 tmux kill-session -t session-name # 杀死名为 session-name 的会话
+
+tmux split-window # 划分上下两个窗格
+tmux split-window -h # 划分左右两个窗格
 ```
 
 Tmux 的快捷键都要通过前缀键唤起。默认的前缀键是 `Ctrl+b`，即先按下 `Ctrl+b`，快捷键才会生效（类似于 screen 的 `Ctrl+a`？）。

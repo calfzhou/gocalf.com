@@ -1,7 +1,6 @@
 [
   "obsidian-minimal-settings",
   "table-editor-obsidian",
-  "link-opening-restore",
   "obsidian-image-toolkit",
   "cm-chs-patch",
   "obsidian-custom-attachment-location",
@@ -9,5 +8,6 @@
   "open-vscode",
   "obsidian-front-matter-title-plugin",
   "templater-obsidian",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "link-opening-restore"
 ]
