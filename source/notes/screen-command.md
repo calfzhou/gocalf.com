@@ -4,11 +4,10 @@ notebook: notes
 tags:
   - it/terminal
 date: 2025-11-28 19:53:32
-updated: 2025-11-28 20:21:35
+updated: 2025-12-21 20:32:48
 references:
   - '[linux screen 命令详解 - David_Tang - 博客园](https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html)'
 ---
-
 ## 介绍
 
 Screen 可以看作是窗口管理器的命令行界面版本。它提供了统一的管理多个会话的界面和相应的功能。

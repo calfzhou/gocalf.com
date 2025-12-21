@@ -5,9 +5,8 @@ tags:
 - software/linux
 - it/server
 date: 2025-12-21 12:31:54
-updated: 2025-12-21 20:32:55
+updated: 2025-12-21 20:37:28
 ---
-
 ## Ubuntu
 
 Version: Ubuntu 24.04 LTS
