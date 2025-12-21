@@ -5,7 +5,7 @@ tags:
 - software/linux
 - it/server
 date: 2025-12-21 12:31:54
-updated: 2025-12-21 19:48:19
+updated: 2025-12-21 20:32:55
 ---
 
 ## Ubuntu
