@@ -76,8 +76,8 @@ importers:
         version: 5.43.1
     devDependencies:
       hexo-update-time:
-        specifier: github:calfzhou/hexo-update-time#v1.1.2-calf.2
-        version: https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/c9a2b6be520568d1f376a802f840407bdc6ee3ab
+        specifier: github:calfzhou/hexo-update-time#v1.1.2-calf.3
+        version: https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3ec936ba38f2e28d9622d503d2cedb50aac2546
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -820,8 +820,8 @@ packages:
   hexo-theme-stellar@1.30.0:
     resolution: {integrity: sha512-3GABFI3mD/AvGdLW4wAclEWB9Sk3/c4IhIem9Dc8LIAcwk66q5yqCrOkgy3eDurWArZkpWZXKUuPgqRH7dvWQg==}
 
-  hexo-update-time@https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/c9a2b6be520568d1f376a802f840407bdc6ee3ab:
-    resolution: {tarball: https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/c9a2b6be520568d1f376a802f840407bdc6ee3ab}
+  hexo-update-time@https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3ec936ba38f2e28d9622d503d2cedb50aac2546:
+    resolution: {tarball: https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3ec936ba38f2e28d9622d503d2cedb50aac2546}
     version: 1.1.1
     hasBin: true
 
@@ -2434,7 +2434,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  hexo-update-time@https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/c9a2b6be520568d1f376a802f840407bdc6ee3ab:
+  hexo-update-time@https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3ec936ba38f2e28d9622d503d2cedb50aac2546:
     dependencies:
       commander: 12.1.0
       dayjs: 1.11.19
