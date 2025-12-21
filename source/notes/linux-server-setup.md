@@ -3,9 +3,9 @@ title: Linux Server Setup
 notebook: notes
 tags:
 - software/linux
-- software/server
+- it/server
 date: 2025-12-21 12:31:54
-updated: 2025-12-21 12:31:54
+updated: 2025-12-21 19:48:19
 ---
 
 ## Ubuntu
@@ -57,7 +57,18 @@ no-port-forwarding,no-agent-forwarding,no-X11-forwarding,command="echo 'Please l
 
 ### Aliyun Specific
 
-TODO
+The default user is `ecs-user`.
+
+To access some "not-exist" websites:
+
+``` bash
+ssh -C -f -D 1080 -N calf@THANK-GOD
+export all_proxy=socks5://127.0.0.1:1080
+
+# curl, or something else
+
+unset all_proxy
+```
 
 ### Change the Hostname
 
@@ -101,8 +112,7 @@ sudo apt-get update
 # Add Docker's official GPG key:
 # sudo apt-get install ca-certificates
 #> ca-certificates is already the newest version (20240203).
-
-sudo install -m 0755 -d /etc/apt/keyrings
+# sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 
@@ -118,16 +128,59 @@ docker --version
 docker compose version
 #> Docker Compose version v2.37.3
 
-sudo service docker status
+service docker status
+```
 
-# To allow non-privileged users to run Docker commands:
-sudo usermod -aG docker calf
+To allow non-privileged users to run Docker commands:
+
+``` bash
+sudo usermod -aG docker USER
 
 # Log out and log back in so that your group membership is re-evaluated.
 # Try `docker ps` without `sudo`.
 docker ps
 #> CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
+
+### Install Docker on Aliyun
+
+[在 Linux 系统上安装和使用 Docker 和 Docker Compose - 云服务器 ECS - 阿里云](https://help.aliyun.com/zh/ecs/user-guide/install-and-use-docker#8dca4cfa3dn0e)
+
+``` bash
+sudo apt-get update
+
+# Use Aliyun's mirror
+sudo curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+sudo add-apt-repository "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+
+# ...
+```
+
+配置镜像：
+
+``` bash
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+    "registry-mirrors": [
+        "https://dockerproxy.com",
+        "https://mirror.baidubce.com",
+        "https://docker.nju.edu.cn"
+    ]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+docker info
+#> ...
+#> Registry Mirrors:
+#>   ...
+```
+
+> [!caution]
+> 上述镜像源不一定可用，更多镜像参见 [境内 Docker 镜像状态监控](https://status.anye.xyz/)。
 
 ## Service Deployment Setup
 
