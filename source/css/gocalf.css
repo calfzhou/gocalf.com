@@ -40,3 +40,19 @@ article.content a[target="_blank"]:not(.link-card):after {
   font-size: 0.8em;
   color: var(--theme-link);
 }
+
+/* Override Stella 1.33 styles */
+
+table:not([class]) {
+  @media screen and (min-width: 667px) {
+    width: inherit
+  }
+
+  th {
+    text-align: inherit;
+  }
+
+  th, td {
+    border: 1px solid var(--block-border);
+  }
+}
