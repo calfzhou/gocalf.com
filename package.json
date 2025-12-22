@@ -7,7 +7,7 @@
     "pnpm": "^9.0"
   },
   "scripts": {
-    "postinstall": "cp ./patch/hexo-theme-stellar/scripts/filters/pretty_urls.js ./node_modules/hexo-theme-stellar/scripts/filters/pretty_urls.js; cp ./patch/hexo-theme-stellar/scripts/helpers/pretty_url.js ./node_modules/hexo-theme-stellar/scripts/helpers/pretty_url.js",
+    "postinstall": "cp ./patch/hexo/plugins/console/list/common.js ./node_modules/.pnpm/hexo@8.1.1_chokidar@3.6.0/node_modules/hexo/dist/plugins/console/list/common.js; cp ./patch/hexo-theme-stellar/scripts/filters/pretty_urls.js ./node_modules/hexo-theme-stellar/scripts/filters/pretty_urls.js; cp ./patch/hexo-theme-stellar/scripts/helpers/pretty_url.js ./node_modules/hexo-theme-stellar/scripts/helpers/pretty_url.js",
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",

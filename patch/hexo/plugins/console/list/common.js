@@ -4,9 +4,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.stringLength = void 0;
-const strip_ansi_1 = __importDefault(require("strip-ansi"));
+async function loadStripAnsi() {
+    return (await import("strip-ansi")).default;
+}
+let strip_ansi_1;
+(async () => {
+    strip_ansi_1 = await loadStripAnsi();
+})();
 function stringLength(str) {
-    str = (0, strip_ansi_1.default)(str);
+    str = (0, strip_ansi_1)(str);
     const len = str.length;
     let result = len;
     // Detect double-byte characters
