@@ -26,7 +26,7 @@
   "dependencies": {
     "@traptitech/markdown-it-katex": "^3.6.0",
     "@uiolee/hexo-htmlnano": "^1.0.1",
-    "cssnano": "^7.1.1",
+    "cssnano": "^7.1.2",
     "hexo": "^7.3.0",
     "hexo-diagrams-net": "^2025.6.1",
     "hexo-esbuild": "^2.0.0",
@@ -45,7 +45,7 @@
     "markdown-it-obsidian-imgsize": "^0.1.1",
     "postcss": "^8.5.6",
     "svgo": "^3.3.2",
-    "terser": "^5.43.1"
+    "terser": "^5.44.1"
   },
   "devDependencies": {
     "hexo-update-time": "github:calfzhou/hexo-update-time#v1.1.2-calf.3",
