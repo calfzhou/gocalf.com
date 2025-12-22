@@ -1,3 +1,3 @@
 'use restrict';
 
-// Simply override pretty_urls filter to disable it.
+// Override pretty_urls filter file to disable it.
