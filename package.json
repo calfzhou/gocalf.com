@@ -16,7 +16,7 @@
     "lint-staged": "lint-staged"
   },
   "hexo": {
-    "version": "7.3.0"
+    "version": "8.1.1"
   },
   "lint-staged": {
     "source/_posts/**/*.md": "hexo-update-time",
@@ -27,7 +27,7 @@
     "@traptitech/markdown-it-katex": "^3.6.0",
     "@uiolee/hexo-htmlnano": "^1.0.1",
     "cssnano": "^7.1.2",
-    "hexo": "^7.3.0",
+    "hexo": "^8.1.1",
     "hexo-diagrams-net": "^2025.6.1",
     "hexo-esbuild": "^2.0.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
