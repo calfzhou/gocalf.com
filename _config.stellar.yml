@@ -38,7 +38,7 @@ inject:
     - <link rel="manifest" href="/favicon/site.webmanifest?v=20240507">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@1.511.0/style.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/source-code-pro@2.38.0/source-code-pro.min.css">
-    - <link rel="stylesheet" href="/css/gocalf.css?v=20250707">
+    - <link rel="stylesheet" href="/css/gocalf.css?v=20251221">
     - <link rel="stylesheet" href="/css/callouts.css?v=20250517">
 
 ######## Notebook ########
@@ -123,6 +123,10 @@ footer:
 plugins:
   katex:
     enable: true # This is required to include katex related stylesheets.
+    # Stellar 1.33.1 默认的 Katex 配置，会在正常的公式下边多显示一样格式错误的公式，故改为如下配置
+    # See: https://github.com/xaoxuu/hexo-theme-stellar/issues/621#issuecomment-3390421599
+    inject: |
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.23/dist/katex.min.css" integrity="sha384-//SZkxyB7axjCAopkAL1E1rve+ZSPKapD89Lo/lLhcsXR+zOYl5z6zJZEFXil+q0" crossorigin="anonymous">
   mermaid:
     js: https://cdn.jsdelivr.net/npm/mermaid@11.8.1/dist/mermaid.min.js
   animcube2:
@@ -160,4 +164,8 @@ style:
     code: '"LXGW WenKai", "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace'
     codeblock: '"Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace, "LXGW WenKai Mono"'
   border-radius:
-    image: revert
+    card-l: 16px # 侧边栏、文章横幅位置的圆角
+    card: 12px # 文章内大部分卡片的圆角
+    image: revert # 技术类文章插图圆角
+  leftbar:
+    background-opacity: 0.3
