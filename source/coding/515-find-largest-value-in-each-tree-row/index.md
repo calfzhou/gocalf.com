@@ -48,7 +48,7 @@ class Solution:
 
 ## Thoughts
 
-直接像 [2471. Minimum Number of Operations to Sort a Binary Tree by Level](2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level) 一样逐层遍历（层序遍历）二叉树，记录每层的最大值即可。
+直接像 [2471. Minimum Number of Operations to Sort a Binary Tree by Level](../2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/index.md) 一样逐层遍历（层序遍历）二叉树，记录每层的最大值即可。
 
 ## Code
 

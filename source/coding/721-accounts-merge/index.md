@@ -51,7 +51,7 @@ class Solution:
 
 以 accounts 中的每条记录为顶点作一张图，如果两个 accounts 的 emails 中有相同的，则把这两个顶点用边连起来。最终连在一起的 account 就都是同一个人的。
 
-[684. Redundant Connection](684-redundant-connection) 中提到的 disjoint set 很适合做这个。先维护一个 email 到 account id（accounts 数组的下标）的字典，如果一个 email 同时属于多个 accounts，则利用 disjoint set 合并这两个 accounts。
+[684. Redundant Connection](../684-redundant-connection/index.md) 中提到的 disjoint set 很适合做这个。先维护一个 email 到 account id（accounts 数组的下标）的字典，如果一个 email 同时属于多个 accounts，则利用 disjoint set 合并这两个 accounts。
 
 最后利用 disjoint set，找到每个 email 所归属的连在一起的 accounts 中的一个（树根）就行了。
 

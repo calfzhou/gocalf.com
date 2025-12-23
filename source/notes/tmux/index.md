@@ -13,7 +13,7 @@ references:
 
 Tmux 是一个终端复用器（terminal multiplexer）。
 
-类似的终端复用器还有 GNU Screen（见 [Screen 命令](screen-command.md)）。Tmux 与它功能相似，但是更易用，也更强大。
+类似的终端复用器还有 GNU Screen（见 [Screen 命令](../screen-command/index.md)）。Tmux 与它功能相似，但是更易用，也更强大。
 
 ## 基础知识
 

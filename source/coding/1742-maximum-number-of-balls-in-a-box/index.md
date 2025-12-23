@@ -70,7 +70,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [2342. Max Sum of a Pair With Equal Sum of Digits](2342-max-sum-of-a-pair-with-equal-sum-of-digits) 类似，按 “sum of digits of the number” 把 `[lowLimit, highLimit]` 区间的所有数字分组，记录每组的数字个数，然后取最大即可。
+跟 [2342. Max Sum of a Pair With Equal Sum of Digits](../2342-max-sum-of-a-pair-with-equal-sum-of-digits/index.md) 类似，按 “sum of digits of the number” 把 `[lowLimit, highLimit]` 区间的所有数字分组，记录每组的数字个数，然后取最大即可。
 
 一个小的优化是，对于连续的正整数，如果个位是从 0 到 9，则对应的 “sum of digits of the number” 也是连续递增的。利用这个规则可以节省 90% 左右的计算量。
 

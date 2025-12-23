@@ -62,7 +62,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [200. Number of Islands](200-number-of-islands) 类似，同样是漫填充算法。
+跟 [200. Number of Islands](../200-number-of-islands/index.md) 类似，同样是漫填充算法。
 
 扫描整个区域，如果是陆地则跳过；如果是水，则把鱼收走，并把此位置标记为陆地，将此位置放入栈。每次出栈的位置，都继续检查其上下左右的位置，做同样的判断和处理。
 

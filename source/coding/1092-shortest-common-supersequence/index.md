@@ -44,9 +44,9 @@ class Solution:
 
 ## Thoughts
 
-跟 [1143. Longest Common Subsequence](1143-longest-common-subsequence) 本质上是同一个问题。想要公共超序列最短，就是要让公共子序列最长。设 str1 和 str2 的长度分别为 m 和 n，如果最长的公共子序列长度为 k，那么最短的公共超序列长度即为 `k + (m - k) + (n - k) = m + n - k`。
+跟 [1143. Longest Common Subsequence](../1143-longest-common-subsequence/index.md) 本质上是同一个问题。想要公共超序列最短，就是要让公共子序列最长。设 str1 和 str2 的长度分别为 m 和 n，如果最长的公共子序列长度为 k，那么最短的公共超序列长度即为 `k + (m - k) + (n - k) = m + n - k`。
 
-先照搬 [1143. Longest Common Subsequence](1143-longest-common-subsequence) 的代码，在最后会得到完整的 `lcs(i, j)` 表格。从 `lcs(m, n)` 开始就可以找出构造 LCS 的方式，而在 LCS 中把那些不相等的字符加上，就能得到最短公共超序列（SCS）。
+先照搬 [1143. Longest Common Subsequence](../1143-longest-common-subsequence/index.md) 的代码，在最后会得到完整的 `lcs(i, j)` 表格。从 `lcs(m, n)` 开始就可以找出构造 LCS 的方式，而在 LCS 中把那些不相等的字符加上，就能得到最短公共超序列（SCS）。
 
 对于 `(i, j)`，如果 `lcs(i, j) == lcs(i-1, j)` 则说明 `str1[i-1]` 不属于 LCS，将其添加到 SCS，并继续看 `(i-1, j)`；否则如果 `lcs(i, j) == lcs(i, j-1)` 则说明 `str2[j-1]` 不属于 LCS，将其添加到 SCS，并继续看 `(i, j-1)`；否则（必然有 `lcs(i, j) == lcs(i-1, j-1) + 1`）说明 `str1[i-1] == str2[j-1]` 属于 LCS，将其加入 LCS 和 SCS，并继续看 `(i-1, j-1)`。
 

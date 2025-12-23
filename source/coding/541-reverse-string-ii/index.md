@@ -41,9 +41,9 @@ class Solution:
 
 ## Thoughts
 
-[344. Reverse String](344-reverse-string) 的进阶版，每 k 个字符为一段，对间隔的段做翻转。
+[344. Reverse String](../344-reverse-string/index.md) 的进阶版，每 k 个字符为一段，对间隔的段做翻转。
 
-先把 s 的所有字符放在数组里，然后分别对 `s[0:k]`、`s[2k:3k]`、`s[4k:5k]`、……按照 [344. Reverse String](344-reverse-string) 的逻辑进行翻转即可。
+先把 s 的所有字符放在数组里，然后分别对 `s[0:k]`、`s[2k:3k]`、`s[4k:5k]`、……按照 [344. Reverse String](../344-reverse-string/index.md) 的逻辑进行翻转即可。
 
 时间复杂度 `O(n)`，空间复杂度 `O(n)`。
 

@@ -84,7 +84,7 @@ class ATM:
 
 ## Thoughts
 
-开始以为类似 [322. Coin Change](322-coin-change) 或 [494. Target Sum](494-target-sum)，结果没那么复杂，是个比较「弱智」的机器。直接用贪心法，从最大面值的钞票开始，如果金额大于钞票面额就优先用此钞票。
+开始以为类似 [322. Coin Change](../322-coin-change/index.md) 或 [494. Target Sum](../494-target-sum/index.md)，结果没那么复杂，是个比较「弱智」的机器。直接用贪心法，从最大面值的钞票开始，如果金额大于钞票面额就优先用此钞票。
 
 存入和取出的时间复杂度都是 `O(1)`，空间复杂度 `O(1)`。
 

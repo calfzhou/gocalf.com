@@ -67,7 +67,7 @@ class RangeFreqQuery:
 
 在构造函数里对 arr 做预处理，记录下每个数字的所有出现的位置。每个数字的位置列表有有序数组，整体用字典。
 
-查询时先看目标数字是否存在，不存在就直接返回 0。然后在该数字的位置列表中，用二分法查找 left 和 right 的插入位置，即找到大于等于 left 的最小的值、大于 right 的最小的值，这两个值在位置列表中的下标之差，就是 `arr[left...right]` 区间内指定数字的次数（跟 [1287. Element Appearing More Than 25% In Sorted Array](1287-element-appearing-more-than-25-in-sorted-array) 类似）。
+查询时先看目标数字是否存在，不存在就直接返回 0。然后在该数字的位置列表中，用二分法查找 left 和 right 的插入位置，即找到大于等于 left 的最小的值、大于 right 的最小的值，这两个值在位置列表中的下标之差，就是 `arr[left...right]` 区间内指定数字的次数（跟 [1287. Element Appearing More Than 25% In Sorted Array](../1287-element-appearing-more-than-25-in-sorted-array/index.md) 类似）。
 
 构造函数的时间复杂度 `O(n)`，`query` 方法的时间复杂度 `O(log n)`，空间复杂度 `O(n)`。
 

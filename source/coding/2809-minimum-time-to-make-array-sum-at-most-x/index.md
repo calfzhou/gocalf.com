@@ -63,7 +63,7 @@ class Solution:
 
 计算第 t（`1 ≤ t ≤ n`）秒时，`nums1` 的总和。首先如果不做操作，则为 $\sum_{i=1}^n\{a_i+t\times b_i\}$，这是个定值。然后看 t 次操作总共减去多少，设在第 s 秒（`1 ≤ s ≤ t`）时，对位置 $i_s$ 操作，那么总共会减去 $\sum_{s=1}^t\{a_{i_s}+s\times b_{i_s}\}$。对第二个式子取最大值，就可以得到在第 t 秒时，`nums1` 总和的最小值，判定是否小于等于 `x` 即可。
 
-其中的 $\sum_{s=1}^t\{s\times b_{i_s}\}$ 这个部分跟 [2931. Maximum Spending After Buying Items](2931-maximum-spending-after-buying-items) 其实是一样的，对于确定的集合 $\{i_1,i_2,\dots,i_t\}$，当 $b_{i_1}\le b_{i_2}\le\dots\le b_{i_t}$ 时，总和最大。也就是说从 n 个位置中任选 t 个，那么在每一秒，都从尚未操作的位置中选 `nums2` 值最小的那个位置进行操作。所以关键就在于选哪 t 个位置。
+其中的 $\sum_{s=1}^t\{s\times b_{i_s}\}$ 这个部分跟 [2931. Maximum Spending After Buying Items](../2931-maximum-spending-after-buying-items/index.md) 其实是一样的，对于确定的集合 $\{i_1,i_2,\dots,i_t\}$，当 $b_{i_1}\le b_{i_2}\le\dots\le b_{i_t}$ 时，总和最大。也就是说从 n 个位置中任选 t 个，那么在每一秒，都从尚未操作的位置中选 `nums2` 值最小的那个位置进行操作。所以关键就在于选哪 t 个位置。
 
 不妨先对 `nums2` 按非递减的顺序排序，当然也要同步重排 `nums1` 以保持对应关系，之后对于任意的 `1 <= i < j <= n`，都有 $b_i\le b_j$。排序逻辑示意：
 

@@ -73,7 +73,7 @@ class Solution:
 
 时间复杂度 `O(n * 2ᵐ) ≤ O(n²)`，其中 n 是二叉树的节点数量，m 是链表的节点数量。遍历整棵树的时间是 `O(n)`，对于其中每个节点，以其为起点跟链表比较的最坏时间复杂度是 `O(2ᵐ) ≤ O(n)`，这是高度为 m 的二叉树的叶子节点的量级。
 
-> 不知道能否像 KMP 算法或者 AC 自动机（[3213. Construct String with Minimum Cost](3213-construct-string-with-minimum-cost) 中用到）那样，以 `O(n + m)` 时间完成呢。本题跟 AC 自动机的场景是相反的，AC 自动机相当于在链表中找二叉树的每一条路径，而本题是在二叉树的每一条路径中找链表。
+> 不知道能否像 KMP 算法或者 AC 自动机（[3213. Construct String with Minimum Cost](../3213-construct-string-with-minimum-cost/index.md) 中用到）那样，以 `O(n + m)` 时间完成呢。本题跟 AC 自动机的场景是相反的，AC 自动机相当于在链表中找二叉树的每一条路径，而本题是在二叉树的每一条路径中找链表。
 
 ## Code
 

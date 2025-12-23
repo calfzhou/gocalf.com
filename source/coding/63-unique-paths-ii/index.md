@@ -59,11 +59,11 @@ class Solution:
 
 ## Thoughts
 
-[62. Unique Paths](62-unique-paths) 的进阶版，有些位置会有障碍物。
+[62. Unique Paths](../62-unique-paths/index.md) 的进阶版，有些位置会有障碍物。
 
 因为障碍物是随意摆放的，就没法直接用组合数计算了，可以按照普通的动态规划的方法计算，根据障碍物的特性调整一下状态转移公式。
 
-显然如果格子 `(i, j)` 有障碍物，那么 `u[i][j]` 就只能是 0，否则就按照 [62. Unique Paths](62-unique-paths) 中的递推式子计算即可。
+显然如果格子 `(i, j)` 有障碍物，那么 `u[i][j]` 就只能是 0，否则就按照 [62. Unique Paths](../62-unique-paths/index.md) 中的递推式子计算即可。
 
 时间复杂度 `O(m * n)`，空间复杂度 `O(n)`。
 

@@ -67,7 +67,7 @@ class Solution:
 
 所以任何情况最多只需要两步。
 
-一步杀只有两种可能。一种是 rook 跟 queen 在同一行或列，且 bishop 没挡在中间。另一种是 bishop 跟 queen 在同一条斜线（根据 [51. N-Queens](51-n-queens) 可知同一斜线的条件是行列之和相等或之差相等），且 rook 没挡在中间。
+一步杀只有两种可能。一种是 rook 跟 queen 在同一行或列，且 bishop 没挡在中间。另一种是 bishop 跟 queen 在同一条斜线（根据 [51. N-Queens](../51-n-queens/index.md) 可知同一斜线的条件是行列之和相等或之差相等），且 rook 没挡在中间。
 
 ## Code
 

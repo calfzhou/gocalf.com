@@ -79,7 +79,7 @@ class Solution:
 
 首先假设那些权重为 -1 的边（简称「-1 边」）都不存在，调用 Dijkstra 算法计算 `source` 到 `destination` 的最短距离，记为 dist（不通则为 ∞）。显然如果 `dist < target`，那就无解（类似于 Example 2），直接返回空数组。如果 `dist = target` 那就不需要做任何有意义的修改（当然题目要求所有 -1 边都必须改成 `[1, 2 * 10⁹]` 内的正数，那就全都改成 `2 * 10⁹` 即可）。如果 `dist > target` 但是 `edges` 中没有 -1 边，也无解，直接返回空数组。
 
-> Dijkstra 算法的更多信息在 [2290. Minimum Obstacle Removal to Reach Corner](2290-minimum-obstacle-removal-to-reach-corner) 有提到。
+> Dijkstra 算法的更多信息在 [2290. Minimum Obstacle Removal to Reach Corner](../2290-minimum-obstacle-removal-to-reach-corner/index.md) 有提到。
 
 然后把所有 -1 边的权重都临时改为 1，再调用 Dijkstra 算法计算 `source` 到 `destination` 的最短距离，同样记为 dist。如果 `dist > target` 说明怎么改都无法把最短距离缩减到 `target`，直接返回空数组。如果 `dist = target`，那么把最短路径上所有 -1 边的权重都改为 1（同时按题目要求把其他 -1 边的权重改成 `2 * 10⁹`）即可。
 

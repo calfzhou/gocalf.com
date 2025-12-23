@@ -72,7 +72,7 @@ class NumberContainers:
 
 ## Thoughts
 
-跟 [3160. Find the Number of Distinct Colors Among the Balls](3160-find-the-number-of-distinct-colors-among-the-balls) 差不多。index 相当于球的编号，number 相当于颜色。主要的区别是本题需要记录每个 number 对应的 index 数组，以便随时可以查询此 number 所在的所有 index 的最小值。
+跟 [3160. Find the Number of Distinct Colors Among the Balls](../3160-find-the-number-of-distinct-colors-among-the-balls/index.md) 差不多。index 相当于球的编号，number 相当于颜色。主要的区别是本题需要记录每个 number 对应的 index 数组，以便随时可以查询此 number 所在的所有 index 的最小值。
 
 同样用字典记录每个 index 最新的 number。再用字典记录每个 number 的所有 index，用有序数组记录，这里直接用 Python 的 list。需要增加或删除的时候，先用二分法查找再执行插入或删除操作。
 

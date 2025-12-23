@@ -81,7 +81,7 @@ class Solution:
 
 还有个想法是看 `sums` 中任何一个值 a，如果 a 是某个包含 d 的 subset 之和，那么必然有 `a - d` 在 `nums` 中；如果 `a - d` 不存在，则 a 一定是某个不含 d 的 subset 之和。遇到同样的问题，即使 a 是某个不含 d 的 subset 之和，`a - d` 也可能存在于 `sums` 中。
 
-做了 [954. Array of Doubled Pairs](954-array-of-doubled-pairs) 之后发现二者要处理的问题是类似的。在 [problem 954](954-array-of-doubled-pairs) 中需要判断 `arr` 中任意一个值 `val`，`val * 2` 或 `val / 2` 是否也在 `arr` 中，而二者可能同时存在，无法确定应该跟谁配对。解决的办法是（考虑到正负数则按绝对值）排序，按顺序检查，`val` 的两倍一定排在 `val` 之后，避免了歧义性。
+做了 [954. Array of Doubled Pairs](../954-array-of-doubled-pairs/index.md) 之后发现二者要处理的问题是类似的。在 [problem 954](../954-array-of-doubled-pairs/index.md) 中需要判断 `arr` 中任意一个值 `val`，`val * 2` 或 `val / 2` 是否也在 `arr` 中，而二者可能同时存在，无法确定应该跟谁配对。解决的办法是（考虑到正负数则按绝对值）排序，按顺序检查，`val` 的两倍一定排在 `val` 之后，避免了歧义性。
 
 借鉴这个想法，对 `sums` 按照降序排列，因为 `d >= 0`，显然对于任意的一对 `a` 和 `a - d`，`a - d` 一定排在后边。对于第一个数 a，可知 `a - d` 一定存在且排在后边，把 `a - d` 删掉，就能保证之后遇到的每个值 a，对应的 `a - d` 一定还存在且排在 a 后边。这样就可以选出来所有不含 d 的 subset 之和。
 

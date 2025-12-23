@@ -74,7 +74,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [2290. Minimum Obstacle Removal to Reach Corner](2290-minimum-obstacle-removal-to-reach-corner) 和 [2577. Minimum Time to Visit a Cell In a Grid](2577-minimum-time-to-visit-a-cell-in-a-grid) 类似，定义好边的权重即可。
+跟 [2290. Minimum Obstacle Removal to Reach Corner](../2290-minimum-obstacle-removal-to-reach-corner/index.md) 和 [2577. Minimum Time to Visit a Cell In a Grid](../2577-minimum-time-to-visit-a-cell-in-a-grid/index.md) 类似，定义好边的权重即可。
 
 如果边 `(u, v)` 的方向跟格子 u 的箭头方向一致，则权重为 0，否则权重为 1。
 

@@ -55,11 +55,11 @@ class Solution:
 
 ## Thoughts
 
-[168. Excel Sheet Column Title](168-excel-sheet-column-title) 的反函数。
+[168. Excel Sheet Column Title](../168-excel-sheet-column-title/index.md) 的反函数。
 
 把每一个字母翻译成 1 到 26 的整数，乘以 26 的相应次幂即可。
 
-[168. Excel Sheet Column Title](168-excel-sheet-column-title) 代码中的 `columnNumber - 1` 对应于这里的 `ord(c) - ord('A') + 1 = ord(c) - 64`。
+[168. Excel Sheet Column Title](../168-excel-sheet-column-title/index.md) 代码中的 `columnNumber - 1` 对应于这里的 `ord(c) - ord('A') + 1 = ord(c) - 64`。
 
 ## Code
 

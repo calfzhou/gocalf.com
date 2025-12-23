@@ -10,9 +10,9 @@ updated: 2025-07-15 23:38:35
 ---
 ## All Levels
 
-- [The Nand Game](the-nand-game.md) - Hardware Levels
-- [The Nand Game - Software Levels](the-nand-game-software-levels.md)
-- [The Nand Game - Optional Levels](the-nand-game-optional-levels.md)
+- [The Nand Game](../the-nand-game/index.md) - Hardware Levels
+- [The Nand Game - Software Levels](../the-nand-game-software-levels/index.md)
+- [The Nand Game - Optional Levels](../the-nand-game-optional-levels/index.md)
 
 ## Assembler Quick Reference
 
@@ -102,11 +102,11 @@ Write a program with four instructions:
 2) Add 1 to the D register
 3) Jump unconditionally
 
-就是在 Hardware 最后 [Computer](the-nand-game.md#Computer) 那关的 ROM 里填入指令。
+就是在 Hardware 最后 [Computer](../the-nand-game/index.md#Computer) 那关的 ROM 里填入指令。
 
 > The word at the PC address in the program memory is the **I** input to the control unit.
 
-需要结合 [Control Unit](the-nand-game.md#Control%20Unit)、 [ALU Instruction](the-nand-game.md#ALU%20Instruction)、[ALU](the-nand-game.md#ALU) 和 [Condition](the-nand-game.md#Condition) 看指令每一位的取值。
+需要结合 [Control Unit](../the-nand-game/index.md#Control%20Unit)、 [ALU Instruction](../the-nand-game/index.md#ALU%20Instruction)、[ALU](../the-nand-game/index.md#ALU) 和 [Condition](../the-nand-game/index.md#Condition) 看指令每一位的取值。
 
 > Note: Inside ALU instruction: `alu(X=D, Y=A/*A)`.
 

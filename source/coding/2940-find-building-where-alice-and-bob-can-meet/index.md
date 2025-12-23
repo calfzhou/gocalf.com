@@ -63,9 +63,9 @@ class Solution:
 
 对于任意 `queries[i] = [aᵢ, bᵢ]`，首先如果 `aᵢ = bᵢ` 则结果为 `aᵢ`（或 `bᵢ`）。如果 `aᵢ > bᵢ`，则把它俩交换一下，不影响结果。不妨设 `aᵢ < bᵢ`，如果 `heights[aᵢ] < heights[bᵢ]`，则结果为 `bᵢ`。所以只需要考虑 `heights[aᵢ] ≥ heights[bᵢ]` 的情况，这时候需要在 `bᵢ` 右侧找到第一个大于 `heights[aᵢ]` 的值。
 
-跟 [1847. Closest Room](1847-closest-room) 几乎一样，`bᵢ` 就相当于 `preferred`，`heights[aᵢ]` 相当于 `minSize`。唯一的区别是本题要求「大于」`heights[aᵢ]` 而不是「大于等于」，要求「大于」 `bᵢ` 而不是「最接近」。
+跟 [1847. Closest Room](../1847-closest-room/index.md) 几乎一样，`bᵢ` 就相当于 `preferred`，`heights[aᵢ]` 相当于 `minSize`。唯一的区别是本题要求「大于」`heights[aᵢ]` 而不是「大于等于」，要求「大于」 `bᵢ` 而不是「最接近」。
 
-直接在 [problem 1847](1847-closest-room) 的代码上微调一下就行了。利用 Python 内置的 list 作为有序集合，虽然理论上时间复杂度不低，但提交后 beats 100%。
+直接在 [problem 1847](../1847-closest-room/index.md) 的代码上微调一下就行了。利用 Python 内置的 list 作为有序集合，虽然理论上时间复杂度不低，但提交后 beats 100%。
 
 如果有序集合可以用 `O(log n)` 时间完成插入，总的时间复杂度是 `O(n log n + m log m + m log n)`，其中 n 是 heights 的数量，m 是 queries 的数量。空间复杂度 `O(n + m)`。
 
@@ -75,9 +75,9 @@ class Solution:
 
 ## Monotonic Stack
 
-在 [1475. Final Prices With a Special Discount in a Shop](1475-final-prices-with-a-special-discount-in-a-shop) 中提到，找左侧/右侧第一个比当前元素小/大的问题，可以用单调栈线性时间求解。不过这里并不是找右侧第一个比当前元素大的，而是找更大的（因为 `heights[aᵢ] ≥ heights[bᵢ]`）。
+在 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md) 中提到，找左侧/右侧第一个比当前元素小/大的问题，可以用单调栈线性时间求解。不过这里并不是找右侧第一个比当前元素大的，而是找更大的（因为 `heights[aᵢ] ≥ heights[bᵢ]`）。
 
-实际上在通过单调栈遍历原数组的时候，如果按照 [逆序扫描数组](1475-final-prices-with-a-special-discount-in-a-shop#O-n) 的逻辑，任何时候，栈里存放的都是比当前元素大的，而且是排序的。那就可以对栈做二分查找。
+实际上在通过单调栈遍历原数组的时候，如果按照 [逆序扫描数组](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#O-n) 的逻辑，任何时候，栈里存放的都是比当前元素大的，而且是排序的。那就可以对栈做二分查找。
 
 每个 query 都可以转换成 `(heights[aᵢ], bᵢ)` 格式，在转换的同时记录 `heights` 中每个位置对应的所有查询。然后配合单调栈逆序扫描 `heights` 数组，在处理到某个位置的时候，用二分法在栈中查找 `heights[aᵢ]` 即可。
 

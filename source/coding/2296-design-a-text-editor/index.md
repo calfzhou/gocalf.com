@@ -102,7 +102,7 @@ class TextEditor:
 
 ## Thoughts
 
-算是 [1472. Design Browser History](1472-design-browser-history) 的进阶吧，支持的操作更多一些。
+算是 [1472. Design Browser History](../1472-design-browser-history/index.md) 的进阶吧，支持的操作更多一些。
 
 开始想着用双向链表，但相对于存储的文本来说，额外的结构开销太大了（速度应该会很快，空间开销大）。
 

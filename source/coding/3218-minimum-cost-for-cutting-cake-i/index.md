@@ -77,7 +77,7 @@ class Solution:
 
 ## Thoughts
 
-[1547. Minimum Cost to Cut a Stick](1547-minimum-cost-to-cut-a-stick) 的二维加权重版本。
+[1547. Minimum Cost to Cut a Stick](../1547-minimum-cost-to-cut-a-stick/index.md) 的二维加权重版本。
 
 先试试直接求解。定义 `dp(t, b, l, r)` 为上下左右分别为 t、b、l、r 的矩形区域，被完全切割的最小成本。那就是对第一刀的切割做不同的选择。易知：
 
@@ -98,11 +98,11 @@ $$
 
 ## Greedy
 
-实际上上边忽略了本题跟 [1547. Minimum Cost to Cut a Stick](1547-minimum-cost-to-cut-a-stick) 的核心区别。[problem 1547](1547-minimum-cost-to-cut-a-stick) 中每一刀的切割成本跟子问题（子木棍的长度）相关，而本题每一刀的切割成本只跟切割位置有关。
+实际上上边忽略了本题跟 [1547. Minimum Cost to Cut a Stick](../1547-minimum-cost-to-cut-a-stick/index.md) 的核心区别。[problem 1547](../1547-minimum-cost-to-cut-a-stick/index.md) 中每一刀的切割成本跟子问题（子木棍的长度）相关，而本题每一刀的切割成本只跟切割位置有关。
 
 如果蛋糕只有一行，显然竖着切的顺序无所谓；如果只有一列，横着切的顺序也无所谓。如果是 `2 x 2` 大小的蛋糕，显然横切和竖切哪个成本高就先切哪个，因为剩下的那个要被乘以 2。
 
-实际上每条线最终的切割成本取决于这条线被分成了几段，跟 [2931. Maximum Spending After Buying Items](2931-maximum-spending-after-buying-items) 类似，显然按降序顺序依次切割每条线的总成本最低。
+实际上每条线最终的切割成本取决于这条线被分成了几段，跟 [2931. Maximum Spending After Buying Items](../2931-maximum-spending-after-buying-items/index.md) 类似，显然按降序顺序依次切割每条线的总成本最低。
 
 计算过程中只需要确定好当前要切割的线已经被分成了几段（垂直方向切过的刀数加一），跟单次切割成本乘起来就行。
 

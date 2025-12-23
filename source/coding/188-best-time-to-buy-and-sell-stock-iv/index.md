@@ -48,13 +48,13 @@ class Solution:
 
 同系列问题：
 
-- [121. Best Time to Buy and Sell Stock](121-best-time-to-buy-and-sell-stock) 交易最多 1 次
-- [122. Best Time to Buy and Sell Stock II](122-best-time-to-buy-and-sell-stock-ii) 交易任意多次
-- [123. Best Time to Buy and Sell Stock III](123-best-time-to-buy-and-sell-stock-iii) 交易最多 2 次
+- [121. Best Time to Buy and Sell Stock](../121-best-time-to-buy-and-sell-stock/index.md) 交易最多 1 次
+- [122. Best Time to Buy and Sell Stock II](../122-best-time-to-buy-and-sell-stock-ii/index.md) 交易任意多次
+- [123. Best Time to Buy and Sell Stock III](../123-best-time-to-buy-and-sell-stock-iii/index.md) 交易最多 2 次
 
 本题是交易至多指定的 k 次。
 
-在 [123. Best Time to Buy and Sell Stock III](123-best-time-to-buy-and-sell-stock-iii) 中特别定义了 [动态规划的状态及其转移函数](123-best-time-to-buy-and-sell-stock-iii#DP)，虽然对那道题的帮助不是很大，但稍加扩展就可以直接应用于本题。
+在 [123. Best Time to Buy and Sell Stock III](../123-best-time-to-buy-and-sell-stock-iii/index.md) 中特别定义了 [动态规划的状态及其转移函数](../123-best-time-to-buy-and-sell-stock-iii/index.md#DP)，虽然对那道题的帮助不是很大，但稍加扩展就可以直接应用于本题。
 
 定义 `buy(i, j)` 表示在第 i 天结束前，（至少买入 1 次）至多买入 j 次，最大的现金余额（同样设可以借钱买股票，初始余额为 0），`sell(i, j)` 表示在第 i 天结束前，至多卖出 j 次，最大的现金余额。
 

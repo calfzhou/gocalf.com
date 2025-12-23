@@ -75,7 +75,7 @@ $$
 m \times (m-1)^{n-k-1} \times \binom{n-1}{k}
 $$
 
-其中 $(m-1)^{n-k-1}$ 可以用 [3266. Final Array State After K Multiplication Operations II](3266-final-array-state-after-k-multiplication-operations-ii) 中提到的二分法幂运算。
+其中 $(m-1)^{n-k-1}$ 可以用 [3266. Final Array State After K Multiplication Operations II](../3266-final-array-state-after-k-multiplication-operations-ii/index.md) 中提到的二分法幂运算。
 
 组合数 $\binom{n-1}{k}$ 就有点儿棘手，因为 $\binom{n-1}{k} = \frac{(n-1)!}{k!\times (n-1-k)!}$，但是模运算不支持除法。
 

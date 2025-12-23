@@ -54,9 +54,9 @@ class Solution:
 
 ## Thoughts
 
-[3151. Special Array I](3151-special-array-i) 的进阶版，从一次查询增加成 q 次查询。
+[3151. Special Array I](../3151-special-array-i/index.md) 的进阶版，从一次查询增加成 q 次查询。
 
-> 跟 [3258. Count Substrings That Satisfy K-Constraint I](3258-count-substrings-that-satisfy-k-constraint-i) 到 [3261. Count Substrings That Satisfy K-Constraint II](3261-count-substrings-that-satisfy-k-constraint-ii) 进阶类似。
+> 跟 [3258. Count Substrings That Satisfy K-Constraint I](../3258-count-substrings-that-satisfy-k-constraint-i/index.md) 到 [3261. Count Substrings That Satisfy K-Constraint II](../3261-count-substrings-that-satisfy-k-constraint-ii/index.md) 进阶类似。
 
 直接算是 `O(n²)` 时间，因为不同的 query 之间可能有大量重复的判定。这种情况很适合动态规划。
 

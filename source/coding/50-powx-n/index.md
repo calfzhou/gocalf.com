@@ -47,7 +47,7 @@ class Solution:
 
 ## Thoughts
 
-在 [3266. Final Array State After K Multiplication Operations II](3266-final-array-state-after-k-multiplication-operations-ii) 中已经实现了两种二分法幂运算的逻辑，直接套用其中一种即可。
+在 [3266. Final Array State After K Multiplication Operations II](../3266-final-array-state-after-k-multiplication-operations-ii/index.md) 中已经实现了两种二分法幂运算的逻辑，直接套用其中一种即可。
 
 如果 n 是负数，则令 `x = 1 / x`，然后计算 `x⁻ⁿ` 即可。
 

@@ -308,4 +308,4 @@ Windows 上安装 iCloud 客户端，然后找到 `Hamster/sync` 目录的路径
 
 [也许你该试试双拼输入法 - Hank's Blog](https://zhaohongxuan.github.io/2023/06/30/how-i-learn-shuang-pin/)
 
-推荐：[小鹤双拼](flypy)
+推荐：[小鹤双拼](../flypy/index.md)

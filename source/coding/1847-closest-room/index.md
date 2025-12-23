@@ -97,12 +97,12 @@ AVL 树的详细信息参见 [DSA AVL Trees](https://www.w3schools.com/dsa/dsa_d
 
 ## Monotonic Stack
 
-在 [2940. Find Building Where Alice and Bob Can Meet](2940-find-building-where-alice-and-bob-can-meet) 中尝试 [基于单调栈 + 二分搜索的解法](2940-find-building-where-alice-and-bob-can-meet#Monotonic-Stack) 时，觉得这道题也可以用类似的逻辑处理。
+在 [2940. Find Building Where Alice and Bob Can Meet](../2940-find-building-where-alice-and-bob-can-meet/index.md) 中尝试 [基于单调栈 + 二分搜索的解法](../2940-find-building-where-alice-and-bob-can-meet/index.md#Monotonic-Stack) 时，觉得这道题也可以用类似的逻辑处理。
 
-核心区别只有两个。一个是本题需要往两个方向找，既要找 preferred 右边第一个，也要找 preferred 左边第一个，可以通过两次循环达成。另一个是 preferred 不一定是存在的房间号，不能用跟 [problem 2940](2940-find-building-where-alice-and-bob-can-meet#Monotonic-Stack) 一样的方式（即用当前扫描到的房间号查出 prefer 此房间号的所有查询），需要对 preferred 和 roomId 做分段匹配。
+核心区别只有两个。一个是本题需要往两个方向找，既要找 preferred 右边第一个，也要找 preferred 左边第一个，可以通过两次循环达成。另一个是 preferred 不一定是存在的房间号，不能用跟 [problem 2940](../2940-find-building-where-alice-and-bob-can-meet/index.md#Monotonic-Stack) 一样的方式（即用当前扫描到的房间号查出 prefer 此房间号的所有查询），需要对 preferred 和 roomId 做分段匹配。
 
 各种边界条件细节需要小心处理。
 
-时间复杂度是 `O(n log n + k log k + k log n)`，空间复杂度 `O(n + k)`，跟上边一样。实际运行时间跟 [problem 2940](2940-find-building-where-alice-and-bob-can-meet) 也很像，用单调栈比用有序集合慢一倍。
+时间复杂度是 `O(n log n + k log k + k log n)`，空间复杂度 `O(n + k)`，跟上边一样。实际运行时间跟 [problem 2940](../2940-find-building-where-alice-and-bob-can-meet/index.md) 也很像，用单调栈比用有序集合慢一倍。
 
 {% asset_code coding/assets/1847-closest-room/solution3.py %}

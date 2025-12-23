@@ -73,10 +73,10 @@ class Solution:
 
 系列题：
 
-- [207. Course Schedule](207-course-schedule)
-- [1462. Course Schedule IV](1462-course-schedule-iv)
+- [207. Course Schedule](../207-course-schedule/index.md)
+- [1462. Course Schedule IV](../1462-course-schedule-iv/index.md)
 
-跟 [207. Course Schedule](207-course-schedule) 类似，用有向图来表示课程之间的依赖关系。图中的任意两个顶点 u 和 v 各自代表一个课程，如果 u 是 v 的直接前置依赖课程，则作有向边 `(u, v)`。
+跟 [207. Course Schedule](../207-course-schedule/index.md) 类似，用有向图来表示课程之间的依赖关系。图中的任意两个顶点 u 和 v 各自代表一个课程，如果 u 是 v 的直接前置依赖课程，则作有向边 `(u, v)`。
 
 用 `dp(u)` 表示课程 u 的所有（直接和间接）下游课程的集合，易得
 

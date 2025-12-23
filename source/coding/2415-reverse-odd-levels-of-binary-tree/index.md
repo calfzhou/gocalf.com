@@ -77,7 +77,7 @@ class Solution:
 
 直接按层序（level-order）遍历二叉树，把奇数层的节点翻转。但需要处理好翻转之后，偶数层和上一个奇数层之间的连接。
 
-开始想像 [102. Binary Tree Level Order Traversal](102-binary-tree-level-order-traversal) 一样做基于队列的非递归层序遍历，但是满二叉树可以简化很多，用数组保存当前层，直接遍历一遍下一层的节点全取出来即可。
+开始想像 [102. Binary Tree Level Order Traversal](../102-binary-tree-level-order-traversal/index.md) 一样做基于队列的非递归层序遍历，但是满二叉树可以简化很多，用数组保存当前层，直接遍历一遍下一层的节点全取出来即可。
 
 时间复杂度 `O(n)`，空间复杂度 `O(n)`。
 

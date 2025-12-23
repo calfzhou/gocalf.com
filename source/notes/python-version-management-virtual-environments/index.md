@@ -119,4 +119,4 @@ pyenv-virtualenv 也说支持 auto activate，但也是基于 `.python-version` 
 
 ## Package Management
 
-[Python Package Management](python-package-management.md)
+[Python Package Management](../python-package-management/index.md)

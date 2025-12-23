@@ -59,7 +59,7 @@ class Solution:
 
 ## Another DP
 
-在 [1186. Maximum Subarray Sum with One Deletion](1186-maximum-subarray-sum-with-one-deletion) 中提到上边计算逻辑的状态定义和状态转移：`s(i)` 表示以 i 为右端点的最大 subarray 和（至少包含 `nums[i]`），即：
+在 [1186. Maximum Subarray Sum with One Deletion](../1186-maximum-subarray-sum-with-one-deletion/index.md) 中提到上边计算逻辑的状态定义和状态转移：`s(i)` 表示以 i 为右端点的最大 subarray 和（至少包含 `nums[i]`），即：
 
 $$
 \begin{cases}
@@ -74,7 +74,7 @@ $$
 
 {% asset_code coding/assets/53-maximum-subarray/solution2.py %}
 
-为了能理解 [3410. Maximize Subarray Sum After Removing All Occurrences of One Element](3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element)，这里对上述 DP 做一些调整，可以得到相同的结果。
+为了能理解 [3410. Maximize Subarray Sum After Removing All Occurrences of One Element](../3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element/index.md)，这里对上述 DP 做一些调整，可以得到相同的结果。
 
 这次直接记录数组的前缀和，即 `ps(i) = Σnums[0...i]`，同时用 `low(i)` 记录 `ps(0)...ps(i)` 的（小于等于零的）最小值，即：
 
@@ -89,4 +89,4 @@ $$
 
 {% asset_code coding/assets/53-maximum-subarray/solution3.py %}
 
-> 这样改造之后，[problem 3410](3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element) 比较容易在此基础上进行扩展。
+> 这样改造之后，[problem 3410](../3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element/index.md) 比较容易在此基础上进行扩展。

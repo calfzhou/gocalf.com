@@ -63,7 +63,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [3208. Alternating Groups II](3208-alternating-groups-ii) 基本是同一个问题，只是数组首尾不再相接，连续条件从颜色交替变为 `+1` 递增。直接在其代码基础上修改一下就行了。
+跟 [3208. Alternating Groups II](../3208-alternating-groups-ii/index.md) 基本是同一个问题，只是数组首尾不再相接，连续条件从颜色交替变为 `+1` 递增。直接在其代码基础上修改一下就行了。
 
 时间复杂度 `O(n)`（没有首尾相接，所以不需要 `O(n + k)`）。
 

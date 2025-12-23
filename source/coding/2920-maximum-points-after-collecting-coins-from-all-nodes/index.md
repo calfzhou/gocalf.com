@@ -83,7 +83,7 @@ $$
 
 用后序遍历树，处理完所有的子节点后，汇总出中间节点的结果。
 
-这里直接用递归实现。也可以用栈加循环来模拟递归（类似于 [3249. Count the Number of Good Nodes](3249-count-the-number-of-good-nodes)），但不一定比直接递归快。
+这里直接用递归实现。也可以用栈加循环来模拟递归（类似于 [3249. Count the Number of Good Nodes](../3249-count-the-number-of-good-nodes/index.md)），但不一定比直接递归快。
 
 时间复杂度 `O(n * log m)`，其中 m 是 10⁴ 或者 coins 中的最大值，空间复杂度 `O(n * log m)` 或者 `O(h * log m)`，其中 h 是树的高度（平均情况下 `h ≈ O(log n)`）。
 

@@ -56,9 +56,9 @@ class Solution:
 
 ## Thoughts
 
-跟 [76. Minimum Window Substring](76-minimum-window-substring) 基本是同一个问题。本题的 valid substring 就相当于 [problem 76](76-minimum-window-substring) 中的 window substring，只不过本题不是要找最短的 valid substring，而是要统计所有 valid substring 的数量。
+跟 [76. Minimum Window Substring](../76-minimum-window-substring/index.md) 基本是同一个问题。本题的 valid substring 就相当于 [problem 76](../76-minimum-window-substring/index.md) 中的 window substring，只不过本题不是要找最短的 valid substring，而是要统计所有 valid substring 的数量。
 
-显然包含最短 valid substring 的所有 substrings，都是 valid（要避免重复）。那么直接搬 [76. Minimum Window Substring](76-minimum-window-substring) 的代码过来，先去掉记录最短 valid substring 的逻辑。
+显然包含最短 valid substring 的所有 substrings，都是 valid（要避免重复）。那么直接搬 [76. Minimum Window Substring](../76-minimum-window-substring/index.md) 的代码过来，先去掉记录最短 valid substring 的逻辑。
 
 在窗口移动过程中，如果当前窗口 `[i, j)` 对应的 substring `word1[i:j]` 是 valid，显然对于任意的 k（`j ≤ k ≤ n`），`word1[i:k]` 都 valid，总数为 `n - j - 1`（n 是 word1 的长度）。因为这些 substring 都是以位置 i 为起点，在此之前和之后都不会再遇到这些 substring，不会重复计数。
 

@@ -56,9 +56,9 @@ class Solution:
 
 ## Thoughts
 
-用滑动窗口扫描数组，跟 [3258. Count Substrings That Satisfy K-Constraint I](3258-count-substrings-that-satisfy-k-constraint-i) 几乎一致。但是在 [problem 3258](3258-count-substrings-that-satisfy-k-constraint-i) 中每次是统计 i 开头的子串数，这里改成统计 j 结尾的子数组数，这样最会留个尾数需要加。
+用滑动窗口扫描数组，跟 [3258. Count Substrings That Satisfy K-Constraint I](../3258-count-substrings-that-satisfy-k-constraint-i/index.md) 几乎一致。但是在 [problem 3258](../3258-count-substrings-that-satisfy-k-constraint-i/index.md) 中每次是统计 i 开头的子串数，这里改成统计 j 结尾的子数组数，这样最会留个尾数需要加。
 
-移窗过程中的操作类似于 [76. Minimum Window Substring](76-minimum-window-substring)，用哈希表记录当前窗口中不同数字的个数。可以用常数时间判定当前窗口是否符合要求，当窗口移动时也用常数时间更新哈希表。
+移窗过程中的操作类似于 [76. Minimum Window Substring](../76-minimum-window-substring/index.md)，用哈希表记录当前窗口中不同数字的个数。可以用常数时间判定当前窗口是否符合要求，当窗口移动时也用常数时间更新哈希表。
 
 时间复杂度 `O(n)`，空间复杂度 `O(1)`。
 

@@ -51,7 +51,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [1760. Minimum Limit of Balls in a Bag](1760-minimum-limit-of-balls-in-a-bag) 的 [二分法](1760-minimum-limit-of-balls-in-a-bag#二分法) 思路差不多。因为 position 的值是离散的，想直接计算出结果比较困难，但可以快速验证给定的一个最小磁力是否能够达成。
+跟 [1760. Minimum Limit of Balls in a Bag](../1760-minimum-limit-of-balls-in-a-bag/index.md) 的 [二分法](../1760-minimum-limit-of-balls-in-a-bag/index.md#二分法) 思路差不多。因为 position 的值是离散的，想直接计算出结果比较困难，但可以快速验证给定的一个最小磁力是否能够达成。
 
 对于给定的一个最小磁力值 force，如果能够摆得出来，那么更小的 force 也一定能摆得出来；如果摆不出来，那么更大的 force 也一定摆不出来。由此可以使用二分法找到分界点。
 

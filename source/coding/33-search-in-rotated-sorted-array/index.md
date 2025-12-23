@@ -52,11 +52,11 @@ class Solution:
 
 ## Thoughts
 
-算是 [153. Find Minimum in Rotated Sorted Array](153-find-minimum-in-rotated-sorted-array) 的微量进阶版。
+算是 [153. Find Minimum in Rotated Sorted Array](../153-find-minimum-in-rotated-sorted-array/index.md) 的微量进阶版。
 
 在二分的过程中，如果当前子数组已经是完全有序的（`nums[l] < nums[r]`），直接按二分法继续搜索即可。
 
-否则，根据 [problem 153](153-find-minimum-in-rotated-sorted-array) 也可以知道子数组的最小值（或最大值）在哪半边。
+否则，根据 [problem 153](../153-find-minimum-in-rotated-sorted-array/index.md) 也可以知道子数组的最小值（或最大值）在哪半边。
 
 不妨设最小值在右半边，那么左半边是 `nums[l]` 到 `nums[m]` 的有序子数组，而右半边的值要么大于 `nums[m]` 要么小于 `nums[r]`。看 `target` 和这三个值的大小关系，便可以确定下一步应该在哪个半边继续搜索。
 
@@ -72,4 +72,4 @@ class Solution:
 
 {% asset_code coding/assets/33-search-in-rotated-sorted-array/solution.py %}
 
-这里 `while` 循环的条件可以直接用 `while l <= r`（[problem 153](153-find-minimum-in-rotated-sorted-array) 用的是 `while l < r - 1` 加收尾处理）。
+这里 `while` 循环的条件可以直接用 `while l <= r`（[problem 153](../153-find-minimum-in-rotated-sorted-array/index.md) 用的是 `while l < r - 1` 加收尾处理）。

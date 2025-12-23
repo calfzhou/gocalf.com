@@ -63,7 +63,7 @@ class Solution:
 
 ## Thoughts
 
-相当于 [730. Count Different Palindromic Subsequences](730-count-different-palindromic-subsequences) 的极简版。
+相当于 [730. Count Different Palindromic Subsequences](../730-count-different-palindromic-subsequences/index.md) 的极简版。
 
 先确定首尾字符，必须是相同的字符，然后看它们之间一共有多少个各不相同的字符。
 
@@ -73,7 +73,7 @@ class Solution:
 
 时间复杂度 `O(C * n)`，空间复杂度 `O(C)`，其中 C 是 s 中各不相同的字符数，不超过 26，可以认为是常数。
 
-想到另外一个办法是像 [2559. Count Vowel Strings in Ranges](2559-count-vowel-strings-in-ranges) 一样，事先记录每个字符在子字符串 `s[:i+1]` 中的个数，这样对于指定的 l 和 r，可以用常数时间判断 `s[l+1:r]` 中是否包含某个字符。不过前期的准备工作同样需要 `O(C * n)` 时间，平均系数还更大一些，而且还要用 `O(C * n)` 空间，没什么必要了。
+想到另外一个办法是像 [2559. Count Vowel Strings in Ranges](../2559-count-vowel-strings-in-ranges/index.md) 一样，事先记录每个字符在子字符串 `s[:i+1]` 中的个数，这样对于指定的 l 和 r，可以用常数时间判断 `s[l+1:r]` 中是否包含某个字符。不过前期的准备工作同样需要 `O(C * n)` 时间，平均系数还更大一些，而且还要用 `O(C * n)` 空间，没什么必要了。
 
 ## Code
 

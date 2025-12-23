@@ -47,7 +47,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [96. Unique Binary Search Trees](95-unique-binary-search-trees-ii) 一样，只不过这里是要列举出所有可能的 BST 来（这回不能直接用卡塔兰数的数学公式了）。
+跟 [96. Unique Binary Search Trees](../95-unique-binary-search-trees-ii/index.md) 一样，只不过这里是要列举出所有可能的 BST 来（这回不能直接用卡塔兰数的数学公式了）。
 
 用递归来实现吧，借助 Python 内置的 [`functools.cache`](https://docs.python.org/3/library/functools.html#functools.cache) 缓存一些中间结果来加速（甚至复用一些二叉树节点）。
 

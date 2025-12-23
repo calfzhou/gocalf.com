@@ -44,7 +44,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [217. Contains Duplicate](217-contains-duplicate) 差不多，增加了对元素下标间距的限制。可以把集合改成字典，记录见到的数字所在的下标，如果再次见到相同的数字，比较一下两次的下标即可。
+跟 [217. Contains Duplicate](../217-contains-duplicate/index.md) 差不多，增加了对元素下标间距的限制。可以把集合改成字典，记录见到的数字所在的下标，如果再次见到相同的数字，比较一下两次的下标即可。
 
 ## Code
 

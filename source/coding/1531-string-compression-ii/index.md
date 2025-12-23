@@ -55,7 +55,7 @@ class Solution:
 
 ## Thoughts
 
-RLE (Run-length encoding) 的计算逻辑在 [443. String Compression](443-string-compression) 中有，可以拿过来按照需要微调一下，计算出压缩后每个字符及其个数，以及压缩后的字符串长度。
+RLE (Run-length encoding) 的计算逻辑在 [443. String Compression](../443-string-compression/index.md) 中有，可以拿过来按照需要微调一下，计算出压缩后每个字符及其个数，以及压缩后的字符串长度。
 
 定义函数 `clen(n)` 表示连续 `n` 个相同字符压缩后的长度，易得：
 

@@ -72,7 +72,7 @@ class Solution:
 
 ## Thoughts
 
-开始以为相当于计算两次带权重的 [62. Unique Paths](62-unique-paths)，让 Robot I 先走总分最高的路径，然后把路径上每个格子的 point 改为 0，再让 Robot II 走。
+开始以为相当于计算两次带权重的 [62. Unique Paths](../62-unique-paths/index.md)，让 Robot I 先走总分最高的路径，然后把路径上每个格子的 point 改为 0，再让 Robot II 走。
 
 但这样是错误的，Robot I 的目的是让 Robot II 的总分最低，而不是自身的总分最高。
 

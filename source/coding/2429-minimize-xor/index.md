@@ -52,7 +52,7 @@ class Solution:
 
 ## Thoughts
 
-先统计 num1 和 num2 各自二进制表示中的 1 的个数（可以用 [191. Number of 1 Bits](191-number-of-1-bits) 里提到的各种方法，或者直接用语言自带的方法如 Python 中 [`int.bit_count`](https://docs.python.org/3.10/library/stdtypes.html#int.bit_count)）。
+先统计 num1 和 num2 各自二进制表示中的 1 的个数（可以用 [191. Number of 1 Bits](../191-number-of-1-bits/index.md) 里提到的各种方法，或者直接用语言自带的方法如 Python 中 [`int.bit_count`](https://docs.python.org/3.10/library/stdtypes.html#int.bit_count)）。
 
 如果它俩的二进制表示中 1 的个数一致，那么 num1 就是所求结果，它与自己的 XOR 结果为 0，是最小的。
 

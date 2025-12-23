@@ -45,7 +45,7 @@ class Solution:
 
 ## Thoughts
 
-[349. Intersection of Two Arrays](349-intersection-of-two-arrays) 的进阶版，求交集的时候要考虑词频。
+[349. Intersection of Two Arrays](../349-intersection-of-two-arrays/index.md) 的进阶版，求交集的时候要考虑词频。
 
 把集合改为字典，值为词频。
 

@@ -36,7 +36,7 @@ updated: 2025-07-02 23:04:33
 
 ### Rime 输入法 × 小鹤双拼
 
-在 [Rime 输入法](rime) 中可以用 [雾凇拼音](https://github.com/iDvel/rime-ice)，内置了小鹤双拼方案。
+在 [Rime 输入法](../rime/index.md) 中可以用 [雾凇拼音](https://github.com/iDvel/rime-ice)，内置了小鹤双拼方案。
 
 ### 微软拼音 × 小鹤双拼
 

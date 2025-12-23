@@ -44,7 +44,7 @@ class Solution:
 
 ## Thoughts
 
-这个跟 [5. Longest Palindromic Substring](5-longest-palindromic-substring) 的处理逻辑几乎一致。
+这个跟 [5. Longest Palindromic Substring](../5-longest-palindromic-substring/index.md) 的处理逻辑几乎一致。
 
 区别就是那个问题只记录最长的回文长度，而这个问题需要记录见到的所有回文的数量。
 

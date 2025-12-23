@@ -115,7 +115,7 @@ $$
 
 从 i 过渡到 `i - 1` 的时候，找最小值的区间的右边减少了两个（`2i + 2` 和 `2i + 1`），左边加入了一个（i）。关键在于当区间缩小的时候，如何快速获得新区间内的最小值。
 
-考虑借助 [1475. Final Prices With a Special Discount in a Shop](1475-final-prices-with-a-special-discount-in-a-shop) 中提到的单调栈。
+考虑借助 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md) 中提到的单调栈。
 
 准备一个单调递增栈（栈里的数字是严格递增的），从右向左依次把每个 dp 值按单调栈的规则入栈，即如果比栈顶的值大则直接入栈，否则把所有小于等于它的值都弹出后再入栈。从 `dp(2i+2)` 到 `dp(i+1)` 都处理完，栈底就是这组数的最小值。利用此最小值计算出 `dp(i)` 后按同样的规则入栈，栈底是 `dp(i)` 到 `dp(2i+2)` 的最小值。
 

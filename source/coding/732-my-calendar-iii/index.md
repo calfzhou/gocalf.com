@@ -66,8 +66,8 @@ class MyCalendarThree:
 
 系列问题：
 
-- [729. My Calendar I](729-my-calendar-i) 任何时刻不能有两个 events
-- [731. My Calendar II](731-my-calendar-ii) 任何时刻不能有三个 events
+- [729. My Calendar I](../729-my-calendar-i/index.md) 任何时刻不能有两个 events
+- [731. My Calendar II](../731-my-calendar-ii/index.md) 任何时刻不能有三个 events
 
 本题不再做限制，但是要能知道重叠的 events 的最大数量。
 

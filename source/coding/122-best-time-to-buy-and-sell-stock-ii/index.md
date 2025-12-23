@@ -54,13 +54,13 @@ class Solution:
 
 ## Thoughts
 
-[121. Best Time to Buy and Sell Stock](121-best-time-to-buy-and-sell-stock) 的进阶版，可以买入卖出多次了（且同一天内可以既买也卖，但最多只能持有一份）。
+[121. Best Time to Buy and Sell Stock](../121-best-time-to-buy-and-sell-stock/index.md) 的进阶版，可以买入卖出多次了（且同一天内可以既买也卖，但最多只能持有一份）。
 
 如果明天的价格高，那么就今天买、明天卖，赚了这一笔差价。否则（明天价格低），今天就不买。
 
 扫描数组，只要 `nums[i+1]` 比 `nums[i]` 大，就在第 i 天买入并在第 `i + 1` 天卖出，将差值累加都已有收益上。最终得到总的收益。
 
-> 感觉比 [121. Best Time to Buy and Sell Stock](121-best-time-to-buy-and-sell-stock) 简单呢。
+> 感觉比 [121. Best Time to Buy and Sell Stock](../121-best-time-to-buy-and-sell-stock/index.md) 简单呢。
 
 ## Code
 
@@ -68,9 +68,9 @@ class Solution:
 
 ## DP
 
-为了后续的进阶题目（如 [309. Best Time to Buy and Sell Stock with Cooldown](309-best-time-to-buy-and-sell-stock-with-cooldown)、[714. Best Time to Buy and Sell Stock with Transaction Fee](714-best-time-to-buy-and-sell-stock-with-transaction-fee)）扩展起来方便，这里也用常规动态规划的方式解一下。
+为了后续的进阶题目（如 [309. Best Time to Buy and Sell Stock with Cooldown](../309-best-time-to-buy-and-sell-stock-with-cooldown/index.md)、[714. Best Time to Buy and Sell Stock with Transaction Fee](../714-best-time-to-buy-and-sell-stock-with-transaction-fee/index.md)）扩展起来方便，这里也用常规动态规划的方式解一下。
 
-在 [188. Best Time to Buy and Sell Stock IV](188-best-time-to-buy-and-sell-stock-iv) 中定义了状态量 `buy` 和 `sell`，为了能够控制最大交易次数，引入了日期和交易次数两个维度。[123. Best Time to Buy and Sell Stock III](123-best-time-to-buy-and-sell-stock-iii) 中的 DP 相当于 `k = 2` 的特例。[121. Best Time to Buy and Sell Stock](121-best-time-to-buy-and-sell-stock) 中虽然没有显式使用 DP，但两个局部变量 `min_price` 和 `max_profit` 相当于 `k = 1` 的特例。
+在 [188. Best Time to Buy and Sell Stock IV](../188-best-time-to-buy-and-sell-stock-iv/index.md) 中定义了状态量 `buy` 和 `sell`，为了能够控制最大交易次数，引入了日期和交易次数两个维度。[123. Best Time to Buy and Sell Stock III](../123-best-time-to-buy-and-sell-stock-iii/index.md) 中的 DP 相当于 `k = 2` 的特例。[121. Best Time to Buy and Sell Stock](../121-best-time-to-buy-and-sell-stock/index.md) 中虽然没有显式使用 DP，但两个局部变量 `min_price` 和 `max_profit` 相当于 `k = 1` 的特例。
 
 这里不限制交易次数，那就更简单了，状态量反倒可以退化回到只有一个日期维度。
 
@@ -91,7 +91,7 @@ $$
 
 实际计算时，只需要保留前一天的状态值，空间复杂度 `O(1)`，时间复杂度 `O(n)`。
 
-显然这里的 `hold` 和 `empty` 跟 [188. Best Time to Buy and Sell Stock IV](188-best-time-to-buy-and-sell-stock-iv) 中的 `buy` 和 `sell` 内核是完全一致的。
+显然这里的 `hold` 和 `empty` 跟 [188. Best Time to Buy and Sell Stock IV](../188-best-time-to-buy-and-sell-stock-iv/index.md) 中的 `buy` 和 `sell` 内核是完全一致的。
 
 其实上边的解法中，变量 prev 就等价于这里的 hold，`max_profit` 就等价于这里的 `empty`。
 

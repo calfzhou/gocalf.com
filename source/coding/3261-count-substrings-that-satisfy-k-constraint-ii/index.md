@@ -59,11 +59,11 @@ class Solution:
 
 ## Thoughts
 
-[3258. Count Substrings That Satisfy K-Constraint I](3258-count-substrings-that-satisfy-k-constraint-i) 的进阶版。
+[3258. Count Substrings That Satisfy K-Constraint I](../3258-count-substrings-that-satisfy-k-constraint-i/index.md) 的进阶版。
 
 设 `s` 长度为 `n`，`queries` 长度为 `q`。
 
-如果对 `queries` 中的每个值，直接用 [problem 3258](3258-count-substrings-that-satisfy-k-constraint-i) 的逻辑处理，时间复杂度为 `O(q*n)`。
+如果对 `queries` 中的每个值，直接用 [problem 3258](../3258-count-substrings-that-satisfy-k-constraint-i/index.md) 的逻辑处理，时间复杂度为 `O(q*n)`。
 
 太慢了。多次查询时，大量计算是重复的，可缓存一些中间结果。
 

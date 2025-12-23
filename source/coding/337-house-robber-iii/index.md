@@ -61,12 +61,12 @@ class Solution:
 
 系列题：
 
-- [198. House Robber](198-house-robber) 普通数组
-- [213. House Robber II](213-house-robber-ii) 循环数组
+- [198. House Robber](../198-house-robber/index.md) 普通数组
+- [213. House Robber II](../213-house-robber-ii/index.md) 循环数组
 
 本题是从数组改成了二叉树。
 
-稍微扩展一下 [198. House Robber](198-house-robber) 中定义的 `t[i]`，改为 `t(u)`（其中 u 是二叉树中的一个节点），表示从以 u 为根节点的子树中，能抢到的最多的金额（注意房间 u 可能抢也可能不抢）。初值 `t(null) = 0`，题目所求结果为 `t(root)`。
+稍微扩展一下 [198. House Robber](../198-house-robber/index.md) 中定义的 `t[i]`，改为 `t(u)`（其中 u 是二叉树中的一个节点），表示从以 u 为根节点的子树中，能抢到的最多的金额（注意房间 u 可能抢也可能不抢）。初值 `t(null) = 0`，题目所求结果为 `t(root)`。
 
 对于节点 u，可以选择抢，得到金额 `u.val`，那就不能抢 `u.left` 和 `u.right`，但是这两个子节点的再下一层子节点就都可以抢了，总额为 `u.val + t(u.left.left) + t(u.left.right) + t(u.right.left) + t(u.right.right)`。
 
@@ -81,7 +81,7 @@ t(u)=\max\begin{cases}
 \end{cases}
 $$
 
-按后序（post-order，LRN）遍历二叉树，计算每个节点的 t。非递归的后序遍历可以用栈辅助，参考 [124. Binary Tree Maximum Path Sum](124-binary-tree-maximum-path-sum)。
+按后序（post-order，LRN）遍历二叉树，计算每个节点的 t。非递归的后序遍历可以用栈辅助，参考 [124. Binary Tree Maximum Path Sum](../124-binary-tree-maximum-path-sum/index.md)。
 
 时间复杂度 `O(n)`，空间复杂度 `O(log n)`（遍历所用的栈空间）（t 值可以直接存在节点的 val 里）。
 
@@ -91,7 +91,7 @@ $$
 
 ## Another DP
 
-如果嫌访问第二层子节点会有太多是否为空的判定，也可以改造一下状态变量的定义。其实类似于 [198. House Robber](198-house-robber) 中定义的 [第二种 DP](198-house-robber#Another-DP)，明确抢还是不抢当前房间。
+如果嫌访问第二层子节点会有太多是否为空的判定，也可以改造一下状态变量的定义。其实类似于 [198. House Robber](../198-house-robber/index.md) 中定义的 [第二种 DP](../198-house-robber/index.md#Another-DP)，明确抢还是不抢当前房间。
 
 定义 `ty(u)` 表示抢房间 u 的最大总额，`tn(u)` 表示不抢房间 u 的最大总额。
 

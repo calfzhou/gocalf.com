@@ -48,14 +48,14 @@ class Solution:
 
 系列问题：
 
-- [121. Best Time to Buy and Sell Stock](121-best-time-to-buy-and-sell-stock) 最多交易 1 次
-- [122. Best Time to Buy and Sell Stock II](122-best-time-to-buy-and-sell-stock-ii) 交易任意多次
-- [123. Best Time to Buy and Sell Stock III](123-best-time-to-buy-and-sell-stock-iii) 最多交易 2 次
-- [188. Best Time to Buy and Sell Stock IV](188-best-time-to-buy-and-sell-stock-iv) 最多交易 k 次
+- [121. Best Time to Buy and Sell Stock](../121-best-time-to-buy-and-sell-stock/index.md) 最多交易 1 次
+- [122. Best Time to Buy and Sell Stock II](../122-best-time-to-buy-and-sell-stock-ii/index.md) 交易任意多次
+- [123. Best Time to Buy and Sell Stock III](../123-best-time-to-buy-and-sell-stock-iii/index.md) 最多交易 2 次
+- [188. Best Time to Buy and Sell Stock IV](../188-best-time-to-buy-and-sell-stock-iv/index.md) 最多交易 k 次
 
-这次是在 [122. Best Time to Buy and Sell Stock II](122-best-time-to-buy-and-sell-stock-ii)（交易任意多次）的基础上，增加了 cooldown 一天的要求。
+这次是在 [122. Best Time to Buy and Sell Stock II](../122-best-time-to-buy-and-sell-stock-ii/index.md)（交易任意多次）的基础上，增加了 cooldown 一天的要求。
 
-在 [122. Best Time to Buy and Sell Stock II](122-best-time-to-buy-and-sell-stock-ii) 中已经定义了 [动态规划的状态及其转移函数](122-best-time-to-buy-and-sell-stock-ii#DP)，那么直接在转移函数上，把冷静期的影响加上去即可。更新后的转移函数为：
+在 [122. Best Time to Buy and Sell Stock II](../122-best-time-to-buy-and-sell-stock-ii/index.md) 中已经定义了 [动态规划的状态及其转移函数](../122-best-time-to-buy-and-sell-stock-ii/index.md#DP)，那么直接在转移函数上，把冷静期的影响加上去即可。更新后的转移函数为：
 
 $$
 \begin{cases}

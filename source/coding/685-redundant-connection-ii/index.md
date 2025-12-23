@@ -55,7 +55,7 @@ class Solution:
 
 ## Thoughts
 
-[684. Redundant Connection](684-redundant-connection) 的进阶版，从无向图变为有向图。
+[684. Redundant Connection](../684-redundant-connection/index.md) 的进阶版，从无向图变为有向图。
 
 如果忽略边的方向，冗余的边依然会导致图中出现环，但在有向图中并不是任何一条边都可以被删掉。比如 `edges = [[2,1], [3,1], [4,2], [1,4]]`，环 `1 → 4 → 2 → 1` 上的边 `(1, 4)` 和 `(4, 2)` 都不是冗余的。
 

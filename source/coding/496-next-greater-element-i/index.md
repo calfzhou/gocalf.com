@@ -57,7 +57,7 @@ class Solution:
 
 ## Thoughts
 
-在 [1475. Final Prices With a Special Discount in a Shop](1475-final-prices-with-a-special-discount-in-a-shop#O-n) 中提到这类找左侧/右侧第一个比当前元素小/大的问题，都可以使用单调栈，线性时间可解。
+在 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#O-n) 中提到这类找左侧/右侧第一个比当前元素小/大的问题，都可以使用单调栈，线性时间可解。
 
 本题可以先对 nums2，利用单调栈计算每个元素的 next greater 元素，用哈希表保存结果。然后遍历 nums1，从哈希表中查到对应的结果。
 

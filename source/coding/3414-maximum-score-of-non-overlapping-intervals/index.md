@@ -54,9 +54,9 @@ class Solution:
 
 ## Thoughts
 
-跟 [435. Non-overlapping Intervals](435-non-overlapping-intervals) 类似，但是增加了权重，且限制最多只能选 4 个区间（另外 overlap 的判定也有不同，本题单个端点重合的也算 overlap）。
+跟 [435. Non-overlapping Intervals](../435-non-overlapping-intervals/index.md) 类似，但是增加了权重，且限制最多只能选 4 个区间（另外 overlap 的判定也有不同，本题单个端点重合的也算 overlap）。
 
-由于权重的不确定性，[435. Non-overlapping Intervals](435-non-overlapping-intervals) 中的 [贪心算法](435-non-overlapping-intervals#Faster) 不再可用（`res[j] <= res[i]` 不再成立）。只能按照普通的动态规划去计算（本题中用 dp 替代 res）。
+由于权重的不确定性，[435. Non-overlapping Intervals](../435-non-overlapping-intervals/index.md) 中的 [贪心算法](../435-non-overlapping-intervals/index.md#Faster) 不再可用（`res[j] <= res[i]` 不再成立）。只能按照普通的动态规划去计算（本题中用 dp 替代 res）。
 
 依然先对所有区间按右端点排序。因为结果需要返回选中的区间下标，所以要对下标数组排序。
 

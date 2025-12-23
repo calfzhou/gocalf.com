@@ -77,7 +77,7 @@ class Solution:
 
 而且并不需要完整遍历两次，实际上只需要对旋转角度 d 取 `[0, 360° + angle]`（或者说 `[-360°, angle]`）即可。
 
-另外像 [2779. Maximum Beauty of an Array After Applying Operation](2779-maximum-beauty-of-an-array-after-applying-operation) 最后提到的优化点，窗口在滑动过程中可以只增不减，用自身记录可行窗口的最大大小。
+另外像 [2779. Maximum Beauty of an Array After Applying Operation](../2779-maximum-beauty-of-an-array-after-applying-operation/index.md) 最后提到的优化点，窗口在滑动过程中可以只增不减，用自身记录可行窗口的最大大小。
 
 时间复杂度 `O(n log n)`，空间复杂度 `O(n)`。
 

@@ -78,7 +78,7 @@ $$
 
 最后的结果取 `dp(0)`。
 
-用 `words` 构建前缀树（参见 [208. Implement Trie (Prefix Tree)](208-implement-trie-prefix-tree)、[139. Word Break](139-word-break#Improve)），定义一个 `match` 方法在前缀树中找到能匹配指定字符串的最长前缀，其长度即为 `plenᵢ`。
+用 `words` 构建前缀树（参见 [208. Implement Trie (Prefix Tree)](../208-implement-trie-prefix-tree/index.md)、[139. Word Break](../139-word-break/index.md#Improve)），定义一个 `match` 方法在前缀树中找到能匹配指定字符串的最长前缀，其长度即为 `plenᵢ`。
 
 时间复杂度 `O(k m + n²)`，其中 k 是 `words` 中单词的平均长度，m 是 `words` 的长度，n 是 `target` 的长度。空间复杂度 `O(k m + n)`。
 
@@ -90,11 +90,11 @@ $$
 
 ## Faster - AC 自动机
 
-在 [3213. Construct String with Minimum Cost](3213-construct-string-with-minimum-cost) 中实现了 AC 自动机，利用 AC 自动机，可以用平均 `O(km + n)` 时间找出 target 中所有能匹配到的单词。
+在 [3213. Construct String with Minimum Cost](../3213-construct-string-with-minimum-cost/index.md) 中实现了 AC 自动机，利用 AC 自动机，可以用平均 `O(km + n)` 时间找出 target 中所有能匹配到的单词。
 
-但这里只是需要有前缀，可以不是完全匹配，需要稍微修改一下 [problem 3213](3213-construct-string-with-minimum-cost) 中 AC 自动机的 match 方法。match 方法在匹配路径的终点返回构造时记录的所有单词，从而得到所有匹配到的单词。实际上即使没到终点，路径上的任何一个位置，都是一个前缀。所以把路径上的位置都输出即可。新的方法命名为 prefix。
+但这里只是需要有前缀，可以不是完全匹配，需要稍微修改一下 [problem 3213](../3213-construct-string-with-minimum-cost/index.md) 中 AC 自动机的 match 方法。match 方法在匹配路径的终点返回构造时记录的所有单词，从而得到所有匹配到的单词。实际上即使没到终点，路径上的任何一个位置，都是一个前缀。所以把路径上的位置都输出即可。新的方法命名为 prefix。
 
-仿照 [problem 3213](3213-construct-string-with-minimum-cost) 中正向的动态规划 `dp'`，重新定义本题的 dp：`dp(i)` 表示可以拼接出子字符串 `target[:i]` 的最小前缀个数，定义 `dp(0) = 0`，其他值均初始化为 ∞，最终所求结果为 `dp(n)`。
+仿照 [problem 3213](../3213-construct-string-with-minimum-cost/index.md) 中正向的动态规划 `dp'`，重新定义本题的 dp：`dp(i)` 表示可以拼接出子字符串 `target[:i]` 的最小前缀个数，定义 `dp(0) = 0`，其他值均初始化为 ∞，最终所求结果为 `dp(n)`。
 
 令 i 从 0 递增到 `n - 1`。对于当前的 i，如果 `dp(i) = ∞`，说明 `target[:i]` 无法由前缀拼接而成，跳过。否则看从位置 i 开始可以匹配到哪些前缀，比如 `target[i:j]` 是一个前缀，那么 `dp(j) = min{dp(j), dp(i) + 1}`。
 

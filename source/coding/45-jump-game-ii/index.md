@@ -49,7 +49,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [55. Jump Game](55-jump-game) 类似。
+跟 [55. Jump Game](../55-jump-game/index.md) 类似。
 
 记 `dp(i)` 表示从位置 i 跳到 `n - 1` 的最少跳数，可知
 

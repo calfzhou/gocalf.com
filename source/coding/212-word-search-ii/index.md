@@ -54,13 +54,13 @@ class Solution:
 
 ## Thoughts
 
-[79. Word Search](79-word-search) 的进阶版，待搜索的单词从一个增加到若干个。
+[79. Word Search](../79-word-search/index.md) 的进阶版，待搜索的单词从一个增加到若干个。
 
 在遍历 `board` 的时候，比如当前 cell 的字符是 `a`，那要看 `words` 中有没有以 `a` 开头的，如果有才继续再看 `a` 的上下左右。
 
 同理，如果已经拿到了长度为 `k` 的子串，对第 `k` 个 cell，判断是否要继续加入其上下左右的 cell 时，也是看如果加入进来，`words` 中是否有以这 `k + 1` 个字符为前缀的单词。
 
-[208. Implement Trie (Prefix Tree)](208-implement-trie-prefix-tree) 里的 trie 树正好适合这个问题。
+[208. Implement Trie (Prefix Tree)](../208-implement-trie-prefix-tree/index.md) 里的 trie 树正好适合这个问题。
 
 给这个 `Trie` 类型增加一个 `remove(word: str)` 方法，在搜索到一个单词后把它从 trie 树中删除，以后就不必再对该单词做判定了。
 

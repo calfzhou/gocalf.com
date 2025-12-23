@@ -133,7 +133,7 @@ $$
 
 ## O(log n)
 
-在 [70. Climbing Stairs](70-climbing-stairs) 中使用矩阵幂运算用 `O(log n)` 时间计算斐波那契（Fibonacci）数，这里也可以用类似的方法。
+在 [70. Climbing Stairs](../70-climbing-stairs/index.md) 中使用矩阵幂运算用 `O(log n)` 时间计算斐波那契（Fibonacci）数，这里也可以用类似的方法。
 
 把上边关于 A、B、C、D 的递推式改造成矩阵形式：
 

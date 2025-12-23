@@ -55,7 +55,7 @@ class Solution:
 
 ## Thoughts
 
-用类似 [1718. Construct the Lexicographically Largest Valid Sequence](1718-construct-the-lexicographically-largest-valid-sequence) 的回溯法。
+用类似 [1718. Construct the Lexicographically Largest Valid Sequence](../1718-construct-the-lexicographically-largest-valid-sequence/index.md) 的回溯法。
 
 首先如果 pattern 的长度为 n，那么结果数字想要最小的话应该用数字 1 到 `n + 1`（否则假设数字 k 没使用，那么把 `k + 1` 换成 k 仍然符合 pattern，继续把 `k + 2` 换成 `k + 1`……，最终还是用到 1 到 `n + 1`）。
 

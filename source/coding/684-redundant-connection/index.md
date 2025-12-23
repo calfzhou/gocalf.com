@@ -55,7 +55,7 @@ class Solution:
 
 ## Thoughts
 
-开始就直接用类似 [1591. Strange Printer II](1591-strange-printer-ii) 或 [207. Course Schedule](207-course-schedule) 中提到的方法判断给定的图中是否有环。当然一定有环，而发现环的那条边就是环上的一条边，可以删掉。
+开始就直接用类似 [1591. Strange Printer II](../1591-strange-printer-ii/index.md) 或 [207. Course Schedule](../207-course-schedule/index.md) 中提到的方法判断给定的图中是否有环。当然一定有环，而发现环的那条边就是环上的一条边，可以删掉。
 
 结果发现题目要求如果有多个可行解，需要返回给定的边中最后出现的那条。有点儿麻烦，而且还要再花不少额外的处理时间。
 

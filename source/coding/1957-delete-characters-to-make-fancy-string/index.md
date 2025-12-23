@@ -55,7 +55,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [3206. Alternating Groups I](3206-alternating-groups-i) 差不多，只是数组首尾不再相接，判定条件从颜色交替变为字符相同。
+跟 [3206. Alternating Groups I](../3206-alternating-groups-i/index.md) 差不多，只是数组首尾不再相接，判定条件从颜色交替变为字符相同。
 
 ## Code
 

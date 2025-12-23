@@ -71,7 +71,7 @@ class Solution:
 
 看以位置 i 开头的子字符串 `target[i:]`，记 `dp(i)` 表示该子问题的最小 cost。从位置 i 开始能够在 `words` 中匹配到哪些单词，设 `target[i:j]` 是 words 中的一个单词，那么 `dp(i) = min{cost(target[i:j]) + dp(j)}`。
 
-用 words 和 costs 构建前缀树（参见 [208. Implement Trie (Prefix Tree)](208-implement-trie-prefix-tree)），把单词的 cost 记录在词尾节点上。加一个 lookup 方法（类似于 [139. Word Break](139-word-break#Improve)），找出 `target[i:]` 中以位置 i 开头所有可以匹配到的单词。
+用 words 和 costs 构建前缀树（参见 [208. Implement Trie (Prefix Tree)](../208-implement-trie-prefix-tree/index.md)），把单词的 cost 记录在词尾节点上。加一个 lookup 方法（类似于 [139. Word Break](../139-word-break/index.md#Improve)），找出 `target[i:]` 中以位置 i 开头所有可以匹配到的单词。
 
 设 target 的长度为 n，单词数量为 m，单词平均长度 k（本题的 k、m、n 量级相当）。时间复杂度是 `O(mk + n²)`，空间复杂度 `O(mk + n)`。
 

@@ -79,7 +79,7 @@ class Solution:
 
 问题就转变为，求所有节点的 s 值。可以用后序遍历，$s(u)=\sum_v{s_v}$，其中 v 是 u 的所有子节点。
 
-二叉树的后序遍历可以参考 [124. Binary Tree Maximum Path Sum](124-binary-tree-maximum-path-sum) 或 [337. House Robber III](337-house-robber-iii)。但是普通的树，每个节点可以有任意多个子节点，就需要在子节点入栈前，把当前节点再次入栈，并附带上标记，当它带着标记出栈的时候，就可以知道它的子节点已经都处理完了。
+二叉树的后序遍历可以参考 [124. Binary Tree Maximum Path Sum](../124-binary-tree-maximum-path-sum/index.md) 或 [337. House Robber III](../337-house-robber-iii/index.md)。但是普通的树，每个节点可以有任意多个子节点，就需要在子节点入栈前，把当前节点再次入栈，并附带上标记，当它带着标记出栈的时候，就可以知道它的子节点已经都处理完了。
 
 另外提供的数据中没有明确表明谁是谁的父节点，可以在遍历过程中记录是从哪个节点访问过来的。
 

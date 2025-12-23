@@ -71,11 +71,11 @@ class WordDictionary:
 
 ## Thoughts
 
-[208. Implement Trie (Prefix Tree)](208-implement-trie-prefix-tree) 里的 trie 树正好适合这个问题。
+[208. Implement Trie (Prefix Tree)](../208-implement-trie-prefix-tree/index.md) 里的 trie 树正好适合这个问题。
 
 在原来的 `search` 方法上增加模糊匹配的功能。即如果 `word` 当前的字符是 `.` 就遍历所有的子树。
 
-> 为了避免混淆， 把 trie 标识单词结束的符号换成 `#` 了（[Problem 208](208-implement-trie-prefix-tree) 中用的是 `.`）。
+> 为了避免混淆， 把 trie 标识单词结束的符号换成 `#` 了（[Problem 208](../208-implement-trie-prefix-tree/index.md) 中用的是 `.`）。
 
 直接用递归写就比较简单。
 

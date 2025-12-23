@@ -66,13 +66,13 @@ class MyCalendarTwo:
 
 ## Thoughts
 
-[729. My Calendar I](729-my-calendar-i) 的进阶版，从任意两个 events 不能有重叠，扩展为三个 events 不能有共同的交集。
+[729. My Calendar I](../729-my-calendar-i/index.md) 的进阶版，从任意两个 events 不能有重叠，扩展为三个 events 不能有共同的交集。
 
-如果已经知道所有同时被两个 events 占用的时段，就可以像 [729. My Calendar I](729-my-calendar-i) 那样直接判断一个新的 event，是否跟某个时段有重叠，有的话就无法预订。
+如果已经知道所有同时被两个 events 占用的时段，就可以像 [729. My Calendar I](../729-my-calendar-i/index.md) 那样直接判断一个新的 event，是否跟某个时段有重叠，有的话就无法预订。
 
 按这个思路，维护两个有序数组，`single_occupies` 记录所有被至少一个 event 占用的时段，`double_occupies` 记录所有被两个 events 同时占用的时段，都按照时段的开始时间排序，且任意两个时段之间没有重叠。
 
-对于想要 book 的一个 event，对 `double_occupies` 用二分搜索找到可以插入的位置（如 i），检查 `double_occupies[i-1]` 的结束时间是否在 event 之前，`double_occupies[i]` 的开始时间是否在 event 之后。如果都符合，则此 event 可以预订成功，否则直接返回 false。这个逻辑跟 [729. My Calendar I](729-my-calendar-i) 一样。
+对于想要 book 的一个 event，对 `double_occupies` 用二分搜索找到可以插入的位置（如 i），检查 `double_occupies[i-1]` 的结束时间是否在 event 之前，`double_occupies[i]` 的开始时间是否在 event 之后。如果都符合，则此 event 可以预订成功，否则直接返回 false。这个逻辑跟 [729. My Calendar I](../729-my-calendar-i/index.md) 一样。
 
 > 为了简化边界的处理，可以给 `single_occupies` 和 `double_occupies` 的两头分别加一个 `(-inf, -inf)` 和 `(inf, inf)` 做占位符。
 

@@ -60,7 +60,7 @@ class Solution:
 
 ## Thoughts
 
-可以看作是 [3174. Clear Digits](3174-clear-digits) 的进阶版，待匹配的 pattern 从两个字符（一个字母+一个数字）变成任意长度的字符串。
+可以看作是 [3174. Clear Digits](../3174-clear-digits/index.md) 的进阶版，待匹配的 pattern 从两个字符（一个字母+一个数字）变成任意长度的字符串。
 
 处理方法也类似，用一个栈记录结果字符串的字符。遍历 s，对于每个字符，先入栈，然后对比栈顶 m 个字符是否与 part 一致（设 part 的长度为 m），一致就把这些字符都弹出。
 

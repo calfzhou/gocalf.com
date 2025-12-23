@@ -60,7 +60,7 @@ class Solution:
 
 ## Thoughts
 
-[3065. Minimum Operations to Exceed Threshold Value I](3065-minimum-operations-to-exceed-threshold-value-i) 的进阶版，把最小的两个数拿掉之后还会再放回来一个数。
+[3065. Minimum Operations to Exceed Threshold Value I](../3065-minimum-operations-to-exceed-threshold-value-i/index.md) 的进阶版，把最小的两个数拿掉之后还会再放回来一个数。
 
 直接用模拟操作的方法。
 

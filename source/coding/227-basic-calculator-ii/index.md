@@ -52,9 +52,9 @@ class Solution:
 
 ## Thoughts
 
-跟 [224. Basic Calculator](224-basic-calculator)，增加了高优先级的乘除法，但是去掉了括号和一元取反运算，其实是要简单一些。
+跟 [224. Basic Calculator](../224-basic-calculator/index.md)，增加了高优先级的乘除法，但是去掉了括号和一元取反运算，其实是要简单一些。
 
-可以直接套用 [224. Basic Calculator](224-basic-calculator) 中的基于逆波兰表达式的计算逻辑，其中 `tokenize` 方法完全一样，`reverse_polish` 方法中的运算符表里增加 `*` 和 `/`，级别比 `+` 和 `-` 高即可，去掉关于括号、一元负号的逻辑，最后在 `calculate` 方法中增加乘法和除法的计算。
+可以直接套用 [224. Basic Calculator](../224-basic-calculator/index.md) 中的基于逆波兰表达式的计算逻辑，其中 `tokenize` 方法完全一样，`reverse_polish` 方法中的运算符表里增加 `*` 和 `/`，级别比 `+` 和 `-` 高即可，去掉关于括号、一元负号的逻辑，最后在 `calculate` 方法中增加乘法和除法的计算。
 
 ## Code
 

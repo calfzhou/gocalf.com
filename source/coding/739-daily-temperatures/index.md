@@ -43,7 +43,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [496. Next Greater Element I](496-next-greater-element-i) 和 [503. Next Greater Element II](503-next-greater-element-ii) 类似，本质都是求当前元素右侧第一个比当前元素大的数，利用单调栈求解。本题是要计算找到的 next greater 温度的下标，与当前温度下标的差值。为了方便得到 next greater 的下标，直接把下标入栈。
+跟 [496. Next Greater Element I](../496-next-greater-element-i/index.md) 和 [503. Next Greater Element II](../503-next-greater-element-ii/index.md) 类似，本质都是求当前元素右侧第一个比当前元素大的数，利用单调栈求解。本题是要计算找到的 next greater 温度的下标，与当前温度下标的差值。为了方便得到 next greater 的下标，直接把下标入栈。
 
 ## Code
 

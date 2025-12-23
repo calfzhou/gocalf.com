@@ -22,7 +22,7 @@ updated: 2024-04-24 19:36:21
 
 ### 本地已有仓库推送到远程
 
-需要本地先准备好 [PGP key pair](pgp)，应该有 E 用途和 S 用途的子密钥各一个分别用来加密和签名。
+需要本地先准备好 [PGP key pair](../pgp/index.md)，应该有 E 用途和 S 用途的子密钥各一个分别用来加密和签名。
 
 ``` bash
 brew install git-remote-gcrypt

@@ -49,9 +49,9 @@ class Solution:
 
 ## Thoughts
 
-[53. Maximum Subarray](53-maximum-subarray) 的进阶版，可以删掉至多一个数字。
+[53. Maximum Subarray](../53-maximum-subarray/index.md) 的进阶版，可以删掉至多一个数字。
 
-在 [53. Maximum Subarray](53-maximum-subarray) 中提到「如果一个 subarray 的和大于 0，把它与下一个数相加的结果一定比下一个数自身大。反之，应该从下一个数开启新的 subarray」。整理一下状态值和状态转移。
+在 [53. Maximum Subarray](../53-maximum-subarray/index.md) 中提到「如果一个 subarray 的和大于 0，把它与下一个数相加的结果一定比下一个数自身大。反之，应该从下一个数开启新的 subarray」。整理一下状态值和状态转移。
 
 定义 `dl(i)` 表示以 i 为右端点的最大 subarray 和（至少包含 `arr[i]`），可得：
 
@@ -131,7 +131,7 @@ $$
 
 ## Another DP
 
-在 [53. Maximum Subarray](53-maximum-subarray) 定义的 [第二种 DP](53-maximum-subarray#Another-DP) 的基础上，重新看如何解本题。沿用那边定义的 `ps(i) = Σarr[0...i]` 和 `low(i)`（`arr[0...i]` 的（小于等于零的）最小前缀和）。
+在 [53. Maximum Subarray](../53-maximum-subarray/index.md) 定义的 [第二种 DP](../53-maximum-subarray/index.md#Another-DP) 的基础上，重新看如何解本题。沿用那边定义的 `ps(i) = Σarr[0...i]` 和 `low(i)`（`arr[0...i]` 的（小于等于零的）最小前缀和）。
 
 $$
 \begin{array}{rcl}
@@ -140,7 +140,7 @@ $$
 \end{array}
 $$
 
-[上边](1186-maximum-subarray-sum-with-one-deletion#Less-Space) 定义的 dl 可以用 ps 和 low 重写为：$dl(i)=ps(i)-low(i-1)$（不用 `low(i)` 因为需要保证 subarray 不为空）。
+[上边](../1186-maximum-subarray-sum-with-one-deletion/index.md#Less-Space) 定义的 dl 可以用 ps 和 low 重写为：$dl(i)=ps(i)-low(i-1)$（不用 `low(i)` 因为需要保证 subarray 不为空）。
 
 然后把 dd 也改造成在 ps 里减去一个值的形式，如 `dd = ps - low2`，可得：
 

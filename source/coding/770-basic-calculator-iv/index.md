@@ -73,12 +73,12 @@ class Solution:
 
 系列题：
 
-- [224. Basic Calculator](224-basic-calculator) 加减、括号、取反符号
-- [227. Basic Calculator II](227-basic-calculator-ii) 加减乘除
+- [224. Basic Calculator](../224-basic-calculator/index.md) 加减、括号、取反符号
+- [227. Basic Calculator II](../227-basic-calculator-ii/index.md) 加减乘除
 
 本题主要是引入了自变量，相当于多项式的符号运算。
 
-先用类似于 [224. Basic Calculator](224-basic-calculator) 和 [227. Basic Calculator II](227-basic-calculator-ii) 的方式，对表达式字符串做分词并构建逆波兰表达式。
+先用类似于 [224. Basic Calculator](../224-basic-calculator/index.md) 和 [227. Basic Calculator II](../227-basic-calculator-ii/index.md) 的方式，对表达式字符串做分词并构建逆波兰表达式。
 
 微调 `tokenize` 方法，支持自变量的识别和输出。
 

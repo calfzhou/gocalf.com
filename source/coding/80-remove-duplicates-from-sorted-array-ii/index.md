@@ -67,9 +67,9 @@ class Solution:
 
 ## Thoughts
 
-[26. Remove Duplicates from Sorted Array](26-remove-duplicates-from-sorted-array) 的进阶版，每个数字最多可以保留两个。
+[26. Remove Duplicates from Sorted Array](../26-remove-duplicates-from-sorted-array/index.md) 的进阶版，每个数字最多可以保留两个。
 
-直接搬 [problem 26](26-remove-duplicates-from-sorted-array) 的代码，把其中的 1 改成 2 即可。
+直接搬 [problem 26](../26-remove-duplicates-from-sorted-array/index.md) 的代码，把其中的 1 改成 2 即可。
 
 时间复杂度 `O(n)`，空间复杂度 `O(1)`。
 

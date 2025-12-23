@@ -52,7 +52,7 @@ class Solution:
 
 ## Thoughts
 
-相当于 [70. Climbing Stairs](70-climbing-stairs) 的进阶版，从固定的「1 步」和「2 步」升级为任意的「`zero` 个 `"0"`」和「`one` 个 `"1"`」。
+相当于 [70. Climbing Stairs](../70-climbing-stairs/index.md) 的进阶版，从固定的「1 步」和「2 步」升级为任意的「`zero` 个 `"0"`」和「`one` 个 `"1"`」。
 
 所以定义 `dp(i)` 表示长度为 i 的不同 good 字符串的个数，则 `dp(i) = dp(i - zero) + dp(i - one)`。初值 `dp(0) = 1`。
 

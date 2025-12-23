@@ -41,7 +41,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [54. Spiral Matrix](54-spiral-matrix) 类似，完全一样的遍历顺序，只是读出还是写入的区别。直接把代码搬过来，把 `res[idx] = matrix[i][j]` 替换成 `matrix[i][j] = idx + 1`，m 改成 n，基本就可以了。
+跟 [54. Spiral Matrix](../54-spiral-matrix/index.md) 类似，完全一样的遍历顺序，只是读出还是写入的区别。直接把代码搬过来，把 `res[idx] = matrix[i][j]` 替换成 `matrix[i][j] = idx + 1`，m 改成 n，基本就可以了。
 
 ## Code
 

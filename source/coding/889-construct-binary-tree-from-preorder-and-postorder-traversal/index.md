@@ -55,9 +55,9 @@ class Solution:
 
 ## Thoughts
 
-跟 [105. Construct Binary Tree from Preorder and Inorder Traversal](105-construct-binary-tree-from-preorder-and-inorder-traversal) 类似，都是给两个不同顺序的遍历结果，构造出二叉树。
+跟 [105. Construct Binary Tree from Preorder and Inorder Traversal](../105-construct-binary-tree-from-preorder-and-inorder-traversal/index.md) 类似，都是给两个不同顺序的遍历结果，构造出二叉树。
 
-本题给的是前序（pre-order，NLR）和后序（post-order，LRN）。当一个节点只有一个子节点时，这两种遍历顺序都无法识别出是左子节点还是右子节点，那么就优先按左子节点算（类似 [1028. Recover a Tree From Preorder Traversal](1028-recover-a-tree-from-preorder-traversal)）。
+本题给的是前序（pre-order，NLR）和后序（post-order，LRN）。当一个节点只有一个子节点时，这两种遍历顺序都无法识别出是左子节点还是右子节点，那么就优先按左子节点算（类似 [1028. Recover a Tree From Preorder Traversal](../1028-recover-a-tree-from-preorder-traversal/index.md)）。
 
 前序（pre-order，NLR），后序（post-order，LRN）。
 

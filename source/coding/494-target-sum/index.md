@@ -59,7 +59,7 @@ class Solution:
 
 那么题目转变为，给定一个数组 nums，求从其中任选若干个数字能组合出 `target'` 的不同方案数量。
 
-这时候题目就跟 [377. Combination Sum IV](377-combination-sum-iv) 非常像，只不过这里 nums 中的每个数字都最多只能使用一次。
+这时候题目就跟 [377. Combination Sum IV](../377-combination-sum-iv/index.md) 非常像，只不过这里 nums 中的每个数字都最多只能使用一次。
 
 因为限制了每个数字被使用的次数，动态规划的状态变量和状态转移就需要考虑这个因素。
 

@@ -59,9 +59,9 @@ class Solution:
 
 任意图求最大环，类似于计算哈密顿回路，是 NP 难问题。本题是加了限定条件的图。
 
-相当于简版的 [2127. Maximum Employees to Be Invited to a Meeting](2127-maximum-employees-to-be-invited-to-a-meeting)，只是每个顶点的入度从严格为 1 变为小于等于 1，然后也不需要计算长度为 2 的环两头的拉链长度。
+相当于简版的 [2127. Maximum Employees to Be Invited to a Meeting](../2127-maximum-employees-to-be-invited-to-a-meeting/index.md)，只是每个顶点的入度从严格为 1 变为小于等于 1，然后也不需要计算长度为 2 的环两头的拉链长度。
 
-直接在 [problem 2127 第二个方法——拓扑排序](2127-maximum-employees-to-be-invited-to-a-meeting#Faster) 的代码上改一改就行了。
+直接在 [problem 2127 第二个方法——拓扑排序](../2127-maximum-employees-to-be-invited-to-a-meeting/index.md#Faster) 的代码上改一改就行了。
 
 ## Code
 
@@ -69,7 +69,7 @@ class Solution:
 
 ## Simpler
 
-之前在 [problem 2127](2127-maximum-employees-to-be-invited-to-a-meeting#Faster) 中拓扑排序是为了能计算出「环上的每个顶点，指向它的无环边的最大长度」。本题并不需要这个信息，除了在拓扑排序过程中不在记录 `d(u)` 值，整个处理逻辑都可以进一步简化。
+之前在 [problem 2127](../2127-maximum-employees-to-be-invited-to-a-meeting/index.md#Faster) 中拓扑排序是为了能计算出「环上的每个顶点，指向它的无环边的最大长度」。本题并不需要这个信息，除了在拓扑排序过程中不在记录 `d(u)` 值，整个处理逻辑都可以进一步简化。
 
 假设从一个顶点 u 出发，如果会进入环路，则一定会遇到出发后曾经见过的某个顶点，不妨设每一秒移动一次，那么两次遇到同一个顶点的时间之差，就是环长。
 

@@ -61,7 +61,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [70. Climbing Stairs](70-climbing-stairs) 类似。
+跟 [70. Climbing Stairs](../70-climbing-stairs/index.md) 类似。
 
 可以发现数字 7 和 9 是一组（对应 4 个字母），其他数字是一组（每个数字对应 3 个字母）。
 

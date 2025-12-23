@@ -85,7 +85,7 @@ class Solution:
 
 ## Thoughts
 
-按层序（level-order）遍历二叉树，可以类似 [2415. Reverse Odd Levels of Binary Tree](2415-reverse-odd-levels-of-binary-tree) 那样直接一层一层地取出一层的所有节点。
+按层序（level-order）遍历二叉树，可以类似 [2415. Reverse Odd Levels of Binary Tree](../2415-reverse-odd-levels-of-binary-tree/index.md) 那样直接一层一层地取出一层的所有节点。
 
 对于某一层，计算调至有序所需的最少交换次数。
 

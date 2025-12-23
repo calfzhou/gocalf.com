@@ -66,7 +66,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [2290. Minimum Obstacle Removal to Reach Corner](2290-minimum-obstacle-removal-to-reach-corner) 很像，就是边的权重定义不一样。
+跟 [2290. Minimum Obstacle Removal to Reach Corner](../2290-minimum-obstacle-removal-to-reach-corner/index.md) 很像，就是边的权重定义不一样。
 
 首先如果 `grid[0][1]` 和 `grid[1][0]` 都大于 1 就无解，因为第一步就没得走。
 
@@ -76,7 +76,7 @@ class Solution:
 
 设在 `t` 秒时位于格子 `u`，看如何能移动到 `u` 周围的其他格子。取 `u` 上下左右的某个格子 `v`，如果 `v` 的值小于等于 `t + 1`，那么可以直接移动过去，且到达的时间即为 `t + 1`。否则就不能直接走到 `v`，但是可以在 `u` 和进入 `u` 之前的那个格子之间来回移动消耗时间，直到 `t' + 1 >= grid[v]`。因为每次来回都是用 2 秒，所以可以走到 `v` 的最早时间是 `grid[v]` 或 `grid[v] + 1`（取决于 `grid[v] - t` 的奇偶性）。
 
-直接用 Dijkstra 算法，在 [problem 2290](2290-minimum-obstacle-removal-to-reach-corner) 代码的基础上改造一下从 `u` 移动到 `v` 之后，`v` 的到达时间（等价于距离）的计算逻辑。
+直接用 Dijkstra 算法，在 [problem 2290](../2290-minimum-obstacle-removal-to-reach-corner/index.md) 代码的基础上改造一下从 `u` 移动到 `v` 之后，`v` 的到达时间（等价于距离）的计算逻辑。
 
 时间复杂度同样是 `O(m*n log (m*n))`。
 

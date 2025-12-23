@@ -80,7 +80,7 @@ class Solution:
 
 ## Faster
 
-对于一条边 `(u, v)`，想得到包含该边的最短环长，可以先把这条边删掉，然后计算 u 到 v 的最短距离（Dijkstra 算法，参见 [2290. Minimum Obstacle Removal to Reach Corner](2290-minimum-obstacle-removal-to-reach-corner)）。如果 u 和 v 是可达的，最短距离为 dis，那么包含边 `(u, v)` 的最短环长为 `dis + 1`。否则 `(u, v)` 不在任何环上。
+对于一条边 `(u, v)`，想得到包含该边的最短环长，可以先把这条边删掉，然后计算 u 到 v 的最短距离（Dijkstra 算法，参见 [2290. Minimum Obstacle Removal to Reach Corner](../2290-minimum-obstacle-removal-to-reach-corner/index.md)）。如果 u 和 v 是可达的，最短距离为 dis，那么包含边 `(u, v)` 的最短环长为 `dis + 1`。否则 `(u, v)` 不在任何环上。
 
 因为本来就要根据给定的边集 edges 构建图，构建的过程就是依次把每条边加进去。那么可以在构建的过程中，对于每一条将要加入的边 `(u, v)`，在加入之前先在已有的图中计算 u 到 v 的最短距离，从而确定包含边 `(u, v)` 的最短环长。这样最小环的最后一条边被加入的前一刻，一定可以得到最小环长。
 

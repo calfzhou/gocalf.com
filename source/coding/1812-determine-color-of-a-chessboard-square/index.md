@@ -52,7 +52,7 @@ class Solution:
 
 ## Thoughts
 
-相当于 [3274. Check if Two Chessboard Squares Have the Same Color](3274-check-if-two-chessboard-squares-have-the-same-color) 的一半。
+相当于 [3274. Check if Two Chessboard Squares Have the Same Color](../3274-check-if-two-chessboard-squares-have-the-same-color/index.md) 的一半。
 
 ## Code
 

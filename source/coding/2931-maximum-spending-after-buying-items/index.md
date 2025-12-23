@@ -72,7 +72,7 @@ class Solution:
 
 ## Thoughts
 
-复杂的应用问题背后实际上就是个多路归并排序的问题，跟 [23. Merge k Sorted Lists](23-merge-k-sorted-lists) 和 [632. Smallest Range Covering Elements from K Lists](632-smallest-range-covering-elements-from-k-lists) 的内核完全一致，都是借助最小堆对若干个有序序列做合并。
+复杂的应用问题背后实际上就是个多路归并排序的问题，跟 [23. Merge k Sorted Lists](../23-merge-k-sorted-lists/index.md) 和 [632. Smallest Range Covering Elements from K Lists](../632-smallest-range-covering-elements-from-k-lists/index.md) 的内核完全一致，都是借助最小堆对若干个有序序列做合并。
 
 因为根据题意，只要每天都买剩余产品中最便宜的那个，最终的花费就是最大的（有钱没处花？）。
 

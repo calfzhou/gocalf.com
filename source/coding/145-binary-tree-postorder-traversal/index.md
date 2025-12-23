@@ -64,7 +64,7 @@ class Solution:
 
 ## Thoughts
 
-在 [124. Binary Tree Maximum Path Sum](124-binary-tree-maximum-path-sum) 或 [337. House Robber III](337-house-robber-iii) 中都用到了基于栈的非递归后序遍历二叉树。
+在 [124. Binary Tree Maximum Path Sum](../124-binary-tree-maximum-path-sum/index.md) 或 [337. House Robber III](../337-house-robber-iii/index.md) 中都用到了基于栈的非递归后序遍历二叉树。
 
 ## Code
 

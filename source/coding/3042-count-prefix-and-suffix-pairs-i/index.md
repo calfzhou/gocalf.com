@@ -68,7 +68,7 @@ class Solution:
 
 ## Thoughts
 
-直接类似 [1408. String Matching in an Array](1408-string-matching-in-an-array) 那样，遍历所有的单词对。
+直接类似 [1408. String Matching in an Array](../1408-string-matching-in-an-array/index.md) 那样，遍历所有的单词对。
 
 时间复杂度 `O(n²)`，空间复杂度 `O(1)`。
 

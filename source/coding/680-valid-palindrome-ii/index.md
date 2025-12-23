@@ -44,7 +44,7 @@ class Solution:
 
 ## Thoughts
 
-[125. Valid Palindrome](125-valid-palindrome) 的进阶版，这次允许删除最多一个字符（同时去掉了大小写转换和特殊字符的处理）。
+[125. Valid Palindrome](../125-valid-palindrome/index.md) 的进阶版，这次允许删除最多一个字符（同时去掉了大小写转换和特殊字符的处理）。
 
 依然从两头向中间扫描。当扫描过程中遇到 `s[i] ≠ s[j]` 的情况，要么删除位置 i 的字符，要么删除位置 j 的字符。即检查 `s[i+1...j]` 或 `s[i...j+1]` 是否是回文，如果都不是，则结果为 false。
 

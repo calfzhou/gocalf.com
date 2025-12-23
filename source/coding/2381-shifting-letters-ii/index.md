@@ -50,9 +50,9 @@ class Solution:
 
 ## Thoughts
 
-[848. Shifting Letters](848-shifting-letters) 的进阶版。
+[848. Shifting Letters](../848-shifting-letters/index.md) 的进阶版。
 
-一个 `[startᵢ, endᵢ, directionᵢ]`，是对 `s[startᵢ:endᵢ+1]` 的每个字符往 `directionᵢ` 方向 shift，也可以看作是先对 `s[startᵢ:]` 每个字符按 `directionᵢ` 方向 shift 一次，再对 `s[endᵢ+1:]` 每个字符反方向 shift 一次。这样把 `startᵢ` 和 `endᵢ` 解耦，跟 [848. Shifting Letters](848-shifting-letters) 就几乎一模一样了。
+一个 `[startᵢ, endᵢ, directionᵢ]`，是对 `s[startᵢ:endᵢ+1]` 的每个字符往 `directionᵢ` 方向 shift，也可以看作是先对 `s[startᵢ:]` 每个字符按 `directionᵢ` 方向 shift 一次，再对 `s[endᵢ+1:]` 每个字符反方向 shift 一次。这样把 `startᵢ` 和 `endᵢ` 解耦，跟 [848. Shifting Letters](../848-shifting-letters/index.md) 就几乎一模一样了。
 
 用数组记录每个位置，从其开始的每个字符要往哪个方向 shift 多少次（用正数表示 forward，负数表示 backward）。从 `i = 0` 开始遍历 s，同时累计需要 shift 的最终次数，对当前字符执行 shift，结果再拼成新的字符串即可。
 

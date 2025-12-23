@@ -80,7 +80,7 @@ $$
 
 定义 `dp(∀d < 1) = 0`。然后从 `d = 1` 递推到最后一个旅行日（`days[-1]`），最终结果为 `dp(days[-1])`。
 
-因为最多只需要用到 30 天前的 dp 值，可以像 [2466. Count Ways To Build Good Strings](2466-count-ways-to-build-good-strings) 那样用队列保持最新的至多 30 个值，节省一点儿空间。
+因为最多只需要用到 30 天前的 dp 值，可以像 [2466. Count Ways To Build Good Strings](../2466-count-ways-to-build-good-strings/index.md) 那样用队列保持最新的至多 30 个值，节省一点儿空间。
 
 时间复杂度 `O(days[-1])`，空间复杂度 `O(1)`（30 记为常数）。
 

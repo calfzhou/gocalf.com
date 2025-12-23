@@ -60,7 +60,7 @@ class Solution:
 
 这种每次取走最大值，再放回另外一个值，重复操作的逻辑，最适合用堆来做。
 
-> 这题比 [2931. Maximum Spending After Buying Items](2931-maximum-spending-after-buying-items) 更适合用堆。题目的难度等级设定比较迷。
+> 这题比 [2931. Maximum Spending After Buying Items](../2931-maximum-spending-after-buying-items/index.md) 更适合用堆。题目的难度等级设定比较迷。
 
 Python 内置的 [heapq](https://docs.python.org/3/library/heapq.html) 实现的是最小堆，所以给 `gifts` 里所有的值加上负号来模拟最大堆。
 

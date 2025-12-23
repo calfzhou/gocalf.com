@@ -47,7 +47,7 @@ class Solution:
 
 ## Thoughts
 
-思路跟 [1014. Best Sightseeing Pair](1014-best-sightseeing-pair) 有点儿像。先把 `j - i != nums[j] - nums[i]` 改写成 `nums[i] - i != nums[j] - j`，把 i 和 j 的耦合打散。
+思路跟 [1014. Best Sightseeing Pair](../1014-best-sightseeing-pair/index.md) 有点儿像。先把 `j - i != nums[j] - nums[i]` 改写成 `nums[i] - i != nums[j] - j`，把 i 和 j 的耦合打散。
 
 然后为了计算不相等 pair 的数量，可以用总数减去相等的数量。
 

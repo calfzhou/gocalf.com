@@ -136,7 +136,7 @@ $$
 {% diagramsnet assets/3250-find-the-count-of-monotonic-pairs-i/path-m-m-2.drawio %}
 {% endinvert %}
 
-为了始终符合单调数组对的要求，这条界线就只能往右走或往下走。这就跟 [62. Unique Paths](62-unique-paths) 完全一样。可知从 `(0, 0)` 到 `(n, m)` 可能的界线数量为 `C(m+n, n) = C(m+n, m)`。
+为了始终符合单调数组对的要求，这条界线就只能往右走或往下走。这就跟 [62. Unique Paths](../62-unique-paths/index.md) 完全一样。可知从 `(0, 0)` 到 `(n, m)` 可能的界线数量为 `C(m+n, n) = C(m+n, m)`。
 
 再看第一行棋子多一些的情况，比如第一行有 `m + d` 个，第二行有 `m` 个。
 
@@ -166,6 +166,6 @@ $$
 
 显然如果 `D = m`，则界线就只能是一条竖直线；而如果 `D > m` 则无解（因为界线不能往左走）。
 
-计算 `C(m-D+n, n)` 的方法可以参考 [62. Unique Paths](62-unique-paths)。时间复杂度 `O(n)`（需要遍历 `nums` 算出 `D`，然后计算 `C(m-D+n, n)` 的时间为 `O(min{n, m-D}) < O(n)`），空间复杂度 `O(1)`。
+计算 `C(m-D+n, n)` 的方法可以参考 [62. Unique Paths](../62-unique-paths/index.md)。时间复杂度 `O(n)`（需要遍历 `nums` 算出 `D`，然后计算 `C(m-D+n, n)` 的时间为 `O(min{n, m-D}) < O(n)`），空间复杂度 `O(1)`。
 
 {% asset_code coding/assets/3250-find-the-count-of-monotonic-pairs-i/solution2.py %}

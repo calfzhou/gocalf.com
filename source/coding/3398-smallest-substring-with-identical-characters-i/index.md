@@ -59,7 +59,7 @@ class Solution:
 
 ## Thoughts
 
-本题跟 [3264. Final Array State After K Multiplication Operations I](3264-final-array-state-after-k-multiplication-operations-i) 几乎一样。唯一的区别是 [problem 3264](3264-final-array-state-after-k-multiplication-operations-i) 是把 m 个球分 k 次得到 `k + 1` 堆，每堆的球数累加即为 m；本题相当于在 m 个排成一排的球中选 k 个拿掉从而得到 `k + 1` 堆，每堆的球数累加还要再加上 k 才等于 m。
+本题跟 [3264. Final Array State After K Multiplication Operations I](../3264-final-array-state-after-k-multiplication-operations-i/index.md) 几乎一样。唯一的区别是 [problem 3264](../3264-final-array-state-after-k-multiplication-operations-i/index.md) 是把 m 个球分 k 次得到 `k + 1` 堆，每堆的球数累加即为 m；本题相当于在 m 个排成一排的球中选 k 个拿掉从而得到 `k + 1` 堆，每堆的球数累加还要再加上 k 才等于 m。
 
 按照相同的思路来处理。
 
@@ -69,7 +69,7 @@ class Solution:
 
 但这里有个边界刺客就是当 `m = 2` 的时候，改变任何一个 `'0'` 都会再跟这一段两边原本的 `'1'` 连续起来，而改左边的 `'0'` 还是右边的 `'0'` 会导致最终需要的操作次数不一样。
 
-幸运地是如果最大的 m 是 2，想要进一步降低就只能是全都降为 1，也就是把整个 s 改成 `'0'`、`'1'` 交替的字符串。这时候结果字符串只有两种可能，要么是 `"010101..."`，要么是 `"101010..."`，而且这两个还是互补的。只需要拿 s 跟其中一个（比如 `"010101..."`）逐位比较（跟 [782. Transform to Chessboard](782-transform-to-chessboard) 类似），如果有 k 个位置的数不一样，那么最少的操作次数就是 `min{k, n - k}`，如果 `numOps` 足够的话，最终结果就是 1。
+幸运地是如果最大的 m 是 2，想要进一步降低就只能是全都降为 1，也就是把整个 s 改成 `'0'`、`'1'` 交替的字符串。这时候结果字符串只有两种可能，要么是 `"010101..."`，要么是 `"101010..."`，而且这两个还是互补的。只需要拿 s 跟其中一个（比如 `"010101..."`）逐位比较（跟 [782. Transform to Chessboard](../782-transform-to-chessboard/index.md) 类似），如果有 k 个位置的数不一样，那么最少的操作次数就是 `min{k, n - k}`，如果 `numOps` 足够的话，最终结果就是 1。
 
 如果 `numOps` 不足以把 s 改成完全 `'0'`、`'1'` 交替的字符串，那么就用模拟的方法，每次选最长连续段，用若干次操作把它打散，这样不断操作，看操作次数用尽的时候，剩下的最长连续段的长度就是结果（显然结果一定大于等于 2）。
 
@@ -77,7 +77,7 @@ class Solution:
 
 每次取当前最大的连续段落长度记为 a，取第二大的记为 b，令 `b' = max{2, b - 1}`，对 a 做 $\lceil\frac{a-b'}{b'+1}\rceil$ 次操作就可以得到比 b 小值 `a'`（`a' ≤ b'`）。把 `a'` 放回堆中，此时堆里最大值就是 b，继续做同样的操作，直到次数用尽，或者堆顶的值小于等于 2。
 
-> 跟 [problem 3264](3264-final-array-state-after-k-multiplication-operations-i) 类似，如果堆顶的 a 是由原本的 m 做了 k1 次操作得到的，就不能直接对 a 操作，而是把 k1 次操作退回去，重新对 m 做 $\lceil\frac{m-b'}{b'+1}\rceil$ 次操作。
+> 跟 [problem 3264](../3264-final-array-state-after-k-multiplication-operations-i/index.md) 类似，如果堆顶的 a 是由原本的 m 做了 k1 次操作得到的，就不能直接对 a 操作，而是把 k1 次操作退回去，重新对 m 做 $\lceil\frac{m-b'}{b'+1}\rceil$ 次操作。
 >
 > 另外需要注意，最后堆顶的值可能是 1，这时候并不意味着结果就是 1（实际上是 2），因为前边提到了，初始化的时候，所有长度为 2 的段落全都没有放进来。
 
@@ -91,7 +91,7 @@ class Solution:
 
 ## 二分法
 
-另外 [problem 3264](3264-final-array-state-after-k-multiplication-operations-i) 后边还提到了 [二分的处理方法](1760-minimum-limit-of-balls-in-a-bag#二分法) ，显然因为本题跟它几乎一致，也是可以套用一样的二分法。
+另外 [problem 3264](../3264-final-array-state-after-k-multiplication-operations-i/index.md) 后边还提到了 [二分的处理方法](../1760-minimum-limit-of-balls-in-a-bag/index.md#二分法) ，显然因为本题跟它几乎一致，也是可以套用一样的二分法。
 
 前置的处理逻辑是一样的，先判断 `numOps` 是否足够把 s 改成完全 '0'、'1' 交替的字符串，可以的话就直接返回 1。
 

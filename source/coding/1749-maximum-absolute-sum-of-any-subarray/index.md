@@ -47,7 +47,7 @@ class Solution:
 
 ## Thoughts
 
-可以直接搬 [53. Maximum Subarray](53-maximum-subarray) 的代码，在求子数组最大和 `largest` 的同时，用完全类似的方法求出子数组的最小和 `smallest`。最终结果即为 `max{largest, smallest}`。
+可以直接搬 [53. Maximum Subarray](../53-maximum-subarray/index.md) 的代码，在求子数组最大和 `largest` 的同时，用完全类似的方法求出子数组的最小和 `smallest`。最终结果即为 `max{largest, smallest}`。
 
 时间复杂度 `O(n)`，空间复杂度 `O(1)`。
 

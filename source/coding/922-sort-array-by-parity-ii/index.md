@@ -47,7 +47,7 @@ class Solution:
 
 ## Thoughts
 
-[905. Sort Array By Parity](905-sort-array-by-parity) 的进阶版。
+[905. Sort Array By Parity](../905-sort-array-by-parity/index.md) 的进阶版。
 
 用同样的逻辑处理，只是指针 i 指向偶数下标，j 指向奇数下标。
 

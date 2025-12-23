@@ -73,7 +73,7 @@ class Solution:
 
 ## Thoughts
 
-这是 [3243. Shortest Distance After Road Addition Queries I](3243-shortest-distance-after-road-addition-queries-i) 的进阶版，增加了限制条件，任意两条道路不会交叉。
+这是 [3243. Shortest Distance After Road Addition Queries I](../3243-shortest-distance-after-road-addition-queries-i/index.md) 的进阶版，增加了限制条件，任意两条道路不会交叉。
 
 因为道路不会交叉，设有一条道路 `[u, v]`，那么城市 `u` 和 `v` 之间的城市（即 `[u+1, u+2, ..., v-2, v-1]`）就都可以忽略掉（因为对于任何 `u < i < v`，从城市 `i` 出发，不可能一步走到 `v` 之后）。所有的道路都加好之后，剩下的城市就是从 `0` 走到 `n-1` 的必经点，剩余城市个数减去一就是距离。
 

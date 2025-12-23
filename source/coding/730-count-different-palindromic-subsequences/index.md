@@ -48,7 +48,7 @@ class Solution:
 
 ## Thoughts
 
-看起来是 [647. Palindromic Substrings](647-palindromic-substrings) 的进阶版，从 **substring** 升级为 **subsequence**，而且要去重，不过字符种类从所有英文小写字母缩减到只有 `'a'`、`'b'`、`'c'` 和 `'d'` 四个。
+看起来是 [647. Palindromic Substrings](../647-palindromic-substrings/index.md) 的进阶版，从 **substring** 升级为 **subsequence**，而且要去重，不过字符种类从所有英文小写字母缩减到只有 `'a'`、`'b'`、`'c'` 和 `'d'` 四个。
 
 考虑任意一个子区间 `[i, j]`（`0 ≤ i ≤ j < n`），定义 `dp(i, j)` 表示子字符串 `s[i:j+1]` 内各不相同的回文子序列总数。
 

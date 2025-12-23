@@ -10,7 +10,7 @@ references:
 ---
 ## Version and Virtual Environment
 
-[Python Version Management & Virtual Environments](python-version-management-virtual-environments.md)
+[Python Version Management & Virtual Environments](../python-version-management-virtual-environments/index.md)
 
 ## Package Management
 

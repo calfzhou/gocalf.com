@@ -66,7 +66,7 @@ class Solution:
 
 ## Thoughts
 
-[21. Merge Two Sorted Lists](21-merge-two-sorted-lists) 的进阶版。但如果直接套用，时间复杂度是 `O(k * n)`，其中 `n` 是结果链表的总长度。因为结果链表的每个节点，都需要在 k 个数中比较得到。
+[21. Merge Two Sorted Lists](../21-merge-two-sorted-lists/index.md) 的进阶版。但如果直接套用，时间复杂度是 `O(k * n)`，其中 `n` 是结果链表的总长度。因为结果链表的每个节点，都需要在 k 个数中比较得到。
 
 大量的比较是重复的，因为排头的 k 个节点，每次只会更新一个。
 

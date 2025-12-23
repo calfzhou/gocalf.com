@@ -63,7 +63,7 @@ class Solution:
 
 ## Thoughts
 
-在 [572. Subtree of Another Tree](572-subtree-of-another-tree) 中包含了。
+在 [572. Subtree of Another Tree](../572-subtree-of-another-tree/index.md) 中包含了。
 
 按前序（pre-order，NLR）同步遍历两棵二叉树。对于当前节点，如果一边有而另一边缺失，或者两边节点的值不同，直接返回 `false`。
 

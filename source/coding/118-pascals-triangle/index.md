@@ -43,7 +43,7 @@ class Solution:
 
 ## Thoughts
 
-直接用 [119. Pascal's Triangle II](119-pascals-triangle-ii) 中组合数的递推方式计算整个杨辉三角即可。
+直接用 [119. Pascal's Triangle II](../119-pascals-triangle-ii/index.md) 中组合数的递推方式计算整个杨辉三角即可。
 
 ## Code
 

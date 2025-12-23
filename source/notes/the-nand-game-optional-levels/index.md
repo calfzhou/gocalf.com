@@ -10,9 +10,9 @@ updated: 2025-07-19 20:18:05
 ---
 ## All Levels
 
-- [The Nand Game](the-nand-game.md) - Hardware Levels
-- [The Nand Game - Software Levels](the-nand-game-software-levels.md)
-- [The Nand Game - Optional Levels](the-nand-game-optional-levels.md)
+- [The Nand Game](../the-nand-game/index.md) - Hardware Levels
+- [The Nand Game - Software Levels](../the-nand-game-software-levels/index.md)
+- [The Nand Game - Optional Levels](../the-nand-game-optional-levels/index.md)
 
 ## Optional Level: Transistor level
 

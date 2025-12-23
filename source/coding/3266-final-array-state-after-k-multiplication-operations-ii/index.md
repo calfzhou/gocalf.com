@@ -68,11 +68,11 @@ class Solution:
 
 > 这可能是提交遇到解答错误次数最多的一题了。
 
-[3264. Final Array State After K Multiplication Operations I](3264-final-array-state-after-k-multiplication-operations-i) 的进阶版。不只是 `n = nums.length` 从 100 提升到 10⁴，k 也从 10 提升到了 10⁹。
+[3264. Final Array State After K Multiplication Operations I](../3264-final-array-state-after-k-multiplication-operations-i/index.md) 的进阶版。不只是 `n = nums.length` 从 100 提升到 10⁴，k 也从 10 提升到了 10⁹。
 
 ### Huge "k"
 
-先看变得更大的 k，从 1 遍历到 k 肯定是跑不动的。但这个跟 [1760. Minimum Limit of Balls in a Bag](1760-minimum-limit-of-balls-in-a-bag) 非常像（指最大堆的那种实现方式，而非二分法），巨大的 k 其实会给每个数字都平摊很多，可以先计算出每个数字平摊多少，直接乘上去，可以省掉大量的循环。
+先看变得更大的 k，从 1 遍历到 k 肯定是跑不动的。但这个跟 [1760. Minimum Limit of Balls in a Bag](../1760-minimum-limit-of-balls-in-a-bag/index.md) 非常像（指最大堆的那种实现方式，而非二分法），巨大的 k 其实会给每个数字都平摊很多，可以先计算出每个数字平摊多少，直接乘上去，可以省掉大量的循环。
 
 设 `nums` 中的最大值为 `top`。先把所有其他数字通过乘以 `multiplier` 的某个次方，增大到不超过 `top`，即修改之后的数组满足：对于任意的 i，`nums[i] <= top < nums[i] * multiplier`。设某个数字是 v，那么 `p = ⌊log(top / v, multiplier)⌋`，让 v 乘以 `multiplier` 的 p 次方即可。
 
@@ -95,7 +95,7 @@ class Solution:
 
 然后给 `nums` 中每个数字都乘以 `multiplier` 的 q 次方。注意到这里的 q 依然非常大，需要使用二分法进行幂运算，时间复杂度可以降到 `O(log q) = O(log k - log n) ≈ O(log k)`。
 
-二分法幂运算在 [935. Knight Dialer](935-knight-dialer) 和 [70. Climbing Stairs](70-climbing-stairs) 都有涉及（矩阵的幂运算跟整数的幂运算没有本质区别）。在这两题中计算幂用的是正向的循环，如：
+二分法幂运算在 [935. Knight Dialer](../935-knight-dialer/index.md) 和 [70. Climbing Stairs](../70-climbing-stairs/index.md) 都有涉及（矩阵的幂运算跟整数的幂运算没有本质区别）。在这两题中计算幂用的是正向的循环，如：
 
 ``` python
 MOD = 1_000_000_007
@@ -136,11 +136,11 @@ def bi_power(a: int, n: int) -> int:
 
 ### Normal "k"
 
-上边的处理的基础是 k 足够大，足够把 `nums` 所有数字都增大到刚好不超过 `top`。但如果 k 没有那么大，就还是按照 [3264. Final Array State After K Multiplication Operations I](3264-final-array-state-after-k-multiplication-operations-i) 中那样，用最小堆来处理。
+上边的处理的基础是 k 足够大，足够把 `nums` 所有数字都增大到刚好不超过 `top`。但如果 k 没有那么大，就还是按照 [3264. Final Array State After K Multiplication Operations I](../3264-final-array-state-after-k-multiplication-operations-i/index.md) 中那样，用最小堆来处理。
 
 时间复杂度 `O((n + k) log n)`，空间复杂度 `O(n)`。
 
-一个小的优化是类似 [1760. Minimum Limit of Balls in a Bag](1760-minimum-limit-of-balls-in-a-bag) 里的处理，取当前最小值 a，看第二小的值 b，直接对 a 操作若干次使它刚好超过 b。令 `p = ⌈log(b + 1 - a, multiplier)⌉`，如果剩余的次数足够，那就给 a 加上 `multiplier` 的 p 次方，再放回堆中。
+一个小的优化是类似 [1760. Minimum Limit of Balls in a Bag](../1760-minimum-limit-of-balls-in-a-bag/index.md) 里的处理，取当前最小值 a，看第二小的值 b，直接对 a 操作若干次使它刚好超过 b。令 `p = ⌈log(b + 1 - a, multiplier)⌉`，如果剩余的次数足够，那就给 a 加上 `multiplier` 的 p 次方，再放回堆中。
 
 注意需要保证对于相同的两个数，要优先对在 `nums` 中排在前边的数字操作。所以如果 b 的下标小于 a 的下标，就令 `p = ⌈log(b - a), multiplier⌉`，确保 a 不会超过 b。
 

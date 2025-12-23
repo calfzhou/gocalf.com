@@ -75,7 +75,7 @@ paotin
 
 [paotin/docs/tmux.md at master · mudclient/paotin](https://github.com/mudclient/paotin/blob/master/docs/tmux.md)
 
-PaoTin++ 用 [Tmux (Terminal Multiplexer)](tmux.md) 管理 UI，切分屏幕，创建多窗口画面，同时挂机多个 ID。PaoTin++ 的 tmux 前缀键已经被修改为 `<Ctrl+a>`。
+PaoTin++ 用 [Tmux (Terminal Multiplexer)](../tmux/index.md) 管理 UI，切分屏幕，创建多窗口画面，同时挂机多个 ID。PaoTin++ 的 tmux 前缀键已经被修改为 `<Ctrl+a>`。
 
 PaoTin++ 常用的快捷键：
 

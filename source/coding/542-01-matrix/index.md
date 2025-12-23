@@ -55,7 +55,7 @@ class Solution:
 
 ## Thoughts
 
-跟 [221. Maximal Square](221-maximal-square) 很像，少了对于全一正方形的判定。[Problem 221](221-maximal-square) 中的 `h(i, j)` 和 `v(i, j)` 分别类似于本题中格子 `(i, j)` 到上边最近的 `0` 和左边最近的 `0` 的距离（如果某个方向没有 `0` 本题应该为 `inf`，[problem 221](221-maximal-square) 则为连续 `1` 的个数）。
+跟 [221. Maximal Square](../221-maximal-square/index.md) 很像，少了对于全一正方形的判定。[Problem 221](../221-maximal-square/index.md) 中的 `h(i, j)` 和 `v(i, j)` 分别类似于本题中格子 `(i, j)` 到上边最近的 `0` 和左边最近的 `0` 的距离（如果某个方向没有 `0` 本题应该为 `inf`，[problem 221](../221-maximal-square/index.md) 则为连续 `1` 的个数）。
 
 定义 `dp(i, j)` 为格子 `(i, j)` 到任意方向最近的 `0` 的距离。易知当 `mat[i][j] = 0` 时：
 
