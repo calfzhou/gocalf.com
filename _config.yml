@@ -130,6 +130,7 @@ ignore:
   - .obsidian/**
   - _templates/**
   - .trash/**
+  - consistency-report.md
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
