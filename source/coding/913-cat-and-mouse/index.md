@@ -38,8 +38,8 @@ Given a `graph`, and assuming both players play optimally, return
 ![case1](case1.png)
 {% endinvert %}
 
-> Input: graph = [[2,5],[3],[0,4,5],[1,4,5],[2,3],[0,2,3]]
-> Output: 0
+> Input: `graph = [[2,5],[3],[0,4,5],[1,4,5],[2,3],[0,2,3]]`
+> Output: `0`
 
 **Example 2:**
 
@@ -47,8 +47,8 @@ Given a `graph`, and assuming both players play optimally, return
 ![case2](case2.png)
 {% endinvert %}
 
-> Input: graph = [[1,3],[0],[3],[0,2]]
-> Output: 1
+> Input: `graph = [[1,3],[0],[3],[0,2]]`
+> Output: `1`
 
 **Constraints:**
 

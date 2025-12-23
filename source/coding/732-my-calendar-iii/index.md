@@ -75,7 +75,7 @@ class MyCalendarThree:
 
 实现起来很麻烦，即便两头加了 `-inf` 和 `inf` 避免越界，仍然有各种边界情况需要处理，到处都是边界值刺客。而且运行时间很长（常数系数太大）。
 
-[solution_omg.py](732-my-calendar-iii/solution_omg.py)
+[solution_omg.py](solution_omg.py)
 
 > 虽然 AC 了，但不确定会不会在某些边缘 case 下会出错。
 

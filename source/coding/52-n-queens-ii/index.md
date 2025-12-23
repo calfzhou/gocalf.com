@@ -17,7 +17,7 @@ Given an integer `n`, return _the number of distinct solutions to the **n-queen
 **Example 1:**
 
 {% invert %}
-![case1](case1.png)
+![case1](../51-n-queens/case1.png)
 {% endinvert %}
 
 > Input: n = 4

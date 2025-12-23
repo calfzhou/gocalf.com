@@ -68,7 +68,7 @@ class Solution:
 
 显然只有删掉某个负数，才有可能得到更大的最大子数组。
 
-如果直接 [遍历每个负数，计算其所有 occurrences 被删掉之后的最大子数组](3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element/solution_slow.py)，时间复杂度是 `O(n²)`，肯定会超时。这里有大量的重复计算。
+如果直接 [遍历每个负数，计算其所有 occurrences 被删掉之后的最大子数组](solution_slow.py)，时间复杂度是 `O(n²)`，肯定会超时。这里有大量的重复计算。
 
 沿用前两题中 [第二种 DP](../1186-maximum-subarray-sum-with-one-deletion/index.md#Another-DP) 的定义，`ps(i) = Σnums[0...i]` 和 `low(i)`（`nums[0...i]` 的（小于等于零的）最小前缀和）。调整 `low2(i)` 的含义为 `arr[0...i]` 的（小于等于零的）最小前缀和再加上额外被删掉的数字的所有 occurrences 所能得到的最小值（在 `ps(i)` 中减去此值，就是以 i 为右端点但是删掉至多一个数字的所有 occurrences 之后的最大 subarray 和）。
 

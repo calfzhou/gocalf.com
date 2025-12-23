@@ -56,7 +56,7 @@ Return the number of **alternating** groups.
 > Input: `colors = [1,1,0,1], k = 4`
 > Output: `0`
 > Explanation:
-> ![case3](case3.png.png)
+> ![case3](case3.png)
 
 **Constraints:**
 

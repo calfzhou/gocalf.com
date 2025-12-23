@@ -152,5 +152,5 @@ $$
 但是用贪心策略可能会得到 `"a4b5"` 或者 `"cb6"`（取决于相同收益下优先取哪个方案），压缩长度是 `4` 或 `3`，都不是最优的。
 
 {% box 错误的贪心法 color:red %}
-[solution_wrong.py](1531-string-compression-ii/solution_wrong.py)
+[solution_wrong.py](solution_wrong.py)
 {% endbox %}

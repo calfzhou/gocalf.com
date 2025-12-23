@@ -77,7 +77,7 @@ class Solution:
 
 太慢了，无法 AC，仅当练习 trie 了。
 
-[solution_trie.py](3213-construct-string-with-minimum-cost/solution_trie.py)
+[solution_trie.py](solution_trie.py)
 
 实际上还可以定义 `dp'(i)` 表示子字符串 `target[:i]` 的最小 cost。并为了方便，定义 `dp'(0) = 0`，其他值均初始化为 ∞，最终所求结果为 `dp'(n)`。
 
