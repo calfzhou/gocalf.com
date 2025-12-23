@@ -20,7 +20,7 @@ Given a list `piles`, where `piles[i]` is a list of integers denoting the compos
 **Example 1:**
 
 {% invert %}
-![case1](assets/2218-maximum-value-of-k-coins-from-piles/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `piles = [[1,100,3],[7,8,9]], k = 2`

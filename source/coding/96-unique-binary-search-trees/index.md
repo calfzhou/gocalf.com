@@ -16,7 +16,7 @@ Given an integer `n`, return _the number of structurally unique **BST**'s (binar
 **Example 1:**
 
 {% invert %}
-![case1](assets/96-unique-binary-search-trees/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: n = 3

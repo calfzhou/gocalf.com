@@ -23,7 +23,7 @@ A **valid BST** is defined as follows:
 **Example 1:**
 
 {% invert %}
-![case1](assets/98-validate-binary-search-tree/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `root = [2,1,3]`
@@ -32,7 +32,7 @@ A **valid BST** is defined as follows:
 **Example 2:**
 
 {% invert %}
-![case2](assets/98-validate-binary-search-tree/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `root = [5,1,4,null,null,3,6]`

@@ -17,7 +17,7 @@ If there exist multiple answers, you can **return any** of them.
 **Example 1:**
 
 {% invert %}
-![case1](assets/889-construct-binary-tree-from-preorder-and-postorder-traversal/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `preorder = [1,2,4,5,3,6,7], postorder = [4,5,2,6,7,3,1]`

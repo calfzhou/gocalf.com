@@ -17,7 +17,7 @@ You have to rotate the image [**in-place**](https://en.wikipedia.org/wiki/In-pla
 **Example 1:**
 
 {% invert %}
-![case1](assets/48-rotate-image/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `matrix = [[1,2,3],[4,5,6],[7,8,9]]`
@@ -26,7 +26,7 @@ You have to rotate the image [**in-place**](https://en.wikipedia.org/wiki/In-pla
 **Example 2:**
 
 {% invert %}
-![case2](assets/48-rotate-image/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]`

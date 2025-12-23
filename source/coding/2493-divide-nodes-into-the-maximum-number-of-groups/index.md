@@ -24,7 +24,7 @@ Return _the maximum number of groups (i.e., maximum_ `m`_) into which you can di
 **Example 1:**
 
 {% invert %}
-![case1](assets/2493-divide-nodes-into-the-maximum-number-of-groups/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `n = 6, edges = [[1,2],[1,4],[1,5],[2,6],[2,3],[4,6]]`
@@ -76,7 +76,7 @@ class Solution:
 
 > 比如下图，如果初始节点是 v，第一次 DFS 会找到 u，再从 u 出发得到的「直径」是 3。但此图的直径其实是 4。
 > {% invert %}
-![bad-diameter-case](assets/2493-divide-nodes-into-the-maximum-number-of-groups/bad-diameter-case.png)
+![bad-diameter-case](bad-diameter-case.png)
 {% endinvert %}
 > （图片出自 <https://cs.stackexchange.com/a/213>）
 

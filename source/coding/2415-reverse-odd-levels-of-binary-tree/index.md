@@ -23,7 +23,7 @@ The **level** of a node is the number of edges along the path between it and the
 **Example 1:**
 
 {% invert %}
-![case1](assets/2415-reverse-odd-levels-of-binary-tree/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `root = [2,3,5,8,13,21,34]`
@@ -35,7 +35,7 @@ The **level** of a node is the number of edges along the path between it and the
 **Example 2:**
 
 {% invert %}
-![case2](assets/2415-reverse-odd-levels-of-binary-tree/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `root = [7,13,11]`

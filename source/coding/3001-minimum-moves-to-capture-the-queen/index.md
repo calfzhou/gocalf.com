@@ -29,7 +29,7 @@ Given that you can only move the white pieces, return _the **minimum** number of
 
 **Example 1:**
 
-![case1](assets/3001-minimum-moves-to-capture-the-queen/case1.png)
+![case1](case1.png)
 
 > Input: `a = 1, b = 1, c = 8, d = 8, e = 2, f = 3`
 > Output: `2`
@@ -38,7 +38,7 @@ Given that you can only move the white pieces, return _the **minimum** number of
 
 **Example 2:**
 
-![case2](assets/3001-minimum-moves-to-capture-the-queen/case2.png)
+![case2](case2.png)
 
 > Input: `a = 5, b = 3, c = 3, d = 4, e = 5, f = 2`
 > Output: `1`

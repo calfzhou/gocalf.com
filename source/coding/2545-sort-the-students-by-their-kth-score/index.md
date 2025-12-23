@@ -19,7 +19,7 @@ Return _the matrix after sorting it._
 **Example 1:**
 
 {% invert %}
-![case1](assets/2545-sort-the-students-by-their-kth-score/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `score = [[10,6,9,1],[7,5,11,2],[4,8,3,15]], k = 2`
@@ -33,7 +33,7 @@ Return _the matrix after sorting it._
 **Example 2:**
 
 {% invert %}
-![case2](assets/2545-sort-the-students-by-their-kth-score/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `score = [[3,4],[5,6]], k = 0`

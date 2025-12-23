@@ -24,7 +24,7 @@ Return the **minimum** number of cells that need to be flipped to make **all** r
 > Output: `3`
 > Explanation:
 > {% invert %}
-![case1](assets/3240-minimum-number-of-flips-to-make-binary-grid-palindromic-ii/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 **Example 2:**
@@ -33,7 +33,7 @@ Return the **minimum** number of cells that need to be flipped to make **all** r
 > Output: `2`
 > Explanation:
 > {% invert %}
-![case2](assets/3240-minimum-number-of-flips-to-make-binary-grid-palindromic-ii/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 **Example 3:**
@@ -42,7 +42,7 @@ Return the **minimum** number of cells that need to be flipped to make **all** r
 > Output: `2`
 > Explanation:
 > {% invert %}
-![case3](assets/3240-minimum-number-of-flips-to-make-binary-grid-palindromic-ii/case3.png)
+![case3](case3.png)
 {% endinvert %}
 
 **Constraints:**

@@ -10,7 +10,7 @@ updated: 2024-12-09 09:34:57
 
 You are given `coordinates`, a string that represents the coordinates of a square of the chessboard. Below is a chessboard for your reference.
 
-![problem](assets/3274-check-if-two-chessboard-squares-have-the-same-color/problem.png)
+![problem](problem.png)
 
 Return `true` _if the square is white, and_ `false` _if the square is black_.
 

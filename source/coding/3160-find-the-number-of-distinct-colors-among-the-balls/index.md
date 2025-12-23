@@ -24,7 +24,7 @@ Return an array `result` of length `n`, where `result[i]` denotes the number of 
 > Output: `[1,2,2,3]`
 > Explanation:
 > {% invert %}
-![case1](assets/3160-find-the-number-of-distinct-colors-among-the-balls/case1.gif)
+![case1](case1.gif)
 {% endinvert %}
 >
 > - After query 0, ball 1 has color 4.
@@ -38,7 +38,7 @@ Return an array `result` of length `n`, where `result[i]` denotes the number of 
 > Output: `[1,2,2,3,4]`
 > Explanation:
 > {% invert %}
-![case2](assets/3160-find-the-number-of-distinct-colors-among-the-balls/case2.gif)
+![case2](case2.gif)
 {% endinvert %}
 >
 > - After query 0, ball 0 has color 1.

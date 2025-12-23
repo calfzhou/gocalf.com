@@ -24,7 +24,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Output: true
 > Explanation:
 > {% invert %}
-![case1](assets/3235-check-if-the-rectangle-corner-is-reachable/case1.png)
+![case1](case1.png)
 {% endinvert %}
 > The curve shows a possible path between `(0, 0)` and `(3, 4)`.
 
@@ -34,7 +34,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Output: false
 > Explanation:
 > {% invert %}
-![case2](assets/3235-check-if-the-rectangle-corner-is-reachable/case2.png)
+![case2](case2.png)
 {% endinvert %}
 > No path exists from `(0, 0)` to `(3, 3)`.
 
@@ -44,7 +44,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Output: false
 > Explanation:
 > {% invert %}
-![case3](assets/3235-check-if-the-rectangle-corner-is-reachable/case3.png)
+![case3](case3.png)
 {% endinvert %}
 > No path exists from `(0, 0)` to `(3, 3)`.
 
@@ -54,7 +54,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Output: true
 > Explanation:
 > {% invert %}
-![case4](assets/3235-check-if-the-rectangle-corner-is-reachable/case4.png)
+![case4](case4.png)
 {% endinvert %}
 
 **Constraints:**

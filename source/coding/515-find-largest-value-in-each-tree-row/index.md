@@ -15,7 +15,7 @@ Given the `root` of a binary tree, return _an array of the largest value in each
 **Example 1:**
 
 {% invert %}
-![case1](assets/515-find-largest-value-in-each-tree-row/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `root = [1,3,2,5,3,null,9]`

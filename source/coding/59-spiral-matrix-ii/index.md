@@ -15,7 +15,7 @@ Given a positive integer `n`, generate an `n x n` `matrix` filled with elements 
 **Example 1:**
 
 {% invert %}
-![case1](assets/59-spiral-matrix-ii/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `n = 3`

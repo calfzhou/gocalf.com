@@ -17,7 +17,7 @@ Count and return _the number of maximum integers in the matrix after performing 
 **Example 1:**
 
 {% invert %}
-![case1](assets/598-range-addition-ii/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `m = 3, n = 3, ops = [[2,2],[3,3]]`

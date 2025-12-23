@@ -15,7 +15,7 @@ Given the `root` of a binary search tree, and an integer `k`, return _the_ `kᵗ
 **Example 1:**
 
 {% invert %}
-![case1](assets/230-kth-smallest-element-in-a-bst/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `root = [3,1,4,null,2], k = 1`
@@ -24,7 +24,7 @@ Given the `root` of a binary search tree, and an integer `k`, return _the_ `kᵗ
 **Example 2:**
 
 {% invert %}
-![case2](assets/230-kth-smallest-element-in-a-bst/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `root = [5,3,6,2,4,null,null,1], k = 3`

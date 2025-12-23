@@ -12,7 +12,7 @@ You are given two strings, `coordinate1` and `coordinate2`, representing the coo
 
 Below is the chessboard for reference.
 
-![problem](assets/3274-check-if-two-chessboard-squares-have-the-same-color/problem.png)
+![problem](problem.png)
 
 Return `true` if these two squares have the same color and `false` otherwise.
 

@@ -22,7 +22,7 @@ Return _the **minimum** number of white tiles still visible._
 
 **Example 1:**
 
-![case1](assets/2209-minimum-white-tiles-after-covering-with-carpets/case1.png)
+![case1](case1.png)
 
 > Input: `floor = "10110101", numCarpets = 2, carpetLen = 2`
 > Output: `2`
@@ -32,7 +32,7 @@ Return _the **minimum** number of white tiles still visible._
 
 **Example 2:**
 
-![case2](assets/2209-minimum-white-tiles-after-covering-with-carpets/case2.png)
+![case2](case2.png)
 
 > Input: `floor = "11111", numCarpets = 2, carpetLen = 3`
 > Output: `0`

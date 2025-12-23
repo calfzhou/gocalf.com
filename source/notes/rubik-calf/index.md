@@ -20,15 +20,15 @@ animcube3: true
 
 {% grid c:5 %}
 <!-- cell -->
-1. ![0-1](assets/rubik-calf/0-1.png)
+1. ![0-1](0-1.png)
 <!-- cell -->
-2. ![0-2](assets/rubik-calf/0-2.png)
+2. ![0-2](0-2.png)
 <!-- cell -->
-3. ![0-3](assets/rubik-calf/0-3.png)
+3. ![0-3](0-3.png)
 <!-- cell -->
-4. ![0-4](assets/rubik-calf/0-4.png)
+4. ![0-4](0-4.png)
 <!-- cell -->
-5. ![0-5a](assets/rubik-calf/0-5a.png) ![0-5b](assets/rubik-calf/0-5b.png)
+5. ![0-5a](0-5a.png) ![0-5b](0-5b.png)
 {% endgrid %}
 
 ② 把三个边缘角块归位即完成三个面复原，然后再把三个棱块归位便完成了整个复原。
@@ -37,9 +37,9 @@ animcube3: true
 
 {% grid c:5 %}
 <!-- cell -->
-6. ![0-6a](assets/rubik-calf/0-6a.png) ![0-6b](assets/rubik-calf/0-6b.png)
+6. ![0-6a](0-6a.png) ![0-6b](0-6b.png)
 <!-- cell -->
-7. ![0-6a](assets/rubik-calf/0-6a.png) ![0-7](assets/rubik-calf/0-7.png)
+7. ![0-6a](0-6a.png) ![0-7](0-7.png)
 {% endgrid %}
 
 ## 复原三面之前的一些操作
@@ -86,7 +86,7 @@ animcube3: true
 
 将倒 Y 形区域标记为 `o-abc` 直角坐标系：
 
-![axis](assets/rubik-calf/axis.png)
+![axis](axis.png)
 
 虽然图中标记了各面的颜色（看不见的 a、b、c 面用字母颜色指代），但这只是用于示意的特例，并不是固定的搭配。
 
@@ -251,7 +251,7 @@ animcube3: true
 
 {% grid c:5 %}
 <!-- cell -->
-![3-1](assets/rubik-calf/3-1.png)
+![3-1](3-1.png)
 {% endgrid %}
 
 操作方法：`ab ab bc bc`（a、c 两面完全不变）。
@@ -273,7 +273,7 @@ animcube3: true
 
 {% grid c:5 %}
 <!-- cell -->
-![3-2](assets/rubik-calf/3-2.png)
+![3-2](3-2.png)
 {% endgrid %}
 
 操作方法：`cb cb ba ba`（a、c 两面完全不变）。
@@ -297,11 +297,11 @@ animcube3: true
 
 {% grid c:5 %}
 <!-- cell -->
-![2-1](assets/rubik-calf/2-1.png)
+![2-1](2-1.png)
 <!-- cell -->
-![2-2](assets/rubik-calf/2-2.png)
+![2-2](2-2.png)
 <!-- cell -->
-![2-3](assets/rubik-calf/2-3.png)
+![2-3](2-3.png)
 {% endgrid %}
 
 操作方法：`b'a b ba`，再恢复 b 面的棱（这是一次刻意破坏再重建的过程）。
@@ -349,7 +349,7 @@ animcube3: true
 
 {% grid c:5 %}
 <!-- cell -->
-![6-1](assets/rubik-calf/6-1.png)
+![6-1](6-1.png)
 {% endgrid %}
 
 `ba cb ac`，这时原本好的三面会被破坏，再继续观察并按复原三面的方法对 a、b、c 三面进行复原即可。
@@ -382,7 +382,7 @@ animcube3: true
 
 {% grid c:5 %}
 <!-- cell -->
-![6-2](assets/rubik-calf/6-2.png)
+![6-2](6-2.png)
 {% endgrid %}
 
 `ab ca bc`，再继续观察并转好 a、b、c。
@@ -415,7 +415,7 @@ animcube3: true
 
 {% grid c:5 %}
 <!-- cell -->
-![6-3](assets/rubik-calf/6-3.png)
+![6-3](6-3.png)
 {% endgrid %}
 
 `ab ab ca ca`，再继续观察并转好 a、b、c。
@@ -448,17 +448,17 @@ animcube3: true
 
 事项 | 图示 | 操作 | 说明 / 后续
 --|--|--|--
-倒 Y 形区域 | ![axis](assets/rubik-calf/axis.png) | | o-abc 直角坐标系<br>a 蓝 right<br>b 黄 top<br>c 红 back
+倒 Y 形区域 | ![axis](axis.png) | | o-abc 直角坐标系<br>a 蓝 right<br>b 黄 top<br>c 红 back
 基本操作 `ab` | | `D' L D L'` | 蓝黄
 基本操作 `ba` | | `L D' L' D` | 黄蓝
 特殊操作 `b'a` | | `L' D' L D` | 黄'蓝
 特殊操作 `b` | | `L` | 黄
-三① 角的朝向 | ![3-1](assets/rubik-calf/3-1.png) | `ab ab bc bc` | a、c 两面完全不变
-三② 角的朝向 | ![3-2](assets/rubik-calf/3-2.png) | `cb cb ba ba` | a、c 两面完全不变
-三③ 交换 `o` 和角 | ![2-1](assets/rubik-calf/2-1.png) ![2-2](assets/rubik-calf/2-2.png) ![2-3](assets/rubik-calf/2-3.png) | `b'a b ba` | 再恢复 b 面的棱<br>再复原 a、b、c
-六① 三棱<br>逆时针归位 | ![6-1](assets/rubik-calf/6-1.png) | `ba cb ac` | 再复原 a、b、c
-六② 三棱<br>顺时针归位 | ![6-2](assets/rubik-calf/6-2.png) | `ab ca bc` | 再复原 a、b、c
-六③ o-a、o-b 棱<br>原地翻转 | ![6-3](assets/rubik-calf/6-3.png) | `ab ab ca ca` | 再复原 a、b、c
+三① 角的朝向 | ![3-1](3-1.png) | `ab ab bc bc` | a、c 两面完全不变
+三② 角的朝向 | ![3-2](3-2.png) | `cb cb ba ba` | a、c 两面完全不变
+三③ 交换 `o` 和角 | ![2-1](2-1.png) ![2-2](2-2.png) ![2-3](2-3.png) | `b'a b ba` | 再恢复 b 面的棱<br>再复原 a、b、c
+六① 三棱<br>逆时针归位 | ![6-1](6-1.png) | `ba cb ac` | 再复原 a、b、c
+六② 三棱<br>顺时针归位 | ![6-2](6-2.png) | `ab ca bc` | 再复原 a、b、c
+六③ o-a、o-b 棱<br>原地翻转 | ![6-3](6-3.png) | `ab ab ca ca` | 再复原 a、b、c
 
 ## 关于魔方动画演示
 

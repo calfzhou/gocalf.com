@@ -26,7 +26,7 @@ Return `true` _if you can make `s` a valid parentheses string_. Otherwise, retur
 **Example 1:**
 
 {% invert %}
-![case1](assets/2116-check-if-a-parentheses-string-can-be-valid/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `s = "))()))", locked = "010100"`

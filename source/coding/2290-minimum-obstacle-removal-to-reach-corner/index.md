@@ -22,7 +22,7 @@ Return _the **minimum** number of **obstacles** to **remove** so you can move fr
 **Example 1:**
 
 {% invert %}
-![case1](assets/2290-minimum-obstacle-removal-to-reach-corner/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `grid = [[0,1,1],[1,1,0],[1,1,0]]`
@@ -34,7 +34,7 @@ Return _the **minimum** number of **obstacles** to **remove** so you can move fr
 **Example 2:**
 
 {% invert %}
-![case2](assets/2290-minimum-obstacle-removal-to-reach-corner/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `grid = [[0,1,0,0,0],[0,1,0,1,0],[0,0,0,1,0]]`

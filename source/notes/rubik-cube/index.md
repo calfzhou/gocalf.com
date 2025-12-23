@@ -51,7 +51,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![3-1](assets/rubik-cube/simple-3-1.png)
+![3-1](simple-3-1.png)
 {% endgrid %}
 
 `(R U R U) R (U' R' U' R')`
@@ -68,7 +68,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![3-2](assets/rubik-cube/simple-3-2.png)
+![3-2](simple-3-2.png)
 {% endgrid %}
 
 `(R' U' R' U') R' (U R U R)`
@@ -87,7 +87,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![4-1](assets/rubik-cube/simple-4-1.png)
+![4-1](simple-4-1.png)
 {% endgrid %}
 
 `B' (U' R' U R) B`
@@ -104,7 +104,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![4-2](assets/rubik-cube/simple-4-2.png)
+![4-2](simple-4-2.png)
 {% endgrid %}
 
 `B' (R' U' R U) B` 或 `① ①`
@@ -121,7 +121,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![4-3](assets/rubik-cube/simple-4-3.png)
+![4-3](simple-4-3.png)
 {% endgrid %}
 
 `① U ②`
@@ -140,7 +140,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![5-1](assets/rubik-cube/simple-5-1.png)
+![5-1](simple-5-1.png)
 {% endgrid %}
 
 `(R U2' R') (U' R U' R')`
@@ -157,7 +157,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![5-2](assets/rubik-cube/simple-5-2.png)
+![5-2](simple-5-2.png)
 {% endgrid %}
 
 `U (R' U2 R) (U R' U R)` 或 `① U2 ①`
@@ -174,11 +174,11 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![5-3a](assets/rubik-cube/simple-5-3a.png)
+![5-3a](simple-5-3a.png)
 <!-- cell -->
-![5-3b](assets/rubik-cube/simple-5-3b.png)
+![5-3b](simple-5-3b.png)
 <!-- cell -->
-![5-3c](assets/rubik-cube/simple-5-3c.png)
+![5-3c](simple-5-3c.png)
 {% endgrid %}
 
 `① {∅ | U' | U} ②`
@@ -210,9 +210,9 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![5-4a](assets/rubik-cube/simple-5-4a.png)
+![5-4a](simple-5-4a.png)
 <!-- cell -->
-![5-4b](assets/rubik-cube/simple-5-4b.png)
+![5-4b](simple-5-4b.png)
 {% endgrid %}
 
 `① {∅ | U'} ①`
@@ -240,7 +240,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![6-1](assets/rubik-cube/simple-6-1.png)
+![6-1](simple-6-1.png)
 {% endgrid %}
 
 `(R B' R F2) (R' B R F2) R2`
@@ -258,7 +258,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![6-2](assets/rubik-cube/simple-6-2.png)
+![6-2](simple-6-2.png)
 {% endgrid %}
 
 `① U' ①`
@@ -277,7 +277,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![7-1](assets/rubik-cube/simple-7-1.png)
+![7-1](simple-7-1.png)
 {% endgrid %}
 
 `(R U' R) (U R U R) (U' R' U' R2')`
@@ -294,7 +294,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![7-2](assets/rubik-cube/simple-7-2.png)
+![7-2](simple-7-2.png)
 {% endgrid %}
 
 `(R2 U R U) (R' U' R' U') (R' U R')` 或 `① ①`
@@ -311,7 +311,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![7-3](assets/rubik-cube/simple-7-3.png)
+![7-3](simple-7-3.png)
 {% endgrid %}
 
 `① U ①`
@@ -328,7 +328,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![7-4](assets/rubik-cube/simple-7-4.png)
+![7-4](simple-7-4.png)
 {% endgrid %}
 
 `① U’ ①`
@@ -417,7 +417,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![even-4-1](assets/rubik-cube/even-4-1.png)
+![even-4-1](even-4-1.png)
 {% endgrid %}
 
 `(αRw2 R2') B2 U2 (αLw L') U2 (αRw' R) U2 (αRw R') U2 F2 (αRw R') F2 (αLw' L) B2 (αRw2 R2')`
@@ -451,7 +451,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![even-7-1](assets/rubik-cube/even-7-1.png)
+![even-7-1](even-7-1.png)
 {% endgrid %}
 
 `((αRw2 R2') U2 (αRw2 R2') U2) ((αUw2 U2') (αRw2 R2') (αUw2 U2'))`

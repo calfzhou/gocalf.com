@@ -15,7 +15,7 @@ Given an binary array `nums` and an integer `k`, return `true` _if all_ `1`_'s a
 **Example 1:**
 
 {% invert %}
-![case1](assets/1437-check-if-all-1s-are-at-least-length-k-places-away/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `nums = [1,0,0,0,1,0,0,1], k = 2`
@@ -25,7 +25,7 @@ Given an binary array `nums` and an integer `k`, return `true` _if all_ `1`_'s a
 **Example 2:**
 
 {% invert %}
-![case2](assets/1437-check-if-all-1s-are-at-least-length-k-places-away/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `nums = [1,0,0,1,0,1], k = 2`

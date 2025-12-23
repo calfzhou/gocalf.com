@@ -20,7 +20,7 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 **Example 1:**
 
 {% invert %}
-![case1](assets/2054-two-best-non-overlapping-events/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `events = [[1,3,2],[4,5,2],[2,4,3]]`
@@ -30,7 +30,7 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 **Example 2:**
 
 {% invert %}
-![case2](assets/2054-two-best-non-overlapping-events/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `events = [[1,3,2],[4,5,2],[1,5,5]]`
@@ -40,7 +40,7 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 **Example 3:**
 
 {% invert %}
-![case3](assets/2054-two-best-non-overlapping-events/case3.png)
+![case3](case3.png)
 {% endinvert %}
 
 > Input: `events = [[1,5,3],[1,5,1],[6,6,5]]`

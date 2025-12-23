@@ -21,7 +21,7 @@ Return _an edge that can be removed so that the resulting graph is a rooted tree
 **Example 1:**
 
 {% invert %}
-![case1](assets/685-redundant-connection-ii/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `edges = [[1,2],[1,3],[2,3]]`
@@ -30,7 +30,7 @@ Return _an edge that can be removed so that the resulting graph is a rooted tree
 **Example 2:**
 
 {% invert %}
-![case2](assets/685-redundant-connection-ii/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `edges = [[1,2],[2,3],[3,4],[4,1],[1,5]]`

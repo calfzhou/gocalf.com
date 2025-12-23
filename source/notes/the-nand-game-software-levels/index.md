@@ -182,7 +182,7 @@ So `I = ci | lt | eq | gt = 0x8007` (i.e. `JMP`).
 
 {% invert %}
 
-![|800](assets/the-nand-game-software-levels/20250617-005346.png)
+![|800](20250617-005346.png)
 
 {% endinvert %}
 
@@ -864,7 +864,7 @@ A = 0x51F0
 *A = D
 ```
 
-![my logo](assets/the-nand-game-software-levels/20250618-214751.png)
+![my logo](20250618-214751.png)
 
 ### Network
 
@@ -1151,7 +1151,7 @@ Pop two values from stack, subtract the first from the second, and then push the
 
 {% invert %}
 
-![|120](assets/the-nand-game-software-levels/20250622-224209.png)
+![|120](20250622-224209.png)
 
 {% endinvert %}
 
@@ -1321,7 +1321,7 @@ sub
 
 {% invert %}
 
-![|480](assets/the-nand-game-software-levels/20250622-215112.png)
+![|480](20250622-215112.png)
 
 {% endinvert %}
 
@@ -1358,7 +1358,7 @@ Pop the two top values from the stack and compare them. If the first is greater 
 
 {% invert %}
 
-![|120](assets/the-nand-game-software-levels/20250622-223615.png)
+![|120](20250622-223615.png)
 
 {% endinvert %}
 

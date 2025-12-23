@@ -20,7 +20,7 @@ Implement the `Solution` class:
 **Example 1:**
 
 {% invert %}
-![case1](assets/382-linked-list-random-node/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input

@@ -19,7 +19,7 @@ Given the integer array `position` and the integer `m`. Return _the required for
 **Example 1:**
 
 {% invert %}
-![case1](assets/1552-magnetic-force-between-two-balls/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `position = [1,2,3,4,7], m = 3`

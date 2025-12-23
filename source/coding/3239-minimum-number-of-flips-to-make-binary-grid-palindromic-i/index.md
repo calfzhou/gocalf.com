@@ -24,7 +24,7 @@ Return the **minimum** number of cells that need to be flipped to make **either*
 > Output: `2`
 > Explanation:
 > {% invert %}
-![case1](assets/3239-minimum-number-of-flips-to-make-binary-grid-palindromic-i/case1.png)
+![case1](case1.png)
 {% endinvert %}
 > Flipping the highlighted cells makes all the rows palindromic.
 
@@ -34,7 +34,7 @@ Return the **minimum** number of cells that need to be flipped to make **either*
 > Output: `1`
 > Explanation:
 > {% invert %}
-![case2](assets/3239-minimum-number-of-flips-to-make-binary-grid-palindromic-i/case2.png)
+![case2](case2.png)
 {% endinvert %}
 > Flipping the highlighted cell makes all the columns palindromic.
 

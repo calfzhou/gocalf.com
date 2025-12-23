@@ -14,7 +14,7 @@ Given an integer `rowIndex`, return the `rowIndexᵗʰ` (**0-indexed**) row of t
 In **Pascal's triangle**, each number is the sum of the two numbers directly above it as shown:
 
 {% invert %}
-![pascal](assets/119-pascals-triangle-ii/pascal.gif)
+![pascal](pascal.gif)
 {% endinvert %}
 
 <https://leetcode.cn/problems/pascals-triangle-ii/>

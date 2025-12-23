@@ -34,7 +34,7 @@ The given node will always be the first node with `val = 1`. You must return the
 **Example 1:**
 
 {% invert %}
-![case1](assets/133-clone-graph/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `adjList = [[2,4],[1,3],[2,4],[1,3]]`
@@ -48,7 +48,7 @@ The given node will always be the first node with `val = 1`. You must return the
 **Example 2:**
 
 {% invert %}
-![case2](assets/133-clone-graph/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `adjList = [[]]`

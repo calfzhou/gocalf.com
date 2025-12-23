@@ -22,7 +22,7 @@ Implement the `OrderedStream` class:
 **Example 1:**
 
 {% invert %}
-![case1](assets/1656-design-an-ordered-stream/case1.gif)
+![case1](case1.gif)
 {% endinvert %}
 
 > Input

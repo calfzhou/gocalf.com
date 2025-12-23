@@ -17,7 +17,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 **Example 1:**
 
 {% invert %}
-![case1](assets/2-add-two-numbers/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `l1 = [2,4,3], l2 = [5,6,4]`

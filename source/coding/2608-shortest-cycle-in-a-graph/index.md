@@ -19,7 +19,7 @@ A cycle is a path that starts and ends at the same node, and each edge in the pa
 **Example 1:**
 
 {% invert %}
-![case1](assets/2608-shortest-cycle-in-a-graph/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `n = 7, edges = [[0,1],[1,2],[2,0],[3,4],[4,5],[5,6],[6,3]]`
@@ -29,7 +29,7 @@ A cycle is a path that starts and ends at the same node, and each edge in the pa
 **Example 2:**
 
 {% invert %}
-![case2](assets/2608-shortest-cycle-in-a-graph/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `n = 4, edges = [[0,1],[0,2]]`

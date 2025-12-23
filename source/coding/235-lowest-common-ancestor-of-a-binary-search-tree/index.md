@@ -17,7 +17,7 @@ According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/
 **Example 1:**
 
 {% invert %}
-![case1](assets/235-lowest-common-ancestor-of-a-binary-search-tree/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8`
@@ -27,7 +27,7 @@ According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/
 **Example 2:**
 
 {% invert %}
-![case2](assets/235-lowest-common-ancestor-of-a-binary-search-tree/case1.png)
+![case2](case1.png)
 {% endinvert %}
 
 > Input: `root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4`

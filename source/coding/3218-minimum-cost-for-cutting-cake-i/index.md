@@ -36,7 +36,7 @@ Return the **minimum** total cost to cut the entire cake into `1 x 1` pieces.
 > Output: `13`
 > Explanation:
 > {% invert %}
-![case1](assets/3218-minimum-cost-for-cutting-cake-i/case1.gif)
+![case1](case1.gif)
 {% endinvert %}
 >
 > - Perform a cut on the vertical line 0 with cost 5, current total cost is 5.

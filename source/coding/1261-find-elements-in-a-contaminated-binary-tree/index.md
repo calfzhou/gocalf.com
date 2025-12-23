@@ -27,7 +27,7 @@ Implement the `FindElements` class:
 **Example 1:**
 
 {% invert %}
-![case1](assets/1261-find-elements-in-a-contaminated-binary-tree/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input
@@ -46,7 +46,7 @@ Implement the `FindElements` class:
 **Example 2:**
 
 {% invert %}
-![case2](assets/1261-find-elements-in-a-contaminated-binary-tree/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input
@@ -66,7 +66,7 @@ Implement the `FindElements` class:
 **Example 3:**
 
 {% invert %}
-![case3](assets/1261-find-elements-in-a-contaminated-binary-tree/case3.png)
+![case3](case3.png)
 {% endinvert %}
 
 > Input

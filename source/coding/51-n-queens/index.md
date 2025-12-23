@@ -19,7 +19,7 @@ Each solution contains a distinct board configuration of the n-queens' placement
 **Example 1:**
 
 {% invert %}
-![case1](assets/51-n-queens/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `n = 4`

@@ -223,6 +223,6 @@ esc    Detach cleanly.
 
 在 macOS iTerm2 里通过 docker 跑 PaoTin++，房间描述会有这种反显的段落：
 
-![20251127-231718.png](assets/mud-client-paotin/20251127-231718.png)
+![20251127-231718.png](20251127-231718.png)
 
 解决：换 `beta` 版本（2025-11-27）的 image。

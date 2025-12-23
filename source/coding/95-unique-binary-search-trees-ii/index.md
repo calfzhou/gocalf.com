@@ -15,7 +15,7 @@ Given an integer `n`, return _all the structurally unique **BST**'s (binary sear
 **Example 1:**
 
 {% invert %}
-![case1](assets/96-unique-binary-search-trees/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `n = 3`

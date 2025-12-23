@@ -15,7 +15,7 @@ Given an `m x n` `matrix`, return _all elements of the_ `matrix` _in spiral orde
 **Example 1:**
 
 {% invert %}
-![case1](assets/54-spiral-matrix/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `matrix = [[1,2,3],[4,5,6],[7,8,9]]`
@@ -24,7 +24,7 @@ Given an `m x n` `matrix`, return _all elements of the_ `matrix` _in spiral orde
 **Example 2:**
 
 {% invert %}
-![case2](assets/54-spiral-matrix/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]`

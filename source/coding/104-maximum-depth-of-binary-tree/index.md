@@ -17,7 +17,7 @@ A binary tree's **maximum depth** is the number of nodes along the longest path
 **Example 1:**
 
 {% invert %}
-![case1](assets/104-maximum-depth-of-binary-tree/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `root = [3,9,20,null,null,15,7]`

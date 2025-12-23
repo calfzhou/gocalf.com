@@ -18,7 +18,7 @@ The distance between two cells sharing a common edge is `1`.
 **Example 1:**
 
 {% invert %}
-![case1](assets/542-01-matrix/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `mat = [[0,0,0],[0,1,0],[0,0,0]]`
@@ -27,7 +27,7 @@ The distance between two cells sharing a common edge is `1`.
 **Example 2:**
 
 {% invert %}
-![case2](assets/542-01-matrix/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `mat = [[0,0,0],[0,1,0],[1,1,1]]`

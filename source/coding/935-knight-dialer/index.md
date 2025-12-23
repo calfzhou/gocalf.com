@@ -13,11 +13,11 @@ The chess knight has a **unique movement**, it may move two squares vertically 
 
 A chess knight can move as indicated in the chess diagram below:
 
-![board](assets/935-knight-dialer/board.png)
+![board](board.png)
 
 We have a chess knight and a phone pad as shown below, the knight **can only stand on a numeric cell** (i.e. blue cell).
 
-![dailer](assets/935-knight-dialer/dailer.png)
+![dailer](dailer.png)
 
 Given an integer `n`, return how many distinct phone numbers of length `n` we can dial.
 

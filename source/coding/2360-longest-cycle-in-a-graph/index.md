@@ -21,7 +21,7 @@ A cycle is a path that starts and ends at the **same** node.
 **Example 1:**
 
 {% invert %}
-![case1](assets/2360-longest-cycle-in-a-graph/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `edges = [3,3,4,2,3]`
@@ -32,7 +32,7 @@ A cycle is a path that starts and ends at the **same** node.
 **Example 2:**
 
 {% invert %}
-![case2](assets/2360-longest-cycle-in-a-graph/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `edges = [2,-1,3,1]`

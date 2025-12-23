@@ -26,7 +26,7 @@ SoC，是 System on Chip 的缩写，翻译过来就是系统级芯片，也有�
 
 ESP 产品主要有芯片（Soc）、模组（Module）以及开发板三种形式。它们是层层包含关系，如下图，从内到外分别是 Soc，Module 和整个开发板。
 
-![芯片-模组-开发板](assets/espressif-esp32-mcu/20251109-213950.png)
+![芯片-模组-开发板](20251109-213950.png)
 
 ## 乐鑫科技芯片
 
@@ -82,9 +82,9 @@ ESP 产品主要有芯片（Soc）、模组（Module）以及开发板三种形�
 芯片命名规则：
 
 {% invert %}
-![ESP32 芯片命名规则](assets/espressif-esp32-mcu/20251109-225141.png)
+![ESP32 芯片命名规则](20251109-225141.png)
 
-![ESP32-S3 芯片命名规则](assets/espressif-esp32-mcu/20251109-225154.png)
+![ESP32-S3 芯片命名规则](20251109-225154.png)
 {% endinvert %}
 
 ## 乐鑫科技模组

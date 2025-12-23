@@ -19,7 +19,7 @@ Return _an edge that can be removed so that the resulting graph is a tree of_ `n
 **Example 1:**
 
 {% invert %}
-![case1](assets/684-redundant-connection/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `edges = [[1,2],[1,3],[2,3]]`
@@ -28,7 +28,7 @@ Return _an edge that can be removed so that the resulting graph is a tree of_ `n
 **Example 2:**
 
 {% invert %}
-![case2](assets/684-redundant-connection/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `edges = [[1,2],[2,3],[3,4],[1,4],[1,5]]`

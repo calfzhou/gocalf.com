@@ -27,15 +27,15 @@ Return an array `answer` where for each `i` in the range `[0, queries.length - 1
 > Output: `[3,2,1]`
 > Explanation:
 > {% invert %}
-![case1-1](assets/3243-shortest-distance-after-road-addition-queries-i/case1-1.png)
+![case1-1](case1-1.png)
 {% endinvert %}
 > After the addition of the road from 2 to 4, the length of the shortest path from 0 to 4 is 3.
 > {% invert %}
-![case1-2](assets/3243-shortest-distance-after-road-addition-queries-i/case1-2.png)
+![case1-2](case1-2.png)
 {% endinvert %}
 > After the addition of the road from 0 to 2, the length of the shortest path from 0 to 4 is 2.
 > {% invert %}
-![case1-3](assets/3243-shortest-distance-after-road-addition-queries-i/case1-3.png)
+![case1-3](case1-3.png)
 {% endinvert %}
 > After the addition of the road from 0 to 4, the length of the shortest path from 0 to 4 is 1.
 
@@ -45,11 +45,11 @@ Return an array `answer` where for each `i` in the range `[0, queries.length - 1
 > Output: `[1,1]`
 > Explanation:
 > {% invert %}
-![case2-1](assets/3243-shortest-distance-after-road-addition-queries-i/case2-1.png)
+![case2-1](case2-1.png)
 {% endinvert %}
 > After the addition of the road from 0 to 3, the length of the shortest path from 0 to 3 is 1.
 > {% invert %}
-![case2-2](assets/3243-shortest-distance-after-road-addition-queries-i/case2-2.png)
+![case2-2](case2-2.png)
 {% endinvert %}
 > After the addition of the road from 0 to 2, the length of the shortest path remains 1.
 

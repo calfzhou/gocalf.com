@@ -38,7 +38,7 @@ An **ancestor** of a node is any node on the path from the root to that node (ex
 **Example 1:**
 
 {% invert %}
-![case1](assets/1719-number-of-ways-to-reconstruct-a-tree/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `pairs = [[1,2],[2,3]]`
@@ -48,7 +48,7 @@ An **ancestor** of a node is any node on the path from the root to that node (ex
 **Example 2:**
 
 {% invert %}
-![case2](assets/1719-number-of-ways-to-reconstruct-a-tree/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `pairs = [[1,2],[2,3],[1,3]]`

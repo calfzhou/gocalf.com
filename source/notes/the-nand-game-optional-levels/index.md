@@ -166,7 +166,7 @@ Shift all bit values one position to the left. The lowest bit in output is set t
 
 This is equivalent to multiplying with 2.
 
-![|480](assets/the-nand-game-optional-levels/20250624-225936.png)
+![|480](20250624-225936.png)
 
 👍 Totally 0c0n!
 
@@ -176,7 +176,7 @@ Shift all bit values one position to the right. The highest bit in output is set
 
 This is equivalent to dividing by 2 for an unsigned number.
 
-![|480](assets/the-nand-game-optional-levels/20250624-230234.png)
+![|480](20250624-230234.png)
 
 👍 Totally 0c0n!
 
@@ -186,7 +186,7 @@ Shift all bit values one position to the right, but the highest bit should retai
 
 This is equivalent to diving by 2 for a signed number.
 
-![|480](assets/the-nand-game-optional-levels/20250624-230509.png)
+![|480](20250624-230509.png)
 
 👍 Totally 0c0n!
 
@@ -290,7 +290,7 @@ Multiply two positive numbers. Overflow bits should be discarded.
 
 实在是摆放太费劲。
 
-![|1024](assets/the-nand-game-optional-levels/20250628-151123.png)
+![|1024](20250628-151123.png)
 
 ❓ Totally 46c3184n:
 
@@ -326,7 +326,7 @@ In the packed format:
 
 Normalized significand means the 10-bit significand is assumed to be prefixed with a 1, unless the exponent is 0. In the unpacked format, this 1 should be inserted so we get an 11-digit significand.
 
-![|480](assets/the-nand-game-optional-levels/20250628-172129.png)
+![|480](20250628-172129.png)
 
 ❓ Totally 2c47n:
 
@@ -367,7 +367,7 @@ Note: Since the product of multiplying two 11-bit values is 22 bits, this level 
 
 Note: The use of exponent bias seems to just complicate things here. But usually it makes the logic simpler because it avoids negative exponent value. So, in general it is an acceptable trade-off in the design.
 
-![|480](assets/the-nand-game-optional-levels/20250628-181040.png)
+![|480](20250628-181040.png)
 
 ❓ Totally 5c357n:
 
@@ -405,7 +405,7 @@ The input significand (**sf**) is either 11 or 12 binary digits.
 
 In case it is 12 digits, it should be shifted to 11 digits and the least significant bit discarded and the exponent should increase with 1.
 
-![|480](assets/the-nand-game-optional-levels/20250628-185258.png)
+![|480](20250628-185258.png)
 
 ❓ Totally 2c208n:
 
@@ -424,7 +424,7 @@ If the exponent (exp) is outside the range 0-30 (00-1e in hexadecimal) it should
 
 如果 **exp** 的高 11 位不全为零，输出 0x1f。否则直接输出 **exp** 即可，因为当 **exp** 等于 0x1f 的时候，输出的也刚好是 0x1f。
 
-![|480](assets/the-nand-game-optional-levels/20250628-200727.png)
+![|480](20250628-200727.png)
 
 ❓ Totally 2c110n:
 
@@ -449,7 +449,7 @@ Output:
 - **asf** significand of the A input, adjusted to the shared exponent.
 - **bsf** significand of the B input, adjusted to the shared exponent.
 
-![|480](assets/the-nand-game-optional-levels/20250628-202305.png)
+![|480](20250628-202305.png)
 
 ❓ Totally 5c1059n:
 
@@ -519,7 +519,7 @@ The **op**-flag determines the operation:
 
 可以得到 `O.sg = xor(A.sg, is-neg(X))`，`O.M = select16(s=is-neg(X), D1=-X, D0=X)`。
 
-![|480](assets/the-nand-game-optional-levels/20250628-214437.png)
+![|480](20250628-214437.png)
 
 ❓ Totally 8c606n (**is neg** not counting):
 
@@ -544,7 +544,7 @@ Assume the input is non-zero and at most 11 digits.
 
 实际上就是先判断 **I.sf** 的从 bit 10 开始有几个连续的 0，设有 n 个连续的 0，那么 **O\.sf** 就等于 **I\.sf** 左移 n 位，`O.exp = I.exp - n`。
 
-![|800](assets/the-nand-game-optional-levels/20250629-005516.png)
+![|800](20250629-005516.png)
 
 ❓ Totally 51c2789n:
 
@@ -576,7 +576,7 @@ If the exponent after normalization is outside of the range 0-31 (ie. what can b
 
 搞清楚三个 components 分别做什么操作，注意顺序。
 
-![|320](assets/the-nand-game-optional-levels/20250629-094129.png)
+![|320](20250629-094129.png)
 
 ❓ Totally 3c3107n:
 
@@ -594,7 +594,7 @@ If the exponent after normalization is outside of the range 0-31 (ie. what can b
 
 Multiply two floating-point numbers in the 16-bit packed representation.
 
-![|320](assets/the-nand-game-optional-levels/20250629-094806.png)
+![|320](20250629-094806.png)
 
 ❓ Totally 4c3558n:
 
@@ -619,7 +619,7 @@ The **op**-flag determines the operation:
 |0|A + B|
 |1|A - B|
 
-![|320](assets/the-nand-game-optional-levels/20250629-095531.png)
+![|320](20250629-095531.png)
 
 ❓ Totally 5c5319n（❓不应该是 4866 么❓）:
 
@@ -659,7 +659,7 @@ To make all this work, we need:
 
 计数器到 256 的时候，也就是 bit 8 为 1。将 bit 8 输出到 **tr**，同时接到计数器的 **st** 重置计数器。因为重置操作需要消耗一个 clock cycle，需要直接重置为 1。
 
-![|320](assets/the-nand-game-optional-levels/20250629-101649.png)
+![|320](20250629-101649.png)
 
 ❓ Totally 2c387n:
 
@@ -724,7 +724,7 @@ Output:
 
 **IR** 就直接取 **I\.sw** 和 **I\.tt** 作为最低两位即可。
 
-![|480](assets/the-nand-game-optional-levels/20250629-220720.png)
+![|480](20250629-220720.png)
 
 ❓ Totally 5c18n:
 
@@ -776,7 +776,7 @@ The effect of the input flags on what get stored where:
 
 **R** 可以写入三种不同的值。先在 **X** 和 **X0** 之间选择，可得 `select16(s=sw, D1=X0, D0=X)`。而当 `sw and inv md` 为 1 时，应取 **Rb**，即 `select16(s=(sw and inv md), D1=Rb, D0=select16(s=sw, D1=X0, D0=X))`。**R** 的可写入时机为 `sw or (st and inv sb)`。
 
-![|480](assets/the-nand-game-optional-levels/20250629-224957.png)
+![|480](20250629-224957.png)
 
 ❓ Totally 13c553n:
 
@@ -806,7 +806,7 @@ On interrupt (when **sw**=1 and **md**=1), the number `0` is stored in PC.
 
 貌似 register 的 **st** 始终为 1。
 
-![|320](assets/the-nand-game-optional-levels/20250630-210445.png)
+![|320](20250630-210445.png)
 
 ❓ Totally 4c763n:
 
@@ -848,7 +848,7 @@ When **sw**=1 and **mode**=1, these values are stored in the registers:
 
 sb、sw、md、cl 都对应接线即可。st 按照要求分别接 a、d、m 和 j。X0 分别接 Ab、IR 和全零（留空）。
 
-![|800](assets/the-nand-game-optional-levels/20250630-213614.png)
+![|800](20250630-213614.png)
 
 ❓ Totally 4c2212n ❓怎么算的❓:
 
@@ -877,7 +877,7 @@ The output **I** is the value stored at the PC address given by **pc0** and�
 
 跟之前的 RAM 差不多，switch 和 select-16 都增加一层（因为这次有四个 register），再给输出 **I** 来一组 select-16。
 
-![|640](assets/the-nand-game-optional-levels/20250630-223152.png)
+![|640](20250630-223152.png)
 
 ❓ Totally 13c1100n:
 
@@ -916,7 +916,7 @@ The 'readonly'-flag (only applicable to A addresses) determine if data can be st
 
 但凡提供一个 1-bit select 也能省事儿很多……
 
-![|1024](assets/the-nand-game-optional-levels/20250701-002908.png)
+![|1024](20250701-002908.png)
 
 ❓ Totally 30c31n + 281600❓ n/KB:
 
@@ -970,7 +970,7 @@ When **sb**=1, the backup register is selected instead.
 
 不是很确定，check solution 中的 case 也很少。
 
-![|800](assets/the-nand-game-optional-levels/20250701-012137.png)
+![|800](20250701-012137.png)
 
 ❓ Totally 15c1764n:
 
@@ -992,7 +992,7 @@ Connect components to create a processor with support for multitasking.
 
 😵‍💫😵‍💫😵‍💫😵‍💫😵‍💫 连连看……
 
-![|800](assets/the-nand-game-optional-levels/20250701-220223.png)
+![|800](20250701-220223.png)
 
 ❓ Totally 5c2722❓n + 7936❓ n/KB:
 

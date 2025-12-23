@@ -90,8 +90,8 @@ Markdown | `post-slug/filename` | {% mark ✗ color:red %} | {% mark ✓ color:g
 
 Syntax | Slug / Src | Hexo | VS Code | Demo
 --|--|--|--|--
-Markdown | `note-slug/filename` | {% mark ✓ color:green %} | {% mark ✓ color:green %} | ![demo](assets/hexo/demo.png)
-Markdown | `notes/note-slug/filename` | {% mark ✗ color:red %} | {% mark ✗ color:red %} | ![demo](assets/notes/hexo/demo.png)
+Markdown | `note-slug/filename` | {% mark ✓ color:green %} | {% mark ✓ color:green %} | ![demo](demo.png)
+Markdown | `notes/note-slug/filename` | {% mark ✗ color:red %} | {% mark ✗ color:red %} | ![demo](hexo/demo.png)
 Markdown | `../notes/note-slug/filename` | {% mark ✓ color:green %} ~~`/../` 没影响~~ | {% mark ✓ color:green %} | ![demo](../notes/assets/hexo/demo.png)
 `asset_img` | `filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %} | {% asset_img assets/demo.png %}
 `asset_img` | `note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有 | {% mark ✓ color:green %} | {% asset_img assets/hexo/demo.png %}

@@ -22,7 +22,7 @@ Return `true` _if it is possible to print the matrix_ `targetGrid`_,_ _otherwise
 **Example 1:**
 
 {% invert %}
-![case1](assets/1591-strange-printer-ii/case1.png)
+![case1](case1.png)
 {% endinvert %}
 
 > Input: `targetGrid = [[1,1,1,1],[1,2,2,1],[1,2,2,1],[1,1,1,1]]`
@@ -31,7 +31,7 @@ Return `true` _if it is possible to print the matrix_ `targetGrid`_,_ _otherwise
 **Example 2:**
 
 {% invert %}
-![case2](assets/1591-strange-printer-ii/case2.png)
+![case2](case2.png)
 {% endinvert %}
 
 > Input: `targetGrid = [[1,1,1,1],[1,1,3,3],[1,1,3,4],[5,5,1,4]]`
