@@ -48,7 +48,7 @@ class Solution:
         """
 ```
 
-{% asset_code coding/assets/48-rotate-image/solution_test.py %}
+{% asset_code coding/48-rotate-image/solution_test.py %}
 
 ## Thoughts
 
@@ -60,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/48-rotate-image/solution.py %}
+{% asset_code coding/48-rotate-image/solution.py %}

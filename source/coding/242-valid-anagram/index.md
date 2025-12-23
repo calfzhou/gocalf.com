@@ -38,7 +38,7 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
 ```
 
-{% asset_code coding/assets/242-valid-anagram/solution_test.py %}
+{% asset_code coding/242-valid-anagram/solution_test.py %}
 
 ## Thoughts
 
@@ -48,4 +48,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/242-valid-anagram/solution.py %}
+{% asset_code coding/242-valid-anagram/solution.py %}

@@ -34,7 +34,7 @@ class Solution:
     def judgeSquareSum(self, c: int) -> bool:
 ```
 
-{% asset_code coding/assets/633-sum-of-square-numbers/solution_test.py %}
+{% asset_code coding/633-sum-of-square-numbers/solution_test.py %}
 
 ## Thoughts
 
@@ -44,4 +44,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/633-sum-of-square-numbers/solution.py %}
+{% asset_code coding/633-sum-of-square-numbers/solution.py %}

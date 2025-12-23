@@ -51,7 +51,7 @@ class Solution:
     def constructFromPrePost(self, preorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
 ```
 
-{% asset_code coding/assets/889-construct-binary-tree-from-preorder-and-postorder-traversal/solution_test.py %}
+{% asset_code coding/889-construct-binary-tree-from-preorder-and-postorder-traversal/solution_test.py %}
 
 ## Thoughts
 
@@ -155,4 +155,4 @@ NLR 已经扫描完毕，而 LRN 的最后一个数字一定等于 NLR 的第一
 
 ## Code
 
-{% asset_code coding/assets/889-construct-binary-tree-from-preorder-and-postorder-traversal/solution.py %}
+{% asset_code coding/889-construct-binary-tree-from-preorder-and-postorder-traversal/solution.py %}

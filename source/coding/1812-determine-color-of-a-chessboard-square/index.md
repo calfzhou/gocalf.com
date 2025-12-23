@@ -48,7 +48,7 @@ class Solution:
     def squareIsWhite(self, coordinates: str) -> bool:
 ```
 
-{% asset_code coding/assets/1812-determine-color-of-a-chessboard-square/solution_test.py %}
+{% asset_code coding/1812-determine-color-of-a-chessboard-square/solution_test.py %}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1812-determine-color-of-a-chessboard-square/solution.py %}
+{% asset_code coding/1812-determine-color-of-a-chessboard-square/solution.py %}

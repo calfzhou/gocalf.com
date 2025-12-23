@@ -50,7 +50,7 @@ class Solution:
     def vowelStrings(self, words: List[str], queries: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/assets/2559-count-vowel-strings-in-ranges/solution_test.py %}
+{% asset_code coding/2559-count-vowel-strings-in-ranges/solution_test.py %}
 
 ## Thoughts
 
@@ -64,4 +64,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/2559-count-vowel-strings-in-ranges/solution.py %}
+{% asset_code coding/2559-count-vowel-strings-in-ranges/solution.py %}

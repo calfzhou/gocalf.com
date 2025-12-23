@@ -59,7 +59,7 @@ class Solution:
     def countGoodArrays(self, n: int, m: int, k: int) -> int:
 ```
 
-{% asset_code coding/assets/3405-count-the-number-of-arrays-with-k-matching-adjacent-elements/solution_test.py %}
+{% asset_code coding/3405-count-the-number-of-arrays-with-k-matching-adjacent-elements/solution_test.py %}
 
 ## Thoughts
 
@@ -97,4 +97,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/3405-count-the-number-of-arrays-with-k-matching-adjacent-elements/solution.py %}
+{% asset_code coding/3405-count-the-number-of-arrays-with-k-matching-adjacent-elements/solution.py %}

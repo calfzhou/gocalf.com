@@ -48,7 +48,7 @@ class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
 ```
 
-{% asset_code coding/assets/1524-number-of-sub-arrays-with-odd-sum/solution_test.py %}
+{% asset_code coding/1524-number-of-sub-arrays-with-odd-sum/solution_test.py %}
 
 ## Thoughts
 
@@ -84,11 +84,11 @@ $$
 
 `O(n)` 空间：
 
-{% asset_code coding/assets/1524-number-of-sub-arrays-with-odd-sum/solution.py %}
+{% asset_code coding/1524-number-of-sub-arrays-with-odd-sum/solution.py %}
 
 `O(1)` 空间：
 
-{% asset_code coding/assets/1524-number-of-sub-arrays-with-odd-sum/solution2.py %}
+{% asset_code coding/1524-number-of-sub-arrays-with-odd-sum/solution2.py %}
 
 ## Another Way
 
@@ -139,4 +139,4 @@ $$
 
 > 这个乘积的数学含义可以再梳理一下。TODO
 
-{% asset_code coding/assets/1524-number-of-sub-arrays-with-odd-sum/solution3.py %}
+{% asset_code coding/1524-number-of-sub-arrays-with-odd-sum/solution3.py %}

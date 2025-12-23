@@ -39,7 +39,7 @@ class Solution:
     def maxSumOfThreeSubarrays(self, nums: List[int], k: int) -> List[int]:
 ```
 
-{% asset_code coding/assets/689-maximum-sum-of-3-non-overlapping-subarrays/solution_test.py %}
+{% asset_code coding/689-maximum-sum-of-3-non-overlapping-subarrays/solution_test.py %}
 
 ## Thoughts
 
@@ -61,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/689-maximum-sum-of-3-non-overlapping-subarrays/solution.py %}
+{% asset_code coding/689-maximum-sum-of-3-non-overlapping-subarrays/solution.py %}

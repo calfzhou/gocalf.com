@@ -61,7 +61,7 @@ class Solution:
     def lexicographicallySmallestArray(self, nums: List[int], limit: int) -> List[int]:
 ```
 
-{% asset_code coding/assets/2948-make-lexicographically-smallest-array-by-swapping-elements/solution_test.py %}
+{% asset_code coding/2948-make-lexicographically-smallest-array-by-swapping-elements/solution_test.py %}
 
 ## Thoughts
 
@@ -79,4 +79,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/2948-make-lexicographically-smallest-array-by-swapping-elements/solution.py %}
+{% asset_code coding/2948-make-lexicographically-smallest-array-by-swapping-elements/solution.py %}

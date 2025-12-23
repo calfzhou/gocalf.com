@@ -54,7 +54,7 @@ class Solution:
     def pickGifts(self, gifts: List[int], k: int) -> int:
 ```
 
-{% asset_code coding/assets/2558-take-gifts-from-the-richest-pile/solution_test.py %}
+{% asset_code coding/2558-take-gifts-from-the-richest-pile/solution_test.py %}
 
 ## Thoughts
 
@@ -68,4 +68,4 @@ Python 内置的 [heapq](https://docs.python.org/3/library/heapq.html) 实现的
 
 ## Code
 
-{% asset_code coding/assets/2558-take-gifts-from-the-richest-pile/solution.py %}
+{% asset_code coding/2558-take-gifts-from-the-richest-pile/solution.py %}

@@ -68,7 +68,7 @@ class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
 ```
 
-{% asset_code coding/assets/141-linked-list-cycle/solution_test.py %}
+{% asset_code coding/141-linked-list-cycle/solution_test.py %}
 
 ## Thoughts
 
@@ -84,4 +84,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/141-linked-list-cycle/solution.py %}
+{% asset_code coding/141-linked-list-cycle/solution.py %}

@@ -51,7 +51,7 @@ class Solution:
     def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
 ```
 
-{% asset_code coding/assets/542-01-matrix/solution_test.py %}
+{% asset_code coding/542-01-matrix/solution_test.py %}
 
 ## Thoughts
 
@@ -82,4 +82,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/542-01-matrix/solution.py %}
+{% asset_code coding/542-01-matrix/solution.py %}

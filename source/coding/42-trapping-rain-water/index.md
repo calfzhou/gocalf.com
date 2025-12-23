@@ -39,7 +39,7 @@ class Solution:
     def trap(self, height: List[int]) -> int:
 ```
 
-{% asset_code coding/assets/42-trapping-rain-water/solution_test.py %}
+{% asset_code coding/42-trapping-rain-water/solution_test.py %}
 
 ## Thoughts
 
@@ -51,6 +51,6 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/42-trapping-rain-water/solution.py %}
+{% asset_code coding/42-trapping-rain-water/solution.py %}
 
 空间复杂度可以降到 `O(1)`，时间复杂度的系数也可以在降低，TODO。

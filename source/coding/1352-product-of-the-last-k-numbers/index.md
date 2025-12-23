@@ -75,7 +75,7 @@ class ProductOfNumbers:
 # param_2 = obj.getProduct(k)
 ```
 
-{% asset_code coding/assets/1352-product-of-the-last-k-numbers/solution_test.py %}
+{% asset_code coding/1352-product-of-the-last-k-numbers/solution_test.py %}
 
 ## Thoughts
 
@@ -87,4 +87,4 @@ class ProductOfNumbers:
 
 ## Code
 
-{% asset_code coding/assets/1352-product-of-the-last-k-numbers/solution.py %}
+{% asset_code coding/1352-product-of-the-last-k-numbers/solution.py %}

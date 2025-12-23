@@ -48,7 +48,7 @@ class Solution:
     def stableMountains(self, height: List[int], threshold: int) -> List[int]:
 ```
 
-{% asset_code coding/assets/3285-find-indices-of-stable-mountains/solution_test.py %}
+{% asset_code coding/3285-find-indices-of-stable-mountains/solution_test.py %}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/3285-find-indices-of-stable-mountains/solution.py %}
+{% asset_code coding/3285-find-indices-of-stable-mountains/solution.py %}

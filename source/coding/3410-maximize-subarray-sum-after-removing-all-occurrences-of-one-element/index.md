@@ -55,7 +55,7 @@ class Solution:
     def maxSubarraySum(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/assets/3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element/solution_test.py %}
+{% asset_code coding/3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element/solution_test.py %}
 
 ## Thoughts
 
@@ -105,4 +105,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element/solution.py %}
+{% asset_code coding/3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element/solution.py %}

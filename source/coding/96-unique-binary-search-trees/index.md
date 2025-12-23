@@ -38,7 +38,7 @@ class Solution:
     def numTrees(self, n: int) -> int:
 ```
 
-{% asset_code coding/assets/96-unique-binary-search-trees/solution_test.py %}
+{% asset_code coding/96-unique-binary-search-trees/solution_test.py %}
 
 ## Thoughts
 
@@ -56,7 +56,7 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/96-unique-binary-search-trees/solution.py %}
+{% asset_code coding/96-unique-binary-search-trees/solution.py %}
 
 ## Math
 
@@ -77,4 +77,4 @@ $$
 
 本题的 n 不是很大，可以直接用 Python 内置的阶乘函数（[`math.factorial`](https://docs.python.org/3/library/math.html#math.factorial)）计算，时间复杂度 `O(n)`，空间复杂度 `O(1)`。如果 n 比较大，也可以参考 [62. Unique Paths](../62-unique-paths/index.md) 中的 [方法](../62-unique-paths/index.md#Math) 计算 $\binom{2n}{n}$。
 
-{% asset_code coding/assets/96-unique-binary-search-trees/solution2.py %}
+{% asset_code coding/96-unique-binary-search-trees/solution2.py %}

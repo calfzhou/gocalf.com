@@ -58,7 +58,7 @@ class Solution:
         """
 ```
 
-{% asset_code coding/assets/143-reorder-list/solution_test.py %}
+{% asset_code coding/143-reorder-list/solution_test.py %}
 
 ## Thoughts
 
@@ -74,4 +74,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/143-reorder-list/solution.py %}
+{% asset_code coding/143-reorder-list/solution.py %}

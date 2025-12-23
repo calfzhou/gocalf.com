@@ -34,7 +34,7 @@ class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
 ```
 
-{% asset_code coding/assets/1287-element-appearing-more-than-25-in-sorted-array/solution_test.py %}
+{% asset_code coding/1287-element-appearing-more-than-25-in-sorted-array/solution_test.py %}
 
 ## Thoughts
 
@@ -55,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1287-element-appearing-more-than-25-in-sorted-array/solution.py %}
+{% asset_code coding/1287-element-appearing-more-than-25-in-sorted-array/solution.py %}

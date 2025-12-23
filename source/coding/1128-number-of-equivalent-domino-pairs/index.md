@@ -37,7 +37,7 @@ class Solution:
     def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/assets/1128-number-of-equivalent-domino-pairs/solution_test.py %}
+{% asset_code coding/1128-number-of-equivalent-domino-pairs/solution_test.py %}
 
 ## Thoughts
 
@@ -49,4 +49,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1128-number-of-equivalent-domino-pairs/solution.py %}
+{% asset_code coding/1128-number-of-equivalent-domino-pairs/solution.py %}

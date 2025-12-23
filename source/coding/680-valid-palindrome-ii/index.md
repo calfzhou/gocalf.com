@@ -40,7 +40,7 @@ class Solution:
     def validPalindrome(self, s: str) -> bool:
 ```
 
-{% asset_code coding/assets/680-valid-palindrome-ii/solution_test.py %}
+{% asset_code coding/680-valid-palindrome-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -52,4 +52,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/680-valid-palindrome-ii/solution.py %}
+{% asset_code coding/680-valid-palindrome-ii/solution.py %}

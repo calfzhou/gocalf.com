@@ -59,7 +59,7 @@ class Solution:
     def minFlips(self, grid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/assets/3239-minimum-number-of-flips-to-make-binary-grid-palindromic-i/solution_test.py %}
+{% asset_code coding/3239-minimum-number-of-flips-to-make-binary-grid-palindromic-i/solution_test.py %}
 
 ## Thoughts
 
@@ -73,4 +73,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/3239-minimum-number-of-flips-to-make-binary-grid-palindromic-i/solution.py %}
+{% asset_code coding/3239-minimum-number-of-flips-to-make-binary-grid-palindromic-i/solution.py %}

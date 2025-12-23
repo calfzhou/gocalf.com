@@ -72,7 +72,7 @@ class OrderedStream:
 # param_1 = obj.insert(idKey,value)
 ```
 
-{% asset_code coding/assets/1656-design-an-ordered-stream/solution_test.py %}
+{% asset_code coding/1656-design-an-ordered-stream/solution_test.py %}
 
 ## Thoughts
 
@@ -82,4 +82,4 @@ class OrderedStream:
 
 ## Code
 
-{% asset_code coding/assets/1656-design-an-ordered-stream/solution.py %}
+{% asset_code coding/1656-design-an-ordered-stream/solution.py %}

@@ -51,7 +51,7 @@ class Solution:
     def makeFancyString(self, s: str) -> str:
 ```
 
-{% asset_code coding/assets/1957-delete-characters-to-make-fancy-string/solution_test.py %}
+{% asset_code coding/1957-delete-characters-to-make-fancy-string/solution_test.py %}
 
 ## Thoughts
 
@@ -59,4 +59,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1957-delete-characters-to-make-fancy-string/solution.py %}
+{% asset_code coding/1957-delete-characters-to-make-fancy-string/solution.py %}

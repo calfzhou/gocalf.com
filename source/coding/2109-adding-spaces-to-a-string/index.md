@@ -54,10 +54,10 @@ class Solution:
     def addSpaces(self, s: str, spaces: List[int]) -> str:
 ```
 
-{% asset_code coding/assets/2109-adding-spaces-to-a-string/solution_test.py %}
+{% asset_code coding/2109-adding-spaces-to-a-string/solution_test.py %}
 
 ## Thoughts
 
 ## Code
 
-{% asset_code coding/assets/2109-adding-spaces-to-a-string/solution.py %}
+{% asset_code coding/2109-adding-spaces-to-a-string/solution.py %}

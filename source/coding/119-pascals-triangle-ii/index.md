@@ -47,7 +47,7 @@ class Solution:
     def getRow(self, rowIndex: int) -> List[int]:
 ```
 
-{% asset_code coding/assets/119-pascals-triangle-ii/solution_test.py %}
+{% asset_code coding/119-pascals-triangle-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -65,4 +65,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/119-pascals-triangle-ii/solution.py %}
+{% asset_code coding/119-pascals-triangle-ii/solution.py %}

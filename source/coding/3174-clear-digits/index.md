@@ -46,7 +46,7 @@ class Solution:
     def clearDigits(self, s: str) -> str:
 ```
 
-{% asset_code coding/assets/3174-clear-digits/solution_test.py %}
+{% asset_code coding/3174-clear-digits/solution_test.py %}
 
 ## Thoughts
 
@@ -58,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/3174-clear-digits/solution.py %}
+{% asset_code coding/3174-clear-digits/solution.py %}

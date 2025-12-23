@@ -55,7 +55,7 @@ class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
 ```
 
-{% asset_code coding/assets/124-binary-tree-maximum-path-sum/solution_test.py %}
+{% asset_code coding/124-binary-tree-maximum-path-sum/solution_test.py %}
 
 ## Thoughts
 
@@ -83,4 +83,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/124-binary-tree-maximum-path-sum/solution.py %}
+{% asset_code coding/124-binary-tree-maximum-path-sum/solution.py %}

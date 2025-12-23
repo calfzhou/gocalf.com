@@ -60,7 +60,7 @@ class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
 ```
 
-{% asset_code coding/assets/145-binary-tree-postorder-traversal/solution_test.py %}
+{% asset_code coding/145-binary-tree-postorder-traversal/solution_test.py %}
 
 ## Thoughts
 
@@ -68,4 +68,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/145-binary-tree-postorder-traversal/solution.py %}
+{% asset_code coding/145-binary-tree-postorder-traversal/solution.py %}

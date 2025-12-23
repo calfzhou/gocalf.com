@@ -52,7 +52,7 @@ class Solution:
     def findShortestCycle(self, n: int, edges: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/assets/2608-shortest-cycle-in-a-graph/solution_test.py %}
+{% asset_code coding/2608-shortest-cycle-in-a-graph/solution_test.py %}
 
 ## Thoughts
 
@@ -76,7 +76,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/2608-shortest-cycle-in-a-graph/solution.py %}
+{% asset_code coding/2608-shortest-cycle-in-a-graph/solution.py %}
 
 ## Faster
 
@@ -86,4 +86,4 @@ class Solution:
 
 最坏时间复杂度是 `O(E * n)`。空间复杂度 `O(n + E)`。
 
-{% asset_code coding/assets/2608-shortest-cycle-in-a-graph/solution2.py %}
+{% asset_code coding/2608-shortest-cycle-in-a-graph/solution2.py %}

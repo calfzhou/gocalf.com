@@ -40,7 +40,7 @@ class Solution:
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
 ```
 
-{% asset_code coding/assets/1092-shortest-common-supersequence/solution_test.py %}
+{% asset_code coding/1092-shortest-common-supersequence/solution_test.py %}
 
 ## Thoughts
 
@@ -62,4 +62,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1092-shortest-common-supersequence/solution.py %}
+{% asset_code coding/1092-shortest-common-supersequence/solution.py %}

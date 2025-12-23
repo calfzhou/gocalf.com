@@ -49,7 +49,7 @@ class Solution:
     def maxScore(self, s: str) -> int:
 ```
 
-{% asset_code coding/assets/1422-maximum-score-after-splitting-a-string/solution_test.py %}
+{% asset_code coding/1422-maximum-score-after-splitting-a-string/solution_test.py %}
 
 ## Thoughts
 
@@ -57,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1422-maximum-score-after-splitting-a-string/solution.py %}
+{% asset_code coding/1422-maximum-score-after-splitting-a-string/solution.py %}

@@ -50,7 +50,7 @@ class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
 ```
 
-{% asset_code coding/assets/743-network-delay-time/solution_test.py %}
+{% asset_code coding/743-network-delay-time/solution_test.py %}
 
 ## Thoughts
 
@@ -68,4 +68,4 @@ class Solution:
 
 > 这里直接借助 Python 自带的 [heapq](https://docs.python.org/3/library/heapq.html) 辅助堆的操作。
 
-{% asset_code coding/assets/743-network-delay-time/solution.py %}
+{% asset_code coding/743-network-delay-time/solution.py %}

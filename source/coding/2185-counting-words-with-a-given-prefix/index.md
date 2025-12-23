@@ -41,10 +41,10 @@ class Solution:
     def prefixCount(self, words: List[str], pref: str) -> int:
 ```
 
-{% asset_code coding/assets/2185-counting-words-with-a-given-prefix/solution_test.py %}
+{% asset_code coding/2185-counting-words-with-a-given-prefix/solution_test.py %}
 
 ## Thoughts
 
 ## Code
 
-{% asset_code coding/assets/2185-counting-words-with-a-given-prefix/solution.py %}
+{% asset_code coding/2185-counting-words-with-a-given-prefix/solution.py %}

@@ -51,7 +51,7 @@ class Solution:
     def findRightInterval(self, intervals: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/assets/436-find-right-interval/solution_test.py %}
+{% asset_code coding/436-find-right-interval/solution_test.py %}
 
 ## Thoughts
 
@@ -61,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/436-find-right-interval/solution.py %}
+{% asset_code coding/436-find-right-interval/solution.py %}

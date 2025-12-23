@@ -55,7 +55,7 @@ class Solution:
     def countKConstraintSubstrings(self, s: str, k: int, queries: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/assets/3261-count-substrings-that-satisfy-k-constraint-ii/solution_test.py %}
+{% asset_code coding/3261-count-substrings-that-satisfy-k-constraint-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -101,4 +101,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/3261-count-substrings-that-satisfy-k-constraint-ii/solution.py %}
+{% asset_code coding/3261-count-substrings-that-satisfy-k-constraint-ii/solution.py %}

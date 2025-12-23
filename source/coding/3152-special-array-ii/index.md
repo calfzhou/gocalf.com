@@ -50,7 +50,7 @@ class Solution:
     def isArraySpecial(self, nums: List[int], queries: List[List[int]]) -> List[bool]:
 ```
 
-{% asset_code coding/assets/3152-special-array-ii/solution_test.py %}
+{% asset_code coding/3152-special-array-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -78,4 +78,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/3152-special-array-ii/solution.py %}
+{% asset_code coding/3152-special-array-ii/solution.py %}

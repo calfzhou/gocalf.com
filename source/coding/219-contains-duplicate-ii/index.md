@@ -40,7 +40,7 @@ class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
 ```
 
-{% asset_code coding/assets/219-contains-duplicate-ii/solution_test.py %}
+{% asset_code coding/219-contains-duplicate-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -48,4 +48,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/219-contains-duplicate-ii/solution.py %}
+{% asset_code coding/219-contains-duplicate-ii/solution.py %}

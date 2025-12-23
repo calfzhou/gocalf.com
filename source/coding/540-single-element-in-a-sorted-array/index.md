@@ -38,7 +38,7 @@ class Solution:
     def singleNonDuplicate(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/assets/540-single-element-in-a-sorted-array/solution_test.py %}
+{% asset_code coding/540-single-element-in-a-sorted-array/solution_test.py %}
 
 ## Thoughts
 
@@ -58,4 +58,4 @@ n 一定是个奇数，假设 `n = 2 * m + 1`
 
 ## Code
 
-{% asset_code coding/assets/540-single-element-in-a-sorted-array/solution.py %}
+{% asset_code coding/540-single-element-in-a-sorted-array/solution.py %}

@@ -45,7 +45,7 @@ class Solution:
     def nonSpecialCount(self, l: int, r: int) -> int:
 ```
 
-{% asset_code coding/assets/3233-find-the-count-of-numbers-which-are-not-special/solution_test.py %}
+{% asset_code coding/3233-find-the-count-of-numbers-which-are-not-special/solution_test.py %}
 
 ## Thoughts
 
@@ -65,8 +65,8 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/3233-find-the-count-of-numbers-which-are-not-special/solution.py %}
+{% asset_code coding/3233-find-the-count-of-numbers-which-are-not-special/solution.py %}
 
 在 LeetCode 上提交的话，一个可选的作 bú 弊 shì 方案是把质数表缓存到 `Solution.nonSpecialCount` 之外，甚至直接提前先算好整个质数表（上限取 $\lfloor\sqrt{1e9}\rfloor=31622$ 即可），并进一步计算出所有的 $\pi(n)$（小于 n 的质数个数），在 `Solution.nonSpecialCount` 里用常数时间计算 $\pi(r'+1)-\pi(l')$ 即可。
 
-{% asset_code coding/assets/3233-find-the-count-of-numbers-which-are-not-special/solution2.py %}
+{% asset_code coding/3233-find-the-count-of-numbers-which-are-not-special/solution2.py %}

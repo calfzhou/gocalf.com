@@ -53,10 +53,10 @@ class Solution:
     def compress(self, chars: List[str]) -> int:
 ```
 
-{% asset_code coding/assets/443-string-compression/solution_test.py %}
+{% asset_code coding/443-string-compression/solution_test.py %}
 
 ## Thoughts
 
 ## Code
 
-{% asset_code coding/assets/443-string-compression/solution.py %}
+{% asset_code coding/443-string-compression/solution.py %}

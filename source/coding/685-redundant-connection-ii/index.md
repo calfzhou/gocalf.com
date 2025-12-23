@@ -51,7 +51,7 @@ class Solution:
     def findRedundantDirectedConnection(self, edges: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/assets/685-redundant-connection-ii/solution_test.py %}
+{% asset_code coding/685-redundant-connection-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -73,4 +73,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/685-redundant-connection-ii/solution.py %}
+{% asset_code coding/685-redundant-connection-ii/solution.py %}

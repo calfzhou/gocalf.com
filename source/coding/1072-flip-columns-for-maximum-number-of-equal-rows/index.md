@@ -48,7 +48,7 @@ class Solution:
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/assets/1072-flip-columns-for-maximum-number-of-equal-rows/solution_test.py %}
+{% asset_code coding/1072-flip-columns-for-maximum-number-of-equal-rows/solution_test.py %}
 
 ## Thoughts
 
@@ -62,4 +62,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1072-flip-columns-for-maximum-number-of-equal-rows/solution.py %}
+{% asset_code coding/1072-flip-columns-for-maximum-number-of-equal-rows/solution.py %}

@@ -42,7 +42,7 @@ class Solution:
     def generateTheString(self, n: int) -> str:
 ```
 
-{% asset_code coding/assets/1347-generate-a-string-with-characters-that-have-odd-counts/solution_test.py %}
+{% asset_code coding/1347-generate-a-string-with-characters-that-have-odd-counts/solution_test.py %}
 
 ## Thoughts
 
@@ -50,4 +50,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1347-generate-a-string-with-characters-that-have-odd-counts/solution.py %}
+{% asset_code coding/1347-generate-a-string-with-characters-that-have-odd-counts/solution.py %}

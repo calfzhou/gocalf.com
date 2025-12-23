@@ -35,7 +35,7 @@ class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
 ```
 
-{% asset_code coding/assets/349-intersection-of-two-arrays/solution_test.py %}
+{% asset_code coding/349-intersection-of-two-arrays/solution_test.py %}
 
 ## Thoughts
 
@@ -45,4 +45,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/349-intersection-of-two-arrays/solution.py %}
+{% asset_code coding/349-intersection-of-two-arrays/solution.py %}

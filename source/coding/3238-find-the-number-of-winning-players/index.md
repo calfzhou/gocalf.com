@@ -59,7 +59,7 @@ class Solution:
     def winningPlayerCount(self, n: int, pick: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/assets/3238-find-the-number-of-winning-players/solution_test.py %}
+{% asset_code coding/3238-find-the-number-of-winning-players/solution_test.py %}
 
 ## Thoughts
 
@@ -69,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/3238-find-the-number-of-winning-players/solution.py %}
+{% asset_code coding/3238-find-the-number-of-winning-players/solution.py %}

@@ -53,7 +53,7 @@ class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
 ```
 
-{% asset_code coding/assets/226-invert-binary-tree/solution_test.py %}
+{% asset_code coding/226-invert-binary-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -61,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/226-invert-binary-tree/solution.py %}
+{% asset_code coding/226-invert-binary-tree/solution.py %}

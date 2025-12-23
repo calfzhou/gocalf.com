@@ -47,7 +47,7 @@ class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
 ```
 
-{% asset_code coding/assets/62-unique-paths/solution_test.py %}
+{% asset_code coding/62-unique-paths/solution_test.py %}
 
 ## Thoughts
 
@@ -66,7 +66,7 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/62-unique-paths/solution.py %}
+{% asset_code coding/62-unique-paths/solution.py %}
 
 ## Math
 
@@ -88,4 +88,4 @@ $$
 
 整体时间复杂度为 `O(min{m,n})`，空间复杂度 `O(1)`。
 
-{% asset_code coding/assets/62-unique-paths/solution_math.py %}
+{% asset_code coding/62-unique-paths/solution_math.py %}

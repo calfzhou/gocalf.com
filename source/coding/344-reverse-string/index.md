@@ -39,7 +39,7 @@ class Solution:
         """
 ```
 
-{% asset_code coding/assets/344-reverse-string/solution_test.py %}
+{% asset_code coding/344-reverse-string/solution_test.py %}
 
 ## Thoughts
 
@@ -49,4 +49,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/344-reverse-string/solution.py %}
+{% asset_code coding/344-reverse-string/solution.py %}

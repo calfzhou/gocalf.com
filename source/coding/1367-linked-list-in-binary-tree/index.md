@@ -65,7 +65,7 @@ class Solution:
     def isSubPath(self, head: Optional[ListNode], root: Optional[TreeNode]) -> bool:
 ```
 
-{% asset_code coding/assets/1367-linked-list-in-binary-tree/solution_test.py %}
+{% asset_code coding/1367-linked-list-in-binary-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -77,4 +77,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1367-linked-list-in-binary-tree/solution.py %}
+{% asset_code coding/1367-linked-list-in-binary-tree/solution.py %}

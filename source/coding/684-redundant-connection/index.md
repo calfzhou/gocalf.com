@@ -51,7 +51,7 @@ class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/assets/684-redundant-connection/solution_test.py %}
+{% asset_code coding/684-redundant-connection/solution_test.py %}
 
 ## Thoughts
 
@@ -69,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/684-redundant-connection/solution.py %}
+{% asset_code coding/684-redundant-connection/solution.py %}

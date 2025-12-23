@@ -54,7 +54,7 @@ class Solution:
     def firstCompleteIndex(self, arr: List[int], mat: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/assets/2661-first-completely-painted-row-or-column/solution_test.py %}
+{% asset_code coding/2661-first-completely-painted-row-or-column/solution_test.py %}
 
 ## Thoughts
 
@@ -66,4 +66,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/2661-first-completely-painted-row-or-column/solution.py %}
+{% asset_code coding/2661-first-completely-painted-row-or-column/solution.py %}

@@ -62,7 +62,7 @@ class Solution:
     def movesToChessboard(self, board: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/assets/782-transform-to-chessboard/solution_test.py %}
+{% asset_code coding/782-transform-to-chessboard/solution_test.py %}
 
 ## Thoughts
 
@@ -88,4 +88,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/782-transform-to-chessboard/solution.py %}
+{% asset_code coding/782-transform-to-chessboard/solution.py %}

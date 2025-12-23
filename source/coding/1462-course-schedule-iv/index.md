@@ -67,7 +67,7 @@ class Solution:
     def checkIfPrerequisite(self, numCourses: int, prerequisites: List[List[int]], queries: List[List[int]]) -> List[bool]:
 ```
 
-{% asset_code coding/assets/1462-course-schedule-iv/solution_test.py %}
+{% asset_code coding/1462-course-schedule-iv/solution_test.py %}
 
 ## Thoughts
 
@@ -94,4 +94,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/1462-course-schedule-iv/solution.py %}
+{% asset_code coding/1462-course-schedule-iv/solution.py %}

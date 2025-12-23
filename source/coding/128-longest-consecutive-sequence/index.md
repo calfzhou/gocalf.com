@@ -37,7 +37,7 @@ class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/assets/128-longest-consecutive-sequence/solution_test.py %}
+{% asset_code coding/128-longest-consecutive-sequence/solution_test.py %}
 
 ## Thoughts
 
@@ -63,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/128-longest-consecutive-sequence/solution.py %}
+{% asset_code coding/128-longest-consecutive-sequence/solution.py %}

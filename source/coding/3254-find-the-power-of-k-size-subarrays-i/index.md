@@ -59,7 +59,7 @@ class Solution:
     def resultsArray(self, nums: List[int], k: int) -> List[int]:
 ```
 
-{% asset_code coding/assets/3254-find-the-power-of-k-size-subarrays-i/solution_test.py %}
+{% asset_code coding/3254-find-the-power-of-k-size-subarrays-i/solution_test.py %}
 
 ## Thoughts
 
@@ -69,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/3254-find-the-power-of-k-size-subarrays-i/solution.py %}
+{% asset_code coding/3254-find-the-power-of-k-size-subarrays-i/solution.py %}

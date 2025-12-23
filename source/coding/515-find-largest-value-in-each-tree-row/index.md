@@ -44,7 +44,7 @@ class Solution:
     def largestValues(self, root: Optional[TreeNode]) -> List[int]:
 ```
 
-{% asset_code coding/assets/515-find-largest-value-in-each-tree-row/solution_test.py %}
+{% asset_code coding/515-find-largest-value-in-each-tree-row/solution_test.py %}
 
 ## Thoughts
 
@@ -52,4 +52,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/515-find-largest-value-in-each-tree-row/solution.py %}
+{% asset_code coding/515-find-largest-value-in-each-tree-row/solution.py %}

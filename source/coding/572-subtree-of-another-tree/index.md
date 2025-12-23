@@ -52,7 +52,7 @@ class Solution:
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
 ```
 
-{% asset_code coding/assets/572-subtree-of-another-tree/solution_test.py %}
+{% asset_code coding/572-subtree-of-another-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -66,6 +66,6 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/572-subtree-of-another-tree/solution.py %}
+{% asset_code coding/572-subtree-of-another-tree/solution.py %}
 
 > 似乎用栈并不比直接用递归快。

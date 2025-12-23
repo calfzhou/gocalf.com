@@ -37,7 +37,7 @@ class Solution:
     def sortArrayByParity(self, nums: List[int]) -> List[int]:
 ```
 
-{% asset_code coding/assets/905-sort-array-by-parity/solution_test.py %}
+{% asset_code coding/905-sort-array-by-parity/solution_test.py %}
 
 ## Thoughts
 
@@ -47,4 +47,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/905-sort-array-by-parity/solution.py %}
+{% asset_code coding/905-sort-array-by-parity/solution.py %}

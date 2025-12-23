@@ -34,7 +34,7 @@ class Solution:
     def getSum(self, a: int, b: int) -> int:
 ```
 
-{% asset_code coding/assets/371-sum-of-two-integers/solution_test.py %}
+{% asset_code coding/371-sum-of-two-integers/solution_test.py %}
 
 ## Thoughts
 
@@ -61,4 +61,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/371-sum-of-two-integers/solution.py %}
+{% asset_code coding/371-sum-of-two-integers/solution.py %}

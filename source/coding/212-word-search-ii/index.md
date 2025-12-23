@@ -50,7 +50,7 @@ class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
 ```
 
-{% asset_code coding/assets/212-word-search-ii/solution_test.py %}
+{% asset_code coding/212-word-search-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -70,4 +70,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/212-word-search-ii/solution.py %}
+{% asset_code coding/212-word-search-ii/solution.py %}

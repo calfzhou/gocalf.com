@@ -46,7 +46,7 @@ class Solution:
     def maxAscendingSum(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/assets/1800-maximum-ascending-subarray-sum/solution_test.py %}
+{% asset_code coding/1800-maximum-ascending-subarray-sum/solution_test.py %}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1800-maximum-ascending-subarray-sum/solution.py %}
+{% asset_code coding/1800-maximum-ascending-subarray-sum/solution.py %}

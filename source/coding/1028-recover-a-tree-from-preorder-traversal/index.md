@@ -63,7 +63,7 @@ class Solution:
     def recoverFromPreorder(self, traversal: str) -> Optional[TreeNode]:
 ```
 
-{% asset_code coding/assets/1028-recover-a-tree-from-preorder-traversal/solution_test.py %}
+{% asset_code coding/1028-recover-a-tree-from-preorder-traversal/solution_test.py %}
 
 ## Thoughts
 
@@ -75,8 +75,8 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1028-recover-a-tree-from-preorder-traversal/solution.py %}
+{% asset_code coding/1028-recover-a-tree-from-preorder-traversal/solution.py %}
 
 Test cases for solution inner methods:
 
-{% asset_code coding/assets/1028-recover-a-tree-from-preorder-traversal/solution_inner_test.py %}
+{% asset_code coding/1028-recover-a-tree-from-preorder-traversal/solution_inner_test.py %}

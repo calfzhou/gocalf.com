@@ -71,7 +71,7 @@ class Solution:
     def modifiedGraphEdges(self, n: int, edges: List[List[int]], source: int, destination: int, target: int) -> List[List[int]]:
 ```
 
-{% asset_code coding/assets/2699-modify-graph-edge-weights/solution_test.py %}
+{% asset_code coding/2699-modify-graph-edge-weights/solution_test.py %}
 
 ## Thoughts
 
@@ -107,4 +107,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/2699-modify-graph-edge-weights/solution.py %}
+{% asset_code coding/2699-modify-graph-edge-weights/solution.py %}

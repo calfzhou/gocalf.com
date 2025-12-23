@@ -50,7 +50,7 @@ class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
 ```
 
-{% asset_code coding/assets/19-remove-nth-node-from-end-of-list/solution_test.py %}
+{% asset_code coding/19-remove-nth-node-from-end-of-list/solution_test.py %}
 
 ## Thoughts
 
@@ -60,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/19-remove-nth-node-from-end-of-list/solution.py %}
+{% asset_code coding/19-remove-nth-node-from-end-of-list/solution.py %}

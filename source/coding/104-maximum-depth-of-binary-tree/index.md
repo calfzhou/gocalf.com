@@ -48,7 +48,7 @@ class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
 ```
 
-{% asset_code coding/assets/104-maximum-depth-of-binary-tree/solution_test.py %}
+{% asset_code coding/104-maximum-depth-of-binary-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -58,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/104-maximum-depth-of-binary-tree/solution.py %}
+{% asset_code coding/104-maximum-depth-of-binary-tree/solution.py %}

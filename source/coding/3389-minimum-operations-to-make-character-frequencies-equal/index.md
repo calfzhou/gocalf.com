@@ -61,7 +61,7 @@ class Solution:
     def makeStringGood(self, s: str) -> int:
 ```
 
-{% asset_code coding/assets/3389-minimum-operations-to-make-character-frequencies-equal/solution_test.py %}
+{% asset_code coding/3389-minimum-operations-to-make-character-frequencies-equal/solution_test.py %}
 
 ## Thoughts
 
@@ -106,4 +106,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/3389-minimum-operations-to-make-character-frequencies-equal/solution.py %}
+{% asset_code coding/3389-minimum-operations-to-make-character-frequencies-equal/solution.py %}

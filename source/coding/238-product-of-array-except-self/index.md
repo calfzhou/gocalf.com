@@ -42,7 +42,7 @@ class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
 ```
 
-{% asset_code coding/assets/238-product-of-array-except-self/solution_test.py %}
+{% asset_code coding/238-product-of-array-except-self/solution_test.py %}
 
 ## Thoughts
 
@@ -68,7 +68,7 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/238-product-of-array-except-self/solution.py %}
+{% asset_code coding/238-product-of-array-except-self/solution.py %}
 
 ## Follow Up
 
@@ -80,4 +80,4 @@ $$
 
 如果数组中有超过一个零，则 `answer` 为全零数组。
 
-{% asset_code coding/assets/238-product-of-array-except-self/solution2.py %}
+{% asset_code coding/238-product-of-array-except-self/solution2.py %}

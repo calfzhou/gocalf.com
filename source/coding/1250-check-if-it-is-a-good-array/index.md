@@ -45,7 +45,7 @@ class Solution:
     def isGoodArray(self, nums: List[int]) -> bool:
 ```
 
-{% asset_code coding/assets/1250-check-if-it-is-a-good-array/solution_test.py %}
+{% asset_code coding/1250-check-if-it-is-a-good-array/solution_test.py %}
 
 ## Thoughts
 
@@ -59,6 +59,6 @@ Python é‡Œ [`math.gcd`](https://docs.python.org/3/library/math.html#math.gcd) æ–
 
 ## Code
 
-{% asset_code coding/assets/1250-check-if-it-is-a-good-array/solution.py %}
+{% asset_code coding/1250-check-if-it-is-a-good-array/solution.py %}
 
-{% asset_code coding/assets/1250-check-if-it-is-a-good-array/solution2.py %}
+{% asset_code coding/1250-check-if-it-is-a-good-array/solution2.py %}

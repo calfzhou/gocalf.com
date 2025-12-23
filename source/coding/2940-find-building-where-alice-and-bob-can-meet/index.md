@@ -57,7 +57,7 @@ class Solution:
     def leftmostBuildingQueries(self, heights: List[int], queries: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/assets/2940-find-building-where-alice-and-bob-can-meet/solution_test.py %}
+{% asset_code coding/2940-find-building-where-alice-and-bob-can-meet/solution_test.py %}
 
 ## Thoughts
 
@@ -71,7 +71,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/2940-find-building-where-alice-and-bob-can-meet/solution.py %}
+{% asset_code coding/2940-find-building-where-alice-and-bob-can-meet/solution.py %}
 
 ## Monotonic Stack
 
@@ -103,4 +103,4 @@ if idx >= 0:
     answer[j] = stack[idx]
 ```
 
-{% asset_code coding/assets/2940-find-building-where-alice-and-bob-can-meet/solution2.py %}
+{% asset_code coding/2940-find-building-where-alice-and-bob-can-meet/solution2.py %}

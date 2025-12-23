@@ -61,7 +61,7 @@ class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
 ```
 
-{% asset_code coding/assets/235-lowest-common-ancestor-of-a-binary-search-tree/solution_test.py %}
+{% asset_code coding/235-lowest-common-ancestor-of-a-binary-search-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -71,4 +71,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/235-lowest-common-ancestor-of-a-binary-search-tree/solution.py %}
+{% asset_code coding/235-lowest-common-ancestor-of-a-binary-search-tree/solution.py %}

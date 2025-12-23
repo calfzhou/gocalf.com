@@ -45,7 +45,7 @@ class Solution:
     def countKeyChanges(self, s: str) -> int:
 ```
 
-{% asset_code coding/assets/3019-number-of-changing-keys/solution_test.py %}
+{% asset_code coding/3019-number-of-changing-keys/solution_test.py %}
 
 ## Thoughts
 
@@ -53,4 +53,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/3019-number-of-changing-keys/solution.py %}
+{% asset_code coding/3019-number-of-changing-keys/solution.py %}

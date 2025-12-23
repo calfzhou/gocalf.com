@@ -26,7 +26,7 @@ class Solution:
     def countPrefixSuffixPairs(self, words: List[str]) -> int:
 ```
 
-{% asset_code coding/assets/3045-count-prefix-and-suffix-pairs-ii/solution_test.py %}
+{% asset_code coding/3045-count-prefix-and-suffix-pairs-ii/solution_test.py %}
 
 ## Thoughts
 
@@ -42,4 +42,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/3045-count-prefix-and-suffix-pairs-ii/solution.py %}
+{% asset_code coding/3045-count-prefix-and-suffix-pairs-ii/solution.py %}

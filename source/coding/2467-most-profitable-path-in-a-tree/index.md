@@ -86,7 +86,7 @@ class Solution:
     def mostProfitablePath(self, edges: List[List[int]], bob: int, amount: List[int]) -> int:
 ```
 
-{% asset_code coding/assets/2467-most-profitable-path-in-a-tree/solution_test.py %}
+{% asset_code coding/2467-most-profitable-path-in-a-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -106,4 +106,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/2467-most-profitable-path-in-a-tree/solution.py %}
+{% asset_code coding/2467-most-profitable-path-in-a-tree/solution.py %}

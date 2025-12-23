@@ -44,7 +44,7 @@ class Solution:
     def canConstruct(self, s: str, k: int) -> bool:
 ```
 
-{% asset_code coding/assets/1400-construct-k-palindrome-strings/solution_test.py %}
+{% asset_code coding/1400-construct-k-palindrome-strings/solution_test.py %}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1400-construct-k-palindrome-strings/solution.py %}
+{% asset_code coding/1400-construct-k-palindrome-strings/solution.py %}

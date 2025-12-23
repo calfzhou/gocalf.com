@@ -38,7 +38,7 @@ class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
 ```
 
-{% asset_code coding/assets/347-top-k-frequent-elements/solution_test.py %}
+{% asset_code coding/347-top-k-frequent-elements/solution_test.py %}
 
 ## Thoughts
 
@@ -54,4 +54,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/347-top-k-frequent-elements/solution.py %}
+{% asset_code coding/347-top-k-frequent-elements/solution.py %}

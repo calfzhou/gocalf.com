@@ -57,7 +57,7 @@ class Solution:
     def countTexts(self, pressedKeys: str) -> int:
 ```
 
-{% asset_code coding/assets/2266-count-number-of-texts/solution_test.py %}
+{% asset_code coding/2266-count-number-of-texts/solution_test.py %}
 
 ## Thoughts
 
@@ -75,4 +75,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/2266-count-number-of-texts/solution.py %}
+{% asset_code coding/2266-count-number-of-texts/solution.py %}

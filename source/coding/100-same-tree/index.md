@@ -59,7 +59,7 @@ class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
 ```
 
-{% asset_code coding/assets/100-same-tree/solution_test.py %}
+{% asset_code coding/100-same-tree/solution_test.py %}
 
 ## Thoughts
 
@@ -69,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/100-same-tree/solution.py %}
+{% asset_code coding/100-same-tree/solution.py %}

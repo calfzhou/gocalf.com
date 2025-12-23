@@ -53,7 +53,7 @@ class Solution:
     def longestCycle(self, edges: List[int]) -> int:
 ```
 
-{% asset_code coding/assets/2360-longest-cycle-in-a-graph/solution_test.py %}
+{% asset_code coding/2360-longest-cycle-in-a-graph/solution_test.py %}
 
 ## Thoughts
 
@@ -65,7 +65,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/2360-longest-cycle-in-a-graph/solution.py %}
+{% asset_code coding/2360-longest-cycle-in-a-graph/solution.py %}
 
 ## Simpler
 
@@ -85,4 +85,4 @@ class Solution:
 
 时间和空间复杂度都是 O(n)。
 
-{% asset_code coding/assets/2360-longest-cycle-in-a-graph/solution2.py %}
+{% asset_code coding/2360-longest-cycle-in-a-graph/solution2.py %}

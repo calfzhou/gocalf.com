@@ -50,7 +50,7 @@ class Solution:
     def minChanges(self, n: int, k: int) -> int:
 ```
 
-{% asset_code coding/assets/3226-number-of-bit-changes-to-make-two-integers-equal/solution_test.py %}
+{% asset_code coding/3226-number-of-bit-changes-to-make-two-integers-equal/solution_test.py %}
 
 ## Thoughts
 
@@ -77,4 +77,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/3226-number-of-bit-changes-to-make-two-integers-equal/solution.py %}
+{% asset_code coding/3226-number-of-bit-changes-to-make-two-integers-equal/solution.py %}

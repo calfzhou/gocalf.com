@@ -70,7 +70,7 @@ class Solution:
     def minCost(self, grid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/assets/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/solution_test.py %}
+{% asset_code coding/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/solution_test.py %}
 
 ## Thoughts
 
@@ -84,4 +84,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/solution.py %}
+{% asset_code coding/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/solution.py %}

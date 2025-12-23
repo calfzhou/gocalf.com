@@ -46,7 +46,7 @@ class Solution:
     def isSubstringPresent(self, s: str) -> bool:
 ```
 
-{% asset_code coding/assets/3083-existence-of-a-substring-in-a-string-and-its-reverse/solution_test.py %}
+{% asset_code coding/3083-existence-of-a-substring-in-a-string-and-its-reverse/solution_test.py %}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/3083-existence-of-a-substring-in-a-string-and-its-reverse/solution.py %}
+{% asset_code coding/3083-existence-of-a-substring-in-a-string-and-its-reverse/solution.py %}

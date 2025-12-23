@@ -62,7 +62,7 @@ class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
 ```
 
-{% asset_code coding/assets/23-merge-k-sorted-lists/solution_test.py %}
+{% asset_code coding/23-merge-k-sorted-lists/solution_test.py %}
 
 ## Thoughts
 
@@ -80,4 +80,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/23-merge-k-sorted-lists/solution.py %}
+{% asset_code coding/23-merge-k-sorted-lists/solution.py %}

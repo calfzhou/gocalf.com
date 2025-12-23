@@ -46,7 +46,7 @@ class Solution:
     def calculate(self, s: str) -> int:
 ```
 
-{% asset_code coding/assets/224-basic-calculator/solution_test.py %}
+{% asset_code coding/224-basic-calculator/solution_test.py %}
 
 ## Thoughts
 
@@ -122,13 +122,13 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/224-basic-calculator/solution.py %}
+{% asset_code coding/224-basic-calculator/solution.py %}
 
 比较慢，可能系数太大了。唯一的好处是之后扩展更多的运算符方便一些。
 
 Test cases for solution inner methods:
 
-{% asset_code coding/assets/224-basic-calculator/solution_inner_test.py %}
+{% asset_code coding/224-basic-calculator/solution_inner_test.py %}
 
 ## Directly
 
@@ -136,4 +136,4 @@ Test cases for solution inner methods:
 
 可以维护一个栈，记录嵌套的括号累积下来的正负性，用来辅助确定下一个数字的符号。最终把所有数字加起来就行。
 
-{% asset_code coding/assets/224-basic-calculator/solution2.py %}
+{% asset_code coding/224-basic-calculator/solution2.py %}

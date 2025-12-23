@@ -81,7 +81,7 @@ class Solution:
     def minimumOperations(self, root: Optional[TreeNode]) -> int:
 ```
 
-{% asset_code coding/assets/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/solution_test.py %}
+{% asset_code coding/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/solution_test.py %}
 
 ## Thoughts
 
@@ -113,4 +113,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/solution.py %}
+{% asset_code coding/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/solution.py %}

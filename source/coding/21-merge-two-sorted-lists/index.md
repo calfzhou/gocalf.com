@@ -53,7 +53,7 @@ class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
 ```
 
-{% asset_code coding/assets/21-merge-two-sorted-lists/solution_test.py %}
+{% asset_code coding/21-merge-two-sorted-lists/solution_test.py %}
 
 ## Thoughts
 
@@ -61,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/21-merge-two-sorted-lists/solution.py %}
+{% asset_code coding/21-merge-two-sorted-lists/solution.py %}

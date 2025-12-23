@@ -51,7 +51,7 @@ class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
 ```
 
-{% asset_code coding/assets/72-edit-distance/solution_test.py %}
+{% asset_code coding/72-edit-distance/solution_test.py %}
 
 ## Thoughts
 
@@ -90,8 +90,8 @@ $$
 
 ### `O(min{m, n})` Space
 
-{% asset_code coding/assets/72-edit-distance/solution.py %}
+{% asset_code coding/72-edit-distance/solution.py %}
 
 ### `O(m * n)` Space
 
-{% asset_code coding/assets/72-edit-distance/solution2.py %}
+{% asset_code coding/72-edit-distance/solution2.py %}

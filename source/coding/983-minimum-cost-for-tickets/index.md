@@ -59,7 +59,7 @@ class Solution:
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:
 ```
 
-{% asset_code coding/assets/983-minimum-cost-for-tickets/solution_test.py %}
+{% asset_code coding/983-minimum-cost-for-tickets/solution_test.py %}
 
 ## Thoughts
 
@@ -86,4 +86,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/983-minimum-cost-for-tickets/solution.py %}
+{% asset_code coding/983-minimum-cost-for-tickets/solution.py %}

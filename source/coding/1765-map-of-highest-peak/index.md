@@ -64,7 +64,7 @@ class Solution:
     def highestPeak(self, isWater: List[List[int]]) -> List[List[int]]:
 ```
 
-{% asset_code coding/assets/1765-map-of-highest-peak/solution_test.py %}
+{% asset_code coding/1765-map-of-highest-peak/solution_test.py %}
 
 ## Thoughts
 
@@ -80,4 +80,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/1765-map-of-highest-peak/solution.py %}
+{% asset_code coding/1765-map-of-highest-peak/solution.py %}

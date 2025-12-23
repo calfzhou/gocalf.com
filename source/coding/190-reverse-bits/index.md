@@ -38,7 +38,7 @@ Reverse bits of a given 32 bits unsigned integer.
 
 ## Test Cases
 
-{% asset_code coding/assets/190-reverse-bits/solution_test.py %}
+{% asset_code coding/190-reverse-bits/solution_test.py %}
 
 ## Thoughts
 
@@ -53,7 +53,7 @@ class Solution:
     def reverseBits(self, n: int) -> int:
 ```
 
-{% asset_code coding/assets/190-reverse-bits/solution.py %}
+{% asset_code coding/190-reverse-bits/solution.py %}
 
 ## Faster
 
@@ -98,4 +98,4 @@ $$
 
 而之前普通循环的方法需要大约 `16 * 7 = 112` 次运算，还不包括循环控制之类的操作。
 
-{% asset_code coding/assets/190-reverse-bits/solution2.py %}
+{% asset_code coding/190-reverse-bits/solution2.py %}

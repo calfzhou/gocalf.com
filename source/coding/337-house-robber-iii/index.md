@@ -55,7 +55,7 @@ class Solution:
     def rob(self, root: Optional[TreeNode]) -> int:
 ```
 
-{% asset_code coding/assets/337-house-robber-iii/solution_test.py %}
+{% asset_code coding/337-house-robber-iii/solution_test.py %}
 
 ## Thoughts
 
@@ -87,7 +87,7 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/337-house-robber-iii/solution.py %}
+{% asset_code coding/337-house-robber-iii/solution.py %}
 
 ## Another DP
 
@@ -110,6 +110,6 @@ $$
 
 最终结果取 `max{ty(root), tn(root)}`。
 
-{% asset_code coding/assets/337-house-robber-iii/solution2.py %}
+{% asset_code coding/337-house-robber-iii/solution2.py %}
 
 PS：上边是记录 `ty(u)` 和 `tn(u)` 这两个值，也可以考虑记录 `t(u)` 和 `tn(u)`，其中 `t(u) = max{ty(u), tn(u)}`，代码见 [solution3.py](337-house-robber-iii/solution3.py)。

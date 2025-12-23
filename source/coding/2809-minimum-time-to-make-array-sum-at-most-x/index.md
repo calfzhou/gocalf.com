@@ -51,7 +51,7 @@ class Solution:
     def minimumTime(self, nums1: List[int], nums2: List[int], x: int) -> int:
 ```
 
-{% asset_code coding/assets/2809-minimum-time-to-make-array-sum-at-most-x/solution_test.py %}
+{% asset_code coding/2809-minimum-time-to-make-array-sum-at-most-x/solution_test.py %}
 
 ## Thoughts
 
@@ -116,4 +116,4 @@ $$
 
 ## Code
 
-{% asset_code coding/assets/2809-minimum-time-to-make-array-sum-at-most-x/solution.py %}
+{% asset_code coding/2809-minimum-time-to-make-array-sum-at-most-x/solution.py %}

@@ -52,7 +52,7 @@ class Solution:
     def maxCount(self, banned: List[int], n: int, maxSum: int) -> int:
 ```
 
-{% asset_code coding/assets/2554-maximum-number-of-integers-to-choose-from-a-range-i/solution_test.py %}
+{% asset_code coding/2554-maximum-number-of-integers-to-choose-from-a-range-i/solution_test.py %}
 
 ## Thoughts
 
@@ -60,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/2554-maximum-number-of-integers-to-choose-from-a-range-i/solution.py %}
+{% asset_code coding/2554-maximum-number-of-integers-to-choose-from-a-range-i/solution.py %}

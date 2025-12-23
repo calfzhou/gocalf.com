@@ -88,7 +88,7 @@ class Skiplist:
 # param_3 = obj.erase(num)
 ```
 
-{% asset_code coding/assets/1206-design-skiplist/solution_test.py %}
+{% asset_code coding/1206-design-skiplist/solution_test.py %}
 
 ## Thoughts
 
@@ -107,4 +107,4 @@ class Skiplist:
 
 ## Code
 
-{% asset_code coding/assets/1206-design-skiplist/solution.py %}
+{% asset_code coding/1206-design-skiplist/solution.py %}

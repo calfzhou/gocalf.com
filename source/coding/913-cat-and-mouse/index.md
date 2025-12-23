@@ -66,7 +66,7 @@ class Solution:
     def catMouseGame(self, graph: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/assets/913-cat-and-mouse/solution_test.py %}
+{% asset_code coding/913-cat-and-mouse/solution_test.py %}
 
 ## Thoughts
 
@@ -132,4 +132,4 @@ dfs(1, 2, MOUSE)
 
 ## Code
 
-{% asset_code coding/assets/913-cat-and-mouse/solution.py %}
+{% asset_code coding/913-cat-and-mouse/solution.py %}

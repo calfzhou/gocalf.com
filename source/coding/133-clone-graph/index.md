@@ -85,7 +85,7 @@ class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
 ```
 
-{% asset_code coding/assets/133-clone-graph/solution_test.py %}
+{% asset_code coding/133-clone-graph/solution_test.py %}
 
 ## Thoughts
 
@@ -103,4 +103,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/133-clone-graph/solution.py %}
+{% asset_code coding/133-clone-graph/solution.py %}

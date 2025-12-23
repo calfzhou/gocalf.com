@@ -44,7 +44,7 @@ class Solution:
     def winningPlayer(self, x: int, y: int) -> str:
 ```
 
-{% asset_code coding/assets/3222-find-the-winning-player-in-coin-game/solution_test.py %}
+{% asset_code coding/3222-find-the-winning-player-in-coin-game/solution_test.py %}
 
 ## Thoughts
 
@@ -54,4 +54,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/3222-find-the-winning-player-in-coin-game/solution.py %}
+{% asset_code coding/3222-find-the-winning-player-in-coin-game/solution.py %}

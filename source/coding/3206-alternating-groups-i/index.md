@@ -56,7 +56,7 @@ class Solution:
     def numberOfAlternatingGroups(self, colors: List[int]) -> int:
 ```
 
-{% asset_code coding/assets/3206-alternating-groups-i/solution_test.py %}
+{% asset_code coding/3206-alternating-groups-i/solution_test.py %}
 
 ## Thoughts
 
@@ -64,4 +64,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/assets/3206-alternating-groups-i/solution.py %}
+{% asset_code coding/3206-alternating-groups-i/solution.py %}
