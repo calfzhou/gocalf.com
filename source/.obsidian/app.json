@@ -7,15 +7,17 @@
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "userIgnoreFilters": [
-    "/^_.+/",
     "css/",
     "favicon/",
     "images/",
     "js/",
-    "wiki/"
+    "wiki/",
+    "_templates/",
+    "/__pycache__/"
   ],
   "showInlineTitle": true,
   "propertiesInDocument": "source",
   "trashOption": "local",
-  "readableLineLength": false
+  "readableLineLength": true,
+  "showUnsupportedFiles": true
 }
