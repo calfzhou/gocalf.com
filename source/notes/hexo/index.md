@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2025-07-02 23:04:33
+updated: 2025-12-24 21:15:01
 ---
 ## Hexo
 
@@ -144,7 +144,7 @@ pnpm add hexo-diagrams-net
 - 如何适配明暗主题？
   - 参考 <https://github.com/jgraph/drawio-integration/blob/master/inline.js>
     - 效果 <http://jgraph.github.io/drawio-integration/inline.html>
-  - 用自定义的 [`invert` 标签](/blog/2024/05/21/illustration-fit-color-scheme/#当前的方案)
+  - 用自定义的 [`invert` 标签](../../_posts/2024/illustration-fit-color-scheme.md#当前的方案)
 
 ## Stellar 主题增加 Notebook（笔记本）支持
 
