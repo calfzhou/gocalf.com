@@ -1,5 +1,5 @@
 {
-  "attachmentFolderPath": "./assets/${noteFileName}",
+  "attachmentFolderPath": ".",
   "attachmentRenameMode": "Only pasted images",
   "collectAttachmentUsedByMultipleNotesMode": "Skip",
   "customTokensStr": "",
@@ -7,19 +7,23 @@
   "defaultImageSizeDimension": "width",
   "duplicateNameSeparator": "-",
   "emptyAttachmentFolderBehavior": "DeleteWithEmptyParents",
-  "excludePaths": [],
+  "excludePaths": [
+    "_data",
+    "_templates",
+    "css",
+    "favicon",
+    "images",
+    "js"
+  ],
   "excludePathsFromAttachmentCollecting": [],
   "generatedAttachmentFileName": "${date:YYYYMMDD-HHmmss}",
-  "includePaths": [
-    "coding",
-    "notes"
-  ],
+  "includePaths": [],
   "jpegQuality": 0.8,
   "markdownUrlFormat": "",
   "shouldConvertPastedImagesToJpeg": false,
   "shouldDeleteOrphanAttachments": false,
   "shouldRenameAttachmentFiles": false,
-  "shouldRenameAttachmentFolder": true,
+  "shouldRenameAttachmentFolder": false,
   "shouldRenameCollectedAttachments": false,
   "specialCharacters": "#^[]|*\\<>:?/",
   "specialCharactersReplacement": "-",

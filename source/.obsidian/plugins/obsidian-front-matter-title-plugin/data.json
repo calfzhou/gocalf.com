@@ -40,7 +40,7 @@
       }
     },
     "tab": {
-      "enabled": false,
+      "enabled": true,
       "templates": {
         "main": "",
         "fallback": ""
@@ -54,7 +54,7 @@
       }
     },
     "graph": {
-      "enabled": false,
+      "enabled": true,
       "templates": {
         "main": "",
         "fallback": ""
