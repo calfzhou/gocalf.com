@@ -124,6 +124,11 @@ footer:
     <span class="jinrishici-sentence"></span>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
+data_services:
+  contributors:
+    edit_this_page: # 从开头开始匹配替换
+      '': https://github.com/calfzhou/gocalf.com/blob/main/source/
+
 plugins:
   katex:
     enable: true # This is required to include katex related stylesheets.
