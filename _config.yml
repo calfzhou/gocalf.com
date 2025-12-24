@@ -122,15 +122,11 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
+# Hidden files and files/folders with a name that starts with an underscore, are ignored by default.
 include: []
-exclude: []
-ignore:
-  - __pycache__/**
-  - .pytest_cache/**
-  - .obsidian/**
-  - _templates/**
-  - .trash/**
+exclude:
   - consistency-report.md
+ignore: []
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
