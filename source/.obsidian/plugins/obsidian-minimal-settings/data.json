@@ -1,8 +1,8 @@
 {
   "lightStyle": "minimal-light",
   "darkStyle": "minimal-dark",
-  "lightScheme": "minimal-default-light",
-  "darkScheme": "minimal-macos-dark",
+  "lightScheme": "minimal-solarized-light",
+  "darkScheme": "minimal-dracula-dark",
   "editorFont": "",
   "lineHeight": 1.5,
   "lineWidth": 40,
@@ -29,6 +29,6 @@
   "underlineExternal": false,
   "folding": true,
   "lineNumbers": true,
-  "readableLineLength": false,
+  "readableLineLength": true,
   "devBlockWidth": false
 }

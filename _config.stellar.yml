@@ -41,6 +41,25 @@ inject:
     - <link rel="stylesheet" href="/css/gocalf.css?v=20251221">
     - <link rel="stylesheet" href="/css/callouts.css?v=20250517">
 
+######## Main ########
+site_tree:
+  post:
+    leftbar: welcome, related, recent
+  index_wiki:
+    leftbar: welcome, related, recent
+  wiki:
+    leftbar: welcome, tree, related, recent
+  notebooks:
+    leftbar: welcome, recent
+  notes:
+    leftbar: welcome, tagtree, recent_long
+  note:
+    leftbar: welcome, tagtree, recent_long
+  error_page:
+    leftbar: welcome, recent, timeline
+  page:
+    leftbar: welcome, recent
+
 ######## Notebook ########
 notebook:
   tagcons:
@@ -91,34 +110,41 @@ footer:
       icon: default:theme
       onclick: 'switchTheme()'
   sitemap:
-    'GoCalf':
-      - '[主页](/)'
-      - '[关于](/about/)'
-      - '[PGP 信息](/pgp/)'
-      - '[旧站](https://blog.gocalf.com/)'
-    '内容':
-      - '[笔记<span class="dot"></span>杂七杂八](/notes/)'
-      - '[笔记<span class="dot"></span>Coding](/coding/)'
-      - '[博客<span class="dot"></span>近期发布](/)'
-      - '[博客<span class="dot"></span>归档](/blog/archives/)'
-      - '[所有 Wiki 项目](/wiki/)'
-      - '[所有笔记本](/notebooks/)'
-    '联系我':
-      - '[给我发邮件](mailto:calf.zhou@gmail.com)'
-      - '[GitHub](https://github.com/calfzhou)'
-      - '[Facebook](https://www.facebook.com/calfzhou)'
-      - '[Telegram](https://t.me/calfzhou)'
-    '特别感谢':
-      - '[Hexo](https://hexo.io/)'
-      - '[Hexo Stellar](https://xaoxuu.com/wiki/stellar/)'
-      - '[霞鹜文楷](https://github.com/lxgw/LxgwWenKai)'
-      - '[今日诗词](https://www.jinrishici.com/)'
+    - title: GoCalf
+      items:
+        - '[主页](/)'
+        - '[关于](/about/)'
+        - '[PGP 信息](/pgp/)'
+        - '[旧站](https://blog.gocalf.com/)'
+    - title: 内容
+      items:
+        - '[笔记<span class="dot"></span>杂七杂八](/notes/)'
+        - '[笔记<span class="dot"></span>Coding](/coding/)'
+        - '[博客<span class="dot"></span>近期发布](/)'
+        - '[博客<span class="dot"></span>归档](/blog/archives/)'
+        - '[所有 Wiki 项目](/wiki/)'
+        - '[所有笔记本](/notebooks/)'
+    - title: 联系我
+      items:
+        - '[给我发邮件](mailto:calf.zhou@gmail.com)'
+        - '[GitHub](https://github.com/calfzhou)'
+        - '[Facebook](https://www.facebook.com/calfzhou)'
+        - '[Telegram](https://t.me/calfzhou)'
+    - title: 特别感谢
+      items:
+        - '[Hexo](https://hexo.io/)'
+        - '[Hexo Stellar](https://xaoxuu.com/wiki/stellar/)'
+        - '[霞鹜文楷](https://github.com/lxgw/LxgwWenKai)'
+        - '[今日诗词](https://www.jinrishici.com/)'
   content: |
     本站所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
     本站由 [Hexo](https://hexo.io/)、[{theme.name} {theme.version}]({theme.tree}) 和 [GitHub Pages](https://pages.github.com/) 强力驱动。
     Copyright © 2011-2024 [gocalf.com](/) 保留所有权利。
-    <span class="jinrishici-sentence"></span>
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+data_services:
+  contributors:
+    edit_this_page: # 从开头开始匹配替换
+      '': https://github.com/calfzhou/gocalf.com/blob/main/source/
 
 plugins:
   katex:

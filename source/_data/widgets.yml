@@ -1,3 +1,9 @@
-toc:
-  edit_this_page:
-    '': https://github.com/calfzhou/gocalf.com/blob/main/source/
+welcome:
+  layout: markdown
+  content: |
+    <span class="jinrishici-sentence"></span>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+recent_long:
+  layout: recent
+  limit: 32

@@ -40,6 +40,12 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
+# TODO
+# 如果要把 posts 目录调整成 `slug/index.md` 形式，要修改：
+#   new_post_name: :year/:title/index.md
+#   Makefile 里 post 命令的 -p 参数相应调整
+# 问题是 assets 只能放到 `slug/index/` 目录下，否则无法被拷贝到 public 目录。
+
 # Writing
 new_post_name: :year/:title.md # File name of new posts
 default_layout: post
@@ -75,6 +81,7 @@ markdown: # https://github.com/hexojs/hexo-renderer-markdown-it
     permalink: true
     permalinkClass: 'headerlink'
     permalinkSymbol: ''
+    separator: ' '
   plugins:
     - name: '@traptitech/markdown-it-katex'
       options: # see https://katex.org/docs/options.html
@@ -116,14 +123,11 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
+# Hidden files and files/folders with a name that starts with an underscore, are ignored by default.
 include: []
-exclude: []
-ignore:
-  - __pycache__/**
-  - .pytest_cache/**
-  - .obsidian/**
-  - _templates/**
-  - .trash/**
+exclude:
+  - consistency-report.md
+ignore: []
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
