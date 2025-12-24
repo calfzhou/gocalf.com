@@ -80,7 +80,7 @@ class Solution:
 为了方便，可以把每个 i 的可选区间左对齐，得到一个 m 行 `n'` 列的 grid（如下图）。用 `j'` 表示可选区间的第 `j'` 个位置，其对应于第 `(i + j')`ᵗʰ 字符，格子内的数值为 `occ(i+j', target[i])`。。
 
 {% invert %}
-{% diagramsnet assets/1639-number-of-ways-to-form-a-target-string-given-a-dictionary/choose-from.drawio %}
+{% diagramsnet choose-from.drawio %}
 {% endinvert %}
 
 对每一行做出选择，但每一行选的 `j'` 都不能小于上一行所选的 `j'`。这就相当于从上图右边 grid 的左上角，只能向右或向下移动，最终走到右下角，看有多少种走法。跟 [62. Unique Paths](../62-unique-paths/index.md) 是一样的，只不过每个格子都带上了「系数」。
@@ -90,7 +90,7 @@ class Solution:
 如下图的蓝色路径，三次向下走到达的格子坐标分别为 `(0, 0)`、`(1, 0)` 和 `(2, 1)`，对应于 `occ(0+0, "a") = 1`、`occ(1+0, "b") = 1` 和 `occ(2+1, "a") = 2`，共 `1 * 1 * 2 = 2` 个选择。
 
 {% invert %}
-{% diagramsnet assets/1639-number-of-ways-to-form-a-target-string-given-a-dictionary/one-path.drawio %}
+{% diagramsnet one-path.drawio %}
 {% endinvert %}
 
 把所有路径的选择数累加起来，就是最终的结果。

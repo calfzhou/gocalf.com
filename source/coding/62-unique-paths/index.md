@@ -73,7 +73,7 @@ $$
 如果把所有的 `u[i][j]` 都写下来，很容易发现这就是个斜的杨辉三角，`u[i][j]` 就对应于杨辉三角中 `i + j` 行（注意顶行是「行 0」）的 `i` 或 `j` 列（同样最左列也是「列 0」）。
 
 {% invert %}
-{% diagramsnet assets/62-unique-paths/pascal.drawio %}
+{% diagramsnet pascal.drawio %}
 {% endinvert %}
 
 可以直接用杨辉三角的计算公式（组合数）：

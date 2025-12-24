@@ -94,10 +94,10 @@ Markdown | `post-slug/filename` | {% mark ✗ color:red %} | {% mark ✓ color:g
 | Markdown    | `notes/note-slug/filename`    | {% mark ✗ color:red %}                  | {% mark ✗ color:red %}   | ![demo](hexo/demo.png)                        |
 | Markdown    | `../notes/note-slug/filename` | {% mark ✓ color:green %} ~~`/../` 没影响~~ | {% mark ✓ color:green %} | ![demo](../notes/assets/hexo/demo.png)        |
 | `asset_img` | `filename`                    | {% mark ✗ color:red %} 连 `<img>` 都没有    | {% mark ✓ color:green %} | {% asset_img assets/demo.png %}               |
-| `asset_img` | `note-slug/filename`          | {% mark ✗ color:red %} 连 `<img>` 都没有    | {% mark ✓ color:green %} | {% asset_img assets/hexo/demo.png %}          |
+| `asset_img` | `note-slug/filename`          | {% mark ✗ color:red %} 连 `<img>` 都没有    | {% mark ✓ color:green %} | {% asset_img demo.png %}          |
 | `asset_img` | `notes/note-slug/filename`    | {% mark ✗ color:red %} 连 `<img>` 都没有    | {% mark ✗ color:red %}   | {% asset_img notes/assets/hexo/demo.png %}    |
 | `asset_img` | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有    | {% mark ✓ color:green %} | {% asset_img ../notes/assets/hexo/demo.png %} |
-| `image`     | `note-slug/filename`          | {% mark ✓ color:green %}                | {% mark ✗ color:red %}   | {% image assets/hexo/demo.png %}              |
+| `image`     | `note-slug/filename`          | {% mark ✓ color:green %}                | {% mark ✗ color:red %}   | {% image demo.png %}              |
 | `image`     | `../notes/note-slug/filename` | {% mark ✓ color:green %}                | {% mark ✗ color:red %}   | {% image ../notes/assets/hexo/demo.png %}     |
 
 > 其他页面可能类似，待确认。
@@ -134,11 +134,11 @@ pnpm add hexo-diagrams-net
 ```
 
 ``` markdown
-{% diagramsnet assets/hexo/flowchart.drawio %}
+{% diagramsnet flowchart.drawio %}
 ```
 
 {% invert %}
-{% diagramsnet assets/hexo/flowchart.drawio %}
+{% diagramsnet flowchart.drawio %}
 {% endinvert %}
 
 - 如何适配明暗主题？

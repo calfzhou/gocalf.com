@@ -86,7 +86,7 @@ LRN: 7, 6, 1, 8, 2, 4, 5, 3
 ```
 
 {% invert %}
-{% diagramsnet assets/889-construct-binary-tree-from-preorder-and-postorder-traversal/demo1-01.drawio %}
+{% diagramsnet demo1-01.drawio %}
 {% endinvert %}
 
 LRN 的下一个数字 6，跟栈顶一致，说明 6 没有其他子节点，直接出栈。再下一个数字 1 又跟新的栈顶一致，说明 1 也没有右子节点，出栈。再下一个数字 8 跟新的栈顶 4 不一致，说明 8 是 4 的右子树的最靠左的节点。
@@ -99,7 +99,7 @@ LRN: 7, 6, 1, 8, 2, 4, 5, 3
 ```
 
 {% invert %}
-{% diagramsnet assets/889-construct-binary-tree-from-preorder-and-postorder-traversal/demo1-02.drawio %}
+{% diagramsnet demo1-02.drawio %}
 {% endinvert %}
 
 继续看 NLR 中 7 后边的数字，直到遇到 8（LRN 的当前数字），得到 2、8，说明这是 4 的右子树的最左边的路径，即 2 是 4 的右子节点，8 是 2 的左子节点（且是叶子节点）。
@@ -112,7 +112,7 @@ LRN: 7, 6, 1, 8, 2, 4, 5, 3
 ```
 
 {% invert %}
-{% diagramsnet assets/889-construct-binary-tree-from-preorder-and-postorder-traversal/demo1-03.drawio %}
+{% diagramsnet demo1-03.drawio %}
 {% endinvert %}
 
 LRN 的后边两个数字 2、4 分别跟栈顶部的两个数字一致，说明 2 和 4 都没有其他子节点，直接出栈。
@@ -125,7 +125,7 @@ LRN: 7, 6, 1, 8, 2, 4, 5, 3
 ```
 
 {% invert %}
-{% diagramsnet assets/889-construct-binary-tree-from-preorder-and-postorder-traversal/demo1-04.drawio %}
+{% diagramsnet demo1-04.drawio %}
 {% endinvert %}
 
 NLR 的下一个数字和 LRN 的下一个数字都是 5，说明 5 就是当前栈顶 3 右子树的唯一节点。
@@ -138,7 +138,7 @@ LRN: 7, 6, 1, 8, 2, 4, 5, 3
 ```
 
 {% invert %}
-{% diagramsnet assets/889-construct-binary-tree-from-preorder-and-postorder-traversal/demo1-05.drawio %}
+{% diagramsnet demo1-05.drawio %}
 {% endinvert %}
 
 NLR 已经扫描完毕，而 LRN 的最后一个数字一定等于 NLR 的第一个数字，即为树根。二叉树构造完成。

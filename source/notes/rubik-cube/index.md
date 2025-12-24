@@ -27,11 +27,11 @@ katex: true
 - 前蓝－后绿
 - 左橙－右红
 
-{% image assets/rubik-cube/cube-color.png 魔方配色（图片来自魔方乐园 mf100.org） bg:#f9fafb %}
+{% image cube-color.png 魔方配色（图片来自魔方乐园 mf100.org） bg:#f9fafb %}
 
 简易层先法的复原步骤为：
 
-{% image assets/rubik-cube/simple-steps.png 层先法复原步骤（图片来自魔方乐园 mf100.org） bg:#f9fafb %}
+{% image simple-steps.png 层先法复原步骤（图片来自魔方乐园 mf100.org） bg:#f9fafb %}
 
 - 面位：只有一面颜色与中心块颜色相同， 其他面颜色不相同；
 - 到位：位置正确，但任一面的颜色和所在面的中心块颜色都不相同；
@@ -43,7 +43,7 @@ katex: true
 
 ### 一图流
 
-{% image assets/rubik-cube/img_3842.png 三阶魔方简易层先法一图流 width:320px download:true fancybox:true %}
+{% image img_3842.png 三阶魔方简易层先法一图流 width:320px download:true fancybox:true %}
 
 ### 中棱归位
 
@@ -57,7 +57,7 @@ katex: true
 `(R U R U) R (U' R' U' R')`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   facelets:zzzzygzzzWWWWWWWWWzzbzbbzzbZZGZGGZZGzzzzozoooZZRRRRZZR
   markers:000001000000000000000000000000000000000000000000100000
   move:"RURU.R.U'R'U'R'"
@@ -74,7 +74,7 @@ katex: true
 `(R' U' R' U') R' (U R U R)`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   facelets:zzzzybzzzWWWWWWWWWzzbzbbzzbZZGZGGZZGzzzzozoooZZRRRRZZR
   markers:000001000000000000000000000000000000000000000000100000
   move:"R'U'R'U'.R'.URUR"
@@ -93,7 +93,7 @@ katex: true
 `B' (U' R' U R) B`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   facelets:zyzyyyzyzWWWWWWWWWzbbzbbzbbZGGZGGZGGzzzooooooZRRZRRZRR
   move:"B'.U'R'UR.B"
   initrevmove:#
@@ -110,7 +110,7 @@ katex: true
 `B' (R' U' R U) B` 或 `① ①`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   facelets:zyzyyyzyzWWWWWWWWWzbbzbbzbbZGGZGGZGGzzzooooooZRRZRRZRR
   move:"B'.R'U'RU.B;{① ①}{< ① > ①}B'U'R'URB.{① < ① >}B'U'R'URB"
   initrevmove:#
@@ -127,7 +127,7 @@ katex: true
 `① U ②`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   facelets:zyzyyyzyzWWWWWWWWWzbbzbbzbbZGGZGGZGGzzzooooooZRRZRRZRR
   move:"{① U ②}{< ① > U ②}B'U'R'URB.{① < U > ②}U.{① U < ② >}B'R'U'RUB"
   initrevmove:#
@@ -146,7 +146,7 @@ katex: true
 `(R U2' R') (U' R U' R')`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   facelets:yyyyyyyyyWWWWWWWWWzbbzbbzbbZGGZGGZGGzzzooooooZRRZRRZRR
   move:"RU2'R'.U'RU'R'"
   initrevmove:#
@@ -163,7 +163,7 @@ katex: true
 `U (R' U2 R) (U R' U R)` 或 `① U2 ①`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   facelets:yyyyyyyyyWWWWWWWWWzbbzbbzbbZGGZGGZGGzzzooooooZRRZRRZRR
   move:"U.R'U2R.UR'UR;{① U2 ①}{< ① > U2 ①}RU2'R'U'RU'R'.{① < U2 > ①}U2.{① U2 < ① >}RU2'R'U'RU'R'"
   initrevmove:#
@@ -186,19 +186,19 @@ katex: true
 {% folding 动画演示 %}
 {% grid %}
 <!-- cell -->
-{% animcube width:100% config:assets/rubik-cube/cube.conf
+{% animcube width:100% config:cube.conf
   facelets:yyyyyyyyyWWWWWWWWWzbbzbbzbbZGGZGGZGGzzzooooooZRRZRRZRR
   move:"{① ②}{< ① > ②}RU2'R'U'RU'R'.{① < ② >}UR'U2RUR'UR"
   initrevmove:#
 %}
 <!-- cell -->
-{% animcube width:100% config:assets/rubik-cube/cube.conf
+{% animcube width:100% config:cube.conf
   facelets:yyyyyyyyyWWWWWWWWWzbbzbbzbbZGGZGGZGGzzzooooooZRRZRRZRR
   move:"{① U' ②}{< ① > U' ②}RU2'R'U'RU'R'.{① < U' > ②}U'.{① U' < ② >}UR'U2RUR'UR"
   initrevmove:#
 %}
 <!-- cell -->
-{% animcube width:100% config:assets/rubik-cube/cube.conf
+{% animcube width:100% config:cube.conf
   facelets:yyyyyyyyyWWWWWWWWWzbbzbbzbbZGGZGGZGGzzzooooooZRRZRRZRR
   move:"{① U ②}{< ① > U ②}RU2'R'U'RU'R'.{① < U > ②}U.{① U < ② >}UR'U2RUR'UR"
   initrevmove:#
@@ -220,13 +220,13 @@ katex: true
 {% folding 动画演示 %}
 {% grid %}
 <!-- cell -->
-{% animcube width:100% config:assets/rubik-cube/cube.conf
+{% animcube width:100% config:cube.conf
   facelets:yyyyyyyyyWWWWWWWWWzbbzbbzbbZGGZGGZGGzzzooooooZRRZRRZRR
   move:"{① ①}{< ① > ①}RU2'R'U'RU'R'.{① < ① >}RU2'R'U'RU'R'"
   initrevmove:#
 %}
 <!-- cell -->
-{% animcube width:100% config:assets/rubik-cube/cube.conf
+{% animcube width:100% config:cube.conf
   facelets:yyyyyyyyyWWWWWWWWWzbbzbbzbbZGGZGGZGGzzzooooooZRRZRRZRR
   move:"{① U' ①}{< ① > U' ①}RU2'R'U'RU'R'.{① < U' > ①}U'.{① U' < ① >}RU2'R'U'RU'R'"
   initrevmove:#
@@ -246,7 +246,7 @@ katex: true
 `(R B' R F2) (R' B R F2) R2`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   facelets:yyyyyyyyyWWWWWWWWWbbbzbbbbbGGGZGGGGGozoooooooRRRZRRRRR
   markers:000000000000000000000000000000000000000000000100000100
   move:"RB'RF2.R'BRF2.R2"
@@ -264,7 +264,7 @@ katex: true
 `① U' ①`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   facelets:yyyyyyyyyWWWWWWWWWbbbzbbbbbGGGZGGGGGozoooooooRRRZRRRRR
   move:"{① U' ①}{< ① > U' ①}RB'RF2R'BRF2R2.{① < U' > ①}U'.{① U' < ① >}RB'RF2R'BRF2R2"
   initrevmove:#
@@ -283,7 +283,7 @@ katex: true
 `(R U' R) (U R U R) (U' R' U' R2')`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   markers:000000000000000000000200000000000000030000000000100000
   move:"RU'R.URUR.U'R'U'R2'"
   initrevmove:#
@@ -300,7 +300,7 @@ katex: true
 `(R2 U R U) (R' U' R' U') (R' U R')` 或 `① ①`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   markers:000000000000000000000200000000000000030000000000100000
   move:"R2URU.R'U'R'U'.R'UR';{① ①}{< ① > ①}RU'RURURU'R'U'R2'.{① < ① >}RU'RURURU'R'U'R2'"
   initrevmove:#
@@ -317,7 +317,7 @@ katex: true
 `① U ①`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   markers:000000000000000000000200000000200000010000000000100000
   move:"{① U ①}{< ① > U ①}RU'RURURU'R'U'R2'.{① < U > ①}U.{① U < ① >}RU'RURURU'R'U'R2'"
   initrevmove:#
@@ -334,7 +334,7 @@ katex: true
 `① U’ ①`
 
 {% folding 动画演示 %}
-{% animcube config:assets/rubik-cube/cube.conf
+{% animcube config:cube.conf
   markers:000000000000000000000200000000100000020000000000100000
   move:"{① U' ①}{< ① > U' ①}RU'RURURU'R'U'R2'.{① < U' > ①}U'.{① U' < ① >}RU'RURURU'R'U'R2'"
   initrevmove:#
@@ -349,7 +349,7 @@ katex: true
 
 高阶魔方可采用降阶法，即把六个面的中心区域（下图浅灰色区域）分别拼好并当成整体，十二对棱块（下图深灰色区域）分别拼好并当成整体，然后就按照三阶魔方的方式进行复原。偶数阶因为不像奇数阶那样，有六个固定的中心块（彼此相对位置不变），有可能会出现两种特殊情况，需要额外处理。另外由于偶数阶没有固定的中心块做为参考，需要在复原六个面中心区域的时候，注意各颜色的相对位置，否则后续可能会无法用三阶的方法完成复原。
 
-{% image assets/rubik-cube/downgrade.png 降阶示意（图片来自魔方乐园 mf100.org） bg:#f9fafb %}
+{% image downgrade.png 降阶示意（图片来自魔方乐园 mf100.org） bg:#f9fafb %}
 
 ### 高阶中心块
 
@@ -361,7 +361,7 @@ katex: true
 
 以 `上黄-前蓝` 这个位置组合为例。一组操作可以只轮换下图中三个灰色加了标记的块（按粉色箭头方向轮换），其他全都不变。连续三组之后，完全复位（转了一整圈）。
 
-{% image assets/rubik-cube/high-center-loop.png 中心块轮换 width:320px %}
+{% image high-center-loop.png 中心块轮换 width:320px %}
 
 图中黄色面标 `□` 和蓝色面标 `╳` 的块，在面内相对位置一样，距离右边界格数为 2，距离底边界格数为 3，操作公式为：
 
@@ -374,14 +374,14 @@ katex: true
 {% folding 动画演示 %}
 {% grid %}
 <!-- cell -->
-{% animcube width:100% size:7 config:assets/rubik-cube/cube.conf
+{% animcube width:100% size:7 config:cube.conf
   markers:000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   move:"2R U 3L' U' 2R' U 3L U'"
   initrevmove:#
   repeat:1
 %}
 <!-- cell -->
-{% animcube width:100% size:7 config:assets/rubik-cube/cube.conf
+{% animcube width:100% size:7 config:cube.conf
   markers:000000000100000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   move:"2R' F 3L F' 2R F 3L' F'"
   initrevmove:#
@@ -393,7 +393,7 @@ katex: true
 更多变体：
 
 {% invert %}
-{% image assets/rubik-cube/high-center-formula.ink.svg 中心块复原公式 %}
+{% image high-center-formula.ink.svg 中心块复原公式 %}
 {% endinvert %}
 
 1. 第 ① 象限：`RU'L'` 或 `R'F'L`
@@ -432,14 +432,14 @@ katex: true
 {% grid %}
 <!-- cell -->
 四阶（N = 4）
-{% animcube width:100% size:4 config:assets/rubik-cube/cube.conf
+{% animcube width:100% size:4 config:cube.conf
   markers:011000000000000000000000000000000000100010000000000000000000000000000000000000000000000000000000
   move:"2R2 B2 U2 2L U2 2R' U2 2R U2 F2 2R F2 2L' B2 2R2"
   initrevmove:#
 %}
 <!-- cell -->
 六阶（N = 6）
-{% animcube width:100% size:6 config:assets/rubik-cube/cube.conf
+{% animcube width:100% size:6 config:cube.conf
   markers:011110000000000000000000000000000000000000000000000000000000000000000000000000100000100000100000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   move:"(3Rw2 R2') B2 U2 (3Lw L') U2 (3Rw' R) U2 (3Rw R') U2 F2 (3Rw R') F2 (3Lw' L) B2 (3Rw2 R2')"
   initrevmove:#
@@ -466,14 +466,14 @@ katex: true
 {% grid %}
 <!-- cell -->
 四阶（N = 4）
-{% animcube width:100% size:4 config:assets/rubik-cube/cube.conf
+{% animcube width:100% size:4 config:cube.conf
   markers:011000000000011000000000000000000000100010000000000010001000000000000000000000000000000000000000
   move:"2R2 U2 2R2 U2 . 2U2 2R2 2U2"
   initrevmove:#
 %}
 <!-- cell -->
 六阶（N = 6）
-{% animcube width:100% size:6 config:assets/rubik-cube/cube.conf
+{% animcube width:100% size:6 config:cube.conf
   markers:011110000000000000000000000000011110000000000000000000000000000000000000000000100000100000100000100000000000000000100000100000100000100000000000000000000000000000000000000000000000000000000000000000000000000000000000
   move:"(3Rw2 R2') U2 (3Rw2 R2') U2 . (3Uw2 U2') (3Rw2 R2') (3Uw2 U2')"
   initrevmove:#

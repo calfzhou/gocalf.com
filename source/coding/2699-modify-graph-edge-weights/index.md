@@ -86,7 +86,7 @@ class Solution:
 如果 `dist < target` 就会麻烦一些。一个想法是令 `gap = target - dist`，在最短路径上任选一条 -1 边，将其权重改为 `1 + gap`（其他的都改为 1）。但这样改完之后，`source` 到 `destination` 的最短路径可能会变化，导致最短距离变得小于 `target`，比如下面这个情况（`source = 0, destination = 3, target = 10`）：
 
 {% invert %}
-{% diagramsnet assets/2699-modify-graph-edge-weights/gap.drawio %}
+{% diagramsnet gap.drawio %}
 {% endinvert %}
 
 把所有 -1 边的权重改成 1 之后，找到最短路径 `0 - 1 - 2 - 3`（蓝色），距离为 `dist = 3`。如果把 `target - dist = 7` 随机地加到了边 `(1, 2)` 上，就会导致最短路径变成 `0 - 1 - 3`（红色），距离为 6，小于 `target` 了。
@@ -94,7 +94,7 @@ class Solution:
 可以按最新的权重重新计算 `source` 到 `destination` 的最短距离，如果得到了比 `target` 小的最短距离，就再任选一条 -1 边，把新的到 gap 加上去。比如上图中，新的 `gap` 值为 4，任选一条红色路径上的 -1 边（如 `(0, 1)`），把 4 加上去，得到下图的结果：
 
 {% invert %}
-{% diagramsnet assets/2699-modify-graph-edge-weights/gap2.drawio %}
+{% diagramsnet gap2.drawio %}
 {% endinvert %}
 
 重复这一操作直到最短距离等于 `target`。

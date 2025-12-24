@@ -61,13 +61,13 @@ class Solution:
 如果 r 刚好在环上，则环长等于 `d(u) + d(v) + 1`，而且易知这就是经过 r 的最小的环。如：
 
 {% invert %}
-{% diagramsnet assets/2608-shortest-cycle-in-a-graph/bfs-1.drawio %}
+{% diagramsnet bfs-1.drawio %}
 {% endinvert %}
 
 如果 r 不在环上，则环长小于 `d(u) + d(v) + 1`。如：
 
 {% invert %}
-{% diagramsnet assets/2608-shortest-cycle-in-a-graph/bfs-2.drawio %}
+{% diagramsnet bfs-2.drawio %}
 {% endinvert %}
 
 对所有的顶点进行同样的处理，一定可以（当起点是最小环上的某个顶点的时候）得到最小的环长。

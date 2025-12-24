@@ -98,13 +98,13 @@ class Solution:
 比如 `m = 8` 个数字为 `[5, 1, 3, 2, 4, 7, 6, 8]`，按数字大小排序的下标为 `[1, 3, 2, 4, 0, 6, 5, 7]`：
 
 {% invert %}
-{% diagramsnet assets/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/sort_indices.drawio %}
+{% diagramsnet sort_indices.drawio %}
 {% endinvert %}
 
 对按数字排序的下标数组找出轮换循环，易知共有四个轮换循环组：
 
 {% invert %}
-{% diagramsnet assets/2471-minimum-number-of-operations-to-sort-a-binary-tree-by-level/find_loops.drawio %}
+{% diagramsnet find_loops.drawio %}
 {% endinvert %}
 
 所以原始的数组需要进行 `8 - 4 = 4` 次两两交换。

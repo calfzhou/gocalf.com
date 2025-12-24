@@ -83,7 +83,7 @@ class Solution:
 比如下图的 `board`，目标 `word = "ABCDA"`。
 
 {% invert %}
-{% diagramsnet assets/79-word-search/abcda.drawio %}
+{% diagramsnet abcda.drawio %}
 {% endinvert %}
 
 从 `board[0][1] = 'A'` 出发时，会发现 `board[1][1] = 'B'` 无法串出 `word[1:] = "BCDA"`；但是如果从 `board[1][0] = 'A'` 出发却可以。

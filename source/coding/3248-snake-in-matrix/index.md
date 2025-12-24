@@ -24,7 +24,7 @@ Return the position of the final cell where the snake ends up after executing `c
 > Output: `3`
 > Explanation:
 > {% invert %}
-{% diagramsnet assets/3248-snake-in-matrix/case1.drawio %}
+{% diagramsnet case1.drawio %}
 {% endinvert %}
 
 **Example 2:**
@@ -33,7 +33,7 @@ Return the position of the final cell where the snake ends up after executing `c
 > Output: `1`
 > Explanation:
 > {% invert %}
-{% diagramsnet assets/3248-snake-in-matrix/case2.drawio %}
+{% diagramsnet case2.drawio %}
 {% endinvert %}
 
 **Constraints:**
