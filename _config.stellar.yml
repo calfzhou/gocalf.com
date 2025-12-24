@@ -52,9 +52,9 @@ site_tree:
   notebooks:
     leftbar: welcome, recent
   notes:
-    leftbar: welcome, tagtree, recent
+    leftbar: welcome, tagtree, recent_long
   note:
-    leftbar: welcome, tagtree, recent
+    leftbar: welcome, tagtree, recent_long
   error_page:
     leftbar: welcome, recent, timeline
   page:
