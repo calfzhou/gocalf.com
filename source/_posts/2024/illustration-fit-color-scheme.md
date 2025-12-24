@@ -43,7 +43,7 @@ filter: invert(1) hue-rotate(180deg);
 {% endgrid %}
 {% endfolding %}
 
-比如选用 500 值的各个颜色，详见 [配色 - Tailwind Color Palette](/notes/color-pattern/#Tailwind-Color-Palette)
+比如选用 500 值的各个颜色，详见 [配色 - Tailwind Color Palette](../../notes/color-pattern/index.md#Tailwind-Color-Palette)
 
 ## 当前的方案
 
