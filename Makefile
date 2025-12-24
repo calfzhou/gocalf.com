@@ -9,18 +9,18 @@ list:
 install:
 	pnpm install
 
+clean:
+	pnpm run clean
+
 build:
 	pnpm run build
 
-generate: build
-
-clean:
-	pnpm run clean
+generate: clean build
 
 server:
 	pnpm run server
 
-s: server
+s: clean server
 
 slug :=
 title :=
