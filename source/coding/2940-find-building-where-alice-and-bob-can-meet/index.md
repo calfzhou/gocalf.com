@@ -77,7 +77,7 @@ class Solution:
 
 在 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md) 中提到，找左侧/右侧第一个比当前元素小/大的问题，可以用单调栈线性时间求解。不过这里并不是找右侧第一个比当前元素大的，而是找更大的（因为 `heights[aᵢ] ≥ heights[bᵢ]`）。
 
-实际上在通过单调栈遍历原数组的时候，如果按照 [逆序扫描数组](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#O-n) 的逻辑，任何时候，栈里存放的都是比当前元素大的，而且是排序的。那就可以对栈做二分查找。
+实际上在通过单调栈遍历原数组的时候，如果按照 [逆序扫描数组](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#O%20n) 的逻辑，任何时候，栈里存放的都是比当前元素大的，而且是排序的。那就可以对栈做二分查找。
 
 每个 query 都可以转换成 `(heights[aᵢ], bᵢ)` 格式，在转换的同时记录 `heights` 中每个位置对应的所有查询。然后配合单调栈逆序扫描 `heights` 数组，在处理到某个位置的时候，用二分法在栈中查找 `heights[aᵢ]` 即可。
 

@@ -62,7 +62,7 @@ class Solution:
 
 ### 选取
 
-在 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md) 中提到用单调栈确定数组中每个元素左侧/右侧第一个比当前值小/大的元素，其中 [正向扫描](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#Another-O-n) 时最终留在单调栈里的就是右侧没有比它更大值的元素集合（如果是在找右侧第一个比当前值大的元素）。代码示意：
+在 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md) 中提到用单调栈确定数组中每个元素左侧/右侧第一个比当前值小/大的元素，其中 [正向扫描](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#Another%20O%20n) 时最终留在单调栈里的就是右侧没有比它更大值的元素集合（如果是在找右侧第一个比当前值大的元素）。代码示意：
 
 ``` python
 def pick_max(nums: list[int]) -> list[int]:

@@ -91,7 +91,7 @@ $$
 
 ## Another DP
 
-如果嫌访问第二层子节点会有太多是否为空的判定，也可以改造一下状态变量的定义。其实类似于 [198. House Robber](../198-house-robber/index.md) 中定义的 [第二种 DP](../198-house-robber/index.md#Another-DP)，明确抢还是不抢当前房间。
+如果嫌访问第二层子节点会有太多是否为空的判定，也可以改造一下状态变量的定义。其实类似于 [198. House Robber](../198-house-robber/index.md) 中定义的 [第二种 DP](../198-house-robber/index.md#Another%20DP)，明确抢还是不抢当前房间。
 
 定义 `ty(u)` 表示抢房间 u 的最大总额，`tn(u)` 表示不抢房间 u 的最大总额。
 

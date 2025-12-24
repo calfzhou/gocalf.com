@@ -81,6 +81,7 @@ markdown: # https://github.com/hexojs/hexo-renderer-markdown-it
     permalink: true
     permalinkClass: 'headerlink'
     permalinkSymbol: ''
+    separator: ' '
   plugins:
     - name: '@traptitech/markdown-it-katex'
       options: # see https://katex.org/docs/options.html
