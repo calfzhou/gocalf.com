@@ -1,8 +1,8 @@
 name: Stellar
 title: Stellar - 每个人的独立博客
 subtitle: '每个人的独立博客 | Designed by xaoxuu'
-icon: https://xaoxuu.com/assets/wiki/stellar/icon.svg
-cover: https://xaoxuu.com/assets/wiki/stellar/icon.svg
+icon: https://res.xaox.cc/gh/cdn-x/wiki@main/stellar/icon.svg
+cover: https://res.xaox.cc/gh/cdn-x/wiki@main/stellar/icon.svg
 description: Stellar 是一个内置文档系统的简约商务风 Hexo 主题，支持丰富的标签和动态数据组件。
 repo: xaoxuu/hexo-theme-stellar
 base_dir: /wiki/stellar/

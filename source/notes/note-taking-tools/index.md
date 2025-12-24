@@ -5,7 +5,7 @@ tags:
   - calf
   - software
 date: 2024-04-13 15:27:19
-updated: 2025-04-04 00:02:23
+updated: 2025-12-24 20:12:46
 ---
 {% timeline %}
 
@@ -19,7 +19,7 @@ updated: 2025-04-04 00:02:23
 <!-- cell -->
 {% link https://hexo.io/ Hexo - A fast, simple & powerful blog framework icon:https://hexo.io/logo.svg %}
 <!-- cell -->
-{% link https://xaoxuu.com/wiki/stellar/ Stellar - 内置文档系统的简约商务风 Hexo 主题 icon:https://xaoxuu.com/assets/wiki/stellar/icon.svg %}
+{% link https://xaoxuu.com/wiki/stellar/ Stellar - 内置文档系统的简约商务风 Hexo 主题 icon:https://res.xaox.cc/gh/cdn-x/wiki@main/stellar/icon.svg %}
 {% endgrid %}
 
 <!-- node 2022 年 -->
