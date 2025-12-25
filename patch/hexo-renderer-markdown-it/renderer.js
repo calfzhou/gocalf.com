@@ -36,6 +36,9 @@ class Renderer {
     }
 
     if (plugins) {
+      // Store ES module plugins to be loaded asynchronously
+      this.pendingESModules = [];
+
       this.parser = plugins.reduce((parser, pugs) => {
         if (pugs instanceof Object && pugs.name) {
           const resolved = require.resolve(pugs.name, {
@@ -50,10 +53,39 @@ class Renderer {
               path.join(__dirname, '../'),
             ],
           });
+
+          // Check if the module is an ES module
+          let isESModule = false;
+          try {
+            const pkgPath = require.resolve(path.join(pugs.name, 'package.json'), {
+              paths: [
+                path.join(hexo.base_dir, 'node_modules'),
+                path.join(__dirname, '../node_modules'),
+                hexo.base_dir,
+                path.join(__dirname, '../'),
+              ],
+            });
+            const pkg = require(pkgPath);
+            isESModule = pkg.type === 'module';
+          } catch (err) {
+            // If package.json not found or any error occurs, assume it's not an ES module
+          }
+
+          if (isESModule) {
+            hexo.log.debug(`Detected ES module plugin: ${pugs.name}. It will be loaded asynchronously`);
+            this.pendingESModules.push({ name: pugs.name, resolved, options: pugs.options });
+            return parser;
+          }
+
           return parser.use(require(resolved), pugs.options);
         }
         return parser.use(require(pugs));
       }, this.parser);
+
+      // After all synchronous plugins are loaded, process pending ES module plugins
+      if (this.pendingESModules.length > 0) {
+        this._loadESModulePlugins();
+      }
     }
 
     if (anchors) {
@@ -66,6 +98,25 @@ class Renderer {
         hexo: this.hexo,
       });
     }
+  }
+
+  async _loadESModulePlugins() {
+    for (const { name, resolved, options } of this.pendingESModules) {
+      try {
+        const mod = await import(resolved);
+        const plugin = mod.default || mod[Object.keys(mod)[0]];
+        if (typeof plugin === 'function') {
+          this.parser.use(plugin, options);
+          this.hexo.log.debug(`Successfully loaded ES module plugin: ${name}`);
+        } else {
+          this.hexo.log.warn(`ES module plugin ${name} does not export a function`);
+        }
+      } catch (err) {
+        this.hexo.log.warn(`Failed to load ES module plugin ${name}: ${err.message}`);
+      }
+    }
+
+    this.pendingESModules = [];
   }
 
   render(data, options) {
