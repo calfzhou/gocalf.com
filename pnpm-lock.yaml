@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@mdit/plugin-alert':
+        specifier: ^0.22.3
+        version: 0.22.3(markdown-it@13.0.2)
       '@traptitech/markdown-it-katex':
         specifier: ^3.6.0
         version: 3.6.0
@@ -59,9 +62,6 @@ importers:
       hexo-theme-stellar:
         specifier: 1.33.1
         version: 1.33.1
-      markdown-it-obsidian-callouts:
-        specifier: ^0.3.3
-        version: 0.3.3(markdown-it@13.0.2)
       markdown-it-obsidian-imgsize:
         specifier: ^0.1.1
         version: 0.1.1
@@ -264,6 +264,14 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
+  '@mdit/plugin-alert@0.22.3':
+    resolution: {integrity: sha512-9g99rjLCFd8upA/DXbhGmEM7GMFocy6SRk4OekxuAy9t1aDOE/r5IJgUbBIvc9kMkg39ug0yXtMkKwAt2zp5Hg==}
+    peerDependencies:
+      markdown-it: ^14.1.0
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
+
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
 
@@ -277,6 +285,15 @@ packages:
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
+
+  '@types/linkify-it@5.0.0':
+    resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
+
+  '@types/markdown-it@14.1.2':
+    resolution: {integrity: sha512-promo4eFwuiW+TfGxhi+0x3czqTYJkG8qB17ZUJiVF10Xm7NLVRSLUsfRTU/6h1e24VvRnXCx+hG7li58lkzog==}
+
+  '@types/mdurl@2.0.0':
+    resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
 
   '@uiolee/hexo-htmlnano@1.0.1':
     resolution: {integrity: sha512-jnvrWHv6eVMgxcw3VeW97aOprE+pFJYjraCixiV55GGTjU1eiGrQEjSJrahVHP/maa9MR+wuhihE+bdl310Qwg==}
@@ -1070,11 +1087,6 @@ packages:
   markdown-it-mark@3.0.1:
     resolution: {integrity: sha512-HyxjAu6BRsdt6Xcv6TKVQnkz/E70TdGXEFHRYBGLncRE9lBFwDNLVtFojKxjJWgJ+5XxUwLaHXy+2sGBbDn+4A==}
 
-  markdown-it-obsidian-callouts@0.3.3:
-    resolution: {integrity: sha512-XviZR/5aFmcGVvjUv2I0TidPIkc4RzAJg3cd5N1zJe/3eh2FLLiqt0ugyBlkOyKc2ydcp/q2iUGAZomxn7al+g==}
-    peerDependencies:
-      markdown-it: ^14.0.0
-
   markdown-it-obsidian-imgsize@0.1.1:
     resolution: {integrity: sha512-bOuIKQddR6j1MV2pnu25ODRzvSI/QWG5TavnKUQLLNyFltUkzQ/obtZeAUXV7Fkg4JE1GpPGLJHzCAk5quPG6Q==}
 
@@ -1842,6 +1854,12 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  '@mdit/plugin-alert@0.22.3(markdown-it@13.0.2)':
+    dependencies:
+      '@types/markdown-it': 14.1.2
+    optionalDependencies:
+      markdown-it: 13.0.2
+
   '@sec-ant/readable-stream@0.4.1': {}
 
   '@sindresorhus/merge-streams@4.0.0': {}
@@ -1851,6 +1869,15 @@ snapshots:
       katex: 0.16.27
 
   '@trysound/sax@0.2.0': {}
+
+  '@types/linkify-it@5.0.0': {}
+
+  '@types/markdown-it@14.1.2':
+    dependencies:
+      '@types/linkify-it': 5.0.0
+      '@types/mdurl': 2.0.0
+
+  '@types/mdurl@2.0.0': {}
 
   '@uiolee/hexo-htmlnano@1.0.1(htmlnano@2.1.1(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(svgo@3.3.2)(terser@5.44.1))(micromatch@4.0.8)':
     dependencies:
@@ -2732,10 +2759,6 @@ snapshots:
   markdown-it-ins@3.0.1: {}
 
   markdown-it-mark@3.0.1: {}
-
-  markdown-it-obsidian-callouts@0.3.3(markdown-it@13.0.2):
-    dependencies:
-      markdown-it: 13.0.2
 
   markdown-it-obsidian-imgsize@0.1.1: {}
 
