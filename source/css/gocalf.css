@@ -1,26 +1,21 @@
-:root[data-theme="dark"] .invert-when-dark,
-:root[data-theme="light"] .invert-when-light {
-  img,
-  svg {
+:root[data-theme="dark"] .invert-when-dark :is(img, svg),
+:root[data-theme="light"] .invert-when-light :is(img, svg),
+:root[data-theme="dark"] :is(img, svg).invert-when-dark,
+:root[data-theme="light"] :is(img, svg).invert-when-light {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .invert-when-dark :is(img, svg),
+  :root:not([data-theme]) :is(img, svg).invert-when-dark {
     filter: invert(1) hue-rotate(180deg) !important;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) .invert-when-dark {
-    img,
-    svg {
-      filter: invert(1) hue-rotate(180deg) !important;
-    }
-  }
-}
-
 @media (prefers-color-scheme: light) {
-  :root:not([data-theme]) .invert-when-light {
-    img,
-    svg {
-      filter: invert(1) hue-rotate(180deg);
-    }
+  :root:not([data-theme]) .invert-when-light :is(img, svg),
+  :root:not([data-theme]) :is(img, svg).invert-when-light {
+    filter: invert(1) hue-rotate(180deg) !important;
   }
 }
 
