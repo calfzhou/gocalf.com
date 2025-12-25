@@ -21,7 +21,7 @@ Given the output `traversal` of this traversal, recover the tree and return _its
 **Example 1:**
 
 {% invert %}
-![case1](case1.png)
+![case1|423](case1.png)
 {% endinvert %}
 
 > Input: `traversal = "1-2--3--4-5--6--7"`
@@ -30,7 +30,7 @@ Given the output `traversal` of this traversal, recover the tree and return _its
 **Example 2:**
 
 {% invert %}
-![case2](case2.png)
+![case2|423](case2.png)
 {% endinvert %}
 
 > Input: `traversal = "1-2--3---4-5--6---7"`
@@ -39,7 +39,7 @@ Given the output `traversal` of this traversal, recover the tree and return _its
 **Example 3:**
 
 {% invert %}
-![case3](case3.png)
+![case3|305](case3.png)
 {% endinvert %}
 
 > Input: `traversal = "1-401--349---90--88"`

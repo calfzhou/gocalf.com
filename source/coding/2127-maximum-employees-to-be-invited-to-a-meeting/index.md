@@ -19,7 +19,7 @@ Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the 
 **Example 1:**
 
 {% invert %}
-![case1](case1.png)
+![case1|236](case1.png)
 {% endinvert %}
 
 > Input: `favorite = [2,2,1,2]`
@@ -47,7 +47,7 @@ Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the 
 **Example 3:**
 
 {% invert %}
-![case3](case3.png)
+![case3|219](case3.png)
 {% endinvert %}
 
 > Input: `favorite = [3,0,1,4,1]`

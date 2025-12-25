@@ -15,7 +15,7 @@ A **skiplist** is a data structure that takes `O(log(n))` time to add, erase and
 For example, we have a Skiplist containing `[30,40,50,60,70,90]` and we want to add `80` and `45` into it. The Skiplist works this way:
 
 {% invert %}
-![skiplist](skiplist.gif)
+![skiplist|500](skiplist.gif)
 {% endinvert %}
 
 > Artyom Kalinin \[CC BY-SA 3.0\], via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Skip_list_add_element-en.gif "Artyom Kalinin [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons")

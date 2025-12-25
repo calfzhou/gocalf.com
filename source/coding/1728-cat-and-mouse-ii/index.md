@@ -40,7 +40,7 @@ Given a `rows x cols` matrix `grid` and two integers `catJump` and `mouseJump`, 
 **Example 1:**
 
 {% invert %}
-![case1](case1.png)
+![case1|580](case1.png)
 {% endinvert %}
 
 > Input: `grid = ["####F","#C...","M...."], catJump = 1, mouseJump = 2`
@@ -50,7 +50,7 @@ Given a `rows x cols` matrix `grid` and two integers `catJump` and `mouseJump`, 
 **Example 2:**
 
 {% invert %}
-![case2](case2.png)
+![case2|580](case2.png)
 {% endinvert %}
 
 > Input: `grid = ["M.C...F"], catJump = 1, mouseJump = 4`

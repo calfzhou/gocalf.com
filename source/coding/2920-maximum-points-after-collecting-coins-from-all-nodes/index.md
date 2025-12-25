@@ -25,7 +25,7 @@ Return _the **maximum points** you can get after collecting the coins from **all
 **Example 1:**
 
 {% invert %}
-![case1](case1.png)
+![case1|40](case1.png)
 {% endinvert %}
 
 > Input: `edges = [[0,1],[1,2],[2,3]], coins = [10,10,3,3], k = 5`
@@ -40,7 +40,7 @@ Return _the **maximum points** you can get after collecting the coins from **all
 **Example 2:**
 
 {% invert %}
-![case2](case2.png)
+![case2|120](case2.png)
 {% endinvert %}
 
 > Input: `edges = [[0,1],[0,2]], coins = [8,4,4], k = 0`

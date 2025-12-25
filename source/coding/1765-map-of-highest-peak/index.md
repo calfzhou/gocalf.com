@@ -28,7 +28,7 @@ Return _an integer matrix_ `height` _of size_ `m x n` _where_ `height[i][j]` _is
 **Example 1:**
 
 {% invert %}
-![case1](case1.png)
+![case1|220](case1.png)
 {% endinvert %}
 
 > Input: `isWater = [[0,1],[0,0]]`
@@ -39,7 +39,7 @@ Return _an integer matrix_ `height` _of size_ `m x n` _where_ `height[i][j]` _is
 **Example 2:**
 
 {% invert %}
-![case2](case2.png)
+![case2|300](case2.png)
 {% endinvert %}
 
 > Input: `isWater = [[0,0,1],[1,0,0],[0,0,0]]`
