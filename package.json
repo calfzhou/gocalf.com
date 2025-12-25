@@ -11,7 +11,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "postinstall": "cp patch/hexo-renderer-markdown-it/renderer.js node_modules/hexo-renderer-markdown-it/lib/renderer.js",
+    "postinstall": "cp patch/hexo-renderer-markdown-it/renderer.js node_modules/.pnpm/hexo-renderer-markdown-it@7.1.1/node_modules/hexo-renderer-markdown-it/lib/renderer.js",
     "prepare": "node .husky/install.mjs",
     "lint-staged": "lint-staged"
   },
