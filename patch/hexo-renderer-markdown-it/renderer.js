@@ -52,7 +52,6 @@ class Renderer {
           });
 
           let plugin = require(resolved);
-          hexo.log.info(`Loaded markdown-it plugin: ${pugs.name}, which type is ${typeof plugin}`);
           if (typeof plugin === 'object') {
             const key = pugs.import || 'default';
             if (!plugin[key]) {
