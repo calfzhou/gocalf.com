@@ -24,7 +24,7 @@
     "source/notes/**/*.md": "hexo-update-time"
   },
   "dependencies": {
-    "@mdit/plugin-alert": "^0.22.3",
+    "@mdit/plugin-alert": "0.7.6",
     "@traptitech/markdown-it-katex": "^3.6.0",
     "@uiolee/hexo-htmlnano": "^1.0.1",
     "cssnano": "^7.1.2",
