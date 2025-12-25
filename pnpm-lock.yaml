@@ -59,9 +59,6 @@ importers:
       hexo-theme-stellar:
         specifier: 1.33.1
         version: 1.33.1
-      markdown-it-obsidian-callouts:
-        specifier: ^0.3.3
-        version: 0.3.3(markdown-it@13.0.2)
       markdown-it-obsidian-imgsize:
         specifier: ^0.1.1
         version: 0.1.1
@@ -1069,11 +1066,6 @@ packages:
 
   markdown-it-mark@3.0.1:
     resolution: {integrity: sha512-HyxjAu6BRsdt6Xcv6TKVQnkz/E70TdGXEFHRYBGLncRE9lBFwDNLVtFojKxjJWgJ+5XxUwLaHXy+2sGBbDn+4A==}
-
-  markdown-it-obsidian-callouts@0.3.3:
-    resolution: {integrity: sha512-XviZR/5aFmcGVvjUv2I0TidPIkc4RzAJg3cd5N1zJe/3eh2FLLiqt0ugyBlkOyKc2ydcp/q2iUGAZomxn7al+g==}
-    peerDependencies:
-      markdown-it: ^14.0.0
 
   markdown-it-obsidian-imgsize@0.1.1:
     resolution: {integrity: sha512-bOuIKQddR6j1MV2pnu25ODRzvSI/QWG5TavnKUQLLNyFltUkzQ/obtZeAUXV7Fkg4JE1GpPGLJHzCAk5quPG6Q==}
@@ -2732,10 +2724,6 @@ snapshots:
   markdown-it-ins@3.0.1: {}
 
   markdown-it-mark@3.0.1: {}
-
-  markdown-it-obsidian-callouts@0.3.3(markdown-it@13.0.2):
-    dependencies:
-      markdown-it: 13.0.2
 
   markdown-it-obsidian-imgsize@0.1.1: {}
 
