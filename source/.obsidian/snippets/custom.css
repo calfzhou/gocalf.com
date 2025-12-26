@@ -1,0 +1,7 @@
+/* Image color invert */
+body.theme-dark .invert-when-dark img,
+body.theme-dar img.invert-when-dark,
+body.theme-light .invert-when-light img,
+body.theme-light img.invert-when-light {
+  filter: invert(1) hue-rotate(180deg);
+}

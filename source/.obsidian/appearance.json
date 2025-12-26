@@ -1,5 +1,9 @@
 {
   "cssTheme": "Minimal",
   "textFontFamily": "LXGW WenKai",
-  "monospaceFontFamily": "Source Code Pro,LXGW WenKai Mono"
+  "monospaceFontFamily": "Source Code Pro,LXGW WenKai Mono",
+  "enabledCssSnippets": [
+    "custom"
+  ],
+  "theme": "obsidian"
 }
