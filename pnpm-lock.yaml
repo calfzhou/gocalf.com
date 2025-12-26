@@ -11,6 +11,9 @@ importers:
       '@mdit/plugin-alert':
         specifier: 0.7.6
         version: 0.7.6(markdown-it@13.0.2)
+      '@mdit/plugin-img-size':
+        specifier: 0.7.6
+        version: 0.7.6(markdown-it@13.0.2)
       '@traptitech/markdown-it-katex':
         specifier: ^3.6.0
         version: 3.6.0
@@ -62,9 +65,6 @@ importers:
       hexo-theme-stellar:
         specifier: 1.33.1
         version: 1.33.1
-      markdown-it-obsidian-imgsize:
-        specifier: ^0.1.1
-        version: 0.1.1
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
@@ -266,6 +266,15 @@ packages:
 
   '@mdit/plugin-alert@0.7.6':
     resolution: {integrity: sha512-Z+/bHBDniCz/Q+TMa3M6f47KG4tUKvJI8FHXhDwgbKLzDLn045ZBHcOTeqvuWrrjCIKBEo4fVAlYszYcehxmfg==}
+    peerDependencies:
+      markdown-it: ^13.0.2
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
+
+  '@mdit/plugin-img-size@0.7.6':
+    resolution: {integrity: sha512-GZGEbuR0l4+ENXDG1Y2HsrNO2JuEmjI6PPe7pgsolk5yveWOiqzcEV4ushrWnpvwNal3Acuj+dpFDmZFOtm42g==}
+    engines: {node: '>= 18'}
     peerDependencies:
       markdown-it: ^13.0.2
     peerDependenciesMeta:
@@ -1087,9 +1096,6 @@ packages:
   markdown-it-mark@3.0.1:
     resolution: {integrity: sha512-HyxjAu6BRsdt6Xcv6TKVQnkz/E70TdGXEFHRYBGLncRE9lBFwDNLVtFojKxjJWgJ+5XxUwLaHXy+2sGBbDn+4A==}
 
-  markdown-it-obsidian-imgsize@0.1.1:
-    resolution: {integrity: sha512-bOuIKQddR6j1MV2pnu25ODRzvSI/QWG5TavnKUQLLNyFltUkzQ/obtZeAUXV7Fkg4JE1GpPGLJHzCAk5quPG6Q==}
-
   markdown-it-sub@1.0.0:
     resolution: {integrity: sha512-z2Rm/LzEE1wzwTSDrI+FlPEveAAbgdAdPhdWarq/ZGJrGW/uCQbKAnhoCsE4hAbc3SEym26+W2z/VQB0cQiA9Q==}
 
@@ -1855,6 +1861,12 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
 
   '@mdit/plugin-alert@0.7.6(markdown-it@13.0.2)':
+    dependencies:
+      '@types/markdown-it': 13.0.9
+    optionalDependencies:
+      markdown-it: 13.0.2
+
+  '@mdit/plugin-img-size@0.7.6(markdown-it@13.0.2)':
     dependencies:
       '@types/markdown-it': 13.0.9
     optionalDependencies:
@@ -2759,8 +2771,6 @@ snapshots:
   markdown-it-ins@3.0.1: {}
 
   markdown-it-mark@3.0.1: {}
-
-  markdown-it-obsidian-imgsize@0.1.1: {}
 
   markdown-it-sub@1.0.0: {}
 
