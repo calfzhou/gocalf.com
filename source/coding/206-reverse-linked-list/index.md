@@ -14,18 +14,14 @@ Given the `head` of a singly linked list, reverse the list, and return _the reve
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `head = [1,2,3,4,5]`
 > Output: `[5,4,3,2,1]`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `head = [1,2]`
 > Output: `[2,1]`

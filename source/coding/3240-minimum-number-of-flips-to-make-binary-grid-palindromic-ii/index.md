@@ -23,27 +23,21 @@ Return the **minimum** number of cells that need to be flipped to make **all** r
 > Input: `grid = [[1,0,0],[0,1,0],[0,0,1]]`
 > Output: `3`
 > Explanation:
-> {% invert %}
-![case1](case1.png)
-{% endinvert %}
+> ![case1](case1.png){.invert-when-dark}
 
 **Example 2:**
 
 > Input: `grid = [[0,1],[0,1],[0,0]]`
 > Output: `2`
 > Explanation:
-> {% invert %}
-![case2](case2.png)
-{% endinvert %}
+> ![case2](case2.png){.invert-when-dark}
 
 **Example 3:**
 
 > Input: `grid = [[1],[1]]`
 > Output: `2`
 > Explanation:
-> {% invert %}
-![case3](case3.png)
-{% endinvert %}
+> ![case3](case3.png){.invert-when-dark}
 
 **Constraints:**
 

@@ -22,18 +22,14 @@ A **valid BST** is defined as follows:
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `root = [2,1,3]`
 > Output: `true`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `root = [5,1,4,null,null,3,6]`
 > Output: `false`

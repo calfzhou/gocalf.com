@@ -16,9 +16,7 @@ Return the number of servers that communicate with any other server.
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `grid = [[1,0],[0,1]]`
 > Output: `0`
@@ -26,9 +24,7 @@ Return the number of servers that communicate with any other server.
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `grid = [[1,0],[1,1]]`
 > Output: `3`
@@ -36,9 +32,7 @@ Return the number of servers that communicate with any other server.
 
 **Example 3:**
 
-{% invert %}
-![case3](case3.png)
-{% endinvert %}
+![case3](case3.png){.invert-when-dark}
 
 > Input: `grid = [[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]]`
 > Output: `4`

@@ -20,9 +20,7 @@ The testcases are generated so that the answer will be less than or equal to `2 
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]`
 > Output: `2`
@@ -34,9 +32,7 @@ The testcases are generated so that the answer will be less than or equal to `2 
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `obstacleGrid = [[0,1],[0,0]]`
 > Output: `1`

@@ -18,9 +18,7 @@ Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the 
 
 **Example 1:**
 
-{% invert %}
-![case1|236](case1.png)
-{% endinvert %}
+![case1|236](case1.png){.invert-when-dark}
 
 > Input: `favorite = [2,2,1,2]`
 > Output: `3`
@@ -46,9 +44,7 @@ Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the 
 
 **Example 3:**
 
-{% invert %}
-![case3|219](case3.png)
-{% endinvert %}
+![case3|219](case3.png){.invert-when-dark}
 
 > Input: `favorite = [3,0,1,4,1]`
 > Output: `4`
@@ -88,15 +84,15 @@ class Solution:
 
 如果环的长度超过 2，那么只能是让环上的所有人围成一圈，其他任何人都无法插入进去。
 
-{% invert %}
+::: invert-when-dark
 {% diagramsnet big-circle.drawio %}
-{% endinvert %}
+:::
 
 但如果环的长度为 2（即两个人双向奔赴），他俩的两边都可以挂一串粉丝链路。而且如果有多个这样的 couple + 粉丝组合，全都可以围成一圈，仍然满足所有人都跟自己的最爱挨着坐。
 
-{% invert %}
+::: invert-when-dark
 {% diagramsnet couples.drawio %}
-{% endinvert %}
+:::
 
 所以对于每一个环长度为 2 的子图，需要找出分别以两个顶点为终点的最长的路径（acyclic chain），可以用深度优先遍历处理。
 

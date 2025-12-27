@@ -16,18 +16,14 @@ A subtree of a binary tree `tree` is a tree that consists of a node in `tree` an
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `root = [3,4,5,1,2], subRoot = [4,1,2]`
 > Output: `true`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]`
 > Output: `false`

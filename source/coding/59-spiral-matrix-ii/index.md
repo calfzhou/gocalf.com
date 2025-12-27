@@ -14,9 +14,7 @@ Given a positive integer `n`, generate an `n x n` `matrix` filled with elements 
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `n = 3`
 > Output: `[[1,2,3],[8,9,4],[7,6,5]]`

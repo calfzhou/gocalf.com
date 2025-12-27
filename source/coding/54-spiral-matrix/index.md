@@ -14,18 +14,14 @@ Given an `m x n` `matrix`, return _all elements of the_ `matrix` _in spiral orde
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `matrix = [[1,2,3],[4,5,6],[7,8,9]]`
 > Output: `[1,2,3,6,9,8,7,4,5]`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]`
 > Output: `[1,2,3,4,8,12,11,10,9,5,6,7]`

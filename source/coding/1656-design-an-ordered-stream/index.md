@@ -21,9 +21,7 @@ Implement the `OrderedStream` class:
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.gif)
-{% endinvert %}
+![case1](case1.gif){.invert-when-dark}
 
 > Input
 > `["OrderedStream", "insert", "insert", "insert", "insert", "insert"]`

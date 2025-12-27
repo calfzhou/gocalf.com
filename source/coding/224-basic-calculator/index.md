@@ -56,9 +56,9 @@ class Solution:
 
 比如表达式 `"(1+(4+5+2)-3)+(6+8)"`，其表达式树是：
 
-{% invert %}
+::: invert-when-dark
 {% diagramsnet case3-tree.drawio %}
-{% endinvert %}
+:::
 
 逆波兰表达式实际上就是这棵树后序遍历的结果，即：`1, 4, 5, +, 2, +, +, 3, -, 6, 8, +, +`。
 

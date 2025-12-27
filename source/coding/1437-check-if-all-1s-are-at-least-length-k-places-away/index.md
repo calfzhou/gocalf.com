@@ -14,9 +14,7 @@ Given an binary array `nums` and an integer `k`, return `true` _if all_ `1`_'s a
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `nums = [1,0,0,0,1,0,0,1], k = 2`
 > Output: `true`
@@ -24,9 +22,7 @@ Given an binary array `nums` and an integer `k`, return `true` _if all_ `1`_'s a
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `nums = [1,0,0,1,0,1], k = 2`
 > Output: `false`

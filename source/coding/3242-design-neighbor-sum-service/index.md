@@ -16,9 +16,7 @@ Implement the `NeighborSum` class:
 - `int adjacentSum(int value)` returns the **sum** of elements which are adjacent neighbors of `value`, that is either to the top, left, right, or bottom of `value` in `grid`.
 - `int diagonalSum(int value)` returns the **sum** of elements which are diagonal neighbors of `value`, that is either to the top-left, top-right, bottom-left, or bottom-right of `value` in `grid`.
 
-{% invert %}
-![problem](problem.png)
-{% endinvert %}
+![problem](problem.png){.invert-when-dark}
 
 <https://leetcode.cn/problems/design-neighbor-sum-service/>
 
@@ -29,9 +27,7 @@ Implement the `NeighborSum` class:
 > `[[[[0, 1, 2], [3, 4, 5], [6, 7, 8]]], [1], [4], [4], [8]]`
 > Output: `[null, 6, 16, 16, 4]`
 > Explanation:
-> {% invert %}
-![case1](case1.png)
-{% endinvert %}
+> ![case1](case1.png){.invert-when-dark}
 >
 > - The adjacent neighbors of 1 are 0, 2, and 4.
 > - The adjacent neighbors of 4 are 1, 3, 5, and 7.
@@ -45,9 +41,7 @@ Implement the `NeighborSum` class:
 > `[[[[1, 2, 0, 3], [4, 7, 15, 6], [8, 9, 10, 11], [12, 13, 14, 5]]], [15], [9]]`
 > Output: `[null, 23, 45]`
 > Explanation:
-> {% invert %}
-![case2](case2.png)
-{% endinvert %}
+> ![case2](case2.png){.invert-when-dark}
 >
 > - The adjacent neighbors of 15 are 0, 10, 7, and 6.
 > - The diagonal neighbors of 9 are 4, 12, 14, and 15.

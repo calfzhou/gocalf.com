@@ -25,17 +25,11 @@ Return an array `answer` where for each `i` in the range `[0, queries.length - 1
 > Input: `n = 5, queries = [[2,4],[0,2],[0,4]]`
 > Output: `[3,2,1]`
 > Explanation:
-> {% invert %}
-![case1-1](../3243-shortest-distance-after-road-addition-queries-i/case1-1.png)
-{% endinvert %}
+> ![case1-1](../3243-shortest-distance-after-road-addition-queries-i/case1-1.png){.invert-when-dark}
 > After the addition of the road from 2 to 4, the length of the shortest path from 0 to 4 is 3.
-> {% invert %}
-![case1-2](../3243-shortest-distance-after-road-addition-queries-i/case1-2.png)
-{% endinvert %}
+> ![case1-2](../3243-shortest-distance-after-road-addition-queries-i/case1-2.png){.invert-when-dark}
 > After the addition of the road from 0 to 2, the length of the shortest path from 0 to 4 is 2.
-> {% invert %}
-![case1-3](../3243-shortest-distance-after-road-addition-queries-i/case1-3.png)
-{% endinvert %}
+> ![case1-3](../3243-shortest-distance-after-road-addition-queries-i/case1-3.png){.invert-when-dark}
 > After the addition of the road from 0 to 4, the length of the shortest path from 0 to 4 is 1.
 
 **Example 2:**
@@ -43,13 +37,9 @@ Return an array `answer` where for each `i` in the range `[0, queries.length - 1
 > Input: `n = 4, queries = [[0,3],[0,2]]`
 > Output: `[1,1]`
 > Explanation:
-> {% invert %}
-![case2-1](../3243-shortest-distance-after-road-addition-queries-i/case2-1.png)
-{% endinvert %}
+> ![case2-1](../3243-shortest-distance-after-road-addition-queries-i/case2-1.png){.invert-when-dark}
 > After the addition of the road from 0 to 3, the length of the shortest path from 0 to 3 is 1.
-> {% invert %}
-![case2-2](../3243-shortest-distance-after-road-addition-queries-i/case2-2.png)
-{% endinvert %}
+> ![case2-2](../3243-shortest-distance-after-road-addition-queries-i/case2-2.png){.invert-when-dark}
 > After the addition of the road from 0 to 2, the length of the shortest path remains 1.
 
 **Constraints:**

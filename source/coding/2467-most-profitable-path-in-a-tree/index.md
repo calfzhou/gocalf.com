@@ -31,9 +31,7 @@ Return _the **maximum** net income Alice can have if she travels towards the opt
 
 **Example 1:**
 
-{% invert %}
-![case1|275](case1.png)
-{% endinvert %}
+![case1|275](case1.png){.invert-when-dark}
 
 > Input: `edges = [[0,1],[1,2],[1,3],[3,4]], bob = 3, amount = [-2,4,2,-4,6]`
 > Output: `6`
@@ -57,9 +55,7 @@ Return _the **maximum** net income Alice can have if she travels towards the opt
 
 **Example 2:**
 
-{% invert %}
-![case2|250](case2.png)
-{% endinvert %}
+![case2|250](case2.png){.invert-when-dark}
 
 > Input: `edges = [[0,1]], bob = 1, amount = [-7280,2350]`
 > Output: `-7280`

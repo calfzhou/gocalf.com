@@ -22,9 +22,7 @@ The **level** of a node is the number of edges along the path between it and the
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `root = [2,3,5,8,13,21,34]`
 > Output: `[2,5,3,8,13,21,34]`
@@ -34,9 +32,7 @@ The **level** of a node is the number of edges along the path between it and the
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `root = [7,13,11]`
 > Output: `[7,11,13]`

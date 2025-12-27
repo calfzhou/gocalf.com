@@ -16,27 +16,21 @@ Two binary trees are considered the same if they are structurally identical, and
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `p = [1,2,3], q = [1,2,3]`
 > Output: `true`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `p = [1,2,3], q = [1,2,3]`
 > Output: `true`
 
 **Example 3:**
 
-{% invert %}
-![case3](case3.png)
-{% endinvert %}
+![case3](case3.png){.invert-when-dark}
 
 > Input: `p = [1,2,1], q = [1,1,2]`
 > Output: `false`

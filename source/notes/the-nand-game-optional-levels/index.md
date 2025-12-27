@@ -36,7 +36,7 @@ Be careful not to shortcut the circuit by connecting a voltage (1) directly to g
 
 两个 nmos「串联」到 ground，可以实现 a 和 b 同时为 1 时输出 0；否则 disconnect。
 
-{% invert %}
+::: invert-when-dark
 
 ``` mermaid
 flowchart BT
@@ -60,7 +60,7 @@ subgraph zero
 end
 ```
 
-{% endinvert %}
+:::
 
 👍 Totally 4c.
 
@@ -70,7 +70,7 @@ Build an INV gate from CMOS transistors.
 
 因为需要 4 个 CMOS 才能构造出一个 NAND，如果用 NAND 构造 INV 就会比较浪费。
 
-{% invert %}
+::: invert-when-dark
 
 ``` mermaid
 flowchart BT
@@ -88,7 +88,7 @@ subgraph zero
 end
 ```
 
-{% endinvert %}
+:::
 
 👍 Totally 2c.
 
@@ -102,7 +102,7 @@ NOR is an universal logic gate just like NAND. Using only NOR gates any other lo
 
 两个 pmos「串联」到 voltage，可以实现 a 和 b 同时为 0 时输出 1；否则 disconnect。
 
-{% invert %}
+::: invert-when-dark
 
 ``` mermaid
 flowchart BT
@@ -126,7 +126,7 @@ subgraph zero
 end
 ```
 
-{% endinvert %}
+:::
 
 👍 Totally 4c.
 
@@ -138,7 +138,7 @@ end
 
 把 and 和中间的 or 展开，抵消掉一些之后，得到 `(a nand b) nand (a or b)`.
 
-{% invert %}
+::: invert-when-dark
 
 ``` mermaid
 flowchart BT
@@ -147,7 +147,7 @@ a & b --> or
 n1 & or --> n2[nand] --> o(((o)))
 ```
 
-{% endinvert %}
+:::
 
 👍 Totally 3c5n:
 
@@ -198,7 +198,7 @@ The number of bits to move is indicated by the 4-bit **n** input.
 
 一个 **shl 1** 可以左移 1 位，需要至少 15 个才能实现左移 15 位。
 
-{% invert %}
+::: invert-when-dark
 
 ``` mermaid
 flowchart BT
@@ -237,7 +237,7 @@ end
 sel3 ==> O(((O)))
 ```
 
-{% endinvert %}
+:::
 
 ❓ Totally 19c256n:
 
@@ -258,7 +258,7 @@ Output the largest of two 16-bit numbers.
 
 按照有符号数就很简单，计算 `A - B`，如果结果是负数，则 B 更大，否则 A 就是最大的。
 
-{% invert %}
+::: invert-when-dark
 
 ``` mermaid
 flowchart BT
@@ -269,7 +269,7 @@ B ==>|D1| select16
 A ==>|D0| select16
 ```
 
-{% endinvert %}
+:::
 
 ❓ Totally 2c225n (**is neg** not counting):
 

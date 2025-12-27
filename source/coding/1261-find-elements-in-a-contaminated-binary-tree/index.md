@@ -26,9 +26,7 @@ Implement the `FindElements` class:
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input
 > `["FindElements","find","find"]`
@@ -45,9 +43,7 @@ Implement the `FindElements` class:
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input
 > `["FindElements","find","find","find"]`
@@ -65,9 +61,7 @@ Implement the `FindElements` class:
 
 **Example 3:**
 
-{% invert %}
-![case3](case3.png)
-{% endinvert %}
+![case3](case3.png){.invert-when-dark}
 
 > Input
 > `["FindElements","find","find","find","find"]`

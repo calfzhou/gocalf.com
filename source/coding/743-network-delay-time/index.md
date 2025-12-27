@@ -16,9 +16,7 @@ We will send a signal from a given node `k`. Return _the **minimum** time it tak
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2`
 > Output: `2`

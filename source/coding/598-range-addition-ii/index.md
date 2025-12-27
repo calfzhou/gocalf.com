@@ -16,9 +16,7 @@ Count and return _the number of maximum integers in the matrix after performing 
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `m = 3, n = 3, ops = [[2,2],[3,3]]`
 > Output: `4`

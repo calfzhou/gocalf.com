@@ -25,9 +25,7 @@ Return `true` _if you can make `s` a valid parentheses string_. Otherwise, retur
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `s = "))()))", locked = "010100"`
 > Output: `true`

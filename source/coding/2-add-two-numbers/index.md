@@ -16,9 +16,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `l1 = [2,4,3], l2 = [5,6,4]`
 > Output: `[7,0,8]`

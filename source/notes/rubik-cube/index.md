@@ -392,9 +392,7 @@ katex: true
 
 更多变体：
 
-{% invert %}
-{% image high-center-formula.ink.svg 中心块复原公式 %}
-{% endinvert %}
+![high-center-formula](high-center-formula.ink.svg 中心块复原公式){.invert-when-dark}
 
 1. 第 ① 象限：`RU'L'` 或 `R'F'L`
    - `(αR U' βL' U) (αR' U' βL U)`

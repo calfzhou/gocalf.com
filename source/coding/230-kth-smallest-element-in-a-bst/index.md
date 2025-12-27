@@ -14,18 +14,14 @@ Given the `root` of a binary search tree, and an integer `k`, return _the_ `kᵗ
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `root = [3,1,4,null,2], k = 1`
 > Output: `1`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `root = [5,3,6,2,4,null,null,1], k = 3`
 > Output: `3`

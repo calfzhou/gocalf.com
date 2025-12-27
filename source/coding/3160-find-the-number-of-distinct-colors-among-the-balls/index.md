@@ -23,9 +23,7 @@ Return an array `result` of length `n`, where `result[i]` denotes the number of 
 > Input: `limit = 4, queries = [[1,4],[2,5],[1,3],[3,4]]`
 > Output: `[1,2,2,3]`
 > Explanation:
-> {% invert %}
-![case1](case1.gif)
-{% endinvert %}
+> ![case1](case1.gif){.invert-when-dark}
 >
 > - After query 0, ball 1 has color 4.
 > - After query 1, ball 1 has color 4, and ball 2 has color 5.
@@ -37,9 +35,7 @@ Return an array `result` of length `n`, where `result[i]` denotes the number of 
 > Input: `limit = 4, queries = [[0,1],[1,2],[2,2],[3,4],[4,5]]`
 > Output: `[1,2,2,3,4]`
 > Explanation:
-> {% invert %}
-![case2](case2.gif)
-{% endinvert %}
+> ![case2](case2.gif){.invert-when-dark}
 >
 > - After query 0, ball 0 has color 1.
 > - After query 1, ball 0 has color 1, and ball 1 has color 2.

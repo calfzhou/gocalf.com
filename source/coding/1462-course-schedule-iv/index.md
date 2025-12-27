@@ -23,9 +23,7 @@ Return _a boolean array_ `answer`_, where_ `answer[j]` _is the answer to the_ `j
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `numCourses = 2, prerequisites = [[1,0]], queries = [[0,1],[1,0]]`
 > Output: `[false,true]`
@@ -40,9 +38,7 @@ Return _a boolean array_ `answer`_, where_ `answer[j]` _is the answer to the_ `j
 
 **Example 3:**
 
-{% invert %}
-![case3](case3.png)
-{% endinvert %}
+![case3](case3.png){.invert-when-dark}
 
 > Input: `numCourses = 3, prerequisites = [[1,2],[1,0],[2,0]], queries = [[1,0],[1,2]]`
 > Output: `[true,true]`

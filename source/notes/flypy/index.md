@@ -26,9 +26,7 @@ updated: 2025-07-02 23:04:33
 
 ### 键位图
 
-{% invert %}
-![小鹤双拼键位图](heup.png)
-{% endinvert %}
+![小鹤双拼键位图](heup.png){.invert-when-dark}
 
 ### 记忆口诀
 

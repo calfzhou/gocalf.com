@@ -23,18 +23,18 @@ Return the position of the final cell where the snake ends up after executing `c
 > Input: `n = 2, commands = ["RIGHT","DOWN"]`
 > Output: `3`
 > Explanation:
-> {% invert %}
+> ::: invert-when-dark
 {% diagramsnet case1.drawio %}
-{% endinvert %}
+:::
 
 **Example 2:**
 
 > Input: `n = 3, commands = ["DOWN","RIGHT","UP"]`
 > Output: `1`
 > Explanation:
-> {% invert %}
+> ::: invert-when-dark
 {% diagramsnet case2.drawio %}
-{% endinvert %}
+:::
 
 **Constraints:**
 

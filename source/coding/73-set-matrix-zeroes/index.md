@@ -16,18 +16,14 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `matrix = [[1,1,1],[1,0,1],[1,1,1]]`
 > Output: `[[1,0,1],[0,0,0],[1,0,1]]`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]`
 > Output: `[[0,0,0,0],[0,4,5,0],[0,3,1,0]]`

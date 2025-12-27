@@ -19,9 +19,7 @@ Return `true` _if there is a cycle in the linked list_. Otherwise, return `fals
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `head = [3,2,0,-4], pos = 1`
 > Output: `true`
@@ -29,9 +27,7 @@ Return `true` _if there is a cycle in the linked list_. Otherwise, return `fals
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `head = [1,2], pos = 0`
 > Output: `true`
@@ -39,9 +35,7 @@ Return `true` _if there is a cycle in the linked list_. Otherwise, return `fals
 
 **Example 3:**
 
-{% invert %}
-![case3](case3.png)
-{% endinvert %}
+![case3](case3.png){.invert-when-dark}
 
 > Input: `head = [1], pos = -1`
 > Output: `false`

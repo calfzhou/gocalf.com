@@ -18,9 +18,7 @@ Return _the smallest index_ `i` _at which either a row or a column will be compl
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `arr = [1,3,4,2], mat = [[1,4],[2,3]]`
 > Output: `2`
@@ -28,9 +26,7 @@ Return _the smallest index_ `i` _at which either a row or a column will be compl
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `arr = [2,8,7,4,1,3,5,6,9], mat = [[3,2,5],[1,4,6],[8,7,9]]`
 > Output: `3`

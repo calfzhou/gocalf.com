@@ -21,9 +21,7 @@ Return _the maximum amount of water a container can store_.
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `height = [1,8,6,2,5,4,8,3,7]`
 > Output: `49`

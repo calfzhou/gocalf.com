@@ -23,9 +23,7 @@ Return the **minimum** number of cells that need to be flipped to make **either*
 > Input: `grid = [[1,0,0],[0,0,0],[0,0,1]]`
 > Output: `2`
 > Explanation:
-> {% invert %}
-![case1](case1.png)
-{% endinvert %}
+> ![case1](case1.png){.invert-when-dark}
 > Flipping the highlighted cells makes all the rows palindromic.
 
 **Example 2:**
@@ -33,9 +31,7 @@ Return the **minimum** number of cells that need to be flipped to make **either*
 > Input: `grid = [[0,1],[0,1],[0,0]]`
 > Output: `1`
 > Explanation:
-> {% invert %}
-![case2](case2.png)
-{% endinvert %}
+> ![case2](case2.png){.invert-when-dark}
 > Flipping the highlighted cell makes all the columns palindromic.
 
 **Example 3:**

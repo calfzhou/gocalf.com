@@ -19,9 +19,7 @@ Implement the `Solution` class:
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input
 > `["Solution", "getRandom", "getRandom", "getRandom", "getRandom", "getRandom"]`

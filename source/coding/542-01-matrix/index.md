@@ -17,18 +17,14 @@ The distance between two cells sharing a common edge is `1`.
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `mat = [[0,0,0],[0,1,0],[0,0,0]]`
 > Output: `[[0,0,0],[0,1,0],[0,0,0]]`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `mat = [[0,0,0],[0,1,0],[1,1,1]]`
 > Output: `[[0,0,0],[0,1,0],[1,2,1]]`

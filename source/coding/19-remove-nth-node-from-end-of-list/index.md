@@ -14,9 +14,7 @@ Given the `head` of a linked list, remove the `nᵗʰ` node from the end of the 
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `head = [1,2,3,4,5], n = 2`
 > Output: `[1,2,3,5]`

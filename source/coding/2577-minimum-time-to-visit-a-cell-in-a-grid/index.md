@@ -18,9 +18,7 @@ Return _the **minimum** time required in which you can visit the bottom-right ce
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `grid = [[0,1,3,2],[5,1,2,5],[4,3,8,6]]`
 > Output: `7`
@@ -38,9 +36,7 @@ Return _the **minimum** time required in which you can visit the bottom-right ce
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `grid = [[0,2,4],[3,2,1],[1,0,4]]`
 > Output: `-1`

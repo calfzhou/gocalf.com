@@ -24,9 +24,7 @@ Return _the maximum number of points you can see_.
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `points = [[2,1],[2,2],[3,3]], angle = 90, location = [1,1]`
 > Output: `3`
@@ -40,9 +38,7 @@ Return _the maximum number of points you can see_.
 
 **Example 3:**
 
-{% invert %}
-![case3](case3.png)
-{% endinvert %}
+![case3](case3.png){.invert-when-dark}
 
 > Input: `points = [[1,0],[2,1]], angle = 13, location = [1,1]`
 > Output: `1`

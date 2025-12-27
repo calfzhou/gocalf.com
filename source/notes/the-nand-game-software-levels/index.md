@@ -180,11 +180,7 @@ So `I = ci | lt | eq | gt = 0x8007` (i.e. `JMP`).
 
 #### All together
 
-{% invert %}
-
-![|800](20250617-005346.png)
-
-{% endinvert %}
+![20250617-005346](20250617-005346.png){.invert-when-dark}
 
 持续运行的效果相当于对寄存器 D 从 0 开始逐步递增。
 
@@ -1149,11 +1145,7 @@ push.D
 
 Pop two values from stack, subtract the first from the second, and then push the result back on the stack.
 
-{% invert %}
-
-![|120](20250622-224209.png)
-
-{% endinvert %}
+![|120](20250622-224209.png){.invert-when-dark}
 
 “subtract the first from the second” = 「从第二个数中减去第一个数」，即 **后出栈的数 - 先出栈的数**。
 
@@ -1319,11 +1311,7 @@ sub
 
 有个问题是它不会遵循从左向右的计算顺序，比如`100 - 2 + 2 - (7 + 10)` 会得到如下的表达式，结果是 113 而不是期望的 83。
 
-{% invert %}
-
-![|480](20250622-215112.png)
-
-{% endinvert %}
+![|480](20250622-215112.png){.invert-when-dark}
 
 ## Software Level: Conditonals
 
@@ -1356,11 +1344,7 @@ LABEL END
 
 Pop the two top values from the stack and compare them. If the first is greater than the second, push the value -1 (`FFFF` in hex). Otherwise push 0.
 
-{% invert %}
-
-![|120](20250622-223615.png)
-
-{% endinvert %}
+![|120](20250622-223615.png){.invert-when-dark}
 
 这里文字描述跟图片有出入。文字说的是如果 **先出栈的数 > 后出栈的数**，结果为 -1。但图中先出栈 5，大于后出栈的 3，结果却为 0。
 

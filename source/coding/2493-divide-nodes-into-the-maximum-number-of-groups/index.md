@@ -23,9 +23,7 @@ Return _the maximum number of groups (i.e., maximum_ `m`_) into which you can di
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `n = 6, edges = [[1,2],[1,4],[1,5],[2,6],[2,3],[4,6]]`
 > Output: `4`
@@ -75,9 +73,7 @@ class Solution:
 开始直接搬 [3203. Find Minimum Diameter After Merging Two Trees](../3203-find-minimum-diameter-after-merging-two-trees/index.md) 里面计算直径的逻辑，结果不对。那里的快速计算方法只适用于树，在有环的情况下不一定能计算正确。
 
 > 比如下图，如果初始节点是 v，第一次 DFS 会找到 u，再从 u 出发得到的「直径」是 3。但此图的直径其实是 4。
-> {% invert %}
-![bad-diameter-case](bad-diameter-case.png)
-{% endinvert %}
+> ![bad-diameter-case](bad-diameter-case.png){.invert-when-dark}
 > （图片出自 <https://cs.stackexchange.com/a/213>）
 
 只能是按广度优先搜索（BFS），计算出从每一个节点出发能得到的最大路径长度，取最大值则为直径。

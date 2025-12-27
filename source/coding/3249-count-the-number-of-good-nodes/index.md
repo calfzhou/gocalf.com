@@ -23,9 +23,7 @@ Return the number of **good** nodes in the given tree.
 > Input: `edges = [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]]`
 > Output: `7`
 > Explanation:
-> {% invert %}
-![case1](case1.png)
-{% endinvert %}
+> ![case1](case1.png){.invert-when-dark}
 > All of the nodes of the given tree are good.
 
 **Example 2:**
@@ -33,9 +31,7 @@ Return the number of **good** nodes in the given tree.
 > Input: `edges = [[0,1],[1,2],[2,3],[3,4],[0,5],[1,6],[2,7],[3,8]]`
 > Output: `6`
 > Explanation:
-> {% invert %}
-![case2](case2.png)
-{% endinvert %}
+> ![case2](case2.png){.invert-when-dark}
 > There are 6 good nodes in the given tree. They are colored in the image above.
 
 **Example 3:**
@@ -43,9 +39,7 @@ Return the number of **good** nodes in the given tree.
 > Input: `edges = [[0,1],[1,2],[1,3],[1,4],[0,5],[5,6],[6,7],[7,8],[0,9],[9,10],[9,12],[10,11]]`
 > Output: `12`
 > Explanation:
-> {% invert %}
-![case3](case3.png)
-{% endinvert %}
+> ![case3](case3.png){.invert-when-dark}
 > All nodes except node 9 are good.
 
 **Constraints:**

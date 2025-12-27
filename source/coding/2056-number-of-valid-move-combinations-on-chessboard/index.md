@@ -48,9 +48,7 @@ Return _the number of **valid** move combinations_.
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `pieces = ["rook"], positions = [[1,1]]`
 > Output: `15`
@@ -58,9 +56,7 @@ Return _the number of **valid** move combinations_.
 
 **Example 2:**
 
-{% invert %}
-![case1](case2.png)
-{% endinvert %}
+![case1](case2.png){.invert-when-dark}
 
 > Input: `pieces = ["queen"], positions = [[1,1]]`
 > Output: `22`
@@ -68,9 +64,7 @@ Return _the number of **valid** move combinations_.
 
 **Example 3:**
 
-{% invert %}
-![case1](case3.png)
-{% endinvert %}
+![case1](case3.png){.invert-when-dark}
 
 > Input: `pieces = ["bishop"], positions = [[4,3]]`
 > Output: `12`
@@ -78,9 +72,7 @@ Return _the number of **valid** move combinations_.
 
 **Example 4:**
 
-{% invert %}
-![case1](case4.png)
-{% endinvert %}
+![case1](case4.png){.invert-when-dark}
 
 > `输入：pieces = ["rook","rook"], positions = [[1,1],[8,8]]`
 > `输出：223`
@@ -95,9 +87,7 @@ Return _the number of **valid** move combinations_.
 
 **Example 5:**
 
-{% invert %}
-![case1](case5.png)
-{% endinvert %}
+![case1](case5.png){.invert-when-dark}
 
 > `输入：pieces = ["queen","bishop"], positions = [[5,7],[3,4]]`
 > `输出：281`

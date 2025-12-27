@@ -22,18 +22,14 @@ Return the _2D grid_ after applying shift operation `k` times.
 
 **Example 1:**
 
-{% invert %}
-![case1|400](case1.png)
-{% endinvert %}
+![case1|400](case1.png){.invert-when-dark}
 
 > Input: `grid = [[1,2,3],[4,5,6],[7,8,9]], k = 1`
 > Output: `[[9,1,2],[3,4,5],[6,7,8]]`
 
 **Example 2:**
 
-{% invert %}
-![case2|400](case2.png)
-{% endinvert %}
+![case2|400](case2.png){.invert-when-dark}
 
 > Input: `grid = [[3,8,1,9],[19,7,2,5],[4,6,11,10],[12,0,21,13]], k = 4`
 > Output: `[[12,0,21,13],[3,8,1,9],[19,7,2,5],[4,6,11,10]]`

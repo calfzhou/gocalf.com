@@ -18,9 +18,7 @@ Return _the matrix after sorting it._
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `score = [[10,6,9,1],[7,5,11,2],[4,8,3,15]], k = 2`
 > Output: `[[7,5,11,2],[10,6,9,1],[4,8,3,15]]`
@@ -32,9 +30,7 @@ Return _the matrix after sorting it._
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `score = [[3,4],[5,6]], k = 0`
 > Output: `[[5,6],[3,4]]`

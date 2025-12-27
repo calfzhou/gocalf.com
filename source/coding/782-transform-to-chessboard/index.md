@@ -18,9 +18,7 @@ A **chessboard board** is a board where no `0`'s and no `1`'s are 4-directionall
 
 **Example 1:**
 
-{% invert %}
-![case1|400](case1.png)
-{% endinvert %}
+![case1|400](case1.png){.invert-when-dark}
 
 > Input: `board = [[0,1,1,0],[0,1,1,0],[1,0,0,1],[1,0,0,1]]`
 > Output: `2`
@@ -30,9 +28,7 @@ A **chessboard board** is a board where no `0`'s and no `1`'s are 4-directionall
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `board = [[0,1],[1,0]]`
 > Output: `0`
@@ -40,9 +36,7 @@ A **chessboard board** is a board where no `0`'s and no `1`'s are 4-directionall
 
 **Example 3:**
 
-{% invert %}
-![case3](case2.png)
-{% endinvert %}
+![case3](case2.png){.invert-when-dark}
 
 > Input: `board = [[1,0],[1,0]]`
 > Output: `-1`

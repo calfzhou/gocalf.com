@@ -15,9 +15,7 @@ Given an integer `n`, return _the number of structurally unique **BST**'s (binar
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: n = 3
 > Output: 5

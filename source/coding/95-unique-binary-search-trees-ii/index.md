@@ -14,9 +14,7 @@ Given an integer `n`, return _all the structurally unique **BST**'s (binary sear
 
 **Example 1:**
 
-{% invert %}
-![case1](../96-unique-binary-search-trees/case1.png)
-{% endinvert %}
+![case1](../96-unique-binary-search-trees/case1.png){.invert-when-dark}
 
 > Input: `n = 3`
 > Output: `[[1,null,2,null,3],[1,null,3,2],[2,1,3],[3,1,null,null,2],[3,2,null,1]]`

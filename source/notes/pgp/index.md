@@ -47,7 +47,7 @@ E | Encrypt | 加密
 
 ### 架构
 
-{% invert %}
+::: invert-when-dark
 
 ``` mermaid
 flowchart LR
@@ -74,7 +74,7 @@ flowchart LR
   sec --- revoke
 ```
 
-{% endinvert %}
+:::
 
 ## 安装 GnuPG
 

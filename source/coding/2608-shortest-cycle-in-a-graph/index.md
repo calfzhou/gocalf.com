@@ -18,9 +18,7 @@ A cycle is a path that starts and ends at the same node, and each edge in the pa
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `n = 7, edges = [[0,1],[1,2],[2,0],[3,4],[4,5],[5,6],[6,3]]`
 > Output: `3`
@@ -28,9 +26,7 @@ A cycle is a path that starts and ends at the same node, and each edge in the pa
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `n = 4, edges = [[0,1],[0,2]]`
 > Output: `-1`
@@ -60,15 +56,15 @@ class Solution:
 
 如果 r 刚好在环上，则环长等于 `d(u) + d(v) + 1`，而且易知这就是经过 r 的最小的环。如：
 
-{% invert %}
+::: invert-when-dark
 {% diagramsnet bfs-1.drawio %}
-{% endinvert %}
+:::
 
 如果 r 不在环上，则环长小于 `d(u) + d(v) + 1`。如：
 
-{% invert %}
+::: invert-when-dark
 {% diagramsnet bfs-2.drawio %}
-{% endinvert %}
+:::
 
 对所有的顶点进行同样的处理，一定可以（当起点是最小环上的某个顶点的时候）得到最小的环长。
 

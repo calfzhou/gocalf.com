@@ -18,9 +18,7 @@ Given the integer array `position` and the integer `m`. Return _the required for
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `position = [1,2,3,4,7], m = 3`
 > Output: `3`

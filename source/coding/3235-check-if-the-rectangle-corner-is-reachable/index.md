@@ -23,9 +23,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Input: `xCorner = 3, yCorner = 4, circles = [[2,1,1]]`
 > Output: true
 > Explanation:
-> {% invert %}
-![case1](case1.png)
-{% endinvert %}
+> ![case1](case1.png){.invert-when-dark}
 > The curve shows a possible path between `(0, 0)` and `(3, 4)`.
 
 **Example 2:**
@@ -33,9 +31,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Input: `xCorner = 3, yCorner = 3, circles = [[1,1,2]]`
 > Output: false
 > Explanation:
-> {% invert %}
-![case2](case2.png)
-{% endinvert %}
+> ![case2](case2.png){.invert-when-dark}
 > No path exists from `(0, 0)` to `(3, 3)`.
 
 **Example 3:**
@@ -43,9 +39,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Input: `xCorner = 3, yCorner = 3, circles = [[2,1,1],[1,2,1]]`
 > Output: false
 > Explanation:
-> {% invert %}
-![case3](case3.png)
-{% endinvert %}
+> ![case3](case3.png){.invert-when-dark}
 > No path exists from `(0, 0)` to `(3, 3)`.
 
 **Example 4:**
@@ -53,9 +47,7 @@ Return `true` if such a path exists, and `false` otherwise.
 > Input: `xCorner = 4, yCorner = 4, circles = [[5,5,1]]`
 > Output: true
 > Explanation:
-> {% invert %}
-![case4](case4.png)
-{% endinvert %}
+> ![case4](case4.png){.invert-when-dark}
 
 **Constraints:**
 

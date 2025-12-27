@@ -18,9 +18,7 @@ Return _the head of the merged linked list_.
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `list1 = [1,2,4], list2 = [1,3,4]`
 > Output: `[1,1,2,3,4,4]`

@@ -62,9 +62,9 @@ class Solution:
 
 各种情况如下图示（`L = nums[l], M = nums[m], R = nums[r]`）。
 
-{% invert %}
+::: invert-when-dark
 {% diagramsnet cases.drawio %}
-{% endinvert %}
+:::
 
 其中 t1、t3、t6、t7 四种情况下，需要进入左半边，而 t2、t4、t5、t8 情况需要进入右半边。每种情况的判定条件根据图示可以确定下来。
 

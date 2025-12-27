@@ -18,18 +18,14 @@ Return _an edge that can be removed so that the resulting graph is a tree of_ `n
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `edges = [[1,2],[1,3],[2,3]]`
 > Output: `[2,3]`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `edges = [[1,2],[2,3],[3,4],[1,4],[1,5]]`
 > Output: `[1,4]`

@@ -22,18 +22,14 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `head = [1,2,3,4]`
 > Output: `[1,4,2,3]`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `head = [1,2,3,4,5]`
 > Output: `[1,5,2,4,3]`

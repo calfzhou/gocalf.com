@@ -20,9 +20,7 @@ The **level** of a node is the number of edges along the path between it and the
 
 **Example 1:**
 
-{% invert %}
-![case1|500](case1.png)
-{% endinvert %}
+![case1|500](case1.png){.invert-when-dark}
 
 > Input: `root = [1,4,3,7,6,8,5,null,null,null,null,9,null,10]`
 > Output: `3`
@@ -37,9 +35,7 @@ The **level** of a node is the number of edges along the path between it and the
 
 **Example 2:**
 
-{% invert %}
-![case2|400](case2.png)
-{% endinvert %}
+![case2|400](case2.png){.invert-when-dark}
 
 > Input: `root = [1,3,2,7,6,5,4]`
 > Output: `3`
@@ -54,9 +50,7 @@ The **level** of a node is the number of edges along the path between it and the
 
 **Example 3:**
 
-{% invert %}
-![case3|400](case3.png)
-{% endinvert %}
+![case3|400](case3.png){.invert-when-dark}
 
 > Input: `root = [1,2,3,4,5,6]`
 > Output: `0`
@@ -97,15 +91,15 @@ class Solution:
 
 比如 `m = 8` 个数字为 `[5, 1, 3, 2, 4, 7, 6, 8]`，按数字大小排序的下标为 `[1, 3, 2, 4, 0, 6, 5, 7]`：
 
-{% invert %}
+::: invert-when-dark
 {% diagramsnet sort_indices.drawio %}
-{% endinvert %}
+:::
 
 对按数字排序的下标数组找出轮换循环，易知共有四个轮换循环组：
 
-{% invert %}
+::: invert-when-dark
 {% diagramsnet find_loops.drawio %}
-{% endinvert %}
+:::
 
 所以原始的数组需要进行 `8 - 4 = 4` 次两两交换。
 

@@ -16,18 +16,14 @@ Each word must be constructed from letters of sequentially adjacent cells, where
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]`
 > Output: `["eat","oath"]`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `board = [["a","b"],["c","d"]], words = ["abcb"]`
 > Output: `[]`

@@ -15,18 +15,14 @@ Given an `m x n` binary `matrix` filled with `0`'s and `1`'s, _find the largest 
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]`
 > Output: `4`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `matrix = [["0","1"],["1","0"]]`
 > Output: `1`

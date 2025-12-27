@@ -8,9 +8,7 @@ updated: 2025-04-26 23:58:08
 
 前几天看到这样一张图。
 
-{% invert when:light %}
-![Success is a Journey](journey.jpg)
-{% endinvert %}
+![Success is a Journey](journey.jpg){.invert-when-light}
 
 成不成功的不知道，只是发现目前的状态确实是跟图中的「前期」描述的差不多。希望可以尽快完成这个阶段。
 

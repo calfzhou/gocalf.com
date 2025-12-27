@@ -10,9 +10,7 @@ updated: 2024-11-18 17:05:10
 
 An **image smoother** is a filter of the size `3 x 3` that can be applied to each cell of an image by rounding down the average of the cell and the eight surrounding cells (i.e., the average of the nine cells in the blue smoother). If one or more of the surrounding cells of a cell is not present, we do not consider it in the average (i.e., the average of the four cells in the red smoother).
 
-{% invert %}
-![problem](problem.png)
-{% endinvert %}
+![problem](problem.png){.invert-when-dark}
 
 Given an `m x n` integer matrix `img` representing the grayscale of an image, return _the image after applying the smoother on each cell of it_.
 
@@ -20,9 +18,7 @@ Given an `m x n` integer matrix `img` representing the grayscale of an image, re
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `img = [[1,1,1],[1,0,1],[1,1,1]]`
 > Output: `[[0,0,0],[0,0,0],[0,0,0]]`
@@ -33,9 +29,7 @@ Given an `m x n` integer matrix `img` representing the grayscale of an image, re
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `img = [[100,200,100],[200,50,200],[100,200,100]]`
 > Output: `[[137,141,137],[141,138,141],[137,141,137]]`

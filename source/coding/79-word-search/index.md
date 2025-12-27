@@ -16,27 +16,21 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"`
 > Output: `true`
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"`
 > Output: `true`
 
 **Example 3:**
 
-{% invert %}
-![case3](case3.png)
-{% endinvert %}
+![case3](case3.png){.invert-when-dark}
 
 > Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"`
 > Output: `false`
@@ -82,9 +76,9 @@ class Solution:
 
 比如下图的 `board`，目标 `word = "ABCDA"`。
 
-{% invert %}
+::: invert-when-dark
 {% diagramsnet abcda.drawio %}
-{% endinvert %}
+:::
 
 从 `board[0][1] = 'A'` 出发时，会发现 `board[1][1] = 'B'` 无法串出 `word[1:] = "BCDA"`；但是如果从 `board[1][0] = 'A'` 出发却可以。
 

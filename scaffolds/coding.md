@@ -14,11 +14,6 @@ TODO
 
 **Example 1:**
 
-{% invert %}
-![case1](TODO/case1.png)
-{% image TODO/case1.png width:300px %}
-{% endinvert %}
-
 > Input: TODO
 > Output: TODO
 

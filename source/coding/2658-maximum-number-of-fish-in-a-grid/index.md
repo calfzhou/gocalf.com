@@ -26,9 +26,7 @@ An **adjacent** cell of the cell `(r, c)`, is one of the cells `(r, c + 1)`, `(r
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `grid = [[0,2,1,0],[4,0,0,3],[1,0,0,4],[0,3,2,0]]`
 > Output: `7`
@@ -36,9 +34,7 @@ An **adjacent** cell of the cell `(r, c)`, is one of the cells `(r, c + 1)`, `(r
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `grid = [[1,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,1]]`
 > Output: `1`

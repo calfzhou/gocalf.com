@@ -20,9 +20,7 @@ A cycle is a path that starts and ends at the **same** node.
 
 **Example 1:**
 
-{% invert %}
-![case1](case1.png)
-{% endinvert %}
+![case1](case1.png){.invert-when-dark}
 
 > Input: `edges = [3,3,4,2,3]`
 > Output: `3`
@@ -31,9 +29,7 @@ A cycle is a path that starts and ends at the **same** node.
 
 **Example 2:**
 
-{% invert %}
-![case2](case2.png)
-{% endinvert %}
+![case2](case2.png){.invert-when-dark}
 
 > Input: `edges = [2,-1,3,1]`
 > Output: `-1`
@@ -75,9 +71,9 @@ class Solution:
 
 如下图，从 u 出发，记出发时间为 `t = 1`。第一次经过 v 的时间是 `t = 3`，到 `t = 8` 时再次访问 v，说明有环，且环长为 `8 - 3 = 5`。
 
-{% invert %}
+::: invert-when-dark
 {% diagramsnet visit-time.drawio %}
-{% endinvert %}
+:::
 
 为了避免重复处理，每个顶点经过的时间都记录下来，曾经访问过的顶点就不再访问了。
 
