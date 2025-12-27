@@ -148,7 +148,7 @@ data_services:
 
 plugins:
   katex:
-    enable: true # This is required to include katex related stylesheets.
+    enable: false # markdown-it-katex 会完成 Katex 渲染，但需要通过 `enable: true` 来注入 Katex CSS
     # Stellar 1.33.1 默认的 Katex 配置，会在正常的公式下边多显示一样格式错误的公式，故改为如下配置
     # See: https://github.com/xaoxuu/hexo-theme-stellar/issues/621#issuecomment-3390421599
     inject: |
