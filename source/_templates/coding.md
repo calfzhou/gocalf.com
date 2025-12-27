@@ -11,8 +11,8 @@ if (slug.startsWith('Untitled')) {
 title: <% title %>
 notebook: coding
 tags: []
-date: <% tp.file.creation_date('') %>
-updated: <% tp.file.last_modified_date('') %>
+date: <% tp.file.creation_date('YYYY-MM-DD HH:mm:SS') %>
+updated: <% tp.file.last_modified_date('YYYY-MM-DD HH:mm:SS') %>
 katex: false
 ---
 ## Problem
