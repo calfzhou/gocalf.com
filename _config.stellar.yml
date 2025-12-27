@@ -158,27 +158,27 @@ plugins:
   animcube2:
     enable: false
     inject: |
-      <script src="/js/plugins/AnimCube2.min.js"></script>
+      <script src="/js/plugins/AnimCube2.min.js?v=20251227"></script>
   animcube3:
     enable: false
     inject: |
-      <script src="/js/plugins/AnimCube3.min.js"></script>
+      <script src="/js/plugins/AnimCube3.min.js?v=20251227"></script>
   animcube4:
     enable: false
     inject: |
-      <script src="/js/plugins/AnimCube4.min.js"></script>
+      <script src="/js/plugins/AnimCube4.min.js?v=20251227"></script>
   animcube5:
     enable: false
     inject: |
-      <script src="/js/plugins/AnimCube5.min.js"></script>
+      <script src="/js/plugins/AnimCube5.min.js?v=20251227"></script>
   animcube6:
     enable: false
     inject: |
-      <script src="/js/plugins/AnimCube6.min.js"></script>
+      <script src="/js/plugins/AnimCube6.min.js?v=20251227"></script>
   animcube7:
     enable: false
     inject: |
-      <script src="/js/plugins/AnimCube7.min.js"></script>
+      <script src="/js/plugins/AnimCube7.min.js?v=20251227"></script>
 
 style:
   prefers_theme: dark # auto / light / dark
