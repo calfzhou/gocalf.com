@@ -3,7 +3,7 @@ title: ESP32-PICO-DevKitM-2 开发板
 notebook: notes
 tags:
   - it/embed
-created: 2025-11-01T15:03:54+08:00
+date: 2025-12-27 20:13:23
 updated: 2025-12-27 20:13:23
 ---
 ## Document
