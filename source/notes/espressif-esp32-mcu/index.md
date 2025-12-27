@@ -2,7 +2,7 @@
 title: 乐鑫科技 ESP32 Microcontroller Unit
 notebook: notes
 date: 2025-11-18 23:44:11
-updated: 2025-11-18 23:44:11
+updated: 2025-12-27 19:31:56
 tags:
   - it/embed
 ---
@@ -109,7 +109,7 @@ ESP 产品主要有芯片（Soc）、模组（Module）以及开发板三种形�
     - 最小开发板，可插接于迷你面包板。ESP32-PICO-KIT-1 为用户提供了基于 ESP32-PICO-V3 芯片开发应用程序的硬件，更加方便用户探索 ESP32 芯片的功能。
 - [ESP32-PICO-DevKitM-2](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32/esp32-pico-devkitm-2/index.html) ✅
     - 基于 [ESP32](https://www.espressif.com/zh-hans/products/socs/esp32) 的乐鑫开发板，板上搭载 [ESP32-PICO-MINI-02/02U](https://www.espressif.com/zh-hans/products/modules) 模组。ESP32-PICO-MINI-02/02U 模组具备完整的 Wi-Fi 和蓝牙功能。
-    - [ESP32-PICO-DevKitM-2 开发板](../ESP32-PICO-DevKitM-2%20开发板/index.md)
+    - [ESP32-PICO-DevKitM-2 开发板](../esp32-pico-devkitm-2/index.md)
 - [ESP32-LCDKit](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32/esp32-lcdkit/index.html)
     - 以乐鑫 ESP32-DevKitC（需另采购）为核心的 HMI（人机交互）开发板。
 - [ESP32-Ethernet-Kit](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32/esp32-ethernet-kit/index.html)
