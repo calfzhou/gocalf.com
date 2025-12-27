@@ -1,6 +1,7 @@
 ---
 title: 给 MacBook Pro 清灰
 date: 2024-06-09 22:20:00
+updated: 2024-06-09 22:20:00
 ---
 上周淘了一台二手的 MacBook Pro 15-inch 2019。
 
