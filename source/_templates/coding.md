@@ -1,0 +1,56 @@
+---
+<%*
+let slug = tp.file.title;
+let title = slug;
+if (slug.startsWith('Untitled')) {
+  slug = await tp.system.prompt('Slug:');
+  title = await tp.system.prompt('Title:', slug);
+  await tp.file.move(`/coding/${slug}/index`);
+}
+%>
+title: <% title %>
+notebook: coding
+tags: []
+date: <% tp.file.creation_date('') %>
+updated: <% tp.file.last_modified_date('') %>
+katex: false
+---
+## Problem
+
+<% tp.file.cursor() %>TODO
+
+<https://todo>
+
+**Example 1:**
+
+> Input: TODO
+> Output: TODO
+
+**Example 2:**
+
+> Input: TODO
+> Output: TODO
+
+**Example 3:**
+
+> Input: TODO
+> Output: TODO
+
+**Constraints:**
+
+- TODO
+- TODO
+
+## Test Cases
+
+``` python
+TODO: default code definition
+```
+
+{% asset_code coding/<% slug %>/solution_test.py %}
+
+## Thoughts
+
+## Code
+
+{% asset_code coding/<% slug %>/solution.py %}

@@ -17,6 +17,14 @@
     {
       "folder": "notes",
       "template": "_templates/note.md"
+    },
+    {
+      "folder": "coding",
+      "template": "_templates/coding.md"
+    },
+    {
+      "folder": "_posts",
+      "template": "_templates/post.md"
     }
   ],
   "enable_file_templates": false,
