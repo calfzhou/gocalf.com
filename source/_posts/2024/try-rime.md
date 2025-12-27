@@ -1,5 +1,6 @@
 ---
 title: 准备改用 RIME 系列的输入法
+type: story
 date: 2024-04-23 21:33:11
 updated: 2025-05-10 23:28:03
 ---
@@ -10,25 +11,17 @@ updated: 2025-05-10 23:28:03
 
 现在想来，还是得考虑改用开源输入法了。稍微搜了一下，几乎都会提到 [RIME | 中州韻輸入法引擎](https://rime.im/)，[rime/librime: Rime Input Method Engine, the core library](https://github.com/rime/librime)。
 
-{% badge_github rime librime release:true %}
-
 {% quot RIME | 聪明的输入法懂我心意 %}
 
 RIME 本身是一个输入法算法框架。基于这一框架，Rime 开发者与其他开源社区的参与者在 Windows、macOS、Linux、Android 等平台上创造了不同的输入法前端实现。
 
 比如 macOS 里的叫 鼠须管（Squirrel），[rime/squirrel: 【鼠鬚管】Rime for macOS](https://github.com/rime/squirrel)。
 
-{% badge_github rime squirrel release:true %}
-
 Windows 里的叫 小狼毫（Weasel），[rime/weasel: 【小狼毫】Rime for Windows](https://github.com/rime/weasel)。
-
-{% badge_github rime weasel release:true %}
 
 其他系统/平台的客户端信息参见 [下載及安裝 | RIME | 中州韻輸入法引擎](https://rime.im/download/)。
 
 iOS 上目前暂时用的是 Hamster（「仓」输入法），[imfuxiao/Hamster: librime for iOS App](https://github.com/imfuxiao/Hamster)。
-
-{% badge_github imfuxiao Hamster release:true %}
 
 不过整体上，还只是安装和试用了，还没有完全切换过去，还是有很多不适应的地方。
 

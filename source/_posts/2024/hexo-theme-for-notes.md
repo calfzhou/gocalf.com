@@ -1,13 +1,12 @@
 ---
 title: 准备为笔记场景定制主题
+type: story
 date: 2024-04-28 23:50:43
 updated: 2024-04-28 23:50:43
 ---
 ## 背景
 
 目前使用的是 [xaoxuu/hexo-theme-stellar: 内置文档系统的简约商务风Hexo主题，支持大量的标签组件和动态数据组件](https://github.com/xaoxuu/hexo-theme-stellar) 这个主题。
-
-{% badge_github xaoxuu hexo-theme-stellar release:true %}
 
 > Stellar 是一个内置文档系统的简约商务风 Hexo 主题，支持丰富的标签和动态数据组件，帮助您简单从容地应对各种表达需求，十分推荐内容创作者使用 Stellar 开始您全新的博客之旅。
 

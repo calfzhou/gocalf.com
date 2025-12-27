@@ -1,5 +1,6 @@
 ---
 title: 给 MacBook Pro 清灰
+type: story
 date: 2024-06-09 22:20:00
 updated: 2024-06-09 22:20:00
 ---

@@ -1,5 +1,6 @@
 ---
 title: Hello World
+type: story
 date: 2024-04-13 11:02:06
 updated: 2024-04-14 23:12:28
 ---
@@ -17,4 +18,4 @@ updated: 2024-04-14 23:12:28
 
 不说了。一定要减少仪式感，要不然就会再次放弃。
 
-{% emoji blobcat ablobcatrainbow %}
+{% emoji blobcat party %}
