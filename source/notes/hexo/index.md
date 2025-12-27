@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2025-12-27 10:35:10
+updated: 2025-12-27 17:32:30
 ---
 ## Hexo
 
@@ -63,12 +63,10 @@ marked: # https://github.com/hexojs/hexo-renderer-marked
 - Hexo 提供的 `asset_img` 标签插件 `{% asset_img src [title] %}`
 - Stellar 主题提供的 [`image` 标签插件](https://xaoxuu.com/wiki/stellar/tag-plugins/express/#image-%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE) `{% image src [description] %}`
 
-Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=fantasy.vscode-hexo-utils)。
+文章和笔记（或其他页面）的差异，是因为 Markdown 文件路径和 HTML 页面路径的映射关系不同：
 
-文章和笔记（或其他页面）的差异，应该是因为路由路径不同：
-
-- 文章 post-slug.md ⇒ `/path/to/post-slug/index.html`
-- 笔记 note-slug.md ⇒ `/path/to/note-slug.html`
+- 文章 `post-slug.md` ⇒ `/path/to/post-slug/index.html`
+- 笔记 `note-slug/index.md` ⇒ `/path/to/note-slug/index.html`
 
 #### 文章（Post）中引用图片
 
@@ -76,10 +74,12 @@ Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](http
 | ----------- | -------------------- | ------------------------ | ------------------------ |
 | Markdown    | `filename`           | {% mark ✓ color:green %} | {% mark ✗ color:red %}   |
 | Markdown    | `post-slug/filename` | {% mark ✗ color:red %}   | {% mark ✓ color:green %} |
-| `asset_img` | `filename`           | {% mark ✗ color:red %}   | {% mark ✓ color:green %} |
+| `asset_img` | `filename`           | {% mark ✓ color:green %} | {% mark ✗ color:red %}   |
 | `asset_img` | `post-slug/filename` | {% mark ✗ color:red %}   | {% mark ✓ color:green %} |
 | `image`     | `filename`           | {% mark ✓ color:green %} | {% mark ✗ color:red %}   |
 | `image`     | `post-slug/filename` | {% mark ✗ color:red %}   | {% mark ✗ color:red %}   |
+
+Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=fantasy.vscode-hexo-utils)。
 
 #### 独立页面（含 Note、Wiki）中引用图片
 
