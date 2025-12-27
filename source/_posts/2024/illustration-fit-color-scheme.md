@@ -35,11 +35,9 @@ filter: invert(1) hue-rotate(180deg);
 {% folding Color Palette 翻转前后对比 %}
 {% grid c:2 %}
 <!-- cell -->
-{% image colors.png 原始色彩 %}
+![colors](colors.png "原始色彩")
 <!-- cell -->
-{% invert when:always %}
-{% image colors.png 翻转的色彩 %}
-{% endinvert %}
+![colors-inverted](colors.png "翻转的色彩"){.invert-when-dark .invert-when-light}
 {% endgrid %}
 {% endfolding %}
 
@@ -59,18 +57,10 @@ filter: invert(1) hue-rotate(180deg);
 
 如果用 SVG，注意图中设置的 `width` 和 `height` 值，可以调整成需要的值，或者直接删掉，在 `image` 标签中指定。
 
-最后在图片的明暗风格跟页面的明暗主题不一致时，对图片应用 filter 进行颜色翻转。本站用自定义的 `invert` 标签包裹需要翻转的图片。具体用法为：
+最后在图片的明暗风格跟页面的明暗主题不一致时，对图片应用 filter 进行颜色翻转。
 
-``` markdown
-{% invert [when:dark/light/always] %}
-![alt](src)
-{% endinvert %}
-```
-
-其中 `when` 参数指定在哪种明暗主题下才对图片颜色进行翻转，默认值是 `dark`。
+参见 [图片适配明暗配色](../../notes/hexo/index.md#图片适配明暗配色)。
 
 本文开头提到的图片，按照这个逻辑处理完，看到的效果是：
 
-{% invert %}
-![high-center-formula.ink.svg](/notes/rubik-cube/high-center-formula.ink.svg)
-{% endinvert %}
+![high-center-formula.ink.svg](/notes/rubik-cube/high-center-formula.ink.svg){.invert-when-dark}

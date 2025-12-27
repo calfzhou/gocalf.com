@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2025-12-24 21:15:01
+updated: 2025-12-27 10:35:10
 ---
 ## Hexo
 
@@ -50,12 +50,6 @@ Hexo 还是以（博客）文章（posts）为核心的，虽然 Stellar 独创�
 
 调整 hexo 配置 `_config.yml`:
 
-引用图片可以有几种语法：
-
-- Markdown 语法 `![alt](assets/src)`
-- Hexo 提供的 `asset_img` 标签插件 `{% asset_img slug [title] %}`
-- Stellar 主题提供的 [`image` 标签插件](https://xaoxuu.com/wiki/stellar/tag-plugins/express/#image-%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE) `{% image src [description] %}`
-
 ``` yaml
 post_asset_folder: true # https://hexo.io/docs/asset-folders#Post-Asset-Folder
 marked: # https://github.com/hexojs/hexo-renderer-marked
@@ -63,10 +57,13 @@ marked: # https://github.com/hexojs/hexo-renderer-marked
   postAsset: true
 ```
 
-Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=fantasy.vscode-hexo-utils)。
+引用图片可以有几种语法：
 
-> 不确定是因为 7.2 的一些改动，还是因为换了 renderer，下面两个表的效果发生了变化。
-> 目前是 2024-07-11 基于 Hexo 7.3 验证的结果。
+- Markdown 语法 `![alt](src)`
+- Hexo 提供的 `asset_img` 标签插件 `{% asset_img src [title] %}`
+- Stellar 主题提供的 [`image` 标签插件](https://xaoxuu.com/wiki/stellar/tag-plugins/express/#image-%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE) `{% image src [description] %}`
+
+Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=fantasy.vscode-hexo-utils)。
 
 文章和笔记（或其他页面）的差异，应该是因为路由路径不同：
 
@@ -75,32 +72,28 @@ Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](http
 
 #### 文章（Post）中引用图片
 
-Syntax | Slug / Src | Hexo | VS Code
---|--|--|--
-Markdown | `filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %}
-Markdown | `post-slug/filename` | {% mark ✗ color:red %} | {% mark ✓ color:green %}
-`asset_img` | `filename` | {% mark ✗ color:red %} | {% mark ✓ color:green %}
-`asset_img` | `post-slug/filename` | {% mark ✗ color:red %} | {% mark ✓ color:green %}
-`image` | `filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %}
-`image` | `post-slug/filename` | {% mark ✗ color:red %} | {% mark ✗ color:red %}
+| Syntax      | Src                  | Hexo                     | VS Code                  |
+| ----------- | -------------------- | ------------------------ | ------------------------ |
+| Markdown    | `filename`           | {% mark ✓ color:green %} | {% mark ✗ color:red %}   |
+| Markdown    | `post-slug/filename` | {% mark ✗ color:red %}   | {% mark ✓ color:green %} |
+| `asset_img` | `filename`           | {% mark ✗ color:red %}   | {% mark ✓ color:green %} |
+| `asset_img` | `post-slug/filename` | {% mark ✗ color:red %}   | {% mark ✓ color:green %} |
+| `image`     | `filename`           | {% mark ✓ color:green %} | {% mark ✗ color:red %}   |
+| `image`     | `post-slug/filename` | {% mark ✗ color:red %}   | {% mark ✗ color:red %}   |
 
-#### 笔记（Note）中引用图片
+#### 独立页面（含 Note、Wiki）中引用图片
 
-> TODO: 关于 assets 目录的变化。关于 note URL 的变化。
+> [!note]
+> 2025-12 Page 的文件路径全部统一为 `source/<folders>/<page-slug>/index.md`，生成的文件为 `/folders/page-slug/index.html`，美化 URL 为 `/folders/page-slug/`。
+>
+> 页面自身的资源文件直接放在 `index.md` 所在目录中。
+>
+> 参见 [大改站点的目录结构](../../_posts/2025/refactor-site-folders.md)。
 
-| Syntax      | Slug / Src                    | Hexo                                    | VS Code                  | Demo                                          |
-| ----------- | ----------------------------- | --------------------------------------- | ------------------------ | --------------------------------------------- |
-| Markdown    | `note-slug/filename`          | {% mark ✓ color:green %}                | {% mark ✓ color:green %} | ![demo](demo.png)                             |
-| Markdown    | `notes/note-slug/filename`    | {% mark ✗ color:red %}                  | {% mark ✗ color:red %}   | ![demo](hexo/demo.png)                        |
-| Markdown    | `../notes/note-slug/filename` | {% mark ✓ color:green %} ~~`/../` 没影响~~ | {% mark ✓ color:green %} | ![demo](../notes/assets/hexo/demo.png)        |
-| `asset_img` | `filename`                    | {% mark ✗ color:red %} 连 `<img>` 都没有    | {% mark ✓ color:green %} | {% asset_img assets/demo.png %}               |
-| `asset_img` | `note-slug/filename`          | {% mark ✗ color:red %} 连 `<img>` 都没有    | {% mark ✓ color:green %} | {% asset_img demo.png %}          |
-| `asset_img` | `notes/note-slug/filename`    | {% mark ✗ color:red %} 连 `<img>` 都没有    | {% mark ✗ color:red %}   | {% asset_img notes/assets/hexo/demo.png %}    |
-| `asset_img` | `../notes/note-slug/filename` | {% mark ✗ color:red %} 连 `<img>` 都没有    | {% mark ✓ color:green %} | {% asset_img ../notes/assets/hexo/demo.png %} |
-| `image`     | `note-slug/filename`          | {% mark ✓ color:green %}                | {% mark ✗ color:red %}   | {% image demo.png %}              |
-| `image`     | `../notes/note-slug/filename` | {% mark ✓ color:green %}                | {% mark ✗ color:red %}   | {% image ../notes/assets/hexo/demo.png %}     |
-
-> 其他页面可能类似，待确认。
+| Syntax   | Src        | Hexo                     | VS Code                  | Demo                 |
+| -------- | ---------- | ------------------------ | ------------------------ | -------------------- |
+| Markdown | `filename` | {% mark ✓ color:green %} | {% mark ✓ color:green %} | ![demo](demo.png)    |
+| `image`  | `filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %}   | {% image demo.png %} |
 
 ### Mermaid
 
@@ -114,6 +107,109 @@ Markdown | `post-slug/filename` | {% mark ✗ color:red %} | {% mark ✓ color:g
 
 - 2024-04-28: 提了 [PR](https://github.com/xaoxuu/hexo-theme-stellar/pull/449) 以支持运行时切换明暗。
 - 2024-06-17: Stellar 1.29.0 版本中修复了。
+
+### 图片适配明暗配色
+
+#### 颜色翻转
+
+在暗色主题下，对浅色图片做翻转处理；在亮色主题下，对深色图片做翻转处理。
+
+``` css
+filter: invert(1) hue-rotate(180deg);
+```
+
+彩色颜色会变得有些奇怪，尽量用饱和度和明暗都居中的颜色，参见 [配色](../color-pattern/index.md)。
+
+给图片（`img`、`svg`）或其容器元素添加 `.invert-when-dark` 或 `.invert-when-light` 类。
+
+``` css
+:root[data-theme="dark"] .invert-when-dark :is(img, svg),
+:root[data-theme="light"] .invert-when-light :is(img, svg),
+:root[data-theme="dark"] :is(img, svg).invert-when-dark,
+:root[data-theme="light"] :is(img, svg).invert-when-light {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .invert-when-dark :is(img, svg),
+  :root:not([data-theme]) :is(img, svg).invert-when-dark {
+    filter: invert(1) hue-rotate(180deg) !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) .invert-when-light :is(img, svg),
+  :root:not([data-theme]) :is(img, svg).invert-when-light {
+    filter: invert(1) hue-rotate(180deg) !important;
+  }
+}
+```
+
+#### 在 Markdown 中添加类
+
+可以用 Markdown Attributes 相关的插件，如：
+
+- [arve0/markdown-it-attrs: Add classes, identifiers and attributes to your markdown with {} curly brackets, similar to pandoc's header attributes](https://github.com/arve0/markdown-it-attrs)
+- [@mdit/plugin-attrs | Markdown It Plugins](https://mdit-plugins.github.io/attrs.html)
+
+``` markdown
+![light](light.svg){.invert-when-dark}
+
+![dark](dark.jpg){.invert-when-light}
+```
+
+效果：
+
+![light](light.ink.svg "亮色图片") {.invert-when-dark}
+
+![dark](dark.jpg "暗色图片"){.invert-when-light}
+
+或者用 Markdown Container 相关的插件，如：
+
+- [markdown-it/markdown-it-container: Fenced container plugin for markdown-it markdown parser](https://github.com/markdown-it/markdown-it-container)
+- [@mdit/plugin-container | Markdown It Plugins](https://mdit-plugins.github.io/container.html)
+
+``` markdown
+::: invert-when-dark
+![light](light.svg)
+:::
+
+::: invert-when-light
+![dark](dark.jpg)
+:::
+```
+
+或者用自定义的 Hexo 标签插件 [`invert`](https://github.com/calfzhou/gocalf.com/blob/main/scripts/tags/invert.js)：
+
+``` markdown
+{% invert %}
+![light](light.svg)
+{% endinvert %}
+
+{% invert when:light %}
+![dark](dark.jpg)
+{% endinvert %}
+```
+
+#### 在 Obsidian 中呈现颜色翻转效果
+
+Obsidian 中 Markdown Attribute 相关的插件：
+
+- [javalent/markdown-attributes: Add attributes to elements in Obsidian](https://github.com/javalent/markdown-attributes)
+
+在 Options » Appearance » CSS Snippets 中，启用包含如下代码的 CSS 文件：
+
+``` css
+/* Image color invert */
+body.theme-dark .invert-when-dark img,
+body.theme-dar img.invert-when-dark,
+body.theme-light .invert-when-light img,
+body.theme-light img.invert-when-light {
+  filter: invert(1) hue-rotate(180deg);
+}
+```
+
+> 仅在预览模式下会生效。
 
 ### Minify
 
@@ -134,17 +230,20 @@ pnpm add hexo-diagrams-net
 ```
 
 ``` markdown
+::: invert-when-dark
 {% diagramsnet flowchart.drawio %}
+:::
 ```
 
-{% invert %}
+::: invert-when-dark
 {% diagramsnet flowchart.drawio %}
-{% endinvert %}
+:::
 
 - 如何适配明暗主题？
   - 参考 <https://github.com/jgraph/drawio-integration/blob/master/inline.js>
     - 效果 <http://jgraph.github.io/drawio-integration/inline.html>
-  - 用自定义的 [`invert` 标签](../../_posts/2024/illustration-fit-color-scheme.md#当前的方案)
+  - 因为会渲染为 svg，可以按上边提到的 Markdown Container 或 `invert` 标签插件，添加 `.invert-when-dark`、`.invert-when-light` 类来实现颜色翻转。
+    - 注意 Markdown Attributes 似乎无法对这种 Hexo 标签插件生效。
 
 ## Stellar 主题增加 Notebook（笔记本）支持
 
