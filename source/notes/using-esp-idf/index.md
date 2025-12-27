@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/embed
 date: 2025-12-27 21:37:46
-updated: 2025-12-27 21:37:46
+updated: 2025-12-27 23:02:17
 ---
 ## ESP-IDF
 
@@ -175,7 +175,7 @@ pytest_hello_world.py EEEEEEEEEEEEEFFFF
 
 Need install the USB driver:
 
-- CP210x: [CP210x USB to UART Bridge VCP Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) (Refer to [ESP32-PICO-DevKitM-2 开发板](ESP32-PICO-DevKitM-2%20开发板.md))
+- CP210x: [CP210x USB to UART Bridge VCP Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) (Refer to [ESP32-PICO-DevKitM-2 开发板](../esp32-pico-devkitm-2/index.md))
 
 > [!caution]
 > 要小心使用的 USB 线，有些线可能只能用来充电，或者有什么毛病，也会导致接到电脑上看不到设备！
