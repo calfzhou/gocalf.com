@@ -1,17 +1,20 @@
 ---
-title: 笔记工具
-notebook: notes
-tags:
-  - calf
-  - software
-date: 2024-04-13 15:27:19
-updated: 2025-12-24 20:12:46
+title: 我的笔记工具使用历程
+type: story
+date: 2025-12-27 14:23:18
+updated: 2025-12-27 14:23:18
 ---
 {% timeline %}
 
 <!-- node 2025 年 -->
-最终还是无法忍受 Joplin 的同步问题，几乎不敢在手机上编辑，桌面端的同步状态也经常卡死。换手机之后，即便手机数据整体迁移到新手机，进入 Joplin 依然要重新从头开始同步，极慢且反复出错。换成 Obsidian，甚爱。
+最终还是无法忍受 Joplin 的同步问题，几乎不敢在手机上编辑，桌面端的同步状态也经常卡死。换手机之后，即便手机数据整体迁移到新手机，进入 Joplin 依然要重新从头开始同步，极慢且反复出错。换成 Obsidian，甚爱。同时把 Hexo 的 `source` 目录做成 Obsidian vault，可以直接在 Obsidian 里编辑，很方便。
+{% grid %}
+<!-- cell -->
 {% link https://obsidian.md/ Obsidian - Sharpen your thinking icon:https://obsidian.md/images/obsidian-logo-gradient.svg %}
+<!-- cell -->
+{% link https://hexo.io/ Hexo - A fast, simple & powerful blog framework icon:https://hexo.io/logo.svg %}
+{% link https://xaoxuu.com/wiki/stellar/ Stellar - 内置文档系统的简约商务风 Hexo 主题 icon:https://res.xaox.cc/gh/cdn-x/wiki@main/stellar/icon.svg %}
+{% endgrid %}
 
 <!-- node 2024 年（For 公开的笔记） -->
 并没有放弃 Joplin。只是想着，乱七八糟的笔记中，或许有一些可以放在 GitHub 上，并生成静态站点。总比写博客省事儿。
