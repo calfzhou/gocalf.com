@@ -5,7 +5,7 @@ tags:
 - game/puzzle
 - it/hardware
 mermaid: true
-mathjax: true
+katex: true
 date: 2025-07-12 20:34:28
 updated: 2025-07-12 20:34:28
 ---

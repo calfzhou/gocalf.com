@@ -3,6 +3,7 @@ title: Git Cheats
 notebook: notes
 tags:
   - it/git
+mermaid: true
 date: 2025-12-28 15:21:24
 updated: 2025-12-28 15:59:47
 ---
@@ -93,8 +94,13 @@ git push -f
 
 比如：
 
-``` text
-A → B → C → D → E → HEAD
+``` mermaid
+gitGraph:
+  commit id: "A"
+  commit id: "B"
+  commit id: "C"
+  commit id: "D"
+  commit id: "E"
 ```
 
 要删掉 commit "C"：

@@ -3,7 +3,7 @@ title: 188. Best Time to Buy and Sell Stock IV
 notebook: coding
 tags:
 - hard
-ketex: true
+katex: true
 date: 2024-12-18 20:55:31
 updated: 2024-12-18 20:55:31
 ---

@@ -148,12 +148,14 @@ data_services:
 
 plugins:
   katex:
-    enable: false # markdown-it-katex 会完成 Katex 渲染，但需要通过 `enable: true` 来注入 Katex CSS
+    # markdown-it-katex 会完成 Katex 渲染，但需要通过 `enable: true` 来注入 Katex CSS
+    enable: false # 仅在需要的页面内通过 front-matter 启用
     # Stellar 1.33.1 默认的 Katex 配置，会在正常的公式下边多显示一样格式错误的公式，故改为如下配置
     # See: https://github.com/xaoxuu/hexo-theme-stellar/issues/621#issuecomment-3390421599
     inject: |
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.23/dist/katex.min.css" integrity="sha384-//SZkxyB7axjCAopkAL1E1rve+ZSPKapD89Lo/lLhcsXR+zOYl5z6zJZEFXil+q0" crossorigin="anonymous">
   mermaid:
+    enable: false # 仅在需要的页面内通过 front-matter 启用
     js: https://cdn.jsdelivr.net/npm/mermaid@11.8.1/dist/mermaid.min.js
   animcube2:
     enable: false

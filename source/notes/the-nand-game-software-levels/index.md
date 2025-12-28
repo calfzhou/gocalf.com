@@ -4,7 +4,7 @@ notebook: notes
 tags:
 - game/puzzle
 - it/hardware
-mathjax: true
+katex: true
 date: 2025-07-15 23:38:35
 updated: 2025-07-15 23:38:35
 ---
