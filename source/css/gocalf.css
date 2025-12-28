@@ -27,7 +27,7 @@
   width: 100%;
 }
 
-article.content a[target="_blank"]:not(.link-card):after {
+article.content a[target="_blank"]:not(.link-card):not(:has(img))::after {
   rotate: -90deg;
   content: '⇲';
   display: inline-block;
