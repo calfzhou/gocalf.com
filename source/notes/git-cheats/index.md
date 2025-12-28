@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/git
 date: 2025-12-28 15:21:24
-updated: 2025-12-28 15:21:24
+updated: 2025-12-28 15:59:47
 ---
 ## Useful Aliases
 
@@ -79,3 +79,61 @@ gitk COMMIT-ID..HEAD --ancestry-path
 This will show only commits that are descendants of the commit `COMMIT-ID` and antecessors of the HEAD of current branch (you can use any two commits separated by `..`).
 
 [github - Git track how a commit got into a branch - Stack Overflow](https://stackoverflow.com/questions/25750842/git-track-how-a-commit-got-into-a-branch)
+
+## 撤回 Commit
+
+### 撤回最后一次 Commit
+
+``` bash
+git reset --hard HEAD~1
+git push -f
+```
+
+### 撤回中间的某一次 Commit
+
+比如：
+
+``` text
+A → B → C → D → E → HEAD
+```
+
+要删掉 commit "C"：
+
+``` bash
+git rebase --onto B C
+```
+
+## The `~` vs. The `^`
+
+参考：[Git 中的 \~ 和 ^ - scarletsky](https://scarletsky.github.io/2016/12/29/tilde-and-caret-in-git/)
+
+如果想要 `HEAD` 的第 10 个祖先，直接用 `HEAD~10` 就可以。`<rev>~<n>` 用来表示一个提交的第 n 个祖先提交，如果不指定 n，那么默认为 1。 另外，`HEAD~~~` 和 `HEAD~3` 等价。
+
+`<rev>^<n>` 用来表示一个提交的第 n 个父提交，如果不指定 n，那么默认为 1。 和 `~` 不同的是，`HEAD^^^` 并不等价于 `HEAD^3`，而是等价与 `HEAD^1^1^1`。
+
+`~` 获取第一个祖先提交，`^` 可以获取第一个父提交。 其实第一个祖先提交就是第一个父提交，反之亦然。 因此，当 n 为 1 时，`~` 和 `^` 其实是等价的。
+
+> Here is an illustration, by Jon Loeliger. Both commit nodes B and C are parents of commit node A. Parent commits are ordered left-to-right.
+
+``` text
+G   H   I   J
+ \ /     \ /
+  D   E   F
+   \  |  / \
+    \ | /   |
+     \|/    |
+      B     C
+       \   /
+        \ /
+         A
+A =      = A^0
+B = A^   = A^1     = A~1
+C = A^2  = A^2
+D = A^^  = A^1^1   = A~2
+E = B^2  = A^^2
+F = B^3  = A^^3
+G = A^^^ = A^1^1^1 = A~3
+H = D^2  = B^^2    = A^^^2  = A~2^2
+I = F^   = B^3^    = A^^3^
+J = F^2  = B^3^2   = A^^3^2
+```
