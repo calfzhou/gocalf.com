@@ -43,6 +43,6 @@ Squirrel 装完了，打字只有繁体，说是按 {% kbd Ctrl %} + {% kbd ` %}
 
 附：自定义的仓输入法的键盘界面：
 
-{% image chinese.png 中文 26 键键盘 %}
+![中文 26 键键盘](chinese.png)
 
-{% image alphabetic.png 英文键盘 %}
+![英文键盘](alphabetic.png)

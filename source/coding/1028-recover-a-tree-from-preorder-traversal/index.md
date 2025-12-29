@@ -20,21 +20,21 @@ Given the output `traversal` of this traversal, recover the tree and return _its
 
 **Example 1:**
 
-![case1|423](case1.png){.invert-when-dark}
+![case1|423](case1.png "case1"){.invert-when-dark}
 
 > Input: `traversal = "1-2--3--4-5--6--7"`
 > Output: `[1,2,5,3,4,6,7]`
 
 **Example 2:**
 
-![case2|423](case2.png){.invert-when-dark}
+![case2|423](case2.png "case2"){.invert-when-dark}
 
 > Input: `traversal = "1-2--3---4-5--6---7"`
 > Output: `[1,2,5,3,null,6,null,4,null,7]`
 
 **Example 3:**
 
-![case3|305](case3.png){.invert-when-dark}
+![case3|305](case3.png "case3"){.invert-when-dark}
 
 > Input: `traversal = "1-401--349---90--88"`
 > Output: `[1,401,null,349,88,90]`

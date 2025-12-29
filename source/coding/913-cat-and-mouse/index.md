@@ -34,14 +34,14 @@ Given a `graph`, and assuming both players play optimally, return
 
 **Example 1:**
 
-![case1|300](case1.png){.invert-when-dark}
+![case1|300](case1.png "case1"){.invert-when-dark}
 
 > Input: `graph = [[2,5],[3],[0,4,5],[1,4,5],[2,3],[0,2,3]]`
 > Output: `0`
 
 **Example 2:**
 
-![case2|200](case2.png){.invert-when-dark}
+![case2|200](case2.png "case2"){.invert-when-dark}
 
 > Input: `graph = [[1,3],[0],[3],[0,2]]`
 > Output: `1`

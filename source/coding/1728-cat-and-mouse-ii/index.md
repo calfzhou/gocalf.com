@@ -39,7 +39,7 @@ Given a `rows x cols` matrix `grid` and two integers `catJump` and `mouseJump`, 
 
 **Example 1:**
 
-![case1|580](case1.png){.invert-when-dark}
+![case1|580](case1.png "case1"){.invert-when-dark}
 
 > Input: `grid = ["####F","#C...","M...."], catJump = 1, mouseJump = 2`
 > Output: `true`
@@ -47,7 +47,7 @@ Given a `rows x cols` matrix `grid` and two integers `catJump` and `mouseJump`, 
 
 **Example 2:**
 
-![case2|580](case2.png){.invert-when-dark}
+![case2|580](case2.png "case2"){.invert-when-dark}
 
 > Input: `grid = ["M.C...F"], catJump = 1, mouseJump = 4`
 > Output: `true`

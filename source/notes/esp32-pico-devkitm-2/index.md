@@ -21,9 +21,9 @@ ESP32-PICO-DevKitM-2 是一款基于 [ESP32](https://www.espressif.com/zh-hans/
 - [ESP32-PICO-DevKitM-2 原理图](https://dl.espressif.com/dl/schematics/SCH_ESP32-PICO-DEVKITM-2_V1_0_20200812A.pdf) (PDF)
 - [ESP32-PICO-DevKitM-2 PCB 布局图](https://dl.espressif.com/dl/schematics/PCB_ESP32-PICO-DevKitM-2_V1.0_20200812.pdf) (PDF)
 
-![20251101-150522](20251101-150522.png)
+![外观图](20251101-150522.png)
 
-{% image 20251101-150552.png bg:'#f9fafb' %}
+{% image 20251101-150552.png '组件布局' bg:'#f9fafb' %}
 
 | 主要组件               | 描述                                                                                |
 | ------------------ | --------------------------------------------------------------------------------- |
@@ -42,7 +42,7 @@ ESP32-PICO-DevKitM-2 是一款基于 [ESP32](https://www.espressif.com/zh-hans/
 
 ## 管脚
 
-![20251101-150638](20251101-150638.png)
+![管脚布局](20251101-150638.png)
 
 Header J2:
 

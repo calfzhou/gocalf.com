@@ -11,7 +11,7 @@ updated: 2025-01-19 21:21:24
 
 Alice is texting Bob using her phone. The **mapping** of digits to letters is shown in the figure below.
 
-![telephone|200](telephone.png)
+![telephone|200](telephone.png "telephone")
 
 In order to **add** a letter, Alice has to **press** the key of the corresponding digit `i` times, where `i` is the position of the letter in the key.
 

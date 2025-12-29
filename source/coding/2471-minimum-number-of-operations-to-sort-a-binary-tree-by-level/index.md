@@ -20,7 +20,7 @@ The **level** of a node is the number of edges along the path between it and the
 
 **Example 1:**
 
-![case1|500](case1.png){.invert-when-dark}
+![case1|500](case1.png "case1"){.invert-when-dark}
 
 > Input: `root = [1,4,3,7,6,8,5,null,null,null,null,9,null,10]`
 > Output: `3`
@@ -35,7 +35,7 @@ The **level** of a node is the number of edges along the path between it and the
 
 **Example 2:**
 
-![case2|400](case2.png){.invert-when-dark}
+![case2|400](case2.png "case2"){.invert-when-dark}
 
 > Input: `root = [1,3,2,7,6,5,4]`
 > Output: `3`
@@ -50,7 +50,7 @@ The **level** of a node is the number of edges along the path between it and the
 
 **Example 3:**
 
-![case3|400](case3.png){.invert-when-dark}
+![case3|400](case3.png "case3"){.invert-when-dark}
 
 > Input: `root = [1,2,3,4,5,6]`
 > Output: `0`

@@ -26,15 +26,15 @@ Return the number of **alternating** groups.
 > Input: `colors = [0,1,0,1,0], k = 3`
 > Output: `3`
 > Explanation:
-> ![case1-0|150](case1-0.png)
+> ![case1-0|150](case1-0.png "case1-0")
 > Alternating groups:
 > {% grid w:150px %}
 <!-- cell -->
-> ![case1-1|150](case1-1.png)
+> ![case1-1|150](case1-1.png "case1-1")
 <!-- cell -->
-> ![case1-2|150](case1-2.png)
+> ![case1-2|150](case1-2.png "case1-2")
 <!-- cell -->
-> ![case1-3|150](case1-3.png)
+> ![case1-3|150](case1-3.png "case1-3")
 {% endgrid %}
 
 **Example 2:**
@@ -42,13 +42,13 @@ Return the number of **alternating** groups.
 > Input: `colors = [0,1,0,0,1,0,1], k = 6`
 > Output: `2`
 > Explanation:
-> ![case2-0|150](case2-0.png)
+> ![case2-0|150](case2-0.png "case2-0")
 > Alternating groups:
 > {% grid w:150px %}
 <!-- cell -->
-> ![case2-1|150](case2-1.png)
+> ![case2-1|150](case2-1.png "case2-1")
 <!-- cell -->
-> ![case2-2|150](case2-2.png)
+> ![case2-2|150](case2-2.png "case2-2")
 {% endgrid %}
 
 **Example 3:**
@@ -56,7 +56,7 @@ Return the number of **alternating** groups.
 > Input: `colors = [1,1,0,1], k = 4`
 > Output: `0`
 > Explanation:
-> ![case3|150](case3.png)
+> ![case3|150](case3.png "case3")
 
 **Constraints:**
 

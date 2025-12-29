@@ -9,7 +9,7 @@ updated: 2025-12-27 11:20:00
 
 比如在暗色主题下出现下面这样一张图：
 
-![high-center-formula.png](/notes/rubik-cube/high-center-formula.png)
+![A light image](/notes/rubik-cube/high-center-formula.png)
 
 即便在亮色主题下，页面背景色往往不是纯白的，也会出现一块明显与背景色不一致的区域，不比暗色主题下好太多。
 
@@ -36,9 +36,9 @@ filter: invert(1) hue-rotate(180deg);
 {% folding Color Palette 翻转前后对比 %}
 {% grid c:2 %}
 <!-- cell -->
-![colors](colors.png "原始色彩")
+![原始色彩](colors.png) {.no-caption}
 <!-- cell -->
-![colors-inverted](colors.png "翻转的色彩"){.invert-when-dark .invert-when-light}
+![翻转的色彩](colors.png){.invert-when-dark .invert-when-light} {.no-caption}
 {% endgrid %}
 {% endfolding %}
 
@@ -64,4 +64,4 @@ filter: invert(1) hue-rotate(180deg);
 
 本文开头提到的图片，按照这个逻辑处理完，看到的效果是：
 
-![high-center-formula.ink.svg](/notes/rubik-cube/high-center-formula.ink.svg){.invert-when-dark}
+![适配后的效果](/notes/rubik-cube/high-center-formula.ink.svg){.invert-when-dark}

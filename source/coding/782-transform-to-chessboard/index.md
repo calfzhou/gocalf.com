@@ -18,7 +18,7 @@ A **chessboard board** is a board where no `0`'s and no `1`'s are 4-directionall
 
 **Example 1:**
 
-![case1|400](case1.png){.invert-when-dark}
+![case1|400](case1.png "case1"){.invert-when-dark}
 
 > Input: `board = [[0,1,1,0],[0,1,1,0],[1,0,0,1],[1,0,0,1]]`
 > Output: `2`

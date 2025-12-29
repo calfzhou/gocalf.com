@@ -24,7 +24,7 @@ Return _the **maximum points** you can get after collecting the coins from **all
 
 **Example 1:**
 
-![case1|40](case1.png){.invert-when-dark}
+![case1|40](case1.png "case1"){.invert-when-dark}
 
 > Input: `edges = [[0,1],[1,2],[2,3]], coins = [10,10,3,3], k = 5`
 > Output: `11`
@@ -37,7 +37,7 @@ Return _the **maximum points** you can get after collecting the coins from **all
 
 **Example 2:**
 
-![case2|120](case2.png){.invert-when-dark}
+![case2|120](case2.png "case2"){.invert-when-dark}
 
 > Input: `edges = [[0,1],[0,2]], coins = [8,4,4], k = 0`
 > Output: `16`

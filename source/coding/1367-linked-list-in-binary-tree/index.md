@@ -18,7 +18,7 @@ In this context downward path means a path that starts at some node and goes dow
 
 **Example 1:**
 
-![case1|220](case1.png){.invert-when-dark}
+![case1|220](case1.png "case1"){.invert-when-dark}
 
 > Input: `head = [4,2,8], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`
 > Output: `true`
@@ -26,7 +26,7 @@ In this context downward path means a path that starts at some node and goes dow
 
 **Example 2:**
 
-![case2|220](case2.png){.invert-when-dark}
+![case2|220](case2.png "case2"){.invert-when-dark}
 
 > Input: `head = [1,4,2,6], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`
 > Output: `true`

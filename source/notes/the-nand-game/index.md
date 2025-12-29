@@ -801,7 +801,7 @@ The output when both inputs are 0 is also undefined.
 
 p 本来跟 output 一样，都取自 **and** 的输出，但把 **and** 展开之后，就会有两个相连的 **inv** 可以抵消掉。
 
-![|320](20250531-022417.png)
+![|320](20250531-022417.png "SR Latch")
 
 但这样需要用 3c3n，不够节省。
 
@@ -816,7 +816,7 @@ p 本来跟 output 一样，都取自 **and** 的输出，但把 **and** 展开�
 | 1   | 0   | 1        | 1   | 0                 | 0      |
 | 1   | 1   | 0        | 1   | 1                 | 1      |
 
-![|320](20250703-003937.png)
+![|320](20250703-003937.png "SR Latch")
 
 👍 Totally 2c2n.
 
@@ -842,7 +842,7 @@ When **st** is 0, the last stored bit is emitted, and the current value of **
 
 `output = select(s=st, d1=d, d0=p)`
 
-![|320](20250604-001947.png)
+![|320](20250604-001947.png "D Latch")
 
 👍 Totally 1c4n:
 
@@ -865,7 +865,7 @@ When **st** is 0, the last stored bit is emitted, and the current value of **
 | 0   | 1   | 1             | 1             | (1, 1)            | Same as previous   |
 | 0   | 0   | 1             | 1             | (1, 1)            | Same as previous   |
 
-![|320](20250703-011742.png)
+![|320](20250703-011742.png "D Latch")
 
 👍 Totally 3c4n，这个如果把 **sr latch** 展开是没有问题的。
 
@@ -1013,7 +1013,7 @@ J ==> inc[inc 16] ==>|D0| select
 
 :::
 
-![|480](20250604-012659.png)
+![|480](20250604-012659.png "Counter")
 
 👍 Totally 4c386n:
 
@@ -1066,7 +1066,7 @@ Output:
 
 两个 **register** 的 X 和 cl 都分别直接连到 **X** 和 **cl** 上。但 st 则通过 **switch** 进行分发。
 
-![|480](20250604-014607.png)
+![|480](20250604-014607.png "RAM")
 
 👍 Totally 4c420n:
 
@@ -1113,7 +1113,7 @@ The **a**, **d**, **\*a** flags and the **X** input is used to update one 
 
 直接把两个 register 的输出分别接到 RAM 的 Ad 和 X 输入端即可。
 
-![|480](20250607-234008.png)
+![|480](20250607-234008.png "Combined Memory")
 
 👍 Totally 3c352n + 107520 n/KB:
 
@@ -1150,7 +1150,7 @@ The **R** output is the result of the ALU operation.
 
 The **j** flag indicate if the ALU output conforms to the conditions specified in bit 0-2.
 
-![|480](20250608-001919.png)
+![|480](20250608-001919.png "ALU Instruction")
 
 ❓ Totally 3c1161n:
 
@@ -1175,7 +1175,7 @@ The **s** flag selects one of the two sets of inputs for output.
 
 This is a simple component, but necessary for supporting different kinds of instructions in the CPU.
 
-![|640](20250608-002902.png)
+![|640](20250608-002902.png "Control Selector")
 
 ❓ Totally 5c80n:
 
@@ -1210,11 +1210,11 @@ For ALU instructions, the output should be as specified in the previous level. R
 
 For a data instruction, the output **R** should be the **I** input, and destination should be the A register. I.e. **a** should be 1 and **d**, **a\***, and **j** flags should be 0.
 
-![|640](20250615-214911.png)
+![|640](20250615-214911.png "Control Unit")
 
 另外其中的四个 **select**，有三个的输入 d0 恒为 0，可以简化为 **and**（因为本关未提供 **and**，可以用 **nand** + **inv** 替代）；另一个的 d0 = inv s，也可以退化。总共可以节省 9 个 **nand**，即：
 
-![|640](20250615-221706.png)
+![|640](20250615-221706.png "Control Unit")
 
 ❓ Totally 10c1233n:
 
@@ -1249,7 +1249,7 @@ If **j**=1, the PC should be set to the value on **A**.
 
 除了明确指定的，其他端口按名称对应连线即可。
 
-![|640](20250615-223259.png)
+![|640](20250615-223259.png "Computer")
 
 👍 Totally 4c1971n + 107520 n/KB (clock, rom not counting)
 
@@ -1288,7 +1288,7 @@ When the button is pressed, bit 15 should be 1. When it is not pressed, it shoul
 
 Input signals should be readable immediately.
 
-![|640](20250615-225722.png)
+![|640](20250615-225722.png "Input and Output")
 
 ❓ Totally 3c6n:
 

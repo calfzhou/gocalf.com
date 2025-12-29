@@ -19,7 +19,7 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 
 **Example 1:**
 
-![case1|400](case1.png){.invert-when-dark}
+![case1|400](case1.png "case1"){.invert-when-dark}
 
 > Input: `events = [[1,3,2],[4,5,2],[2,4,3]]`
 > Output: `4`
@@ -27,7 +27,7 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 
 **Example 2:**
 
-![case2|400](case2.png){.invert-when-dark}
+![case2|400](case2.png "case2"){.invert-when-dark}
 
 > Input: `events = [[1,3,2],[4,5,2],[1,5,5]]`
 > Output: `5`
@@ -35,7 +35,7 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 
 **Example 3:**
 
-![case3|400](case3.png){.invert-when-dark}
+![case3|400](case3.png "case3"){.invert-when-dark}
 
 > Input: `events = [[1,5,3],[1,5,1],[6,6,5]]`
 > Output: `8`

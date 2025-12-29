@@ -27,7 +27,7 @@ Return _the minimum cost to make the grid have at least one valid path_.
 
 **Example 1:**
 
-![case1|400](case1.png){.invert-when-dark}
+![case1|400](case1.png "case1"){.invert-when-dark}
 
 > Input: `grid = [[1,1,1,1],[2,2,2,2],[1,1,1,1],[2,2,2,2]]`
 > Output: `3`
@@ -37,7 +37,7 @@ Return _the minimum cost to make the grid have at least one valid path_.
 
 **Example 2:**
 
-![case2|350](case2.png){.invert-when-dark}
+![case2|350](case2.png "case2"){.invert-when-dark}
 
 > Input: `grid = [[1,1,3],[3,2,2],[1,1,4]]`
 > Output: `0`
@@ -45,7 +45,7 @@ Return _the minimum cost to make the grid have at least one valid path_.
 
 **Example 3:**
 
-![case3|200](case3.png){.invert-when-dark}
+![case3|200](case3.png "case3"){.invert-when-dark}
 
 > Input: `grid = [[1,2],[4,3]]`
 > Output: `1`

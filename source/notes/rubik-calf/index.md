@@ -20,13 +20,13 @@ animcube3: true
 
 {% grid c:5 %}
 <!-- cell -->
-1. ![0-1](0-1.png)
+1. ![0-1](0-1.png) {.no-caption}
 <!-- cell -->
-2. ![0-2](0-2.png)
+2. ![0-2](0-2.png) {.no-caption}
 <!-- cell -->
-3. ![0-3](0-3.png)
+3. ![0-3](0-3.png) {.no-caption}
 <!-- cell -->
-4. ![0-4](0-4.png)
+4. ![0-4](0-4.png) {.no-caption}
 <!-- cell -->
 5. ![0-5a](0-5a.png) ![0-5b](0-5b.png)
 {% endgrid %}

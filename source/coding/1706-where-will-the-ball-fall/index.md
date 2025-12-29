@@ -23,7 +23,7 @@ Return _an array_ `answer` _of size_ `n` _where_ `answer[i]` _is the column that
 
 **Example 1:**
 
-![case1|500](case1.jpg){.invert-when-dark}
+![case1|500](case1.jpg "case1"){.invert-when-dark}
 
 > Input: `grid = [[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]`
 > Output: `[1,-1,-1,-1,-1]`

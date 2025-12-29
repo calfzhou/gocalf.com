@@ -14,7 +14,7 @@ Given the `root` of a binary tree, return _an array of the largest value in each
 
 **Example 1:**
 
-![case1|300](case1.png){.invert-when-dark}
+![case1|300](case1.png "case1"){.invert-when-dark}
 
 > Input: `root = [1,3,2,5,3,null,9]`
 > Output: `[1,3,9]`

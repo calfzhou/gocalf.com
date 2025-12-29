@@ -18,9 +18,9 @@ updated: 2025-12-27 23:02:17
 
 {% badge_github espressif vscode-esp-idf-extension release:true %}
 
-![20251101-212619](20251101-212619.png){.invert-when-light}
+![Commands](20251101-212619.png){.invert-when-light}
 
-![20251101-212704](20251101-212704.png){.invert-when-light}
+![Advanced](20251101-212704.png){.invert-when-light}
 
 [Standard Toolchain Setup for Linux and macOS - ESP32 - — ESP-IDF Programming Guide latest documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html)
 
@@ -36,7 +36,7 @@ pyenv virtualenv 3.14.0 esp
 
 Setup the extension (Express mode):
 
-![20251101-193056](20251101-193056.png){.invert-when-light}
+![Setup the extension](20251101-193056.png){.invert-when-light}
 
 👆 Changed the python path to `~/.espressif/python_env/idf5.5_py3.14_env/bin/python3`
 
@@ -154,7 +154,7 @@ python $IDF_PATH/tools/idf_tools.py install qemu-xtensa
 
 If succeed:
 
-![20251101-223709](20251101-223709.png){.invert-when-light}
+![Hello World](20251101-223709.png){.invert-when-light}
 
 Use Command: Start/Stop QEMU Server » Stop QEMU to stop it.
 
@@ -171,7 +171,7 @@ pytest_hello_world.py EEEEEEEEEEEEEFFFF
 
 [Establish Serial Connection with ESP32 - ESP32 - — ESP-IDF Programming Guide latest documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html)
 
-![20251101-225303](20251101-225303.png){.invert-when-dark}
+![Development Board with USB-to-UART Bridge](20251101-225303.png){.invert-when-dark}
 
 Need install the USB driver:
 
@@ -180,7 +180,7 @@ Need install the USB driver:
 > [!caution]
 > 要小心使用的 USB 线，有些线可能只能用来充电，或者有什么毛病，也会导致接到电脑上看不到设备！
 
-![20251102-005619](20251102-005619.png){.invert-when-light}
+![UART Bridge Device](20251102-005619.png){.invert-when-light}
 
 ``` shell-session
 $ ll /dev/tty.*; ll /dev/cu.*

@@ -19,7 +19,7 @@ Given a list `piles`, where `piles[i]` is a list of integers denoting the compos
 
 **Example 1:**
 
-![case1|600](case1.png){.invert-when-dark}
+![case1|600](case1.png "case1"){.invert-when-dark}
 
 > Input: `piles = [[1,100,3],[7,8,9]], k = 2`
 > Output: `101`

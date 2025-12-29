@@ -361,7 +361,7 @@ katex: true
 
 以 `上黄-前蓝` 这个位置组合为例。一组操作可以只轮换下图中三个灰色加了标记的块（按粉色箭头方向轮换），其他全都不变。连续三组之后，完全复位（转了一整圈）。
 
-{% image high-center-loop.png 中心块轮换 width:320px %}
+![|320](high-center-loop.png "中心块轮换")
 
 图中黄色面标 `□` 和蓝色面标 `╳` 的块，在面内相对位置一样，距离右边界格数为 2，距离底边界格数为 3，操作公式为：
 
@@ -392,7 +392,7 @@ katex: true
 
 更多变体：
 
-![high-center-formula](high-center-formula.ink.svg 中心块复原公式){.invert-when-dark}
+![中心块复原公式](high-center-formula.ink.svg){.invert-when-dark}
 
 1. 第 ① 象限：`RU'L'` 或 `R'F'L`
    - `(αR U' βL' U) (αR' U' βL U)`
@@ -415,7 +415,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![even-4-1](even-4-1.png)
+![e4-1](even-4-1.png)
 {% endgrid %}
 
 `(αRw2 R2') B2 U2 (αLw L') U2 (αRw' R) U2 (αRw R') U2 F2 (αRw R') F2 (αLw' L) B2 (αRw2 R2')`
@@ -449,7 +449,7 @@ katex: true
 
 {% grid c:5 %}
 <!-- cell -->
-![even-7-1](even-7-1.png)
+![e7-1](even-7-1.png)
 {% endgrid %}
 
 `((αRw2 R2') U2 (αRw2 R2') U2) ((αUw2 U2') (αRw2 R2') (αUw2 U2'))`

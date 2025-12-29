@@ -13,7 +13,7 @@ Given an integer `rowIndex`, return the `rowIndexᵗʰ` (**0-indexed**) row of t
 
 In **Pascal's triangle**, each number is the sum of the two numbers directly above it as shown:
 
-![pascal|240](pascal.gif){.invert-when-dark}
+![pascal|240](pascal.gif "pascal"){.invert-when-dark}
 
 <https://leetcode.cn/problems/pascals-triangle-ii/>
 
