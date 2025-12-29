@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@mdit/plugin-alert": "0.7.6",
+    "@mdit/plugin-figure": "0.7.6",
     "@mdit/plugin-img-size": "0.7.6",
     "@traptitech/markdown-it-katex": "^3.6.0",
     "@uiolee/hexo-htmlnano": "^1.0.1",

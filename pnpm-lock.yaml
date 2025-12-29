@@ -11,6 +11,9 @@ importers:
       '@mdit/plugin-alert':
         specifier: 0.7.6
         version: 0.7.6(markdown-it@13.0.2)
+      '@mdit/plugin-figure':
+        specifier: 0.7.6
+        version: 0.7.6(markdown-it@13.0.2)
       '@mdit/plugin-img-size':
         specifier: 0.7.6
         version: 0.7.6(markdown-it@13.0.2)
@@ -266,6 +269,15 @@ packages:
 
   '@mdit/plugin-alert@0.7.6':
     resolution: {integrity: sha512-Z+/bHBDniCz/Q+TMa3M6f47KG4tUKvJI8FHXhDwgbKLzDLn045ZBHcOTeqvuWrrjCIKBEo4fVAlYszYcehxmfg==}
+    peerDependencies:
+      markdown-it: ^13.0.2
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
+
+  '@mdit/plugin-figure@0.7.6':
+    resolution: {integrity: sha512-ysH5O3WWuDrfxLWQO4wYXYGdo8oi+EbMQFgbaSTxhoPKTFf3HTovCn3RANn7qATBqmGP26zf0hY55mX9BFUu5A==}
+    engines: {node: '>= 18'}
     peerDependencies:
       markdown-it: ^13.0.2
     peerDependenciesMeta:
@@ -1861,6 +1873,12 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
 
   '@mdit/plugin-alert@0.7.6(markdown-it@13.0.2)':
+    dependencies:
+      '@types/markdown-it': 13.0.9
+    optionalDependencies:
+      markdown-it: 13.0.2
+
+  '@mdit/plugin-figure@0.7.6(markdown-it@13.0.2)':
     dependencies:
       '@types/markdown-it': 13.0.9
     optionalDependencies:
