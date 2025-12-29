@@ -40,7 +40,7 @@ Note that the subarray needs to be **non-empty** after deleting one element.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maximumSum(self, arr: List[int]) -> int:
 ```

@@ -47,7 +47,7 @@ Return _the **maximum** number of integers you can choose following the mentione
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxCount(self, banned: List[int], n: int, maxSum: int) -> int:
 ```

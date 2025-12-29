@@ -40,7 +40,7 @@ In **Pascal's triangle**, each number is the sum of the two numbers directly abo
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def getRow(self, rowIndex: int) -> List[int]:
 ```

@@ -38,7 +38,7 @@ Given the `head` of a linked list, remove the `nᵗʰ` node from the end of the 
 
 ## Test Cases
 
-``` python
+```python
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):

@@ -48,7 +48,7 @@ Note:
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def largestGoodInteger(self, num: str) -> str:
 ```

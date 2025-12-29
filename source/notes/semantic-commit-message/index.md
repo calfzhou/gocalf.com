@@ -18,7 +18,7 @@ references:
 
 Format of the commit message:
 
-``` text
+```text
 <type>(<scope>): <subject>
 <BLANK LINE>
 <body>
@@ -28,7 +28,7 @@ Format of the commit message:
 
 Example commit message:
 
-``` text
+```text
 fix(middleware): ensure Range headers adhere more closely to RFC 2616
 
 Add one new dependency, use `range-parser` (Express dependency) to compute
@@ -53,7 +53,7 @@ Fixes #2310
 
 Example of `<type>: <subject>`:
 
-``` yaml
+```yaml
 feat: add beta sequence
 fix: remove broken confirmation message
 docs: explain hat wobble

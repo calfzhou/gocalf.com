@@ -43,7 +43,7 @@ There may be **duplicates** in the original array.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def check(self, nums: List[int]) -> bool:
 ```

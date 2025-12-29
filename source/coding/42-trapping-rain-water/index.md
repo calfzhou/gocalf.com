@@ -34,7 +34,7 @@ Given `n` non-negative integers representing an elevation map where the width of
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def trap(self, height: List[int]) -> int:
 ```

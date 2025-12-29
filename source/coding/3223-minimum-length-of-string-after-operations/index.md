@@ -45,7 +45,7 @@ Return the **minimum** length of the final string `s` that you can achieve.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumLength(self, s: str) -> int:
 ```

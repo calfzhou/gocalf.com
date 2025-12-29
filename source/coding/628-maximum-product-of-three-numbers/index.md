@@ -34,7 +34,7 @@ Given an integer array `nums`, _find three numbers whose product is maximum and 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maximumProduct(self, nums: List[int]) -> int:
 ```

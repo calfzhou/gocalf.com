@@ -49,7 +49,7 @@ Return _the number of **valid splits** in_ `nums`.
 
 ## Test Cases
 
-``` python
+```python
 Tclass Solution:
     def waysToSplitArray(self, nums: List[int]) -> int:
 ```

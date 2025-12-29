@@ -43,7 +43,7 @@ Return an array of the `k` digits representing the answer.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxNumber(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:
 ```
@@ -64,7 +64,7 @@ class Solution:
 
 在 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md) 中提到用单调栈确定数组中每个元素左侧/右侧第一个比当前值小/大的元素，其中 [正向扫描](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#Another%20O%20n) 时最终留在单调栈里的就是右侧没有比它更大值的元素集合（如果是在找右侧第一个比当前值大的元素）。代码示意：
 
-``` python
+```python
 def pick_max(nums: list[int]) -> list[int]:
     stack = []
     for num in nums:
@@ -80,7 +80,7 @@ def pick_max(nums: list[int]) -> list[int]:
 
 如果 `k = 3`，`[9, 8, 3]` 刚好就是从 nums 中能找到的最大的子序列。如果 `k < 3`，那么在 `[9, 8, 3]` 中从左开始取 k 个即可。如果 `k > 3`，那么在单调栈弹出的时候记录弹出的个数，最多弹出 `n - k` 个，够了之后就不再弹出。可以有两种类似的对 `pick_max` 的改造方法：
 
-``` python
+```python
 def pick_max_sub(nums: list[int], k: int) -> list[int]:
     remain_drop = len(nums) - k
     stack = []
@@ -97,7 +97,7 @@ def pick_max_sub(nums: list[int], k: int) -> list[int]:
     return stack
 ```
 
-``` python
+```python
 def pick_max_sub(nums: list[int], k: int) -> list[int]:
     remain_drop = len(nums) - k
     stack = []
@@ -113,7 +113,7 @@ def pick_max_sub(nums: list[int], k: int) -> list[int]:
 
 可知数组 `[9, 1, 2, 5, 8, 3]` 对于不同的 k，返回的结果分别为：
 
-``` yaml
+```yaml
 1: [9]
 2: [9, 8]
 3: [9, 8, 3]

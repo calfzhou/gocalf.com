@@ -34,7 +34,7 @@ Return _the maximum score of a pair of sightseeing spots_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxScoreSightseeingPair(self, values: List[int]) -> int:
 ```

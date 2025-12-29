@@ -51,7 +51,7 @@ A **subarray** is a contiguous **non-empty** sequence of elements within an arra
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxSubarraySum(self, nums: List[int]) -> int:
 ```

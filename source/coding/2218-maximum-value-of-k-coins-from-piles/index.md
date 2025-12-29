@@ -43,7 +43,7 @@ Given a list `piles`, where `piles[i]` is a list of integers denoting the compos
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxValueOfCoins(self, piles: List[List[int]], k: int) -> int:
 ```

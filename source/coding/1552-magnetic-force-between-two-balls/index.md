@@ -40,7 +40,7 @@ Given the integer array `position` and the integer `m`. Return _the required for
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
 ```

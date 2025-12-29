@@ -51,7 +51,7 @@ Given a positive integer `n`, write a function that returns the number of set bi
 
 ## Code
 
-``` python
+```python
 class Solution:
     def hammingWeight(self, n: int) -> int:
 ```

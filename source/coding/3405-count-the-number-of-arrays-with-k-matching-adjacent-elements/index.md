@@ -54,7 +54,7 @@ Since the answer may be very large, return it **modulo** `10⁹ + 7`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countGoodArrays(self, n: int, m: int, k: int) -> int:
 ```

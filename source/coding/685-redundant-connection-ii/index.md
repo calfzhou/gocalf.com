@@ -42,7 +42,7 @@ Return _an edge that can be removed so that the resulting graph is a rooted tree
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findRedundantDirectedConnection(self, edges: List[List[int]]) -> List[int]:
 ```

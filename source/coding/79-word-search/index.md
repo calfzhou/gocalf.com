@@ -47,7 +47,7 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
 ```

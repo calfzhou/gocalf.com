@@ -42,7 +42,7 @@ You are given an array of integers `nums`. Return `true` if `nums` is a **specia
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def isArraySpecial(self, nums: List[int]) -> bool:
 ```

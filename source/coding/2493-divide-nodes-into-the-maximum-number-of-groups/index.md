@@ -55,7 +55,7 @@ Return _the maximum number of groups (i.e., maximum_ `m`_) into which you can di
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def magnificentSets(self, n: int, edges: List[List[int]]) -> int:
 ```

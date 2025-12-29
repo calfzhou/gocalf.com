@@ -32,7 +32,7 @@ Return _the number of pairs_ `(i, j)` _for which_ `0 <= i < j < dominoes.length`
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
 ```

@@ -49,7 +49,7 @@ An **adjacent** cell of the cell `(r, c)`, is one of the cells `(r, c + 1)`, `(r
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findMaxFish(self, grid: List[List[int]]) -> int:
 ```

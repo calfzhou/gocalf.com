@@ -51,7 +51,7 @@ As the answer may be very large, **return the answer modulo** `10⁹ + 7`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def knightDialer(self, n: int) -> int:
 ```

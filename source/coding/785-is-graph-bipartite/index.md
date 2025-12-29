@@ -49,7 +49,7 @@ Return `true` _if and only if it is **bipartite**_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def isBipartite(self, graph: List[List[int]]) -> bool:
 ```

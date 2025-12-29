@@ -40,7 +40,7 @@ Return _the minimum number of jumps to reach_ `nums[n - 1]`. The test cases are 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def jump(self, nums: List[int]) -> int:
 ```

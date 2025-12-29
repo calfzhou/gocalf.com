@@ -35,7 +35,7 @@ Given a string `s`, return `true` _if the_ `s` _can be palindrome after deleting
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def validPalindrome(self, s: str) -> bool:
 ```

@@ -24,13 +24,13 @@ updated: 2025-12-27 23:02:17
 
 [Standard Toolchain Setup for Linux and macOS - ESP32 - — ESP-IDF Programming Guide latest documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html)
 
-``` bash
+```bash
 brew install cmake ninja dfu-util
 ```
 
 Install Python 3.14 using pyenv (see [python-version-management-virtual-environments](../python-version-management-virtual-environments/index.md)), then:
 
-``` bash
+```bash
 pyenv virtualenv 3.14.0 esp
 ```
 
@@ -44,7 +44,7 @@ Setup the extension (Express mode):
 
 Note that there are several Python requirements files in `~/esp/v5.5.1/esp-idf/tools/requirements`:
 
-``` text
+```text
 ~/esp/v5.5.1/esp-idf/tools/requirements
 ├── requirements.ci.txt
 ├── requirements.core.txt
@@ -55,7 +55,7 @@ Note that there are several Python requirements files in `~/esp/v5.5.1/esp-idf/t
 └── requirements.test-specific.txt
 ```
 
-``` bash
+```bash
 # cd ~/esp/v5.5.1/esp-idf/tools/requirements
 # pyenv shell esp
 # for req in requirements.*.txt; do pip install -r $req; done
@@ -63,7 +63,7 @@ Note that there are several Python requirements files in `~/esp/v5.5.1/esp-idf/t
 
 Command: Open ESP-IDF Terminal:
 
-``` shell-session
+```shell-session
 $ echo $IDF_PATH
 /Users/zhouji/esp/v5.5.1/esp-idf
 
@@ -73,13 +73,13 @@ esp (set by PYENV_VERSION environment variable)
 
 👆 如果提示：
 
-``` text
+```text
 WARNING: Python interpreter "/Users/zhouji/.pyenv/versions/esp/bin/python" used to start idf.py is not from installed venv "/Users/zhouji/.espressif/python_env/idf5.5_py3.14_env
 ```
 
 运行：
 
-``` shell-session
+```shell-session
 $ . $IDF_PATH/export.sh
 Checking "python3" ...
 Python 3.14.0
@@ -114,7 +114,7 @@ Examples: [esp-idf/examples at master · espressif/esp-idf](https://github.com/e
 
 [esp-idf/examples/get-started/hello\_world at master · espressif/esp-idf](https://github.com/espressif/esp-idf/tree/master/examples/get-started/hello_world)
 
-``` text
+```text
 ├── CMakeLists.txt
 ├── pytest_hello_world.py      Python script used for automated testing
 ├── main
@@ -127,13 +127,13 @@ Examples: [esp-idf/examples at master · espressif/esp-idf](https://github.com/e
 
 如果报错：
 
-``` log
+```log
 asyncio.exceptions.LimitOverrunError: Separator is found, but chunk is longer than limit
 ```
 
 可以直接打开 ESP-IDF terminal，运行：
 
-``` bash
+```bash
 idf.py menuconfig
 ```
 
@@ -141,13 +141,13 @@ idf.py menuconfig
 
 ### Command: Start/Stop QEMU Server » QEMU Monitor / QEMU Debug
 
-``` bash
+```bash
 python ~/esp/v5.5.1/esp-idf/tools/idf.py -B /PATH-TO-PROJECT/hello_world/build qemu monitor
 ```
 
 If failed:
 
-``` bash
+```bash
 brew install libslirp
 python $IDF_PATH/tools/idf_tools.py install qemu-xtensa
 ```
@@ -160,7 +160,7 @@ Use Command: Start/Stop QEMU Server » Stop QEMU to stop it.
 
 ### Test
 
-``` shell-session
+```shell-session
 $ pytest pytest_hello_world.py
 pytest_hello_world.py EEEEEEEEEEEEEFFFF
 ```
@@ -182,7 +182,7 @@ Need install the USB driver:
 
 ![UART Bridge Device](20251102-005619.png){.invert-when-light}
 
-``` shell-session
+```shell-session
 $ ll /dev/tty.*; ll /dev/cu.*
 ...
 crw-rw-rw- 1 root wheel 9, 6 Nov  2 00:50 /dev/tty.SLAB_USBtoUART 👈
@@ -208,7 +208,7 @@ Command: Flash Device.
 >
 > If the device does not support the auto download mode, you need to get into the download mode manually. To do so, press and hold the `BOOT` button and then press the `RESET` button once. After that release the `BOOT` button.
 
-``` text
+```text
  *  Executing task: /Users/zhouji/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/zhouji/esp/v5.5.1/esp-idf/components/esptool_py/esptool/esptool.py -p /dev/tty.SLAB_USBtoUART -b 460800 --before default_reset --after hard_reset --chip esp32 write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 hello_world.bin 0x8000 partition_table/partition-table.bin
 
 pyenv shell esp
@@ -245,7 +245,7 @@ Hard resetting via RTS pin...
 
 Command: Monitor Device: 👍
 
-``` text
+```text
 export IDF_PATH='/Users/zhouji/esp/v5.5.1/esp-idf'
 '/Users/zhouji/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/zhouji/esp/v5.5.1/esp-idf/tools/idf_monitor.py' -p /dev/tty.SLAB_USBtoUART -b 115200 --toolchain-prefix xtensa-esp32-elf- --make ''/Users/zhouji/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/zhouji/esp/v5.5.1/esp-idf/tools/idf.py'' --target esp32 '/Users/zhouji/lab/try-esp32/hello_world/hello_world/build/hello_world.elf'
 pyenv shell esp
@@ -320,7 +320,7 @@ I (259) main_task: Started on CPU0
 I (269) main_task: Calling app_main()
 ```
 
-``` log
+```log
 Hello world!
 This is esp32 chip with 2 CPU core(s), WiFi/BTBLE, silicon revision v3.1, 2MB embedded flash
 Minimum free heap size: 306072 bytes
@@ -342,7 +342,7 @@ Restarting now.
 
 In ESP-IDF Terminal:
 
-``` bash
+```bash
 # 设置目标芯片
 idf.py set-target esp32 # esp32s3, esp32c3
 

@@ -40,7 +40,7 @@ Return `true` if you can finish all courses. Otherwise, return `false`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
 ```

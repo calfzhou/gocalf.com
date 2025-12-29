@@ -30,7 +30,7 @@ Implement the `MyCalendarTwo` class:
 > `[null, true, true, true, false, true, true]`
 > Explanation
 >
-> ``` c++
+> ```c++
 > MyCalendarTwo myCalendarTwo = new MyCalendarTwo();
 > myCalendarTwo.book(10, 20); // return True, The event can be booked.
 > myCalendarTwo.book(50, 60); // return True, The event can be booked.
@@ -47,7 +47,7 @@ Implement the `MyCalendarTwo` class:
 
 ## Test Cases
 
-``` python
+```python
 class MyCalendarTwo:
 
     def __init__(self):

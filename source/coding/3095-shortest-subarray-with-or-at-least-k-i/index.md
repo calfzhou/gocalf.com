@@ -48,7 +48,7 @@ Return _the length of the **shortest** **special** **non-empty** subarray of_ `n
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumSubarrayLength(self, nums: List[int], k: int) -> int:
 ```

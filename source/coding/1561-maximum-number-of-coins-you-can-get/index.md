@@ -49,7 +49,7 @@ Return the maximum number of coins that you can have.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
 ```

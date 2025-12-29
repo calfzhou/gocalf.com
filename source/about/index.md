@@ -16,7 +16,7 @@ menu_id: about
 
 {% box child:codeblock color:red %}
 
-``` c
+```c
 long a=10000,b,c=14000,d,e,f[14001],g;
 void main(){for(;b-c;)f[b++]=a/5;
 for(;d=('C'+'A')/('L'+'F'),g=c*('C'/'A'+'L'/'F');c+=('C'+'A'-'L'-'F'),

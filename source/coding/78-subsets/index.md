@@ -34,7 +34,7 @@ The solution set **must not** contain duplicate subsets. Return the solution in 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
 ```

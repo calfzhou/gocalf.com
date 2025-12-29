@@ -56,7 +56,7 @@ Return the **minimum** number of operations required to make `s` **good**.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def makeStringGood(self, s: str) -> int:
 ```

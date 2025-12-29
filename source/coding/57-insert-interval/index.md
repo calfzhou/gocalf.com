@@ -40,7 +40,7 @@ Return `intervals` _after the insertion_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
 ```

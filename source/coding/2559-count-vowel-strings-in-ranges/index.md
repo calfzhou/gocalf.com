@@ -45,7 +45,7 @@ Return _an array_ `ans` _of size_ `queries.length`_, where_ `ans[i]` _is the ans
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def vowelStrings(self, words: List[str], queries: List[List[int]]) -> List[int]:
 ```

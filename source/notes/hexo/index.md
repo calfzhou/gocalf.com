@@ -50,7 +50,7 @@ Hexo 还是以（博客）文章（posts）为核心的，虽然 Stellar 独创�
 
 调整 hexo 配置 `_config.yml`:
 
-``` yaml
+```yaml
 post_asset_folder: true # https://hexo.io/docs/asset-folders#Post-Asset-Folder
 marked: # https://github.com/hexojs/hexo-renderer-marked
   prependRoot: true
@@ -114,7 +114,7 @@ Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](http
 
 在暗色主题下，对浅色图片做翻转处理；在亮色主题下，对深色图片做翻转处理。
 
-``` css
+```css
 filter: invert(1) hue-rotate(180deg);
 ```
 
@@ -122,7 +122,7 @@ filter: invert(1) hue-rotate(180deg);
 
 给图片（`img`、`svg`）或其容器元素添加 `.invert-when-dark` 或 `.invert-when-light` 类。
 
-``` css
+```css
 :root[data-theme="dark"] .invert-when-dark :is(img, svg),
 :root[data-theme="light"] .invert-when-light :is(img, svg),
 :root[data-theme="dark"] :is(img, svg).invert-when-dark,
@@ -152,7 +152,7 @@ filter: invert(1) hue-rotate(180deg);
 - [arve0/markdown-it-attrs: Add classes, identifiers and attributes to your markdown with {} curly brackets, similar to pandoc's header attributes](https://github.com/arve0/markdown-it-attrs)
 - [@mdit/plugin-attrs | Markdown It Plugins](https://mdit-plugins.github.io/attrs.html)
 
-``` markdown
+```markdown
 ![light](light.svg){.invert-when-dark}
 
 ![dark](dark.jpg){.invert-when-light}
@@ -169,7 +169,7 @@ filter: invert(1) hue-rotate(180deg);
 - [markdown-it/markdown-it-container: Fenced container plugin for markdown-it markdown parser](https://github.com/markdown-it/markdown-it-container)
 - [@mdit/plugin-container | Markdown It Plugins](https://mdit-plugins.github.io/container.html)
 
-``` markdown
+```markdown
 ::: invert-when-dark
 ![light](light.svg)
 :::
@@ -181,7 +181,7 @@ filter: invert(1) hue-rotate(180deg);
 
 或者用自定义的 Hexo 标签插件 [`invert`](https://github.com/calfzhou/gocalf.com/blob/main/scripts/tags/invert.js)：
 
-``` markdown
+```markdown
 {% invert %}
 ![light](light.svg)
 {% endinvert %}
@@ -199,7 +199,7 @@ Obsidian 中 Markdown Attribute 相关的插件：
 
 在 Options » Appearance » CSS Snippets 中，启用包含如下代码的 CSS 文件：
 
-``` css
+```css
 /* Image color invert */
 body.theme-dark .invert-when-dark img,
 body.theme-dar img.invert-when-dark,
@@ -225,11 +225,11 @@ HTML 文件可以用 [uiolee/hexo-htmlnano: Minify HTML files with htmlnano](htt
 
 [Diagrams.net | Kutt Katrea's plugins for Hexo](https://kuttkatrea.github.io/hexo-plugins/diagrams-net/)
 
-``` bash
+```bash
 pnpm add hexo-diagrams-net
 ```
 
-``` markdown
+```markdown
 ::: invert-when-dark
 {% diagramsnet flowchart.drawio %}
 :::

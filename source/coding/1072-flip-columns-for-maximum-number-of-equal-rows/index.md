@@ -43,7 +43,7 @@ Return _the maximum number of rows that have all values equal after some number 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
 ```

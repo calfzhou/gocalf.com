@@ -54,7 +54,7 @@ Return _**true** if such an array exists or **false** otherwise._
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def doesValidArrayExist(self, derived: List[int]) -> bool:
 ```

@@ -40,7 +40,7 @@ After merging the accounts, return the accounts in the following format: the fir
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
 ```

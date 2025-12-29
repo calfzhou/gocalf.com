@@ -52,7 +52,7 @@ Return _an array_ `ans` _where_ `ans[i]` _is **the index of the leftmost buildin
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def leftmostBuildingQueries(self, heights: List[int], queries: List[List[int]]) -> List[int]:
 ```
@@ -87,7 +87,7 @@ class Solution:
 
 实现的时候有个地方要注意，Python 自带的 [bisect](https://docs.python.org/3/library/bisect.html) 库是对非降序排列的数组做二分搜索，但本题单调栈其实是降序排列的，相当于需要先把栈 reverse，然后用 `bisect_right` 查找，找完再 reverse 回去，如：
 
-``` python
+```python
 stack.reverse()
 idx = bisect_right(stack, h, key=lambda k: heights[k])
 if idx < len(stack):
@@ -97,7 +97,7 @@ stack.reverse()
 
 当然这样做没意义，因为 reverse 是 `O(n)` 时间。可以类似于用最小堆 + 负数模拟最大堆那样，用降序 + 负数来模拟升序的二分搜索，但是需要注意边界条件的差异。比如上边的代码，等价于下边，但下边的时间复杂度是 `O(log n)`：
 
-``` python
+```python
 idx = bisect_left(stack, -h, key=lambda k: -heights[k]) - 1
 if idx >= 0:
     answer[j] = stack[idx]

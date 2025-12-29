@@ -46,7 +46,7 @@ The test cases are generated so that the answer can fit in a **32-bit** integer.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def combinationSum4(self, nums: List[int], target: int) -> int:
 ```

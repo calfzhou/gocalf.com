@@ -43,7 +43,7 @@ You must write an algorithm with `O(log n)` runtime complexity.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
 ```

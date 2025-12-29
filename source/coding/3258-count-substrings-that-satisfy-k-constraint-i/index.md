@@ -51,7 +51,7 @@ Return an integer denoting the number of substrings of `s` that satisfy the **k-
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countKConstraintSubstrings(self, s: str, k: int) -> int:
 ```

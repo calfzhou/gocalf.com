@@ -18,20 +18,20 @@ references:
 
 TL;DR
 
-> Keep the list of immediate dependencies in **requirements.txt** without declaring version numbers.  
-> Keep the output of **pip freeze** with the specific version numbers in **constraints.txt**.  
+> Keep the list of immediate dependencies in **requirements.txt** without declaring version numbers.
+> Keep the output of **pip freeze** with the specific version numbers in **constraints.txt**.
 
 ### Adding new packages
 
 As we need new python packages add their names to the requirements.txt file without any restriction and run
 
-``` bash
+```bash
 pip install -r requirements.txt -c constraints.txt
 ```
 
 Verify that the new package works as needed. (Run your own tests). Then run
 
-``` bash
+```bash
 pip freeze > constraints.txt
 ```
 
@@ -41,7 +41,7 @@ Then commit both **requirements.txt** and **constraints.txt** to your version co
 
 Later, any time you want to install packages to a fresh installation use
 
-``` bash
+```bash
 pip install -r requirements.txt -c constraints.txt
 ```
 
@@ -49,7 +49,7 @@ pip install -r requirements.txt -c constraints.txt
 
 If your application requires a specific version of a package add that information to the requirements.txt file.
 
-``` text
+```text
 package-name==SPECIFIC_VERSION
 ```
 
@@ -67,7 +67,7 @@ You can do all the upgrades all at once, or you can cherry-pick.
 
 For the former run:
 
-``` bash
+```bash
 pip install --upgrade -r requirements.txt
 ```
 
@@ -75,12 +75,12 @@ That will try to upgrade all of your dependencies to the latest.
 
 You can upgrade a specific package:
 
-``` bash
+```bash
 pip install --upgrade PACKAGE
 ```
 
 You can also remove some or all of the entries from the **constraints.txt file** and then run:
 
-``` bash
+```bash
 pip install --upgrade -r requirements.txt -c constraints.txt
 ```

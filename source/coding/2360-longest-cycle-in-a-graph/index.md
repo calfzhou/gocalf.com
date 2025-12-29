@@ -44,7 +44,7 @@ A cycle is a path that starts and ends at the **same** node.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def longestCycle(self, edges: List[int]) -> int:
 ```

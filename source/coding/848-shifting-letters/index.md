@@ -43,7 +43,7 @@ Return _the final string after all such shifts to s are applied_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def shiftingLetters(self, s: str, shifts: List[int]) -> str:
 ```

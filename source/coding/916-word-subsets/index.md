@@ -39,7 +39,7 @@ Return an array of all the **universal** strings in `words1`. You may return the
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def wordSubsets(self, words1: List[str], words2: List[str]) -> List[str]:
 ```

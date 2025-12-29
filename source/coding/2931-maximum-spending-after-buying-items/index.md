@@ -63,7 +63,7 @@ Return _the **maximum amount of money that can be spent** on buying all_ `m * n`
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxSpending(self, values: List[List[int]]) -> int:
 ```

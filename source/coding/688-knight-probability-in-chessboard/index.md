@@ -43,7 +43,7 @@ Return _the probability that the knight remains on the board after it has stoppe
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def knightProbability(self, n: int, k: int, row: int, column: int) -> float:
 ```

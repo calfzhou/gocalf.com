@@ -36,7 +36,7 @@ Return _the maximum profit you can achieve from this transaction_. If you cannot
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 ```

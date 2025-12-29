@@ -40,7 +40,7 @@ Return _the maximum amount of water a container can store_.
 
 ## Test Case
 
-``` python
+```python
 class Solution:
     def maxArea(self, height: List[int]) -> int:
 ```

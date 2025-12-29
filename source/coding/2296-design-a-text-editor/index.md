@@ -35,7 +35,7 @@ Implement the `TextEditor` class:
 > `[null, null, 4, null, "etpractice", "leet", 4, "", "practi"]`
 > Explanation
 >
-> ``` cpp
+> ```cpp
 > TextEditor textEditor = new TextEditor(); // The current text is "|". (The '|' character represents the cursor)
 > textEditor.addText("leetcode"); // The current text is "leetcode|".
 > textEditor.deleteText(4); // return 4
@@ -71,7 +71,7 @@ Implement the `TextEditor` class:
 
 ## Test Cases
 
-``` python
+```python
 class TextEditor:
 
     def __init__(self):

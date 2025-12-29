@@ -43,7 +43,7 @@ Note that duplicates may exist in the Skiplist, your code needs to handle this s
 >
 > Explanation
 >
-> ``` c++
+> ```c++
 > Skiplist skiplist = new Skiplist();
 > skiplist.add(1);
 > skiplist.add(2);
@@ -63,7 +63,7 @@ Note that duplicates may exist in the Skiplist, your code needs to handle this s
 
 ## Test Cases
 
-``` python
+```python
 class Skiplist:
 
     def __init__(self):
@@ -96,7 +96,7 @@ class Skiplist:
 
 > PS: 加了个 `format` 方法把当前跳板格式化成字符串。如
 >
-> ``` test
+> ```test
 > HEAD----->40----------------->80----->NIL
 > HEAD----->40------------->70->80----->NIL
 > HEAD->30->40--------->60->70->80->90->NIL

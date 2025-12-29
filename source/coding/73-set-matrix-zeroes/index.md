@@ -43,7 +43,7 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
         """

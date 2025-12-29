@@ -68,7 +68,7 @@ Given a `rows x cols` matrix `grid` and two integers `catJump` and `mouseJump`, 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def canMouseWin(self, grid: List[str], catJump: int, mouseJump: int) -> bool:
 ```

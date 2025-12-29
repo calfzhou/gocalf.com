@@ -38,7 +38,7 @@ Return _the total number of **bad pairs** in_ `nums`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countBadPairs(self, nums: List[int]) -> int:
 ```

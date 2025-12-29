@@ -48,7 +48,7 @@ Return _an array_ `ans` _of length_ `nums1.length` _such that_ `ans[i]` _is the 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
 ```

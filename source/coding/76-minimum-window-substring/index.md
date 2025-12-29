@@ -44,7 +44,7 @@ The testcases will be generated such that the answer is **unique**.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
 ```

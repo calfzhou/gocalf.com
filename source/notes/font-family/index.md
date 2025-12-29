@@ -66,7 +66,7 @@ VS Code 无法实现这点，因为它是基于 Electron 也就是浏览器的 H
 
 试试看是否能对齐：
 
-``` text
+```text
 liLI10Oo
 你好中文
 ```
@@ -139,7 +139,7 @@ Font Family: `M+ 1m`
 
 在 `_config.stellar.yml` 中配置字体。
 
-``` yaml
+```yaml
 inject:
   head:
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css">

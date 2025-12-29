@@ -40,7 +40,7 @@ Given an array of strings `nums` containing `n` **unique** binary strings each o
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findDifferentBinaryString(self, nums: List[str]) -> str:
 ```

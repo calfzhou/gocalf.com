@@ -31,7 +31,7 @@ Given an integer `n`, return _the number of structurally unique **BST**'s (binar
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def numTrees(self, n: int) -> int:
 ```

@@ -50,7 +50,7 @@ Given an integer `n`, return _any valid **n-bit gray code sequence**_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def grayCode(self, n: int) -> List[int]:
 ```

@@ -18,7 +18,7 @@ Given an array `nums` of **distinct** positive integers, return _the number of t
 > Output: `8`
 > Explanation: There are 8 valid tuples:
 >
-> ``` cpp
+> ```cpp
 > (2,6,3,4) , (2,6,4,3) , (6,2,3,4) , (6,2,4,3)
 > (3,4,2,6) , (4,3,2,6) , (3,4,6,2) , (4,3,6,2)
 > ```
@@ -29,7 +29,7 @@ Given an array `nums` of **distinct** positive integers, return _the number of t
 > Output: `16`
 > Explanation: There are 16 valid tuples:
 >
-> ``` cpp
+> ```cpp
 > (1,10,2,5) , (1,10,5,2) , (10,1,2,5) , (10,1,5,2)
 > (2,5,1,10) , (2,5,10,1) , (5,2,1,10) , (5,2,10,1)
 > (2,10,4,5) , (2,10,5,4) , (10,2,4,5) , (10,2,5,4)
@@ -44,7 +44,7 @@ Given an array `nums` of **distinct** positive integers, return _the number of t
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def tupleSameProduct(self, nums: List[int]) -> int:
 ```

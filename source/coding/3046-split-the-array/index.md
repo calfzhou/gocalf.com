@@ -38,7 +38,7 @@ Return `true` _if it is possible to split the array, and_ `false` _otherwise_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def isPossibleToSplit(self, nums: List[int]) -> bool:
 ```

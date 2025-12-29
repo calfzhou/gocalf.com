@@ -59,7 +59,7 @@ Therefore, the answer is 0.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countPrefixSuffixPairs(self, words: List[str]) -> int:
 ```

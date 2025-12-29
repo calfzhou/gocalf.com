@@ -35,7 +35,7 @@ Note that a string `x` is lexicographically smaller than string `y` if `x` comes
 > `[null, "kimchi", "ramen", null, "sushi", null, "ramen"]`
 > Explanation
 >
-> ``` cpp
+> ```cpp
 > FoodRatings foodRatings = new FoodRatings(["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"], ["korean", "japanese", "japanese", "greek", "japanese", "korean"], [9, 12, 8, 15, 14, 7]);
 > foodRatings.highestRated("korean"); // return "kimchi"
 > // "kimchi" is the highest rated korean food with a rating of 9.
@@ -64,7 +64,7 @@ Note that a string `x` is lexicographically smaller than string `y` if `x` comes
 
 ## Test Cases
 
-``` python
+```python
 class FoodRatings:
 
     def __init__(self, foods: List[str], cuisines: List[str], ratings: List[int]):

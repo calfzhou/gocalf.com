@@ -46,7 +46,7 @@ Given two integer arrays `days` and `apples` of length `n`, return _the maximum 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def eatenApples(self, apples: List[int], days: List[int]) -> int:
 ```

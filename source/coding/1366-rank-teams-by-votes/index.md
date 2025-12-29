@@ -52,7 +52,7 @@ Return _a string of all teams **sorted** by the ranking system_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def rankTeams(self, votes: List[str]) -> str:
 ```

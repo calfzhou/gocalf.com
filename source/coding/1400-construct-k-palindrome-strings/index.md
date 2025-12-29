@@ -39,7 +39,7 @@ Given a string `s` and an integer `k`, return `true` _if you can use all the cha
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def canConstruct(self, s: str, k: int) -> bool:
 ```

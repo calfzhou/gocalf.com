@@ -50,7 +50,7 @@ Return `true` _if it is possible to obtain the string_ `target` _by moving the p
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def canChange(self, start: str, target: str) -> bool:
 ```

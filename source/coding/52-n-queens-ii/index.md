@@ -33,7 +33,7 @@ Given an integer `n`, return _the number of distinct solutions to the **n-queen
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def totalNQueens(self, n: int) -> int:
 ```

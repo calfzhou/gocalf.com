@@ -20,7 +20,7 @@ updated: 2025-01-17 18:58:21
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumSubarrayLength(self, nums: List[int], k: int) -> int:
 ```

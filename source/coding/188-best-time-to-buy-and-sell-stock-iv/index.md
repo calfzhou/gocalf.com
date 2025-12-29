@@ -37,7 +37,7 @@ Find the maximum profit you can achieve. You may complete at most `k` transactio
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxProfit(self, k: int, prices: List[int]) -> int:
 ```

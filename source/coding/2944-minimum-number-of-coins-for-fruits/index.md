@@ -68,7 +68,7 @@ Return the **minimum** number of coins needed to acquire all the fruits.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumCoins(self, prices: List[int]) -> int:
 ```

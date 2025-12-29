@@ -49,7 +49,7 @@ You must write an algorithm that runs in `O(log n) time`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findMin(self, nums: List[int]) -> int:
 ```

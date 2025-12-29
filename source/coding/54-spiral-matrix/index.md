@@ -35,7 +35,7 @@ Given an `m x n` `matrix`, return _all elements of the_ `matrix` _in spiral orde
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
 ```

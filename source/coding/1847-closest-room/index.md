@@ -50,7 +50,7 @@ Return _an array_ `answer` _of length_ `k` _where_ `answer[j]` _contains the ans
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def closestRoom(self, rooms: List[List[int]], queries: List[List[int]]) -> List[int]:
 ```

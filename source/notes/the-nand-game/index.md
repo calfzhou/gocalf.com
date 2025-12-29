@@ -97,7 +97,7 @@ So, `a nand b = inv(a and b) = relay-on(c=relay-off(c=a, in=b), in=1)`
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 a((a)) -->|c| r1["relay (default off)"]
 b((b)) -->|in| r1 -->|c| r2["relay (default on)"]
@@ -116,7 +116,7 @@ Build an inverter (**inv**) component using the **nand** component.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 i((i)) & i --> nand --> o(((o)))
 ```
@@ -133,7 +133,7 @@ Build an **and** gate using only **nand** and **inv** components (might no
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 a((a)) & b((b)) --> nand --> inv --> o(((o)))
 ```
@@ -150,7 +150,7 @@ Build an **or** gate.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 a((a)) --> i1[inv]
 b((b)) --> i2[inv]
@@ -174,7 +174,7 @@ Build an **xor** gate.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 a((a)) --> n1[nand] & n0[nand]
 b((b)) --> n0 & n2[nand]
@@ -212,7 +212,7 @@ Then the **and** and the **xor** can share the same one **nand**.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 a((a)) --> n1[nand] & n0[nand]
 b((b)) --> n0 --> j@{ shape: f-circ }
@@ -250,7 +250,7 @@ The output is a two-bit value. The **h** output is the high bit, the **l** i
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 a((a)) --> a1n1[nand] & a1n0[nand]
 b((b)) --> a1n0 --> j1@{ shape: f-circ }
@@ -297,7 +297,7 @@ Goal: `add2(<a1, a0>, <b1, b0>, ci) => co, s1, s0`
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 subgraph a [" "]
     a1((a1))
@@ -342,7 +342,7 @@ Simply connect an **1** (`1 = inv 0`) to the c-port of **add 16**.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 I16((I)) ==>|A| add16[add 16]
 J1@{ shape: f-circ } ==>|B| add16
@@ -390,7 +390,7 @@ Goal: `O16 = A16 - B16`
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 A((A)) ==>|A| add16[add 16]
 B((B)) ==> i16[inv 16] ==>|B| add16
@@ -422,7 +422,7 @@ Should output 1 if and only if all bits in the input are 0.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 b3((b3)) & b2((b2)) --> or1[or]
 b1((b1)) & b0((b0)) --> or2[or]
@@ -458,7 +458,7 @@ Bits are numbered from right to left, starting with 0 as the rightmost bit. So b
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 I16((I)) ==> spliter[splitter16]
 spliter -->|15| O(((O)))
@@ -493,7 +493,7 @@ $$
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 s((s)) & d1((d1)) --> n1[nand]
 s --> inv
@@ -531,7 +531,7 @@ The **s** (selector) determines if the **d** (data) bit is dispatched throug
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 s((s)) & d((d)) --> nand --> inv --> c1(((c1)))
 nand & d --> and --> c0(((c0)))
@@ -568,7 +568,7 @@ The two bit-flags **op0** and **op1** select which out of four operations ar
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 op1([op1]) -->|s| s3[select 16] ==> O(((O)))
 op0([op0]) -->|s| s1[select 16] & s2[select 16]
@@ -612,7 +612,7 @@ op0 决定了加减法运算的第二个输入是 Y 还是 1，即 `select16(s=o
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 op1([op1]) -->|s| s1[select 16] ==> O(((O)))
 X((X)) ==>|A| sub16[sub 16] & add16[add 16]
@@ -668,7 +668,7 @@ This affects the operands as shown here for the example of `X - Y`:
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 u((u)) -->|s| su[select 16] ==> O(((O)))
 op1([op1]) -->|op1| arithmetic & logic
@@ -733,7 +733,7 @@ Then, `output = (lt and is-neg) or (eq and is-zero) or (gt and is-pos)`.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 lt((lt)) --> n-lt[nand] --> n-le[nand] --> i-le[inv] --> n-o[nand] --> o(((o)))
 eq((eq)) --> n-eq[nand] --> n-le
@@ -914,7 +914,7 @@ Effect of inputs when cl=1:
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 st((st)) & cl((cl)) --> and -->|st| latch1[d latch] -->|d| latch2[d latch] --> o(((o)))
 cl --> inv -->|st| latch2
@@ -943,7 +943,7 @@ Simply use two **dff** components.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 st((st)) -->|st| dff1[dff] & dff0[dff]
 d1((d1)) -->|d| dff1
@@ -1001,7 +1001,7 @@ The counter output changes when **cl** (clock signal) changes to 0.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 st((st)) -->|s| select[select 16]
 inv -->|st| register ==> J@{ shape: f-circ } ==> O(((O)))

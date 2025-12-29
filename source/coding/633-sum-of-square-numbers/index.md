@@ -29,7 +29,7 @@ Given a non-negative integer `c`, decide whether there're two integers `a` and `
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def judgeSquareSum(self, c: int) -> bool:
 ```

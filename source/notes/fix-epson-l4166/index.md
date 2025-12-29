@@ -15,7 +15,7 @@ references:
 
 开机后显示屏黑屏，显示
 
-``` text
+```text
 Printer Mode
 
 Set Jig
@@ -25,7 +25,7 @@ Push [OK] BT
 
 按一下 OK 键，变为红屏，显示
 
-``` text
+```text
 Flag Check
 
 Inspection:

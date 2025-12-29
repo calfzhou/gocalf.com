@@ -32,7 +32,7 @@ Given two non-negative integers `num1` and `num2` represented as strings, return
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def multiply(self, num1: str, num2: str) -> str:
 ```

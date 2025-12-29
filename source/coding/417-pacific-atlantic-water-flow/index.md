@@ -26,7 +26,7 @@ Return _a **2D list** of grid coordinates_ `result` _where_ `result[i] = [ri, ci
 > Output: `[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]`
 > Explanation: The following cells can flow to the Pacific and Atlantic oceans, as shown below:
 >
-> ``` text
+> ```text
 > [0,4]: [0,4] -> Pacific Ocean
 > [0,4] -> Atlantic Ocean
 > [1,3]: [1,3] -> [0,3] -> Pacific Ocean
@@ -60,7 +60,7 @@ Return _a **2D list** of grid coordinates_ `result` _where_ `result[i] = [ri, ci
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
 ```

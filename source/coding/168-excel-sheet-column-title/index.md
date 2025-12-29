@@ -44,7 +44,7 @@ For example:
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def convertToTitle(self, columnNumber: int) -> str:
 ```

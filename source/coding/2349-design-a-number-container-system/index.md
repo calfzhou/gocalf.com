@@ -30,7 +30,7 @@ Implement the `NumberContainers` class:
 > `[null, -1, null, null, null, null, 1, null, 2]`
 > Explanation
 >
-> ``` cpp
+> ```cpp
 > NumberContainers nc = new NumberContainers();
 > nc.find(10); // There is no index that is filled with number 10. Therefore, we return -1.
 > nc.change(2, 10); // Your container at index 2 will be filled with number 10.
@@ -49,7 +49,7 @@ Implement the `NumberContainers` class:
 
 ## Test Cases
 
-``` python
+```python
 class NumberContainers:
 
     def __init__(self):

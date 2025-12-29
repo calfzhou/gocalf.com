@@ -49,7 +49,7 @@ Return _the number of gifts remaining after_ `k` _seconds._
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def pickGifts(self, gifts: List[int], k: int) -> int:
 ```

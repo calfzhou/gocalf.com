@@ -35,7 +35,7 @@ Given an integer array `nums` and an integer `k`, return `true` _if there are tw
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
 ```

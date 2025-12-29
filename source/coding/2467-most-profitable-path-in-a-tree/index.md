@@ -77,7 +77,7 @@ Return _the **maximum** net income Alice can have if she travels towards the opt
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def mostProfitablePath(self, edges: List[List[int]], bob: int, amount: List[int]) -> int:
 ```

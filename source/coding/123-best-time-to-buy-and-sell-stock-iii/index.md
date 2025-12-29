@@ -44,7 +44,7 @@ Find the maximum profit you can achieve. You may complete **at most two transact
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 ```

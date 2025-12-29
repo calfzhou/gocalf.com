@@ -54,7 +54,7 @@ Return _the minimum number of dollars you need to travel every day in the given 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:
 ```

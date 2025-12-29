@@ -46,7 +46,7 @@ You have the following three operations permitted on a word:
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
 ```

@@ -46,7 +46,7 @@ A string `a` is **lexicographically larger** than a string `b` if in the first p
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def repeatLimitedString(self, s: str, repeatLimit: int) -> str:
 ```

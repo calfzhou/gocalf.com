@@ -36,7 +36,7 @@ Return _the minimum size of the set so that **at least** half of the integers of
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
 ```

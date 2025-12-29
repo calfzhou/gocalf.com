@@ -43,7 +43,7 @@ katex: false
 
 ## Test Cases
 
-``` python
+```python
 TODO: default code definition
 ```
 

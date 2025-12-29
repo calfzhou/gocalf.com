@@ -53,7 +53,7 @@ Return _the minimum possible penalty after performing the operations_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumSize(self, nums: List[int], maxOperations: int) -> int:
 ```

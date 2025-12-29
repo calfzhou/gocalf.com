@@ -36,7 +36,7 @@ Return _the length of the longest substring containing the same letter you can g
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
 ```

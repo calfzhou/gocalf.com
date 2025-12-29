@@ -46,7 +46,7 @@ Return _the lexicographically **smallest** possible string_ `num` _that meets th
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def smallestNumber(self, pattern: str) -> str:
 ```

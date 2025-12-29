@@ -42,7 +42,7 @@ Each `answer[i]` is calculated considering the **initial** state of the boxes.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minOperations(self, boxes: str) -> List[int]:
 ```

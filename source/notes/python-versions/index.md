@@ -36,7 +36,7 @@ references:
   - [PEP 634 – Structural Pattern Matching: Specification](https://peps.python.org/pep-0634/)
   - [17. Structural Pattern Matching | Python Tutorial](https://python-course.eu/python-tutorial/structural-pattern-matching.php)
 
-``` python
+```python
 match <expression>
     case <pattern>:
         <block>
@@ -46,7 +46,7 @@ match <expression>
 
 - 用 `|` 运算符连接多个类型，表示 Union 类型。
 
-``` python
+```python
 isinstance(x, int | str)
 ```
 
@@ -61,7 +61,7 @@ isinstance(x, int | str)
 - 支持将大部分内置类型的类名用作函数实参。
   - [PEP 585 – Type Hinting Generics In Standard Collections](https://peps.python.org/pep-0585/)
 
-``` python
+```python
 def func(x: dict[str, list[int]]):
     pass
 ```
@@ -91,7 +91,7 @@ def func(x: dict[str, list[int]]):
 - dict 中的元素会按插入顺序存储。
 - 在数字中插入下划线作为分隔符，提高可读性。
 
-``` python
+```python
 >>> 1_000_111_000
 1000111000
 >>> '{:_}'.format(1000000) # 格式化字符串时也可输出下划线
@@ -101,7 +101,7 @@ def func(x: dict[str, list[int]]):
 - 给字符串加上前缀 f 之后，就会执行花括号 `{}` 内的语句。
 - 给类定义 `__init_subclass__()` 方法，用于初始化子类。
 
-``` python
+```python
 class TestBase:
     subclasses = []
 

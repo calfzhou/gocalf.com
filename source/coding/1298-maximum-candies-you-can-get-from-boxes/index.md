@@ -55,7 +55,7 @@ Return _the maximum number of candies you can get following the rules above_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
 ```

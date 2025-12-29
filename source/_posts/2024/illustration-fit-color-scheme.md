@@ -25,7 +25,7 @@ updated: 2025-12-27 11:20:00
 
 一个折中的方式是用 CSS 的 [filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) 来调整颜色。也就是很多人都提到的 `invert` 大法：
 
-``` css
+```css
 filter: invert(1) hue-rotate(180deg);
 ```
 

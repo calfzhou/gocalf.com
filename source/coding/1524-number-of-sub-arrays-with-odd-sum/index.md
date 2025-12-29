@@ -43,7 +43,7 @@ Since the answer can be very large, return it modulo `10⁹ + 7`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
 ```

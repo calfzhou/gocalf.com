@@ -32,7 +32,7 @@ Return _any possible rearrangement of_ `s` _or return_ `""` _if not possible_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def reorganizeString(self, s: str) -> str:
 ```

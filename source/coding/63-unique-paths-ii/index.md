@@ -46,7 +46,7 @@ The testcases are generated so that the answer will be less than or equal to `2 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
 ```

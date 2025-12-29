@@ -67,7 +67,7 @@ Given a string `sentence`, return `true` _if it is circular_. Otherwise, return 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def isCircularSentence(self, sentence: str) -> bool:
 ```

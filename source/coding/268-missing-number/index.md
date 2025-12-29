@@ -41,7 +41,7 @@ Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, ret
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
 ```

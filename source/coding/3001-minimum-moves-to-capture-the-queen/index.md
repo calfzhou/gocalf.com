@@ -54,7 +54,7 @@ Given that you can only move the white pieces, return _the **minimum** number of
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minMovesToCaptureTheQueen(self, a: int, b: int, c: int, d: int, e: int, f: int) -> int:
 ```

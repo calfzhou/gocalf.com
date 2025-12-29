@@ -36,7 +36,7 @@ Given an integer array of even length `arr`, return `true` _if it is possible to
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def canReorderDoubled(self, arr: List[int]) -> bool:
 ```

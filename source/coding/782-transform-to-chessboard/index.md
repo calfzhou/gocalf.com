@@ -51,7 +51,7 @@ A **chessboard board** is a board where no `0`'s and no `1`'s are 4-directionall
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def movesToChessboard(self, board: List[List[int]]) -> int:
 ```

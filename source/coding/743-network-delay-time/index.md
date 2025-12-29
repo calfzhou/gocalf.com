@@ -43,7 +43,7 @@ We will send a signal from a given node `k`. Return _the **minimum** time it tak
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
 ```

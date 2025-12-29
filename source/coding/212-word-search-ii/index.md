@@ -41,7 +41,7 @@ Each word must be constructed from letters of sequentially adjacent cells, where
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
 ```

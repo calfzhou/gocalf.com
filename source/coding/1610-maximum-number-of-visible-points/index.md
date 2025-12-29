@@ -54,7 +54,7 @@ Return _the maximum number of points you can see_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def visiblePoints(self, points: List[List[int]], angle: int, location: List[int]) -> int:
 ```

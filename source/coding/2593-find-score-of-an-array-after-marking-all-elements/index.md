@@ -52,7 +52,7 @@ Return _the score you get after applying the above algorithm_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findScore(self, nums: List[int]) -> int:
 ```

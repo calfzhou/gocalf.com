@@ -53,7 +53,7 @@ A **permutation** is a sequence of integers from `1` to `n` of length `n` contai
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def semiOrderedPermutation(self, nums: List[int]) -> int:
 ```

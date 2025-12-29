@@ -40,7 +40,7 @@ Return `True` if the array is **good** otherwise return `False`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def isGoodArray(self, nums: List[int]) -> bool:
 ```

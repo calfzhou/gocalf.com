@@ -30,7 +30,7 @@ Given a positive integer `n`, generate an `n x n` `matrix` filled with elements 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def generateMatrix(self, n: int) -> List[List[int]]:
 ```

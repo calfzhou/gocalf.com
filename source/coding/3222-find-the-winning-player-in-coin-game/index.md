@@ -39,7 +39,7 @@ Return the _name_ of the player who wins the game if both players play **optimal
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def winningPlayer(self, x: int, y: int) -> str:
 ```

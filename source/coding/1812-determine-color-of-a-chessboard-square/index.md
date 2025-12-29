@@ -43,7 +43,7 @@ The coordinate will always represent a valid chessboard square. The coordinate w
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def squareIsWhite(self, coordinates: str) -> bool:
 ```

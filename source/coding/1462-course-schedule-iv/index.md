@@ -58,7 +58,7 @@ Return _a boolean array_ `answer`_, where_ `answer[j]` _is the answer to the_ `j
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def checkIfPrerequisite(self, numCourses: int, prerequisites: List[List[int]], queries: List[List[int]]) -> List[bool]:
 ```

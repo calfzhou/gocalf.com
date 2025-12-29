@@ -57,7 +57,7 @@ Given a `graph`, and assuming both players play optimally, return
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def catMouseGame(self, graph: List[List[int]]) -> int:
 ```
@@ -80,7 +80,7 @@ class Solution:
 
 {% box color:red child:codeblock %}
 
-``` python
+```python
 @cache
 def dfs(mouse: int, cat: int, moving: int) -> int:
     if mouse == 0: return 1 # The mouse reaches to the hole.

@@ -42,7 +42,7 @@ A **valid BST** is defined as follows:
 
 ## Test Cases
 
-``` python
+```python
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):

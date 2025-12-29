@@ -48,7 +48,7 @@ references:
 
 比如要自定义一个 color scheme，如果这样写（`squirrel.custom.yaml`）：
 
-``` yaml
+```yaml
 patch:
   preset_color_schemes:
     my_scheme:
@@ -58,7 +58,7 @@ patch:
 
 那么这个配置就只有 `my_scheme`，而没有其他的了，所以应该这样写：
 
-``` yaml
+```yaml
 patch:
   'preset_color_schemes/my_scheme':
     background: '#000000'
@@ -67,7 +67,7 @@ patch:
 
 或者（未验证）：
 
-``` yaml
+```yaml
 patch:
   'preset_color_schemes/+':
     my_scheme:
@@ -82,7 +82,7 @@ patch:
 [rime/plum: 東風破 /plum/: Rime configuration manager and input schema repository](https://github.com/rime/plum)
 > **東風破** 是 [中州韻輸入法引擎](https://rime.im/) 的配置管理工具。
 
-``` bash
+```bash
 curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | bash
 ```
 
@@ -106,13 +106,13 @@ curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | bas
 
 或者直接 clone 仓库：
 
-``` bash
+```bash
 git clone --depth=1 https://github.com/rime/plum
 ```
 
 如果要安装其他方案/配方：
 
-``` bash
+```bash
 cd /path/to/plum/
 # bash rime-install [--select] <套装或配方> [<套装或配方>...]
 # 如：
@@ -123,7 +123,7 @@ bash rime-install gaboolic/rime-shuangpin-fuzhuma@master:recipes/full
 
 想要删除一个方案，直接去配置目录的 `default.custom.yaml`（没有的话就自行创建），通过 `patch.schema_list` 控制需要保留哪些方案，在目录里把对应的配置文件删除，重新部署即可，如：
 
-``` yaml
+```yaml
 # default.custom.yaml
 patch:
   schema_list:
@@ -144,7 +144,7 @@ patch:
 
 通过 `plum` 安装：
 
-``` bash
+```bash
 bash rime-install iDvel/rime-ice:others/recipes/full
 ```
 
@@ -200,7 +200,7 @@ Recipes 里有：
 
 直接去 releases 中下载最新的版本。注意要下载 `rose.zip` 即预先编译好的二进制程序，还要下载 `data.zip`（目前知道 [v1.3.1](https://github.com/nopdan/rose/releases/tag/v1.3.1) 版本中有）。按照说明把 `data.zip` 解压到 `rose` 目录下。
 
-``` bash
+```bash
 chmod +x rose-darwin-amd64
 ./rose-darwin-amd64 搜狗词库备份_2024_07_26.bin sogou_bak:rime sougou.dict.yaml
 ```
@@ -211,7 +211,7 @@ chmod +x rose-darwin-amd64
 
 rose 不会自动添加 Rime 词库文件的头部，所以需要手动添加，如：
 
-``` yaml
+```yaml
 ---
 name: sougou
 version: '2024.07.26'
@@ -223,7 +223,7 @@ sort: by_weight
 
 把上边生成的 `sougou.dict.yaml` 放到 Rime 配置目录下，添加到当前词库的 `import_tables` 中，如：
 
-``` yaml
+```yaml
 import_tables:
   - sogou
 ```
@@ -235,7 +235,7 @@ import_tables:
 
 四个的关键编程接口：
 
-``` lua
+```lua
 function translator(input, seg, env)
   -- yield Candidate
 end
@@ -275,7 +275,7 @@ Rime 客户端里「Sync user data」的同步逻辑是：
 
 macOS 的 Squirrel：可以直接把仓库目录软链到 `~/Library/Rime`：
 
-``` bash
+```bash
 ln -s $DOTFILES_HOME/rime ~/Library/Rime
 ```
 

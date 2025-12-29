@@ -50,7 +50,7 @@ Return the **minimum** number of cells that need to be flipped to make **either*
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minFlips(self, grid: List[List[int]]) -> int:
 ```

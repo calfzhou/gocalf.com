@@ -45,7 +45,7 @@ Return _the smallest index_ `i` _at which either a row or a column will be compl
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def firstCompleteIndex(self, arr: List[int], mat: List[List[int]]) -> int:
 ```

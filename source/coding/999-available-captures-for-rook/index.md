@@ -54,7 +54,7 @@ Return the **number of pawns** the white rook is **attacking**.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def numRookCaptures(self, board: List[List[str]]) -> int:
 ```

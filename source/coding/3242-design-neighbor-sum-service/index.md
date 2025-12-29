@@ -56,7 +56,7 @@ Implement the `NeighborSum` class:
 
 ## Test Cases
 
-``` python
+```python
 class NeighborSum:
 
     def __init__(self, grid: List[List[int]]):

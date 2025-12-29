@@ -20,7 +20,7 @@ Do **not** allocate extra space for another array. You must do this by **modifyi
 
 The judge will test your solution with the following code:
 
-``` cpp
+```cpp
 int[] nums = [...]; // Input array
 int[] expectedNums = [...]; // The expected answer with correct length
 
@@ -58,7 +58,7 @@ If all assertions pass, then your solution will be **accepted**.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
 ```

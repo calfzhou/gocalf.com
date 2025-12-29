@@ -41,7 +41,7 @@ Return _the head of the merged linked list_.
 
 ## Test Cases
 
-``` python
+```python
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):

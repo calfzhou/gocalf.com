@@ -18,7 +18,7 @@ An **island** is surrounded by water and is formed by connecting adjacent lands 
 
 > Input:
 >
-> ``` c++
+> ```c++
 > grid = [
 >   ["1","1","1","1","0"],
 >   ["1","1","0","1","0"],
@@ -33,7 +33,7 @@ An **island** is surrounded by water and is formed by connecting adjacent lands 
 
 > Input:
 >
-> ``` c++
+> ```c++
 > grid = [
 >   ["1","1","0","0","0"],
 >   ["1","1","0","0","0"],
@@ -53,7 +53,7 @@ An **island** is surrounded by water and is formed by connecting adjacent lands 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
 ```

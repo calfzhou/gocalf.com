@@ -36,7 +36,7 @@ A **prefix** of a string `s` is any leading contiguous substring of `s`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def prefixCount(self, words: List[str], pref: str) -> int:
 ```

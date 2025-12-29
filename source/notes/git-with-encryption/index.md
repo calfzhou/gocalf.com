@@ -24,7 +24,7 @@ updated: 2024-04-24 19:36:21
 
 需要本地先准备好 [PGP key pair](../pgp/index.md)，应该有 E 用途和 S 用途的子密钥各一个分别用来加密和签名。
 
-``` bash
+```bash
 brew install git-remote-gcrypt
 
 # Go to a git repository, then:
@@ -59,7 +59,7 @@ git-remote-gcrypt 可以用的 backend：
 
 可以直接 clone，或者添加 remote 之后 fetch / pull。跟普通的 remote 没有太大区别，除了协议要用 `gcrypt::`，以及注意相关的 config。
 
-``` bash
+```bash
 git clone gcrypt::remote-url-or-path local-repo
 cd local-repo
 
@@ -81,7 +81,7 @@ git config commit.gpgsign false
 
 > **git-crypt** enables transparent encryption and decryption of files in a git repository. Files which you choose to protect are encrypted when committed, and decrypted when checked out. git-crypt lets you freely share a repository containing a mix of public and private content. git-crypt gracefully degrades, so developers without the secret key can still clone and commit to a repository with encrypted files. This lets you store your secret material (such as keys or passwords) in the same repository as your code, without requiring you to lock down your entire repository.
 
-``` bash
+```bash
 brew install git-crypt
 ```
 
@@ -98,7 +98,7 @@ brew install git-crypt
 
 {% badge_github calfzhou git-encrypt %}
 
-``` bash
+```bash
 # Cannot be installed by brew.
 
 git clone git@github.com:calfzhou/git-encrypt.git

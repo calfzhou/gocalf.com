@@ -13,20 +13,20 @@ Refer to [dotfiles/git/gitconfig at master · calfzhou/dotfiles](https://github.
 
 ## Delete a Remote Branch
 
-``` bash
+```bash
 git push origin --delete BRANCH
 ```
 
 ## List Changed Files (w/o Details)
 
-``` bash
+```bash
 git diff --name-only BRANCH
 git show --name-only COMMIT-ID
 ```
 
 ## List Commits Gap Between Two Branches
 
-``` bash
+```bash
 git l --left-right master...HEAD
 # or
 git log ---left-right --one-line --graph master...HEAD
@@ -36,13 +36,13 @@ Where a `>` commit is in the right (2nd) branch, while a `<` commit is in the le
 
 ## Diff Two Arbitrary Files
 
-``` bash
+```bash
 git diff --no-index -- FILE1 FILE2
 ```
 
 ## See the Changes Made by a Commit to the Specified File
 
-``` bash
+```bash
 git show COMMIT-ID FILE
 # or
 git show --oneline COMMIT-ID FILE
@@ -50,7 +50,7 @@ git show --oneline COMMIT-ID FILE
 
 Scenario: When `git l` a specific file, usually I'd like to see what changed in a history commit.
 
-``` shell-session
+```shell-session
 $ git l FILE
 * db217ef84d3 2024-10-24 05:43 ...
 * edfd91a00d1 2024-10-02 07:51 ...
@@ -59,7 +59,7 @@ $ git l FILE
 
 I want to see the changes made to this file by commit db217ef84d3 (without looking at the changes to other files):
 
-``` bash
+```bash
 git show --oneline db217ef84d3 FILE
 ```
 
@@ -67,13 +67,13 @@ git show --oneline db217ef84d3 FILE
 
 To list branches containing the given commit:
 
-``` bash
+```bash
 git branch --contains COMMIT-ID
 ```
 
 To track it:
 
-``` powershell
+```powershell
 gitk COMMIT-ID..HEAD --ancestry-path
 ```
 
@@ -85,7 +85,7 @@ This will show only commits that are descendants of the commit `COMMIT-ID` and
 
 ### 撤回最后一次 Commit
 
-``` bash
+```bash
 git reset --hard HEAD~1
 git push -f
 ```
@@ -94,7 +94,7 @@ git push -f
 
 比如：
 
-``` mermaid
+```mermaid
 gitGraph:
   commit id: "A"
   commit id: "B"
@@ -105,7 +105,7 @@ gitGraph:
 
 要删掉 commit "C"：
 
-``` bash
+```bash
 git rebase --onto B C
 ```
 
@@ -121,7 +121,7 @@ git rebase --onto B C
 
 > Here is an illustration, by Jon Loeliger. Both commit nodes B and C are parents of commit node A. Parent commits are ordered left-to-right.
 
-``` text
+```text
 G   H   I   J
  \ /     \ /
   D   E   F

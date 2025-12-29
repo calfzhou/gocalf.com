@@ -48,7 +48,7 @@ You must write an algorithm that uses only constant extra space.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def compress(self, chars: List[str]) -> int:
 ```

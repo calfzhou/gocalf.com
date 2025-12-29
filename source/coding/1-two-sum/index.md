@@ -43,7 +43,7 @@ You can return the answer in any order.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 ```

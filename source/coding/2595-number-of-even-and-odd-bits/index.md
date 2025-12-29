@@ -42,7 +42,7 @@ Return the array `[even, odd]`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def evenOddBit(self, n: int) -> List[int]:
 ```

@@ -54,7 +54,7 @@ A **subsequence** of a string is a new string generated from the original string
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countPalindromicSubsequence(self, s: str) -> int:
 ```

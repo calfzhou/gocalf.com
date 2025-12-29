@@ -44,7 +44,7 @@ Return `true` if Alice can win this game, otherwise, return `false`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def canAliceWin(self, nums: List[int]) -> bool:
 ```

@@ -54,7 +54,7 @@ Return an integer array `results` of size `n - k + 1`, where `results[i]` is the
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def resultsArray(self, nums: List[int], k: int) -> List[int]:
 ```

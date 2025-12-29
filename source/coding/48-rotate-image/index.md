@@ -36,7 +36,7 @@ You have to rotate the image [**in-place**](https://en.wikipedia.org/wiki/In-pla
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:
         """

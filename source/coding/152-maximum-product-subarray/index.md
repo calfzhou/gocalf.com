@@ -36,7 +36,7 @@ The test cases are generated so that the answer will fit in a **32-bit** integer
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
 ```

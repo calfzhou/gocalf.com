@@ -57,7 +57,7 @@ The test cases are generated so that the answer fits in a **32-bit** integer.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def numDecodings(self, s: str) -> int:
 ```

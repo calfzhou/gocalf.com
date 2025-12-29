@@ -44,7 +44,7 @@ Return an integer array `answer` where `answer[i]` is the final price you will p
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def finalPrices(self, prices: List[int]) -> List[int]:
 ```

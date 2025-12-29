@@ -59,7 +59,7 @@ A sequence of numbers `seq` of size 5 contains a **unique middle mode** if the _
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def subsequencesWithMiddleMode(self, nums: List[int]) -> int:
 ```

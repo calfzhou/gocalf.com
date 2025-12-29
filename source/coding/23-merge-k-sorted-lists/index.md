@@ -20,7 +20,7 @@ _Merge all the linked-lists into one sorted linked-list and return it._
 > Output: `[1,1,2,3,4,4,5,6]`
 > Explanation: The linked-lists are:
 >
-> ``` text
+> ```text
 > [
 >   1->4->5,
 >   1->3->4,
@@ -52,7 +52,7 @@ _Merge all the linked-lists into one sorted linked-list and return it._
 
 ## Test Cases
 
-``` python
+```python
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):

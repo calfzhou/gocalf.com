@@ -64,7 +64,7 @@ The **level** of a node is the number of edges along the path between it and the
 
 ## Test Cases
 
-``` python
+```python
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):

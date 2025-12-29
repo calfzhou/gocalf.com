@@ -50,7 +50,7 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxTwoEvents(self, events: List[List[int]]) -> int:
 ```

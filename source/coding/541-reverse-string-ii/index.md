@@ -32,7 +32,7 @@ If there are fewer than `k` characters left, reverse all of them. If there are l
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def reverseStr(self, s: str, k: int) -> str:
 ```

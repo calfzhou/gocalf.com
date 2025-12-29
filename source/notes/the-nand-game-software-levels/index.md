@@ -76,7 +76,7 @@ The keyword **LABEL** followed by a name makes the name represent the address of
 
 The keyword **DEFINE** followed by a name and a number will cause the name to be replaced with the number when it occurs in other instructions. For example:
 
-``` nasm
+```nasm
 DEFINE foo 0x7FFF
 A = foo
 ```
@@ -272,7 +272,7 @@ The external device is only affected when a bit is changing from 0 to 1.
 
 给内存地址 0x7FFF 写入 0x1，则灯亮；直接对此数值取反，则灯灭。
 
-``` nasm
+```nasm
 # 0x7FFF
 A = 0x7FFF
 # 0xe588 = ci3 | u | op0 | zx | *a
@@ -301,7 +301,7 @@ Note: A key will usually be held down for much longer than a clock cycle, but sh
 
 需要记录下一次要写入的内存地址（起始值为 0x1000），用内存地址 0xFFF 来记录此值。
 
-``` nasm
+```nasm
 DEFINE KBD 0x6000
 DEFINE W_ADDR 0xFFF
 
@@ -366,7 +366,7 @@ The movement/turn is started when a bit is changing from 0 to 1, but will take a
 
 注意移动和旋转都会持续一段时间，需要等待动作完成，如：
 
-``` nasm
+```nasm
 DEFINE IO 0x7FFF
 DEFINE C_IS_BUSY 0x600
 
@@ -398,7 +398,7 @@ D ; JNE
     - 若有，则左转两次（对应上边情况 ②）
     - 若没有，则左转，然后前进（对应上边情况 ①）
 
-``` nasm
+```nasm
 # Assembler code
 DEFINE IO 0x7FFF
 DEFINE C_FRONT_WALL 0x100
@@ -534,7 +534,7 @@ The screen is 512 x 256 monochrome pixels, memory-mapped from address 0x4000 to 
 >
 > 把 PNG 图片给 AI，让它缩放后生成 32 行、每行两个 16-bit hex 的数据。再把第一行数据的处理代码示例以及每一行的地址变化规律告诉它，把大数字的取反规则告诉它，让它生成完整的代码。
 
-``` nasm
+```nasm
 
 # Generated assembly instructions from hex data
 # Each line processes two 16-bit hex numbers and stores them at incrementing addresses
@@ -874,7 +874,7 @@ The network wires are memory mapped to the address `6001` (hex), with two sign
 
 The protocol (in this mission) is that a transmission always starts with a 1 bit, followed by 16 bits of data, then followed by a control bit. If the control bit is 0, it means the transmission has ended. If the control bit is 1, it means another 16 bits data will follow, again followed by a control bit. And so on.
 
-``` nasm
+```nasm
 DEFINE C_NET_ADDR 0x6001
 DEFINE C_NET_DATA 0x01
 DEFINE C_NET_SYNC 0x02
@@ -1055,7 +1055,7 @@ Constants:
 
 - SP: 0
 
-``` nasm
+```nasm
 # init.stack
 A = 0x0100
 D = A
@@ -1073,7 +1073,7 @@ The SP should be increased by one.
 
 SP points to the address after the top of the stack.
 
-``` nasm
+```nasm
 # push.D
 A = SP
 A = *A
@@ -1092,7 +1092,7 @@ The stack pointer (SP) should be decreased by 1 when a value is popped.
 
 SP points to the address after the top of the stack, so the value to retrieve is at SP - 1.
 
-``` nasm
+```nasm
 # pop.D
 A = SP
 *A = *A - 1
@@ -1106,7 +1106,7 @@ Write code which pops the value at top of the stack and writes it to the **A**-
 
 **Important criteria**: The **D**-register must not be affected by this operation.
 
-``` nasm
+```nasm
 # pop.A
 A = SP
 *A = *A - 1
@@ -1122,7 +1122,7 @@ The macro keyword `push.value` must followed by a number, e.g. `push.value 42
 
 When the macro is used, the placeholder keyword `value` in the macro code will be replaced with the specified number, i.e. `42`.
 
-``` nasm
+```nasm
 # push.value <value>
 A = value
 D = A
@@ -1133,7 +1133,7 @@ push.D
 
 Pop two values from the stack, add them, and push the sum on the stack.
 
-``` nasm
+```nasm
 # add
 pop.D
 pop.A
@@ -1151,7 +1151,7 @@ Pop two values from stack, subtract the first from the second, and then push the
 
 因为出栈是 macro 内部逻辑，从使用者的角度，就是 **先入栈的数 - 后入栈的数**。
 
-``` nasm
+```nasm
 # sub
 pop.D
 pop.A
@@ -1163,7 +1163,7 @@ push.D
 
 Negate the value on top of the stack.
 
-``` nasm
+```nasm
 # neg
 pop.D
 D = -D
@@ -1174,7 +1174,7 @@ push.D
 
 Pop two values from stack, perform a bitwise AND and push the result back on the stack.
 
-``` nasm
+```nasm
 # and
 pop.D
 pop.A
@@ -1186,7 +1186,7 @@ push.D
 
 Pop two values from stack, perform a bitwise OR and push the result back on the stack.
 
-``` nasm
+```nasm
 # or
 pop.D
 pop.A
@@ -1198,7 +1198,7 @@ push.D
 
 A high level language have a more human-friendly and flexible syntax which is then _compiled_ into machine code instructions. For example the high-level code `2 + 2` could be compiled into the low-level code:
 
-``` nasm
+```nasm
 push.value 2
 push.value 2
 ADD
@@ -1287,7 +1287,7 @@ Define code-generation for the syntax rules of the language, to support addition
 
 Syntax rules:
 
-``` nasm
+```nasm
 # Expression → `Number`
 push.value [Number]
 
@@ -1321,7 +1321,7 @@ Pop the two top values from the stack and compare them. If they are equal, push 
 
 In conditionals, `FFFF` represents _true_ and `0` represents _false_.
 
-``` nasm
+```nasm
 # eq
 pop.D
 pop.A
@@ -1352,7 +1352,7 @@ Pop the two top values from the stack and compare them. If the first is greater 
 
 但 "Check solution" 的检查逻辑似乎跟图一致，即当 **先入栈的数 > 后入栈的数**，结果为 -1，否则为 0。这个其实跟 **sub** 的行为（**先入栈的数 - 后入栈的数**）也是类似的。
 
-``` nasm
+```nasm
 # gt
 pop.D
 pop.A
@@ -1377,7 +1377,7 @@ Pop the two top values from the stack and compare them. If the first is less tha
 
 同样，这里应该是指当 **先入栈的数 < 后入栈的数**，结果为 -1，否则为 0。
 
-``` nasm
+```nasm
 # lt
 pop.D
 pop.A
@@ -1400,7 +1400,7 @@ LABEL END
 
 Invert the value on top of the stack, using bitwise inversion.
 
-``` nasm
+```nasm
 # not
 pop.D
 D = ~D
@@ -1411,7 +1411,7 @@ push.D
 
 Jump to the label given in the placeholder.
 
-``` nasm
+```nasm
 goto <label>
 A = label
 JMP
@@ -1423,7 +1423,7 @@ Pop the value on top of the stack.
 
 Jump to the label if it is non-zero.
 
-``` nasm
+```nasm
 # if.goto <label>
 pop.D
 A = label
@@ -1438,7 +1438,7 @@ The value on top of the stack is a memory address.
 
 Pop the address from the stack. Fetch the current contents of the memory address, and push this on the stack.
 
-``` nasm
+```nasm
 # push.memory
 pop.A
 D = *A
@@ -1453,7 +1453,7 @@ Write the first value to memory at the given address.
 
 从使用者的角度，**先入栈地址，后入栈数据**。
 
-``` nasm
+```nasm
 # pop.memory
 pop.D
 pop.A
@@ -1464,7 +1464,7 @@ pop.A
 
 Take the current contents of the memory address given by the `address` placeholder and push it on the stack.
 
-``` nasm
+```nasm
 # push.static <address>
 A = address
 D = *A
@@ -1475,7 +1475,7 @@ push.D
 
 Take the value on top of the stack and store it at the memory address given by the `address` placeholder.
 
-``` nasm
+```nasm
 # pop.static <address>
 pop.D
 A = address
@@ -1533,7 +1533,7 @@ After the function call is executed, control will return to the label following 
 - Set SP to the previous ARGS value ❓ Why not use `SP - argumentCount`
 - Push RETVAL on the stack
 
-``` nasm
+```nasm
 # call <functionName> <argumentCount>
 push.static ARGS
 push.static LOCALS
@@ -1582,7 +1582,7 @@ The **Function** macro defines the top of the function block. It should adjust
 - Set LOCALS to the current SP.
 - Make space for local data on the stack by adding **localsCount** to the current **SP** value.
 
-``` nasm
+```nasm
 # function <functionName> <localsCount>
 LABEL functionName
 
@@ -1606,7 +1606,7 @@ The **Return** macro defines the end of the function block. It should store th
 - Set SP to the value of LOCALS
 - Pop the return address from the stack and jump to it.
 
-``` nasm
+```nasm
 # return
 pop.static RETVAL
 
@@ -1623,7 +1623,7 @@ JMP
 
 Take the current contents of the memory address given by `ARGS` + the **index** placeholder and push it on the stack.
 
-``` nasm
+```nasm
 # push.argument <index>
 A = ARGS
 D = *A
@@ -1637,7 +1637,7 @@ push.memory
 
 Take the value on top of the stack and store it at the memory address given by the value of `ARGS` + the **index** placeholder.
 
-``` nasm
+```nasm
 # pop.argument <index>
 A = ARGS
 D = *A
@@ -1658,7 +1658,7 @@ A = D ^ A
 
 Take the current contents of the memory address given by `LOCALS` + the **index** placeholder and push it on the stack.
 
-``` nasm
+```nasm
 # push.local <index>
 A = LOCALS
 D = *A
@@ -1672,7 +1672,7 @@ push.memory
 
 Take the value on top of the stack and store it at the memory address given by the value of `LOCALS` + the **index** placeholder.
 
-``` nasm
+```nasm
 # pop.local <index>
 A = LOCALS
 D = *A

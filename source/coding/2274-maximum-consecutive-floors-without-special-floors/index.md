@@ -42,7 +42,7 @@ Return _the **maximum** number of consecutive floors without a special floor_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxConsecutive(self, bottom: int, top: int, special: List[int]) -> int:
 ```

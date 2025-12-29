@@ -41,7 +41,7 @@ Return _the largest number of chunks we can make to sort the array_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxChunksToSorted(self, arr: List[int]) -> int:
 ```

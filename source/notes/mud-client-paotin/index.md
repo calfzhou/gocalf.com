@@ -31,7 +31,7 @@ docker run --rm -it --name tt --hostname tt mudclient/paotin:beta
 
 长期挂机：
 
-``` bash
+```bash
 # 创建游戏主目录，该目录可以自定义
 mkdir -p $HOME/my-paotin/
 
@@ -95,7 +95,7 @@ TODO: 左右调整窗格大小的快捷键。
 
 用 tmux 新开一个 shell（`<ctrl+a> |`），然后在其中输入 `mtail`，即可获得进一步指引：
 
-``` text
+```text
 用法: mtail <id> [<log1> <log2>...]
 日志名称不用加路径和 .log 后缀，只要文件名就好。
 可以同时显示多个日志，默认显示日志: chat qq jh helpme fullsk quest job tell
@@ -109,7 +109,7 @@ iTerm2 支持直接在终端显示图片（[Images - Documentation - iTerm2 - ma
 
 下载 `imgcat`：
 
-``` bash
+```bash
 curl -O https://iterm2.com/utilities/imgcat
 chmod +x imgcat
 ```
@@ -121,7 +121,7 @@ chmod +x imgcat
 
 虽然可以尝试 Python 版本的 `imgcat`：
 
-``` bash
+```bash
 pip install imgcat
 python -m imgcat ...
 ```
@@ -132,13 +132,13 @@ python -m imgcat ...
 
 想要以 integration mode 运行 PaoTin++：
 
-``` bash
+```bash
 docker exec -it -e TMUXCMD="tmux -CC -S /paotin/tmux/sock" tt start-ui
 ```
 
 会打开一个新的 Window（或 Tab，取决于 iTerm2 » Settings » General » tmux 里的设置），而执行上述命令的地方会显示：
 
-``` text
+```text
 正在打开终端...
 ** tmux mode started **
 

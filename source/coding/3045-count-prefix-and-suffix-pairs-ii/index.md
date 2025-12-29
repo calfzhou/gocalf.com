@@ -21,7 +21,7 @@ updated: 2025-01-08 11:21:25
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countPrefixSuffixPairs(self, words: List[str]) -> int:
 ```

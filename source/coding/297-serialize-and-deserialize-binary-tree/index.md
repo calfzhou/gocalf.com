@@ -35,7 +35,7 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
 
 ## Test Cases
 
-``` python
+```python
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):

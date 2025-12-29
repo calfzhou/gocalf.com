@@ -54,7 +54,7 @@ Return `true` _if you can make `s` a valid parentheses string_. Otherwise, retur
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def canBeValid(self, s: str, locked: str) -> bool:
 ```

@@ -17,7 +17,7 @@ Given a collection of numbers, `nums`, that might contain duplicates, return _a
 > Input: `nums = [1,1,2]`
 > Output:
 >
-> ``` json
+> ```json
 > [[1,1,2],
 > [1,2,1],
 > [2,1,1]]
@@ -35,7 +35,7 @@ Given a collection of numbers, `nums`, that might contain duplicates, return _a
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
 ```

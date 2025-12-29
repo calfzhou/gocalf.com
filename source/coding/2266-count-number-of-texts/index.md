@@ -52,7 +52,7 @@ Since the answer may be very large, return it **modulo** `10⁹ + 7`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countTexts(self, pressedKeys: str) -> int:
 ```

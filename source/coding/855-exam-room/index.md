@@ -32,7 +32,7 @@ Implement the `ExamRoom` class:
 >
 > Explanation
 >
-> ``` c++
+> ```c++
 > ExamRoom examRoom = new ExamRoom(10);
 > examRoom.seat(); // return 0, no one is in the room, then the student sits at seat number 0.
 > examRoom.seat(); // return 9, the student sits at the last seat number 9.
@@ -50,7 +50,7 @@ Implement the `ExamRoom` class:
 
 ## Test Cases
 
-``` python
+```python
 class ExamRoom:
 
     def __init__(self, n: int):
@@ -78,7 +78,7 @@ class ExamRoom:
 
 汇总一下，对于任意的空位区间，「the maximum distance to the closest person」的计算逻辑为：
 
-``` python
+```python
 if l == -1:
     dis = r
 elif r == n:

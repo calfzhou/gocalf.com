@@ -50,7 +50,7 @@ Return the **minimum** length after the operations.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minLength(self, s: str, numOps: int) -> int:
 ```

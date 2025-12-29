@@ -34,7 +34,7 @@ The **next greater number** of a number `x` is the first greater number to its t
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def nextGreaterElements(self, nums: List[int]) -> List[int]:
 ```

@@ -29,7 +29,7 @@ In contrast with [pythonbrew](https://github.com/utahta/pythonbrew) (no longer u
 
 ### Installation
 
-``` bash
+```bash
 brew install pyenv
 ```
 
@@ -37,7 +37,7 @@ Then follow the rest of the post-installation steps, starting with [Set up your 
 
 Add the following to `.zshrc`:
 
-``` bash
+```bash
 export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 # eval "$(pyenv init --path)"
@@ -45,7 +45,7 @@ eval "$(pyenv init -)"
 
 `pyenv` needs to be upgraded to install new Python versions:
 
-``` bash
+```bash
 brew upgrade pyenv
 pyenv install --list
 ```
@@ -54,7 +54,7 @@ pyenv install --list
 
 If `BUILD FAILED` on Mac OS when `pyenv install x.y.z`:
 
-``` bash
+```bash
 sudo rm -rf /Library/Developer/CommandLineTools
 xcode-select --install
 pyenv install x.y.z
@@ -81,7 +81,7 @@ To select a pyenv-installed Python as the version to use, run one of the followi
 > [!note]
 > `pyenv-veirtualenv` is preferred rather than `pyenv-virtualenvwrapper`
 
-``` bash
+```bash
 # 2022-08-04 10:37 The last release (v1.1.5) was on Feb 14, 2019
 brew install --HEAD pyenv-virtualenv
 # Or simply clone plugin code into pyenv plugins folder:
@@ -90,7 +90,7 @@ git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/py
 
 Zsh has a [pyenv](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/pyenv) plugin, which also loads pyenv-virtualenv if exists.
 
-``` bash
+```bash
 # Create virtualenv
 pyenv virtualenv <name>
 pyenv virtualenv 2.7.10 <name>

@@ -40,7 +40,7 @@ Return `true` _if it is possible to make both strings equal by performing **at m
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def areAlmostEqual(self, s1: str, s2: str) -> bool:
 ```

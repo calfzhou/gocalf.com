@@ -45,7 +45,7 @@ An input string is valid if:
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def isValid(self, s: str) -> bool:
 ```

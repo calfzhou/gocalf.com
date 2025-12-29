@@ -46,7 +46,7 @@ Return _an array of **right interval** indices for each interval `i`_. If no **r
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findRightInterval(self, intervals: List[List[int]]) -> List[int]:
 ```

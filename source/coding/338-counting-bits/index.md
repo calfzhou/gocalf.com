@@ -18,7 +18,7 @@ Given an integer `n`, return _an array_ `ans` _of length_ `n + 1` _such that for
 > Output: `[0,1,1]`
 > Explanation:
 >
-> ``` text
+> ```text
 > 0 --> 0
 > 1 --> 1
 > 2 --> 10
@@ -30,7 +30,7 @@ Given an integer `n`, return _an array_ `ans` _of length_ `n + 1` _such that for
 > Output: [0,1,1,2,1,2]
 > Explanation:
 >
-> ``` text
+> ```text
 > 0 --> 0
 > 1 --> 1
 > 2 --> 10
@@ -50,7 +50,7 @@ Given an integer `n`, return _an array_ `ans` _of length_ `n + 1` _such that for
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countBits(self, n: int) -> List[int]:
 ```
@@ -103,7 +103,7 @@ class Solution:
 
 三种算法的实际运行时间对比：
 
-``` text
+```text
 [1:n log n] n =     10:      4.994 μs
 [2: linear] n =     10:      2.907 μs
 [3: linear] n =     10:      1.752 μs

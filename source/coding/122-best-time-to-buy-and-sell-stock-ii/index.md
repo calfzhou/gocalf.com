@@ -45,7 +45,7 @@ Find and return _the **maximum** profit you can achieve_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 ```

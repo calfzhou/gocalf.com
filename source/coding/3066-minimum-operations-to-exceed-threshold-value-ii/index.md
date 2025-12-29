@@ -51,7 +51,7 @@ Return _the **minimum** number of operations needed so that all elements of the 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minOperations(self, nums: List[int], k: int) -> int:
 ```

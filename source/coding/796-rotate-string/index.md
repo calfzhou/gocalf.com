@@ -33,7 +33,7 @@ A **shift** on `s` consists of moving the leftmost character of `s` to the right
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def rotateString(self, s: str, goal: str) -> bool:
 ```

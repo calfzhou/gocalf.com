@@ -38,7 +38,7 @@ Return _the **maximum** value of_ `nums[i] + nums[j]` _that you can obtain over 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maximumSum(self, nums: List[int]) -> int:
 ```

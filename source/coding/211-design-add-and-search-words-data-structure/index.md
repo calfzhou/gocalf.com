@@ -27,7 +27,7 @@ Implement the `WordDictionary` class:
 > `[null,null,null,null,false,true,true,true]`
 > Explanation
 >
-> ``` cpp
+> ```cpp
 > WordDictionary wordDictionary = new WordDictionary();
 > wordDictionary.addWord("bad");
 > wordDictionary.addWord("dad");
@@ -48,7 +48,7 @@ Implement the `WordDictionary` class:
 
 ## Test Cases
 
-``` python
+```python
 class WordDictionary:
 
     def __init__(self):

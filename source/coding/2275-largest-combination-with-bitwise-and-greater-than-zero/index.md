@@ -43,7 +43,7 @@ Return _the size of the **largest** combination of_ `candidates` _with a bitwise
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def largestCombination(self, candidates: List[int]) -> int:
 ```

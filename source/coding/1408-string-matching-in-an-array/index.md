@@ -42,7 +42,7 @@ A **substring** is a contiguous sequence of characters within a string.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def stringMatching(self, words: List[str]) -> List[str]:
 ```

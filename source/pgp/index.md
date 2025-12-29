@@ -18,7 +18,7 @@ menu_id: pgp
 
 {% folding child:codeblock 我的 PGP 公钥 %}
 
-``` text
+```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGYjB9gBEADQnc76VvbGg12lg3DRCMNPgo2SG4SpSoiYIkN72aydOEq3AMqh

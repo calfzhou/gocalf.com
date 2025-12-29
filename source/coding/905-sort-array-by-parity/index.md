@@ -32,7 +32,7 @@ Return _**any array** that satisfies this condition_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def sortArrayByParity(self, nums: List[int]) -> List[int]:
 ```

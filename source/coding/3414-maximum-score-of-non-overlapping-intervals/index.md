@@ -45,7 +45,7 @@ Two intervals are said to be **non-overlapping** if they do not share any points
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maximumWeight(self, intervals: List[List[int]]) -> List[int]:
 ```

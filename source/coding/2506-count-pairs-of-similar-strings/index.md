@@ -52,7 +52,7 @@ Return _the number of pairs_ `(i, j)` _such that_ `0 <= i < j <= word.length - 1
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def similarPairs(self, words: List[str]) -> int:
 ```

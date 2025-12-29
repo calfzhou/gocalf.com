@@ -45,7 +45,7 @@ Return an array of booleans `answer` such that `answer[i]` is `true` if `nums[fr
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def isArraySpecial(self, nums: List[int], queries: List[List[int]]) -> List[bool]:
 ```

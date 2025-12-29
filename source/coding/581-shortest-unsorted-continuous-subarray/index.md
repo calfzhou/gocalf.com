@@ -39,7 +39,7 @@ Return _the shortest such subarray and output its length_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findUnsortedSubarray(self, nums: List[int]) -> int:
 ```

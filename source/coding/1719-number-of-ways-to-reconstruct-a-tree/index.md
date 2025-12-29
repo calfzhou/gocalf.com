@@ -65,7 +65,7 @@ An **ancestor** of a node is any node on the path from the root to that node (ex
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def checkWays(self, pairs: List[List[int]]) -> int:
 ```

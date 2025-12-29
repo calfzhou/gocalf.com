@@ -51,7 +51,7 @@ A **subsequence** of an array is a new array generated from the original array 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maximumBeauty(self, nums: List[int], k: int) -> int:
 ```

@@ -41,7 +41,7 @@ Return _an integer array_ `answer` _where_ `answer[i]` _is the answer to the_ `i
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def sumEvenAfterQueries(self, nums: List[int], queries: List[List[int]]) -> List[int]:
 ```

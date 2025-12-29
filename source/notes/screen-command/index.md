@@ -12,11 +12,11 @@ references:
 
 Screen 可以看作是窗口管理器的命令行界面版本。它提供了统一的管理多个会话的界面和相应的功能。
 
-> 只要 screen 本身没有终止，在其内部运行的会话都可以恢复。这一点对于远程登录的用户特别有用——即使网络连接中断，用户也不会失去对已经打开的命令行会话的控制。只要再次登录到主机上执行 `screen -r` 就可以恢复会话的运行。同样在暂时离开的时候，也可以执行分离命令 `detach`，在保证里面的程序正常运行的情况下让 screen 挂起（切换到后台）。  
+> 只要 screen 本身没有终止，在其内部运行的会话都可以恢复。这一点对于远程登录的用户特别有用——即使网络连接中断，用户也不会失去对已经打开的命令行会话的控制。只要再次登录到主机上执行 `screen -r` 就可以恢复会话的运行。同样在暂时离开的时候，也可以执行分离命令 `detach`，在保证里面的程序正常运行的情况下让 screen 挂起（切换到后台）。
 
 ## 常用参数和快捷键
 
-``` bash
+```bash
 screen -S yourname # 新建一个叫 yourname 的 session
 screen -US yourname # 新建一个叫 yourname 的 UTF8 编码的 session
 screen -ls # 列出当前所有的 session
@@ -28,12 +28,12 @@ screen -d -r yourname # 结束当前 session 并回到 yourname 这个 session
 
 在每个 screen session 下，所有命令都以 `Ctrl+a` (C-a) 开始。
 
-``` text
+```text
 C-a d -> detach，暂时离开当前 session，将目前的 screen session (可能含有多个 windows) 丢到后台执行，并会回到还没进 screen 时的状态，此时在 screen session 里，每个 window 内运行的 process（无论是前台/后台）都在继续执行，即使 logout 也不影响。
 C-a z -> 把当前 session 放到后台执行，用 shell 的 fg 命令则可回去。
 ```
 
-``` text
+```text
 C-a ? -> 显示所有键绑定信息
 
 C-a c -> 创建一个新的运行 shell 的窗口并切换到该窗口

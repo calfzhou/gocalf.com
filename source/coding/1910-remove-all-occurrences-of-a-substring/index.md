@@ -51,7 +51,7 @@ A **substring** is a contiguous sequence of characters in a string.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def removeOccurrences(self, s: str, part: str) -> str:
 ```

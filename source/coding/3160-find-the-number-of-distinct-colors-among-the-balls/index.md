@@ -53,7 +53,7 @@ Return an array `result` of length `n`, where `result[i]` denotes the number of 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def queryResults(self, limit: int, queries: List[List[int]]) -> List[int]:
 ```

@@ -33,7 +33,7 @@ The solution set **must not** contain duplicate subsets. Return the solution in 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
 ```

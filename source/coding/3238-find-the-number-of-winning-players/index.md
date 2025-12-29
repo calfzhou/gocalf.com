@@ -54,7 +54,7 @@ Return the number of players who **win** the game.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def winningPlayerCount(self, n: int, pick: List[List[int]]) -> int:
 ```

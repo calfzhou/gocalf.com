@@ -60,7 +60,7 @@ Return _the **maximum number of components** in any valid split_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxKDivisibleComponents(self, n: int, edges: List[List[int]], values: List[int], k: int) -> int:
 ```

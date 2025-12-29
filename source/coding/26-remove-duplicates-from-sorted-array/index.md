@@ -19,7 +19,7 @@ Consider the number of unique elements of `nums` to be `k`, to get accepted, you
 
 The judge will test your solution with the following code:
 
-``` cpp
+```cpp
 int[] nums = [...]; // Input array
 int[] expectedNums = [...]; // The expected answer with correct length
 
@@ -57,7 +57,7 @@ If all assertions pass, then your solution will be **accepted**.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
 

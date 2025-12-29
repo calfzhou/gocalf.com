@@ -50,7 +50,7 @@ Return `true` _if it is possible to make_ `str2` _a subsequence of_ `str1` _by p
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def canMakeSubsequence(self, str1: str, str2: str) -> bool:
 ```

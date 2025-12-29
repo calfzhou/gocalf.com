@@ -43,7 +43,7 @@ You may assume that the given expression is always valid. All intermediate resul
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def calculate(self, s: str) -> int:
 ```

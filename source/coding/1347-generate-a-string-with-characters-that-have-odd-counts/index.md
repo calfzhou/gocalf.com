@@ -37,7 +37,7 @@ The returned string must contain only lowercase English letters. If there are mu
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def generateTheString(self, n: int) -> str:
 ```

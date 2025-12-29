@@ -47,7 +47,7 @@ Return the total number of **valid** substrings of `word1`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def validSubstringCount(self, word1: str, word2: str) -> int:
 ```

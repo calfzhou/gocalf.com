@@ -28,7 +28,7 @@ Implement the `BrowserHistory` class:
 > `[null,null,null,null,"facebook.com","google.com","facebook.com",null,"linkedin.com","google.com","leetcode.com"]`
 > Explanation:
 >
-> ``` cpp
+> ```cpp
 > BrowserHistory browserHistory = new BrowserHistory("leetcode.com");
 > browserHistory.visit("google.com");       // You are in "leetcode.com". Visit "google.com"
 > browserHistory.visit("facebook.com");     // You are in "google.com". Visit "facebook.com"
@@ -52,7 +52,7 @@ Implement the `BrowserHistory` class:
 
 ## Test Cases
 
-``` python
+```python
 class BrowserHistory:
 
     def __init__(self, homepage: str):

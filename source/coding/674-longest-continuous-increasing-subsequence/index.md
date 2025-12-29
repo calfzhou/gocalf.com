@@ -34,7 +34,7 @@ A **continuous increasing subsequence** is defined by two indices `l` and `r` (`
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findLengthOfLCIS(self, nums: List[int]) -> int:
 ```

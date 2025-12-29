@@ -51,7 +51,7 @@ Return the number of **alternating** groups.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def numberOfAlternatingGroups(self, colors: List[int]) -> int:
 ```

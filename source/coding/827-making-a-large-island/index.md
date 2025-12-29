@@ -43,7 +43,7 @@ An **island** is a 4-directionally connected group of `1`s.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def largestIsland(self, grid: List[List[int]]) -> int:
 ```

@@ -50,7 +50,7 @@ Return _the minimum total cost_ of the cuts.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
 ```

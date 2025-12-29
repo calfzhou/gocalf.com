@@ -37,7 +37,7 @@ Return _the number of possible non-empty sequences of letters_ you can make usin
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
 ```

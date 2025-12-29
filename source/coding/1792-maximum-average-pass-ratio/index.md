@@ -39,7 +39,7 @@ Return _the **maximum** possible average pass ratio after assigning the_ `extraS
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxAverageRatio(self, classes: List[List[int]], extraStudents: int) -> float:
 ```

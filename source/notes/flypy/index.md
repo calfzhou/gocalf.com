@@ -42,7 +42,7 @@ updated: 2025-07-02 23:04:33
 
 参考：[一键为微软输入法添加小鹤双拼键位 - 知乎](https://zhuanlan.zhihu.com/p/174778114)
 
-``` reg
+```reg
 Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\InputMethod\Settings\CHS]
@@ -58,6 +58,6 @@ Windows Registry Editor Version 5.00
 
 或者直接在 cmd 中运行：
 
-``` cmd
+```cmd
 reg add HKCU\Software\Microsoft\InputMethod\Settings\CHS /v UserDefinedDoublePinyinScheme0 /t REG_SZ /d "小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt" /f
 ```

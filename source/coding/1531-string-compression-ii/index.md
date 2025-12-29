@@ -46,7 +46,7 @@ Find the _minimum length of the run-length encoded version of_ `s` _after delet
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
 ```
@@ -59,7 +59,7 @@ RLE (Run-length encoding) 的计算逻辑在 [443. String Compression](../443-st
 
 定义函数 `clen(n)` 表示连续 `n` 个相同字符压缩后的长度，易得：
 
-``` python
+```python
 clen = lambda n: n if n < 2 else int(log10(n)) + 2
 ```
 
@@ -71,7 +71,7 @@ clen = lambda n: n if n < 2 else int(log10(n)) + 2
 
 对于某个字符，假设有连续 `cnt` 个，则压缩后的长度为 `clen(cnt)`。可以枚举出，压缩后的长度每要减少一，需要删掉多少个字符：
 
-``` python
+```python
 def shorten(cnt: int) -> Generator[int, None, None]:
     """Yields the number of chars to be deleted to shorten compressed length by 1, down to 0."""
     k = 0

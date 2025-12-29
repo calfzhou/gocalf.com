@@ -34,7 +34,7 @@ You must write an algorithm that runs in linear time and uses linear extra space
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maximumGap(self, nums: List[int]) -> int:
 ```

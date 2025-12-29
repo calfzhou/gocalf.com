@@ -54,7 +54,7 @@ Return the **minimum** cost to make `s` equal to `target`. If it's not possible,
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumCost(self, target: str, words: List[str], costs: List[int]) -> int:
 ```
@@ -83,7 +83,7 @@ class Solution:
 
 令 i 从 0 递增到 `n - 1`。对于当前的 i，如果 `dp'(i) = ∞`，说明 `target[:i]` 无法由 words 中的单词拼接而成。否则看从位置 i 开始可以匹配到哪些单词，比如 `target[i:j]` 是一个单词，那么 `dp'(j) = min{dp'(j), dp'(i) + cost(target[i:j])}`。Trie 相关的代码不变，只是递推的部分变为：
 
-``` python
+```python
 dp = [-1] * (n + 1)
 dp[0] = 0
 for i in range(n):

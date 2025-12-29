@@ -29,7 +29,7 @@ Given an integer array **sorted** in non-decreasing order, there is exactly one 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
 ```

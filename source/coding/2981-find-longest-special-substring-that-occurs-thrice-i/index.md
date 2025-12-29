@@ -46,7 +46,7 @@ A **substring** is a contiguous **non-empty** sequence of characters within a st
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maximumLength(self, s: str) -> int:
 ```

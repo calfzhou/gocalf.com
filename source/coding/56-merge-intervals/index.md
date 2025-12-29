@@ -32,7 +32,7 @@ Given an array of `intervals` where `intervals[i] = [startᵢ, endᵢ]`, merge
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
 ```

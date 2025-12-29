@@ -38,7 +38,7 @@ Return _the maximum distance_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxDistance(self, arrays: List[List[int]]) -> int:
 ```

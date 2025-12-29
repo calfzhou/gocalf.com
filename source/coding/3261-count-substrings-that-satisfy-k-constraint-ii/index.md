@@ -50,7 +50,7 @@ Return an integer array `answer`, where `answer[i]` is the number of substrings 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countKConstraintSubstrings(self, s: str, k: int, queries: List[List[int]]) -> List[int]:
 ```

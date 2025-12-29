@@ -29,7 +29,7 @@ Given two integers `a` and `b`, return _the sum of the two integers without usin
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def getSum(self, a: int, b: int) -> int:
 ```

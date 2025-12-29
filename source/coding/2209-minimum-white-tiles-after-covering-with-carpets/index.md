@@ -48,7 +48,7 @@ Return _the **minimum** number of white tiles still visible._
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumWhiteTiles(self, floor: str, numCarpets: int, carpetLen: int) -> int:
 ```

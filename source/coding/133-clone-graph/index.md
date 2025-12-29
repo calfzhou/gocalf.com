@@ -14,7 +14,7 @@ Return a [**deep copy**](https://en.wikipedia.org/wiki/Object_copying#Deep_copy)
 
 Each node in the graph contains a value (`int`) and a list (`List[Node]`) of its neighbors.
 
-``` c++
+```c++
 class Node {
     public int val;
     public List<Node> neighbors;
@@ -67,7 +67,7 @@ The given node will always be the first node with `val = 1`. You must return the
 
 ## Test Cases
 
-``` python
+```python
 """
 # Definition for a Node.
 class Node:

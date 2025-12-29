@@ -46,7 +46,7 @@ Return _the team that will be the champion of the tournament._
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findChampion(self, grid: List[List[int]]) -> int:
 ```

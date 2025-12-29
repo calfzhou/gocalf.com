@@ -57,7 +57,7 @@ Return _**any** valid arrangement of_ `pairs`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def validArrangement(self, pairs: List[List[int]]) -> List[List[int]]:
 ```

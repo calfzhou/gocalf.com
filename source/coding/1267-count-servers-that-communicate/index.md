@@ -48,7 +48,7 @@ Return the number of servers that communicate with any other server.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countServers(self, grid: List[List[int]]) -> int:
 ```

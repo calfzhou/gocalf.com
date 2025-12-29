@@ -43,7 +43,7 @@ Return _the number of **different** good strings that can be constructed satisfy
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countGoodStrings(self, low: int, high: int, zero: int, one: int) -> int:
 ```

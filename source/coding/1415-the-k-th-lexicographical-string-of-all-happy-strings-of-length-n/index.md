@@ -46,7 +46,7 @@ Return _the kᵗʰ string_ of this list or return an **empty string** if there a
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def getHappyString(self, n: int, k: int) -> str:
 ```

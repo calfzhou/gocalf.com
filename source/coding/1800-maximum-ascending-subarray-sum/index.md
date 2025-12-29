@@ -41,7 +41,7 @@ A subarray `[numsl, numsl+1, ..., numsr-1, numsr]` is **ascending** if for all `
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxAscendingSum(self, nums: List[int]) -> int:
 ```

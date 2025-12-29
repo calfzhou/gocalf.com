@@ -40,7 +40,7 @@ Given a string `s`, return `true` _if it is a **palindrome**, or_ `false` _other
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def isPalindrome(self, s: str) -> bool:
 ```

@@ -35,7 +35,7 @@ Each solution contains a distinct board configuration of the n-queens' placement
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
 ```

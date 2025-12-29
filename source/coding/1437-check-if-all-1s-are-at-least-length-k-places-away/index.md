@@ -36,7 +36,7 @@ Given an binary array `nums` and an integer `k`, return `true` _if all_ `1`_'s a
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def kLengthApart(self, nums: List[int], k: int) -> bool:
 ```

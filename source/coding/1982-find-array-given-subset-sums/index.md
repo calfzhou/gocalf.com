@@ -56,7 +56,7 @@ An array `sub` is a **subset** of an array `arr` if `sub` can be obtained from `
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def recoverArray(self, n: int, sums: List[int]) -> List[int]:
 ```

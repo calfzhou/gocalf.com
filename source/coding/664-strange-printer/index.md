@@ -37,7 +37,7 @@ Given a string `s`, return _the minimum number of turns the printer needed to pr
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def strangePrinter(self, s: str) -> int:
 ```

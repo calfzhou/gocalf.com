@@ -40,7 +40,7 @@ Return _the **bitwise XOR** of all integers in_ `nums3`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def xorAllNums(self, nums1: List[int], nums2: List[int]) -> int:
 ```

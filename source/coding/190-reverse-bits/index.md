@@ -48,7 +48,7 @@ Reverse bits of a given 32 bits unsigned integer.
 
 ## Code
 
-``` python
+```python
 class Solution:
     def reverseBits(self, n: int) -> int:
 ```

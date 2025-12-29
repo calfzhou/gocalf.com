@@ -40,7 +40,7 @@ Given the `root` of the binary tree, return _the maximum amount of money the thi
 
 ## Test Cases
 
-``` python
+```python
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):

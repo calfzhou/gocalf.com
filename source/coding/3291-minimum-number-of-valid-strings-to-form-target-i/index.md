@@ -57,7 +57,7 @@ Return the **minimum** number of **valid** strings that can be _concatenated_ to
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minValidStrings(self, words: List[str], target: str) -> int:
 ```

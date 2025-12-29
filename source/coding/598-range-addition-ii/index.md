@@ -42,7 +42,7 @@ Count and return _the number of maximum integers in the matrix after performing 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxCount(self, m: int, n: int, ops: List[List[int]]) -> int:
 ```

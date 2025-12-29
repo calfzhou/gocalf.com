@@ -44,7 +44,7 @@ The final answer list can be returned in any order. All coordinates in the final
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def ambiguousCoordinates(self, s: str) -> List[str]:
 ```

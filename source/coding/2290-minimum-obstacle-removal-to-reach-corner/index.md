@@ -48,7 +48,7 @@ Return _the **minimum** number of **obstacles** to **remove** so you can move fr
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumObstacles(self, grid: List[List[int]]) -> int:
 ```

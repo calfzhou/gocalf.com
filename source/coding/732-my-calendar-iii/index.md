@@ -28,7 +28,7 @@ Implement the `MyCalendarThree` class:
 > `[null, 1, 1, 2, 3, 3, 3]`
 > Explanation
 >
-> ``` c++
+> ```c++
 > MyCalendarThree myCalendarThree = new MyCalendarThree();
 > myCalendarThree.book(10, 20); // return 1
 > myCalendarThree.book(50, 60); // return 1
@@ -45,7 +45,7 @@ Implement the `MyCalendarThree` class:
 
 ## Test Cases
 
-``` python
+```python
 class MyCalendarThree:
 
     def __init__(self):

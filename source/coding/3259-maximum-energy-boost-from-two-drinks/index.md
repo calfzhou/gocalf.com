@@ -44,7 +44,7 @@ Return the **maximum** total energy boost you can gain in the next `n` hours.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxEnergyBoost(self, energyDrinkA: List[int], energyDrinkB: List[int]) -> int:
 ```

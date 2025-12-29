@@ -45,7 +45,7 @@ Return _the minimum cost to fly every person to a city_ such that exactly `n` pe
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
 ```

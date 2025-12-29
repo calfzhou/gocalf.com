@@ -38,7 +38,7 @@ We define the range `[a, b]` is smaller than range `[c, d]` if `b - a < d - c` *
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def smallestRange(self, nums: List[List[int]]) -> List[int]:
 ```

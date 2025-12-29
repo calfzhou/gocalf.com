@@ -45,7 +45,7 @@ Return the _number of changes_ needed to make `n` equal to `k`. If it is impossi
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minChanges(self, n: int, k: int) -> int:
 ```

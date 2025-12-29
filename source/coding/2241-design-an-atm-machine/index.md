@@ -32,7 +32,7 @@ Implement the ATM class:
 > `[null, null, [0,0,1,0,1], null, [-1], [0,1,0,0,1]]`
 > Explanation
 >
-> ``` c++
+> ```c++
 > ATM atm = new ATM();
 > atm.deposit([0,0,1,2,1]); // Deposits 1 $100 banknote, 2 $200 banknotes,
 > // and 1 $500 banknote.
@@ -61,7 +61,7 @@ Implement the ATM class:
 
 ## Test Cases
 
-``` python
+```python
 class ATM:
 
     def __init__(self):

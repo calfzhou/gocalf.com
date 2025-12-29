@@ -49,7 +49,7 @@ Return _the modified string **after** the spaces have been added._
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def addSpaces(self, s: str, spaces: List[int]) -> str:
 ```

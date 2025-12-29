@@ -54,7 +54,7 @@ Return an integer array denoting the _final state_ of `nums` after performing al
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:
 ```

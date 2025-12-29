@@ -42,7 +42,7 @@ The coordinate will always represent a valid chessboard square. The coordinate w
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def checkTwoChessboards(self, coordinate1: str, coordinate2: str) -> bool:
 ```

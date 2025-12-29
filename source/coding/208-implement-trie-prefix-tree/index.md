@@ -29,7 +29,7 @@ Implement the Trie class:
 >
 > Explanation
 >
-> ``` cpp
+> ```cpp
 > Trie trie = new Trie();
 > trie.insert("apple");
 > trie.search("apple");   // return True
@@ -47,7 +47,7 @@ Implement the Trie class:
 
 ## Test Cases
 
-``` python
+```python
 class Trie:
 
     def __init__(self):

@@ -33,7 +33,7 @@ updated: 2025-12-24 20:10:17
 
 让 AI 帮忙写了几个脚本来批量处理这些文件，凑活能用。
 
-``` python move_markdown_files.py
+```python move_markdown_files.py
 import os
 
 def move_and_rename_markdown_files(base_dirs):
@@ -53,7 +53,7 @@ if __name__ == "__main__":
     move_and_rename_markdown_files(base_dirs)
 ```
 
-``` python move_assets.py
+```python move_assets.py
 import os
 import shutil
 
@@ -79,7 +79,7 @@ if __name__ == "__main__":
     move_assets(base_dirs)
 ```
 
-``` python update_markdown_links.py
+```python update_markdown_links.py
 import os
 import re
 

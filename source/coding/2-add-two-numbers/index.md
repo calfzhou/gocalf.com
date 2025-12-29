@@ -40,7 +40,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 ## Test Cases
 
-``` python
+```python
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):

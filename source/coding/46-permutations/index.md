@@ -37,7 +37,7 @@ Given an array `nums` of distinct integers, return all the possible permutations
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
 ```

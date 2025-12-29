@@ -43,7 +43,7 @@ A cycle is a path that starts and ends at the same node, and each edge in the pa
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findShortestCycle(self, n: int, edges: List[List[int]]) -> int:
 ```

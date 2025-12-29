@@ -50,7 +50,7 @@ The **diameter** of a tree is the length of the _longest_ path between any two n
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumDiameterAfterMerge(self, edges1: List[List[int]], edges2: List[List[int]]) -> int:
 ```

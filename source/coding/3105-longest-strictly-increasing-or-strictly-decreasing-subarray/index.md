@@ -52,7 +52,7 @@ You are given an array of integers `nums`. Return _the length of the **longest**
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def longestMonotonicSubarray(self, nums: List[int]) -> int:
 ```

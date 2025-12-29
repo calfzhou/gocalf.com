@@ -39,7 +39,7 @@ Two sequences `a₁, a₂, ...` and `b₁, b₂, ...` are different if there is 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countPalindromicSubsequences(self, s: str) -> int:
 ```

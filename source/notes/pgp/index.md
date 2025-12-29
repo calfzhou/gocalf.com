@@ -49,7 +49,7 @@ E | Encrypt | 加密
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart LR
   public["公钥\n（主公钥 & 所有子公钥）\n[C][S][A][E]"]
   subgraph private [ ]
@@ -78,7 +78,7 @@ flowchart LR
 
 ## 安装 GnuPG
 
-``` bash
+```bash
 brew install gpg
 gpg --version
 # gpg (GnuPG) 2.4.5
@@ -96,7 +96,7 @@ gpg --version
 
 ### 生成主密钥
 
-``` bash
+```bash
 gpg --full-generate-key
 ```
 
@@ -112,7 +112,7 @@ gpg --full-generate-key
 
 ### 列出密钥
 
-``` bash
+```bash
 # 列出公钥
 gpg -k
 
@@ -122,7 +122,7 @@ gpg -K
 
 最好创建 `~/.gnupg/gpg.conf` 文件，并输入内容：
 
-``` conf
+```conf
 keyid-format 0xlong
 with-fingerprint
 ```
@@ -133,7 +133,7 @@ with-fingerprint
 
 如果不慎失去了对主密钥的掌控（如私钥丢了、密码忘了、被别人拿到了私钥等），可以用吊销凭证对主密钥进行吊销，使其失效。
 
-``` bash
+```bash
 # `revoke.pgp` 是要生成的吊销证书文件名。
 gpg --gen-revoke -ao revoke.pgp KEY-ID/UID
 ```
@@ -142,7 +142,7 @@ gpg --gen-revoke -ao revoke.pgp KEY-ID/UID
 
 可以用吊销证书来吊销主密钥。
 
-``` bash
+```bash
 gpg --import revoke.pgp # 或其他吊销证书文件
 ```
 
@@ -150,7 +150,7 @@ gpg --import revoke.pgp # 或其他吊销证书文件
 
 ### 添加子密钥
 
-``` bash
+```bash
 gpg --edit-key KEY-ID/UID
 # or
 gpg --expert --edit-key KEY-ID/UID # 可以生成 A (Authenticate) 用途的子密钥
@@ -161,7 +161,7 @@ gpg --expert --edit-key KEY-ID/UID # 可以生成 A (Authenticate) 用途的子�
 
 ### 删除子密钥
 
-``` bash
+```bash
 gpg --edit-key KEY-ID/UID
 > key N # 选择第 N 个密钥（被选中的会标记星号，可以选中多个）
 > delkey
@@ -171,7 +171,7 @@ gpg --edit-key KEY-ID/UID
 
 ### 吊销子密钥
 
-``` bash
+```bash
 gpg --edit-key KEY-ID/UID
 > key N # 选择第 N 个密钥（被选中的会标记星号，可以选中多个）
 > revkey
@@ -181,7 +181,7 @@ gpg --edit-key KEY-ID/UID
 
 ### 导出公钥
 
-``` bash
+```bash
 gpg -a [-o public.pub] --export KEY-ID/UID
 ```
 
@@ -189,7 +189,7 @@ gpg -a [-o public.pub] --export KEY-ID/UID
 
 ### 导出私钥
 
-``` bash
+```bash
 # 导出主私钥和所有子私钥（不建议）
 gpg -a [-o all.pri] --export-secret-keys KEY-ID
 # 导出主私钥（要在末尾加感叹号）
@@ -202,7 +202,7 @@ gpg -a [-o all.ssb] --export-secret-subkeys KEY-ID！
 
 ### 删除密钥
 
-``` bash
+```bash
 # 删除私钥
 gpg --delete-secret-keys KEY-ID/UID
 # 删除公钥
@@ -211,7 +211,7 @@ gpg --delete-keys KEY-ID/UID
 
 ### 导入密钥
 
-``` bash
+```bash
 gpg --import <FILE> # 可以是私钥文件，也可以是公钥文件
 ```
 
@@ -239,7 +239,7 @@ U 盘上的 Tails 可以直接创建一个加密的持久化存储，详见 [Tai
 >
 > 生成的 PGP 密钥在正常的电脑上导入时，可能会报错：
 >
-> ``` text
+> ```text
 > gpg: key 0xHHHHHHHH was created NNN seconds in the future (time warp or clock problem)
 > ```
 >
@@ -287,7 +287,7 @@ U 盘上的 Tails 可以直接创建一个加密的持久化存储，详见 [Tai
 
 执行 `gpg -k` 获取 S 用途的子密钥的 ID，配置到 git 配置文件中：
 
-``` bash
+```bash
 git config --global user.signingkey SUBKEY-ID
 git config --global commit.gpgsign true # 开启默认使用签名（否则需要在 commit 的时候加 `-S` 参数
 ```
@@ -296,7 +296,7 @@ git config --global commit.gpgsign true # 开启默认使用签名（否则需�
 
 用具有 S 用途的子密钥进行签名或验签，用私钥签名，公钥验签。
 
-``` bash
+```bash
 # 签名，输出的文件中同时包含原始文件内容和签名信息。使用自己的私钥。
 # `-u` 指定用哪个 USER-ID 进行签名。
 gpg -s -o SIGNED-FILE ORIGIN-FILE
@@ -317,7 +317,7 @@ gpg --verify SIGN ORIGIN-FILE
 
 用具有 E 用途的子密钥进行文件加密或解密，用公钥加密，私钥解密。
 
-``` bash
+```bash
 # 加密。使用公钥，可以是自己的（以后自己解密），也可以是别人的（发送给对方，对方解密）。
 gpg -e -r KEY-ID/UID -o ENCRYPTED-FILE ORIGIN-FILE
 # 解密。使用自己的私钥。
@@ -331,7 +331,7 @@ gpg -d -o ORIGIN-FILE ENCRYPTED-FILE
 
 即使不生成 PGP 密钥，也可以使用 gpg 命令对文件做加解密。
 
-``` bash
+```bash
 # 加密。执行的时候会提示输入一个加密用的密码。
 gpg -c -o ENCRYPTED-FILE ORIGIN-FILE # -c == --symmetric
 # 解密。用加密时的密码。

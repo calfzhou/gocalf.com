@@ -29,7 +29,7 @@ updated: 2024-05-21 23:00:26
 
 [CentOS 7 安装配置frp内网穿透服务器端教程 - 腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/1808601)
 
-``` bash
+```bash
 brew install frps
 brew install frpc
 
@@ -47,7 +47,7 @@ brew services list | grep frp
 - {% mark ✓ color:green %} 有免费的服务端 bore.hub，也可以部署自己的服务端
 - {% mark ✓ color:green %} 任何 tcp 协议均可
 
-``` bash
+```bash
 brew install ekzhang/bore/bore
 bore local 8080 --to bore.pub
 #> listening at bore.pub:45865
@@ -72,7 +72,7 @@ Reverse proxy that creates a secure tunnel from a public endpoint to a locally r
 
 可免费使用，for quick demos。常规版本是 $25 / month。
 
-``` bash
+```bash
 brew install ngrok/ngrok/ngrok
 ngrok authtoken <token> # Get token after login
 ngrok http 80 # To map which port
@@ -80,7 +80,7 @@ ngrok http 80 # To map which port
 
 启动后，会在终端显示出服务状态，包括从外网访问的域名信息（免费版本每次的域名随机）。
 
-``` text
+```text
 ngrok by @inconshreveable
 
 Session Status                online
@@ -97,7 +97,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 
 如果要转发的是非 HTTP 类的端口，比如 22 端口：
 
-``` bash
+```bash
 # On local machine:
 ngrok tcp 22
 # Check screen output for forwarding info.

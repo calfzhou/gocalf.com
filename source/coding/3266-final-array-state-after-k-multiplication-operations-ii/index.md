@@ -57,7 +57,7 @@ Return an integer array denoting the _final state_ of `nums` after performing al
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:
 ```
@@ -78,7 +78,7 @@ class Solution:
 
 > 这里有个坑，在 Python 里直接计算 `log(a, b)` 结果可能会有些偏差，导致下取整会少 1。比如 `log(3**17, 3) = 16.999999999999996`，比如 `log10(5**7) / log10(5) = 6.999999999999999`。即使用 [decimal](https://docs.python.org/3/library/decimal.html) 也同样会遇到 bad case。目前的处理方法是计算完之后根据情况修正一下：
 >
-> ``` python
+> ```python
 > def ilog(a: int, b: int) -> int:
 >     """Calculates int(log(a, b))."""
 >     p = int(log10(a) / log10(b))
@@ -97,7 +97,7 @@ class Solution:
 
 二分法幂运算在 [935. Knight Dialer](../935-knight-dialer/index.md) 和 [70. Climbing Stairs](../70-climbing-stairs/index.md) 都有涉及（矩阵的幂运算跟整数的幂运算没有本质区别）。在这两题中计算幂用的是正向的循环，如：
 
-``` python
+```python
 MOD = 1_000_000_007
 
 def bi_power(a: int, n: int) -> int:
@@ -117,7 +117,7 @@ def bi_power(a: int, n: int) -> int:
 
 还有另外一种计算方式，本题用的是这种方式：
 
-``` python
+```python
 MOD = 1_000_000_007
 
 def bi_power(a: int, n: int) -> int:
@@ -146,7 +146,7 @@ def bi_power(a: int, n: int) -> int:
 
 另外考虑到 Python 的 log 浮点误差问题，虽然没有实际遇到 log 结果上取整有错，但保险起见还是可以特殊处理一下：
 
-``` python
+```python
 def clog(a: int, b: int) -> int:
     """Calculates ceil(log(a, b))."""
     p = ceil(log10(a) / log10(b))

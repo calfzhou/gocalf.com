@@ -35,7 +35,7 @@ Given an array `arr` of integers, check if there exist two indices `i` and `j` s
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
 ```

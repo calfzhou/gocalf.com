@@ -54,7 +54,7 @@ Return _an array_ `answer` _of size_ `n` _where_ `answer[i]` _is the column that
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findBall(self, grid: List[List[int]]) -> List[int]:
 ```

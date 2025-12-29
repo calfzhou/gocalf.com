@@ -33,7 +33,7 @@ Given an integer array `nums` and an integer `k`, return _the_ `k` _most frequen
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
 ```

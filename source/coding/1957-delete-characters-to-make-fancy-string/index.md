@@ -46,7 +46,7 @@ Return _the final string after the deletion_. It can be shown that the answer wi
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def makeFancyString(self, s: str) -> str:
 ```

@@ -36,7 +36,7 @@ Given two integer arrays `preorder` and `inorder` where `preorder` is the preord
 
 ## Test Cases
 
-``` python
+```python
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -53,7 +53,7 @@ class Solution:
 
 前序（pre-order，NLR），中序（in-order，LNR）。
 
-``` text
+```text
 NLR: N-LEFTSUBTREE-RIGHTSUBTREE
      ╰-----------╮
 LNR: LEFTSUBTREE-N-RIGHTSUBTREE
@@ -63,14 +63,14 @@ NLR 第一个数就是整棵二叉树的根节点，而 LNR 第一个数是整�
 
 例子：
 
-``` text
+```text
 NLR: 3, 4, 1, 6, 7, 2, 0, 5
 LNR: 1, 7, 6, 4, 0, 2, 3, 5
 ```
 
 显然 NLR 的前三个数字 3、4、1 是最左的一条路径，且 1 没有左子节点。为了遍于之后能够再找到 3、4、1 并设置它们的右子节点，需要在遇到的时候就压入栈。
 
-``` text
+```text
            ↓
 NLR: 3, 4, 1, 6, 7, 2, 0, 5
 LNR: 1, 7, 6, 4, 0, 2, 3, 5
@@ -85,7 +85,7 @@ NLR 的下一个数字 6，LNR 的下一个数字 7，二者不一样，说明 6
 
 继续扫描 NLR 直到遇见 7，组成从 6 到 7 的一条左路径（这里没有其他中间节点了）。
 
-``` text
+```text
                  ↓
 NLR: 3, 4, 1, 6, 7, 2, 0, 5
 LNR: 1, 7, 6, 4, 0, 2, 3, 5
@@ -98,7 +98,7 @@ LNR: 1, 7, 6, 4, 0, 2, 3, 5
 
 LNR 的下一个数字是 6，是栈里倒数第二个数字（即 7 的父节点），说明 7 没有右子节点，只需要把 7 出栈即可。同理再下一个数字是 4，也是栈里倒数第二个数字，说明 6 也没有右子节点，直接出栈。
 
-``` text
+```text
                  ↓
 NLR: 3, 4, 1, 6, 7, 2, 0, 5
 LNR: 1, 7, 6, 4, 0, 2, 3, 5
@@ -111,7 +111,7 @@ LNR: 1, 7, 6, 4, 0, 2, 3, 5
 
 然后 NLR 的 2、0 以及 LNR 的 0 也是类似，说明 2 是 4（栈里最后一个节点）的右子节点，0 是 2 的左子节点。
 
-``` text
+```text
                        ↓
 NLR: 3, 4, 1, 6, 7, 2, 0, 5
 LNR: 1, 7, 6, 4, 0, 2, 3, 5
@@ -126,7 +126,7 @@ LNR 后边的数字 2、3，分别说明栈里最后的 0、2 都没有右子节
 
 最后 NLR 和 LNR 的数字都是 5，说明这是没有左子节点的树根，并且是 3（栈里最后一个节点）的右子节点。
 
-``` text
+```text
                           ↓
 NLR: 3, 4, 1, 6, 7, 2, 0, 5
 LNR: 1, 7, 6, 4, 0, 2, 3, 5

@@ -40,7 +40,7 @@ Each time you can either climb `1` or `2` steps. In how many distinct ways can y
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def climbStairs(self, n: int) -> int:
 ```
@@ -143,7 +143,7 @@ $$
 
 线性复杂度和对数复杂度实际运算时间对比：
 
-``` text
+```text
 [linear] n =    30:    1.393298 μs
 [log(n)] n =    30:    7.942997 μs
 

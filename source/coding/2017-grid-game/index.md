@@ -57,7 +57,7 @@ The **first** robot wants to **minimize** the number of points collected by the 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def gridGame(self, grid: List[List[int]]) -> int:
 ```

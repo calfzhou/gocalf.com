@@ -54,7 +54,7 @@ Return an array `answer` where for each `i` in the range `[0, queries.length - 1
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def shortestDistanceAfterQueries(self, n: int, queries: List[List[int]]) -> List[int]:
 ```

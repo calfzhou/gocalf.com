@@ -38,7 +38,7 @@ Return the **binary** representation of `date`.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def convertDateToBinary(self, date: str) -> str:
 ```

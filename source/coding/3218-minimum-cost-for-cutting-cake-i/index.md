@@ -66,7 +66,7 @@ Return the **minimum** total cost to cut the entire cake into `1 x 1` pieces.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumCost(self, m: int, n: int, horizontalCut: List[int], verticalCut: List[int]) -> int:
 ```

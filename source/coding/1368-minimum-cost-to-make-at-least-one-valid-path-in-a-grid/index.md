@@ -59,7 +59,7 @@ Return _the minimum cost to make the grid have at least one valid path_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minCost(self, grid: List[List[int]]) -> int:
 ```

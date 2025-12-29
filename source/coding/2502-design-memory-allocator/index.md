@@ -37,7 +37,7 @@ Implement the `Allocator` class:
 > `[null, 0, 1, 2, 1, 3, 1, 6, 3, -1, 0]`
 > Explanation
 >
-> ``` cpp
+> ```cpp
 > Allocator loc = new Allocator(10); // Initialize a memory array of size 10. All memory units are initially free.
 > loc.allocate(1, 1); // The leftmost block's first index is 0. The memory array becomes [1,_,_,_,_,_,_,_,_,_]. We return 0.
 > loc.allocate(1, 2); // The leftmost block's first index is 1. The memory array becomes [1,2,_,_,_,_,_,_,_,_]. We return 1.
@@ -58,7 +58,7 @@ Implement the `Allocator` class:
 
 ## Test Cases
 
-``` python
+```python
 class Allocator:
 
     def __init__(self, n: int):

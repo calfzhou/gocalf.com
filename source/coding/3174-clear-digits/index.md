@@ -41,7 +41,7 @@ Return the resulting string after removing all digits.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def clearDigits(self, s: str) -> str:
 ```

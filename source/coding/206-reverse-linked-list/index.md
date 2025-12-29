@@ -40,7 +40,7 @@ Given the `head` of a singly linked list, reverse the list, and return _the reve
 
 ## Test Cases
 
-``` python
+```python
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):

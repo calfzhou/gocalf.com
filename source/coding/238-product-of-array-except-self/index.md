@@ -37,7 +37,7 @@ You must write an algorithm that runs in `O(n)` time and without using the div
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
 ```

@@ -46,7 +46,7 @@ Return _the **minimum** time in which you can make the sum of all elements of_ `
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumTime(self, nums1: List[int], nums2: List[int], x: int) -> int:
 ```
@@ -67,7 +67,7 @@ class Solution:
 
 不妨先对 `nums2` 按非递减的顺序排序，当然也要同步重排 `nums1` 以保持对应关系，之后对于任意的 `1 <= i < j <= n`，都有 $b_i\le b_j$。排序逻辑示意：
 
-``` python
+```python
 indices = sorted(range(n), key=lambda i: nums2[i])
 nums1 = [nums1[i] for i in indices]
 nums2 = [nums2[i] for i in indices]

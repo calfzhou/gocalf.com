@@ -31,7 +31,7 @@ The test cases are generated so that, at any time, the product of any contiguous
 >
 > Explanation
 >
-> ``` cpp
+> ```cpp
 > ProductOfNumbers productOfNumbers = new ProductOfNumbers();
 > productOfNumbers.add(3);        // [3]
 > productOfNumbers.add(0);        // [3,0]
@@ -56,7 +56,7 @@ The test cases are generated so that, at any time, the product of any contiguous
 
 ## Test Cases
 
-``` python
+```python
 class ProductOfNumbers:
 
     def __init__(self):

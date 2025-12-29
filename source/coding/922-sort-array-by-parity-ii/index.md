@@ -38,7 +38,7 @@ Return _any answer array that satisfies this condition_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def sortArrayByParityII(self, nums: List[int]) -> List[int]:
 ```

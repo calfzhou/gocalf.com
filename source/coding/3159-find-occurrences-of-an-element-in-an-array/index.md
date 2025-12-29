@@ -43,7 +43,7 @@ Return an integer array `answer` containing the answers to all queries.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def occurrencesOfElement(self, nums: List[int], queries: List[int], x: int) -> List[int]:
 ```

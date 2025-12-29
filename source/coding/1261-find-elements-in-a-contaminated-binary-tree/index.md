@@ -35,7 +35,7 @@ Implement the `FindElements` class:
 > `[null,false,true]`
 > Explanation
 >
-> ``` cpp
+> ```cpp
 > FindElements findElements = new FindElements([-1,null,-1]);
 > findElements.find(1); // return False
 > findElements.find(2); // return True
@@ -52,7 +52,7 @@ Implement the `FindElements` class:
 > `[null,true,true,false]`
 > Explanation
 >
-> ``` cpp
+> ```cpp
 > FindElements findElements = new FindElements([-1,-1,-1,-1,-1]);
 > findElements.find(1); // return True
 > findElements.find(3); // return True
@@ -70,7 +70,7 @@ Implement the `FindElements` class:
 > `[null,true,false,false,true]`
 > Explanation
 >
-> ``` cpp
+> ```cpp
 > FindElements findElements = new FindElements([-1,null,-1,-1,null,-1]);
 > findElements.find(2); // return True
 > findElements.find(3); // return False
@@ -88,7 +88,7 @@ Implement the `FindElements` class:
 
 ## Test Cases
 
-``` python
+```python
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):

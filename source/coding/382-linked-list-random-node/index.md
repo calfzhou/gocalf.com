@@ -28,7 +28,7 @@ Implement the `Solution` class:
 > `[null, 1, 3, 2, 2, 3]`
 > Explanation
 >
-> ``` c++
+> ```c++
 > Solution solution = new Solution([1, 2, 3]);
 > solution.getRandom(); // return 1
 > solution.getRandom(); // return 3
@@ -51,7 +51,7 @@ Implement the `Solution` class:
 
 ## Test Cases
 
-``` python
+```python
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):

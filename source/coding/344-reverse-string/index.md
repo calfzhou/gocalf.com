@@ -31,7 +31,7 @@ You must do this by modifying the input array [in-place](https://en.wikipedia.or
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def reverseString(self, s: List[str]) -> None:
         """

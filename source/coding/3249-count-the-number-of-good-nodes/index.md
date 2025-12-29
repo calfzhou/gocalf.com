@@ -52,7 +52,7 @@ Return the number of **good** nodes in the given tree.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countGoodNodes(self, edges: List[List[int]]) -> int:
 ```

@@ -43,7 +43,7 @@ A **common subsequence** of two strings is a subsequence that is common to both 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
 ```

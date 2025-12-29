@@ -55,7 +55,7 @@ The test cases are generated such that you can guess the secret word with a reas
 
 ## Test Cases
 
-``` python
+```python
 # """
 # This is Master's API interface.
 # You should not implement it, or speculate about its implementation

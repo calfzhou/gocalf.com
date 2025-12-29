@@ -31,7 +31,7 @@ Implement the `OrderedStream` class:
 >
 > Explanation
 >
-> ``` cpp
+> ```cpp
 > // Note that the values ordered by ID is ["aaaaa", "bbbbb", "ccccc", "ddddd", "eeeee"].
 > OrderedStream os = new OrderedStream(5);
 > os.insert(3, "ccccc"); // Inserts (3, "ccccc"), returns [].
@@ -55,7 +55,7 @@ Implement the `OrderedStream` class:
 
 ## Test Cases
 
-``` python
+```python
 class OrderedStream:
 
     def __init__(self, n: int):

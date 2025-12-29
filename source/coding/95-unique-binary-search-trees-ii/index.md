@@ -30,7 +30,7 @@ Given an integer `n`, return _all the structurally unique **BST**'s (binary sear
 
 ## Test Cases
 
-``` python
+```python
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):

@@ -58,7 +58,7 @@ Return `true` if such a path exists, and `false` otherwise.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def canReachCorner(self, xCorner: int, yCorner: int, circles: List[List[int]]) -> bool:
 ```

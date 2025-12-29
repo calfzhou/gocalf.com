@@ -48,7 +48,7 @@ Given `n`, the number of stones in the heap, return `true` _if you can win the g
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def canWinNim(self, n: int) -> bool:
 ```

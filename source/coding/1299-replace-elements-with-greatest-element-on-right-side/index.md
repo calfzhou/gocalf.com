@@ -40,7 +40,7 @@ After doing so, return the array.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def replaceElements(self, arr: List[int]) -> List[int]:
 ```

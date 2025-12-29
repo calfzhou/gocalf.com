@@ -37,7 +37,7 @@ Find the maximum profit you can achieve. You may complete as many transactions a
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 ```

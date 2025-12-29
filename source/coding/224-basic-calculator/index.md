@@ -41,7 +41,7 @@ Given a string `s` representing a valid expression, implement a basic calculator
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def calculate(self, s: str) -> int:
 ```

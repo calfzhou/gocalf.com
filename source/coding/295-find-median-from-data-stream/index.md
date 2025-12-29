@@ -31,7 +31,7 @@ Implement the MedianFinder class:
 >
 > Explanation
 >
-> ``` c++
+> ```c++
 > MedianFinder medianFinder = new MedianFinder();
 > medianFinder.addNum(1);    // arr = [1]
 > medianFinder.addNum(2);    // arr = [1, 2]
@@ -53,7 +53,7 @@ Implement the MedianFinder class:
 
 ## Test Cases
 
-``` python
+```python
 class MedianFinder:
 
     def __init__(self):

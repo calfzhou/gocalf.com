@@ -38,7 +38,7 @@ Be careful not to shortcut the circuit by connecting a voltage (1) directly to g
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 a((a)) -->|off| p1[pmos]
 b((b)) -->|off| p2[pmos]
@@ -72,7 +72,7 @@ Build an INV gate from CMOS transistors.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 a((a)) -->|off| pmos
 a((a)) -->|on| nmos
@@ -104,7 +104,7 @@ NOR is an universal logic gate just like NAND. Using only NOR gates any other lo
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 a -->|on| n1[nmos]
 b -->|on| n2[nmos]
@@ -140,7 +140,7 @@ end
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 a((a)) & b((b)) --> n1[nand]
 a & b --> or
@@ -200,7 +200,7 @@ The number of bits to move is indicated by the 4-bit **n** input.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 subgraph gi [" "]
 i3((3))
@@ -260,7 +260,7 @@ Output the largest of two 16-bit numbers.
 
 ::: invert-when-dark
 
-``` mermaid
+```mermaid
 flowchart BT
 A((A)) ==>|A| sub16[sub 16]
 B((B)) ==>|B| sub16

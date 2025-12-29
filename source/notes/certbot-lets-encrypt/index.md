@@ -12,7 +12,7 @@ references:
 
 ### 直接安装
 
-``` bash
+```bash
 # CentOS
 sudo yum install certbot python2-certbot-nginx
 # macOS
@@ -21,7 +21,7 @@ brew install certbot
 
 ### 用 Docker
 
-``` bash
+```bash
 docker pull certbot/certbot
 docker run --rm -it certbot/certbot --version
 # certbot 2.11.0
@@ -34,7 +34,7 @@ docker run --rm -it -v ./letsencrypt:/etc/letsencrypt certbot/certbot certonly .
 
 `compose.yaml`:
 
-``` yaml
+```yaml
 services:
   nginx:
     image: 'nginx'
@@ -59,19 +59,19 @@ services:
 
 申请/更新证书：
 
-``` bash
+```bash
 docker compose run --rm certbot certonly ...
 ```
 
 启动 nginx：
 
-``` bash
+```bash
 docker compose up -d
 ```
 
 证书更新后重新加载：
 
-``` bash
+```bash
 # Assume `nginx-nginx-1` is the container name of the nginx service in compose.yaml.
 docker exec -it nginx-nginx-1 nginx -s reload
 ```
@@ -94,7 +94,7 @@ docker exec -it nginx-nginx-1 nginx -s reload
 
 每个域名都要验证一次 DNS，比如 `*.example.com` 和 `example.com` 要验证两次。
 
-``` bash
+```bash
 certbot certonly --manual --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory -d example.com -d '*.example.com'
 # Are you OK with your IP being logged?
 # y
@@ -106,7 +106,7 @@ certbot certonly --manual --preferred-challenges dns-01 --server https://acme-v0
 
 DNS 更新需要一些时间，在最后按回车键之前，可以先确认 DNS 记录是否生效：
 
-``` bash
+```bash
 dig +short -t txt _acme-challenge.example.com
 # OR
 nslookup -type=txt _acme-challenge.example.com 8.8.8.8
@@ -149,7 +149,7 @@ TODO: 通过 `--manual-auth-hook` 和 `--manual-cleanup-hook` 参数自动设置
 
 证书更新后需要重新加载 Nginx：
 
-``` bash
+```bash
 nginx -s reload
 ```
 
@@ -159,6 +159,6 @@ nginx -s reload
 
 > `scp` 也可以，但是如果 host-1 禁止 root 登录，而证书文件仅限 root 用户读取，`scp` 会失败。
 
-``` bash
+```bash
 rsync -a --rsync-path="sudo rsync" user@host-1:/etc/letsencrypt/archive/example.com .
 ```

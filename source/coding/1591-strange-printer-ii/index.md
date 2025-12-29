@@ -48,7 +48,7 @@ Return `true` _if it is possible to print the matrix_ `targetGrid`_,_ _otherwise
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
 ```

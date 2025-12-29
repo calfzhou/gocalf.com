@@ -38,7 +38,7 @@ Given an integer array `nums`, return `true` if any value appears **at least twi
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
 ```

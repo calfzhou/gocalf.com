@@ -56,7 +56,7 @@ An array `a` is lexicographically smaller than an array `b` if in the first posi
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def lexicographicallySmallestArray(self, nums: List[int], limit: int) -> List[int]:
 ```

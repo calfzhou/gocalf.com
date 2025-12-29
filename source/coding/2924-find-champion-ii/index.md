@@ -54,7 +54,7 @@ Explanation: Team 2 is weaker than team 0 and team 1. Team 3 is weaker than team
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findChampion(self, n: int, edges: List[List[int]]) -> int:
 ```

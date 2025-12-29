@@ -41,7 +41,7 @@ Return `true` _if such a substring exists, and_ `false` _otherwise._
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def isSubstringPresent(self, s: str) -> bool:
 ```

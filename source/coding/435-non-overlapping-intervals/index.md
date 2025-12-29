@@ -41,7 +41,7 @@ Given an array of intervals `intervals` where `intervals[i] = [startᵢ, endᵢ]
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
 ```

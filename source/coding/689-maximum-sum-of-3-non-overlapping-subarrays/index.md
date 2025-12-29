@@ -34,7 +34,7 @@ Return the result as a list of indices representing the starting position of eac
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxSumOfThreeSubarrays(self, nums: List[int], k: int) -> List[int]:
 ```

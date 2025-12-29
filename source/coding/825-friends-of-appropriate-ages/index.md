@@ -50,7 +50,7 @@ Return _the total number of friend requests made_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
 ```

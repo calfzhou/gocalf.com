@@ -40,7 +40,7 @@ Return the count of numbers in the range `[l, r]` that are **not** **special**.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def nonSpecialCount(self, l: int, r: int) -> int:
 ```

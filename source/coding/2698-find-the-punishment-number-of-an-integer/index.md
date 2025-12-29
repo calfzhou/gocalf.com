@@ -49,7 +49,7 @@ The **punishment number** of `n` is defined as the sum of the squares of all int
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def punishmentNumber(self, n: int) -> int:
 ```

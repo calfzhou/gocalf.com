@@ -43,7 +43,7 @@ Return an array containing the indices of _all_ **stable** mountains in **any** 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def stableMountains(self, height: List[int], threshold: int) -> List[int]:
 ```

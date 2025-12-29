@@ -53,7 +53,7 @@ Return _the **minimum** time required in which you can visit the bottom-right ce
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumTime(self, grid: List[List[int]]) -> int:
 ```

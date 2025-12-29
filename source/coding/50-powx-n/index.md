@@ -38,7 +38,7 @@ Implement [pow(x, n)](http://www.cplusplus.com/reference/valarray/pow/), which c
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def myPow(self, x: float, n: int) -> float:
 ```

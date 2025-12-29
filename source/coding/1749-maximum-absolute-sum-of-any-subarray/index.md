@@ -38,7 +38,7 @@ Note that `abs(x)` is defined as follows:
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxAbsoluteSum(self, nums: List[int]) -> int:
 ```

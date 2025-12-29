@@ -39,7 +39,7 @@ A sequence `a` is lexicographically larger than a sequence `b` (of the same leng
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def constructDistancedSequence(self, n: int) -> List[int]:
 ```

@@ -63,7 +63,7 @@ Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maximumInvitations(self, favorite: List[int]) -> int:
 ```

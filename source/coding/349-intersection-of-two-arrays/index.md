@@ -30,7 +30,7 @@ Given two integer arrays `nums1` and `nums2`, return _an array of their intersec
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
 ```

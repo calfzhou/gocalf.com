@@ -30,7 +30,7 @@ Implement the `MyCalendar` class:
 > `[null, true, false, true]`
 > Explanation
 >
-> ``` c++
+> ```c++
 > MyCalendar myCalendar = new MyCalendar();
 > myCalendar.book(10, 20); // return True
 > myCalendar.book(15, 25); // return False, It can not be booked because time 15 is already booked by another event.
@@ -44,7 +44,7 @@ Implement the `MyCalendar` class:
 
 ## Test Cases
 
-``` python
+```python
 class MyCalendar:
 
     def __init__(self):

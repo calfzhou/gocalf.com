@@ -35,7 +35,7 @@ A string `s` is a **subsequence** of string `t` if deleting some number of chara
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
 ```

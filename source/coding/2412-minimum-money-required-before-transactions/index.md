@@ -44,7 +44,7 @@ Return _the minimum amount of_ `money` _required before any transaction so that 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimumMoney(self, transactions: List[List[int]]) -> int:
 ```

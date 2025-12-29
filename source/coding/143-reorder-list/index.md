@@ -41,7 +41,7 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 
 ## Test Cases
 
-``` python
+```python
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):

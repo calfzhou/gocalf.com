@@ -37,7 +37,7 @@ Given an integer array `nums` of size `n`, return _the number with the value **c
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findClosestNumber(self, nums: List[int]) -> int:
 ```

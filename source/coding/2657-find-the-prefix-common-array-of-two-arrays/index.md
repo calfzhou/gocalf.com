@@ -43,7 +43,7 @@ A sequence of `n` integers is called a **permutation** if it contains all integ
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
 ```

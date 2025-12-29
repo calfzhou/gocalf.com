@@ -43,7 +43,7 @@ The number of **set bits** of an integer is the number of `1`'s in its binary re
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minimizeXor(self, num1: int, num2: int) -> int:
 ```

@@ -33,7 +33,7 @@ Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `f
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
 ```

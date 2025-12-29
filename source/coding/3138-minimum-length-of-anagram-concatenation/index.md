@@ -37,7 +37,7 @@ An **anagram** is formed by rearranging the letters of a string. For example, "a
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def minAnagramLength(self, s: str) -> int:
 ```

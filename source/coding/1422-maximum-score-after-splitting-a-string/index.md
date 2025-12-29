@@ -44,7 +44,7 @@ Output: `3`
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxScore(self, s: str) -> int:
 ```

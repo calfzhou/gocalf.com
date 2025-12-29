@@ -40,7 +40,7 @@ Return _the number of times the user had to change the key._
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countKeyChanges(self, s: str) -> int:
 ```

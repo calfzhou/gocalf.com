@@ -111,7 +111,7 @@ Return _the number of **valid** move combinations_.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countCombinations(self, pieces: List[str], positions: List[List[int]]) -> int:
 ```

@@ -55,7 +55,7 @@ Return _the **maximum points** you can get after collecting the coins from **all
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maximumPoints(self, edges: List[List[int]], coins: List[int], k: int) -> int:
 ```

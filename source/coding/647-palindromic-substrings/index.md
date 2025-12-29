@@ -35,7 +35,7 @@ A **substring** is a contiguous sequence of characters within the string.
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def countSubstrings(self, s: str) -> int:
 ```

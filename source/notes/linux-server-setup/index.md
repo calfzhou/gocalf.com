@@ -13,7 +13,7 @@ Version: Ubuntu 24.04 LTS
 
 ### Linode Specific
 
-``` bash
+```bash
 # New user: calf:admin
 groupadd admin
 useradd -g admin calf
@@ -50,7 +50,7 @@ By default, the root user is not allowed to log in via SSH.
 
 In case if really needed, modify `.ssh/authorized_keys`, comment out the following line then add public key:
 
-``` text
+```text
 no-port-forwarding,no-agent-forwarding,no-X11-forwarding,command="echo 'Please login as the user \"calf\" rather than the user \"root\".';echo;sleep 10;exit 142" ssh-ed25519 ......
 ```
 
@@ -60,7 +60,7 @@ The default user is `ecs-user`.
 
 To access some "not-exist" websites:
 
-``` bash
+```bash
 ssh -C -f -D 1080 -N calf@THANK-GOD
 export all_proxy=socks5://127.0.0.1:1080
 
@@ -71,13 +71,13 @@ unset all_proxy
 
 ### Change the Hostname
 
-``` bash
+```bash
 sudo hostname DESIRED-NAME
 ```
 
 ### Change the Timezone
 
-``` bash
+```bash
 sudo timedatectl set-timezone Asia/Shanghai
 ```
 
@@ -88,7 +88,7 @@ sudo timedatectl set-timezone Asia/Shanghai
 
 Run on local machine:
 
-``` shell-session
+```shell-session
 $ dd if=/dev/urandom of=128mb.bin bs=32M count=4 iflag=fullblock
 4+0 records in
 4+0 records out
@@ -105,7 +105,7 @@ $ scp THE-SERVER:128mb.bin .
 
 [Install Docker Engine on Ubuntu | Docker Docs](https://docs.docker.com/engine/install/ubuntu/)
 
-``` bash
+```bash
 sudo apt-get update
 
 # Add Docker's official GPG key:
@@ -132,7 +132,7 @@ service docker status
 
 To allow non-privileged users to run Docker commands:
 
-``` bash
+```bash
 sudo usermod -aG docker USER
 
 # Log out and log back in so that your group membership is re-evaluated.
@@ -145,7 +145,7 @@ docker ps
 
 [在 Linux 系统上安装和使用 Docker 和 Docker Compose - 云服务器 ECS - 阿里云](https://help.aliyun.com/zh/ecs/user-guide/install-and-use-docker#8dca4cfa3dn0e)
 
-``` bash
+```bash
 sudo apt-get update
 
 # Use Aliyun's mirror
@@ -159,7 +159,7 @@ sudo apt-get update
 
 配置镜像：
 
-``` bash
+```bash
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
     "registry-mirrors": [
@@ -187,17 +187,17 @@ docker info
 
 > [!note]
 >
-> ``` bash
+> ```bash
 > sudo su -
 > ```
 
-``` bash
+```bash
 ssh-keygen -t ed25519
 ```
 
 Add the public key to "Deploy keys" of the deployment GitHub repo: `https://github.com/USER/REPO/settings/keys`.
 
-``` bash
+```bash
 cd /opt
 mkdir SERVICE-ROOT
 cd SERVICE-ROOT
@@ -215,7 +215,7 @@ ln -s ../deploy/DESIRED-SERVICE .
 
 ### Regular Update
 
-``` bash
+```bash
 cd /opt/SERVICE-ROOT/deploy
 git pull
 

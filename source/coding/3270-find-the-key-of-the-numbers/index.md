@@ -49,7 +49,7 @@ Return the `key` of the three numbers **without** leading zeros (_if any_).
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def generateKey(self, num1: int, num2: int, num3: int) -> int:
 ```

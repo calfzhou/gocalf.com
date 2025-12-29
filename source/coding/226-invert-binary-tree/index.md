@@ -38,7 +38,7 @@ Given the `root` of a binary tree, invert the tree, and return _its root_.
 
 ## Test Cases
 
-``` python
+```python
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):

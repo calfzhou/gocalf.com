@@ -36,7 +36,7 @@ Given an integer array `nums` representing the amount of money of each house, re
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def rob(self, nums: List[int]) -> int:
 ```

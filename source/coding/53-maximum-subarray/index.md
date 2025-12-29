@@ -40,7 +40,7 @@ Given an integer array `nums`, find the subarray with the largest sum, and retur
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
 ```

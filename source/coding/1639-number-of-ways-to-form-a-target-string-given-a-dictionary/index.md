@@ -56,7 +56,7 @@ Return _the number of ways to form `target` from `words`_. Since the answer may 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def numWays(self, words: List[str], target: str) -> int:
 ```

@@ -49,7 +49,7 @@ Notice that for any integer `x` `(lo <= x <= hi)` it is **guaranteed** that `x` 
 
 ## Test Cases
 
-``` python
+```python
 class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
 ```
