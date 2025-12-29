@@ -38,7 +38,7 @@ inject:
     - <link rel="manifest" href="/favicon/site.webmanifest?v=20240507">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@1.511.0/style.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/source-code-pro@2.38.0/source-code-pro.min.css">
-    - <link rel="stylesheet" href="/css/gocalf.css?v=20251228">
+    - <link rel="stylesheet" href="/css/gocalf.css?v=20251229">
     - <link rel="stylesheet" href="/css/alert.css?v=20251225">
 
 ######## Main ########

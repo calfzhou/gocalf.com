@@ -36,6 +36,22 @@ article.content a[target="_blank"]:not(.link-card):not(:has(img))::after {
   color: var(--theme-link);
 }
 
+article.content img + figcaption,
+article.content a:has(> img) + figcaption {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  margin: .5rem auto;
+  font-size: .8125rem;
+  line-height: 1.5;
+  color: var(--text-p2);
+  text-align: center;
+}
+
+article.content .hide-caption figcaption {
+  display: none;
+}
+
 /* Override Stella 1.33 styles */
 
 table:not([class]) {
