@@ -83,22 +83,16 @@ markdown: # https://github.com/hexojs/hexo-renderer-markdown-it
     permalinkSymbol: ''
     separator: ' '
   plugins:
-    - name: '@mdit/plugin-alert'
-      import: alert
     - name: 'markdown-it-attrs'
     - name: markdown-it-container
       options: invert-when-dark
     - name: markdown-it-container
       options: invert-when-light
-    - name: '@mdit/plugin-figure'
-      import: figure
     - name: '@traptitech/markdown-it-katex'
       options: # see https://katex.org/docs/options.html
         skipDelimitersCheck: true
     # Don't use `markdown-it-obsidian-imgsize`,
     # which will break `markdown-it-attrs`'s functionality of setting attrs to images.
-    - name: '@mdit/plugin-img-size'
-      import: obsidianImageSize
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
