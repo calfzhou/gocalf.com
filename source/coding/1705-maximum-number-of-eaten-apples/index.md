@@ -51,7 +51,7 @@ class Solution:
     def eatenApples(self, apples: List[int], days: List[int]) -> int:
 ```
 
-{% asset_code coding/1705-maximum-number-of-eaten-apples/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -65,4 +65,4 @@ n 天之后，不会再有新的苹果，可以一次计算出堆顶的一拨苹
 
 ## Code
 
-{% asset_code coding/1705-maximum-number-of-eaten-apples/solution.py %}
+{% asset_code solution.py %}

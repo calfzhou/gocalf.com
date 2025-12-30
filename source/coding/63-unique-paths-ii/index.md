@@ -51,7 +51,7 @@ class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/63-unique-paths-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -65,4 +65,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/63-unique-paths-ii/solution.py %}
+{% asset_code solution.py %}

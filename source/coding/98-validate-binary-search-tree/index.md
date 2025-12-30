@@ -53,7 +53,7 @@ class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
 ```
 
-{% asset_code coding/98-validate-binary-search-tree/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -63,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/98-validate-binary-search-tree/solution.py %}
+{% asset_code solution.py %}

@@ -40,7 +40,7 @@ class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/54-spiral-matrix/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -48,4 +48,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/54-spiral-matrix/solution.py %}
+{% asset_code solution.py %}

@@ -50,7 +50,7 @@ class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
 ```
 
-{% asset_code coding/2-add-two-numbers/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -60,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2-add-two-numbers/solution.py %}
+{% asset_code solution.py %}

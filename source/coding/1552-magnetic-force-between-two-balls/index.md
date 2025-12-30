@@ -45,7 +45,7 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
 ```
 
-{% asset_code coding/1552-magnetic-force-between-two-balls/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -61,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1552-magnetic-force-between-two-balls/solution.py %}
+{% asset_code solution.py %}

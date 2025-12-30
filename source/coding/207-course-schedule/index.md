@@ -45,7 +45,7 @@ class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
 ```
 
-{% asset_code coding/207-course-schedule/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -63,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/207-course-schedule/solution.py %}
+{% asset_code solution.py %}

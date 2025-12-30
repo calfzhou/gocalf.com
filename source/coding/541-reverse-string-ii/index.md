@@ -37,7 +37,7 @@ class Solution:
     def reverseStr(self, s: str, k: int) -> str:
 ```
 
-{% asset_code coding/541-reverse-string-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -49,4 +49,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/541-reverse-string-ii/solution.py %}
+{% asset_code solution.py %}

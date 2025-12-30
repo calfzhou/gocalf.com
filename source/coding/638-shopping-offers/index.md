@@ -53,7 +53,7 @@ class Solution:
     def shoppingOffers(self, price: List[int], special: List[List[int]], needs: List[int]) -> int:
 ```
 
-{% asset_code coding/638-shopping-offers/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -69,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/638-shopping-offers/solution.py %}
+{% asset_code solution.py %}

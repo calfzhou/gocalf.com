@@ -43,7 +43,7 @@ class Solution:
     def maximumSum(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/2342-max-sum-of-a-pair-with-equal-sum-of-digits/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -57,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2342-max-sum-of-a-pair-with-equal-sum-of-digits/solution.py %}
+{% asset_code solution.py %}

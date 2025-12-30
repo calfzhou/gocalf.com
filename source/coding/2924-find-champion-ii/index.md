@@ -59,7 +59,7 @@ class Solution:
     def findChampion(self, n: int, edges: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2924-find-champion-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -71,4 +71,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2924-find-champion-ii/solution.py %}
+{% asset_code solution.py %}

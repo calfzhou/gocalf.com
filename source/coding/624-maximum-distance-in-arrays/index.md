@@ -43,7 +43,7 @@ class Solution:
     def maxDistance(self, arrays: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/624-maximum-distance-in-arrays/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -57,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/624-maximum-distance-in-arrays/solution.py %}
+{% asset_code solution.py %}

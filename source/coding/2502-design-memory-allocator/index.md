@@ -77,7 +77,7 @@ class Allocator:
 # param_2 = obj.freeMemory(mID)
 ```
 
-{% asset_code coding/2502-design-memory-allocator/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -93,4 +93,4 @@ class Allocator:
 
 ## Code
 
-{% asset_code coding/2502-design-memory-allocator/solution.py %}
+{% asset_code solution.py %}

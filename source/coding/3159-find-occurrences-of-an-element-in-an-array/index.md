@@ -48,7 +48,7 @@ class Solution:
     def occurrencesOfElement(self, nums: List[int], queries: List[int], x: int) -> List[int]:
 ```
 
-{% asset_code coding/3159-find-occurrences-of-an-element-in-an-array/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -58,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3159-find-occurrences-of-an-element-in-an-array/solution.py %}
+{% asset_code solution.py %}

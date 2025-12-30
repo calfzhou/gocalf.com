@@ -41,7 +41,7 @@ class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
 ```
 
-{% asset_code coding/350-intersection-of-two-arrays-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -53,4 +53,4 @@ Python 的 [collections.Counter](https://docs.python.org/3/library/collections.h
 
 ## Code
 
-{% asset_code coding/350-intersection-of-two-arrays-ii/solution.py %}
+{% asset_code solution.py %}

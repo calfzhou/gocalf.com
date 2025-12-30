@@ -59,7 +59,7 @@ class MyCalendar:
 # param_1 = obj.book(startTime,endTime)
 ```
 
-{% asset_code coding/729-my-calendar-i/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -75,4 +75,4 @@ class MyCalendar:
 
 ## Code
 
-{% asset_code coding/729-my-calendar-i/solution.py %}
+{% asset_code solution.py %}

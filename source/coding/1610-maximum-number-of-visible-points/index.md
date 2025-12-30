@@ -59,7 +59,7 @@ class Solution:
     def visiblePoints(self, points: List[List[int]], angle: int, location: List[int]) -> int:
 ```
 
-{% asset_code coding/1610-maximum-number-of-visible-points/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -79,4 +79,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1610-maximum-number-of-visible-points/solution.py %}
+{% asset_code solution.py %}

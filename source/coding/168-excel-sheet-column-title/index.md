@@ -49,7 +49,7 @@ class Solution:
     def convertToTitle(self, columnNumber: int) -> str:
 ```
 
-{% asset_code coding/168-excel-sheet-column-title/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -59,4 +59,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/168-excel-sheet-column-title/solution.py %}
+{% asset_code solution.py %}

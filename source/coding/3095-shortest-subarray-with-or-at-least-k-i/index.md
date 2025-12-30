@@ -53,7 +53,7 @@ class Solution:
     def minimumSubarrayLength(self, nums: List[int], k: int) -> int:
 ```
 
-{% asset_code coding/3095-shortest-subarray-with-or-at-least-k-i/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -69,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3095-shortest-subarray-with-or-at-least-k-i/solution.py %}
+{% asset_code solution.py %}

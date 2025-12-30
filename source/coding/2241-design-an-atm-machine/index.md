@@ -80,7 +80,7 @@ class ATM:
 # param_2 = obj.withdraw(amount)
 ```
 
-{% asset_code coding/2241-design-an-atm-machine/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -90,4 +90,4 @@ class ATM:
 
 ## Code
 
-{% asset_code coding/2241-design-an-atm-machine/solution.py %}
+{% asset_code solution.py %}

@@ -59,7 +59,7 @@ class Solution:
     def numRookCaptures(self, board: List[List[str]]) -> int:
 ```
 
-{% asset_code coding/999-available-captures-for-rook/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -67,4 +67,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/999-available-captures-for-rook/solution.py %}
+{% asset_code solution.py %}

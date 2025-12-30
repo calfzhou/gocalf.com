@@ -56,7 +56,7 @@ class Solution:
     def minOperations(self, nums: List[int], k: int) -> int:
 ```
 
-{% asset_code coding/3066-minimum-operations-to-exceed-threshold-value-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -70,4 +70,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3066-minimum-operations-to-exceed-threshold-value-ii/solution.py %}
+{% asset_code solution.py %}

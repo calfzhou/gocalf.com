@@ -70,7 +70,7 @@ class Solution:
     def checkWays(self, pairs: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/1719-number-of-ways-to-reconstruct-a-tree/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -84,6 +84,6 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1719-number-of-ways-to-reconstruct-a-tree/solution.py %}
+{% asset_code solution.py %}
 
 不是很快，还有优化空间。TODO。

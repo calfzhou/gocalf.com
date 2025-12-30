@@ -39,7 +39,7 @@ class Solution:
     def maximumGap(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/164-maximum-gap/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -63,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/164-maximum-gap/solution.py %}
+{% asset_code solution.py %}

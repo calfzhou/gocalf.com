@@ -61,7 +61,7 @@ class Solution:
     def numWays(self, words: List[str], target: str) -> int:
 ```
 
-{% asset_code coding/1639-number-of-ways-to-form-a-target-string-given-a-dictionary/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -109,4 +109,4 @@ $$
 
 ## Code
 
-{% asset_code coding/1639-number-of-ways-to-form-a-target-string-given-a-dictionary/solution.py %}
+{% asset_code solution.py %}

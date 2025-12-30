@@ -44,7 +44,7 @@ class Solution:
     def rob(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/213-house-robber-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -60,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/213-house-robber-ii/solution.py %}
+{% asset_code solution.py %}

@@ -49,7 +49,7 @@ class Solution:
     def minimumMoney(self, transactions: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2412-minimum-money-required-before-transactions/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -73,4 +73,4 @@ $$
 
 ## Code
 
-{% asset_code coding/2412-minimum-money-required-before-transactions/solution.py %}
+{% asset_code solution.py %}

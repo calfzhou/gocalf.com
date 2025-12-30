@@ -53,7 +53,7 @@ class Solution:
     def canWinNim(self, n: int) -> bool:
 ```
 
-{% asset_code coding/292-nim-game/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -76,4 +76,4 @@ $$
 
 ## Code
 
-{% asset_code coding/292-nim-game/solution.py %}
+{% asset_code solution.py %}

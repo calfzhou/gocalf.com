@@ -47,7 +47,7 @@ class Solution:
     def maxCount(self, m: int, n: int, ops: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/598-range-addition-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -57,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/598-range-addition-ii/solution.py %}
+{% asset_code solution.py %}

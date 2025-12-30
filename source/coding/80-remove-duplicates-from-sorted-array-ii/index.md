@@ -63,7 +63,7 @@ class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/80-remove-duplicates-from-sorted-array-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -75,4 +75,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/80-remove-duplicates-from-sorted-array-ii/solution.py %}
+{% asset_code solution.py %}

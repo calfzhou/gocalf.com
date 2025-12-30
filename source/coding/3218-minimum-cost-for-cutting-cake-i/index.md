@@ -71,7 +71,7 @@ class Solution:
     def minimumCost(self, m: int, n: int, horizontalCut: List[int], verticalCut: List[int]) -> int:
 ```
 
-{% asset_code coding/3218-minimum-cost-for-cutting-cake-i/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -92,7 +92,7 @@ $$
 
 ## Code
 
-{% asset_code coding/3218-minimum-cost-for-cutting-cake-i/solution.py %}
+{% asset_code solution.py %}
 
 ## Greedy
 
@@ -106,6 +106,6 @@ $$
 
 时间复杂度 `O(m log m + n log n)`，空间复杂度 `O(1)`（in-place 排序）。
 
-{% asset_code coding/3218-minimum-cost-for-cutting-cake-i/solution2.py %}
+{% asset_code solution2.py %}
 
 > 给排序后的 `horizontalCut` 和 `verticalCut` 都各加一个成本为 0 的虚拟切割线，能够简化边界条件的判定。

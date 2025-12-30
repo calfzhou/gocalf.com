@@ -47,10 +47,10 @@ katex: false
 TODO: default code definition
 ```
 
-{% asset_code coding/<% slug %>/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
 ## Code
 
-{% asset_code coding/<% slug %>/solution.py %}
+{% asset_code solution.py %}

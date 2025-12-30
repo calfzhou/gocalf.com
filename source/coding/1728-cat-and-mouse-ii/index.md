@@ -73,7 +73,7 @@ class Solution:
     def canMouseWin(self, grid: List[str], catJump: int, mouseJump: int) -> bool:
 ```
 
-{% asset_code coding/1728-cat-and-mouse-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -95,4 +95,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1728-cat-and-mouse-ii/solution.py %}
+{% asset_code solution.py %}

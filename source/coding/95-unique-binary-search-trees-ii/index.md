@@ -41,7 +41,7 @@ class Solution:
     def generateTrees(self, n: int) -> List[Optional[TreeNode]]:
 ```
 
-{% asset_code coding/95-unique-binary-search-trees-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -55,8 +55,8 @@ class Solution:
 
 ### Recursively
 
-{% asset_code coding/95-unique-binary-search-trees-ii/solution.py %}
+{% asset_code solution.py %}
 
 ### Iteratively
 
-{% asset_code coding/95-unique-binary-search-trees-ii/solution2.py %}
+{% asset_code solution2.py %}

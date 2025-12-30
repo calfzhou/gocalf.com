@@ -49,7 +49,7 @@ class Solution:
     def maxEnergyBoost(self, energyDrinkA: List[int], energyDrinkB: List[int]) -> int:
 ```
 
-{% asset_code coding/3259-maximum-energy-boost-from-two-drinks/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -81,4 +81,4 @@ $$
 
 ## Code
 
-{% asset_code coding/3259-maximum-energy-boost-from-two-drinks/solution.py %}
+{% asset_code solution.py %}

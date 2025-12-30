@@ -38,7 +38,7 @@ class Solution:
     def totalNQueens(self, n: int) -> int:
 ```
 
-{% asset_code coding/52-n-queens-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -48,10 +48,10 @@ class Solution:
 
 ### Recursively
 
-{% asset_code coding/52-n-queens-ii/solution.py %}
+{% asset_code solution.py %}
 
 ### Iteratively
 
-{% asset_code coding/52-n-queens-ii/solution2.py %}
+{% asset_code solution2.py %}
 
 递归版本可以去掉记录每行的皇后摆放的位置，因为每一层递归的局部变量里已经记录了该信息。而非递归版还是需要的。

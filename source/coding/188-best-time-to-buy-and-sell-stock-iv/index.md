@@ -42,7 +42,7 @@ class Solution:
     def maxProfit(self, k: int, prices: List[int]) -> int:
 ```
 
-{% asset_code coding/188-best-time-to-buy-and-sell-stock-iv/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -78,4 +78,4 @@ $$
 
 ## Code
 
-{% asset_code coding/188-best-time-to-buy-and-sell-stock-iv/solution.py %}
+{% asset_code solution.py %}

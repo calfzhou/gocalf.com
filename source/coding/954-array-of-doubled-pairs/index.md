@@ -41,7 +41,7 @@ class Solution:
     def canReorderDoubled(self, arr: List[int]) -> bool:
 ```
 
-{% asset_code coding/954-array-of-doubled-pairs/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -55,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/954-array-of-doubled-pairs/solution.py %}
+{% asset_code solution.py %}

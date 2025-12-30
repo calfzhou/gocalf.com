@@ -55,7 +55,7 @@ class Solution:
     def minimumDiameterAfterMerge(self, edges1: List[List[int]], edges2: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/3203-find-minimum-diameter-after-merging-two-trees/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -69,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3203-find-minimum-diameter-after-merging-two-trees/solution.py %}
+{% asset_code solution.py %}

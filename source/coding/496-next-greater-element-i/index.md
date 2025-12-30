@@ -53,7 +53,7 @@ class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
 ```
 
-{% asset_code coding/496-next-greater-element-i/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -67,8 +67,8 @@ class Solution:
 
 ### Backward Iteration
 
-{% asset_code coding/496-next-greater-element-i/solution.py %}
+{% asset_code solution.py %}
 
 ### Forward Iteration
 
-{% asset_code coding/496-next-greater-element-i/solution2.py %}
+{% asset_code solution2.py %}

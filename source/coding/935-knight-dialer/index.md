@@ -56,7 +56,7 @@ class Solution:
     def knightDialer(self, n: int) -> int:
 ```
 
-{% asset_code coding/935-knight-dialer/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -85,7 +85,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/935-knight-dialer/solution.py %}
+{% asset_code solution.py %}
 
 ## Faster
 
@@ -129,7 +129,7 @@ $$
 
 时间和空间复杂度不变，但运算量会少很多。
 
-{% asset_code coding/935-knight-dialer/solution2.py %}
+{% asset_code solution2.py %}
 
 ## O(log n)
 
@@ -205,7 +205,7 @@ $$
 
 因为本题会一直对 `10⁹ + 7` 取模，不涉及到大整数计算，所以二进制位数带来的时间复杂度是常数，最终时间复杂度是 `O(log n)`。
 
-{% asset_code coding/935-knight-dialer/solution3.py %}
+{% asset_code solution3.py %}
 
 附：三段代码的运行时长（μs）对比：
 

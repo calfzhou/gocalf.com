@@ -45,7 +45,7 @@ class Solution:
     def maxArea(self, height: List[int]) -> int:
 ```
 
-{% asset_code coding/11-container-with-most-water/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -81,7 +81,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/11-container-with-most-water/solution.py %}
+{% asset_code solution.py %}
 
 ## Improve
 
@@ -101,4 +101,4 @@ class Solution:
 
 代码有两版实现，其中 `maxArea` 的逻辑复杂一些，但计算量小很多（仅在需要时计算容器面积），速度更快。`maxArea_simple` 逻辑更直接，但会计算每一个遇到的容器面积，速度略慢。
 
-{% asset_code coding/11-container-with-most-water/solution2.py %}
+{% asset_code solution2.py %}

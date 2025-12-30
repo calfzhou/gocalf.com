@@ -48,7 +48,7 @@ class Solution:
     def maxValueOfCoins(self, piles: List[List[int]], k: int) -> int:
 ```
 
-{% asset_code coding/2218-maximum-value-of-k-coins-from-piles/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -81,4 +81,4 @@ $$
 
 ## Code
 
-{% asset_code coding/2218-maximum-value-of-k-coins-from-piles/solution.py %}
+{% asset_code solution.py %}

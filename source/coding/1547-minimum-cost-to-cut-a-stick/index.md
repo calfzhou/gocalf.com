@@ -55,7 +55,7 @@ class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
 ```
 
-{% asset_code coding/1547-minimum-cost-to-cut-a-stick/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -80,4 +80,4 @@ $$
 
 ## Code
 
-{% asset_code coding/1547-minimum-cost-to-cut-a-stick/solution.py %}
+{% asset_code solution.py %}

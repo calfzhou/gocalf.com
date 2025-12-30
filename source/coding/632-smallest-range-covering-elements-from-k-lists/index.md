@@ -43,7 +43,7 @@ class Solution:
     def smallestRange(self, nums: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/632-smallest-range-covering-elements-from-k-lists/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -59,4 +59,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/632-smallest-range-covering-elements-from-k-lists/solution.py %}
+{% asset_code solution.py %}

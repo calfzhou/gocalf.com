@@ -58,7 +58,7 @@ class Solution:
     def queryResults(self, limit: int, queries: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/3160-find-the-number-of-distinct-colors-among-the-balls/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -72,4 +72,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3160-find-the-number-of-distinct-colors-among-the-balls/solution.py %}
+{% asset_code solution.py %}

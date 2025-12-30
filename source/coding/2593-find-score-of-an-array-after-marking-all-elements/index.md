@@ -57,7 +57,7 @@ class Solution:
     def findScore(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/2593-find-score-of-an-array-after-marking-all-elements/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -67,4 +67,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2593-find-score-of-an-array-after-marking-all-elements/solution.py %}
+{% asset_code solution.py %}

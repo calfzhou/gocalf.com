@@ -67,7 +67,7 @@ class WordDictionary:
 # param_2 = obj.search(word)
 ```
 
-{% asset_code coding/211-design-add-and-search-words-data-structure/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -85,10 +85,10 @@ class WordDictionary:
 
 ### Recursively
 
-{% asset_code coding/211-design-add-and-search-words-data-structure/solution.py %}
+{% asset_code solution.py %}
 
 ### Non-recursively
 
-{% asset_code coding/211-design-add-and-search-words-data-structure/solution2.py %}
+{% asset_code solution2.py %}
 
 > 刻意将非递归方法写的跟递归的处理逻辑能对应上，可以注意从递归改为非递归时所做的调整。实际上就是树的深度优先遍历，这里将 `node` 设置为 `None` 来标识路径已经结束，可以从栈里弹出其他待处理的节点。

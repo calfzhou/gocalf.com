@@ -57,7 +57,7 @@ class Solution:
     def rankTeams(self, votes: List[str]) -> str:
 ```
 
-{% asset_code coding/1366-rank-teams-by-votes/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -71,4 +71,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1366-rank-teams-by-votes/solution.py %}
+{% asset_code solution.py %}

@@ -48,7 +48,7 @@ class Solution:
     def knightProbability(self, n: int, k: int, row: int, column: int) -> float:
 ```
 
-{% asset_code coding/688-knight-probability-in-chessboard/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -68,8 +68,8 @@ class Solution:
 
 ### Backtrack with Cache
 
-{% asset_code coding/688-knight-probability-in-chessboard/solution.py %}
+{% asset_code solution.py %}
 
 ### DP
 
-{% asset_code coding/688-knight-probability-in-chessboard/solution2.py %}
+{% asset_code solution2.py %}

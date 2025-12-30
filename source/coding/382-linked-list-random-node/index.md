@@ -71,7 +71,7 @@ class Solution:
 # param_1 = obj.getRandom()
 ```
 
-{% asset_code coding/382-linked-list-random-node/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -81,7 +81,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/382-linked-list-random-node/solution.py %}
+{% asset_code solution.py %}
 
 ## O(1) Space
 
@@ -89,4 +89,4 @@ class Solution:
 
 `__init__` 的时间复杂度 `O(n)`，`getRandom` 的时间复杂度 `O(n)`，整体空间复杂度 `O(1)`。
 
-{% asset_code coding/382-linked-list-random-node/solution2.py %}
+{% asset_code solution2.py %}

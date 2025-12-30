@@ -43,7 +43,7 @@ class Solution:
     def isPossibleToSplit(self, nums: List[int]) -> bool:
 ```
 
-{% asset_code coding/3046-split-the-array/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -53,4 +53,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3046-split-the-array/solution.py %}
+{% asset_code solution.py %}

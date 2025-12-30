@@ -39,7 +39,7 @@ class Solution:
     def findLengthOfLCIS(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/674-longest-continuous-increasing-subsequence/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -47,4 +47,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/674-longest-continuous-increasing-subsequence/solution.py %}
+{% asset_code solution.py %}

@@ -37,7 +37,7 @@ class Solution:
     def reorganizeString(self, s: str) -> str:
 ```
 
-{% asset_code coding/767-reorganize-string/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -53,4 +53,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/767-reorganize-string/solution.py %}
+{% asset_code solution.py %}

@@ -67,7 +67,7 @@ class Solution:
     def basicCalculatorIV(self, expression: str, evalvars: List[str], evalints: List[int]) -> List[str]:
 ```
 
-{% asset_code coding/770-basic-calculator-iv/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -98,7 +98,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/770-basic-calculator-iv/solution.py %}
+{% asset_code solution.py %}
 
 Test cases for solution inner methods: [solution_inner_test.py](solution_inner_test.py)。
 

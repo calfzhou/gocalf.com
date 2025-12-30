@@ -41,7 +41,7 @@ class Solution:
     def kLengthApart(self, nums: List[int], k: int) -> bool:
 ```
 
-{% asset_code coding/1437-check-if-all-1s-are-at-least-length-k-places-away/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -49,4 +49,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1437-check-if-all-1s-are-at-least-length-k-places-away/solution.py %}
+{% asset_code solution.py %}

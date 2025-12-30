@@ -43,10 +43,10 @@ class Solution:
     def convertDateToBinary(self, date: str) -> str:
 ```
 
-{% asset_code coding/3280-convert-date-to-binary/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
 ## Code
 
-{% asset_code coding/3280-convert-date-to-binary/solution.py %}
+{% asset_code solution.py %}

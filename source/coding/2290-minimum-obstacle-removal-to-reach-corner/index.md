@@ -53,7 +53,7 @@ class Solution:
     def minimumObstacles(self, grid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2290-minimum-obstacle-removal-to-reach-corner/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -83,4 +83,4 @@ Dijkstra 算法详解参见 [DSA Dijkstra's Algorithm](https://www.w3schools.com
 
 ## Code
 
-{% asset_code coding/2290-minimum-obstacle-removal-to-reach-corner/solution.py %}
+{% asset_code solution.py %}

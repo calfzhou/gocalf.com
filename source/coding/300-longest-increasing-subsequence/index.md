@@ -41,7 +41,7 @@ Given an integer array `nums`, return _the length of the longest **strictly incr
 
 ## Test Cases
 
-{% asset_code coding/300-longest-increasing-subsequence/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -96,7 +96,7 @@ class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/300-longest-increasing-subsequence/solution.py %}
+{% asset_code solution.py %}
 
 ## Faster - O(n log n)
 
@@ -272,8 +272,8 @@ $$
 
 总的时间复杂度是 `O(n log L)`（`L` 是 LIS 长度）最坏情况下是 `O(n log n)`。空间复杂度 `O(L)`，最坏情况 `O(n)`。
 
-{% asset_code coding/300-longest-increasing-subsequence/solution_nlogn.py %}
+{% asset_code solution_nlogn.py %}
 
 其中 `buffer` 的长度始终不会超出当前处理完的原数组长度，于是可以直接利用原数组的空间，额外的空间复杂度 `O(1)`。
 
-{% asset_code coding/300-longest-increasing-subsequence/solution_nlogn_1.py %}
+{% asset_code solution_nlogn_1.py %}

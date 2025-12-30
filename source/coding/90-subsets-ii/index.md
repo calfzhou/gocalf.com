@@ -38,7 +38,7 @@ class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
 ```
 
-{% asset_code coding/90-subsets-ii/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -52,4 +52,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/90-subsets-ii/solution.py %}
+{% asset_code solution.py %}

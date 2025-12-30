@@ -47,7 +47,7 @@ class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
 ```
 
-{% asset_code coding/230-kth-smallest-element-in-a-bst/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -59,4 +59,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/230-kth-smallest-element-in-a-bst/solution.py %}
+{% asset_code solution.py %}

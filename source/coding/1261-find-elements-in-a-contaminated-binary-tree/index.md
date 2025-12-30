@@ -109,7 +109,7 @@ class FindElements:
 # param_1 = obj.find(target)
 ```
 
-{% asset_code coding/1261-find-elements-in-a-contaminated-binary-tree/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -125,8 +125,8 @@ class FindElements:
 
 ### Less Space
 
-{% asset_code coding/1261-find-elements-in-a-contaminated-binary-tree/solution.py %}
+{% asset_code solution.py %}
 
 ### Less Time
 
-{% asset_code coding/1261-find-elements-in-a-contaminated-binary-tree/solution2.py %}
+{% asset_code solution2.py %}

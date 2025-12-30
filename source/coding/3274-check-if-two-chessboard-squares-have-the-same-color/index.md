@@ -47,7 +47,7 @@ class Solution:
     def checkTwoChessboards(self, coordinate1: str, coordinate2: str) -> bool:
 ```
 
-{% asset_code coding/3274-check-if-two-chessboard-squares-have-the-same-color/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -57,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3274-check-if-two-chessboard-squares-have-the-same-color/solution.py %}
+{% asset_code solution.py %}

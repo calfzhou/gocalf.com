@@ -51,7 +51,7 @@ class Solution:
     def maxProfit(self, prices: List[int], fee: int) -> int:
 ```
 
-{% asset_code coding/714-best-time-to-buy-and-sell-stock-with-transaction-fee/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -80,4 +80,4 @@ $$
 
 ## Code
 
-{% asset_code coding/714-best-time-to-buy-and-sell-stock-with-transaction-fee/solution.py %}
+{% asset_code solution.py %}

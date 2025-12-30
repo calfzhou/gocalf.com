@@ -58,7 +58,7 @@ class Solution:
     def minimumTime(self, grid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2577-minimum-time-to-visit-a-cell-in-a-grid/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -78,4 +78,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2577-minimum-time-to-visit-a-cell-in-a-grid/solution.py %}
+{% asset_code solution.py %}

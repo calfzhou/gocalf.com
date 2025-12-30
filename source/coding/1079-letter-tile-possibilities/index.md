@@ -42,7 +42,7 @@ class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
 ```
 
-{% asset_code coding/1079-letter-tile-possibilities/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1079-letter-tile-possibilities/solution.py %}
+{% asset_code solution.py %}

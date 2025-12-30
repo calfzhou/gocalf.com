@@ -55,7 +55,7 @@ class Solution:
     def maxTwoEvents(self, events: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2054-two-best-non-overlapping-events/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -71,6 +71,6 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2054-two-best-non-overlapping-events/solution.py %}
+{% asset_code solution.py %}
 
 不是很快，才 `34+%`，回头再优化。

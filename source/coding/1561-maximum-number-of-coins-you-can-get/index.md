@@ -54,7 +54,7 @@ class Solution:
     def maxCoins(self, piles: List[int]) -> int:
 ```
 
-{% asset_code coding/1561-maximum-number-of-coins-you-can-get/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -66,4 +66,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1561-maximum-number-of-coins-you-can-get/solution.py %}
+{% asset_code solution.py %}

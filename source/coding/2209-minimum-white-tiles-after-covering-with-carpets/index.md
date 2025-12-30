@@ -53,7 +53,7 @@ class Solution:
     def minimumWhiteTiles(self, floor: str, numCarpets: int, carpetLen: int) -> int:
 ```
 
-{% asset_code coding/2209-minimum-white-tiles-after-covering-with-carpets/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -93,4 +93,4 @@ $$
 
 ## Code
 
-{% asset_code coding/2209-minimum-white-tiles-after-covering-with-carpets/solution.py %}
+{% asset_code solution.py %}

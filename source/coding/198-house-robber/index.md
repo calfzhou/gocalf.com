@@ -41,7 +41,7 @@ class Solution:
     def rob(self, nums: List[int]) -> int:
 ```
 
-{% asset_code coding/198-house-robber/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -78,7 +78,7 @@ $$
 
 ## Code
 
-{% asset_code coding/198-house-robber/solution.py %}
+{% asset_code solution.py %}
 
 ## Another DP
 
@@ -105,6 +105,6 @@ $$
 \end{array}
 $$
 
-{% asset_code coding/198-house-robber/solution2.py %}
+{% asset_code solution2.py %}
 
 整体上 `t[i]` 的逻辑和处理都更简单直接，但思考过程中总是会不自觉地绕到 `t'[i]` 上。主要可能是因为 `t[i]` 不明确房间是抢还是不抢，这种不明确性在思考的时候总会想要避免。

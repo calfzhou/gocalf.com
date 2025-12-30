@@ -46,7 +46,7 @@ class Solution:
     def maximalSquare(self, matrix: List[List[str]]) -> int:
 ```
 
-{% asset_code coding/221-maximal-square/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -90,4 +90,4 @@ $$
 
 ## Code
 
-{% asset_code coding/221-maximal-square/solution.py %}
+{% asset_code solution.py %}

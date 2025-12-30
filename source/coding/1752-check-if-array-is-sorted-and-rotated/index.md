@@ -48,7 +48,7 @@ class Solution:
     def check(self, nums: List[int]) -> bool:
 ```
 
-{% asset_code coding/1752-check-if-array-is-sorted-and-rotated/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -58,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/1752-check-if-array-is-sorted-and-rotated/solution.py %}
+{% asset_code solution.py %}

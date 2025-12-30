@@ -75,7 +75,7 @@ class BrowserHistory:
 # param_3 = obj.forward(steps)
 ```
 
-{% asset_code coding/1472-design-browser-history/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -87,4 +87,4 @@ class BrowserHistory:
 
 ## Code
 
-{% asset_code coding/1472-design-browser-history/solution.py %}
+{% asset_code solution.py %}

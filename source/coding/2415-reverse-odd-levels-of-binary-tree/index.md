@@ -67,7 +67,7 @@ class Solution:
     def reverseOddLevels(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
 ```
 
-{% asset_code coding/2415-reverse-odd-levels-of-binary-tree/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -79,4 +79,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2415-reverse-odd-levels-of-binary-tree/solution.py %}
+{% asset_code solution.py %}

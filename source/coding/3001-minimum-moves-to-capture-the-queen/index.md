@@ -59,7 +59,7 @@ class Solution:
     def minMovesToCaptureTheQueen(self, a: int, b: int, c: int, d: int, e: int, f: int) -> int:
 ```
 
-{% asset_code coding/3001-minimum-moves-to-capture-the-queen/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -71,4 +71,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3001-minimum-moves-to-capture-the-queen/solution.py %}
+{% asset_code solution.py %}

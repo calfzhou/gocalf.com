@@ -62,7 +62,7 @@ class Solution:
     def gridGame(self, grid: List[List[int]]) -> int:
 ```
 
-{% asset_code coding/2017-grid-game/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -78,4 +78,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/2017-grid-game/solution.py %}
+{% asset_code solution.py %}

@@ -55,7 +55,7 @@ class Solution:
     def minLength(self, s: str, numOps: int) -> int:
 ```
 
-{% asset_code coding/3398-smallest-substring-with-identical-characters-i/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -87,7 +87,7 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/3398-smallest-substring-with-identical-characters-i/solution.py %}
+{% asset_code solution.py %}
 
 ## 二分法
 
@@ -105,4 +105,4 @@ class Solution:
 
 时间复杂度也是 `O(n log n)`，实际跑下来速度跟上边最大堆方法差不多。
 
-{% asset_code coding/3398-smallest-substring-with-identical-characters-i/solution2.py %}
+{% asset_code solution2.py %}

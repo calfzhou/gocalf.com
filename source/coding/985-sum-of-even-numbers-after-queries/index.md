@@ -46,7 +46,7 @@ class Solution:
     def sumEvenAfterQueries(self, nums: List[int], queries: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code coding/985-sum-of-even-numbers-after-queries/solution_test.py %}
+{% asset_code solution_test.py %}
 
 ## Thoughts
 
@@ -65,4 +65,4 @@ class Solution:
 
 ## Code
 
-{% asset_code coding/985-sum-of-even-numbers-after-queries/solution.py %}
+{% asset_code solution.py %}
