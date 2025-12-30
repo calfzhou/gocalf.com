@@ -28,9 +28,16 @@ module.exports = ctx => function (args) {
   // If the title is not defined, use file name instead.
   title = title || lib_path.basename(path);
 
+  // Get the path of the source Markdown file relative to the Hexo source/ directory.
+  const { source } = this;
+
   const Asset = ctx.model('Asset');
-  const doc = Asset.findOne({ path });
+  let doc = Asset.findOne({ path: lib_path.join(lib_path.dirname(source), path) });
   if (!doc) {
+    doc = Asset.findOne({ path });
+  }
+  if (!doc) {
+    ctx.log.warn(`[tags/asset_code] Asset not found: ${path} (relative to ${source}, or absolute)`);
     return;
   }
 
