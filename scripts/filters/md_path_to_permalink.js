@@ -30,7 +30,7 @@ module.exports.convertLinks = function(data) {
 
       const targetPermalink = permalinks.get(targetPath);
       if (!targetPermalink) {
-        console.warn(`md_path_to_permalink: ${data.source}: found orphans link "${fullMatch}"`);
+        this.log.warn(`[filters/md_path_to_permalink] Orphan link found: "${fullMatch}" in ${data.source}`);
         continue; // Skip if no permalink found
       }
 
