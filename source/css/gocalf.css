@@ -48,7 +48,7 @@ article.content a:has(> img) + figcaption {
   text-align: center;
 }
 
-article.content .hide-caption figcaption {
+article.content .no-caption figcaption {
   display: none;
 }
 
