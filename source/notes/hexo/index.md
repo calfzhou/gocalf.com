@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2025-12-27 17:32:30
+updated: 2025-12-31 19:46:42
 ---
 ## Hexo
 
@@ -41,6 +41,18 @@ Hexo 还是以（博客）文章（posts）为核心的，虽然 Stellar 独创�
 
 - 2024-05-08: 提了 [PR](https://github.com/xaoxuu/hexo-theme-stellar/pull/460) 进行修复。
 - 2024-06-17: Stellar 1.29.0 版本中修复了。
+
+### Mermaid
+
+当 Mermaid 图比较宽的时候，在手机上展示不全，且无法缩放、滑动。比如 [这里](../pgp/index.md#架构)。
+
+- 2024-06-17: Stellar 1.29.0 版本中修复了。
+
+默认不加载 Mermaid 插件，用到的页面需要在 front-matter 中启用：
+
+```yaml
+mermaid: true
+```
 
 ### 引用图片等 assets
 
@@ -95,11 +107,57 @@ Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](http
 | Markdown | `filename` | {% mark ✓ color:green %} | {% mark ✓ color:green %} | ![demo](demo.png)    |
 | `image`  | `filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %}   | {% image demo.png %} |
 
-### Mermaid
+### 给图片添加 Caption
 
-当 Mermaid 图比较宽的时候，在手机上展示不全，且无法缩放、滑动。比如 [这里](../pgp/index.md#架构)。
+可以通过 Stellar 的 [image 图片标签](https://xaoxuu.com/wiki/stellar/tag-plugins/express/#image-%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE) 设定 `description`：
 
-- 2024-06-17: Stellar 1.29.0 版本中修复了。
+```text
+{% image src [description] [download:bool/string] [width:px] [padding:px] [bg:hex] [fancybox:bool/string] %}
+```
+
+不想为了添加 caption 就从 markdown 语法改成 tag plugin，可以给 `hexo-renderer-markdown-it` 添加 [@mdit/plugin-figure](https://mdit-plugins.github.io/figure.html) 插件，可以把 `img` 的 `title` 或 `alt` 变成 `<figcaption>`。生成的 HTML 片段类似于：
+
+```html
+<figure>
+    <img src="/logo.svg" alt="image" tabindex="0">
+    <figcaption>image</figcaption>
+</figure>
+```
+
+自定义 CSS 样式：
+
+```css
+article.content img + figcaption,
+article.content a:has(> img) + figcaption {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  margin: .5rem auto;
+  font-size: .8125rem;
+  line-height: 1.5;
+  color: var(--text-p2);
+  text-align: center;
+}
+```
+
+> [!caution]
+> `<figure>` 和 `<figcaption>` 也被用在代码高亮，所以用 `img` 做限定。
+
+如果不想给某张图片加 caption（需要启用支持 Markdown Attributes 的插件）：
+
+```markdown
+![image](/image.png) {.no-caption}
+```
+
+配合自定义样式：
+
+```css
+article.content .no-caption figcaption {
+  display: none;
+}
+```
+
+不过因为 [@mdit/plugin-figure](https://mdit-plugins.github.io/figure.html) 只在 _if a image is standalone in a line_ 时添加 caption，这种写法刚好不会生成 `figcaption`，曲线达成。
 
 ### 明暗主题色
 
@@ -211,14 +269,6 @@ body.theme-light img.invert-when-light {
 
 > 仅在预览模式下会生效。
 
-### Minify
-
-JS、CSS 文件可以用 [uiolee/hexo-esbuild: Minify JavaScripts, CSS files via esbuild](https://github.com/uiolee/hexo-esbuild)。
-
-HTML 文件可以用 [uiolee/hexo-htmlnano: Minify HTML files with htmlnano](https://github.com/uiolee/hexo-htmlnano)。
-
-还有一个同时支持 HTML、CSS、JS、Font、Image，[Lete114/hexo-minify: Hexo-minify is a Hexo compression plug-in that compresses HTML, CSS, JS, Font and Image(jpg,png,gif,webp,svg)](https://github.com/Lete114/hexo-minify)。但是太庞大了，一下子多引入小五百个 npm 包，累觉不爱。
-
 ### diagrams.net / draw.io
 
 在文章内插入 diagrams.net / draw.io 图。
@@ -244,6 +294,14 @@ pnpm add hexo-diagrams-net
     - 效果 <http://jgraph.github.io/drawio-integration/inline.html>
   - 因为会渲染为 svg，可以按上边提到的 Markdown Container 或 `invert` 标签插件，添加 `.invert-when-dark`、`.invert-when-light` 类来实现颜色翻转。
     - 注意 Markdown Attributes 似乎无法对这种 Hexo 标签插件生效。
+
+### Minify
+
+JS、CSS 文件可以用 [uiolee/hexo-esbuild: Minify JavaScripts, CSS files via esbuild](https://github.com/uiolee/hexo-esbuild)。
+
+HTML 文件可以用 [uiolee/hexo-htmlnano: Minify HTML files with htmlnano](https://github.com/uiolee/hexo-htmlnano)。
+
+还有一个同时支持 HTML、CSS、JS、Font、Image，[Lete114/hexo-minify: Hexo-minify is a Hexo compression plug-in that compresses HTML, CSS, JS, Font and Image(jpg,png,gif,webp,svg)](https://github.com/Lete114/hexo-minify)。但是太庞大了，一下子多引入小五百个 npm 包，累觉不爱。
 
 ## Stellar 主题增加 Notebook（笔记本）支持
 
