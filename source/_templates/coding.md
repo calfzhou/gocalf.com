@@ -4,7 +4,8 @@ let slug = tp.file.title;
 let title = slug;
 if (slug.startsWith('Untitled')) {
   slug = await tp.system.prompt('Slug:');
-  title = await tp.system.prompt('Title:', slug);
+  title = slug.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+  title = await tp.system.prompt('Title:', title);
   await tp.file.move(`/coding/${slug}/index`);
 }
 %>
