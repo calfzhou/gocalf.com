@@ -38,8 +38,11 @@ inject:
     - <link rel="manifest" href="/favicon/site.webmanifest?v=20240507">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@1.511.0/style.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/source-code-pro@2.38.0/source-code-pro.min.css">
+    # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css">
     - <link rel="stylesheet" href="/css/gocalf.css?v=20251229">
     - <link rel="stylesheet" href="/css/alert.css?v=20251225">
+  # script:
+  #   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
 ######## Main ########
 site_tree:
