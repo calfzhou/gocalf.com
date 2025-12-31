@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2025-12-31 19:46:42
+updated: 2026-01-01 00:11:24
 ---
 ## Hexo
 
@@ -25,6 +25,8 @@ updated: 2025-12-31 19:46:42
 > Stellar 是一个内置文档系统的简约商务风 Hexo 主题，支持丰富的标签和动态数据组件，帮助您简单从容地应对各种表达需求，十分推荐内容创作者使用 Stellar 开始您全新的博客之旅。
 
 ## Issues / Notices
+
+[Understanding Hexo](../understanding-hexo/index.md) 👈
 
 ### 关于 Notes
 
