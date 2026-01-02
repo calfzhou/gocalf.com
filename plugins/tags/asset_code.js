@@ -12,8 +12,8 @@ const lib_path = require('path');
 const hexo_util = require("hexo-util");
 const fs = require('fs');
 
-module.exports = ctx => function (args) {
-  args = ctx.args.map(args, ['lang', 'from', 'to'], ['path', 'title']);
+module.exports = hexo => function (args) {
+  args = hexo.args.map(args, ['lang', 'from', 'to'], ['path', 'title']);
   let { lang = '', from = 0, to = -1, path, title = '' } = args;
   from = from > 0 ? from - 1 : 0;
 
@@ -31,13 +31,13 @@ module.exports = ctx => function (args) {
   // Get the path of the source Markdown file relative to the Hexo source/ directory.
   const { source } = this;
 
-  const Asset = ctx.model('Asset');
+  const Asset = hexo.model('Asset');
   let doc = Asset.findOne({ path: lib_path.join(lib_path.dirname(source), path) });
   if (!doc) {
     doc = Asset.findOne({ path });
   }
   if (!doc) {
-    ctx.log.warn(`[tags/asset_code] Asset not found: ${path} (relative to ${source}, or absolute)`);
+    hexo.log.warn(`[tags/asset_code] Asset not found: ${path} (relative to ${source}, or absolute)`);
     return;
   }
 
@@ -46,15 +46,15 @@ module.exports = ctx => function (args) {
   const lines = code.split('\n');
   code = lines.slice(from, to).join('\n').trim();
 
-  const caption = `<span><a href="${hexo_util.url_for.call(ctx, doc.path)}">${title}</a></span>`;
-  if (ctx.extend.highlight.query(ctx.config.syntax_highlighter)) {
+  const caption = `<span><a href="${hexo_util.url_for.call(hexo, doc.path)}">${title}</a></span>`;
+  if (hexo.extend.highlight.query(hexo.config.syntax_highlighter)) {
     const options = {
         lang,
         caption,
         lines_length: lines.length
     };
-    return ctx.extend.highlight.exec(ctx.config.syntax_highlighter, {
-        context: ctx,
+    return hexo.extend.highlight.exec(hexo.config.syntax_highlighter, {
+        context: hexo,
         args: [code, options]
     });
   }

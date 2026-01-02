@@ -4,8 +4,8 @@ function inlineImg(alt, src) {
   return `<img alt="${alt}" src="${src}" style="border-radius: 0; display: inline-block;">`;
 }
 
-module.exports = ctx => function (args) {
-  args = ctx.args.map(args, ['release', 'branch'], ['user', 'repo']);
+module.exports = hexo => function (args) {
+  args = hexo.args.map(args, ['release', 'branch'], ['user', 'repo']);
   const { user, repo, release, branch } = args;
   const parts = [];
   const repoImg = inlineImg(

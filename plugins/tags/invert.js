@@ -15,11 +15,11 @@
  * Default is 'dark'.
  */
 
-module.exports = ctx => function (args, content) {
-  args = ctx.args.map(args, ['when']);
+module.exports = hexo => function (args, content) {
+  args = hexo.args.map(args, ['when']);
   const { when = 'dark' } = args;
 
-  const inner = ctx.render.renderSync({ text: content, engine: 'markdown' }); //.split('\n').join('')
+  const inner = hexo.render.renderSync({ text: content, engine: 'markdown' }); //.split('\n').join('')
   const classes = [];
   if (when === 'dark' || when === 'always') {
     classes.push('invert-when-dark');

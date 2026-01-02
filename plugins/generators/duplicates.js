@@ -1,11 +1,11 @@
 'use strict';
 
 // Inspired by https://github.com/hexojs/hexo-generator-alias, but will duplicate the content instead of redirecting.
-hexo.extend.generator.register('duplicates', function (locals) {
+module.exports = function (locals) {
   const routes = [];
+  const hexo = this;
 
-  const { config } = hexo;
-  const duplicatesConfig = config.duplicates;
+  const duplicatesConfig = hexo.config.duplicates;
   if (typeof duplicatesConfig === 'object') {
     Object.entries(duplicatesConfig).forEach(([dst, src]) => {
       // console.log('duplicates from', src, 'to', dst);
@@ -19,4 +19,4 @@ hexo.extend.generator.register('duplicates', function (locals) {
   }
 
   return routes;
-});
+};
