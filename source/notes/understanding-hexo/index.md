@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2026-01-01 01:19:45
-updated: 2026-01-02 20:17:52
+updated: 2026-01-02 21:40:01
 ---
 ## Hexo
 
@@ -354,3 +354,41 @@ Stopping the server:
     - `"Deleted public folder."`
 3. Exit
     - Same with `hexo generate`
+
+## 关于 Syntax Highlighting
+
+[Syntax Highlighting | Hexo](https://hexo.io/docs/syntax-highlight)
+
+Hexo 内置了 [highlight.js](https://github.com/highlightjs/highlight.js) 和 [prismjs](https://github.com/PrismJS/prism) 两种 syntax highlight libraries，都支持 server-side 和 browser-side 渲染。默认使用 highlight.js。
+
+注意处理的顺序。
+
+内置的 syntax highlight 是通过 `before_post_render` filter 注入的：
+
+```ts
+filter.register('before_post_render', require('./backtick_code_block')(ctx));
+```
+
+> <https://github.com/hexojs/hexo/blob/master/lib/plugins/filter/before_post_render/index.ts>
+
+因为 `hexo generate` 的 processing flow 是：
+
+- Content (Posts and Pages) Rendering
+    - ...
+    - `before_post_render` filter
+    - `[D] "Rendering post: ..."` (per `.md` file)
+    - Tag plugins
+    - `after_post_render` filter
+
+即，在 renderer（如 [hexojs/hexo-renderer-markdown-it](https://github.com/hexojs/hexo-renderer-markdown-it)）处理之前就已经完成了 fenced code 的 syntax highlighting 渲染。
+
+所以直接引入 markdown-it 的 插件 [@mdit/plugin-snippet](https://mdit-plugins.github.io/snippet.html)，可以将 asset 文件中的代码注入到 markdown，但并不会被 Hexo 内置的 syntax highlighting 处理，而只是得到普通的 `<pre><code>...</code></pre>` 片段。
+
+自定义的 [snippet tag](https://github.com/calfzhou/gocalf.com/blob/main/plugins/tags/snippet.js) 是手动调用了 Hexo 内置的 syntax highlighting（参考了 Hexo 自带的 [include_code tag](https://github.com/hexojs/hexo/blob/master/lib/plugins/tag/include_code.ts)）：
+
+```js
+return hexo.extend.highlight.exec(hexo.config.syntax_highlighter, {
+  context: hexo,
+  args: [code, options]
+});
+```
