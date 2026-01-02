@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2026-01-01 01:19:45
-updated: 2026-01-02 19:37:01
+updated: 2026-01-02 20:17:52
 ---
 ## Hexo
 
@@ -268,7 +268,7 @@ hexo.extend.tag.register('foobar', foobar(hexo));
     - Tag plugins (`markdown-it:renderer` filter might be called if tag plugin calls renderer)
     - Together:
         - `after_post_render` filter (per `.md` file)
-        - `"hexo-esbuild: processed ..."` (per `.css` file) 
+        - `"hexo-esbuild: processed ..."` (per `.css` file)
 5. Content Generation
     - `before_generate` filter
     - registered generators
@@ -285,7 +285,7 @@ hexo.extend.tag.register('foobar', foobar(hexo));
 8. HTML Generation
     - Together:
         - `Generated: ...` (outputting files)
-        - `"hexo-esbuild: processed ..."` (per `.js`, `.styl` file) 
+        - `"hexo-esbuild: processed ..."` (per `.js`, `.styl` file)
     - `"n files generated in d.dd s"`
 9. Database
     - `[D] "Database saved"`
@@ -326,7 +326,7 @@ When browsing a page:
     - Same with `hexo generate`
 2. HTML Accessing
     - `"GET /... 200 d.ddd ms - - "`
-        - `"hexo-esbuild: processed ..."` (per `.js`, `.styl` file) 
+        - `"hexo-esbuild: processed ..."` (per `.js`, `.styl` file)
 
 When a post or page modified:
 
