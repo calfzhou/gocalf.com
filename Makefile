@@ -15,7 +15,7 @@ clean:
 build:
 	pnpm run build
 
-generate: clean build
+rebuild: clean build
 
 server:
 	pnpm run server
@@ -43,4 +43,4 @@ coding: check-slug-and-title
 	hexo new coding -p "../coding/$(slug)/index.md" "$(title)"
 	cp scaffolds/coding/* "source/coding/$(slug)/"
 
-.PHONY: list install build generate clean server s note post coding
+.PHONY: list install clean build rebuild clean server s note post coding
