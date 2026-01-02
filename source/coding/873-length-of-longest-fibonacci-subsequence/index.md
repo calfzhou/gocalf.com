@@ -44,7 +44,7 @@ class Solution:
     def lenLongestFibSubseq(self, arr: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -54,7 +54,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Faster
 
@@ -77,4 +77,4 @@ $$
 
 时间复杂度 `O(n²)`，空间复杂度 `O(n²)`。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

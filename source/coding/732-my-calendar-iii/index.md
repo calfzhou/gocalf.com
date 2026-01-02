@@ -60,7 +60,7 @@ class MyCalendarThree:
 # param_1 = obj.book(startTime,endTime)
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -97,4 +97,4 @@ class MyCalendarThree:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

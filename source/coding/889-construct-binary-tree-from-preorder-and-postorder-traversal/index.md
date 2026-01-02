@@ -49,7 +49,7 @@ class Solution:
     def constructFromPrePost(self, preorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -153,4 +153,4 @@ NLR 已经扫描完毕，而 LRN 的最后一个数字一定等于 NLR 的第一
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

@@ -38,7 +38,7 @@ class Solution:
     def singleNonDuplicate(self, nums: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -58,4 +58,4 @@ n 一定是个奇数，假设 `n = 2 * m + 1`
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

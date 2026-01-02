@@ -50,7 +50,7 @@ class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -62,8 +62,8 @@ class Solution:
 
 ### Iteratively
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ### Recursively
 
-{% asset_code solution_recursive.py %}
+{% snippet solution_recursive.py %}

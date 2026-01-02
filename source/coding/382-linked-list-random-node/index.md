@@ -71,7 +71,7 @@ class Solution:
 # param_1 = obj.getRandom()
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -81,7 +81,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## O(1) Space
 
@@ -89,4 +89,4 @@ class Solution:
 
 `__init__` 的时间复杂度 `O(n)`，`getRandom` 的时间复杂度 `O(n)`，整体空间复杂度 `O(1)`。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

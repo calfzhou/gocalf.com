@@ -37,7 +37,7 @@ class Solution:
     def multiply(self, num1: str, num2: str) -> str:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -47,4 +47,4 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

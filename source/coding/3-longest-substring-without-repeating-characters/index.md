@@ -45,7 +45,7 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -61,10 +61,10 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## 快一些
 
 如果用哈希表动态地记录当前 substring 中的字符（key 是字符，value 是位置下标），则时间复杂度为 `O(n)`（基本上每个字符都会入栈一次，出栈一次），空间复杂度为 `O(m)`。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

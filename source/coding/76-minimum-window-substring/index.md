@@ -49,7 +49,7 @@ class Solution:
     def minWindow(self, s: str, t: str) -> str:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -71,8 +71,8 @@ class Solution:
 
 > 👇 单一循环体
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 > 👇 循环套循环
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

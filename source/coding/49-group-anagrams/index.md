@@ -47,7 +47,7 @@ class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -65,6 +65,6 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 直接把字符串排序当作 key 在字典中查找 group，就挺快的了。

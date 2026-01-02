@@ -43,7 +43,7 @@ class Solution:
     def countBadPairs(self, nums: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -59,4 +59,4 @@ Pair 总数显然为 `n * (n - 1) / 2`。如果有 m 个位置的 `nums[i] - i` 
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

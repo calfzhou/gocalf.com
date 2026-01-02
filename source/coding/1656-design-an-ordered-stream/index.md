@@ -70,7 +70,7 @@ class OrderedStream:
 # param_1 = obj.insert(idKey,value)
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -80,4 +80,4 @@ class OrderedStream:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

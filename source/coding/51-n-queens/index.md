@@ -40,7 +40,7 @@ class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -64,10 +64,10 @@ class Solution:
 
 ### Recursively
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ### Iteratively
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}
 
 不用递归的话，需要注意缓存的更新时机，避免设置了但没有清理，或者漏了设置。

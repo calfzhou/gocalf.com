@@ -57,7 +57,7 @@ class Solution:
     def leftmostBuildingQueries(self, heights: List[int], queries: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -71,7 +71,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Monotonic Stack
 
@@ -103,4 +103,4 @@ if idx >= 0:
     answer[j] = stack[idx]
 ```
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

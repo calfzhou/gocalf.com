@@ -53,7 +53,7 @@ class Solution:
     def countOfPairs(self, nums: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -116,7 +116,7 @@ $$
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Math
 
@@ -168,4 +168,4 @@ $$
 
 计算 `C(m-D+n, n)` 的方法可以参考 [62. Unique Paths](../62-unique-paths/index.md)。时间复杂度 `O(n)`（需要遍历 `nums` 算出 `D`，然后计算 `C(m-D+n, n)` 的时间为 `O(min{n, m-D}) < O(n)`），空间复杂度 `O(1)`。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

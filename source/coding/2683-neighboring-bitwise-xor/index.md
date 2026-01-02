@@ -59,7 +59,7 @@ class Solution:
     def doesValidArrayExist(self, derived: List[int]) -> bool:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -77,6 +77,6 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

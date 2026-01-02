@@ -66,7 +66,7 @@ class ExamRoom:
 # obj.leave(p)
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -109,10 +109,10 @@ else:
 
 ### Leave Fast, Seat Slow
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ### Seat Fast, Leave Slow
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}
 
 实际提交运行的话，这个策略比上一个快两百多倍。

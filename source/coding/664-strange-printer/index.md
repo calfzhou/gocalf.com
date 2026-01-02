@@ -42,7 +42,7 @@ class Solution:
     def strangePrinter(self, s: str) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -77,8 +77,8 @@ $$
 
 ### Iteratively
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ### Recursively
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

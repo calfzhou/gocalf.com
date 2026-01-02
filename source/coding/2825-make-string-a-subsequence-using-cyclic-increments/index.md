@@ -55,7 +55,7 @@ class Solution:
     def canMakeSubsequence(self, str1: str, str2: str) -> bool:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -63,4 +63,4 @@ Python 里负数对正数取余数，结果也是正数，比如 `-25 % 26 = 1`�
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

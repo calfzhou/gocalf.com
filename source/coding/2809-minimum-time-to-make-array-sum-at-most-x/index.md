@@ -51,7 +51,7 @@ class Solution:
     def minimumTime(self, nums1: List[int], nums2: List[int], x: int) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -116,4 +116,4 @@ $$
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

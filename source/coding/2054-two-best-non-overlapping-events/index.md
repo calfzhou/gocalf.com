@@ -55,7 +55,7 @@ class Solution:
     def maxTwoEvents(self, events: List[List[int]]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -71,6 +71,6 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 不是很快，才 `34+%`，回头再优化。

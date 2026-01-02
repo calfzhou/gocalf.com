@@ -45,7 +45,7 @@ class Solution:
     def isGoodArray(self, nums: List[int]) -> bool:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -59,6 +59,6 @@ Python é‡Œ [`math.gcd`](https://docs.python.org/3/library/math.html#math.gcd) æ–
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

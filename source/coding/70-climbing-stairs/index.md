@@ -45,7 +45,7 @@ class Solution:
     def climbStairs(self, n: int) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -57,7 +57,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## O(log n)
 
@@ -139,7 +139,7 @@ a^n=\begin{cases}
 \end{cases}
 $$
 
-{% asset_code solution_log.py %}
+{% snippet solution_log.py %}
 
 线性复杂度和对数复杂度实际运算时间对比：
 

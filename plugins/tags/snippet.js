@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * Asset code tag.
+ * Tag to import code snippets in markdown.
  *
- * {% asset_code path/to/file [title] [lang:language] [from:line] [to:line] %}
+ * {% snippet path/to/file [title] [lang:language] [from:line] [to:line] %}
  *
- * Note: the `path/to/file` is relative to the `source` directory.
+ * Note: the `path/to/file` can either relative to the current file or the `source` directory.
  */
 
 const lib_path = require('path');
@@ -37,7 +37,7 @@ module.exports = hexo => function (args) {
     doc = Asset.findOne({ path });
   }
   if (!doc) {
-    hexo.log.warn(`[tags/asset_code] Asset not found: ${path} (relative to ${source}, or absolute)`);
+    hexo.log.warn(`[tags/snippet] Asset not found: ${path} (relative to ${source}, or absolute)`);
     return;
   }
 

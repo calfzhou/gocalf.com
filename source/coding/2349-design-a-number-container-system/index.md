@@ -68,7 +68,7 @@ class NumberContainers:
 # param_2 = obj.find(number)
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -80,4 +80,4 @@ class NumberContainers:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

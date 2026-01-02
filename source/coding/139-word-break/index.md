@@ -48,7 +48,7 @@ class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -74,7 +74,7 @@ $$can_{i,j}=s_{i,j}\in D\lor \exists p:(i\le p<j,can_{i,p}\land can_{p+1,j})$$
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Improve
 
@@ -100,8 +100,8 @@ $$
 
 优化之后的代码：
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}
 
 Inner method test cases:
 
-{% asset_code solution2_inner_test.py %}
+{% snippet solution2_inner_test.py %}

@@ -41,7 +41,7 @@ class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -59,6 +59,6 @@ PS：之前用这种滑窗法的时候，写循环的时候总是被边界条件
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 > 似乎不是很快，先这样吧。

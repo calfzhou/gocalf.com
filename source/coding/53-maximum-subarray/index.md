@@ -45,7 +45,7 @@ class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -55,7 +55,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Another DP
 
@@ -72,7 +72,7 @@ $$
 
 上边代码在关于 i 的循环开始的时候计算了 `s(i)`，在循环结束前把 `max{s(i), 0}` 先算好，到 `i + 1` 的循环里直接用。也可以写成如下形式，逻辑是完全一致的，跟公式更接近一些：
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}
 
 为了能理解 [3410. Maximize Subarray Sum After Removing All Occurrences of One Element](../3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element/index.md)，这里对上述 DP 做一些调整，可以得到相同的结果。
 
@@ -87,6 +87,6 @@ $$
 
 显然 $s(i)=ps(i)-low(i-1)$。可得 $largest=\max_{0\le i<n}{s(i)}=\max_{0\le i<n}\{ps(i)-low(i-1)\}$（令 `low(-1) = 0`）。
 
-{% asset_code solution3.py %}
+{% snippet solution3.py %}
 
 > 这样改造之后，[problem 3410](../3410-maximize-subarray-sum-after-removing-all-occurrences-of-one-element/index.md) 比较容易在此基础上进行扩展。

@@ -68,7 +68,7 @@ class Solution:
     def maximumInvitations(self, favorite: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -102,7 +102,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 提交跑下来比较慢，可能系数太大了。而且显然第一步做的并查集并没有太大帮助，计算量基本都浪费了，可以考虑优化。
 
@@ -120,4 +120,4 @@ class Solution:
 
 时间复杂度和空间复杂度还是 `O(n)`。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

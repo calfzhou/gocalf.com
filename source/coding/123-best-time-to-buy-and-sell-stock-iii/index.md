@@ -49,7 +49,7 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -65,7 +65,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## DP
 
@@ -105,4 +105,4 @@ $$
 
 实际计算的时候，只需要保留前一天的四个状态值即可，空间复杂度 `O(1)`，时间复杂度 `O(n)`。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

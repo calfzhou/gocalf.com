@@ -67,7 +67,7 @@ class Codec:
 # ans = deser.deserialize(ser.serialize(root))
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -85,7 +85,7 @@ LeetCode 用的是层序，并把空的子节点用 `null` 记录占位。层序
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 可以看到序列化和反序列化的操作逻辑是完全一致的，唯一的区别就是前者在遍历过程中把节点的值读出来，后者把获取到的值和父子关系写到节点上。
 

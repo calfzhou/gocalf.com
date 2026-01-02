@@ -54,10 +54,10 @@ class Solution:
     def generateKey(self, num1: int, num2: int, num3: int) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

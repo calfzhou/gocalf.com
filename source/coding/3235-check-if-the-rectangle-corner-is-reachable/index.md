@@ -63,7 +63,7 @@ class Solution:
     def canReachCorner(self, xCorner: int, yCorner: int, circles: List[List[int]]) -> bool:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -126,8 +126,8 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 Test cases for solution inner methods:
 
-{% asset_code solution_inner_test.py %}
+{% snippet solution_inner_test.py %}

@@ -59,7 +59,7 @@ class Solution:
     def minimumCost(self, target: str, words: List[str], costs: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -107,8 +107,8 @@ return dp[n]
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 附：针对 AC 自动机的构建和多模式匹配的 test cases：
 
-{% asset_code solution_ac_test.py %}
+{% snippet solution_ac_test.py %}

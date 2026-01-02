@@ -109,7 +109,7 @@ class FindElements:
 # param_1 = obj.find(target)
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -125,8 +125,8 @@ class FindElements:
 
 ### Less Space
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ### Less Time
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

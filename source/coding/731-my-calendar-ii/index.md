@@ -62,7 +62,7 @@ class MyCalendarTwo:
 # param_1 = obj.book(startTime,endTime)
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -92,6 +92,6 @@ class MyCalendarTwo:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 > 此实现中未对相邻相连的两个时段做合并。比如 `[10, 20)` 和 `[20, 50)` 虽然可以连成一个完整的 `[10, 50)`，但代码中并未进行合并，不会影响后续处理逻辑。

@@ -56,7 +56,7 @@ class Solution:
     def countKConstraintSubstrings(self, s: str, k: int) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -78,4 +78,4 @@ $\forall 1\le i\le n$，计算以 i 开头的符合 k-constraint 的子串个数
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

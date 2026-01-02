@@ -48,7 +48,7 @@ class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -84,11 +84,11 @@ $$
 
 `O(n)` 空间：
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 `O(1)` 空间：
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}
 
 ## Another Way
 
@@ -139,4 +139,4 @@ $$
 
 > 这个乘积的数学含义可以再梳理一下。TODO
 
-{% asset_code solution3.py %}
+{% snippet solution3.py %}

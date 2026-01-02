@@ -51,7 +51,7 @@ class Solution:
     def getHappyString(self, n: int, k: int) -> str:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -65,4 +65,4 @@ Happy string 除了第一位有 `'a'`、`'b'`、`'c'` 三个选择外，之后�
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

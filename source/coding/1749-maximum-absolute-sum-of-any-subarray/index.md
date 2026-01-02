@@ -43,7 +43,7 @@ class Solution:
     def maxAbsoluteSum(self, nums: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -53,7 +53,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Another Way
 
@@ -61,4 +61,4 @@ class Solution:
 
 时间复杂度 `O(n)`，空间复杂度 `O(n)`（也可以直接边累加边求 mx 和 mn，那么空间复杂度也是 `O(1)`）。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

@@ -55,7 +55,7 @@ class Solution:
     def closestRoom(self, rooms: List[List[int]], queries: List[List[int]]) -> List[int]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -87,13 +87,13 @@ AVL 树的详细信息参见 [DSA AVL Trees](https://www.w3schools.com/dsa/dsa_d
 
 > Runtime beats `7+%`:
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ### Python list - Fast
 
 > Runtime beats `100%`:
 
-{% asset_code solution_fast.py %}
+{% snippet solution_fast.py %}
 
 ## Monotonic Stack
 
@@ -105,4 +105,4 @@ AVL 树的详细信息参见 [DSA AVL Trees](https://www.w3schools.com/dsa/dsa_d
 
 时间复杂度是 `O(n log n + k log k + k log n)`，空间复杂度 `O(n + k)`，跟上边一样。实际运行时间跟 [problem 2940](../2940-find-building-where-alice-and-bob-can-meet/index.md) 也很像，用单调栈比用有序集合慢一倍。
 
-{% asset_code solution3.py %}
+{% snippet solution3.py %}

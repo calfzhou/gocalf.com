@@ -75,7 +75,7 @@ class NeighborSum:
 # param_2 = obj.diagonalSum(value)
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -94,4 +94,4 @@ class NeighborSum:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

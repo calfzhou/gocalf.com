@@ -64,7 +64,7 @@ class Solution:
     def subsequencesWithMiddleMode(self, nums: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -90,7 +90,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 > 这里其实有大量计算是重复的，因为 lb、rb 并不是每次都变，还可以进一步优化。
 
@@ -134,4 +134,4 @@ $$
 
 最终时间复杂度 `O(n)`，空间复杂度 `O(K) ≈ O(n)`。Runtime beats 100%，还算没辜负眼花缭乱的一天。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

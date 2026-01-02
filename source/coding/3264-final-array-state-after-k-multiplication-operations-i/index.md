@@ -59,7 +59,7 @@ class Solution:
     def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -73,8 +73,8 @@ class Solution:
 
 ## Min Heap
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Find Directly
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

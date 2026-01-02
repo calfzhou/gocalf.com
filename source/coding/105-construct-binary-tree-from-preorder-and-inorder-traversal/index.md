@@ -47,7 +47,7 @@ class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -153,4 +153,4 @@ NLR 和 LNR 都遍历结束，所有节点都添加完毕。这时候唯一要�
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

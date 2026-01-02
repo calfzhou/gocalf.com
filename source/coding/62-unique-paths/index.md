@@ -45,7 +45,7 @@ class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -64,7 +64,7 @@ $$
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Math
 
@@ -86,4 +86,4 @@ $$
 
 整体时间复杂度为 `O(min{m,n})`，空间复杂度 `O(1)`。
 
-{% asset_code solution_math.py %}
+{% snippet solution_math.py %}

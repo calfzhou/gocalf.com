@@ -44,7 +44,7 @@ class Solution:
     def maxAverageRatio(self, classes: List[List[int]], extraStudents: int) -> float:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -70,4 +70,4 @@ $$
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

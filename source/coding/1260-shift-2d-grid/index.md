@@ -55,7 +55,7 @@ class Solution:
     def shiftGrid(self, grid: List[List[int]], k: int) -> List[List[int]]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -63,4 +63,4 @@ In-place 轮换比较麻烦，一般的实现方式也是需要用 `O(m * n)` �
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

@@ -98,7 +98,7 @@ class TextEditor:
 # param_4 = obj.cursorRight(k)
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -118,4 +118,4 @@ class TextEditor:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

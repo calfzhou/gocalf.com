@@ -49,7 +49,7 @@ class Solution:
     def longestCycle(self, edges: List[int]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -61,7 +61,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Simpler
 
@@ -81,4 +81,4 @@ class Solution:
 
 时间和空间复杂度都是 O(n)。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

@@ -48,7 +48,7 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -70,6 +70,6 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 这里 `while` 循环的条件可以直接用 `while l <= r`（[problem 153](../153-find-minimum-in-rotated-sorted-array/index.md) 用的是 `while l < r - 1` 加收尾处理）。

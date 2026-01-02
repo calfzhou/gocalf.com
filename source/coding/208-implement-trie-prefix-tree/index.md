@@ -70,7 +70,7 @@ class Trie:
 # param_3 = obj.startsWith(prefix)
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -78,4 +78,4 @@ class Trie:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

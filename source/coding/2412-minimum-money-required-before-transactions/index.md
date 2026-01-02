@@ -49,7 +49,7 @@ class Solution:
     def minimumMoney(self, transactions: List[List[int]]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -73,4 +73,4 @@ $$
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

@@ -48,7 +48,7 @@ class Solution:
     def calculate(self, s: str) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -58,7 +58,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Directly
 
@@ -68,4 +68,4 @@ class Solution:
 
 需要小心的是负数的除法。题目要求的是除法运算的结果只保留整数部分，即 `3 / 2 = 1.5 → 1`、`-3 / 2 = -1.5 → -1`。但 Python 中的整除运算（`//`）不符合这个要求（`-3 // 2 = -2`），需要用 [`math.trunc`](https://docs.python.org/3/library/math.html#math.trunc) 函数，`trunc(-3 / 2) = -1`。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

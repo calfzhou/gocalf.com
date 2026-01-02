@@ -42,7 +42,7 @@ class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -68,7 +68,7 @@ $$
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Follow Up
 
@@ -80,4 +80,4 @@ $$
 
 如果数组中有超过一个零，则 `answer` 为全零数组。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

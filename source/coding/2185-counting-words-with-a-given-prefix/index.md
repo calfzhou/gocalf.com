@@ -41,10 +41,10 @@ class Solution:
     def prefixCount(self, words: List[str], pref: str) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

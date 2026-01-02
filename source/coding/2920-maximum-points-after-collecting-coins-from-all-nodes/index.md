@@ -60,7 +60,7 @@ class Solution:
     def maximumPoints(self, edges: List[List[int]], coins: List[int], k: int) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -85,4 +85,4 @@ $$
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}

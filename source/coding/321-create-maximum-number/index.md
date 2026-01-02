@@ -48,7 +48,7 @@ class Solution:
     def maxNumber(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -142,11 +142,11 @@ def pick_max_sub(nums: list[int], k: int) -> list[int]:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 选取和合并逻辑的测试代码：
 
-{% asset_code solution_inner_test.py %}
+{% snippet solution_inner_test.py %}
 
 ## ToDo
 

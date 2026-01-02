@@ -45,7 +45,7 @@ class Solution:
     def nonSpecialCount(self, l: int, r: int) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -65,8 +65,8 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 在 LeetCode 上提交的话，一个可选的作 bú 弊 shì 方案是把质数表缓存到 `Solution.nonSpecialCount` 之外，甚至直接提前先算好整个质数表（上限取 $\lfloor\sqrt{1e9}\rfloor=31622$ 即可），并进一步计算出所有的 $\pi(n)$（小于 n 的质数个数），在 `Solution.nonSpecialCount` 里用常数时间计算 $\pi(r'+1)-\pi(l')$ 即可。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

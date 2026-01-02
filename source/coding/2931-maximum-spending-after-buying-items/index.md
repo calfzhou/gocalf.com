@@ -68,7 +68,7 @@ class Solution:
     def maxSpending(self, values: List[List[int]]) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -86,8 +86,8 @@ class Solution:
 
 ### Merge Sort with Min Heap
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ### Sort All Directly
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}

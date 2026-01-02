@@ -55,7 +55,7 @@ class Solution:
     def countBits(self, n: int) -> List[int]:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -65,7 +65,7 @@ class Solution:
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Follow Up - O(n)
 
@@ -87,7 +87,7 @@ class Solution:
 
 这样对于每个数，都只需要常数时间进行计算和查表，总时间是 `O(n)`。
 
-{% asset_code solution2.py %}
+{% snippet solution2.py %}
 
 ## Faster O(n)
 
@@ -99,7 +99,7 @@ class Solution:
 
 总的时间复杂度也是 `O(n)`，但系数要小得多。
 
-{% asset_code solution3.py %}
+{% snippet solution3.py %}
 
 三种算法的实际运行时间对比：
 

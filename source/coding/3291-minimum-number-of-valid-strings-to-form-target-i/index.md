@@ -62,7 +62,7 @@ class Solution:
     def minValidStrings(self, words: List[str], target: str) -> int:
 ```
 
-{% asset_code solution_test.py %}
+{% snippet solution_test.py %}
 
 ## Thoughts
 
@@ -86,7 +86,7 @@ $$
 
 ## Code
 
-{% asset_code solution.py %}
+{% snippet solution.py %}
 
 ## Faster - AC 自动机
 
@@ -102,8 +102,8 @@ $$
 
 时间复杂度 `O(km + n)`，空间复杂度 `O(km + n)`。
 
-{% asset_code solution_ac.py %}
+{% snippet solution_ac.py %}
 
 附：针对 AC 自动机的构建和多模式前缀搜索的 test cases：
 
-{% asset_code solution_ac_test.py %}
+{% snippet solution_ac_test.py %}
