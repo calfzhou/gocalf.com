@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2026-01-01 01:19:45
-updated: 2026-01-02 17:15:05
+updated: 2026-01-02 19:37:01
 ---
 ## Hexo
 
@@ -340,27 +340,17 @@ When a post or page modified:
 
 Stopping the server:
 
-1. Exit
+1. Goodbye
     - `"Have a nice day"` or `"Bye!"` or similar message, twice
-    - `before_exit` filter
-    - `exit` event
+2. Exit
+    - Same with `hexo generate`
 
 ### "hexo clean"
 
 1. Initialization
-    - `[D] "Hexo version: 8.1.1"`
-    - `[D] "Workding directory: ..."`
-    - `[D] "Config loaded: .../_config.yml"`
-    - `"Validating config"`
-    - `[D] "Second Theme Config loaded: .../_config.stellar.yml"`
-    - `[D] "Plugin loaded: ..."` (per `hexo-*` and `@*/hexo-*` dependency)
-    - `[D] "Script loaded: ..."` (per `scripts/**/*.js`)
-    - `[D] "Script loaded: ..."` (per `{theme}/scripts/**/*.js`)
-    - `after_init` filter
-    - `ready` event
+    - Same with `hexo generate`
 2. Clean
     - `"Deleted database."`
     - `"Deleted public folder."`
 3. Exit
-    - `before_exit` filter
-    - `exit` event
+    - Same with `hexo generate`
