@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - it/web
 date: 2024-04-21 14:42:16
-updated: 2026-01-01 00:11:24
+updated: 2026-01-02 19:04:46
 ---
 ## Hexo
 
@@ -239,7 +239,7 @@ filter: invert(1) hue-rotate(180deg);
 :::
 ```
 
-或者用自定义的 Hexo 标签插件 [`invert`](https://github.com/calfzhou/gocalf.com/blob/main/scripts/tags/invert.js)：
+或者用自定义的 Hexo 标签插件 [`invert`](https://github.com/calfzhou/gocalf.com/blob/main/plugins/tags/invert.js)：
 
 ```markdown
 {% invert %}
