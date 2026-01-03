@@ -4,6 +4,7 @@ notebook: notes
 tags:
 - it/ui
 katex: true
+pin: 99
 date: 2024-12-15 10:08:14
 updated: 2024-12-15 20:35:53
 ---
