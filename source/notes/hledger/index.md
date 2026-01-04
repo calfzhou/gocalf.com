@@ -4,7 +4,7 @@ notebook: notes
 tags:
   - software
 date: 2026-01-03 23:47:28
-updated: 2026-01-04 23:02:53
+updated: 2026-01-04 23:41:25
 ---
 ## Info
 
@@ -218,6 +218,8 @@ include 2002.journal
 
 ### 股票类交易记账
 
+[Track investments (2020) - hledger](https://hledger.org/investments.html)
+
 主要的问题是多次买卖过程中的 **存货估价法**。常见的方法有先进先出（FIFO）、后进先出（LIFO）、加权平均（Weighted Average Cost），参见 [FIFO vs. LIFO vs Average Cost Method](https://eyelit.ai/average-cost-method-vs-fifo-vs-lifo/)。
 
 考虑对于非高频交易使用 FIFO（加权平均要处理舍入误差）。每次买入都放进一个单独的 sub-account，以便追踪和核验。
@@ -248,6 +250,13 @@ include 2002.journal
     Income:CapitalGain                             -48.40 CNY
     Assets:Investment:Silver:130129A    -100 XAGg @ 6.197 CNY = 0 XAGg
     Assets:Investment:Silver:130129B    -400 XAGg @ 6.251 CNY
+
+2013-02-07 卖出
+    Assets:Checking:ICBC                           635.00 CNY
+    Income:CapitalGain                             -9.900 CNY
+    Assets:Investment:Silver:130129B    -100 XAGg @ 6.251 CNY = 0 XAGg
+    ; 检查所有子账户都已经清零
+    Assets:Investment:Silver                                0 =* 0 XAGg
 ```
 
 > [!caution]
