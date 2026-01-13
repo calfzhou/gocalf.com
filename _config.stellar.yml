@@ -193,7 +193,7 @@ style:
     logo: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
     body: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
     code: '"LXGW WenKai", "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace'
-    codeblock: '"Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace, "LXGW WenKai Mono"'
+    codeblock: '"Source Code Pro", Monaco, Menlo, Consolas, "Courier New", "LXGW WenKai Mono", "LXGW WenKai", monospace'
   border-radius:
     card-l: 16px # 侧边栏、文章横幅位置的圆角
     card: 12px # 文章内大部分卡片的圆角

@@ -5,7 +5,7 @@ tags:
   - calf
   - it/font
 date: 2024-04-17 22:25:24
-updated: 2025-04-26 12:04:00
+updated: 2026-01-13 23:28:24
 ---
 ## 网页文本字体的选择
 
@@ -150,5 +150,5 @@ style:
     logo: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
     body: '"LXGW WenKai", "Helvetica Neue", Helvetica, "Lucida Grande", Lucida, Tahoma, Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", STXiHei, SimHei, sans-serif'
     code: '"LXGW WenKai", "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace'
-    codeblock: '"Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace, "LXGW WenKai Mono"'
+    codeblock: '"Source Code Pro", Monaco, Menlo, Consolas, "Courier New", "LXGW WenKai Mono", "LXGW WenKai", monospace'
 ```
