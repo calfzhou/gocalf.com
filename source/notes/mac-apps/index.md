@@ -5,7 +5,7 @@ tags:
   - calf
   - software/mac
 date: 2024-04-16 22:56:13
-updated: 2025-05-17 13:35:07
+updated: 2026-01-13 23:41:54
 ---
 ## 系统相关 / 实用工具
 
@@ -108,7 +108,7 @@ updated: 2025-05-17 13:35:07
 
 - [IINA - The modern media player for macOS](https://iina.io/)
 
-### 不可描述
+### 「科学」
 
 - Clash for Windows (Mac)
   - 2023 年作者关闭了 GitHub 仓库。
@@ -177,6 +177,7 @@ updated: 2025-05-17 13:35:07
 
 ### AIGC
 
+- [Chatbox AI: Your AI Copilot, Best AI Client on any device, Free Download](https://chatboxai.app/en/)
 - [lencx/ChatGPT: 🔮 ChatGPT Desktop Application (Mac, Windows and Linux)](https://github.com/lencx/ChatGPT)
 
 ### 图片编辑

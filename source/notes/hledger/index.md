@@ -5,7 +5,7 @@ tags:
   - software
   - knowledge/finance
 date: 2026-01-03 23:47:28
-updated: 2026-01-12 22:38:36
+updated: 2026-01-14 22:00:09
 ---
 ## Info
 
@@ -557,30 +557,30 @@ include 2002.journal
 
 ```text
 Assets                        ; type: Asset
-├─ AccruedIncome              ; 应收款项（比如公司欠发的工资）
-│  └─ Company1
-│     └─ Salary               ; Company1 欠发的工资
 ├─ Cash
 │  ├─ CNY
 │  └─ Foreign                 ; 可以开不同币种的子账户
+├─ Wallet                     ; e-wallets
+├  ├─ Alipay
+├  ├─ Paypal
+├  └─ WeChat
 ├─ Checking                   ; 活期账户
 │  └─ ICBC
 │     └─ Card1
 ├─ Deposit                    ; 定期存款、存款类资产
 │  ├─ CMB
-│  │  └─ Large1               ; 大额存单
-│  ├─ ICBC
 │  │  └─ Fixed1               ; 定期存款
+│  ├─ ICBC
+│  │  └─ Large1               ; 大额存单
 │  └─ Security                ; 押金
 │     └─ CounterParty1
-├─ Insurance                  ; 保险类资产
-│  ├─ Gongjijin               ; 公积金账户
-│  ├─ Medical                 ; 医保个人账户
-│  └─ PAIC
-│     └─ Product1
+├─ StoredValue                ; 3rd party merchant accounts (refundable)
+│  ├─ Huatai
+│  └─ TietaElec
+├─ Prepaid                    ; 3rd party merchant accounts (not refundable)
+│  ├─ AppleStore
+│  └─ Linode
 ├─ Investment                 ; 投资类资产
-│  ├─ Alipay
-│  │  └─ YuEBao
 │  ├─ CMB
 │  │  ├─ Jijin
 │  │  │  └─ Product1
@@ -589,124 +589,135 @@ Assets                        ; type: Asset
 │  │  └─ OtherProduct1
 │  ├─ Huatai
 │  │  └─ Stock1
+│  ├─ Alipay
+│  │  └─ YuEBao
 │  └─ WeChat
 │     └─ Licaitong
+├─ Insurance                  ; 保险类资产
+│  ├─ Gongjijin               ; 公积金账户
+│  ├─ Medical                 ; 医保个人账户
+│  └─ PAIC
+│     └─ Product1
 ├─ Lent                       ; 借出款项
 │  ├─ Alice
 │  └─ Bob
-├─ Prepaid                    ; 3rd party merchant accounts (not refundable)
-│  ├─ AppleStore
-│  └─ Linode
-├─ Refundable                 ; 可退还款项
-│  └─ Shop1
+├─ AccruedIncome              ; 应收款项（比如公司欠发的工资）
+│  └─ Company1
+│     └─ Salary               ; Company1 欠发的工资
 ├─ Reimbursable               ; 可报销款项
 │  └─ Company1
 │     ├─ Conference
 │     └─ Traffic
-├─ StoredValue                ; 3rd party merchant accounts (refundable)
-│  ├─ Huatai
-│  └─ TietaElec
-└─ Wallet                     ; e-wallets
-   ├─ Alipay
-   ├─ Paypal
-   └─ WeChat
+└─ Refundable                 ; 可退还款项
+   └─ Shop1
 ```
 
 ### Liability
 
 ```text
 Liabilities                   ; type: Liability
-├─ Advance                    ; 预支款项
-│  └─ Company1
-│     └─ TeamBuilding
-├─ Borrowed                   ; 借入款项
-│  ├─ Alice
-│  └─ Bob
 ├─ CreditCard                 ; 信用卡
 │  └─ ICBC
 │     └─ Card1
+├─ Online                     ; Online credit accounts
+│  ├─ Huabei
+│  └─ Meituan
 ├─ Loan                       ; 贷款
+│  ├─ ICBC
+│  │  └─ Installment          ; 分期付款
 │  ├─ CMB
 │  │  └─ PersonalCredit       ; 个人信用贷
 │  ├─ Car                     ; 车贷
 │  │  └─ Car1
-│  ├─ House                   ; 房贷
-│  │  └─ House1
-│  └─ ICBC
-│     └─ Installment          ; 分期付款
-├─ Online                     ; Online credit accounts
-│  ├─ Huabei
-│  └─ Meituan
-└─ Unpaid                     ; 未付账款
-   └─ Shop1
+│  └─ House                   ; 房贷
+│     └─ House1
+├─ Borrowed                   ; 借入款项
+│  ├─ Alice
+│  └─ Bob
+├─ Unpaid                     ; 未付账款
+│  └─ Shop1
+└─ Advance                    ; 预支款项
+   └─ Company1
+      └─ TeamBuilding
 ```
 
 ### Revenue
 
 ```text
 Income                        ; type: Revenue
-├─ CapitalGain
-│  ├─ Property                ; 房产等出售收益
-│  └─ Securities              ; 股票、基金、贵金属等出售收益
 ├─ Career
-│  ├─ Allowance
-│  ├─ Bonus
-│  ├─ Overtime
-│  ├─ PartTime
-│  ├─ PreTax
-│  │  ├─ Allowance
-│  │  ├─ Award
-│  │  ├─ BasePay
-│  │  ├─ Bonus
-│  │  └─ StockRelated
 │  ├─ Salary
-│  └─ Subsidy
-├─ FX
-│  └─ Gain                    ; 外汇兑换收益
+│  ├─ Overtime
+│  ├─ Bonus
+│  ├─ Allowance
+│  ├─ PartTime
+│  ├─ Subsidy
+│  └─ PreTax
+│     ├─ BasePay
+│     ├─ Allowance
+│     ├─ Bonus
+│     ├─ Award
+│     └─ StockRelated
 ├─ Finance
 │  ├─ Dividend                ; 分红（含余额宝收益等）
 │  └─ Interest
 │     ├─ Bank                 ; 银行存款利息
 │     ├─ Insurance            ; 保险利息、红利
 │     └─ Investment           ; 非存款类理财产品的利息型收益
-├─ NonOp
-│  ├─ Promotion
-│  ├─ RedPacket
-│  ├─ UsedGoods               ; 二手物品出售
-│  ├─ Windfall                ; 意外之财
-│  └─ Winning
-└─ OperatingRevenue
+├─ CapitalGain
+│  ├─ Property                ; 房产等出售收益
+│  └─ Securities              ; 股票、基金、贵金属等出售收益
+├─ FX
+│  └─ Gain                    ; 外汇兑换收益
+├─ OperatingRevenue
+└─ NonOp
+   ├─ Promotion
+   ├─ RedPacket
+   ├─ UsedGoods               ; 二手物品出售
+   ├─ Windfall                ; 意外之财
+   └─ Winning
 ```
 
 ### Expense
 
 ```text
 Expenses                      ; type: Expense
-├─ Adjustments
-│  ├─ Discount                ; 折扣
-│  ├─ Rebate                  ; 返利
-│  ├─ Refund                  ; 退款
-│  └─ Rounding                ; 四舍五入误差
-├─ Appearance
+├─ Appearance                 ; 形象（衣服饰品）
 │  ├─ Accessory
 │  ├─ Beauty
 │  └─ Clothing
-├─ Car
-│  ├─ Accessory
-│  ├─ Insurance
-│  ├─ Maintenance
-│  └─ Utility
-├─ Catering
+├─ Catering                   ; 餐饮（食品酒水）
 │  ├─ Drink
 │  ├─ Material
 │  ├─ Meal
 │  └─ Snack
-├─ Communication
+├─ Reside                     ; 安居（居家物业）
+│  ├─ Accommodation
+│  ├─ Cost
+│  ├─ Fitment
+│  ├─ Furniture
+│  └─ Rent
+├─ Living                     ; 生活
+│  ├─ Commodity
+│  ├─ Misc
+│  ├─ Service
+│  ├─ Software
+│  └─ Utilities
+├─ Traffic                    ; 交通（交通出行）
+│  ├─ Airplane
+│  ├─ Gas
+│  ├─ Parking
+│  ├─ Public
+│  ├─ Rent
+│  ├─ Taxi
+│  ├─ Toll
+│  └─ Train
+├─ Communication              ; 交流通讯
 │  ├─ Mobile
 │  ├─ Network
 │  ├─ Post
 │  └─ Telephone
-├─ Entertainment
+├─ Entertainment              ; 娱乐（休闲娱乐）
 │  ├─ Digital
 │  ├─ Games
 │  ├─ Leisure
@@ -715,9 +726,25 @@ Expenses                      ; type: Expense
 │  ├─ Sport
 │  ├─ Toy
 │  └─ Travel
-├─ FX
-│  └─ Loss                    ; 外汇兑换损失
-├─ Finance
+├─ Learning                   ; 学识（学习进修）
+│  ├─ Book
+│  ├─ Exam
+│  ├─ Training
+│  ├─ Tuition
+│  └─ Utilities
+├─ Social                     ; 人情（人情往来）
+│  ├─ Charity
+│  ├─ Compensation
+│  ├─ Filial
+│  ├─ Gift
+│  └─ Treat
+├─ Health                     ; 健康（医疗保健）
+│  ├─ Drug
+│  ├─ Equipment
+│  ├─ Examination
+│  ├─ Nourishment
+│  └─ Treatment
+├─ Finance                    ; 金融
 │  ├─ CapitalLoss
 │  │  ├─ Property             ; 房产等出售损失
 │  │  └─ Securities           ; 股票、基金、贵金属等出售损失
@@ -727,43 +754,9 @@ Expenses                      ; type: Expense
 │  │  └─ House
 │  ├─ Investment
 │  └─ Service
-├─ Health
-│  ├─ Drug
-│  ├─ Equipment
-│  ├─ Examination
-│  ├─ Nourishment
-│  └─ Treatment
-├─ Learning
-│  ├─ Book
-│  ├─ Exam
-│  ├─ Training
-│  ├─ Tuition
-│  └─ Utilities
-├─ Living
-│  ├─ Commodity
-│  ├─ Misc
-│  ├─ Service
-│  ├─ Software
-│  └─ Utilities
-├─ Misc
-│  ├─ BadDebt                 ; 坏账损失（借出款项无法收回）
-│  ├─ Correction              ; 账记错了
-│  ├─ Fraction                ; 零头金额处理
-│  ├─ IncomeReversal          ; 收入冲销
-│  └─ Lost                    ; 丢失
-├─ Reside
-│  ├─ Accommodation
-│  ├─ Cost
-│  ├─ Fitment
-│  ├─ Furniture
-│  └─ Rent
-├─ Social
-│  ├─ Charity
-│  ├─ Compensation
-│  ├─ Filial
-│  ├─ Gift
-│  └─ Treat
-├─ Society
+├─ FX
+│  └─ Loss                    ; 外汇兑换损失
+├─ Society                    ; 社会
 │  ├─ Compensation
 │  ├─ Insurance
 │  ├─ Penalty
@@ -771,34 +764,53 @@ Expenses                      ; type: Expense
 │     ├─ Bonus
 │     ├─ House
 │     └─ Salary
-└─ Traffic
-   ├─ Airplane
-   ├─ Gas
-   ├─ Parking
-   ├─ Public
-   ├─ Rent
-   ├─ Taxi
-   ├─ Toll
-   └─ Train
+├─ Adjustments
+│  ├─ Discount                ; 折扣
+│  ├─ Rebate                  ; 返利
+│  ├─ Refund                  ; 退款
+│  └─ Rounding                ; 四舍五入误差
+├─ Car                        ; 汽车
+│  ├─ Accessory
+│  ├─ Insurance
+│  ├─ Maintenance
+│  └─ Utility
+└─ Misc                       ; 其他杂项
+   ├─ BadDebt                 ; 坏账损失（借出款项无法收回）
+   ├─ Correction              ; 账记错了
+   ├─ Fraction                ; 零头金额处理
+   ├─ IncomeReversal          ; 收入冲销
+   └─ Lost                    ; 丢失
 ```
 
 ### Equity
 
 ```text
 Equity                        ; type: Equity
-├─ Employer
-│  └─ Company1
-├─ Extraordinary
-│  └─ DebtForgiven            ; 债务豁免
-├─ Household
-│  └─ Spouse
-├─ OpeningClosing
-│  └─ 2026
 ├─ Property
 │  ├─ Car
 │  │  └─ Car1
 │  └─ House
 │     └─ House1
+├─ Society
+│  └─ Insurance
+│     ├─ Housing
+│     │  ├─ Employee
+│     │  └─ Employer
+│     ├─ Maternity
+│     │  └─ Employer
+│     ├─ Medical
+│     │  ├─ Employee
+│     │  └─ Employer
+│     ├─ Pension
+│     │  ├─ Employee
+│     │  └─ Employer
+│     ├─ Unemployment
+│     │  ├─ Employee
+│     │  └─ Employer
+│     └─ WorkInjury
+│        └─ Employer
+├─ Household
+│  └─ Spouse
 ├─ Relatives
 │  ├─ Self
 │  │  ├─ Extended
@@ -808,22 +820,10 @@ Equity                        ; type: Equity
 │     └─ Parents
 ├─ Social
 │  └─ EventGifts              ; 特殊活动收受的礼金
-└─ Society
-   └─ Insurance
-      ├─ Housing
-      │  ├─ Employee
-      │  └─ Employer
-      ├─ Maternity
-      │  └─ Employer
-      ├─ Medical
-      │  ├─ Employee
-      │  └─ Employer
-      ├─ Pension
-      │  ├─ Employee
-      │  └─ Employer
-      ├─ Unemployment
-      │  ├─ Employee
-      │  └─ Employer
-      └─ WorkInjury
-         └─ Employer
+├─ Employer
+│  └─ Company1
+├─ Extraordinary
+│  └─ DebtForgiven            ; 债务豁免
+└─ OpeningClosing
+   └─ 2026
 ```
