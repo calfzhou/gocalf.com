@@ -1,16 +1,17 @@
 [
-  "obsidian-minimal-settings",
+  "github-copilot",
   "table-editor-obsidian",
-  "obsidian-image-toolkit",
-  "cm-chs-patch",
+  "consistent-attachments-and-links",
   "obsidian-custom-attachment-location",
+  "folder-notes",
+  "obsidian-front-matter-title-plugin",
+  "obsidian-image-toolkit",
+  "link-opening-restore",
+  "obsidian-linter",
+  "obsidian-minimal-settings",
   "omnisearch",
   "open-vscode",
-  "obsidian-front-matter-title-plugin",
-  "templater-obsidian",
   "obsidian-style-settings",
-  "folder-notes",
-  "link-opening-restore",
-  "consistent-attachments-and-links",
-  "obsidian-linter"
+  "templater-obsidian",
+  "cm-chs-patch"
 ]

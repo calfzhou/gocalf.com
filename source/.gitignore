@@ -13,6 +13,7 @@
 # some plugins' cache
 .obsidian/plugins/github-copilot/copilot-*
 .obsidian/plugins/github-copilot/conversations.json
+.obsidian/plugins/github-copilot/device_data.json
 .obsidian/plugins/github-copilot/secure-credentials.dat
 .obsidian/plugins/obsidian-quiet-outline/markdown-states.json
 .obsidian/plugins/recent-files-obsidian/data.json
