@@ -22,7 +22,7 @@ importers:
         version: 3.6.0
       '@uiolee/hexo-htmlnano':
         specifier: ^1.0.1
-        version: 1.0.1(htmlnano@2.1.1(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(svgo@3.3.2)(terser@5.44.1))(micromatch@4.0.8)
+        version: 1.0.1(htmlnano@2.1.1(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(svgo@3.3.2)(terser@5.46.0))(micromatch@4.0.8)
       cssnano:
         specifier: ^7.1.2
         version: 7.1.2(postcss@8.5.6)
@@ -75,12 +75,12 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2
       terser:
-        specifier: ^5.44.1
-        version: 5.44.1
+        specifier: ^5.46.0
+        version: 5.46.0
     devDependencies:
       hexo-update-time:
         specifier: github:calfzhou/hexo-update-time#v1.1.2-calf.3
-        version: https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3ec936ba38f2e28d9622d503d2cedb50aac2546
+        version: git+https://git@github.com:calfzhou/hexo-update-time.git#b3ec936ba38f2e28d9622d503d2cedb50aac2546
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -93,8 +93,8 @@ packages:
   '@adobe/css-tools@4.3.3':
     resolution: {integrity: sha512-rE0Pygv0sEZ4vBWHlAgJLGDU7Pm8xoO6p3wsEceb7GYAjScrOHpEo8KK/eVkAcnSM+slAEtXjA2JpdjLp4fJQQ==}
 
-  '@babel/code-frame@7.27.1':
-    resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
+  '@babel/code-frame@7.28.6':
+    resolution: {integrity: sha512-JYgintcMjRiCvS8mMECzaEn+m3PfoQiyqukOMCCVQtoJGYJw8j/8LBJEiqkHLkfwCcs74E3pbAUFNg7d9VNJ+Q==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-validator-identifier@7.28.5':
@@ -854,8 +854,8 @@ packages:
   hexo-theme-stellar@1.33.1:
     resolution: {integrity: sha512-b7MEBcgMW6s/E1mNYcWGsq+l+IWzIMtWmmzD29t3Zt28dFZxe3Ox6Zt09VEXJFxpiWAD4EwHHoyIwjbNQ+6eeQ==}
 
-  hexo-update-time@https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3ec936ba38f2e28d9622d503d2cedb50aac2546:
-    resolution: {tarball: https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3ec936ba38f2e28d9622d503d2cedb50aac2546}
+  hexo-update-time@git+https://git@github.com:calfzhou/hexo-update-time.git#b3ec936ba38f2e28d9622d503d2cedb50aac2546:
+    resolution: {commit: b3ec936ba38f2e28d9622d503d2cedb50aac2546, repo: git@github.com:calfzhou/hexo-update-time.git, type: git}
     version: 1.1.1
     hasBin: true
 
@@ -1671,8 +1671,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  terser@5.44.1:
-    resolution: {integrity: sha512-t/R3R/n0MSwnnazuPpPNVO60LX0SKL45pyl9YlvxIdkH0Of7D5qM2EVe+yASRIlY5pZ73nclYJfNANGWPwFDZw==}
+  terser@5.46.0:
+    resolution: {integrity: sha512-jTwoImyr/QbOWFFso3YoU3ik0jBBDJ6JTOQiy/J2YxVJdZCc+5u7skhNwiOR3FQIygFqVUPHl7qbbxtjW2K3Qg==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -1740,6 +1740,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -1770,7 +1771,7 @@ snapshots:
 
   '@adobe/css-tools@4.3.3': {}
 
-  '@babel/code-frame@7.27.1':
+  '@babel/code-frame@7.28.6':
     dependencies:
       '@babel/helper-validator-identifier': 7.28.5
       js-tokens: 4.0.0
@@ -1909,9 +1910,9 @@ snapshots:
 
   '@types/mdurl@1.0.5': {}
 
-  '@uiolee/hexo-htmlnano@1.0.1(htmlnano@2.1.1(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(svgo@3.3.2)(terser@5.44.1))(micromatch@4.0.8)':
+  '@uiolee/hexo-htmlnano@1.0.1(htmlnano@2.1.1(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(svgo@3.3.2)(terser@5.46.0))(micromatch@4.0.8)':
     dependencies:
-      htmlnano: 2.1.1(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(svgo@3.3.2)(terser@5.44.1)
+      htmlnano: 2.1.1(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(svgo@3.3.2)(terser@5.46.0)
       micromatch: 4.0.8
 
   a-sync-waterfall@1.0.1: {}
@@ -2521,7 +2522,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  hexo-update-time@https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3ec936ba38f2e28d9622d503d2cedb50aac2546:
+  hexo-update-time@git+https://git@github.com:calfzhou/hexo-update-time.git#b3ec936ba38f2e28d9622d503d2cedb50aac2546:
     dependencies:
       commander: 12.1.0
       dayjs: 1.11.19
@@ -2590,7 +2591,7 @@ snapshots:
 
   highlight.js@11.11.1: {}
 
-  htmlnano@2.1.1(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(svgo@3.3.2)(terser@5.44.1):
+  htmlnano@2.1.1(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(svgo@3.3.2)(terser@5.46.0):
     dependencies:
       cosmiconfig: 9.0.0
       posthtml: 0.16.7
@@ -2599,7 +2600,7 @@ snapshots:
       cssnano: 7.1.2(postcss@8.5.6)
       postcss: 8.5.6
       svgo: 3.3.2
-      terser: 5.44.1
+      terser: 5.46.0
     transitivePeerDependencies:
       - typescript
 
@@ -2936,7 +2937,7 @@ snapshots:
 
   parse-json@5.2.0:
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.28.6
       error-ex: 1.3.4
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
@@ -3337,7 +3338,7 @@ snapshots:
       picocolors: 1.1.1
       sax: 1.4.3
 
-  terser@5.44.1:
+  terser@5.46.0:
     dependencies:
       '@jridgewell/source-map': 0.3.11
       acorn: 8.15.0
