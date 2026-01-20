@@ -4,7 +4,7 @@ notebook: notes
 tags:
 - software
 date: 2024-07-26 21:38:51
-updated: 2025-05-18 23:48:03
+updated: 2026-01-21 00:52:29
 references:
 - '[自由输入法 RIME 简明配置指南 - 少数派](https://sspai.com/post/84373)'
 - "[RIME 输入法使用体验 - Hank's Blog](https://zhaohongxuan.github.io/2024/03/20/most-powerful-input-method-rime/)"
@@ -65,14 +65,14 @@ patch:
     foreground: '#ffffff'
 ```
 
-或者（未验证）：
+⚠️ 注意：上边这个 `preset_color_schemes` 是一个 dictionary，不能用 `preset_color_schemes/+` 这样的写法。类似的比如 `punctuator/symbols` 也是 dictionary，不能写 `punctuator/symbols/+`。Deploy 的时候会报错 "trying to append list to incompatible node type".
+
+本身是 list 的则可以用 `+` 来增加元素，如：
 
 ```yaml
 patch:
-  'preset_color_schemes/+':
-    my_scheme:
-      background: '#000000'
-      foreground: '#ffffff'
+  'engine/filters/+':
+    - lua_filter@*cn_en_spacer # 为中英混输词条（cn_en.dict.yaml）自动空格
 ```
 
 ### 管理配置
@@ -120,6 +120,9 @@ bash rime-install gaboolic/rime-shuangpin-fuzhuma@master:recipes/full
 ```
 
 安装之后，点 squirrel 里的 Deploy，重新部署一下，然后按 ``Ctrl + ` `` 呼出「方案选单」即可选择需要的方案。
+
+> [!caution]
+> 每次部署完最好看一下 logs 有没有新的 ERROR 日志。
 
 想要删除一个方案，直接去配置目录的 `default.custom.yaml`（没有的话就自行创建），通过 `patch.schema_list` 控制需要保留哪些方案，在目录里把对应的配置文件删除，重新部署即可，如：
 
