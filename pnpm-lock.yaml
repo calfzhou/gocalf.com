@@ -79,7 +79,7 @@ importers:
         version: 5.46.0
     devDependencies:
       hexo-update-time:
-        specifier: github:calfzhou/hexo-update-time#v1.1.2-calf.3
+        specifier: git+https://github.com/calfzhou/hexo-update-time.git#v1.1.2-calf.3
         version: https://codeload.github.com/calfzhou/hexo-update-time/tar.gz/b3ec936ba38f2e28d9622d503d2cedb50aac2546
       husky:
         specifier: ^9.1.7
