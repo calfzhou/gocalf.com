@@ -48,7 +48,7 @@
     "terser": "^5.46.0"
   },
   "devDependencies": {
-    "hexo-update-time": "github:calfzhou/hexo-update-time#v1.1.2-calf.3",
+    "hexo-update-time": "git+https://github.com/calfzhou/hexo-update-time.git#v1.1.2-calf.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7"
   }
