@@ -28,7 +28,7 @@
     "@mdit/plugin-img-size": "0.7.6",
     "@traptitech/markdown-it-katex": "^3.6.0",
     "@uiolee/hexo-htmlnano": "^1.0.1",
-    "cssnano": "^7.1.2",
+    "cssnano": "^7.1.3",
     "hexo": "^8.1.1",
     "hexo-diagrams-net": "^2025.6.1",
     "hexo-esbuild": "^2.0.0",
@@ -43,13 +43,13 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-stellar": "1.33.1",
-    "postcss": "^8.5.6",
-    "svgo": "^3.3.2",
-    "terser": "^5.46.0"
+    "postcss": "^8.5.8",
+    "svgo": "^3.3.3",
+    "terser": "^5.46.1"
   },
   "devDependencies": {
-    "hexo-update-time": "git+https://github.com/calfzhou/hexo-update-time.git#v1.1.2-calf.3",
+    "hexo-update-time": "github:calfzhou/hexo-update-time#v1.1.2-calf.3",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7"
+    "lint-staged": "^16.4.0"
   }
 }
