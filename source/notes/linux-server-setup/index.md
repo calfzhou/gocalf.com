@@ -2,10 +2,10 @@
 title: Linux Server Setup
 notebook: notes
 tags:
-- software/linux
-- it/server
+  - software/linux
+  - it/server
 date: 2025-12-21 12:31:54
-updated: 2025-12-21 20:37:28
+updated: 2026-04-04 11:48:25
 ---
 ## Ubuntu
 
@@ -181,6 +181,17 @@ docker info
 > [!caution]
 > 上述镜像源不一定可用，更多镜像参见 [境内 Docker 镜像状态监控](https://status.anye.xyz/)。
 
+### Install Tailscale
+
+[Tailscale | Secure Connectivity for AI, IoT & Multi-Cloud](https://tailscale.com/)
+
+```bash
+curl -fsSL https://tailscale.com/install.sh | sh
+
+sudo tailscale up
+# To authenticate, visit: ...
+```
+
 ## Service Deployment Setup
 
 ### The First Time Setup
@@ -221,4 +232,123 @@ git pull
 
 cd /opt/SERVICE-ROOT/services/DESIRED-SERVICE
 # Follow the service README file to update.
+```
+
+## Anbolt Linux 盒子 + Ubuntu
+
+瑞芯微主控 RK3528
+
+[Anbolt 电视盒媒体播放器安卓 Linux – Anbolt Armbox World](https://anbolt.net/)
+
+> [!warning]
+> Don't run `upgrade`!
+
+### Info
+
+```text
+ __  _____  ___ ___ ___  ___  _ ____
+ \ \/ ( _ )( _ ) _ \ _ \/ _ \/ |__ /
+  >  </ _ \/ _ \  _/   / (_) | ||_ \
+ /_/\_\___/\___/_| |_|_\___/|_|___/
+
+ v25.05 rolling for X88pro13 running Armbian Linux 6.1.99-vendor-rk35xx
+
+ Packages:     Ubuntu stable (jammy), possible distro upgrade (noble)
+ Updates:      Kernel upgrade enabled and 92 packages available for upgrade
+ Support:      DIY (custom image)
+
+ Commands:
+
+ Configuration : armbian-config
+ Upgrade       : armbian-upgrade
+ Monitoring    : htop
+```
+
+### Change Locale
+
+```bash
+update-locale LANG=en_US.UTF-8
+update-locale LC_MESSAGES=en_US.UTF-8
+update-locale LANGUAGE=en_US:en
+```
+
+### Expand EMMC to Root FS
+
+```bash expand_emmc_rootfs.sh
+#!/bin/bash
+EMMC_ROOT=$(mount -l | grep "on / type" | cut -d ' ' -f 1)
+echo "are you sure resize ${EMMC_ROOT}? (y/n)"
+read answer
+if [[ $answer =~ ^[Yy]$ ]]; then
+    EMMC_ROOT_DISK=$(echo $EMMC_ROOT | cut -c 1-12)
+    parted $EMMC_ROOT_DISK resizepart 2 100%
+    echo "start resize emmc..."
+    resize2fs ${EMMC_ROOT}
+    sync
+    echo "resize finished"
+elif [[ $answer =~ ^[Nn]$ ]]; then
+    exit
+fi
+```
+
+```shell-session
+# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk1p2  6.9G  1.3G  5.5G  20% /
+
+# lsblk
+NAME         MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+mmcblk1      179:0    0 58.2G  0 disk
+├─mmcblk1p1  179:1    0  256M  0 part /boot
+└─mmcblk1p2  179:2    0  7.1G  0 part /var/log.hdd
+                                      /
+
+# ./expand_emmc_rootfs.sh
+are you sure resize /dev/mmcblk1p2? (y/n)
+y
+Warning: Not all of the space available to /dev/mmcblk1 appears to be used, you can fix the GPT to use all of the space (an extra 106414080 blocks) or continue with the
+current setting?
+Fix/Ignore? f
+Partition number? 2
+Warning: Partition /dev/mmcblk1p2 is being used. Are you sure you want to continue?
+Yes/No? y
+End?  [7885MB]? 100%
+Information: You may need to update /etc/fstab.
+
+start resize emmc...
+resize2fs 1.46.5 (30-Dec-2021)
+Filesystem at /dev/mmcblk1p2 is mounted on /; on-line resizing required
+old_desc_blocks = 1, new_desc_blocks = 8
+The filesystem on /dev/mmcblk1p2 is now 15198203 (4k) blocks long.
+
+resize finished
+
+# lsblk
+NAME         MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+mmcblk1      179:0    0 58.2G  0 disk
+├─mmcblk1p1  179:1    0  256M  0 part /boot
+└─mmcblk1p2  179:2    0   58G  0 part /var/log.hdd
+                                      /
+
+# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk1p2   58G  1.3G   56G   3% /
+```
+
+### Install Docker
+
+```bash
+apt update
+apt install -y apparmor-utils docker.io docker-compose
+# Note: there is no docker-compose-plugin
+
+docker --version
+#> Docker version 28.2.2, build 28.2.2-0ubuntu1~22.04.1
+docker-compose version
+#> docker-compose version 1.29.2, build unknown
+#> docker-py version: 5.0.3
+#> CPython version: 3.10.12
+#> OpenSSL version: OpenSSL 3.0.2 15 Mar 2022
+
+service docker status
 ```
