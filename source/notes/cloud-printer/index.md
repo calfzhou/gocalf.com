@@ -5,7 +5,7 @@ tags:
   - software
   - hardware
 date: 2026-04-04 20:34:29
-updated: 2026-04-04 20:34:29
+updated: 2026-04-05 22:52:52
 ---
 ## 远程打印助手（互维云）
 
@@ -14,6 +14,8 @@ updated: 2026-04-04 20:34:29
 ![互维云印](20260404-180619.png)
 
 Docker image: [tzishue/cloud-printer - Docker Image](https://hub.docker.com/r/tzishue/cloud-printer)
+
+> 可以用 [Linux Server Setup](../linux-server-setup/index.md) 中的 Anbolt 机顶盒（刷了 Ubuntu）跑这个服务。
 
 ```bash
 # macOS
