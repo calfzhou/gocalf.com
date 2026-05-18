@@ -7,7 +7,7 @@ tags:
 mermaid: true
 katex: true
 date: 2025-07-12 20:34:28
-updated: 2025-07-12 20:34:28
+updated: 2026-05-18 21:30:40
 ---
 ## Info
 
@@ -50,6 +50,13 @@ updated: 2025-07-12 20:34:28
 | XNOR, iff | ⊙⇔     | 同或 等价 | $\odot$ $\iff$ $\Leftrightarrow$ | `\odot` `\iff` `\Leftrightarrow` |
 | Implies   | ⇒      | 蕴涵    | $\implies$ $\Rightarrow$         | `\implies` `\Rightarrow`         |
 
+| a   | b   | inv a | and | nand | or  | nor | xor | xnor |
+| --- | --- | ----- | --- | ---- | --- | --- | --- | ---- |
+| 0   | 0   | 1     | 0   | 1    | 0   | 1   | 0   | 1    |
+| 0   | 1   | 1     | 0   | 1    | 1   | 0   | 1   | 0    |
+| 1   | 0   | 0     | 0   | 1    | 1   | 0   | 1   | 0    |
+| 1   | 1   | 0     | 1   | 0    | 1   | 0   | 0   | 1    |
+
 ## Component Costs
 
 | Component      | nand        | bits = 16         |
@@ -71,14 +78,7 @@ updated: 2025-07-12 20:34:28
 | counter        |             | 386               |
 | ram            | 107520 / KB |                   |
 
-## Hardware Level: Logic Gates
-
-| a   | b   | nand | inv a | and | or  | xor | xnor |
-| --- | --- | ---- | ----- | --- | --- | --- | ---- |
-| 0   | 0   | 1    | 1     | 0   | 0   | 0   | 1    |
-| 0   | 1   | 1    | 1     | 0   | 1   | 1   | 0    |
-| 1   | 0   | 1    | 0     | 0   | 1   | 1   | 0    |
-| 1   | 1   | 0    | 0     | 1   | 1   | 0   | 1    |
+## Levels: Logic Gates
 
 ### Nand
 
@@ -91,7 +91,7 @@ Build a **nand** component using **relays** (default on relay and default off r
 
 - `relay-off(c=a, in=b) => a and b`
 - `relay-on(c=a, in=b) => inv(b implies a)`
-  - `relay-on(c=a, in=1) => inv a`
+- `relay-on(c=a, in=1) => inv a`
 
 So, `a nand b = inv(a and b) = relay-on(c=relay-off(c=a, in=b), in=1)`
 
@@ -185,7 +185,7 @@ n0 --> j@{ shape: f-circ } --> n1 & n2 --> n3[nand] --> o(((o)))
 
 👍 Totally 4c4n.
 
-## Hardware Level: Arithmetics
+## Levels: Arithmetics
 
 > [!tip]
 > Binary numbers are a base-2 numbering system, so just two digits are used: 0 and 1. In binary the positions are factors of two: 1's, 2's, 4's, 8's, and so on. So 101 in binary is 5 in decimal (1 x 4 + 0 x 2 + 1 x 1). Binary numbers are ideal for digital circuits since the two states in digital systems can be made to correspond to the digits 0 and 1.
@@ -468,7 +468,7 @@ spliter -->|15| O(((O)))
 
 👍 Totally 0c0n.
 
-## Hardware Level: Switching
+## Levels: Switching
 
 ### Selector
 
@@ -551,7 +551,7 @@ nand & d --> and --> c0(((c0)))
 <!-- TBLFM: @>$2=sum(@I..@-1) -->
 <!-- TBLFM: @>$>=sum(@I..@-1) -->
 
-## Hardware Level: Arithmetic Logic Unit
+## Levels: Arithmetic Logic Unit
 
 > We now have a set of different operations available. The core of a processor is the ability to select different operations based on input.
 
@@ -759,7 +759,7 @@ or-pos --> i-pos[inv] --> n-gt
 <!-- TBLFM: @>$2=sum(@I..@-1) -->
 <!-- TBLFM: @>$>=sum(@I..@-1) -->
 
-## Hardware Level: Memory
+## Levels: Memory
 
 ### SR Latch
 
@@ -1082,7 +1082,7 @@ Output:
 
 Note: 420n for this 2x16-bit (i.e. 4 B) register, so `420 / 4 * 1024 = 107520 nand/KB`.
 
-## Hardware Level: Processor
+## Levels: Processor
 
 ### Combined Memory
 

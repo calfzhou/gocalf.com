@@ -6,7 +6,7 @@ tags:
 - it/hardware
 katex: true
 date: 2025-07-15 23:38:35
-updated: 2025-07-15 23:38:35
+updated: 2026-05-18 21:54:22
 ---
 ## All Levels
 
@@ -91,7 +91,7 @@ E.g. `D, A = D - *A`. The result of calculation will be written to both A and D.
 
 Any combination of A, D, and \*A can be specified as destination.
 
-## Software Level: Low level
+## Levels: Assembler
 
 ### Machine code
 
@@ -287,6 +287,8 @@ A = 0x7FFF
 
 👆 其中 `ci3` 表示最高的 3 位（`ci` 及其右边的两位）。
 
+## TODO
+
 ### Keyboard input
 
 Write a program in assembler which write keyboard input into memory.
@@ -338,186 +340,7 @@ A = WAIT_KEY_PRESS
 JMP
 ```
 
-### Escape Labyrinth
-
-The computer is stuck in a labyrinth on Mars. Write a program that will make it escape the labyrinth.
-
-The computer has connected wheels and a forward obstacle detector. Input/output to wheels and detector is memory-mapped on address 7FFF:
-
-**Output signals to peripherals:**
-
-| Bit | Bin      | Set to 1 to:            |
-| --- | -------- | ----------------------- |
-| 2   | 0b0100   | Move forward (1 step)   |
-| 3   | 0b1000   | Turn left (90 degrees)  |
-| 4   | 0b1_0000 | Turn right (90 degrees) |
-
-The movement/turn is started when a bit is changing from 0 to 1, but will take a moment to complete.
-
-**Input from peripherals:**
-
-| Bit | Bin            | When 1                     |
-| --- | -------------- | -------------------------- |
-| 8   | 0b1_00000000   | Obstacle detected in front |
-| 9   | 0b10_00000000  | Device is turning          |
-| 10  | 0b100_00000000 | Device is moving forward   |
-
-读写都在内存地址 7FFF。
-
-注意移动和旋转都会持续一段时间，需要等待动作完成，如：
-
-```nasm
-DEFINE IO 0x7FFF
-DEFINE C_IS_BUSY 0x600
-
-# Wait until idle
-LABEL WHILE_BUSY
-A = C_IS_BUSY
-D = A
-A = IO
-D = D & *A
-A = WHILE_BUSY
-D ; JNE
-```
-
-走迷宫用「沿墙走法」（使用于没有环形路径的迷宫）。比如选定右手 🫱，单手模住一面墙出发，手始终不离开墙面。
-
-但这里麻烦的点是它不会判定左边或右边是否有墙壁，就得反反复复第左右转动……判断右手是否是墙的动作就变成「向右转 - 判断前方是否有墙 - 向左转」。
-
-- ① 如果右手是墙，前方没有墙，则前进；
-- ② 如果右手是墙，前方也是墙，则左转；
-- ➂ 如果右手没有墙，则右转。
-
-按照这个 computer 的行为模式则为：
-
-- 判断前方是否有墙并记住
-- 右转
-- 判断前方有墙
-  - 若没有，则前进（对应上边情况 ③）
-  - 若有，则检查刚才记录的开始时前方是否有墙
-    - 若有，则左转两次（对应上边情况 ②）
-    - 若没有，则左转，然后前进（对应上边情况 ①）
-
-```nasm
-# Assembler code
-DEFINE IO 0x7FFF
-DEFINE C_FRONT_WALL 0x100
-DEFINE C_IS_BUSY 0x600
-DEFINE C_MOVE_FORWARD 0x04
-DEFINE C_TURN_LEFT 0x08
-DEFINE C_TURN_RIGHT 0x10
-DEFINE F_IS_WALL 0x100
-DEFINE ONE_STACK 0xFF
-
-LABEL GOTO_BEGIN
-
-# Detect current front and remeber
-A = C_FRONT_WALL
-D = A
-A = IO
-D = D & *A
-A = F_IS_WALL
-*A = D
-
-# Turn right
-A = GOTO_1
-D = A
-A = ONE_STACK
-*A = D
-A = C_TURN_RIGHT
-D = A
-A = FUNC_EXEC_ACTION
-JMP
-
-LABEL GOTO_1
-
-# Detect current front (previous right)
-A = C_FRONT_WALL
-D = A
-A = IO
-D = D & *A
-A = CASE_3
-D ; JEQ
-
-# Check previous front status
-A = F_IS_WALL
-D = *A
-A = CASE_1
-D ; JEQ
-
-# Case 2: turn left twice
-LABEL CASE_2
-A = GOTO_2
-D = A
-A = ONE_STACK
-*A = D
-A = C_TURN_LEFT
-D = A
-A = FUNC_EXEC_ACTION
-JMP
-
-LABEL GOTO_2
-
-A = GOTO_BEGIN
-D = A
-A = ONE_STACK
-*A = D
-A = C_TURN_LEFT
-D = A
-A = FUNC_EXEC_ACTION
-JMP
-
-# Case 1: turn left then move forward
-LABEL CASE_1
-A = GOTO_3
-D = A
-A = ONE_STACK
-*A = D
-A = C_TURN_LEFT
-D = A
-A = FUNC_EXEC_ACTION
-JMP
-
-LABEL GOTO_3
-
-A = GOTO_BEGIN
-D = A
-A = ONE_STACK
-*A = D
-A = C_MOVE_FORWARD
-D = A
-A = FUNC_EXEC_ACTION
-JMP
-
-# Case 3: move forward now
-LABEL CASE_3
-A = GOTO_BEGIN
-D = A
-A = ONE_STACK
-*A = D
-A = C_MOVE_FORWARD
-D = A
-A = FUNC_EXEC_ACTION
-JMP
-
-# A function
-# Performs the move/turn action specified by D
-# Waits until the move/turn complete
-# Jump to *ONE_STACK
-LABEL FUNC_EXEC_ACTION
-A = IO
-*A = D | *A
-LABEL WHILE_BUSY
-A = C_IS_BUSY
-D = A
-A = IO
-D = D & *A
-A = WHILE_BUSY
-D ; JNE
-A = ONE_STACK
-A = *A
-JMP
-```
+## Levels: Display
 
 ### Display
 
@@ -862,6 +685,8 @@ A = 0x51F0
 
 ![My logo](20250618-214751.png)
 
+## Levels: Network
+
 ### Network
 
 Receive data from another computer over the network and display it on the screen.
@@ -1034,7 +859,190 @@ JMP
 LABEL L_END
 ```
 
-## Software Level: Stack machine
+## Levels: Robotics
+
+### Escape Labyrinth
+
+The computer is stuck in a labyrinth on Mars. Write a program that will make it escape the labyrinth.
+
+The computer has connected wheels and a forward obstacle detector. Input/output to wheels and detector is memory-mapped on address 7FFF:
+
+**Output signals to peripherals:**
+
+| Bit | Bin      | Set to 1 to:            |
+| --- | -------- | ----------------------- |
+| 2   | 0b0100   | Move forward (1 step)   |
+| 3   | 0b1000   | Turn left (90 degrees)  |
+| 4   | 0b1_0000 | Turn right (90 degrees) |
+
+The movement/turn is started when a bit is changing from 0 to 1, but will take a moment to complete.
+
+**Input from peripherals:**
+
+| Bit | Bin            | When 1                     |
+| --- | -------------- | -------------------------- |
+| 8   | 0b1_00000000   | Obstacle detected in front |
+| 9   | 0b10_00000000  | Device is turning          |
+| 10  | 0b100_00000000 | Device is moving forward   |
+
+读写都在内存地址 7FFF。
+
+注意移动和旋转都会持续一段时间，需要等待动作完成，如：
+
+```nasm
+DEFINE IO 0x7FFF
+DEFINE C_IS_BUSY 0x600
+
+# Wait until idle
+LABEL WHILE_BUSY
+A = C_IS_BUSY
+D = A
+A = IO
+D = D & *A
+A = WHILE_BUSY
+D ; JNE
+```
+
+走迷宫用「沿墙走法」（使用于没有环形路径的迷宫）。比如选定右手 🫱，单手模住一面墙出发，手始终不离开墙面。
+
+但这里麻烦的点是它不会判定左边或右边是否有墙壁，就得反反复复第左右转动……判断右手是否是墙的动作就变成「向右转 - 判断前方是否有墙 - 向左转」。
+
+- ① 如果右手是墙，前方没有墙，则前进；
+- ② 如果右手是墙，前方也是墙，则左转；
+- ➂ 如果右手没有墙，则右转。
+
+按照这个 computer 的行为模式则为：
+
+- 判断前方是否有墙并记住
+- 右转
+- 判断前方有墙
+  - 若没有，则前进（对应上边情况 ③）
+  - 若有，则检查刚才记录的开始时前方是否有墙
+    - 若有，则左转两次（对应上边情况 ②）
+    - 若没有，则左转，然后前进（对应上边情况 ①）
+
+```nasm
+# Assembler code
+DEFINE IO 0x7FFF
+DEFINE C_FRONT_WALL 0x100
+DEFINE C_IS_BUSY 0x600
+DEFINE C_MOVE_FORWARD 0x04
+DEFINE C_TURN_LEFT 0x08
+DEFINE C_TURN_RIGHT 0x10
+DEFINE F_IS_WALL 0x100
+DEFINE ONE_STACK 0xFF
+
+LABEL GOTO_BEGIN
+
+# Detect current front and remeber
+A = C_FRONT_WALL
+D = A
+A = IO
+D = D & *A
+A = F_IS_WALL
+*A = D
+
+# Turn right
+A = GOTO_1
+D = A
+A = ONE_STACK
+*A = D
+A = C_TURN_RIGHT
+D = A
+A = FUNC_EXEC_ACTION
+JMP
+
+LABEL GOTO_1
+
+# Detect current front (previous right)
+A = C_FRONT_WALL
+D = A
+A = IO
+D = D & *A
+A = CASE_3
+D ; JEQ
+
+# Check previous front status
+A = F_IS_WALL
+D = *A
+A = CASE_1
+D ; JEQ
+
+# Case 2: turn left twice
+LABEL CASE_2
+A = GOTO_2
+D = A
+A = ONE_STACK
+*A = D
+A = C_TURN_LEFT
+D = A
+A = FUNC_EXEC_ACTION
+JMP
+
+LABEL GOTO_2
+
+A = GOTO_BEGIN
+D = A
+A = ONE_STACK
+*A = D
+A = C_TURN_LEFT
+D = A
+A = FUNC_EXEC_ACTION
+JMP
+
+# Case 1: turn left then move forward
+LABEL CASE_1
+A = GOTO_3
+D = A
+A = ONE_STACK
+*A = D
+A = C_TURN_LEFT
+D = A
+A = FUNC_EXEC_ACTION
+JMP
+
+LABEL GOTO_3
+
+A = GOTO_BEGIN
+D = A
+A = ONE_STACK
+*A = D
+A = C_MOVE_FORWARD
+D = A
+A = FUNC_EXEC_ACTION
+JMP
+
+# Case 3: move forward now
+LABEL CASE_3
+A = GOTO_BEGIN
+D = A
+A = ONE_STACK
+*A = D
+A = C_MOVE_FORWARD
+D = A
+A = FUNC_EXEC_ACTION
+JMP
+
+# A function
+# Performs the move/turn action specified by D
+# Waits until the move/turn complete
+# Jump to *ONE_STACK
+LABEL FUNC_EXEC_ACTION
+A = IO
+*A = D | *A
+LABEL WHILE_BUSY
+A = C_IS_BUSY
+D = A
+A = IO
+D = D & *A
+A = WHILE_BUSY
+D ; JNE
+A = ONE_STACK
+A = *A
+JMP
+```
+
+## Levels: Stack operations
 
 ### Init stack
 
@@ -1129,337 +1137,6 @@ D = A
 push.D
 ```
 
-### Add
-
-Pop two values from the stack, add them, and push the sum on the stack.
-
-```nasm
-# add
-pop.D
-pop.A
-D = D + A
-push.D
-```
-
-### Sub
-
-Pop two values from stack, subtract the first from the second, and then push the result back on the stack.
-
-![|120](20250622-224209.png "Sub"){.invert-when-dark}
-
-“subtract the first from the second” = 「从第二个数中减去第一个数」，即 **后出栈的数 - 先出栈的数**。
-
-因为出栈是 macro 内部逻辑，从使用者的角度，就是 **先入栈的数 - 后入栈的数**。
-
-```nasm
-# sub
-pop.D
-pop.A
-D = A - D
-push.D
-```
-
-### Neg
-
-Negate the value on top of the stack.
-
-```nasm
-# neg
-pop.D
-D = -D
-push.D
-```
-
-### And
-
-Pop two values from stack, perform a bitwise AND and push the result back on the stack.
-
-```nasm
-# and
-pop.D
-pop.A
-D = D & A
-push.D
-```
-
-### Or
-
-Pop two values from stack, perform a bitwise OR and push the result back on the stack.
-
-```nasm
-# or
-pop.D
-pop.A
-D = D | A
-push.D
-```
-
-## Software Level: High-level language
-
-A high level language have a more human-friendly and flexible syntax which is then _compiled_ into machine code instructions. For example the high-level code `2 + 2` could be compiled into the low-level code:
-
-```nasm
-push.value 2
-push.value 2
-ADD
-```
-
-Compilation has three stages:
-
-1. (1) Tokenization
-2. (2) Parsing
-3. (3) Code generation
-
-### Tokenize
-
-The tokenizer is preconfigured to recognize numbers and the symbol '+'.
-
-Configure the tokenizer to additionally recognize the symbols minus '-' and parentheses '(' and ')'.
-
-Token type:
-
-- **Exact** matches match the exact text specified under `Match`. Multiple exact matches can be specified in the same box, separated by whitespace.
-- **Pattern** can use character groups in brackets and quantifiers `*` and `+`.
-        - Example: `[0-9]` matches a decimal digit, `[0-9]+` matches one or more digits.
-
-Gramma property:
-
-- **Ignore** patterns are skipped by the tokenizer. Use e.g. for whitespace and comments.
-- **Name** patterns are represented with the specified name in the grammar.
-- **Literal** matches are represented with the literal text in the grammar.
-
-Token definitions:
-
-| Type    | Match     | Grammar | Token name |
-| ------- | --------- | ------- | ---------- |
-| Pattern | `[ ]+`    | Ignore  |            |
-| Pattern | `[0-9]+`  | Name    | Number     |
-| Exact   | `+ - ( )` | Literal |            |
-
-### Grammar
-
-Parse the sequence of tokens into a syntax-tree.
-
-The syntax of a high-level language is described through a **grammar**.
-
-A grammar is a set of rules where each rule names a part of the syntax and defines how it composed.
-
-The terms used in the grammar are called symbols. The rules define how a symbol (left of the arrow) is composed of one or more other symbols (right of the arrow). The symbols the right of the arrow are either tokens which is defined by the token specification (in the previous step), or they are symbols themselves defined by rules in the same grammar.
-
-The symbols representing tokens (like `Number` and `+`) are called _terminals_, the symbols like Program and Expression which are defined by other rules in the grammar are called _non-terminals_.
-
-The names used as non-terminal symbols are arbitrary – you can use names which makes sense for you. Only condition is there must be a "starting symbol" called `Program`, which represent the whole program.
-
-This game uses an Earley-parser, which is not the fastest but which is flexible and easy to write a grammar for.
-
-Define a **Grammar** for expressions involving numbers, parentheses and the operators `+` and `-`.
-
-The start symbol is `Expression`.
-
-An expression should correspond to one of:
-
-- A `Number` token
-- _Expression_ `+` _Expression_
-- _Expression_ `-` _Expression_
-- `-` _Expression_
-- `(` _Expression_ `)`
-
-Grammar:
-
-> [!caution]
-> 本关中的错误，在 check solution 时可能无法指出，到下一关 code generation 时可能会遇到问题，需要再回来修改。
-
-- Expression → `Number`
-- Expression → `Number`
-- Expression → `( Expression )`
-- Expression → `Expression + Expression`
-- Expression → `Expression - Expression`
-
-### Code generation
-
-The third step in the compilation is to generate machine code from the syntax tree.
-
-This is done by associating each syntax rule with a block of assembler code.
-
-The compiler then generate the resulting code by traversing the syntax tree and for each node in the tree generate the code associated with the rule.
-
-Define code-generation for the syntax rules of the language, to support addition and subtraction.
-
-Syntax rules:
-
-```nasm
-# Expression → `Number`
-push.value [Number]
-
-# Expression → `Number`
-[Expression]
-neg
-
-# Expression → `( Expression )`
-[Expression]
-
-# Expression → `Expression + Expression`
-[Expression 1]
-[Expression 2]
-add
-
-# Expression → `Expression - Expression`
-[Expression 1]
-[Expression 2]
-sub
-```
-
-有个问题是它不会遵循从左向右的计算顺序，比如`100 - 2 + 2 - (7 + 10)` 会得到如下的表达式，结果是 113 而不是期望的 83。
-
-![|480](20250622-215112.png "Expression tree"){.invert-when-dark}
-
-## Software Level: Conditonals
-
-### Eq
-
-Pop the two top values from the stack and compare them. If they are equal, push the value -1 (`FFFF` in hex). Otherwise push `0`.
-
-In conditionals, `FFFF` represents _true_ and `0` represents _false_.
-
-```nasm
-# eq
-pop.D
-pop.A
-D = D - A
-A = WHEN_TRUE
-D ; JEQ
-push.value 0
-A = END
-JMP
-
-LABEL WHEN_TRUE
-D = 0
-D = ~D
-push.D
-
-LABEL END
-```
-
-### Gt
-
-Pop the two top values from the stack and compare them. If the first is greater than the second, push the value -1 (`FFFF` in hex). Otherwise push 0.
-
-![|120](20250622-223615.png "Eq"){.invert-when-dark}
-
-这里文字描述跟图片有出入。文字说的是如果 **先出栈的数 > 后出栈的数**，结果为 -1。但图中先出栈 5，大于后出栈的 3，结果却为 0。
-
-"Test code" 的提示跟文字描述的逻辑一致。
-
-但 "Check solution" 的检查逻辑似乎跟图一致，即当 **先入栈的数 > 后入栈的数**，结果为 -1，否则为 0。这个其实跟 **sub** 的行为（**先入栈的数 - 后入栈的数**）也是类似的。
-
-```nasm
-# gt
-pop.D
-pop.A
-D = A - D
-A = WHEN_TRUE
-D ; JGT
-push.value 0
-A = END
-JMP
-
-LABEL WHEN_TRUE
-D = 0
-D = ~D
-push.D
-
-LABEL END
-```
-
-### Lt
-
-Pop the two top values from the stack and compare them. If the first is less than the second, push the value -1 (`FFFF` in hex). Otherwise push 0.
-
-同样，这里应该是指当 **先入栈的数 < 后入栈的数**，结果为 -1，否则为 0。
-
-```nasm
-# lt
-pop.D
-pop.A
-D = A - D
-A = WHEN_TRUE
-D ; JLT
-push.value 0
-A = END
-JMP
-
-LABEL WHEN_TRUE
-D = 0
-D = ~D
-push.D
-
-LABEL END
-```
-
-### Not
-
-Invert the value on top of the stack, using bitwise inversion.
-
-```nasm
-# not
-pop.D
-D = ~D
-push.D
-```
-
-### Goto
-
-Jump to the label given in the placeholder.
-
-```nasm
-goto <label>
-A = label
-JMP
-```
-
-### If-goto
-
-Pop the value on top of the stack.
-
-Jump to the label if it is non-zero.
-
-```nasm
-# if.goto <label>
-pop.D
-A = label
-D ; JNE
-```
-
-## Software Level: Memory
-
-### Push Memory
-
-The value on top of the stack is a memory address.
-
-Pop the address from the stack. Fetch the current contents of the memory address, and push this on the stack.
-
-```nasm
-# push.memory
-pop.A
-D = *A
-push.D
-```
-
-### Pop Memory
-
-Pop two values value from the stack. The second value is a memory address.
-
-Write the first value to memory at the given address.
-
-从使用者的角度，**先入栈地址，后入栈数据**。
-
-```nasm
-# pop.memory
-pop.D
-pop.A
-*A = D
-```
-
 ### Push Static
 
 Take the current contents of the memory address given by the `address` placeholder and push it on the stack.
@@ -1482,7 +1159,70 @@ A = address
 *A = D
 ```
 
-## Software Level: Functions
+### Push Memory
+
+The value on top of the stack is a memory address.
+
+Pop the address from the stack. Fetch the current contents of the memory address, and push this on the stack.
+
+```nasm
+# push.memory
+pop.A
+D = *A
+push.D
+```
+
+### Pop Memory
+
+Pop two values from the stack. The second value is a memory address.
+
+Write the first value to memory at the given address.
+
+从使用者的角度，**先入栈地址，后入栈数据**。
+
+```nasm
+# pop.memory
+pop.D
+pop.A
+*A = D
+```
+
+## Levels: Jumps
+
+### Goto
+
+Jump to the label given in the placeholder.
+
+```nasm
+# goto <label>
+A = label
+JMP
+```
+
+### Stop
+
+Stops execution. Since a processor can't actually stop, implement this as an infinite loop.
+
+```nasm
+# stop
+LABEL END
+goto END
+```
+
+### If-goto
+
+Pop the value on top of the stack.
+
+Jump to the label if it is non-zero.
+
+```nasm
+# if.goto <label>
+pop.D
+A = label
+D ; JNE
+```
+
+## Levels: Function calls
 
 The **function** is perhaps the single most important abstraction in software.
 
@@ -1576,7 +1316,7 @@ push.static RETVAL
 
 ### Function
 
-The **Function** macro defines the top of the function block. It should adjust the stack to make space for local storage. The size of the local storage is given in the placeholder **localsCount**
+The **Function** macro defines the top of the function block. It should adjust the stack to make space for local storage. The size of the local storage is given in the placeholder **localsCount**.
 
 - A label with the name given in the placeholder **functionName** should start the block.
 - Set LOCALS to the current SP.
@@ -1653,6 +1393,390 @@ A = D ^ A
 
 *A = D
 ```
+
+### add
+
+The function takes two arguments. It adds them and place the sum on the stack.
+
+之前是 macro 版本：Pop two values from the stack, add them, and push the sum on the stack. 实现方式为：
+
+```nasm
+# add
+pop.D
+pop.A
+D = D + A
+push.D
+```
+
+改成 function call，只需要先用 `push.argument` 把两个入参放在栈上。
+
+```nasm
+function add 0
+    # called with 2 arguments
+    push.argument 0
+    push.argument 1
+    pop.D
+    pop.A
+    D = D + A
+    push.D
+return
+```
+
+### sub
+
+The function takes two arguments. Subtract the second argument from the first and push the result on the stack.
+
+```nasm
+function sub 0
+    # called with 2 arguments
+    push.argument 0
+    push.argument 1
+    pop.D
+    pop.A
+    D = A - D
+    push.D
+return
+```
+
+### negate
+
+Arithmetic negation of a number. E.g. the negation of 7 is -7 (`FFF9`).
+
+The function takes one argument. Negate the argument and push the result on the stack.
+
+```nasm
+function negate 0
+    # called with 1 arguments
+    push.argument 0
+    pop.D
+    D = -D
+    push.D
+return
+```
+
+### getChar
+
+Wait for next keyboard input and return the key code on the stack.
+
+The keyboard input is memory-mapped to address `6000`.
+
+The function should return when the keypress ends, i.e. when the input changes back to `0`.
+
+参考前边 [Keyboard input](#Keyboard%20input)。
+
+```nasm
+function getChar 0
+    # called with 0 arguments
+    DEFINE KBD 0x6000
+
+    # Waiting for key press
+    LABEL WAIT_KEY_PRESS
+    A = KBD
+    D = *A
+    A = WAIT_KEY_PRESS
+    D ; JEQ
+
+    # Some key is pressing
+    # Push it to the stack
+    push.D
+
+    # Waiting for key release
+    LABEL WAIT_KEY_RELEASE
+    A = KBD
+    D = *A
+    A = WAIT_KEY_RELEASE
+    D ; JNE
+
+    # The key has released
+return
+```
+
+### putChar
+
+Send a character to the electric typewriter.
+
+The typewriter input is memory-mapped to address `6002`.
+
+The function takes one argument, the character code to send to the typewriter.
+
+```nasm
+function putChar 0
+    # called with 1 arguments
+    DEFINE TYPEWRITER 0x6002
+
+    # write the character to the typewriter
+    push.argument 0
+    pop.D
+    A = TYPEWRITER
+    *A = D
+
+    # push 0 to the stack
+    push.value 0
+return
+```
+
+## Levels: Conditionals
+
+### and
+
+Performs bitwise AND.
+
+```nasm
+function and 0
+    # called with 2 arguments
+    # perform bitwise AND
+    push.argument 0
+    push.argument 1
+    pop.D
+    pop.A
+    D = D & A
+
+    # push the result to the stack
+    push.D
+return
+```
+
+### or
+
+Performs bitwise OR.
+
+```nasm
+function or 0
+    # called with 2 arguments
+    # perform bitwise OR
+    push.argument 0
+    push.argument 1
+    pop.D
+    pop.A
+    D = D | A
+
+    # push the result to the stack
+    push.D
+return
+```
+
+### not
+
+Performs bitwise INV.
+
+```nasm
+function not 0
+    # called with 1 argument
+    # perform bitwise INV
+    push.argument 0
+    pop.D
+    D = ~D
+
+    # push the result to the stack
+    push.D
+return
+```
+
+### equals
+
+If the arguments are equal, push `xFFFF` to the stack, otherwise push `0`.
+
+```nasm
+function equals 0
+    # called with 2 arguments
+    push.argument 0
+    push.argument 1
+    pop.D
+    pop.A
+    D = D - A
+    A = WHEN_TRUE
+    D ; JEQ
+    push.value 0
+    A = END
+    JMP
+    
+    LABEL WHEN_TRUE
+    D = 0
+    D = ~D
+    push.D
+    
+    LABEL END
+return
+```
+
+## TODO (To Be Deleted)
+
+### Gt
+
+Pop the two top values from the stack and compare them. If the first is greater than the second, push the value -1 (`FFFF` in hex). Otherwise push 0.
+
+![|120](20250622-223615.png "Eq"){.invert-when-dark}
+
+这里文字描述跟图片有出入。文字说的是如果 **先出栈的数 > 后出栈的数**，结果为 -1。但图中先出栈 5，大于后出栈的 3，结果却为 0。
+
+"Test code" 的提示跟文字描述的逻辑一致。
+
+但 "Check solution" 的检查逻辑似乎跟图一致，即当 **先入栈的数 > 后入栈的数**，结果为 -1，否则为 0。这个其实跟 **sub** 的行为（**先入栈的数 - 后入栈的数**）也是类似的。
+
+```nasm
+# gt
+pop.D
+pop.A
+D = A - D
+A = WHEN_TRUE
+D ; JGT
+push.value 0
+A = END
+JMP
+
+LABEL WHEN_TRUE
+D = 0
+D = ~D
+push.D
+
+LABEL END
+```
+
+### Lt
+
+Pop the two top values from the stack and compare them. If the first is less than the second, push the value -1 (`FFFF` in hex). Otherwise push 0.
+
+同样，这里应该是指当 **先入栈的数 < 后入栈的数**，结果为 -1，否则为 0。
+
+```nasm
+# lt
+pop.D
+pop.A
+D = A - D
+A = WHEN_TRUE
+D ; JLT
+push.value 0
+A = END
+JMP
+
+LABEL WHEN_TRUE
+D = 0
+D = ~D
+push.D
+
+LABEL END
+```
+
+## Levels: Compiler
+
+A high level language have a more human-friendly and flexible syntax which is then _compiled_ into machine code instructions. For example the high-level code `2 + 2` could be compiled into the low-level code:
+
+```nasm
+push.value 2
+push.value 2
+ADD
+```
+
+Compilation has three stages:
+
+1. (1) Tokenization
+2. (2) Parsing
+3. (3) Code generation
+
+### Tokenize
+
+The tokenizer is preconfigured to recognize numbers and the symbol '+'.
+
+Configure the tokenizer to additionally recognize the symbols minus '-' and parentheses '(' and ')'.
+
+Token type:
+
+- **Exact** matches match the exact text specified under `Match`. Multiple exact matches can be specified in the same box, separated by whitespace.
+- **Pattern** can use character groups in brackets and quantifiers `*` and `+`.
+        - Example: `[0-9]` matches a decimal digit, `[0-9]+` matches one or more digits.
+
+Gramma property:
+
+- **Ignore** patterns are skipped by the tokenizer. Use e.g. for whitespace and comments.
+- **Name** patterns are represented with the specified name in the grammar.
+- **Literal** matches are represented with the literal text in the grammar.
+
+Token definitions:
+
+| Type    | Match     | Grammar | Token name |
+| ------- | --------- | ------- | ---------- |
+| Pattern | `[ ]+`    | Ignore  |            |
+| Pattern | `[0-9]+`  | Name    | Number     |
+| Exact   | `+ - ( )` | Literal |            |
+
+### Grammar
+
+Parse the sequence of tokens into a syntax-tree.
+
+The syntax of a high-level language is described through a **grammar**.
+
+A grammar is a set of rules where each rule names a part of the syntax and defines how it composed.
+
+The terms used in the grammar are called symbols. The rules define how a symbol (left of the arrow) is composed of one or more other symbols (right of the arrow). The symbols the right of the arrow are either tokens which is defined by the token specification (in the previous step), or they are symbols themselves defined by rules in the same grammar.
+
+The symbols representing tokens (like `Number` and `+`) are called _terminals_, the symbols like Program and Expression which are defined by other rules in the grammar are called _non-terminals_.
+
+The names used as non-terminal symbols are arbitrary – you can use names which makes sense for you. Only condition is there must be a "starting symbol" called `Program`, which represent the whole program.
+
+This game uses an Earley-parser, which is not the fastest but which is flexible and easy to write a grammar for.
+
+Define a **Grammar** for expressions involving numbers, parentheses and the operators `+` and `-`.
+
+The start symbol is `Expression`.
+
+An expression should correspond to one of:
+
+- A `Number` token
+- _Expression_ `+` _Expression_
+- _Expression_ `-` _Expression_
+- `-` _Expression_
+- `(` _Expression_ `)`
+
+Grammar:
+
+> [!caution]
+> 本关中的错误，在 check solution 时可能无法指出，到下一关 code generation 时可能会遇到问题，需要再回来修改。
+
+- Expression → `Number`
+- Expression → `- Expression`
+- Expression → `( Expression )`
+- Expression → `Expression + Expression`
+- Expression → `Expression - Expression`
+
+### Code generation
+
+The third step in the compilation is to generate machine code from the syntax tree.
+
+This is done by associating each syntax rule with a block of assembler code.
+
+The compiler then generate the resulting code by traversing the syntax tree and for each node in the tree generate the code associated with the rule.
+
+Define code-generation for the syntax rules of the language, to support addition and subtraction.
+
+Syntax rules:
+
+```nasm
+# Expression → `Number`
+push.value [Number]
+
+# Expression → `- Expression`
+[Expression]
+neg
+
+# Expression → `( Expression )`
+[Expression]
+
+# Expression → `Expression + Expression`
+[Expression 1]
+[Expression 2]
+add
+
+# Expression → `Expression - Expression`
+[Expression 1]
+[Expression 2]
+sub
+```
+
+有个问题是它不会遵循从左向右的计算顺序，比如`100 - 2 + 2 - (7 + 10)` 会得到如下的表达式，结果是 113 而不是期望的 83。
+
+![|480](20250622-215112.png "Expression tree"){.invert-when-dark}
+
+## Software Level: Functions
 
 ### Push local
 

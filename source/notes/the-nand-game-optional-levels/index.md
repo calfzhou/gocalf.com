@@ -6,7 +6,7 @@ tags:
 - it/hardware
 mermaid: true
 date: 2025-07-19 20:18:05
-updated: 2025-07-19 20:18:05
+updated: 2026-05-18 21:40:10
 ---
 ## All Levels
 
@@ -14,7 +14,7 @@ updated: 2025-07-19 20:18:05
 - [The Nand Game - Software Levels](../the-nand-game-software-levels/index.md)
 - [The Nand Game - Optional Levels](../the-nand-game-optional-levels/index.md)
 
-## Optional Level: Transistor level
+## Levels: Transistor level
 
 ### Nand (CMOS)
 
@@ -130,35 +130,47 @@ end
 
 👍 Totally 4c.
 
-## Optional Level: Logic
+## Levels: Functional completeness
 
-### Xnor
+### Nand from Nor
 
-`a xnor b = (a and b) or (inv a and inv b) = (a and b) or inv(a or b)`
+Build a **nand**-gate from only **nor**-gates.
 
-把 and 和中间的 or 展开，抵消掉一些之后，得到 `(a nand b) nand (a or b)`.
+- `a nand b = inv(a and b) = inv(inv a nor inv b)`
+- `inv x = x nor x`
 
 ::: invert-when-dark
 
 ```mermaid
 flowchart BT
-a((a)) & b((b)) --> n1[nand]
-a & b --> or
-n1 & or --> n2[nand] --> o(((o)))
+a((a)) & a --> n1[nor]
+b((b)) & b --> n2[nor]
+n1 & n2 --> n3[nor]
+n3 & n3 --> n4[nor] --> o(((o)))
 ```
 
 :::
 
-👍 Totally 3c5n:
+Totally 4c.
 
-| Component | Cnt | Nand | Subtotal |
-| --------- | --- | ---- | -------- |
-| nand      | 2   | 1    | 2        |
-| or        | 1   | 3    | 3        |
-| Total     | 3   |      | 5        |
-<!-- TBLFM: @I$>..@>$>=($2*$3) -->
-<!-- TBLFM: @>$2=sum(@I..@-1) -->
-<!-- TBLFM: @>$>=sum(@I..@-1) -->
+### Nand from And and Invert
+
+Build a **nand**-gate from only **and** and **inv** gates.
+
+`a nand b = inv(a and b)`.
+
+::: invert-when-dark
+
+```mermaid
+flowchart BT
+a((a)) & b((b)) --> and[and] --> inv[inv] --> o(((o)))
+```
+
+:::
+
+Totally 2c.
+
+## Levels: Bit-shifts
 
 ### Left Shift
 
@@ -250,7 +262,7 @@ sel3 ==> O(((O)))
 <!-- TBLFM: @>$2=sum(@I..@-1) -->
 <!-- TBLFM: @>$>=sum(@I..@-1) -->
 
-## Optional Level: Arithmetics
+## Levels: Integer Arithmetics
 
 ### Max
 
@@ -304,7 +316,7 @@ Multiply two positive numbers. Overflow bits should be discarded.
 <!-- TBLFM: @>$2=sum(@I..@-1) -->
 <!-- TBLFM: @>$>=sum(@I..@-1) -->
 
-## Optional Level: Floating point
+## Levels: Floating Point Arithmetics
 
 Floating point numbers can represent fractions and a larger range of numbers compared to integers. This is achieved by including an **exponent** part which scale the base number up or down, corresponding to moving the bits left or right.
 
@@ -634,7 +646,7 @@ The **op**-flag determines the operation:
 <!-- TBLFM: @>$2=sum(@I..@-1) -->
 <!-- TBLFM: @>$>=sum(@I..@-1) -->
 
-## Optional Level: Multitasking
+## Levels: Multitasking CPU
 
 The processor previously built can only run a single program at a time. But modern processors are capable of multitasking – running multiple programs (called processes) simultaneously. In the following section we will build a processor capable of multitasking.
 
@@ -650,6 +662,76 @@ To make all this work, we need:
 - A way of saving the state of a running process so it can be restored later.
 - A way to give the kernel process rights to memory manipulation which a regular process don't have.
 - And we need to extend the instruction set with operations to save and restore state and configure memory protection.
+
+### General-purpose Memory
+
+> In the first processor, instruction memory (ROM) and data memory (RAM) was completely separate. This makes for a simple design, but means there is no way to install new programs or update existing programs. To enable this, we need memory which can be used for both instruction memory and data memory with read/store access.
+
+A memory unit with read/store access to one address and simultaneous read access to another address.
+
+The unit contain four 16 bit registers, accessed with 2-bit addresses.
+
+**a1** and **a0** is the A address. The output ***A** is the value stored at the A address. If **st**=1, the **X** input is stored at the A address.
+
+The output **I** is the value stored at the PC address given by **pc0** and **pc1**.
+
+**cl** is the clock.
+
+跟之前的 RAM 差不多，switch 和 select-16 都增加一层（因为这次有四个 register），再给输出 **I** 来一组 select-16。
+
+![|640](20250630-223152.png "General-purpose Memory")
+
+❓ Totally 13c1100n:
+
+| Component | Cnt | Nand | Subtotal |
+| --------- | --- | ---- | -------- |
+| register  | 4   | 176  | 704      |
+| switch    | 3   | 4    | 12       |
+| select 16 | 6   | 64   | 384      |
+| Total     | 13  |      | 1100     |
+<!-- TBLFM: @I$>..@>$>=($2*$3) -->
+<!-- TBLFM: @>$2=sum(@I..@-1) -->
+<!-- TBLFM: @>$>=sum(@I..@-1) -->
+
+### Protected Memory
+
+> We need to give each process a dedicated area of memory which cannot be read or overwritten by other processes. We also need the possibility of sharing memory between two processes.
+>
+> We solve this by creating 8 memory segments (each 64Kb) and then assign segments to the active process. When the active process access a 16 bit memory address, we use the segment configuration to select the appropriate segment for the address.
+>
+> For flexibility we use two different segment-configurations for low and high addresses, so they can be in different segments. We also use different segment-configurations for instruction memory and data memory.
+
+Extend the 16-bit addresses A and PC into 18-bit addresses by prepending 3 bits from M. Bit 15 of the input address determine which 3-bit block is used.
+
+| Input | Bit 15 | Segment   | readonly-flag |
+| ----- | ------ | --------- | ------------- |
+| PC    | 0      | bit 0-2   | -             |
+| PC    | 1      | bit 4-6   | -             |
+| A     | 0      | bit 8-10  | bit 11        |
+| A     | 1      | bit 12-14 | bit 15        |
+
+The high bit is discarded from the input address and instead the selected three bits is prepended, giving a 18-bit address.
+
+The 'readonly'-flag (only applicable to A addresses) determine if data can be stored. When 0, data can be stored normally by using the **st** flag. When 1, the **st**-flag is ignored.
+
+这关的 check solution 有问题。
+
+但凡提供一个 1-bit select 也能省事儿很多……
+
+![|1024](20250701-002908.png "Virtual Memory")
+
+❓ Totally 30c31n + 281600❓ n/KB:
+
+| Component | Cnt | Nand | Subtotal |
+| --------- | --- | ---- | -------- |
+| inv       | 7   | 1    | 7        |
+| nand      | 20  | 1    | 20       |
+| and       | 2   | 2    | 4        |
+| ram 18    | 1   |      | 0        |
+| Total     | 30  |      | 31       |
+<!-- TBLFM: @I$>..@>$>=($2*$3) -->
+<!-- TBLFM: @>$2=sum(@I..@-1) -->
+<!-- TBLFM: @>$>=sum(@I..@-1) -->
 
 ### Timer Trigger
 
@@ -857,76 +939,6 @@ sb、sw、md、cl 都对应接线即可。st 按照要求分别接 a、d、m 和
 | register w/ backup | 3   | 553  | 1659     |
 | pc                 | 1   | 763  | 763      |
 | Total              | 4   |      | 2422     |
-<!-- TBLFM: @I$>..@>$>=($2*$3) -->
-<!-- TBLFM: @>$2=sum(@I..@-1) -->
-<!-- TBLFM: @>$>=sum(@I..@-1) -->
-
-### General-purpose Memory
-
-> In the first processor, instruction memory (ROM) and data memory (RAM) was completely separate. This makes for a simple design, but means there is no way to install new programs or update existing programs. To enable this, we need memory which can be used for both instruction memory and data memory with read/store access.
-
-A memory unit with read/store access to one address and simultaneous read access to another address.
-
-The unit contain four 16 bit registers, accessed with 2-bit addresses.
-
-**a1** and **a0** is the A address. The output ***A** is the value stored at the A address. If **st**=1, the **X** input is stored at the A address.
-
-The output **I** is the value stored at the PC address given by **pc0** and **pc1**.
-
-**cl** is the clock.
-
-跟之前的 RAM 差不多，switch 和 select-16 都增加一层（因为这次有四个 register），再给输出 **I** 来一组 select-16。
-
-![|640](20250630-223152.png "General-purpose Memory")
-
-❓ Totally 13c1100n:
-
-| Component | Cnt | Nand | Subtotal |
-| --------- | --- | ---- | -------- |
-| register  | 4   | 176  | 704      |
-| switch    | 3   | 4    | 12       |
-| select 16 | 6   | 64   | 384      |
-| Total     | 13  |      | 1100     |
-<!-- TBLFM: @I$>..@>$>=($2*$3) -->
-<!-- TBLFM: @>$2=sum(@I..@-1) -->
-<!-- TBLFM: @>$>=sum(@I..@-1) -->
-
-### Virtual Memory
-
-> We need to give each process a dedicated area of memory which cannot be read or overwritten by other processes. We also need the possibility of sharing memory between two processes.
->
-> We solve this by creating 8 memory segments (each 64Kb) and then assign segments to the active process. When the active process access a 16 bit memory address, we use the segment configuration to select the appropriate segment for the address.
->
-> For flexibility we use two different segment-configurations for low and high addresses, so they can be in different segments. We also use different segment-configurations for instruction memory and data memory.
-
-Extend the 16-bit addresses A and PC into 18-bit addresses by prepending 3 bits from M. Bit 15 of the input address determine which 3-bit block is used.
-
-| Input | Bit 15 | Segment   | readonly-flag |
-| ----- | ------ | --------- | ------------- |
-| PC    | 0      | bit 0-2   | -             |
-| PC    | 1      | bit 4-6   | -             |
-| A     | 0      | bit 8-10  | bit 11        |
-| A     | 1      | bit 12-14 | bit 15        |
-
-The high bit is discarded from the input address and instead the selected three bits is prepended, giving a 18-bit address.
-
-The 'readonly'-flag (only applicable to A addresses) determine if data can be stored. When 0, data can be stored normally by using the **st** flag. When 1, the **st**-flag is ignored.
-
-这关的 check solution 有问题。
-
-但凡提供一个 1-bit select 也能省事儿很多……
-
-![|1024](20250701-002908.png "Virtual Memory")
-
-❓ Totally 30c31n + 281600❓ n/KB:
-
-| Component | Cnt | Nand | Subtotal |
-| --------- | --- | ---- | -------- |
-| inv       | 7   | 1    | 7        |
-| nand      | 20  | 1    | 20       |
-| and       | 2   | 2    | 4        |
-| ram 18    | 1   |      | 0        |
-| Total     | 30  |      | 31       |
 <!-- TBLFM: @I$>..@>$>=($2*$3) -->
 <!-- TBLFM: @>$2=sum(@I..@-1) -->
 <!-- TBLFM: @>$>=sum(@I..@-1) -->

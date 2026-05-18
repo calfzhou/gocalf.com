@@ -61,6 +61,33 @@
   "NandGame:Levels:ASSEMBLER_NETWORK_RECEIVE": {
     "code": "DEFINE C_NET_ADDR 0x6001\nDEFINE C_NET_DATA 0x01\nDEFINE C_NET_SYNC 0x02\nDEFINE C_STACK_BOTTOM_ADDR 0x1FF\n\nDEFINE V_STACK_TOP_ADDR 0x100\nDEFINE V_WRITE_ADDR 0x101\nDEFINE V_IMG_WORD 0x102\nDEFINE V_BIT_MASK 0x103\nDEFINE V_PREV_NET_SYNC 0x104\nDEFINE V_NET_DATA 0x105\n\n# Init net `sync` state\nA = C_NET_ADDR\nD = *A\nA = C_NET_SYNC\nD = D & A\nA = V_PREV_NET_SYNC\n*A = D\n\n# Init stack\nA = C_STACK_BOTTOM_ADDR\nD = A\nA = V_STACK_TOP_ADDR\n*A = D\n\n# Init image write address\nA = 0x4000\nD = A\nA = V_WRITE_ADDR\n*A = D\n\nLABEL L_IMAGE_WORD_LOOP\n\n# Call F_RECEIVE_BIT to receive the control bit\nA = L_001\nD = A\nA = V_STACK_TOP_ADDR\n*A = *A + 1\nA = *A\n*A = D\nA = F_RECEIVE_BIT\nJMP\n\nLABEL L_001\n\n# End if no more data\nA = V_NET_DATA\nD = *A\nA = L_END\nD ; JEQ\n\n# Init for receiving a word\nA = V_IMG_WORD\n*A = 0\nA = V_BIT_MASK\n*A = 1\n\n# Loop to receive 16 bits\nLABEL L_RECEIVE_BIT_LOOP\n\n# Call F_RECEIVE_BIT to receive a single bit\nA = L_002\nD = A\nA = V_STACK_TOP_ADDR\n*A = *A + 1\nA = *A\n*A = D\nA = F_RECEIVE_BIT\nJMP\n\nLABEL L_002\n\n# Skip if data is `0`\nA = V_NET_DATA\nD = *A\nA = L_AFTER_BIT\nD ; JEQ\n\n# Merge the received bit into the word\nA = V_BIT_MASK\nD = *A\nA = V_IMG_WORD\n*A = D | *A\n\nLABEL L_AFTER_BIT\n\n# Shift the bit mask left\nA = V_BIT_MASK\nD = *A\nD = D + *A\n*A = D\n\n# Check if we have received 16 bits\nA = L_RECEIVE_BIT_LOOP\nD ; JNE\n\n# Write the received word to the image\nA = V_IMG_WORD\nD = *A\nA = V_WRITE_ADDR\nA = *A\n*A = D\n\n# Increment the write address\nA = 0x20\nD = A\nA = V_WRITE_ADDR\n*A = D + *A\n\nA = L_IMAGE_WORD_LOOP\nJMP\n\n\n# Function\n# Receives a single bit from net\nLABEL F_RECEIVE_BIT\n\n# Wait for next bit\nLABEL L_WAIT_NET_DATA\nA = C_NET_ADDR\nD = *A\nA = C_NET_SYNC\nD = D & A\nA = V_PREV_NET_SYNC\nD = D ^ *A\nA = L_WAIT_NET_DATA\nD ; JEQ\n\n# Store the current net `sync`\nLABEL F_STORE_NET_SYNC\nA = C_NET_ADDR\nD = *A\nA = C_NET_SYNC\nD = D & A\nA = V_PREV_NET_SYNC\n*A = D\n\n# Store the current net data\nA = C_NET_ADDR\nD = *A\nA = C_NET_DATA\nD = D & A\nA = V_NET_DATA\n*A = D\n\n# Return\nA = V_STACK_TOP_ADDR\nA = *A\nD = *A\nA = V_STACK_TOP_ADDR\n*A = *A - 1\nA = D\nJMP\n\n\nLABEL L_END\n"
   },
+  "NandGame:Levels:NAND_FROM_NOR": {
+    "nodes": [
+      { "type": "NOR", "x": 77.5, "y": 608, "id": "0" },
+      { "type": "NOR", "x": 169.5, "y": 609, "id": "1" },
+      { "type": "NOR", "x": 125.5, "y": 427, "id": "2" },
+      { "type": "NOR", "x": 126.5, "y": 267, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "3", "connectorId": "1" } },
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:FUN_GETCHAR": {
+    "code": "function getChar 0\n    # called with 0 arguments\n    DEFINE KBD 0x6000\n\n    # Waiting for key press\n    LABEL WAIT_KEY_PRESS\n    A = KBD\n    D = *A\n    A = WAIT_KEY_PRESS\n    D ; JEQ\n\n    # Some key is pressing\n    # Push it to the stack\n    push.D\n\n    # Waiting for key release\n    LABEL WAIT_KEY_RELEASE\n    A = KBD\n    D = *A\n    A = WAIT_KEY_RELEASE\n    D ; JNE\n\n    # The key has released\nreturn",
+    "testCode": "init.stack\ncall getChar 0\n# type a character. The character code should be put the stack.\n"
+  },
+  "NandGame:Levels:FUN_PUTCHAR": {
+    "code": "function putChar 0\n    # called with 1 arguments\n    DEFINE SCREEN 0x6002\n\n    # write the character to the typewriter\n    push.argument 0\n    pop.D\n    A = SCREEN\n    *A = D\n\n    # push 0 to the stack\n    push.value 0\nreturn\n",
+    "testCode": "init.stack\n# ASCII code for 'A' is 0x0041\npush.value 0x0041\ncall putChar 1\n# inspect typewite. Should write the letter 'A'.\n"
+  },
   "NandGame:Levels:FLOAT_ADD": {
     "nodes": [
       { "type": "FLOAT_PACK", "x": 248.5, "y": 135, "id": "0" },
@@ -95,10 +122,6 @@
       { "name": "RETVAL", "value": "6" }
     ]
   },
-  "NandGame:Levels:STACK_PUSH_VALUE": {
-    "code": "A = value\nD = A\npush.D",
-    "testCode": "init.stack\npush.value 0x7c89\n# Inspect stack: top should be 0x7c89"
-  },
   "NandGame:Levels:FLOAT_VERIFY_EXPONENT": {
     "nodes": [
       { "type": "SELECT16", "x": 98.5, "y": 123, "id": "0" },
@@ -127,6 +150,10 @@
       { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
       { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "1" } }
     ]
+  },
+  "NandGame:Levels:STACK_PUSH_VALUE": {
+    "code": "A = value\nD = A\npush.D",
+    "testCode": "init.stack\npush.value 0x7c89\n# Inspect stack: top should be 0x7c89"
   },
   "NandGame:Levels:PROGRAM1": { "code": [32912, 2, 34064, 32775] },
   "NandGame:Levels:OR": {
@@ -158,6 +185,28 @@
       { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
       { "source": { "nodeId": "1", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "1" } },
       { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "2" } }
+    ]
+  },
+  "NandGame:Levels:CS_PROGRAM_COUNTER": {
+    "nodes": [
+      { "type": "CS_REGISTER", "x": 162.61288944411092, "y": 182.70772641243087, "id": "0" },
+      { "type": "INC16", "x": 445.9925207261872, "y": 216.12398439869082, "id": "1" },
+      { "type": "SELECT16", "x": 213.5, "y": 402, "id": "2" },
+      { "type": "INV", "x": 65.5, "y": 374, "id": "3" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "3" } },
+      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "0", "connectorId": "4" } },
+      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "0", "connectorId": "6" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "2", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
+      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "1" } }
     ]
   },
   "NandGame:Levels:CS_REGISTER": {
@@ -212,28 +261,6 @@
   "NandGame:Levels:STACK_OR": {
     "code": "pop.D\npop.A\nD = D | A\npush.D",
     "testCode": "init.stack\npush.value x0F0F\npush.value x00FF\nor\n# inspect top of stack. Should be 0FFF.\n"
-  },
-  "NandGame:Levels:CS_PROGRAM_COUNTER": {
-    "nodes": [
-      { "type": "CS_REGISTER", "x": 162.61288944411092, "y": 182.70772641243087, "id": "0" },
-      { "type": "INC16", "x": 445.9925207261872, "y": 216.12398439869082, "id": "1" },
-      { "type": "SELECT16", "x": 213.5, "y": 402, "id": "2" },
-      { "type": "INV", "x": 65.5, "y": 374, "id": "3" }
-    ],
-    "connections": [
-      { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
-      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
-      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
-      { "source": { "nodeId": "input", "connectorId": "3" }, "target": { "nodeId": "0", "connectorId": "3" } },
-      { "source": { "nodeId": "input", "connectorId": "4" }, "target": { "nodeId": "0", "connectorId": "4" } },
-      { "source": { "nodeId": "input", "connectorId": "5" }, "target": { "nodeId": "0", "connectorId": "6" } },
-      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
-      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "0" } },
-      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "2", "connectorId": "1" } },
-      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "2" } },
-      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
-      { "source": { "nodeId": "0", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "1" } }
-    ]
   },
   "NandGame:Levels:MUL16": {
     "nodes": [
@@ -381,10 +408,6 @@
       { "source": { "nodeId": "20", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "0" } }
     ]
   },
-  "NandGame:Levels:STACK_ADD": {
-    "code": "pop.D\npop.A\nD = D + A\npush.D",
-    "testCode": "init.stack\npush.value x0008\npush.value x0005\nadd\n# inspect top of stack. Should be 000d.\n"
-  },
   "NandGame:Levels:SHARED_COMPILER_CONFIG": {
     "lexical": [
       { "type": 1, "pattern": "[ ]+", "action": 0 },
@@ -399,6 +422,20 @@
       { "lhs": "Expression", "rhs": "Expression - Expression", "codegen": "[Expression 1]\n[Expression 2]\nsub" }
     ],
     "runtimeLibrary": ""
+  },
+  "NandGame:Levels:CS_TRIGGER": {
+    "nodes": [
+      { "type": "COUNTER", "x": 170.5, "y": 297, "id": "0" },
+      { "type": "SPLIT16", "x": 63.5, "y": 205, "id": "1" },
+      { "type": "INV", "x": 90.5, "y": 468, "id": "2" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "1", "connectorId": "7" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "7" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
   },
   "NandGame:Levels:FLOAT_PACK": {
     "nodes": [
@@ -436,6 +473,10 @@
       { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "5", "connectorId": "1" } },
       { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
     ]
+  },
+  "NandGame:Levels:STACK_ADD": {
+    "code": "pop.D\npop.A\nD = D + A\npush.D",
+    "testCode": "init.stack\npush.value x0008\npush.value x0005\nadd\n# inspect top of stack. Should be 000d.\n"
   },
   "NandGame:Levels:LATCH": {
     "nodes": [
@@ -526,20 +567,6 @@
       { "source": { "nodeId": "14", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "6" } },
       { "source": { "nodeId": "8", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "7" } },
       { "source": { "nodeId": "5", "connectorId": "2" }, "target": { "nodeId": "output", "connectorId": "8" } }
-    ]
-  },
-  "NandGame:Levels:CS_TRIGGER": {
-    "nodes": [
-      { "type": "COUNTER", "x": 170.5, "y": 297, "id": "0" },
-      { "type": "SPLIT16", "x": 63.5, "y": 205, "id": "1" },
-      { "type": "INV", "x": 90.5, "y": 468, "id": "2" }
-    ],
-    "connections": [
-      { "source": { "nodeId": "1", "connectorId": "7" }, "target": { "nodeId": "0", "connectorId": "0" } },
-      { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "1" } },
-      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "2" } },
-      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
-      { "source": { "nodeId": "1", "connectorId": "7" }, "target": { "nodeId": "output", "connectorId": "0" } }
     ]
   },
   "NandGame:Levels:CMOS_NAND": {
@@ -902,13 +929,9 @@
       { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
     ]
   },
-  "NandGame:Levels:STACK_AND": {
-    "code": "pop.D\npop.A\nD = D & A\npush.D",
-    "testCode": "init.stack\npush.value x0FF0\npush.value x0F0F\nand\n# inspect top of stack. Should be 0F00.\n"
-  },
-  "NandGame:Levels:STACK_LT": {
-    "code": "pop.D\npop.A\nD = A - D\nA = WHEN_TRUE\nD ; JLT\npush.value 0\nA = END\nJMP\n\nLABEL WHEN_TRUE\nD = 0\nD = ~D\npush.D\n\nLABEL END",
-    "testCode": "init.stack\npush.value x0008\npush.value x0005\nlt\n# inspect top of stack. Should be FFFF.\n"
+  "NandGame:Levels:RETURN": {
+    "code": "pop.static RETVAL\n\nA = LOCALS\nD = *A\nA = SP\n*A = D\n\npop.A\nJMP",
+    "testCode": ""
   },
   "NandGame:Levels:INV": {
     "nodes": [{ "type": "NAND", "x": 86.5, "y": 565, "id": "0" }],
@@ -918,13 +941,21 @@
       { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
     ]
   },
-  "NandGame:Levels:RETURN": {
-    "code": "pop.static RETVAL\n\nA = LOCALS\nD = *A\nA = SP\n*A = D\n\npop.A\nJMP",
-    "testCode": ""
+  "NandGame:Levels:STACK_AND": {
+    "code": "pop.D\npop.A\nD = D & A\npush.D",
+    "testCode": "init.stack\npush.value x0FF0\npush.value x0F0F\nand\n# inspect top of stack. Should be 0F00.\n"
   },
   "NandGame:Levels:STACK_POP_D": {
     "code": "A = SP\n*A = *A - 1\nA = *A\nD = *A\n",
     "testCode": "init.stack\nD = 1\npush.d\nA = 0x48\nD = A\npop.D\n# inspect D. Should be 1.\n"
+  },
+  "NandGame:Levels:STACK_LT": {
+    "code": "pop.D\npop.A\nD = A - D\nA = WHEN_TRUE\nD ; JLT\npush.value 0\nA = END\nJMP\n\nLABEL WHEN_TRUE\nD = 0\nD = ~D\npush.D\n\nLABEL END",
+    "testCode": "init.stack\npush.value x0008\npush.value x0005\nlt\n# inspect top of stack. Should be FFFF.\n"
+  },
+  "NandGame:Levels:FUN_AND": {
+    "code": "function and 0\n    # called with 2 arguments\n    # perform bitwise AND\n    push.argument 0\n    push.argument 1\n    pop.D\n    pop.A\n    D = D & A\n\n    # push the result to the stack\n    push.D\nreturn",
+    "testCode": "init.stack\npush.value x0FF0\npush.value x0F0F\ncall and 2\n# inspect top of stack. Should be 0F00.\n"
   },
   "NandGame:Levels:STACK_EQ": {
     "code": "pop.D\npop.A\nD = D - A\nA = WHEN_TRUE\nD ; JEQ\npush.value 0\nA = END\nJMP\n\nLABEL WHEN_TRUE\nD = 0\nD = ~D\npush.D\n\nLABEL END",
@@ -1130,19 +1161,6 @@
   "NandGame:Levels:ASSEMBLER1": {
     "code": "# Assembler code \nA = 0x7FFF\n*A = 1\n*A = ~*A\n*A = ~*A\n*A = ~*A\n*A = ~*A\n*A = ~*A"
   },
-  "NandGame:Levels:RELAY_NAND": {
-    "nodes": [
-      { "type": "RELAY-OFF", "x": 160.4921875, "y": 578, "id": "0" },
-      { "type": "RELAY-ON", "x": 190.4921875, "y": 387, "id": "1" }
-    ],
-    "connections": [
-      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
-      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
-      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
-      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "1" } },
-      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
-    ]
-  },
   "NandGame:Levels:CMOS_NOR": {
     "nodes": [
       { "type": "NMOS", "x": 300.5, "y": 605, "id": "0" },
@@ -1166,6 +1184,19 @@
       { "source": { "nodeId": "4", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "0" } },
       { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "5", "connectorId": "1" } },
       { "source": { "nodeId": "5", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
+  "NandGame:Levels:RELAY_NAND": {
+    "nodes": [
+      { "type": "RELAY-OFF", "x": 160.4921875, "y": 578, "id": "0" },
+      { "type": "RELAY-ON", "x": 190.4921875, "y": 387, "id": "1" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "1", "connectorId": "1" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
     ]
   },
   "NandGame:Levels:CPU3": {
@@ -1225,6 +1256,10 @@
     "code": "A = ARGS\nD = *A\nA = index\nD = D + A\n\npop.A\n\n# Needs exchange the value of A and D, since currently D holds the address, A holds the data\nA = D ^ A\nD = D ^ A\nA = D ^ A\n\n*A = D",
     "testCode": ""
   },
+  "NandGame:Levels:FUN_NOT": {
+    "code": "function not 0\n    # called with 1 argument\n    # perform bitwise INV\n    push.argument 0\n    pop.D\n    D = ~D\n\n    # push the result to the stack\n    push.D\nreturn\n",
+    "testCode": "init.stack\npush.value x0F0F\ncall not 1\n# inspect top of stack. Should be F0F0.\n"
+  },
   "NandGame:Levels:STACK_PUSH_MEMORY": {
     "code": "pop.A\nD = *A\npush.D",
     "testCode": "init.stack\n# store 42 at address 16\nA = 42\nD = A\nA = 16\n*A = D\n\npush.value 16\npush.memory\n# top of stack should have value 42\n"
@@ -1277,6 +1312,18 @@
       { "source": { "nodeId": "3", "connectorId": "1" }, "target": { "nodeId": "output", "connectorId": "7" } }
     ]
   },
+  "NandGame:Levels:NAND_FROM_NOT_AND": {
+    "nodes": [
+      { "type": "AND", "x": 102.5, "y": 462, "id": "0" },
+      { "type": "INV", "x": 111.5, "y": 234, "id": "1" }
+    ],
+    "connections": [
+      { "source": { "nodeId": "input", "connectorId": "0" }, "target": { "nodeId": "0", "connectorId": "0" } },
+      { "source": { "nodeId": "input", "connectorId": "1" }, "target": { "nodeId": "0", "connectorId": "1" } },
+      { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "1", "connectorId": "0" } },
+      { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
+    ]
+  },
   "NandGame:Levels:STACK_POP_LOCAL": {
     "code": "A = LOCALS\nD = *A\nA = index\nD = D + A\n\npop.A\n\n# Needs exchange the value of A and D, since currently D holds the address, A holds the data\nA = D ^ A\nD = D ^ A\nA = D ^ A\n\n*A = D",
     "testCode": ""
@@ -1298,6 +1345,14 @@
       { "source": { "nodeId": "input", "connectorId": "2" }, "target": { "nodeId": "3", "connectorId": "1" } },
       { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
     ]
+  },
+  "NandGame:Levels:FUN_SUB": {
+    "code": "function sub 0\n    # called with 2 arguments\n    push.argument 0\n    push.argument 1\n    pop.D\n    pop.A\n    D = A - D\n    push.D\nreturn\n",
+    "testCode": "init.stack\npush.value 7\npush.value 3\ncall sub 2\n"
+  },
+  "NandGame:Levels:FUN_OR": {
+    "code": "function or 0\n    # called with 2 arguments\n    # perform bitwise OR\n    push.argument 0\n    push.argument 1\n    pop.D\n    pop.A\n    D = D | A\n\n    # push the result to the stack\n    push.D\nreturn\n",
+    "testCode": "init.stack\npush.value x0F0F\npush.value x00FF\ncall or 2\n# inspect top of stack. Should be 0FFF.\n"
   },
   "NandGame:Levels:FLOAT_MUL": {
     "nodes": [
@@ -1355,6 +1410,10 @@
       { "source": { "nodeId": "7", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
       { "source": { "nodeId": "1", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } }
     ]
+  },
+  "NandGame:Levels:FUN_NEGATE": {
+    "code": "function negate 0\n    # called with 1 arguments\n    push.argument 0\n    pop.D\n    D = -D\n    push.D\nreturn\n",
+    "testCode": "init.stack\npush.value x0007\ncall negate 1\n# inspect top of stack. Should be FFF8.\n"
   },
   "NandGame:Levels:ALU_INSTRUCTION": {
     "nodes": [
@@ -1630,7 +1689,11 @@
   },
   "NandGame:Levels:STACK_PUSH_ARG": {
     "code": "A = ARGS\nD = *A\nA = index\nD = D + A\npush.D\npush.memory",
-    "testCode": ""
+    "testCode": "init.stack\npush.argument 1"
+  },
+  "NandGame:Levels:STACK_STOP": {
+    "code": "LABEL END\ngoto END\n",
+    "testCode": "init.stack\npush.value x42\nstop\n# this line should not be executed:\npush.value x17\n"
   },
   "NandGame:Levels:CMOS_INV": {
     "nodes": [
@@ -1647,6 +1710,10 @@
       { "source": { "nodeId": "0", "connectorId": "0" }, "target": { "nodeId": "2", "connectorId": "1" } },
       { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } }
     ]
+  },
+  "NandGame:Levels:FUN_EQ": {
+    "code": "function equals 0\n    # called with 2 arguments\n    push.argument 0\n    push.argument 1\n    pop.D\n    pop.A\n    D = D - A\n    A = WHEN_TRUE\n    D ; JEQ\n    push.value 0\n    A = END\n    JMP\n    \n    LABEL WHEN_TRUE\n    D = 0\n    D = ~D\n    push.D\n    \n    LABEL END\nreturn",
+    "testCode": "init.stack\npush.value 7\npush.value 7\ncall equals 2\n# inspect top of stack. Should be xFFFF.\n"
   },
   "NandGame:Levels:ALU_ARITHMETIC": {
     "nodes": [
@@ -1697,6 +1764,10 @@
       { "source": { "nodeId": "3", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "0" } },
       { "source": { "nodeId": "2", "connectorId": "0" }, "target": { "nodeId": "output", "connectorId": "1" } }
     ]
+  },
+  "NandGame:Levels:FUN_ADD": {
+    "code": "function add 0\n    # called with 2 arguments\n    # TODO: add arguments\n    # push the sum to the stack\n    push.argument 0\n    push.argument 1\n    pop.D\n    pop.A\n    D = D + A\n    push.D\nreturn\n",
+    "testCode": "init.stack\npush.value 7\npush.value 3\ncall add 2\n"
   },
   "NandGame:Levels:STACK_POP_A": {
     "code": "A = SP\n*A = *A - 1\nA = *A\nA = *A",
@@ -1859,44 +1930,43 @@
     "PROGRAM1",
     "OPCODES2",
     "ASSEMBLER1",
-    "READ_KEYBOARD",
-    "ESCAPE",
     "ASSEMBLER_DISPLAY",
     "ASSEMBLER_NETWORK_RECEIVE",
+    "ESCAPE",
     "STACK_INIT",
     "STACK_PUSH_D",
     "STACK_POP_D",
     "STACK_POP_A",
     "STACK_PUSH_VALUE",
-    "STACK_ADD",
-    "STACK_SUB",
-    "STACK_NEG",
-    "STACK_AND",
-    "STACK_OR",
-    "TOKENIZE_EXPRESSION",
-    "GRAMMAR_EXPRESSION",
-    "CODEGEN_EXPRESSION",
-    "STACK_EQ",
-    "STACK_GT",
-    "STACK_LT",
-    "STACK_NOT",
-    "STACK_GOTO",
-    "STACK_IF_GOTO",
-    "STACK_PUSH_MEMORY",
-    "STACK_POP_MEMORY",
     "STACK_PUSH_STATIC",
     "STACK_POP_STATIC",
+    "STACK_PUSH_MEMORY",
+    "STACK_POP_MEMORY",
+    "STACK_GOTO",
+    "STACK_STOP",
+    "STACK_IF_GOTO",
     "CALL",
     "FUNCTION",
     "RETURN",
     "STACK_PUSH_ARG",
     "STACK_POP_ARG",
-    "STACK_PUSH_LOCAL",
-    "STACK_POP_LOCAL",
+    "FUN_ADD",
+    "FUN_SUB",
+    "FUN_NEGATE",
+    "FUN_GETCHAR",
+    "FUN_PUTCHAR",
+    "FUN_AND",
+    "FUN_OR",
+    "FUN_NOT",
+    "FUN_EQ",
+    "TOKENIZE_EXPRESSION",
+    "GRAMMAR_EXPRESSION",
+    "CODEGEN_EXPRESSION",
     "CMOS_NAND",
     "CMOS_INV",
     "CMOS_NOR",
-    "XNOR",
+    "NAND_FROM_NOR",
+    "NAND_FROM_NOT_AND",
     "SHL",
     "SHR",
     "SAR",
@@ -1913,13 +1983,13 @@
     "FLOAT_PACK",
     "FLOAT_MUL",
     "FLOAT_ADD",
+    "CS_GENERAL_MEMORY",
+    "CS_MAPPED_MEMORY",
     "CS_TRIGGER",
     "CS_MODE",
     "CS_REGISTER",
     "CS_PROGRAM_COUNTER",
     "CS_REGISTER_BLOCK",
-    "CS_GENERAL_MEMORY",
-    "CS_MAPPED_MEMORY",
     "CS_CONTROL_UNIT",
     "CS_COMBINE"
   ],
