@@ -31,7 +31,7 @@
     "cssnano": "^7.1.7",
     "hexo": "^8.1.2",
     "hexo-diagrams-net": "^2025.6.1",
-    "hexo-esbuild": "^2.0.0",
+    "hexo-esbuild": "^3.1.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
     "hexo-generator-alias": "^1.0.0",
     "hexo-generator-archive": "^2.0.0",
