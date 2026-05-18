@@ -33,8 +33,8 @@ importers:
         specifier: ^2025.6.1
         version: 2025.6.1
       hexo-esbuild:
-        specifier: ^2.0.0
-        version: 2.0.0(esbuild@0.25.5)(micromatch@4.0.8)
+        specifier: ^3.1.0
+        version: 3.1.0(esbuild@0.25.5)(micromatch@4.0.8)
       hexo-filter-mermaid-diagrams:
         specifier: ^1.0.5
         version: 1.0.5
@@ -784,8 +784,9 @@ packages:
   hexo-diagrams-net@2025.6.1:
     resolution: {integrity: sha512-n0dFqm9nFWWEas2VXqXD7R3DQ+fCeOceQdlf41Pe8zpuMUqiKQ4d5BvWBxFu+Cu0iIzKGS2ZffZjnx7AanvYTg==}
 
-  hexo-esbuild@2.0.0:
-    resolution: {integrity: sha512-/9N7++fyhED02dvGpLcm8pnd6CTNWilI0m02TC9XheCgk8DJAt5fix+KcoQxootox6ehYKOvgeECyMndV9mTlA==}
+  hexo-esbuild@3.1.0:
+    resolution: {integrity: sha512-hfADMurdkK9zK4XYc6Q9wUUTrHgUKtTmabmzh5a+5WUQyTnOkAsfyJp+qJtH7gvRxSN7RW9zV6nZvZlz1fEWvA==}
+    engines: {node: '>=24'}
     peerDependencies:
       esbuild: ^0.25.0
       micromatch: ^4.0.5
@@ -2425,7 +2426,7 @@ snapshots:
     dependencies:
       hexo-util-parse-tag-arguments: 2021.1.2
 
-  hexo-esbuild@2.0.0(esbuild@0.25.5)(micromatch@4.0.8):
+  hexo-esbuild@3.1.0(esbuild@0.25.5)(micromatch@4.0.8):
     dependencies:
       esbuild: 0.25.5
       micromatch: 4.0.8
