@@ -22,7 +22,7 @@ importers:
         version: 3.6.0
       '@uiolee/hexo-htmlnano':
         specifier: ^1.0.1
-        version: 1.0.1(htmlnano@2.1.1(cssnano@7.1.9(postcss@8.5.15))(postcss@8.5.15)(svgo@3.3.3)(terser@5.47.1))(micromatch@4.0.8)
+        version: 1.0.1(htmlnano@2.1.1(cssnano@7.1.9(postcss@8.5.15))(postcss@8.5.15)(svgo@3.3.3)(terser@5.48.0))(micromatch@4.0.8)
       cssnano:
         specifier: ^7.1.9
         version: 7.1.9(postcss@8.5.15)
@@ -75,8 +75,8 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       terser:
-        specifier: ^5.47.1
-        version: 5.47.1
+        specifier: ^5.48.0
+        version: 5.48.0
     devDependencies:
       '@calfzhou/hexo-update-time':
         specifier: 1.1.3
@@ -93,12 +93,12 @@ packages:
   '@adobe/css-tools@4.3.3':
     resolution: {integrity: sha512-rE0Pygv0sEZ4vBWHlAgJLGDU7Pm8xoO6p3wsEceb7GYAjScrOHpEo8KK/eVkAcnSM+slAEtXjA2JpdjLp4fJQQ==}
 
-  '@babel/code-frame@7.29.0':
-    resolution: {integrity: sha512-9NhCeYjq9+3uxgdtp20LSiJXJvN0FeCtNGpJxuMFZ1Kv3cWUNb6DOhJwUvcVCzKGR66cw4njwM6hrJLqgOwbcw==}
+  '@babel/code-frame@7.29.7':
+    resolution: {integrity: sha512-Aup7aUOfpbAUg2ROOJN6Iw5f9DMBlzu0mIkm/malLQFN/YQgO48wCj0Kxa3sEHJvPVFg7siR+qRInwXd2qhQKw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helper-validator-identifier@7.28.5':
-    resolution: {integrity: sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q==}
+  '@babel/helper-validator-identifier@7.29.7':
+    resolution: {integrity: sha512-qehxGkRj55h/ff8EMaJ+cYhyaKlHIxqYDn682wQD7RNp9UujOQsHog2uS0r2vzr4pW+sXf90NeeayjcNaX3fFg==}
     engines: {node: '>=6.9.0'}
 
   '@calfzhou/hexo-update-time@1.1.3':
@@ -1669,8 +1669,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  terser@5.47.1:
-    resolution: {integrity: sha512-tPbLXTI6ohPASb/1YViL428oEHu6/qv1OxqYnfaonVCFHqx4+wCd95pHrQWsL5X4pl90CTyW9piSAsS2L0VoMw==}
+  terser@5.48.0:
+    resolution: {integrity: sha512-J/9An6vs9Us6wKRriSFXBWdRZapREHqFzdNUKk0pmu804EMR6dr6winwo7e5JDxN4xahxQsuysyYFwlwj4XN/Q==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -1777,13 +1777,13 @@ snapshots:
 
   '@adobe/css-tools@4.3.3': {}
 
-  '@babel/code-frame@7.29.0':
+  '@babel/code-frame@7.29.7':
     dependencies:
-      '@babel/helper-validator-identifier': 7.28.5
+      '@babel/helper-validator-identifier': 7.29.7
       js-tokens: 4.0.0
       picocolors: 1.1.1
 
-  '@babel/helper-validator-identifier@7.28.5': {}
+  '@babel/helper-validator-identifier@7.29.7': {}
 
   '@calfzhou/hexo-update-time@1.1.3':
     dependencies:
@@ -1922,9 +1922,9 @@ snapshots:
 
   '@types/mdurl@1.0.5': {}
 
-  '@uiolee/hexo-htmlnano@1.0.1(htmlnano@2.1.1(cssnano@7.1.9(postcss@8.5.15))(postcss@8.5.15)(svgo@3.3.3)(terser@5.47.1))(micromatch@4.0.8)':
+  '@uiolee/hexo-htmlnano@1.0.1(htmlnano@2.1.1(cssnano@7.1.9(postcss@8.5.15))(postcss@8.5.15)(svgo@3.3.3)(terser@5.48.0))(micromatch@4.0.8)':
     dependencies:
-      htmlnano: 2.1.1(cssnano@7.1.9(postcss@8.5.15))(postcss@8.5.15)(svgo@3.3.3)(terser@5.47.1)
+      htmlnano: 2.1.1(cssnano@7.1.9(postcss@8.5.15))(postcss@8.5.15)(svgo@3.3.3)(terser@5.48.0)
       micromatch: 4.0.8
 
   a-sync-waterfall@1.0.1: {}
@@ -2595,7 +2595,7 @@ snapshots:
 
   highlight.js@11.11.1: {}
 
-  htmlnano@2.1.1(cssnano@7.1.9(postcss@8.5.15))(postcss@8.5.15)(svgo@3.3.3)(terser@5.47.1):
+  htmlnano@2.1.1(cssnano@7.1.9(postcss@8.5.15))(postcss@8.5.15)(svgo@3.3.3)(terser@5.48.0):
     dependencies:
       cosmiconfig: 9.0.1
       posthtml: 0.16.7
@@ -2604,7 +2604,7 @@ snapshots:
       cssnano: 7.1.9(postcss@8.5.15)
       postcss: 8.5.15
       svgo: 3.3.3
-      terser: 5.47.1
+      terser: 5.48.0
     transitivePeerDependencies:
       - typescript
 
@@ -2937,7 +2937,7 @@ snapshots:
 
   parse-json@5.2.0:
     dependencies:
-      '@babel/code-frame': 7.29.0
+      '@babel/code-frame': 7.29.7
       error-ex: 1.3.4
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
@@ -3346,7 +3346,7 @@ snapshots:
       picocolors: 1.1.1
       sax: 1.6.0
 
-  terser@5.47.1:
+  terser@5.48.0:
     dependencies:
       '@jridgewell/source-map': 0.3.11
       acorn: 8.16.0
