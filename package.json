@@ -45,7 +45,7 @@
     "hexo-theme-stellar": "1.33.1",
     "postcss": "^8.5.15",
     "svgo": "^3.3.3",
-    "terser": "^5.47.1"
+    "terser": "^5.48.0"
   },
   "devDependencies": {
     "@calfzhou/hexo-update-time": "1.1.3",
