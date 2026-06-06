@@ -2,7 +2,7 @@
 title: GoCalf AI Pet
 type: story
 date: 2026-05-22 00:00:58
-updated: 2026-05-22 00:00:58
+updated: 2026-06-06 16:57:35
 ---
 
 最近发现好多家 AI 公司都在做桌面宠物。
@@ -15,14 +15,12 @@ updated: 2026-05-22 00:00:58
 
 转着转着忽然想到：何不基于本站的 logo 自己做一只？于是就把 logo 的 SVG 文件丢给了 AI。祂写了个 Python 脚本，先生成各个状态的动画 SVG，再渲染成 WEBP 动图。效果还挺出乎我意料的：
 
-![idle-1](idle-1.webp)
+![idle-1|176](idle-1.webp "idle")
 
-![idle-2](idle-2.webp)
+![thinking-1|176](thinking-1.webp "thinking")
 
-![thinking-1](thinking-1.webp)
+![complete-1|176](complete-1.webp "complete")
 
-![complete-1](complete-1.webp)
+![needs_input-1|176](needs_input-1.webp "needs input")
 
-![needs_input-1](needs_input-1.webp)
-
-![error-1](error-1.webp)
+![error-1|176](error-1.webp "error")
