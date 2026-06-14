@@ -1,14 +1,66 @@
 ---
 title: Python Version Management & Virtual Environments
 notebook: notes
-updated: 2025-11-17 22:21:03
+updated: 2026-06-14 19:58:13
 date: 2025-11-17 22:21:03
 tags:
   - it/python
 references:
   - '[Managing Multiple Python Versions With pyenv – Real Python](https://realpython.com/intro-to-pyenv/#working-with-multiple-environments)'
 ---
-## Python Version Management - pyenv
+## uv
+
+- [astral-sh/uv: An extremely fast Python package and project manager, written in Rust.](https://github.com/astral-sh/uv)
+- [uv](https://docs.astral.sh/uv/)
+
+{% badge_github astral-sh uv release:true %}
+
+> A single tool to replace `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv`, and more.
+
+### Installation
+
+```bash
+brew install uv
+uv --version
+#> uv 0.11.21 (Homebrew 2026-06-11 x86_64-apple-darwin)
+```
+
+### Manage Python Versions
+
+```bash
+uv python install 3.14
+uv run python --version
+#> Python 3.14.6
+```
+
+To set a [uv](https://docs.astral.sh/uv/)-managed Python version as global system default:
+
+```bash
+uv python install --default 3.14
+python --version
+#> Python 3.14.6
+```
+
+### Project Management
+
+```bash
+cd path/to/project
+uv init
+uv add <package-name>
+uv lock
+uv sync
+
+uv run <command>
+```
+
+### Single-File Script Management
+
+```bash
+uv add --script <script-name>.py <package-name>
+uv run <script-name>.py
+```
+
+## Python Version Management - pyenv (Deprecated)
 
 {% badge_github pyenv pyenv release:true %}
 
@@ -72,7 +124,7 @@ To select a pyenv-installed Python as the version to use, run one of the followi
 
 除了 pyenv-virtualenv，没什么特别需要的。
 
-## Virtual Environments Management - pyenv-virtualenv
+## Virtual Environments Management - pyenv-virtualenv (Deprecated)
 
 {% badge_github pyenv pyenv-virtualenv release:true %}
 
@@ -117,6 +169,6 @@ pyenv-virtualenv 也说支持 auto activate，但也是基于 `.python-version` 
 
 考虑仿照 zsh virtualenvwrapper 插件里的逻辑，实现一个类似的基于 pyenv-virtualenv 的自动切换函数，可以不用额外的配置文件，自动找与目录同名的 virtualenv，如果有就 activate，没有就算了。
 
-## Package Management
+## Package Management (Deprecated)
 
 [Python Package Management](../python-package-management/index.md)

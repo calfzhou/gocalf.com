@@ -1,7 +1,7 @@
 ---
 title: Python Package Management
 notebook: notes
-updated: 2025-11-17 22:21:03
+updated: 2026-06-14 19:07:25
 date: 2025-11-17 22:21:03
 tags:
   - it/python
@@ -13,6 +13,10 @@ references:
 [Python Version Management & Virtual Environments](../python-version-management-virtual-environments/index.md)
 
 ## Package Management
+
+Use `uv`. See [Python Version Management & Virtual Environments](../python-version-management-virtual-environments/index.md).
+
+## Package Management (Deprecated)
 
 [Python package dependency management - pip freeze - requirements.txt and constraints.txt](https://code-maven.com/python-package-dependency-management)
 
