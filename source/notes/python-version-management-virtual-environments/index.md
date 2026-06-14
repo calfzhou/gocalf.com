@@ -1,7 +1,7 @@
 ---
 title: Python Version Management & Virtual Environments
 notebook: notes
-updated: 2026-06-14 19:58:13
+updated: 2026-06-14 20:13:37
 date: 2025-11-17 22:21:03
 tags:
   - it/python
@@ -11,7 +11,7 @@ references:
 ## uv
 
 - [astral-sh/uv: An extremely fast Python package and project manager, written in Rust.](https://github.com/astral-sh/uv)
-- [uv](https://docs.astral.sh/uv/)
+- Documents: [uv](https://docs.astral.sh/uv/)
 
 {% badge_github astral-sh uv release:true %}
 
@@ -25,10 +25,10 @@ uv --version
 #> uv 0.11.21 (Homebrew 2026-06-11 x86_64-apple-darwin)
 ```
 
-### Manage Python Versions
+### Installing Python
 
 ```bash
-uv python install 3.14
+uv python install
 uv run python --version
 #> Python 3.14.6
 ```
@@ -41,7 +41,35 @@ python --version
 #> Python 3.14.6
 ```
 
-### Project Management
+### Running Scripts
+
+```bash
+uv add --script <script-name>.py <package-name>
+uv run <script-name>.py
+```
+
+### Using Tools
+
+The `uvx` command invokes a tool without installing it.
+
+```bash
+uvx ipython
+# equivalent to:
+uv tool run ipython
+```
+
+```bash
+uv tool install ipython --with requests
+ipython
+In [1]: import requests
+```
+
+```bash
+uv tool install httpie
+httpie --version
+```
+
+### Working on Projects
 
 ```bash
 cd path/to/project
@@ -51,13 +79,6 @@ uv lock
 uv sync
 
 uv run <command>
-```
-
-### Single-File Script Management
-
-```bash
-uv add --script <script-name>.py <package-name>
-uv run <script-name>.py
 ```
 
 ## Python Version Management - pyenv (Deprecated)
