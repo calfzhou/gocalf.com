@@ -198,5 +198,9 @@ style:
     card-l: 16px # 侧边栏、文章横幅位置的圆角
     card: 12px # 文章内大部分卡片的圆角
     image: revert # 技术类文章插图圆角
+  # Stellar 1.38+ defaults to superellipse; keep the pre-upgrade round corners.
+  corner-shape: round
   leftbar:
+    # Stellar 1.39+ defaults to card; preserve the existing translucent glass appearance.
+    ui-style: glass
     background-opacity: 0.3
