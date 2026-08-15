@@ -20,11 +20,24 @@
 }
 
 .widget-body.tag-tree .tag-subtree .tagcon {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
   opacity: 0.6;
+}
+
+.widget-body.tag-tree .tag-subtree .tagcon svg {
+  width: 1em;
+  height: 1em;
 }
 
 .widget-body.tag-tree .tag-subtree .toc-text {
   width: 100%;
+}
+
+.widget-body.tag-tree .tag-subtree .toc-text:not(.tag-switcher-wrapper) {
+  display: flex;
+  align-items: center;
 }
 
 article.content a[target="_blank"]:not(.link-card):not(:has(img))::after {
