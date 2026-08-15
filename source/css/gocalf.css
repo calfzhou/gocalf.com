@@ -52,6 +52,16 @@ article.content .no-caption figcaption {
   display: none;
 }
 
+/* Avoid the SVG gradient disappearing when duplicate desktop/mobile gradient IDs
+ * resolve to a hidden definition; solid currentColor matches the intended state. */
+.nav-area .menu .nav-item:is(:hover, :focus-visible, .active) > svg:not(.grad-def) [fill="currentColor"] {
+  fill: currentColor;
+}
+
+.nav-area .menu .nav-item:is(:hover, :focus-visible, .active) > svg:not(.grad-def) [stroke="currentColor"] {
+  stroke: currentColor;
+}
+
 /* Override Stella 1.33 styles */
 
 table:not([class]) {
