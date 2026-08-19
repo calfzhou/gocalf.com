@@ -40,6 +40,13 @@
   align-items: center;
 }
 
+/* Stellar 1.41+ asynchronously replaces social icon placeholders and does not
+ * preserve the .icon sizing hook; some built-in SVGs also carry 32px attributes. */
+.social-wrap .social :is(svg, img) {
+  width: 20px;
+  height: 20px;
+}
+
 article.content a[target="_blank"]:not(.link-card):not(:has(img))::after {
   rotate: -90deg;
   content: '⇲';

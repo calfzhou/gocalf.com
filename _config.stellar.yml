@@ -11,22 +11,22 @@ menubar:
   items:
     - id: notes
       theme: '#1BCDFC'
-      icon: solar:notebook-bold-duotone
+      icon: menu:notes
       title: 笔记
       url: /notes/
     - id: coding
       theme: '#3DC550'
-      icon: solar:sidebar-code-bold-duotone
+      icon: menu:coding
       title: Coding
       url: /coding/
     - id: post
       theme: '#FFA500'
-      icon: solar:documents-bold-duotone
+      icon: default:documents
       title: 博客
       url: /blog/
     - id: about
       theme: '#3370FF'
-      icon: calf:gocalf-duotone
+      icon: site:gocalf-duotone
       title: 关于
       url: /about/
 
@@ -39,7 +39,7 @@ inject:
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@1.511.0/style.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/source-code-pro@2.38.0/source-code-pro.min.css">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css">
-    - <link rel="stylesheet" href="/css/gocalf.css?v=20260815">
+    - <link rel="stylesheet" href="/css/gocalf.css?v=20260819">
     - <link rel="stylesheet" href="/css/alert.css?v=20251225">
   # script:
   #   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js"></script>
@@ -63,22 +63,29 @@ site_tree:
   page:
     leftbar: welcome, recent
 
+######## Search ########
+search:
+  local_search:
+    # Preserve eager, always-fresh search behavior; this site has a large search index.
+    lazy_load: false
+    cache_ttl: 0
+
 ######## Notebook ########
 notebook:
   tagcons:
-    calf: calf:gocalf
-    difficult: hugeicons-pro:dead
-    easy: iconoir:one-star
-    font: solar:text-linear
-    game: solar:gamepad-linear
-    git: brand:git
-    hard: iconoir:three-stars
-    it: solar:code-linear
-    mac: brand:apple
-    math: solar:calculator-minimalistic-linear
-    medium: iconoir:two-stars
-    puzzle: hugeicons-pro:puzzle
-    python: brand:python
+    calf: site:gocalf
+    difficult: tag:dead
+    easy: tag:one-star
+    font: tag:text
+    game: tag:gamepad
+    git: tag:git
+    hard: tag:three-stars
+    it: tag:code
+    mac: tag:apple
+    math: tag:calculator
+    medium: tag:two-stars
+    puzzle: tag:puzzle
+    python: tag:python
 
 ######## Article ########
 article:
@@ -95,19 +102,19 @@ comments:
 footer:
   social:
     email:
-      icon: brand:gmail
+      icon: social:gmail
       url: mailto:calf.zhou@gmail.com
     github:
-      icon: brand:github
+      icon: social:github
       url: https://github.com/calfzhou
     facebook:
-      icon: brand:facebook
+      icon: social:facebook
       url: https://www.facebook.com/calfzhou
     telegram:
-      icon: brand:telegram
+      icon: social:telegram
       url: https://t.me/calfzhou
     pgp:
-      icon: other:fingerprint-duotone
+      icon: social:fingerprint
       url: /pgp/
     theme:
       icon: default:theme
