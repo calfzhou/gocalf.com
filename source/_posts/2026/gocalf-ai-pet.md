@@ -1,6 +1,7 @@
 ---
 title: GoCalf AI Pet
 type: story
+ai_label: polished
 date: 2026-05-22 00:00:58
 updated: 2026-06-06 16:57:35
 ---

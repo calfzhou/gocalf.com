@@ -1,6 +1,7 @@
 ---
 title: 需要一种支持「并发」的记笔记模式
 type: story
+ai_label: generated
 date: 2026-03-25 16:21:36
 updated: 2026-03-25 16:21:36
 ---
