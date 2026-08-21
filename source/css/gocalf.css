@@ -19,6 +19,12 @@
   }
 }
 
+/* Keep notebook tag icons visually secondary to the main navigation icons. */
+.tag-tree .ui-collection__leading {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 article.content a[target="_blank"]:not(.link-card):not(:has(img))::after {
   rotate: -90deg;
   content: '⇲';
