@@ -1,3 +1,17 @@
+/*
+ * GoCalf overrides and opt-in utilities for Hexo Theme Stellar.
+ *
+ * Keep selectors scoped to the component being customized. When upgrading Stellar,
+ * compare each section with the corresponding theme component before carrying it
+ * forward; version-sensitive sections document the upstream selector they depend on.
+ */
+
+/* Color-scheme image utilities
+ *
+ * Use .invert-when-dark or .invert-when-light on an image/SVG or a wrapper when an
+ * asset only has one color variant. Explicit data-theme values take precedence;
+ * the media queries cover Stellar's automatic theme mode.
+ */
 :root[data-theme="dark"] .invert-when-dark :is(img, svg),
 :root[data-theme="light"] .invert-when-light :is(img, svg),
 :root[data-theme="dark"] :is(img, svg).invert-when-dark,
@@ -19,21 +33,37 @@
   }
 }
 
-/* Keep notebook tag icons visually secondary to the main navigation icons. */
+/* Notebook tag tree
+ *
+ * Stellar 1.43+ renders both the main menu and tag tree with the collection
+ * component, whose leading icon defaults to 1.5rem. Tag icons are supporting
+ * metadata, so keep only this collection's icons visually secondary.
+ */
 .tag-tree .ui-collection__leading {
   width: 1.2rem;
   height: 1.2rem;
 }
 
+/* External-link marker
+ *
+ * Add a compact outbound marker to ordinary text links opened in a new tab.
+ * Link cards and image links already have their own visual affordances and are
+ * excluded to avoid overlaying their content.
+ */
 article.content a[target="_blank"]:not(.link-card):not(:has(img))::after {
   rotate: -90deg;
   content: '⇲';
   display: inline-block;
   margin-left: 0.2em;
   font-size: 0.8em;
-  color: var(--theme-link);
+  color: currentColor;
 }
 
+/* Figure captions
+ *
+ * Normalize captions emitted after either a direct image or an image link, and
+ * provide .no-caption as an explicit per-figure escape hatch.
+ */
 article.content img + figcaption,
 article.content a:has(> img) + figcaption {
   display: inline-block;
@@ -50,8 +80,14 @@ article.content .no-caption figcaption {
   display: none;
 }
 
-/* hexo-htmlnano collapses Stellar's inline gradient definition SVGs.
- * Keep active/hovered collection and footer icons visible with solid currentColor. */
+/* SVG gradient fallback for hexo-htmlnano
+ *
+ * Stellar uses inline <defs> referenced by --item-grad for collection and footer
+ * icon hover states. hexo-htmlnano currently collapses those definition-only SVGs
+ * into empty elements, which makes the referenced gradient transparent. Fall back
+ * to solid currentColor so active/hovered icons remain visible. Recheck this when
+ * either Stellar's gradient markup or the HTML minifier configuration changes.
+ */
 .ui-collection__item:is(:hover, :focus-visible, .is-active) .ui-collection__leading > svg [fill="currentColor"],
 .social-wrap .social:hover > svg [fill="currentColor"] {
   fill: currentColor;
@@ -62,11 +98,15 @@ article.content .no-caption figcaption {
   stroke: currentColor;
 }
 
-/* Override Stella 1.33 styles */
-
+/* Plain Markdown tables
+ *
+ * Preserve GoCalf's legacy desktop sizing and header alignment while using
+ * Stellar's --block-border token for visible cell boundaries. Tagged/styled tables
+ * are excluded because their plugin-specific layouts own these decisions.
+ */
 table:not([class]) {
   @media screen and (min-width: 667px) {
-    width: inherit
+    width: inherit;
   }
 
   th {
