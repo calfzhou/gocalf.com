@@ -81,7 +81,7 @@ $$
 - $Z\ket{0}=\ket{0}$, $Z\ket{1}=-\ket{1}$, $Z\ket{+}=\ket{-}$, $Z\ket{-}=\ket{+}$
 - $S\ket{+}=\ket{\mu}$, $S\ket{-}=\ket{\nu}$
 
-The phase gate S and Z are 90° and 180° rotations around the vertical axis, often referred to as the z-axis. 
+The phase gate S and Z are 90° and 180° rotations around the vertical axis, often referred to as the z-axis.
 
 The quantum NOT gate X is a 180° rotation around the horizontal axis between the Hadamard states, often referred to as the x-axis.
 
@@ -103,6 +103,6 @@ $$
 
 ## Entanglement 纠缠
 
-The Bell state is the prototypical example of an**entangled**state.
+The Bell state is the prototypical example of an **entangled** state.
 
 $$\ket{\varphi}_{bell}=\frac{1}{\sqrt{2}}\left(\ket{00}+\ket{11}\right)$$
