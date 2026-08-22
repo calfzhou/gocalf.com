@@ -73,19 +73,39 @@ search:
 ######## Notebook ########
 notebook:
   tagcons:
+    ai: tag:ai
+    bigdata: tag:bigdata
+    board: tag:board
     calf: site:gocalf
+    database: tag:database
     difficult: tag:dead
     easy: tag:one-star
+    embed: tag:embed
+    encryption: tag:encryption
+    finance: tag:finance
     font: tag:text
     game: tag:gamepad
     git: tag:git
     hard: tag:three-stars
+    hardware: tag:hardware
     it: tag:code
+    knowledge: tag:knowledge
+    linux: tag:linux
     mac: tag:apple
     math: tag:calculator
     medium: tag:two-stars
+    network: tag:network
+    probability: tag:probability
     puzzle: tag:puzzle
     python: tag:python
+    quantum: tag:quantum
+    server: tag:server
+    software: tag:software
+    terminal: tag:terminal
+    todo: tag:todo
+    ui: tag:ui
+    web: tag:web
+    websocket: tag:websocket
 
 ######## Article ########
 article:
