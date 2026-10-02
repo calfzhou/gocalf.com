@@ -21,13 +21,11 @@ lastmod: "2025-07-02T23:04:33+08:00"
 - 前蓝－后绿
 - 左橙－右红
 
-![魔方配色（图片来自魔方乐园 mf100.org）](cube-color.png)
-{.gocalf-source-pale}
+{{< image src="cube-color.png" alt="魔方配色（图片来自魔方乐园 mf100.org）" background="#f9fafb" >}}
 
 简易层先法的复原步骤为：
 
-![层先法复原步骤（图片来自魔方乐园 mf100.org）](simple-steps.png)
-{.gocalf-source-pale}
+{{< image src="simple-steps.png" alt="层先法复原步骤（图片来自魔方乐园 mf100.org）" background="#f9fafb" >}}
 
 - 面位：只有一面颜色与中心块颜色相同， 其他面颜色不相同；
 - 到位：位置正确，但任一面的颜色和所在面的中心块颜色都不相同；
@@ -303,8 +301,7 @@ lastmod: "2025-07-02T23:04:33+08:00"
 
 高阶魔方可采用降阶法，即把六个面的中心区域（下图浅灰色区域）分别拼好并当成整体，十二对棱块（下图深灰色区域）分别拼好并当成整体，然后就按照三阶魔方的方式进行复原。偶数阶因为不像奇数阶那样，有六个固定的中心块（彼此相对位置不变），有可能会出现两种特殊情况，需要额外处理。另外由于偶数阶没有固定的中心块做为参考，需要在复原六个面中心区域的时候，注意各颜色的相对位置，否则后续可能会无法用三阶的方法完成复原。
 
-![降阶示意（图片来自魔方乐园 mf100.org）](downgrade.png)
-{.gocalf-source-pale}
+{{< image src="downgrade.png" alt="降阶示意（图片来自魔方乐园 mf100.org）" background="#f9fafb" >}}
 
 ### 高阶中心块
 
@@ -340,7 +337,8 @@ lastmod: "2025-07-02T23:04:33+08:00"
 
 更多变体：
 
-![中心块复原公式](high-center-formula.ink.svg){.invert-when-dark}
+![中心块复原公式](high-center-formula.ink.svg)
+{.invert-when-dark}
 
 1. 第 ① 象限：`RU'L'` 或 `R'F'L`
    - `(αR U' βL' U) (αR' U' βL U)`

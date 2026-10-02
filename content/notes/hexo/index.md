@@ -219,9 +219,11 @@ filter: invert(1) hue-rotate(180deg);
 
 效果：
 
-![亮色图片](light.ink.svg){.invert-when-dark}
+![亮色图片](light.ink.svg)
+{.invert-when-dark}
 
-![暗色图片](dark.jpg){.invert-when-light}
+![暗色图片](dark.jpg)
+{.invert-when-light}
 
 或者用 Markdown Container 相关的插件，如：
 
