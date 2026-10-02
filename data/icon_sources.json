@@ -1,0 +1,58 @@
+[
+  {
+    "key": "gocalf-notes",
+    "source_key": "menu:notes",
+    "source_sha256": "8b4230d39357608e3128a8d879b71066e55a13e6575d2ef6bae8a80760ae694b",
+    "normalization": "remove redundant role only",
+    "source_file": "source/_data/icons.yml"
+  },
+  {
+    "key": "gocalf-coding",
+    "source_key": "menu:coding",
+    "source_sha256": "051edc03d9a96d57ea583510e09b110dbcd79da09c06a0a1e081b2a88ded5363",
+    "normalization": "remove redundant role only",
+    "source_file": "source/_data/icons.yml"
+  },
+  {
+    "key": "gocalf-brand",
+    "source_key": "site:gocalf-duotone",
+    "source_sha256": "89512568d7adea0d7dfa3820ea2a58540e3217f532b28bfe925fff6445061f6f",
+    "normalization": "remove redundant role; uniform viewBox scaling only",
+    "source_file": "source/_data/icons.yml"
+  },
+  {
+    "key": "gocalf-gmail",
+    "source_key": "social:gmail",
+    "source_sha256": "e6de7d97af7bb322c75cf29520b0f422f6f7e5f913571a3fb781167ccf9321dc",
+    "normalization": "remove redundant role only",
+    "source_file": "source/_data/icons.yml"
+  },
+  {
+    "key": "gocalf-github",
+    "source_key": "social:github",
+    "source_sha256": "32e9f9daca94f6fa6eaf033436c0689e551499b7c82caeaeff3587fecf228d55",
+    "normalization": "remove redundant role only",
+    "source_file": "source/_data/icons.yml"
+  },
+  {
+    "key": "gocalf-facebook",
+    "source_key": "social:facebook",
+    "source_sha256": "7b76fc15f7feae2022e0140fa53d0e6534b39031d04bb350c6b61fd92ff64a77",
+    "normalization": "remove redundant role only",
+    "source_file": "source/_data/icons.yml"
+  },
+  {
+    "key": "gocalf-telegram",
+    "source_key": "social:telegram",
+    "source_sha256": "b1f7c00802a4c60a8546614f2f0778a801b05db26f283b677122bb8a475068f6",
+    "normalization": "remove redundant role only",
+    "source_file": "source/_data/icons.yml"
+  },
+  {
+    "key": "gocalf-fingerprint",
+    "source_key": "social:fingerprint",
+    "source_sha256": "c751fb746a6308c5b9266b35b27d063d7862177d40f2bf1543a3ad8d4ed8c0a0",
+    "normalization": "remove redundant role; uniform viewBox scaling only",
+    "source_file": "source/_data/icons.yml"
+  }
+]
