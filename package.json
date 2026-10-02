@@ -10,17 +10,10 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server",
-    "prepare": "node .husky/install.mjs",
-    "lint-staged": "lint-staged"
+    "server": "hexo server"
   },
   "hexo": {
     "version": "8.1.2"
-  },
-  "lint-staged": {
-    "source/_posts/**/*.md": "hexo-update-time",
-    "source/coding/**/*.md": "hexo-update-time",
-    "source/notes/**/*.md": "hexo-update-time"
   },
   "dependencies": {
     "@mdit/plugin-alert": "0.7.6",
