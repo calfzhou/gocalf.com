@@ -1,16 +1,15 @@
 ---
 title: Hexo 相关问题
-notebook: notes
 tags:
   - it/web
-date: 2024-04-21 14:42:16
-updated: 2026-01-02 19:04:46
+date: "2024-04-21T14:42:16+08:00"
+lastmod: "2026-01-02T19:04:46+08:00"
 ---
 ## Hexo
 
 [Hexo - A fast, simple & powerful blog framework](https://hexo.io/)
 
-{% badge_github hexojs hexo release:true %}
+{{< badge_github user="hexojs" repo="hexo" release=true >}}
 
 > Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other markup languages) and Hexo generates static files with a beautiful theme in seconds.
 
@@ -20,7 +19,7 @@ updated: 2026-01-02 19:04:46
 
 [Stellar：开始您全新的博客之旅 - XAOXUU](https://xaoxuu.com/wiki/stellar/)
 
-{% badge_github xaoxuu hexo-theme-stellar release:true %}
+{{< badge_github user="xaoxuu" repo="hexo-theme-stellar" release=true >}}
 
 > Stellar 是一个内置文档系统的简约商务风 Hexo 主题，支持丰富的标签和动态数据组件，帮助您简单从容地应对各种表达需求，十分推荐内容创作者使用 Stellar 开始您全新的博客之旅。
 
@@ -86,12 +85,12 @@ marked: # https://github.com/hexojs/hexo-renderer-marked
 
 | Syntax      | Src                  | Hexo                     | VS Code                  |
 | ----------- | -------------------- | ------------------------ | ------------------------ |
-| Markdown    | `filename`           | {% mark ✓ color:green %} | {% mark ✗ color:red %}   |
-| Markdown    | `post-slug/filename` | {% mark ✗ color:red %}   | {% mark ✓ color:green %} |
-| `asset_img` | `filename`           | {% mark ✓ color:green %} | {% mark ✗ color:red %}   |
-| `asset_img` | `post-slug/filename` | {% mark ✗ color:red %}   | {% mark ✓ color:green %} |
-| `image`     | `filename`           | {% mark ✓ color:green %} | {% mark ✗ color:red %}   |
-| `image`     | `post-slug/filename` | {% mark ✗ color:red %}   | {% mark ✗ color:red %}   |
+| Markdown    | `filename`           | {{< mark text="✓" color="green" >}} | {{< mark text="✗" color="red" >}}   |
+| Markdown    | `post-slug/filename` | {{< mark text="✗" color="red" >}}   | {{< mark text="✓" color="green" >}} |
+| `asset_img` | `filename`           | {{< mark text="✓" color="green" >}} | {{< mark text="✗" color="red" >}}   |
+| `asset_img` | `post-slug/filename` | {{< mark text="✗" color="red" >}}   | {{< mark text="✓" color="green" >}} |
+| `image`     | `filename`           | {{< mark text="✓" color="green" >}} | {{< mark text="✗" color="red" >}}   |
+| `image`     | `post-slug/filename` | {{< mark text="✗" color="red" >}}   | {{< mark text="✗" color="red" >}}   |
 
 Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=fantasy.vscode-hexo-utils)。
 
@@ -102,12 +101,12 @@ Visual Studio Code 中安装扩展 [Hexo Utils - Visual Studio Marketplace](http
 >
 > 页面自身的资源文件直接放在 `index.md` 所在目录中。
 >
-> 参见 [大改站点的目录结构](../../_posts/2025/refactor-site-folders.md)。
+> 参见 [大改站点的目录结构](../../blog/2025/refactor-site-folders/index.md)。
 
 | Syntax   | Src        | Hexo                     | VS Code                  | Demo                 |
 | -------- | ---------- | ------------------------ | ------------------------ | -------------------- |
-| Markdown | `filename` | {% mark ✓ color:green %} | {% mark ✓ color:green %} | ![demo](demo.png)    |
-| `image`  | `filename` | {% mark ✓ color:green %} | {% mark ✗ color:red %}   | {% image demo.png %} |
+| Markdown | `filename` | {{< mark text="✓" color="green" >}} | {{< mark text="✓" color="green" >}} | ![demo](demo.png)    |
+| `image`  | `filename` | {{< mark text="✓" color="green" >}} | {{< mark text="✗" color="red" >}}   | ![](demo.png) |
 
 ### 给图片添加 Caption
 
@@ -287,9 +286,9 @@ pnpm add hexo-diagrams-net
 :::
 ```
 
-::: invert-when-dark
-{% diagramsnet flowchart.drawio %}
-:::
+{{% block class="invert-when-dark" %}}
+{{< diagramsnet src="flowchart.drawio" >}}
+{{% /block %}}
 
 - 如何适配明暗主题？
   - 参考 <https://github.com/jgraph/drawio-integration/blob/master/inline.js>

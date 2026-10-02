@@ -1,17 +1,16 @@
 ---
 title: Git with Encryption
-notebook: notes
 tags:
   - it/encryption
   - it/git
-date: 2024-04-20 21:16:54
-updated: 2024-04-24 19:36:21
+date: "2024-04-20T21:16:54+08:00"
+lastmod: "2024-04-24T19:36:21+08:00"
 ---
 ## git-remote-gcrypt
 
 [git-remote-gcrypt - PGP-encrypted git remotes](https://spwhitton.name/tech/code/git-remote-gcrypt/)
 
-{% badge_github spwhitton git-remote-gcrypt %}
+{{< badge_github user="spwhitton" repo="git-remote-gcrypt" >}}
 
 > git-remote-gcrypt is a git remote helper to push and pull from repositories encrypted with [GnuPG](https://www.gnupg.org/), using a custom format. This remote helper handles URIs prefixed with `gcrypt::`.
 
@@ -77,7 +76,7 @@ git config commit.gpgsign false
 
 [git-crypt - transparent file encryption in git](https://www.agwa.name/projects/git-crypt/)
 
-{% badge_github AGWA git-crypt release:true %}
+{{< badge_github user="AGWA" repo="git-crypt" release=true >}}
 
 > **git-crypt** enables transparent encryption and decryption of files in a git repository. Files which you choose to protect are encrypted when committed, and decrypted when checked out. git-crypt lets you freely share a repository containing a mix of public and private content. git-crypt gracefully degrades, so developers without the secret key can still clone and commit to a repository with encrypted files. This lets you store your secret material (such as keys or passwords) in the same repository as your code, without requiring you to lock down your entire repository.
 
@@ -94,9 +93,9 @@ brew install git-crypt
 
 [shadowhand/git-encrypt at legacy](https://github.com/shadowhand/git-encrypt/tree/legacy)
 
-{% badge_github shadowhand git-encrypt release:true %}
+{{< badge_github user="shadowhand" repo="git-encrypt" release=true >}}
 
-{% badge_github calfzhou git-encrypt %}
+{{< badge_github user="calfzhou" repo="git-encrypt" >}}
 
 ```bash
 # Cannot be installed by brew.

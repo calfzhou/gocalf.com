@@ -1,12 +1,11 @@
 ---
 title: 配色
-notebook: notes
 tags:
 - it/ui
-katex: true
-pin: 99
-date: 2024-12-15 10:08:14
-updated: 2024-12-15 20:35:53
+date: "2024-12-15T10:08:14+08:00"
+lastmod: "2024-12-15T20:35:53+08:00"
+params:
+  pinned: true
 ---
 ## Tailwind Color Palette
 

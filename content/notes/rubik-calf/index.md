@@ -1,16 +1,16 @@
 ---
 title: Calf 的三阶魔方复原方法
-notebook: notes
 tags:
   - calf
   - game/puzzle
-date: 2024-04-21 16:13:27
-updated: 2025-07-02 23:04:33
-animcube3: true
+date: "2024-04-21T16:13:27+08:00"
+lastmod: "2025-07-02T23:04:33+08:00"
 ---
 高中毕业的暑假，自己琢磨出来的魔方复原方法，不用背公式。当然最后几步是固定的套路，可以稍微记一下，记不住就不停地把各种套路都试一试，也可以搞定。
 
-{% image img-5808-s.jpg 当时的笔记 width:320px fancybox:img-5808.jpg %}
+![当时的笔记|320](img-5808-s.jpg)
+
+[查看 / 下载原图](img-5808.jpg)
 
 ## 整体复原流程
 
@@ -18,29 +18,49 @@ animcube3: true
 
 这部分没有公式，就灵活运用躲避的技巧即可。前提是可以非常轻松地完成单面的复原，理解单面复原时最后一步的精髓。
 
-{% grid c:5 %}
-<!-- cell -->
-1. ![0-1](0-1.png) {.no-caption}
-<!-- cell -->
-2. ![0-2](0-2.png) {.no-caption}
-<!-- cell -->
-3. ![0-3](0-3.png) {.no-caption}
-<!-- cell -->
-4. ![0-4](0-4.png) {.no-caption}
-<!-- cell -->
+{{% grid columns=5 %}}
+{{< cell >}}
+1. ![0-1](0-1.png)
+
+{.no-caption}
+{{< /cell >}}
+
+{{< cell >}}
+2. ![0-2](0-2.png)
+
+{.no-caption}
+{{< /cell >}}
+
+{{< cell >}}
+3. ![0-3](0-3.png)
+
+{.no-caption}
+{{< /cell >}}
+
+{{< cell >}}
+4. ![0-4](0-4.png)
+
+{.no-caption}
+{{< /cell >}}
+
+{{< cell >}}
 5. ![0-5a](0-5a.png) ![0-5b](0-5b.png)
-{% endgrid %}
+{{< /cell >}}
+{{% /grid %}}
 
 ② 把三个边缘角块归位即完成三个面复原，然后再把三个棱块归位便完成了整个复原。
 
 这个阶段，可以做的操作就非常有限，不能随便乱拧了。关键问题在于找到并了解可能的操作组，每组操作都是一个原子单位，操作完不会引入不可预估的破坏，但又能让尚未完成的部分有所进展。
 
-{% grid c:5 %}
-<!-- cell -->
+{{% grid columns=5 %}}
+{{< cell >}}
 6. ![0-6a](0-6a.png) ![0-6b](0-6b.png)
-<!-- cell -->
+{{< /cell >}}
+
+{{< cell >}}
 7. ![0-6a](0-6a.png) ![0-7](0-7.png)
-{% endgrid %}
+{{< /cell >}}
+{{% /grid %}}
 
 ## 复原三面之前的一些操作
 
@@ -50,33 +70,22 @@ animcube3: true
 
 这个阶段要逐个归位出发角对应的三个面（上边图中的红、黄、蓝）各自的棱块。
 
-{% folding 动画演示 %}
+{{% folding title="动画演示" %}}
 
 注意看一组操作完成之后，除了多归位了一个黄色面的棱块，其他几个棱块都完全不受影响（只有倒 Y 形区域会发生变化，但现在不用考虑它们，动画中全部涂为灰色减少干扰）。
 
-{% grid %}
-<!-- cell -->
+{{< grid >}}
+{{< cell >}}
 情形一
-{% animcube width:100% config:cube.conf
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  markers:000100000000000000000000000000000000000000000000000000
-  initmove:"y'"
-  move:"b'L'F'Lb"
-  initrevmove:#
-  movetext:0
-%}
-<!-- cell -->
+{{< animcube width="100%" config="cube.conf" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" markers="000100000000000000000000000000000000000000000000000000" initmove="y'" move="b'L'F'Lb" initrevmove="#" movetext="0" >}}
+{{< /cell >}}
+
+{{< cell >}}
 情形二
-{% animcube width:100% config:cube.conf
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  markers:000100000000000000000000000000000000000000000000000000
-  initmove:"y'"
-  move:"b'L'F2'Lb"
-  initrevmove:#
-  movetext:0
-%}
-{% endgrid %}
-{% endfolding %}
+{{< animcube width="100%" config="cube.conf" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" markers="000100000000000000000000000000000000000000000000000000" initmove="y'" move="b'L'F2'Lb" initrevmove="#" movetext="0" >}}
+{{< /cell >}}
+{{< /grid >}}
+{{% /folding %}}
 
 ## 复原三面到六面用的标记 & 操作组
 
@@ -99,67 +108,52 @@ animcube3: true
 - `ab` 相当于 `D' L D L'`
 - `ba` 相当于 `L D' L' D` —— 可见 `ab` 和 `ba` 是互逆的
 
-{% folding 动画演示 %}
+{{% folding title="动画演示" %}}
 
 以上边图中的颜色对应关系为例，即 a 为蓝色面，b 为黄色面。`ab` 也可以叫做 `蓝黄`，`ba` 可以叫做 `黄蓝`。
 
-{% grid %}
-<!-- cell -->
+{{< grid >}}
+{{< cell >}}
 `ab` 操作（操作时视角）
-{% animcube width:100% config:cube.conf
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  move:"{ab（蓝黄）}D'LDL'"
-  initrevmove:#
-%}
-<!-- cell -->
+{{< animcube width="100%" config="cube.conf" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" move="{ab（蓝黄）}D'LDL'" initrevmove="#" >}}
+{{< /cell >}}
+
+{{< cell >}}
 `ab` 操作（倒 Y 视角）
-{% animcube width:100% config:cube.conf
-  position:rrrddd
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  move:"{ab（蓝黄）}D'LDL'"
-  initrevmove:#
-%}
-{% endgrid %}
+{{< animcube width="100%" config="cube.conf" position="rrrddd" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" move="{ab（蓝黄）}D'LDL'" initrevmove="#" >}}
+{{< /cell >}}
+{{< /grid >}}
 
-{% grid %}
-<!-- cell -->
+{{< grid >}}
+{{< cell >}}
 `ba` 操作（操作时视角）
-{% animcube width:100% config:cube.conf
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  move:"{ba（黄蓝）}LD'L'D"
-  initrevmove:#
-%}
-<!-- cell -->
-`ba` 操作（倒 Y 视角）
-{% animcube width:100% config:cube.conf
-  position:rrrddd
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  move:"{ba（黄蓝）}LD'L'D"
-  initrevmove:#
-%}
-{% endgrid %}
+{{< animcube width="100%" config="cube.conf" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" move="{ba（黄蓝）}LD'L'D" initrevmove="#" >}}
+{{< /cell >}}
 
-{% endfolding %}
+{{< cell >}}
+`ba` 操作（倒 Y 视角）
+{{< animcube width="100%" config="cube.conf" position="rrrddd" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" move="{ba（黄蓝）}LD'L'D" initrevmove="#" >}}
+{{< /cell >}}
+{{< /grid >}}
+
+{{% /folding %}}
 
 除了 `ab` 和 `ba` 互逆之外，还有个特点是一个操作组连续做六次，就完全回到初始状态。
 
-{% folding 动画演示 %}
-{% grid %}
-<!-- cell -->
+{{% folding title="动画演示" %}}
+{{< grid >}}
+{{< cell >}}
 `ab` x 6
-{% animcube width:100% config:cube.conf
-  markers:100000000111100100111001001000000001100100111001000000
-  move:"{ab（蓝黄）①}D'LDL'.{ab（蓝黄）②}D'LDL'.{ab（蓝黄）③}D'LDL'.{ab（蓝黄）④}D'LDL'.{ab（蓝黄）⑤}D'LDL'.{ab（蓝黄）⑥}D'LDL'"
-%}
-<!-- cell -->
-`ba` x 6
-{% animcube width:100% config:cube.conf
-  markers:100000000111100100111001001000000001100100111001000000
-  move:"{ba（黄蓝）①}LD'L'D.{ba（黄蓝）②}LD'L'D.{ba（黄蓝）③}LD'L'D.{ba（黄蓝）④}LD'L'D.{ba（黄蓝）⑤}LD'L'D.{ba（黄蓝）⑥}LD'L'D"
-%}
-{% endgrid %}
+{{< animcube width="100%" config="cube.conf" markers="100000000111100100111001001000000001100100111001000000" move="{ab（蓝黄）①}D'LDL'.{ab（蓝黄）②}D'LDL'.{ab（蓝黄）③}D'LDL'.{ab（蓝黄）④}D'LDL'.{ab（蓝黄）⑤}D'LDL'.{ab（蓝黄）⑥}D'LDL'" >}}
+{{< /cell >}}
 
-{% endfolding %}
+{{< cell >}}
+`ba` x 6
+{{< animcube width="100%" config="cube.conf" markers="100000000111100100111001001000000001100100111001000000" move="{ba（黄蓝）①}LD'L'D.{ba（黄蓝）②}LD'L'D.{ba（黄蓝）③}LD'L'D.{ba（黄蓝）④}LD'L'D.{ba（黄蓝）⑤}LD'L'D.{ba（黄蓝）⑥}LD'L'D" >}}
+{{< /cell >}}
+{{< /grid >}}
+
+{{% /folding %}}
 
 ### 衍生操作 `bc`、`cb`、`ca`、`ac`
 
@@ -167,47 +161,37 @@ animcube3: true
 
 > 跟传统魔方公式不同，他们往往要求不要在手中随意改变魔方的方位，一般至少 top、down 两个面是固定的。但这里的操作组没有这个限制，因为倒 Y 形结构很容易找到，绕着原点 o 怎么调整魔方的方位都是可以的，主要看怎么转着顺手。
 
-{% folding 动画演示 %}
+{{% folding title="动画演示" %}}
 
 先对魔方做一次传统公式的 `y' z`，b 面、c 面就会换到之前 a 面、b 面的位置。
 
-{% grid %}
-<!-- cell -->
+{{< grid >}}
+{{< cell >}}
 `bc` 操作
-{% animcube width:100% config:cube.conf
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  move:"{把 bc（黄红）转到顺手位置}y'z.{bc（黄红）}D'LDL'.{回到原来的位置}z'y"
-  initrevmove:#
-%}
-<!-- cell -->
+{{< animcube width="100%" config="cube.conf" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" move="{把 bc（黄红）转到顺手位置}y'z.{bc（黄红）}D'LDL'.{回到原来的位置}z'y" initrevmove="#" >}}
+{{< /cell >}}
+
+{{< cell >}}
 `cb` 操作
-{% animcube width:100% config:cube.conf
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  move:"{把 cb（红黄）转到顺手位置}y'z.{cb（红黄）}LD'L'D.{回到原来的位置}z'y"
-  initrevmove:#
-%}
-{% endgrid %}
+{{< animcube width="100%" config="cube.conf" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" move="{把 cb（红黄）转到顺手位置}y'z.{cb（红黄）}LD'L'D.{回到原来的位置}z'y" initrevmove="#" >}}
+{{< /cell >}}
+{{< /grid >}}
 
 先对魔方做一次传统公式的 `z' y`，c 面、a 面就会换到之前 a 面、b 面的位置。
 
-{% grid %}
-<!-- cell -->
+{{< grid >}}
+{{< cell >}}
 `ca` 操作
-{% animcube width:100% config:cube.conf
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  move:"{把 ca（红蓝）转到顺手位置}z'y.{ca（红蓝）}D'LDL'.{回到原来的位置}y'z"
-  initrevmove:#
-%}
-<!-- cell -->
-`ac` 操作
-{% animcube width:100% config:cube.conf
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  move:"{把 ac（蓝红）转到顺手位置}z'y.{ac（蓝红）}LD'L'D.{回到原来的位置}y'z"
-  initrevmove:#
-%}
-{% endgrid %}
+{{< animcube width="100%" config="cube.conf" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" move="{把 ca（红蓝）转到顺手位置}z'y.{ca（红蓝）}D'LDL'.{回到原来的位置}y'z" initrevmove="#" >}}
+{{< /cell >}}
 
-{% endfolding %}
+{{< cell >}}
+`ac` 操作
+{{< animcube width="100%" config="cube.conf" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" move="{把 ac（蓝红）转到顺手位置}z'y.{ac（蓝红）}LD'L'D.{回到原来的位置}y'z" initrevmove="#" >}}
+{{< /cell >}}
+{{< /grid >}}
+
+{{% /folding %}}
 
 ### 特殊操作
 
@@ -220,24 +204,21 @@ animcube3: true
 
 > 由于对称性，还可以有 `c'b`、`c`、`a'c`、`a` 等，不再赘述。
 
-{% folding 动画演示 %}
+{{% folding title="动画演示" %}}
 
-{% grid %}
-<!-- cell -->
+{{< grid >}}
+{{< cell >}}
 `b'a` 操作
-{% animcube width:100% config:cube.conf
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  move:"{b'a（黄'蓝）}L'D'LD"
-%}
-<!-- cell -->
-`b` 操作
-{% animcube width:100% config:cube.conf
-  facelets:zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB
-  move:"{b（单独黄）}L"
-%}
-{% endgrid %}
+{{< animcube width="100%" config="cube.conf" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" move="{b'a（黄'蓝）}L'D'LD" >}}
+{{< /cell >}}
 
-{% endfolding %}
+{{< cell >}}
+`b` 操作
+{{< animcube width="100%" config="cube.conf" facelets="zyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggzzzBBZBBBBBB" move="{b（单独黄）}L" >}}
+{{< /cell >}}
+{{< /grid >}}
+
+{{% /folding %}}
 
 ## 复原三面
 
@@ -249,45 +230,37 @@ animcube3: true
 
 以 b 面为例，它的角在正确的位置，但没在正确的方向。
 
-{% grid c:5 %}
-<!-- cell -->
+{{% grid columns=5 %}}
+{{< cell >}}
 ![3-1](3-1.png)
-{% endgrid %}
+{{< /cell >}}
+{{% /grid %}}
 
 操作方法：`ab ab bc bc`（a、c 两面完全不变）。
 
-{% folding 动画演示 %}
+{{% folding title="动画演示" %}}
 
-{% animcube config:cube.conf
-  facelets:yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRRzggzggzzzBBBBBBBBB
-  markers:100000000000000000000000000000000000000000000000000000
-  move:"{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'.{把 bc（黄红）转到顺手位置}y'z.{bc bc（黄红 黄红）}D'LDL'.D'LDL'.{回到原来的位置}z'y"
-  initrevmove:#
-%}
+{{< animcube config="cube.conf" facelets="yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRRzggzggzzzBBBBBBBBB" markers="100000000000000000000000000000000000000000000000000000" move="{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'.{把 bc（黄红）转到顺手位置}y'z.{bc bc（黄红 黄红）}D'LDL'.D'LDL'.{回到原来的位置}z'y" initrevmove="#" >}}
 
-{% endfolding %}
+{{% /folding %}}
 
 ### ② 同上，但方向相反
 
 跟上一种类似，只是方向相反，复原操作是对称的。
 
-{% grid c:5 %}
-<!-- cell -->
+{{% grid columns=5 %}}
+{{< cell >}}
 ![3-2](3-2.png)
-{% endgrid %}
+{{< /cell >}}
+{{% /grid %}}
 
 操作方法：`cb cb ba ba`（a、c 两面完全不变）。
 
-{% folding 动画演示 %}
+{{% folding title="动画演示" %}}
 
-{% animcube config:cube.conf
-  facelets:yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRRzggzggzzzBBBBBBBBB
-  markers:100000000000000000000000000000000000000000000000000000
-  move:"{把 cb（红黄）转到顺手位置}y'z.{cb cb（红黄 红黄）}LD'L'D.LD'L'D.{把 ba（黄蓝）转到顺手位置}z'y.{ba ba（黄蓝 黄蓝）}LD'L'D.LD'L'D"
-  initrevmove:#
-%}
+{{< animcube config="cube.conf" facelets="yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRRzggzggzzzBBBBBBBBB" markers="100000000000000000000000000000000000000000000000000000" move="{把 cb（红黄）转到顺手位置}y'z.{cb cb（红黄 红黄）}LD'L'D.LD'L'D.{把 ba（黄蓝）转到顺手位置}z'y.{ba ba（黄蓝 黄蓝）}LD'L'D.LD'L'D" initrevmove="#" >}}
 
-{% endfolding %}
+{{% /folding %}}
 
 ### ③ 交换 `o` 点和面的角
 
@@ -295,51 +268,46 @@ animcube3: true
 
 以 c 面为例，它的角在倒 Y 形区域的 `o` 点那里，而 a、b 面的角都在正确的位置（方向无所谓）。
 
-{% grid c:5 %}
-<!-- cell -->
+{{% grid columns=5 %}}
+{{< cell >}}
 ![2-1](2-1.png)
-<!-- cell -->
+{{< /cell >}}
+
+{{< cell >}}
 ![2-2](2-2.png)
-<!-- cell -->
+{{< /cell >}}
+
+{{< cell >}}
 ![2-3](2-3.png)
-{% endgrid %}
+{{< /cell >}}
+{{% /grid %}}
 
 操作方法：`b'a b ba`，再恢复 b 面的棱（这是一次刻意破坏再重建的过程）。
 
 这两步之后并不会直接达到三面都复原了的状态，但可以根据魔方的实际状态，结合前边提到的两种情况的处理方法，灵活运用基本操作组继续复原。下边动画演示部分，会给出一个相对固定的复原套路，但没必要背下来。
 
-{% folding 动画演示 %}
+{{% folding title="动画演示" %}}
 
 以第一张图示意的情况为例。
 
-{% grid %}
-<!-- cell -->
+{{< grid >}}
+{{< cell >}}
 先做 `b'a b ba`
-{% animcube width:100% config:cube.conf
-  facelets:yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggrzzBBBBBBBBB
-  markers:000000000000000000000000000000000000000000100000000000
-  move:"{b'a（黄'蓝）}L'D'LD.{b（单独黄）}L.{ba（黄蓝）}LD'L'D"
-%}
-<!-- cell -->
-再恢复 b（黄色）面的棱
-{% animcube width:100% config:cube.conf
-  facelets:yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggrzzBBBBBBBBB
-  markers:000000000000000000000000000000000000000000100000000000
-  move:"{恢复 b（黄）棱}r'B'L2Br"
-  initmove:"{b'a（黄'蓝）}L'D'LD.{b（单独黄）}L.{ba（黄蓝）}LD'L'D"
-%}
-<!-- cell -->
-再转好的 a、b（蓝、黄色）两面（示意，倒 Y 视角）
-{% animcube width:100% config:cube.conf
-  position:rrrddd
-  facelets:yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggrzzBBBBBBBBB
-  markers:000000000000000000000000000000000000000000100000000000
-  move:"{把 bc（黄红）转到顺手位置}y'z.{bc（黄红）}D'LDL'.{回到原来的位置}z'y.{ab ab ab（蓝黄 蓝黄 蓝黄）}D'LDL'.D'LDL'.D'LDL'"
-  initmove:"{b'a（黄'蓝）}L'D'LD.{b（单独黄）}L.{ba（黄蓝）}LD'L'D..{恢复 b（黄）棱}r'B'L2Br"
-%}
-{% endgrid %}
+{{< animcube width="100%" config="cube.conf" facelets="yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggrzzBBBBBBBBB" markers="000000000000000000000000000000000000000000100000000000" move="{b'a（黄'蓝）}L'D'LD.{b（单独黄）}L.{ba（黄蓝）}LD'L'D" >}}
+{{< /cell >}}
 
-{% endfolding %}
+{{< cell >}}
+再恢复 b（黄色）面的棱
+{{< animcube width="100%" config="cube.conf" facelets="yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggrzzBBBBBBBBB" markers="000000000000000000000000000000000000000000100000000000" move="{恢复 b（黄）棱}r'B'L2Br" initmove="{b'a（黄'蓝）}L'D'LD.{b（单独黄）}L.{ba（黄蓝）}LD'L'D" >}}
+{{< /cell >}}
+
+{{< cell >}}
+再转好的 a、b（蓝、黄色）两面（示意，倒 Y 视角）
+{{< animcube width="100%" config="cube.conf" position="rrrddd" facelets="yyyyyyyyyZZZZWWZWWzzzoozoozRRRRRRRRZzggzggrzzBBBBBBBBB" markers="000000000000000000000000000000000000000000100000000000" move="{把 bc（黄红）转到顺手位置}y'z.{bc（黄红）}D'LDL'.{回到原来的位置}z'y.{ab ab ab（蓝黄 蓝黄 蓝黄）}D'LDL'.D'LDL'.D'LDL'" initmove="{b'a（黄'蓝）}L'D'LD.{b（单独黄）}L.{ba（黄蓝）}LD'L'D..{恢复 b（黄）棱}r'B'L2Br" >}}
+{{< /cell >}}
+{{< /grid >}}
+
+{{% /folding %}}
 
 ## 复原六面
 
@@ -347,125 +315,105 @@ animcube3: true
 
 ### ① 三个棱逆时针归位
 
-{% grid c:5 %}
-<!-- cell -->
+{{% grid columns=5 %}}
+{{< cell >}}
 ![6-1](6-1.png)
-{% endgrid %}
+{{< /cell >}}
+{{% /grid %}}
 
 `ba cb ac`，这时原本好的三面会被破坏，再继续观察并按复原三面的方法对 a、b、c 三面进行复原即可。
 
-{% folding 动画演示 %}
+{{% folding title="动画演示" %}}
 
-{% grid %}
-<!-- cell -->
+{{< grid >}}
+{{< cell >}}
 `ba cb ac`（倒 Y 视角）
-{% animcube width:100% config:cube.conf
-  position:rrrddd
-  facelets:yyyyyyyyyZWWGWWWWWogzooooooRRRRRRRRRgggwggzogBBBBBBBBB
-  markers:000000000020100000030001000000000000000300020000000000
-  move:"{ba（黄蓝）}LD'L'D.{把 cb（红黄）转到顺手位置}y'z.{cb（红黄）}LD'L'D.{把 ac（蓝红）转到顺手位置}y'z.{ac（蓝红）}LD'L'D.{回到原来的位置}y'z"
-%}
-<!-- cell -->
-继续复原示意（倒 Y 视角）
-{% animcube width:100% config:cube.conf
-  position:rrrddd
-  facelets:yyyyyyyyyZWWGWWWWWogzooooooRRRRRRRRRgggwggzogBBBBBBBBB
-  markers:000000000020100000030001000000000000000300020000000000
-  move:"{把 cb（红黄）转到顺手位置}y'z.{cb cb（红黄 红黄）}LD'L'D.LD'L'D.{把 ca（红蓝）转到顺手位置}y'z.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{把 ab（蓝黄）转到顺手位置}y'z.{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'"
-  initmove:"{ba（黄蓝）}LD'L'D.{把 cb（红黄）转到顺手位置}y'z.{cb（红黄）}LD'L'D.{把 ac（蓝红）转到顺手位置}y'z.{ac（蓝红）}LD'L'D.{回到原来的位置}y'z"
-%}
-{% endgrid %}
+{{< animcube width="100%" config="cube.conf" position="rrrddd" facelets="yyyyyyyyyZWWGWWWWWogzooooooRRRRRRRRRgggwggzogBBBBBBBBB" markers="000000000020100000030001000000000000000300020000000000" move="{ba（黄蓝）}LD'L'D.{把 cb（红黄）转到顺手位置}y'z.{cb（红黄）}LD'L'D.{把 ac（蓝红）转到顺手位置}y'z.{ac（蓝红）}LD'L'D.{回到原来的位置}y'z" >}}
+{{< /cell >}}
 
-{% endfolding %}
+{{< cell >}}
+继续复原示意（倒 Y 视角）
+{{< animcube width="100%" config="cube.conf" position="rrrddd" facelets="yyyyyyyyyZWWGWWWWWogzooooooRRRRRRRRRgggwggzogBBBBBBBBB" markers="000000000020100000030001000000000000000300020000000000" move="{把 cb（红黄）转到顺手位置}y'z.{cb cb（红黄 红黄）}LD'L'D.LD'L'D.{把 ca（红蓝）转到顺手位置}y'z.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{把 ab（蓝黄）转到顺手位置}y'z.{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'" initmove="{ba（黄蓝）}LD'L'D.{把 cb（红黄）转到顺手位置}y'z.{cb（红黄）}LD'L'D.{把 ac（蓝红）转到顺手位置}y'z.{ac（蓝红）}LD'L'D.{回到原来的位置}y'z" >}}
+{{< /cell >}}
+{{< /grid >}}
+
+{{% /folding %}}
 
 ### ② 三个棱顺时针归位
 
-{% grid c:5 %}
-<!-- cell -->
+{{% grid columns=5 %}}
+{{< cell >}}
 ![6-2](6-2.png)
-{% endgrid %}
+{{< /cell >}}
+{{% /grid %}}
 
 `ab ca bc`，再继续观察并转好 a、b、c。
 
-{% folding 动画演示 %}
+{{% folding title="动画演示" %}}
 
-{% grid %}
-<!-- cell -->
+{{< grid >}}
+{{< cell >}}
 `ab ca bc`（倒 Y 视角）
-{% animcube width:100% config:cube.conf
-  position:rrrddd
-  facelets:yyyyyyyyyZOWGWWWWWoozoowoooRRRRRRRRRgggwggzggBBBBBBBBB
-  markers:000000000010300000020003000000000000000200010000000000
-  move:"{ab（蓝黄）}D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca（红蓝）}D'LDL'.{把 bc（黄红）转到顺手位置}z'y.{bc（黄红）}D'LDL'.{回到原来的位置}z'y"
-%}
-<!-- cell -->
-继续复原示意（倒 Y 视角）
-{% animcube width:100% config:cube.conf
-  position:rrrddd
-  facelets:yyyyyyyyyZOWGWWWWWoozoowoooRRRRRRRRRgggwggzggBBBBBBBBB
-  markers:000000000010300000020003000000000000000200010000000000
-  move:"{把 ca（红蓝）转到顺手位置}z'y.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{把 cb（红黄）转到顺手位置}z'y.{cb cb（红黄 红黄）}LD'L'D.LD'L'D.{把 ba（黄蓝）转到顺手位置}z'y.{ba ba（黄蓝 黄蓝）}LD'L'D.LD'L'D"
-  initmove:"{ab（蓝黄）}D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca（红蓝）}D'LDL'.{把 bc（黄红）转到顺手位置}z'y.{bc（黄红）}D'LDL'.{回到原来的位置}z'y"
-%}
-{% endgrid %}
+{{< animcube width="100%" config="cube.conf" position="rrrddd" facelets="yyyyyyyyyZOWGWWWWWoozoowoooRRRRRRRRRgggwggzggBBBBBBBBB" markers="000000000010300000020003000000000000000200010000000000" move="{ab（蓝黄）}D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca（红蓝）}D'LDL'.{把 bc（黄红）转到顺手位置}z'y.{bc（黄红）}D'LDL'.{回到原来的位置}z'y" >}}
+{{< /cell >}}
 
-{% endfolding %}
+{{< cell >}}
+继续复原示意（倒 Y 视角）
+{{< animcube width="100%" config="cube.conf" position="rrrddd" facelets="yyyyyyyyyZOWGWWWWWoozoowoooRRRRRRRRRgggwggzggBBBBBBBBB" markers="000000000010300000020003000000000000000200010000000000" move="{把 ca（红蓝）转到顺手位置}z'y.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{把 cb（红黄）转到顺手位置}z'y.{cb cb（红黄 红黄）}LD'L'D.LD'L'D.{把 ba（黄蓝）转到顺手位置}z'y.{ba ba（黄蓝 黄蓝）}LD'L'D.LD'L'D" initmove="{ab（蓝黄）}D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca（红蓝）}D'LDL'.{把 bc（黄红）转到顺手位置}z'y.{bc（黄红）}D'LDL'.{回到原来的位置}z'y" >}}
+{{< /cell >}}
+{{< /grid >}}
+
+{{% /folding %}}
 
 ### ③ o-a 棱和 o-b 棱各自原地翻转
 
-{% grid c:5 %}
-<!-- cell -->
+{{% grid columns=5 %}}
+{{< cell >}}
 ![6-3](6-3.png)
-{% endgrid %}
+{{< /cell >}}
+{{% /grid %}}
 
 `ab ab ca ca`，再继续观察并转好 a、b、c。
 
-{% folding 动画演示 %}
+{{% folding title="动画演示" %}}
 
-{% grid %}
-<!-- cell -->
+{{< grid >}}
+{{< cell >}}
 `ab ab ca ca`（倒 Y 视角）
-{% animcube width:100% config:cube.conf
-  position:rrrddd
-  facelets:yyyyyyyyyZWWOWWWWWogzoowoooRRRRRRRRRgggoggzggBBBBBBBBB
-  markers:000000000000100000020001000000000000000200000000000000
-  move:"{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{回到原来的位置}y'z"
-%}
-<!-- cell -->
-继续复原示意（倒 Y 视角）
-{% animcube width:100% config:cube.conf
-  position:rrrddd
-  facelets:yyyyyyyyyZWWOWWWWWogzoowoooRRRRRRRRRgggoggzggBBBBBBBBB
-  markers:000000000000100000020001000000000000000200000000000000
-  move:"{ba ba（黄蓝 黄蓝）}LD'L'D.LD'L'D.{把 ac（蓝红）转到顺手位置}z'y.{ac ac（蓝红 蓝红）}LD'L'D.LD'L'D.{回到原来的位置}y'z"
-  initmove:"{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{回到原来的位置}y'z"
-%}
-{% endgrid %}
+{{< animcube width="100%" config="cube.conf" position="rrrddd" facelets="yyyyyyyyyZWWOWWWWWogzoowoooRRRRRRRRRgggoggzggBBBBBBBBB" markers="000000000000100000020001000000000000000200000000000000" move="{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{回到原来的位置}y'z" >}}
+{{< /cell >}}
 
-{% endfolding %}
+{{< cell >}}
+继续复原示意（倒 Y 视角）
+{{< animcube width="100%" config="cube.conf" position="rrrddd" facelets="yyyyyyyyyZWWOWWWWWogzoowoooRRRRRRRRRgggoggzggBBBBBBBBB" markers="000000000000100000020001000000000000000200000000000000" move="{ba ba（黄蓝 黄蓝）}LD'L'D.LD'L'D.{把 ac（蓝红）转到顺手位置}z'y.{ac ac（蓝红 蓝红）}LD'L'D.LD'L'D.{回到原来的位置}y'z" initmove="{ab ab（蓝黄 蓝黄）}D'LDL'.D'LDL'.{把 ca（红蓝）转到顺手位置}z'y.{ca ca（红蓝 红蓝）}D'LDL'.D'LDL'.{回到原来的位置}y'z" >}}
+{{< /cell >}}
+{{< /grid >}}
+
+{{% /folding %}}
 
 ## 速查表 / 一图流
 
 事项 | 图示 | 操作 | 说明 / 后续
 --|--|--|--
-倒 Y 形区域 | ![axis](axis.png) | | o-abc 直角坐标系<br>a 蓝 right<br>b 黄 top<br>c 红 back
+倒 Y 形区域 | ![axis](axis.png) | | o-abc 直角坐标系&#10;a 蓝 right&#10;b 黄 top&#10;c 红 back
 基本操作 `ab` | | `D' L D L'` | 蓝黄
 基本操作 `ba` | | `L D' L' D` | 黄蓝
 特殊操作 `b'a` | | `L' D' L D` | 黄'蓝
 特殊操作 `b` | | `L` | 黄
 三① 角的朝向 | ![3-1](3-1.png) | `ab ab bc bc` | a、c 两面完全不变
 三② 角的朝向 | ![3-2](3-2.png) | `cb cb ba ba` | a、c 两面完全不变
-三③ 交换 `o` 和角 | ![2-1](2-1.png) ![2-2](2-2.png) ![2-3](2-3.png) | `b'a b ba` | 再恢复 b 面的棱<br>再复原 a、b、c
-六① 三棱<br>逆时针归位 | ![6-1](6-1.png) | `ba cb ac` | 再复原 a、b、c
-六② 三棱<br>顺时针归位 | ![6-2](6-2.png) | `ab ca bc` | 再复原 a、b、c
-六③ o-a、o-b 棱<br>原地翻转 | ![6-3](6-3.png) | `ab ab ca ca` | 再复原 a、b、c
+三③ 交换 `o` 和角 | ![2-1](2-1.png) ![2-2](2-2.png) ![2-3](2-3.png) | `b'a b ba` | 再恢复 b 面的棱&#10;再复原 a、b、c
+六① 三棱&#10;逆时针归位 | ![6-1](6-1.png) | `ba cb ac` | 再复原 a、b、c
+六② 三棱&#10;顺时针归位 | ![6-2](6-2.png) | `ab ca bc` | 再复原 a、b、c
+六③ o-a、o-b 棱&#10;原地翻转 | ![6-3](6-3.png) | `ab ab ca ca` | 再复原 a、b、c
+{.source-linebreaks}
 
 ## 关于魔方动画演示
 
 本页内嵌入的魔方操作动画演示，是基于强大且易用的 [AnimCubeJS - the Rubik's Cube Animation Simulator](https://animcubejs.cubing.net/animcubejs.html)。
 
-{% badge_github cubing AnimCubeJS %}
+{{< badge_github user="cubing" repo="AnimCubeJS" >}}
 
 另外，虽然现在没再使用，但若干年前进行一些尝试的时候，强烈依赖了同样强大好用的 [larspetrus/Roofpig: Rubik's Cube animation for the modern web](https://github.com/larspetrus/Roofpig)。
 
-{% badge_github larspetrus Roofpig release:true %}
+{{< badge_github user="larspetrus" repo="Roofpig" release=true >}}

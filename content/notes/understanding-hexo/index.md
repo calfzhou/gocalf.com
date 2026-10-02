@@ -1,10 +1,9 @@
 ---
 title: Understanding Hexo
-notebook: notes
 tags:
   - it/web
-date: 2026-01-01 01:19:45
-updated: 2026-01-02 21:40:01
+date: "2026-01-01T01:19:45+08:00"
+lastmod: "2026-01-02T21:40:01+08:00"
 ---
 ## Hexo
 

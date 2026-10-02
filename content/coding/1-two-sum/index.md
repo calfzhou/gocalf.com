@@ -1,10 +1,9 @@
 ---
 title: 1. Two Sum
-notebook: coding
 tags:
 - easy
-date: 2024-11-09 20:49:16
-updated: 2024-11-09 20:49:16
+date: "2024-11-09T20:49:16+08:00"
+lastmod: "2024-11-09T20:49:16+08:00"
 ---
 ## Problem
 
@@ -48,7 +47,7 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,7 +63,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## 快一些
 
@@ -74,4 +73,4 @@ class Solution:
 
 时间复杂度为 `O(n)`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

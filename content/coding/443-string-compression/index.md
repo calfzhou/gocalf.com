@@ -1,10 +1,9 @@
 ---
 title: 443. String Compression
-notebook: coding
 tags:
 - medium
-date: 2024-11-27 19:44:51
-updated: 2024-11-27 19:44:51
+date: "2024-11-27T19:44:51+08:00"
+lastmod: "2024-11-27T19:44:51+08:00"
 ---
 ## Problem
 
@@ -53,10 +52,10 @@ class Solution:
     def compress(self, chars: List[str]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

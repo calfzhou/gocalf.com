@@ -1,12 +1,10 @@
 ---
 title: 1531. String Compression II
-notebook: coding
 tags:
 - hard
 - difficult
-date: 2024-12-01 15:13:27
-updated: 2024-12-01 19:57:32
-katex: true
+date: "2024-12-01T15:13:27+08:00"
+lastmod: "2024-12-01T19:57:32+08:00"
 ---
 ## Problem
 
@@ -51,7 +49,7 @@ class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -141,7 +139,7 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Wrong Greedy
 
@@ -151,6 +149,6 @@ $$
 
 但是用贪心策略可能会得到 `"a4b5"` 或者 `"cb6"`（取决于相同收益下优先取哪个方案），压缩长度是 `4` 或 `3`，都不是最优的。
 
-{% box 错误的贪心法 color:red %}
+{{% box title="错误的贪心法" color="red" %}}
 [solution_wrong.py](solution_wrong.py)
-{% endbox %}
+{{% /box %}}

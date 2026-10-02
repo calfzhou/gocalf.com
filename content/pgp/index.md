@@ -1,22 +1,24 @@
 ---
 title: Calf's PGP Key
-date: 2024-05-13 22:51:36
-menu_id: pgp
+date: "2024-05-13T22:51:36+08:00"
 ---
 ## PGP 指纹
 
-![PGP Fingerprint](https://img.shields.io/badge/Calf's%20PGP%20Finterprint-8A18%2090B6%200428%20C40D%2092C2%20%2076C8%205854%20E201%2082B7%205C52-%23FA7343?style=for-the-badge) {.no-caption}
+![PGP Fingerprint](https://img.shields.io/badge/Calf's%20PGP%20Finterprint-8A18%2090B6%200428%20C40D%2092C2%20%2076C8%205854%20E201%2082B7%205C52-%23FA7343?style=for-the-badge)
+{.no-caption}
 
-{% copy 8A18 90B6 0428 C40D 92C2  76C8 5854 E201 82B7 5C52 prefix:"Key fingerprint" %}
+{{% block id="copy_1" %}}
+{{< copy text="8A18 90B6 0428 C40D 92C2  76C8 5854 E201 82B7 5C52" prefix="Key fingerprint" >}}
+{{% /block %}}
 
 > [!tip]
 > 您可以将所有经过 `5854 E201 82B7 5C52` 签署过的内容视为我本人发布的内容，且我会对所有 `5854 E201 82B7 5C52` 签署过的内容负责，除非我已经公开使用撤销证书撤销了这个密钥，当该情况发生时，我所有地方的指纹签名都会变更，而且我也会公开通知密钥的更改。
 
 ## PGP Key
 
-{% link /pgp/calfzhou.key 下载我的 PGP 公钥 icon:/pgp/fingerprint.svg %}
+{{< link href="/pgp/calfzhou.key" text="下载我的 PGP 公钥" image="/pgp/fingerprint.svg" alt="" >}}
 
-{% folding child:codeblock 我的 PGP 公钥 %}
+{{% folding title="我的 PGP 公钥" child="codeblock" %}}
 
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -126,4 +128,4 @@ i7QmsCVJQWaXcQ==
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-{% endfolding %}
+{{% /folding %}}
