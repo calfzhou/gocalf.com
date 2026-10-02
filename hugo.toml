@@ -53,35 +53,35 @@ subtitle = 'Calf 的自留地 · 昙花一现 | 或有月下赏花人 应无所�
 
 [[menus.primary]]
 name = '主页'
-url = '/'
+pageRef = '/'
 weight = -1
 [menus.primary.params]
 icon = 'home'
 
 [[menus.primary]]
 name = '笔记'
-url = '/notes/'
+pageRef = '/notes'
 weight = 1
 [menus.primary.params]
 icon = 'notebook'
 color = '#1BCDFC'
 [[menus.primary]]
 name = 'Coding'
-url = '/coding/'
+pageRef = '/coding'
 weight = 2
 [menus.primary.params]
 icon = 'gocalf-coding'
 color = '#3DC550'
 [[menus.primary]]
 name = '博客'
-url = '/blog/'
+pageRef = '/blog'
 weight = 3
 [menus.primary.params]
 icon = 'blog'
 color = '#FFA500'
 [[menus.primary]]
 name = '关于'
-url = '/about/'
+pageRef = '/about'
 weight = 4
 [menus.primary.params]
 icon = 'gocalf-brand'
