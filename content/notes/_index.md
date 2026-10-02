@@ -6,10 +6,4 @@ params:
   name: "笔记"
   list_order: modification
   page_size: 8
-  left: [menu, taxonomies, recent]
-  recent_count: 32
-cascade:
-  params:
-    left: [menu, taxonomies, recent]
-    recent_count: 32
 ---
