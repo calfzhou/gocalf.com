@@ -119,7 +119,7 @@ icon = "gocalf-fingerprint"
 name = "切换主题"
 weight = 6
 [menus.social.params]
-action = "color-mode"
+onclick = "Sidera.cycleColorMode()"
 icon = "color-mode"
 
 [[menus.footer]]
