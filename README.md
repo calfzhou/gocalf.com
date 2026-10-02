@@ -22,11 +22,12 @@ New/migrated Markdown uses **YAML `---` front matter**; normal headings need no 
 ID attributes. Hugo's default heading IDs are accepted; use explicit IDs only for a
 specific reviewed compatibility need. Keep authored dates; conversion is not publishing.
 
-Known pilot review blocker: the Mermaid graph in **PGP - Pretty Good Privacy** currently
-falls back to source because of malformed multiline-label SVG from the shared renderer.
-A strict static build succeeds; that alone is not full interactive/parity acceptance.
-Giscus is explicitly off; edit links/Jinrishici remain deferred. No deployment/site push.
-See the coordination repository's P4-B report for current evidence and remaining work.
+The pilot's Mermaid multiline-label issue is fixed in pinned Sidera **c45210b**:
+original diagram sources render as XML-safe SVG text without a library/sandbox change.
+Strict native and bounded interactive checks cover all 16 articles and the used cube/
+diagram/search/source-copy features; user P4-B review is still required, not full-site
+or production parity acceptance. Giscus is explicitly off; edit links/Jinrishici remain
+deferred. No deployment/site push. See the coordination P4-B report for evidence/limits.
 
 ## Historical Hexo workflow (not Hugo)
 
