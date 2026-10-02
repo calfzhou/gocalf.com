@@ -1,5 +1,5 @@
 /* Site-owned preservation utilities; not blanket raw-HTML/author-style support. */
-.prose .gocalf-source-pale img { background: #f9fafb; }
+.prose img.gocalf-source-pale, .prose .gocalf-source-pale img { background: #f9fafb; }
 .prose .source-linebreaks :is(td,th) { white-space: pre-line; }
 .prose .gocalf-cube { width: var(--cube-width); max-width: 100%; margin: 1rem auto; }
 .cube-view { width: 100%; height: var(--cube-height); max-width: 100%; }
