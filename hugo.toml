@@ -1,5 +1,5 @@
 # P4-B private migration scaffold, not deployment configuration.
-# Remaining welcome/font/avatar/hub decisions are tracked in migration-project/P4-B.md.
+# Current scope/remaining avatar/content decisions: migration-project/P4-B.md.
 baseURL = 'https://gocalf.com/'
 title = 'GoCalf'
 theme = 'sidera'
@@ -52,11 +52,18 @@ image = '/images/calf.png'
 subtitle = 'Calf 的自留地 · 昙花一现 | 或有月下赏花人 应无所憾'
 
 [[menus.primary]]
+name = '主页'
+url = '/'
+weight = -1
+[menus.primary.params]
+icon = 'home'
+
+[[menus.primary]]
 name = '笔记'
 url = '/notes/'
 weight = 1
 [menus.primary.params]
-icon = 'gocalf-notes'
+icon = 'notebook'
 color = '#1BCDFC'
 [[menus.primary]]
 name = 'Coding'
@@ -70,7 +77,7 @@ name = '博客'
 url = '/blog/'
 weight = 3
 [menus.primary.params]
-icon = 'page'
+icon = 'blog'
 color = '#FFA500'
 [[menus.primary]]
 name = '关于'
@@ -183,13 +190,13 @@ weight = 4
 [[menus.footer]]
 parent = "content"
 name = "所有 Wiki 项目"
-url = "/wiki/"
+url = "/preset/docs/"
 weight = 5
 
 [[menus.footer]]
 parent = "content"
 name = "所有笔记本"
-url = "/notebooks/"
+url = "/preset/notes/"
 weight = 6
 
 [[menus.footer]]

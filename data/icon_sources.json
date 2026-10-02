@@ -8,10 +8,17 @@
   },
   {
     "key": "gocalf-coding",
-    "source_key": "menu:coding",
-    "source_sha256": "051edc03d9a96d57ea583510e09b110dbcd79da09c06a0a1e081b2a88ded5363",
-    "normalization": "remove redundant role only",
-    "source_file": "source/_data/icons.yml"
+    "source_key": "sidebar-code",
+    "source_sha256": "e5e8e713b07999fc40e0a946414b2d4e2cb1bb20cceb87745fc24a1650d55b81",
+    "normalization": "root dimensions removed; #1C274C to currentColor; whitespace only; reference snapshot, not latest upstream claim",
+    "source_file": "packages/core/svgs/it/BoldDuotone/sidebar-code.svg",
+    "style": "BoldDuotone",
+    "author": "480 Design",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "repository": "https://github.com/saoudi-h/solar-icons",
+    "revision": "dcbe867a0f62c3b43edda0a4bca0149c895bc2eb",
+    "normalized_sha256": "69fcc01d56aece1477b92ed8f930619a3e82a04ba13dc233e3aabef80a32157a"
   },
   {
     "key": "gocalf-brand",
