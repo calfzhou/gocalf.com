@@ -16,7 +16,8 @@ Use native named string parameters, e.g. `animcube size="3" config="cube.conf"
 move="R U R'"`; outer container `%`, nested leaf `<`, as with Sidera's other leaves.
 Only audited data options are supported. Width accepts `100%` or positive pixels;
 height is positive pixels. Config must be an existing adjacent `.conf` resource.
-Its basename stays in the library input because the original library resolves it
+There is no visible configuration link/control; the resource remains public because
+the animation needs it. Its basename stays in the library input because the original library resolves it
 relative to the canonical page URL; the native resource is published unchanged.
 
 The controller selects only known constructors, serializes inert JSON attributes,

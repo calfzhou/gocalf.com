@@ -14,11 +14,11 @@
 {{- $width := .Get "width" | default "300px" -}}{{- $height := .Get "height" | default "319px" -}}
 {{- if not (or (eq $width "100%") (findRE `^[1-9][0-9]{0,3}px$` $width)) -}}{{- errorf "GoCalf animcube width must be 100%% or positive pixels (%s)" .Position -}}{{- end -}}
 {{- if not (findRE `^[1-9][0-9]{0,3}px$` $height) -}}{{- errorf "GoCalf animcube height must be positive pixels (%s)" .Position -}}{{- end -}}
-{{- $config := .Get "config" -}}{{- $configURL := "" -}}
+{{- $config := .Get "config" -}}
 {{- if not (findRE `^[A-Za-z0-9_-]+\.conf$` (string $config)) -}}{{- errorf "GoCalf animcube config must be an adjacent .conf basename (%s)" .Position -}}
-{{- else -}}{{- with .Page.Resources.Get $config -}}{{- $configURL = .RelPermalink -}}
+{{- else -}}{{- with .Page.Resources.Get $config -}}{{- $published := .RelPermalink -}}
 {{- else -}}{{- errorf "GoCalf animcube missing config %q (%s)" $config $.Position -}}{{- end -}}{{- end -}}
 {{- $id := printf "gocalf-cube-%s" (partial "components/key.html" .) -}}
 {{- .Page.Store.SetInMap "gocalf-cube-sizes" $size true -}}
-{{- $html := printf `<figure class="gocalf-cube" data-cube-size="%s" data-cube-options="%s" style="--cube-width:%s;--cube-height:%s"><div class="cube-view" id="%s" role="group" aria-label="%s 阶魔方动画"></div><p class="cube-error" hidden>魔方动画加载失败，请刷新页面重试。</p><noscript>此交互动画需要 JavaScript；原文的步骤和公式仍可阅读。</noscript><a class="cube-config" href="%s">动画配置</a></figure>` $size (htmlEscape ($params | jsonify)) $width $height $id $size $configURL -}}
+{{- $html := printf `<figure class="gocalf-cube" data-cube-size="%s" data-cube-options="%s" style="--cube-width:%s;--cube-height:%s"><div class="cube-view" id="%s" role="group" aria-label="%s 阶魔方动画"></div><p class="cube-error" hidden>魔方动画加载失败，请刷新页面重试。</p><noscript>此交互动画需要 JavaScript；原文的步骤和公式仍可阅读。</noscript></figure>` $size (htmlEscape ($params | jsonify)) $width $height $id $size -}}
 {{- partial "components/leaf.html" (dict "shortcode" . "html" ($html | safeHTML) "inline" false) | safeHTML -}}

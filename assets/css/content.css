@@ -3,5 +3,4 @@
 .prose .gocalf-cube { width: var(--cube-width); max-width: 100%; margin: 1rem auto; }
 .cube-view { width: 100%; height: var(--cube-height); max-width: 100%; }
 .cube-view canvas { display: block; max-width: 100%; }
-.cube-config { font-size: .75rem; }
 .cube-error { color: var(--text); }
