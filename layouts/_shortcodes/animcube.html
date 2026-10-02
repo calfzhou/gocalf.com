@@ -1,0 +1,24 @@
+{{- /* GoCalf-owned adapter for the six preserved local AnimCubeJS libraries.
+     Only audited data parameters, never authored code, templates or remote config. */ -}}
+{{- $allowed := slice "size" "width" "height" "config" "facelets" "markers" "move" "initmove" "initrevmove" "movetext" "position" "repeat" -}}
+{{- $params := dict -}}
+{{- if not .IsNamedParams -}}{{- errorf "GoCalf animcube requires named parameters (%s)" .Position -}}{{- end -}}
+{{- range $k, $v := .Params -}}
+  {{- if not (in $allowed $k) -}}{{- errorf "GoCalf animcube unsupported parameter %q (%s)" $k $.Position -}}{{- end -}}
+  {{- if ne (printf "%T" $v) "string" -}}{{- errorf "GoCalf animcube %s must be a string (%s)" $k $.Position -}}{{- end -}}
+  {{- if findRE `[\x00-\x1f\x7f]` (string $v) -}}{{- errorf "GoCalf animcube control characters in %s (%s)" $k $.Position -}}{{- end -}}
+  {{- if not (in (slice "size" "width" "height") $k) -}}{{- $params = merge $params (dict $k $v) -}}{{- end -}}
+{{- end -}}
+{{- $size := .Get "size" | default "3" -}}
+{{- if not (in (slice "2" "3" "4" "5" "6" "7") $size) -}}{{- errorf "GoCalf animcube size must be 2..7 (%s)" .Position -}}{{- end -}}
+{{- $width := .Get "width" | default "300px" -}}{{- $height := .Get "height" | default "319px" -}}
+{{- if not (or (eq $width "100%") (findRE `^[1-9][0-9]{0,3}px$` $width)) -}}{{- errorf "GoCalf animcube width must be 100%% or positive pixels (%s)" .Position -}}{{- end -}}
+{{- if not (findRE `^[1-9][0-9]{0,3}px$` $height) -}}{{- errorf "GoCalf animcube height must be positive pixels (%s)" .Position -}}{{- end -}}
+{{- $config := .Get "config" -}}{{- $configURL := "" -}}
+{{- if not (findRE `^[A-Za-z0-9_-]+\.conf$` (string $config)) -}}{{- errorf "GoCalf animcube config must be an adjacent .conf basename (%s)" .Position -}}
+{{- else -}}{{- with .Page.Resources.Get $config -}}{{- $configURL = .RelPermalink -}}
+{{- else -}}{{- errorf "GoCalf animcube missing config %q (%s)" $config $.Position -}}{{- end -}}{{- end -}}
+{{- $id := printf "gocalf-cube-%s" (partial "components/key.html" .) -}}
+{{- .Page.Store.SetInMap "gocalf-cube-sizes" $size true -}}
+{{- $html := printf `<figure class="gocalf-cube" data-cube-size="%s" data-cube-options="%s" style="--cube-width:%s;--cube-height:%s"><div class="cube-view" id="%s" role="group" aria-label="%s 阶魔方动画"></div><p class="cube-error" hidden>魔方动画加载失败，请刷新页面重试。</p><noscript>此交互动画需要 JavaScript；原文的步骤和公式仍可阅读。</noscript><a class="cube-config" href="%s">动画配置</a></figure>` $size (htmlEscape ($params | jsonify)) $width $height $id $size $configURL -}}
+{{- partial "components/leaf.html" (dict "shortcode" . "html" ($html | safeHTML) "inline" false) | safeHTML -}}
