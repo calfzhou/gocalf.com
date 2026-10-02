@@ -3,6 +3,7 @@ title: "<Code author=\"Calf\" />"
 description: "Keep mind sharp, keep code clean."
 preset: notes
 params:
+  name: "Coding"
   list_order: publication
   page_size: 32
   left: [menu, taxonomies, recent]
