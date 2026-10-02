@@ -3,6 +3,7 @@ title: "<Code author=\"Calf\" />"
 description: "Keep mind sharp, keep code clean."
 preset: notes
 params:
+  logo: "/images/gocalf-code.png"
   name: "Coding"
   page_size: 32
 cascade:
