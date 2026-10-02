@@ -288,9 +288,7 @@ pnpm add hexo-diagrams-net
 :::
 ```
 
-{{% block class="invert-when-dark" %}}
 {{< diagramsnet src="flowchart.drawio" >}}
-{{% /block %}}
 
 - 如何适配明暗主题？
   - 参考 <https://github.com/jgraph/drawio-integration/blob/master/inline.js>
