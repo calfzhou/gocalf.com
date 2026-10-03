@@ -1,10 +1,9 @@
 ---
 title: 848. Shifting Letters
-notebook: coding
 tags:
 - medium
-date: 2025-01-05 10:55:45
-updated: 2025-01-05 10:55:45
+date: "2025-01-05T10:55:45+08:00"
+lastmod: "2025-01-05T10:55:45+08:00"
 ---
 ## Problem
 
@@ -22,8 +21,8 @@ Return _the final string after all such shifts to s are applied_.
 
 **Example 1:**
 
-> Input: `s = "abc", shifts = [3,5,9]`
-> Output: `"rpl"`
+> Input: `s = "abc", shifts = [3,5,9]`\
+> Output: `"rpl"`\
 > Explanation: We start with `"abc".`
 > After shifting the first 1 letters of s by 3, we have `"dbc"`.
 > After shifting the first 2 letters of s by 5, we have `"igc"`.
@@ -31,7 +30,7 @@ Return _the final string after all such shifts to s are applied_.
 
 **Example 2:**
 
-> Input: `s = "aaa", shifts = [1,2,3]`
+> Input: `s = "aaa", shifts = [1,2,3]`\
 > Output: `"gfd"`
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def shiftingLetters(self, s: str, shifts: List[int]) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 2364. Count Number of Bad Pairs
-notebook: coding
 tags:
 - medium
-date: 2025-02-09 14:15:31
-updated: 2025-02-09 14:15:31
+date: "2025-02-09T14:15:31+08:00"
+lastmod: "2025-02-09T14:15:31+08:00"
 ---
 ## Problem
 
@@ -16,8 +15,8 @@ Return _the total number of **bad pairs** in_ `nums`.
 
 **Example 1:**
 
-> Input: `nums = [4,1,3,3]`
-> Output: `5`
+> Input: `nums = [4,1,3,3]`\
+> Output: `5`\
 > Explanation: The pair `(0, 1)` is a bad pair since `1 - 0 != 1 - 4`.
 > The pair `(0, 2)` is a bad pair since `2 - 0 != 3 - 4`, `2 != -1`.
 > The pair `(0, 3)` is a bad pair since `3 - 0 != 3 - 4`, `3 != -1`.
@@ -27,8 +26,8 @@ Return _the total number of **bad pairs** in_ `nums`.
 
 **Example 2:**
 
-> Input: `nums = [1,2,3,4,5]`
-> Output: `0`
+> Input: `nums = [1,2,3,4,5]`\
+> Output: `0`\
 > Explanation: There are no bad pairs.
 
 **Constraints:**
@@ -43,7 +42,7 @@ class Solution:
     def countBadPairs(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,4 +58,4 @@ Pair 总数显然为 `n * (n - 1) / 2`。如果有 m 个位置的 `nums[i] - i` 
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

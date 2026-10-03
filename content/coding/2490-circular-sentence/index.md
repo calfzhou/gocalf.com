@@ -1,10 +1,9 @@
 ---
 title: 2490. Circular Sentence
-notebook: coding
 tags:
 - easy
-date: 2024-11-27 19:05:55
-updated: 2024-11-27 19:05:55
+date: "2024-11-27T19:05:55+08:00"
+lastmod: "2024-11-27T19:05:55+08:00"
 ---
 ## Problem
 
@@ -27,34 +26,34 @@ Given a string `sentence`, return `true` _if it is circular_. Otherwise, return 
 
 **Example 1:**
 
-> Input: `sentence = "leetcode exercises sound delightful"`
-> Output: `true`
+> Input: `sentence = "leetcode exercises sound delightful"`\
+> Output: `true`\
 > Explanation: The words in sentence are `["leetcode", "exercises", "sound", "delightful"]`.
 >
-> - leetcod{% u e %}'s last character is equal to {% u e %}xercises's first character.
-> - exercise{% u s %}'s last character is equal to {% u s %}ound's first character.
-> - soun{% u d %}'s last character is equal to {% u d %}elightful's first character.
-> - delightfu{% u l %}'s last character is equal to {% u l %}eetcode's first character.
+> - leetcod{{< u text="e" >}}'s last character is equal to {{< u text="e" >}}xercises's first character.
+> - exercise{{< u text="s" >}}'s last character is equal to {{< u text="s" >}}ound's first character.
+> - soun{{< u text="d" >}}'s last character is equal to {{< u text="d" >}}elightful's first character.
+> - delightfu{{< u text="l" >}}'s last character is equal to {{< u text="l" >}}eetcode's first character.
 >
 > The sentence is circular.
 
 **Example 2:**
 
-> Input: `sentence = "eetcode"`
-> Output: `true`
+> Input: `sentence = "eetcode"`\
+> Output: `true`\
 > Explanation: The words in sentence are `["eetcode"]`.
 >
-> - eetcod{% u e %}'s last character is equal to {% u e %}etcode's first character.
+> - eetcod{{< u text="e" >}}'s last character is equal to {{< u text="e" >}}etcode's first character.
 >
 > The sentence is circular.
 
 **Example 3:**
 
-> Input: `sentence = "Leetcode is cool"`
-> Output: `false`
+> Input: `sentence = "Leetcode is cool"`\
+> Output: `false`\
 > Explanation: The words in sentence are `["Leetcode", "is", "cool"]`.
 >
-> - Leetcod{% u e %}'s last character is **not** equal to {% u L %}eetcode's first character.
+> - Leetcod{{< u text="e" >}}'s last character is **not** equal to {{< u text="L" >}}eetcode's first character.
 >
 > The sentence is **not** circular.
 
@@ -72,7 +71,7 @@ class Solution:
     def isCircularSentence(self, sentence: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -80,4 +79,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

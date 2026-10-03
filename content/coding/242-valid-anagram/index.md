@@ -1,10 +1,9 @@
 ---
 title: 242. Valid Anagram
-notebook: coding
 tags:
 - easy
-date: 2024-11-25 13:42:37
-updated: 2024-11-25 13:42:37
+date: "2024-11-25T13:42:37+08:00"
+lastmod: "2024-11-25T13:42:37+08:00"
 ---
 ## Problem
 
@@ -16,12 +15,12 @@ Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `f
 
 **Example 1:**
 
-> Input: `s = "anagram", t = "nagaram"`
+> Input: `s = "anagram", t = "nagaram"`\
 > Output: `true`
 
 **Example 2:**
 
-> Input: `s = "rat", t = "car"`
+> Input: `s = "rat", t = "car"`\
 > Output: `false`
 
 **Constraints:**
@@ -38,7 +37,7 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -48,4 +47,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

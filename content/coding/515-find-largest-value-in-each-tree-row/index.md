@@ -1,10 +1,9 @@
 ---
 title: 515. Find Largest Value in Each Tree Row
-notebook: coding
 tags:
 - medium
-date: 2024-12-25 10:06:53
-updated: 2024-12-25 10:06:53
+date: "2024-12-25T10:06:53+08:00"
+lastmod: "2024-12-25T10:06:53+08:00"
 ---
 ## Problem
 
@@ -14,14 +13,15 @@ Given the `root` of a binary tree, return _an array of the largest value in each
 
 **Example 1:**
 
-![case1|300](case1.png "case1"){.invert-when-dark}
+![case1|300](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `root = [1,3,2,5,3,null,9]`
+> Input: `root = [1,3,2,5,3,null,9]`\
 > Output: `[1,3,9]`
 
 **Example 2:**
 
-> Input: `root = [1,2,3]`
+> Input: `root = [1,2,3]`\
 > Output: `[1,3]`
 
 **Constraints:**
@@ -42,7 +42,7 @@ class Solution:
     def largestValues(self, root: Optional[TreeNode]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -50,4 +50,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

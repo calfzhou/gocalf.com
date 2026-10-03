@@ -1,10 +1,9 @@
 ---
 title: 785. Is Graph Bipartite?
-notebook: coding
 tags:
 - medium
-date: 2024-12-27 18:10:03
-updated: 2024-12-27 18:10:03
+date: "2024-12-27T18:10:03+08:00"
+lastmod: "2024-12-27T18:10:03+08:00"
 ---
 ## Problem
 
@@ -23,18 +22,20 @@ Return `true` _if and only if it is **bipartite**_.
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `graph = [[1,2,3],[0,2],[0,1,3],[0,2]]`
-> Output: `false`
+> Input: `graph = [[1,2,3],[0,2],[0,1,3],[0,2]]`\
+> Output: `false`\
 > Explanation: There is no way to partition the nodes into two independent sets such that every edge connects a node in one and a node in the other.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `graph = [[1,3],[0,2],[1,3],[0,2]]`
-> Output: `true`
+> Input: `graph = [[1,3],[0,2],[1,3],[0,2]]`\
+> Output: `true`\
 > Explanation: We can partition the nodes into two sets: `{0, 2}` and `{1, 3}`.
 
 **Constraints:**
@@ -54,7 +55,7 @@ class Solution:
     def isBipartite(self, graph: List[List[int]]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +65,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

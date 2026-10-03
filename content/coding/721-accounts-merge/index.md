@@ -1,10 +1,9 @@
 ---
 title: 721. Accounts Merge
-notebook: coding
 tags:
 - medium
-date: 2024-12-23 20:49:39
-updated: 2024-12-23 20:49:39
+date: "2024-12-23T20:49:39+08:00"
+lastmod: "2024-12-23T20:49:39+08:00"
 ---
 ## Problem
 
@@ -18,8 +17,8 @@ After merging the accounts, return the accounts in the following format: the fir
 
 **Example 1:**
 
-> Input: `accounts = [["John","johnsmith@mail.com","john_newyork@mail.com"],["John","johnsmith@mail.com","john00@mail.com"],["Mary","mary@mail.com"],["John","johnnybravo@mail.com"]]`
-> Output: `[["John","john00@mail.com","john_newyork@mail.com","johnsmith@mail.com"],["Mary","mary@mail.com"],["John","johnnybravo@mail.com"]]`
+> Input: `accounts = [["John","johnsmith@mail.com","john_newyork@mail.com"],["John","johnsmith@mail.com","john00@mail.com"],["Mary","mary@mail.com"],["John","johnnybravo@mail.com"]]`\
+> Output: `[["John","john00@mail.com","john_newyork@mail.com","johnsmith@mail.com"],["Mary","mary@mail.com"],["John","johnnybravo@mail.com"]]`\
 > Explanation:
 > The first and second John's are the same person as they have the common email `"johnsmith@mail.com"`.
 > The third John and Mary are different people as none of their email addresses are used by other accounts.
@@ -45,7 +44,7 @@ class Solution:
     def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -57,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

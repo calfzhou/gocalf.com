@@ -1,10 +1,9 @@
 ---
 title: 2931. Maximum Spending After Buying Items
-notebook: coding
 tags:
 - hard
-date: 2024-12-12 11:06:08
-updated: 2024-12-12 11:06:08
+date: "2024-12-12T11:06:08+08:00"
+lastmod: "2024-12-12T11:06:08+08:00"
 ---
 ## Problem
 
@@ -23,8 +22,8 @@ Return _the **maximum amount of money that can be spent** on buying all_ `m * n`
 
 **Example 1:**
 
-> Input: `values = [[8,5,2],[6,4,1],[9,7,3]]`
-> Output: `285`
+> Input: `values = [[8,5,2],[6,4,1],[9,7,3]]`\
+> Output: `285`\
 > Explanation: On the first day, we buy product 2 from shop 1 for a price of `values[1][2] * 1 = 1`.
 > On the second day, we buy product 2 from shop 0 for a price of `values[0][2] * 2 = 4`.
 > On the third day, we buy product 2 from shop 2 for a price of `values[2][2] * 3 = 9`.
@@ -39,8 +38,8 @@ Return _the **maximum amount of money that can be spent** on buying all_ `m * n`
 
 **Example 2:**
 
-> Input: `values = [[10,8,6,4,2],[9,7,5,3,2]]`
-> Output: `386`
+> Input: `values = [[10,8,6,4,2],[9,7,5,3,2]]`\
+> Output: `386`\
 > Explanation: On the first day, we buy product 4 from shop 0 for a price of `values[0][4] * 1 = 2`.
 > On the second day, we buy product 4 from shop 1 for a price of `values[1][4] * 2 = 4`.
 > On the third day, we buy product 3 from shop 1 for a price of `values[1][3] * 3 = 9`.
@@ -68,7 +67,7 @@ class Solution:
     def maxSpending(self, values: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -86,8 +85,8 @@ class Solution:
 
 ### Merge Sort with Min Heap
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Sort All Directly
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

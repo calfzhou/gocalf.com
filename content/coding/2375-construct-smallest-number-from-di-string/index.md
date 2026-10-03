@@ -1,10 +1,9 @@
 ---
 title: 2375. Construct Smallest Number From DI String
-notebook: coding
 tags:
 - medium
-date: 2025-02-18 15:49:09
-updated: 2025-02-18 15:49:09
+date: "2025-02-18T15:49:09+08:00"
+lastmod: "2025-02-18T15:49:09+08:00"
 ---
 ## Problem
 
@@ -22,8 +21,8 @@ Return _the lexicographically **smallest** possible string_ `num` _that meets th
 
 **Example 1:**
 
-> Input: `pattern = "IIIDIDDD"`
-> Output: `"123549876"`
+> Input: `pattern = "IIIDIDDD"`\
+> Output: `"123549876"`\
 > Explanation:
 > At indices 0, 1, 2, and 4 we must have that `num[i] < num[i+1]`.
 > At indices 3, 5, 6, and 7 we must have that `num[i] > num[i+1]`.
@@ -33,8 +32,8 @@ Return _the lexicographically **smallest** possible string_ `num` _that meets th
 
 **Example 2:**
 
-> Input: `pattern = "DDD"`
-> Output: `"4321"`
+> Input: `pattern = "DDD"`\
+> Output: `"4321"`\
 > Explanation:
 > Some possible values of num are `"9876"`, `"7321"`, and `"8742"`.
 > It can be proven that `"4321"` is the smallest possible num that meets the conditions.
@@ -51,7 +50,7 @@ class Solution:
     def smallestNumber(self, pattern: str) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,7 +64,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster
 
@@ -81,4 +80,4 @@ class Solution:
 
 时间复杂度 `O(n)`，空间复杂度 `O(n)`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 2349. Design a Number Container System
-notebook: coding
 tags:
 - medium
-date: 2025-02-08 17:43:23
-updated: 2025-02-08 17:43:23
+date: "2025-02-08T17:43:23+08:00"
+lastmod: "2025-02-08T17:43:23+08:00"
 ---
 ## Problem
 
@@ -23,11 +22,11 @@ Implement the `NumberContainers` class:
 
 **Example 1:**
 
-> Input
-> `["NumberContainers", "find", "change", "change", "change", "change", "find", "change", "find"]`
-> `[[], [10], [2, 10], [1, 10], [3, 10], [5, 10], [10], [1, 20], [10]]`
-> Output
-> `[null, -1, null, null, null, null, 1, null, 2]`
+> Input\
+> `["NumberContainers", "find", "change", "change", "change", "change", "find", "change", "find"]`\
+> `[[], [10], [2, 10], [1, 10], [3, 10], [5, 10], [10], [1, 20], [10]]`\
+> Output\
+> `[null, -1, null, null, null, null, 1, null, 2]`\
 > Explanation
 >
 > ```cpp
@@ -68,7 +67,7 @@ class NumberContainers:
 # param_2 = obj.find(number)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -80,4 +79,4 @@ class NumberContainers:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

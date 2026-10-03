@@ -1,11 +1,9 @@
 ---
 title: 2425. Bitwise XOR of All Pairings
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-01-16 16:26:37
-updated: 2025-01-16 16:26:37
+date: "2025-01-16T16:26:37+08:00"
+lastmod: "2025-01-16T16:26:37+08:00"
 ---
 ## Problem
 
@@ -17,16 +15,16 @@ Return _the **bitwise XOR** of all integers in_ `nums3`.
 
 **Example 1:**
 
-> Input: `nums1 = [2,1,3], nums2 = [10,2,5,0]`
-> Output: `13`
+> Input: `nums1 = [2,1,3], nums2 = [10,2,5,0]`\
+> Output: `13`\
 > Explanation:
 > A possible nums3 array is `[8,0,7,2,11,3,4,1,9,1,6,3]`.
 > The bitwise XOR of all these numbers is 13, so we return 13.
 
 **Example 2:**
 
-> Input: `nums1 = [1,2], nums2 = [3,4]`
-> Output: `0`
+> Input: `nums1 = [1,2], nums2 = [3,4]`\
+> Output: `0`\
 > Explanation:
 > All possible pairs of bitwise XORs are `nums1[0] ^ nums2[0]`, `nums1[0] ^ nums2[1]`, `nums1[1] ^ nums2[0]`,
 > and `nums1[1] ^ nums2[1]`.
@@ -45,7 +43,7 @@ class Solution:
     def xorAllNums(self, nums1: List[int], nums2: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -88,4 +86,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

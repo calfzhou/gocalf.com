@@ -1,10 +1,9 @@
 ---
 title: 235. Lowest Common Ancestor of a Binary Search Tree
-notebook: coding
 tags:
 - medium
-date: 2024-11-24 22:08:11
-updated: 2024-11-24 22:08:11
+date: "2024-11-24T22:08:11+08:00"
+lastmod: "2024-11-24T22:08:11+08:00"
 ---
 ## Problem
 
@@ -16,23 +15,25 @@ According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8`
-> Output: `6`
+> Input: `root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8`\
+> Output: `6`\
 > Explanation: The LCA of nodes `2` and `8` is `6`.
 
 **Example 2:**
 
-![case2](case1.png){.invert-when-dark}
+![case2](case1.png)
+{.invert-when-dark}
 
-> Input: `root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4`
-> Output: `2`
+> Input: `root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4`\
+> Output: `2`\
 > Explanation: The LCA of nodes `2` and `4` is `2`, since a node can be a descendant of itself according to the LCA definition.
 
 **Example 3:**
 
-> Input: `root = [2,1], p = 2, q = 1`
+> Input: `root = [2,1], p = 2, q = 1`\
 > Output: `2`
 
 **Constraints:**
@@ -57,7 +58,7 @@ class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -67,4 +68,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

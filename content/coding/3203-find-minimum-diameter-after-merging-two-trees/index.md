@@ -1,10 +1,9 @@
 ---
 title: 3203. Find Minimum Diameter After Merging Two Trees
-notebook: coding
 tags:
 - hard
-date: 2024-12-24 11:41:50
-updated: 2024-12-24 11:41:50
+date: "2024-12-24T11:41:50+08:00"
+lastmod: "2024-12-24T11:41:50+08:00"
 ---
 ## Problem
 
@@ -20,19 +19,21 @@ The **diameter** of a tree is the length of the _longest_ path between any two n
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `edges1 = [[0,1],[0,2],[0,3]], edges2 = [[0,1]]`
-> Output: `3`
+> Input: `edges1 = [[0,1],[0,2],[0,3]], edges2 = [[0,1]]`\
+> Output: `3`\
 > Explanation:
 > We can obtain a tree of diameter 3 by connecting node 0 from the first tree with any node from the second tree.
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
 **Example 2:**
 
-> Input: `edges1 = [[0,1],[0,2],[0,3],[2,4],[2,5],[3,6],[2,7]], edges2 = [[0,1],[0,2],[0,3],[2,4],[2,5],[3,6],[2,7]]`
-> Output: `5`
+> Input: `edges1 = [[0,1],[0,2],[0,3],[2,4],[2,5],[3,6],[2,7]], edges2 = [[0,1],[0,2],[0,3],[2,4],[2,5],[3,6],[2,7]]`\
+> Output: `5`\
 > Explanation:
 > We can obtain a tree of diameter 5 by connecting node 0 from the first tree with node 0 from the second tree.
 
@@ -55,7 +56,7 @@ class Solution:
     def minimumDiameterAfterMerge(self, edges1: List[List[int]], edges2: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -69,4 +70,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

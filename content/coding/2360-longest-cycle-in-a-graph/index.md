@@ -1,10 +1,9 @@
 ---
 title: 2360. Longest Cycle in a Graph
-notebook: coding
 tags:
 - hard
-date: 2024-12-24 23:22:05
-updated: 2024-12-24 23:22:05
+date: "2024-12-24T23:22:05+08:00"
+lastmod: "2024-12-24T23:22:05+08:00"
 ---
 ## Problem
 
@@ -20,19 +19,21 @@ A cycle is a path that starts and ends at the **same** node.
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `edges = [3,3,4,2,3]`
-> Output: `3`
+> Input: `edges = [3,3,4,2,3]`\
+> Output: `3`\
 > Explanation: The longest cycle in the graph is the cycle: `2 -> 4 -> 3 -> 2`.
 > The length of this cycle is 3, so 3 is returned.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `edges = [2,-1,3,1]`
-> Output: `-1`
+> Input: `edges = [2,-1,3,1]`\
+> Output: `-1`\
 > Explanation: There are no cycles in this graph.
 
 **Constraints:**
@@ -49,7 +50,7 @@ class Solution:
     def longestCycle(self, edges: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -57,23 +58,21 @@ class Solution:
 
 相当于简版的 [2127. Maximum Employees to Be Invited to a Meeting](../2127-maximum-employees-to-be-invited-to-a-meeting/index.md)，只是每个顶点的入度从严格为 1 变为小于等于 1，然后也不需要计算长度为 2 的环两头的拉链长度。
 
-直接在 [problem 2127 第二个方法——拓扑排序](../2127-maximum-employees-to-be-invited-to-a-meeting/index.md#Faster) 的代码上改一改就行了。
+直接在 [problem 2127 第二个方法——拓扑排序](../2127-maximum-employees-to-be-invited-to-a-meeting/index.md#faster) 的代码上改一改就行了。
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Simpler
 
-之前在 [problem 2127](../2127-maximum-employees-to-be-invited-to-a-meeting/index.md#Faster) 中拓扑排序是为了能计算出「环上的每个顶点，指向它的无环边的最大长度」。本题并不需要这个信息，除了在拓扑排序过程中不在记录 `d(u)` 值，整个处理逻辑都可以进一步简化。
+之前在 [problem 2127](../2127-maximum-employees-to-be-invited-to-a-meeting/index.md#faster) 中拓扑排序是为了能计算出「环上的每个顶点，指向它的无环边的最大长度」。本题并不需要这个信息，除了在拓扑排序过程中不在记录 `d(u)` 值，整个处理逻辑都可以进一步简化。
 
 假设从一个顶点 u 出发，如果会进入环路，则一定会遇到出发后曾经见过的某个顶点，不妨设每一秒移动一次，那么两次遇到同一个顶点的时间之差，就是环长。
 
 如下图，从 u 出发，记出发时间为 `t = 1`。第一次经过 v 的时间是 `t = 3`，到 `t = 8` 时再次访问 v，说明有环，且环长为 `8 - 3 = 5`。
 
-::: invert-when-dark
-{% diagramsnet visit-time.drawio %}
-:::
+{{< diagramsnet src="visit-time.drawio" >}}
 
 为了避免重复处理，每个顶点经过的时间都记录下来，曾经访问过的顶点就不再访问了。
 
@@ -81,4 +80,4 @@ class Solution:
 
 时间和空间复杂度都是 O(n)。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

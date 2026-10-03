@@ -1,10 +1,9 @@
 ---
 title: 2506. Count Pairs Of Similar Strings
-notebook: coding
 tags:
 - easy
-date: 2025-02-22 09:31:29
-updated: 2025-02-22 09:31:29
+date: "2025-02-22T09:31:29+08:00"
+lastmod: "2025-02-22T09:31:29+08:00"
 ---
 ## Problem
 
@@ -21,8 +20,8 @@ Return _the number of pairs_ `(i, j)` _such that_ `0 <= i < j <= word.length - 1
 
 **Example 1:**
 
-> Input: `words = ["aba","aabb","abcd","bac","aabc"]`
-> Output: `2`
+> Input: `words = ["aba","aabb","abcd","bac","aabc"]`\
+> Output: `2`\
 > Explanation: There are 2 pairs that satisfy the conditions:
 >
 > - `i = 0` and `j = 1` : both `words[0]` and `words[1]` only consist of characters `'a'` and `'b'`.
@@ -30,8 +29,8 @@ Return _the number of pairs_ `(i, j)` _such that_ `0 <= i < j <= word.length - 1
 
 **Example 2:**
 
-> Input: `words = ["aabb","ab","ba"]`
-> Output: `3`
+> Input: `words = ["aabb","ab","ba"]`\
+> Output: `3`\
 > Explanation: There are 3 pairs that satisfy the conditions:
 >
 > - `i = 0` and `j = 1` : both `words[0]` and `words[1]` only consist of characters `'a'` and `'b'`.
@@ -40,8 +39,8 @@ Return _the number of pairs_ `(i, j)` _such that_ `0 <= i < j <= word.length - 1
 
 **Example 3:**
 
-> Input: `words = ["nba","cba","dba"]`
-> Output: `0`
+> Input: `words = ["nba","cba","dba"]`\
+> Output: `0`\
 > Explanation: Since there does not exist any pair that satisfies the conditions, we return 0.
 
 **Constraints:**
@@ -57,7 +56,7 @@ class Solution:
     def similarPairs(self, words: List[str]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -69,4 +68,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

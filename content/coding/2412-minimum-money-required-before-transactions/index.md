@@ -1,11 +1,9 @@
 ---
 title: 2412. Minimum Money Required Before Transactions
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2025-01-25 21:51:40
-updated: 2025-01-25 21:51:40
+date: "2025-01-25T21:51:40+08:00"
+lastmod: "2025-01-25T21:51:40+08:00"
 ---
 ## Problem
 
@@ -19,16 +17,16 @@ Return _the minimum amount of_ `money` _required before any transaction so that 
 
 **Example 1:**
 
-> Input: `transactions = [[2,1],[5,0],[4,2]]`
-> Output: `10`
+> Input: `transactions = [[2,1],[5,0],[4,2]]`\
+> Output: `10`\
 > Explanation:
 > Starting with `money = 10`, the transactions can be performed in any order.
 > It can be shown that starting with `money < 10` will fail to complete all transactions in some order.
 
 **Example 2:**
 
-> Input: `transactions = [[3,0],[0,3]]`
-> Output: `3`
+> Input: `transactions = [[3,0],[0,3]]`\
+> Output: `3`\
 > Explanation:
 >
 > - If transactions are in the order `[[3,0],[0,3]]`, the minimum money required to complete the transactions is 3.
@@ -49,7 +47,7 @@ class Solution:
     def minimumMoney(self, transactions: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -73,4 +71,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

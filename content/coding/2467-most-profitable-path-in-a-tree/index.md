@@ -1,11 +1,9 @@
 ---
 title: 2467. Most Profitable Path in a Tree
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-02-24 21:30:38
-updated: 2025-02-24 21:30:38
+date: "2025-02-24T21:30:38+08:00"
+lastmod: "2025-02-24T21:30:38+08:00"
 ---
 ## Problem
 
@@ -31,10 +29,11 @@ Return _the **maximum** net income Alice can have if she travels towards the opt
 
 **Example 1:**
 
-![case1|275](case1.png "case1"){.invert-when-dark}
+![case1|275](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `edges = [[0,1],[1,2],[1,3],[3,4]], bob = 3, amount = [-2,4,2,-4,6]`
-> Output: `6`
+> Input: `edges = [[0,1],[1,2],[1,3],[3,4]], bob = 3, amount = [-2,4,2,-4,6]`\
+> Output: `6`\
 > Explanation:
 > The above diagram represents the given tree. The game goes as follows:
 >
@@ -55,10 +54,11 @@ Return _the **maximum** net income Alice can have if she travels towards the opt
 
 **Example 2:**
 
-![case2|250](case2.png "case2"){.invert-when-dark}
+![case2|250](case2.png "case2")
+{.invert-when-dark}
 
-> Input: `edges = [[0,1]], bob = 1, amount = [-7280,2350]`
-> Output: `-7280`
+> Input: `edges = [[0,1]], bob = 1, amount = [-7280,2350]`\
+> Output: `-7280`\
 > Explanation:
 > Alice follows the path `0->1` whereas Bob follows the path `1->0`.
 > Thus, Alice opens the gate at node 0 only. Hence, her net income is -7280.
@@ -82,7 +82,7 @@ class Solution:
     def mostProfitablePath(self, edges: List[List[int]], bob: int, amount: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -102,4 +102,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

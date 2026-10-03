@@ -1,10 +1,9 @@
 ---
 title: 2493. Divide Nodes Into the Maximum Number of Groups
-notebook: coding
 tags:
 - hard
-date: 2024-12-27 23:37:30
-updated: 2024-12-27 23:37:30
+date: "2024-12-27T23:37:30+08:00"
+lastmod: "2024-12-27T23:37:30+08:00"
 ---
 ## Problem
 
@@ -23,10 +22,11 @@ Return _the maximum number of groups (i.e., maximum_ `m`_) into which you can di
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `n = 6, edges = [[1,2],[1,4],[1,5],[2,6],[2,3],[4,6]]`
-> Output: `4`
+> Input: `n = 6, edges = [[1,2],[1,4],[1,5],[2,6],[2,3],[4,6]]`\
+> Output: `4`\
 > Explanation: As shown in the image we:
 >
 > - Add node 5 to the first group.
@@ -39,8 +39,8 @@ Return _the maximum number of groups (i.e., maximum_ `m`_) into which you can di
 
 **Example 2:**
 
-> Input: `n = 3, edges = [[1,2],[2,3],[3,1]]`
-> Output: `-1`
+> Input: `n = 3, edges = [[1,2],[2,3],[3,1]]`\
+> Output: `-1`\
 > Explanation: If we add node 1 to the first group, node 2 to the second group, and node 3 to the third group to satisfy the first two edges, we can see that the third edge will not be satisfied.
 > It can be shown that no grouping is possible.
 
@@ -60,7 +60,7 @@ class Solution:
     def magnificentSets(self, n: int, edges: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -73,7 +73,10 @@ class Solution:
 开始直接搬 [3203. Find Minimum Diameter After Merging Two Trees](../3203-find-minimum-diameter-after-merging-two-trees/index.md) 里面计算直径的逻辑，结果不对。那里的快速计算方法只适用于树，在有环的情况下不一定能计算正确。
 
 > 比如下图，如果初始节点是 v，第一次 DFS 会找到 u，再从 u 出发得到的「直径」是 3。但此图的直径其实是 4。
-> ![bad-diameter-case](bad-diameter-case.png){.invert-when-dark}
+>
+> ![bad-diameter-case](bad-diameter-case.png)
+> {.invert-when-dark}
+>
 > （图片出自 <https://cs.stackexchange.com/a/213>）
 
 只能是按广度优先搜索（BFS），计算出从每一个节点出发能得到的最大路径长度，取最大值则为直径。
@@ -84,4 +87,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 2545. Sort the Students by Their Kth Score
-notebook: coding
 tags:
 - medium
-date: 2024-12-21 00:44:53
-updated: 2024-12-21 00:44:53
+date: "2024-12-21T00:44:53+08:00"
+lastmod: "2024-12-21T00:44:53+08:00"
 ---
 ## Problem
 
@@ -18,10 +17,11 @@ Return _the matrix after sorting it._
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `score = [[10,6,9,1],[7,5,11,2],[4,8,3,15]], k = 2`
-> Output: `[[7,5,11,2],[10,6,9,1],[4,8,3,15]]`
+> Input: `score = [[10,6,9,1],[7,5,11,2],[4,8,3,15]], k = 2`\
+> Output: `[[7,5,11,2],[10,6,9,1],[4,8,3,15]]`\
 > Explanation: In the above diagram, S denotes the student, while E denotes the exam.
 >
 > - The student with index 1 scored 11 in exam 2, which is the highest score, so they got first place.
@@ -30,10 +30,11 @@ Return _the matrix after sorting it._
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `score = [[3,4],[5,6]], k = 0`
-> Output: `[[5,6],[3,4]]`
+> Input: `score = [[3,4],[5,6]], k = 0`\
+> Output: `[[5,6],[3,4]]`\
 > Explanation: In the above diagram, S denotes the student, while E denotes the exam.
 >
 > - The student with index 1 scored 5 in exam 0, which is the highest score, so they got first place.
@@ -55,7 +56,7 @@ class Solution:
     def sortTheStudents(self, score: List[List[int]], k: int) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -63,4 +64,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

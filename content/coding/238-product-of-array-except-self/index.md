@@ -1,11 +1,9 @@
 ---
 title: 238. Product of Array Except Self
-notebook: coding
 tags:
 - medium
-date: 2024-11-24 23:20:49
-updated: 2024-11-24 23:20:49
-katex: true
+date: "2024-11-24T23:20:49+08:00"
+lastmod: "2024-11-24T23:20:49+08:00"
 ---
 ## Problem
 
@@ -19,12 +17,12 @@ You must write an algorithm that runs in `O(n)` time and without using the div
 
 **Example 1:**
 
-> Input: `nums = [1,2,3,4]`
+> Input: `nums = [1,2,3,4]`\
 > Output: `[24,12,8,6]`
 
 **Example 2:**
 
-> Input: `nums = [-1,1,0,-3,3]`
+> Input: `nums = [-1,1,0,-3,3]`\
 > Output: `[0,0,9,0,0]`
 
 **Constraints:**
@@ -42,7 +40,7 @@ class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -68,7 +66,7 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Follow Up
 
@@ -80,4 +78,4 @@ $$
 
 如果数组中有超过一个零，则 `answer` 为全零数组。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

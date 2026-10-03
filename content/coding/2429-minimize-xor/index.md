@@ -1,10 +1,9 @@
 ---
 title: 2429. Minimize XOR
-notebook: coding
 tags:
 - medium
-date: 2025-01-15 11:02:53
-updated: 2025-01-15 11:02:53
+date: "2025-01-15T11:02:53+08:00"
+lastmod: "2025-01-15T11:02:53+08:00"
 ---
 ## Problem
 
@@ -23,16 +22,16 @@ The number of **set bits** of an integer is the number of `1`'s in its binary re
 
 **Example 1:**
 
-> Input: `num1 = 3, num2 = 5`
-> Output: `3`
+> Input: `num1 = 3, num2 = 5`\
+> Output: `3`\
 > Explanation:
 > The binary representations of num1 and num2 are `0011` and `0101`, respectively.
 > The integer 3 has the same number of set bits as num2, and the value `3 XOR 3 = 0` is minimal.
 
 **Example 2:**
 
-> Input: `num1 = 1, num2 = 12`
-> Output: `3`
+> Input: `num1 = 1, num2 = 12`\
+> Output: `3`\
 > Explanation:
 > The binary representations of num1 and num2 are `0001` and `1100`, respectively.
 > The integer 3 has the same number of set bits as num2, and the value `3 XOR 1 = 2` is minimal.
@@ -48,7 +47,7 @@ class Solution:
     def minimizeXor(self, num1: int, num2: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

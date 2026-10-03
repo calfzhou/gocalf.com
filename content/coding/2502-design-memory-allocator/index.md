@@ -1,10 +1,9 @@
 ---
 title: 2502. Design Memory Allocator
-notebook: coding
 tags:
 - medium
-date: 2025-02-25 11:38:20
-updated: 2025-02-25 11:38:20
+date: "2025-02-25T11:38:20+08:00"
+lastmod: "2025-02-25T11:38:20+08:00"
 ---
 ## Problem
 
@@ -30,11 +29,11 @@ Implement the `Allocator` class:
 
 **Example 1:**
 
-> Input
-> `["Allocator", "allocate", "allocate", "allocate", "freeMemory", "allocate", "allocate", "allocate", "freeMemory", "allocate", "freeMemory"]`
-> `[[10], [1, 1], [1, 2], [1, 3], [2], [3, 4], [1, 1], [1, 1], [1], [10, 2], [7]]`
-> Output
-> `[null, 0, 1, 2, 1, 3, 1, 6, 3, -1, 0]`
+> Input\
+> `["Allocator", "allocate", "allocate", "allocate", "freeMemory", "allocate", "allocate", "allocate", "freeMemory", "allocate", "freeMemory"]`\
+> `[[10], [1, 1], [1, 2], [1, 3], [2], [3, 4], [1, 1], [1, 1], [1], [10, 2], [7]]`\
+> Output\
+> `[null, 0, 1, 2, 1, 3, 1, 6, 3, -1, 0]`\
 > Explanation
 >
 > ```cpp
@@ -77,7 +76,7 @@ class Allocator:
 # param_2 = obj.freeMemory(mID)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -93,4 +92,4 @@ class Allocator:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

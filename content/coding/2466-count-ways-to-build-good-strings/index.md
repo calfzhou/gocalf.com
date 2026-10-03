@@ -1,10 +1,9 @@
 ---
 title: 2466. Count Ways To Build Good Strings
-notebook: coding
 tags:
 - medium
-date: 2024-12-30 10:19:17
-updated: 2024-12-30 10:19:17
+date: "2024-12-30T10:19:17+08:00"
+lastmod: "2024-12-30T10:19:17+08:00"
 ---
 ## Problem
 
@@ -23,8 +22,8 @@ Return _the number of **different** good strings that can be constructed satisfy
 
 **Example 1:**
 
-> Input: `low = 3, high = 3, zero = 1, one = 1`
-> Output: `8`
+> Input: `low = 3, high = 3, zero = 1, one = 1`\
+> Output: `8`\
 > Explanation:
 > One possible valid good string is `"011"`.
 > It can be constructed as follows: `"" -> "0" -> "01" -> "011"`.
@@ -32,8 +31,8 @@ Return _the number of **different** good strings that can be constructed satisfy
 
 **Example 2:**
 
-> Input: `low = 2, high = 3, zero = 1, one = 2`
-> Output: `5`
+> Input: `low = 2, high = 3, zero = 1, one = 2`\
+> Output: `5`\
 > Explanation: The good strings are `"00"`, `"11"`, `"000"`, `"110"`, and `"011"`.
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def countGoodStrings(self, low: int, high: int, zero: int, one: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

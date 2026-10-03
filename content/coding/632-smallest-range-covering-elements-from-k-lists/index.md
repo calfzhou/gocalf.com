@@ -1,10 +1,9 @@
 ---
 title: 632. Smallest Range Covering Elements from K Lists
-notebook: coding
 tags:
 - hard
-date: 2024-11-24 15:44:27
-updated: 2024-11-24 15:44:27
+date: "2024-11-24T15:44:27+08:00"
+lastmod: "2024-11-24T15:44:27+08:00"
 ---
 ## Problem
 
@@ -16,8 +15,8 @@ We define the range `[a, b]` is smaller than range `[c, d]` if `b - a < d - c` *
 
 **Example 1:**
 
-> Input: `nums = [[4,10,15,24,26],[0,9,12,20],[5,18,22,30]]`
-> Output: `[20,24]`
+> Input: `nums = [[4,10,15,24,26],[0,9,12,20],[5,18,22,30]]`\
+> Output: `[20,24]`\
 > Explanation:
 > List 1: `[4, 10, 15, 24,26]`, `24` is in range `[20,24]`.
 > List 2: `[0, 9, 12, 20]`, `20` is in range `[20,24]`.
@@ -25,7 +24,7 @@ We define the range `[a, b]` is smaller than range `[c, d]` if `b - a < d - c` *
 
 **Example 2:**
 
-> Input: `nums = [[1,2,3],[1,2,3],[1,2,3]]`
+> Input: `nums = [[1,2,3],[1,2,3],[1,2,3]]`\
 > Output: `[1,1]`
 
 **Constraints:**
@@ -43,7 +42,7 @@ class Solution:
     def smallestRange(self, nums: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

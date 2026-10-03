@@ -1,10 +1,9 @@
 ---
 title: 2415. Reverse Odd Levels of Binary Tree
-notebook: coding
 tags:
 - medium
-date: 2024-12-20 13:26:18
-updated: 2024-12-20 13:26:18
+date: "2024-12-20T13:26:18+08:00"
+lastmod: "2024-12-20T13:26:18+08:00"
 ---
 ## Problem
 
@@ -22,27 +21,29 @@ The **level** of a node is the number of edges along the path between it and the
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `root = [2,3,5,8,13,21,34]`
-> Output: `[2,5,3,8,13,21,34]`
+> Input: `root = [2,3,5,8,13,21,34]`\
+> Output: `[2,5,3,8,13,21,34]`\
 > Explanation:
 > The tree has only one odd level.
 > The nodes at level 1 are 3, 5 respectively, which are reversed and become 5, 3.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `root = [7,13,11]`
-> Output: `[7,11,13]`
+> Input: `root = [7,13,11]`\
+> Output: `[7,11,13]`\
 > Explanation:
 > The nodes at level 1 are 13, 11, which are reversed and become 11, 13.
 
 **Example 3:**
 
-> Input: `root = [0,1,2,0,0,0,0,1,1,1,1,2,2,2,2]`
-> Output: `[0,2,1,0,0,0,0,2,2,2,2,1,1,1,1]`
+> Input: `root = [0,1,2,0,0,0,0,1,1,1,1,2,2,2,2]`\
+> Output: `[0,2,1,0,0,0,0,2,2,2,2,1,1,1,1]`\
 > Explanation:
 > The odd levels have non-zero values.
 > The nodes at level 1 were 1, 2, and are 2, 1 after the reversal.
@@ -67,7 +68,7 @@ class Solution:
     def reverseOddLevels(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -79,4 +80,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

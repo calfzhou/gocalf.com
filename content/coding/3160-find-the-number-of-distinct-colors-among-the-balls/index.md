@@ -1,10 +1,9 @@
 ---
 title: 3160. Find the Number of Distinct Colors Among the Balls
-notebook: coding
 tags:
 - medium
-date: 2025-02-07 10:44:10
-updated: 2025-02-07 10:44:10
+date: "2025-02-07T10:44:10+08:00"
+lastmod: "2025-02-07T10:44:10+08:00"
 ---
 ## Problem
 
@@ -20,10 +19,12 @@ Return an array `result` of length `n`, where `result[i]` denotes the number of 
 
 **Example 1:**
 
-> Input: `limit = 4, queries = [[1,4],[2,5],[1,3],[3,4]]`
-> Output: `[1,2,2,3]`
+> Input: `limit = 4, queries = [[1,4],[2,5],[1,3],[3,4]]`\
+> Output: `[1,2,2,3]`\
 > Explanation:
-> ![case1](case1.gif){.invert-when-dark}
+>
+> ![case1](case1.gif)
+> {.invert-when-dark}
 >
 > - After query 0, ball 1 has color 4.
 > - After query 1, ball 1 has color 4, and ball 2 has color 5.
@@ -32,10 +33,12 @@ Return an array `result` of length `n`, where `result[i]` denotes the number of 
 
 **Example 2:**
 
-> Input: `limit = 4, queries = [[0,1],[1,2],[2,2],[3,4],[4,5]]`
-> Output: `[1,2,2,3,4]`
+> Input: `limit = 4, queries = [[0,1],[1,2],[2,2],[3,4],[4,5]]`\
+> Output: `[1,2,2,3,4]`\
 > Explanation:
-> ![case2](case2.gif){.invert-when-dark}
+>
+> ![case2](case2.gif)
+> {.invert-when-dark}
 >
 > - After query 0, ball 0 has color 1.
 > - After query 1, ball 0 has color 1, and ball 1 has color 2.
@@ -58,7 +61,7 @@ class Solution:
     def queryResults(self, limit: int, queries: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -72,4 +75,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
