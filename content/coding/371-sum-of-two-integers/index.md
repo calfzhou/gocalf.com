@@ -1,11 +1,9 @@
 ---
 title: 371. Sum of Two Integers
-notebook: coding
 tags:
 - medium
-date: 2024-11-25 22:08:36
-updated: 2024-11-25 22:08:36
-katex: true
+date: "2024-11-25T22:08:36+08:00"
+lastmod: "2024-11-25T22:08:36+08:00"
 ---
 ## Problem
 
@@ -15,12 +13,12 @@ Given two integers `a` and `b`, return _the sum of the two integers without usin
 
 **Example 1:**
 
-> Input: `a = 1, b = 2`
+> Input: `a = 1, b = 2`\
 > Output: `3`
 
 **Example 2:**
 
-> Input: `a = 2, b = 3`
+> Input: `a = 2, b = 3`\
 > Output: `5`
 
 **Constraints:**
@@ -34,7 +32,7 @@ class Solution:
     def getSum(self, a: int, b: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -61,4 +59,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 628. Maximum Product of Three Numbers
-notebook: coding
 tags:
 - easy
-date: 2025-01-03 12:29:47
-updated: 2025-01-03 12:29:47
+date: "2025-01-03T12:29:47+08:00"
+lastmod: "2025-01-03T12:29:47+08:00"
 ---
 ## Problem
 
@@ -14,17 +13,17 @@ Given an integer array `nums`, _find three numbers whose product is maximum and 
 
 **Example 1:**
 
-> Input: `nums = [1,2,3]`
+> Input: `nums = [1,2,3]`\
 > Output: `6`
 
 **Example 2:**
 
-> Input: `nums = [1,2,3,4]`
+> Input: `nums = [1,2,3,4]`\
 > Output: `24`
 
 **Example 3:**
 
-> Input: `nums = [-1,-2,-3]`
+> Input: `nums = [-1,-2,-3]`\
 > Output: `-6`
 
 **Constraints:**
@@ -39,7 +38,7 @@ class Solution:
     def maximumProduct(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -60,4 +59,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

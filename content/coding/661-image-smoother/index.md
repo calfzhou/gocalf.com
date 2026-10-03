@@ -1,16 +1,16 @@
 ---
 title: 661. Image Smoother
-notebook: coding
 tags:
 - easy
-date: 2024-11-18 17:05:10
-updated: 2024-11-18 17:05:10
+date: "2024-11-18T17:05:10+08:00"
+lastmod: "2024-11-18T17:05:10+08:00"
 ---
 ## Problem
 
 An **image smoother** is a filter of the size `3 x 3` that can be applied to each cell of an image by rounding down the average of the cell and the eight surrounding cells (i.e., the average of the nine cells in the blue smoother). If one or more of the surrounding cells of a cell is not present, we do not consider it in the average (i.e., the average of the four cells in the red smoother).
 
-![problem](problem.png){.invert-when-dark}
+![problem](problem.png)
+{.invert-when-dark}
 
 Given an `m x n` integer matrix `img` representing the grayscale of an image, return _the image after applying the smoother on each cell of it_.
 
@@ -18,10 +18,11 @@ Given an `m x n` integer matrix `img` representing the grayscale of an image, re
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `img = [[1,1,1],[1,0,1],[1,1,1]]`
-> Output: `[[0,0,0],[0,0,0],[0,0,0]]`
+> Input: `img = [[1,1,1],[1,0,1],[1,1,1]]`\
+> Output: `[[0,0,0],[0,0,0],[0,0,0]]`\
 > Explanation:
 > For the points (0,0), (0,2), (2,0), (2,2): `floor(3/4) = floor(0.75) = 0`
 > For the points (0,1), (1,0), (1,2), (2,1): `floor(5/6) = floor(0.83333333) = 0`
@@ -29,10 +30,11 @@ Given an `m x n` integer matrix `img` representing the grayscale of an image, re
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `img = [[100,200,100],[200,50,200],[100,200,100]]`
-> Output: `[[137,141,137],[141,138,141],[137,141,137]]`
+> Input: `img = [[100,200,100],[200,50,200],[100,200,100]]`\
+> Output: `[[137,141,137],[141,138,141],[137,141,137]]`\
 > Explanation:
 > For the points (0,0), (0,2), (2,0), (2,2): `floor((100+200+200+50)/4) = floor(137.5) = 137`
 > For the points (0,1), (1,0), (1,2), (2,1): `floor((200+200+50+200+100+100)/6) = floor(141.666667) = 141`
@@ -52,7 +54,7 @@ class Solution:
     def imageSmoother(self, img: List[List[int]]) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +66,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

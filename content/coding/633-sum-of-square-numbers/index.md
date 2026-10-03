@@ -1,10 +1,9 @@
 ---
 title: 633. Sum of Square Numbers
-notebook: coding
 tags:
 - medium
-date: 2024-11-27 11:12:54
-updated: 2024-11-27 11:12:54
+date: "2024-11-27T11:12:54+08:00"
+lastmod: "2024-11-27T11:12:54+08:00"
 ---
 ## Problem
 
@@ -14,13 +13,13 @@ Given a non-negative integer `c`, decide whether there're two integers `a` and `
 
 **Example 1:**
 
-> Input: `c = 5`
-> Output: `true`
+> Input: `c = 5`\
+> Output: `true`\
 > Explanation: `1 * 1 + 2 * 2 = 5`
 
 **Example 2:**
 
-> Input: `c = 3`
+> Input: `c = 3`\
 > Output: `false`
 
 **Constraints:**
@@ -34,7 +33,7 @@ class Solution:
     def judgeSquareSum(self, c: int) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -44,4 +43,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

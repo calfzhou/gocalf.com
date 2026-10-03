@@ -1,12 +1,10 @@
 ---
 title: 45. Jump Game II
-notebook: coding
 tags:
 - medium
 - todo
-katex: true
-date: 2025-01-27 21:07:31
-updated: 2025-01-27 21:07:31
+date: "2025-01-27T21:07:31+08:00"
+lastmod: "2025-01-27T21:07:31+08:00"
 ---
 ## Problem
 
@@ -23,13 +21,13 @@ Return _the minimum number of jumps to reach_ `nums[n - 1]`. The test cases are 
 
 **Example 1:**
 
-> Input: nums = [2,3,1,1,4]
-> Output: 2
+> Input: nums = [2,3,1,1,4]\
+> Output: 2\
 > Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to the last index.
 
 **Example 2:**
 
-> Input: nums = [2,3,0,1,4]
+> Input: nums = [2,3,0,1,4]\
 > Output: 2
 
 **Constraints:**
@@ -45,7 +43,7 @@ class Solution:
     def jump(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,7 +63,7 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster
 

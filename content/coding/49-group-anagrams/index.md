@@ -1,10 +1,9 @@
 ---
 title: 49. Group Anagrams
-notebook: coding
 tags:
 - medium
-date: 2024-11-17 22:45:23
-updated: 2024-11-17 22:45:23
+date: "2024-11-17T22:45:23+08:00"
+lastmod: "2024-11-17T22:45:23+08:00"
 ---
 ## Problem
 
@@ -16,8 +15,8 @@ Given an array of strings `strs`, group the anagrams together. You can return th
 
 **Example 1:**
 
-> Input: `strs = ["eat","tea","tan","ate","nat","bat"]`
-> Output: `[["bat"],["nat","tan"],["ate","eat","tea"]]`
+> Input: `strs = ["eat","tea","tan","ate","nat","bat"]`\
+> Output: `[["bat"],["nat","tan"],["ate","eat","tea"]]`\
 > Explanation:
 >
 > - There is no string in strs that can be rearranged to form `"bat"`.
@@ -26,12 +25,12 @@ Given an array of strings `strs`, group the anagrams together. You can return th
 
 **Example 2:**
 
-> Input: `strs = [""]`
+> Input: `strs = [""]`\
 > Output: `[[""]]`
 
 **Example 3:**
 
-> Input: `strs = ["a"]`
+> Input: `strs = ["a"]`\
 > Output: `[["a"]]`
 
 **Constraints:**
@@ -47,7 +46,7 @@ class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,6 +64,6 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 直接把字符串排序当作 key 在字典中查找 group，就挺快的了。

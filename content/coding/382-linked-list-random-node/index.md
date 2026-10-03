@@ -1,10 +1,9 @@
 ---
 title: 382. Linked List Random Node
-notebook: coding
 tags:
 - medium
-date: 2025-01-01 14:03:23
-updated: 2025-01-01 14:03:23
+date: "2025-01-01T14:03:23+08:00"
+lastmod: "2025-01-01T14:03:23+08:00"
 ---
 ## Problem
 
@@ -19,13 +18,14 @@ Implement the `Solution` class:
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input
-> `["Solution", "getRandom", "getRandom", "getRandom", "getRandom", "getRandom"]`
-> `[[[1, 2, 3]], [], [], [], [], []]`
-> Output
-> `[null, 1, 3, 2, 2, 3]`
+> Input\
+> `["Solution", "getRandom", "getRandom", "getRandom", "getRandom", "getRandom"]`\
+> `[[[1, 2, 3]], [], [], [], [], []]`\
+> Output\
+> `[null, 1, 3, 2, 2, 3]`\
 > Explanation
 >
 > ```c++
@@ -71,7 +71,7 @@ class Solution:
 # param_1 = obj.getRandom()
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -81,7 +81,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## O(1) Space
 
@@ -89,4 +89,4 @@ class Solution:
 
 `__init__` 的时间复杂度 `O(n)`，`getRandom` 的时间复杂度 `O(n)`，整体空间复杂度 `O(1)`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

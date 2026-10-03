@@ -1,10 +1,9 @@
 ---
 title: 56. Merge Intervals
-notebook: coding
 tags:
 - medium
-date: 2024-11-18 20:55:28
-updated: 2024-11-18 20:55:28
+date: "2024-11-18T20:55:28+08:00"
+lastmod: "2024-11-18T20:55:28+08:00"
 ---
 ## Problem
 
@@ -14,14 +13,14 @@ Given an array of `intervals` where `intervals[i] = [startᵢ, endᵢ]`, merge
 
 **Example 1:**
 
-> Input: `intervals = [[1,3],[2,6],[8,10],[15,18]]`
-> Output: `[[1,6],[8,10],[15,18]]`
+> Input: `intervals = [[1,3],[2,6],[8,10],[15,18]]`\
+> Output: `[[1,6],[8,10],[15,18]]`\
 > Explanation: Since intervals `[1,3]` and `[2,6]` overlap, merge them into `[1,6]`.
 
 **Example 2:**
 
-> Input: intervals = `[[1,4],[4,5]]`
-> Output: `[[1,5]]`
+> Input: intervals = `[[1,4],[4,5]]`\
+> Output: `[[1,5]]`\
 > Explanation: Intervals `[1,4]` and `[4,5]` are considered overlapping.
 
 **Constraints:**
@@ -37,7 +36,7 @@ class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -47,4 +46,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

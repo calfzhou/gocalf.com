@@ -1,10 +1,9 @@
 ---
 title: 43. Multiply Strings
-notebook: coding
 tags:
 - medium
-date: 2024-12-19 21:16:44
-updated: 2024-12-19 21:16:44
+date: "2024-12-19T21:16:44+08:00"
+lastmod: "2024-12-19T21:16:44+08:00"
 ---
 ## Problem
 
@@ -16,12 +15,12 @@ Given two non-negative integers `num1` and `num2` represented as strings, return
 
 **Example 1:**
 
-> Input: num1 = "2", num2 = "3"
+> Input: num1 = "2", num2 = "3"\
 > Output: "6"
 
 **Example 2:**
 
-> Input: num1 = "123", num2 = "456"
+> Input: num1 = "123", num2 = "456"\
 > Output: "56088"
 
 **Constraints:**
@@ -37,7 +36,7 @@ class Solution:
     def multiply(self, num1: str, num2: str) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -47,4 +46,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 424. Longest Repeating Character Replacement
-notebook: coding
 tags:
 - medium
-date: 2024-11-16 20:04:14
-updated: 2024-11-16 20:04:14
+date: "2024-11-16T20:04:14+08:00"
+lastmod: "2024-11-16T20:04:14+08:00"
 ---
 ## Problem
 
@@ -16,14 +15,14 @@ Return _the length of the longest substring containing the same letter you can g
 
 **Example 1:**
 
-> Input: `s = "ABAB", k = 2`
-> Output: `4`
+> Input: `s = "ABAB", k = 2`\
+> Output: `4`\
 > Explanation: Replace the two `'A'`s with two `'B'`s or vice versa.
 
 **Example 2:**
 
-> Input: `s = "AABABBA", k = 1`
-> Output: `4`
+> Input: `s = "AABABBA", k = 1`\
+> Output: `4`\
 > Explanation: Replace the one `'A'` in the middle with `'B'` and form `"AABBBBA"`.
 > The substring `"BBBB"` has the longest repeating letters, which is 4.
 > There may exists other ways to achieve this answer too.
@@ -41,7 +40,7 @@ class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,6 +58,6 @@ PS：之前用这种滑窗法的时候，写循环的时候总是被边界条件
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 > 似乎不是很快，先这样吧。

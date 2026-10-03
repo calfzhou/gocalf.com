@@ -1,10 +1,9 @@
 ---
 title: 59. Spiral Matrix II
-notebook: coding
 tags:
 - easy
-date: 2025-02-07 10:01:11
-updated: 2025-02-07 10:01:11
+date: "2025-02-07T10:01:11+08:00"
+lastmod: "2025-02-07T10:01:11+08:00"
 ---
 ## Problem
 
@@ -14,14 +13,15 @@ Given a positive integer `n`, generate an `n x n` `matrix` filled with elements 
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `n = 3`
+> Input: `n = 3`\
 > Output: `[[1,2,3],[8,9,4],[7,6,5]]`
 
 **Example 2:**
 
-> Input: `n = 1`
+> Input: `n = 1`\
 > Output: `[[1]]`
 
 **Constraints:**
@@ -35,7 +35,7 @@ class Solution:
     def generateMatrix(self, n: int) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -43,4 +43,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

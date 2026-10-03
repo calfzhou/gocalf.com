@@ -1,10 +1,9 @@
 ---
 title: 347. Top K Frequent Elements
-notebook: coding
 tags:
 - medium
-date: 2024-11-23 17:13:07
-updated: 2024-11-23 17:13:07
+date: "2024-11-23T17:13:07+08:00"
+lastmod: "2024-11-23T17:13:07+08:00"
 ---
 ## Problem
 
@@ -14,12 +13,12 @@ Given an integer array `nums` and an integer `k`, return _the_ `k` _most frequen
 
 **Example 1:**
 
-> Input: `nums = [1,1,1,2,2,3], k = 2`
+> Input: `nums = [1,1,1,2,2,3], k = 2`\
 > Output: `[1,2]`
 
 **Example 2:**
 
-> Input: `nums = [1], k = 1`
+> Input: `nums = [1], k = 1`\
 > Output: `[1]`
 
 **Constraints:**
@@ -38,7 +37,7 @@ class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -54,4 +53,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

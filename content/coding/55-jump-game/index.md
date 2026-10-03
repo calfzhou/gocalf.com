@@ -1,10 +1,9 @@
 ---
 title: 55. Jump Game
-notebook: coding
 tags:
 - medium
-date: 2024-11-18 19:04:15
-updated: 2024-11-18 19:04:15
+date: "2024-11-18T19:04:15+08:00"
+lastmod: "2024-11-18T19:04:15+08:00"
 ---
 ## Problem
 
@@ -16,14 +15,14 @@ Return `true` _if you can reach the last index, or_ `false` _otherwise_.
 
 **Example 1:**
 
-> Input: `nums = [2,3,1,1,4]`
-> Output: `true`
+> Input: `nums = [2,3,1,1,4]`\
+> Output: `true`\
 > Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
 
 **Example 2:**
 
-> Input: `nums = [3,2,1,0,4]`
-> Output: `false`
+> Input: `nums = [3,2,1,0,4]`\
+> Output: `false`\
 > Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
 
 **Constraints:**
@@ -38,7 +37,7 @@ class Solution:
     def canJump(self, nums: List[int]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -48,4 +47,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 598. Range Addition II
-notebook: coding
 tags:
 - easy
-date: 2025-02-02 10:57:55
-updated: 2025-02-02 10:57:55
+date: "2025-02-02T10:57:55+08:00"
+lastmod: "2025-02-02T10:57:55+08:00"
 ---
 ## Problem
 
@@ -16,20 +15,21 @@ Count and return _the number of maximum integers in the matrix after performing 
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `m = 3, n = 3, ops = [[2,2],[3,3]]`
-> Output: `4`
+> Input: `m = 3, n = 3, ops = [[2,2],[3,3]]`\
+> Output: `4`\
 > Explanation: The maximum integer in M is 2, and there are four of it in M. So return 4.
 
 **Example 2:**
 
-> Input: `m = 3, n = 3, ops = [[2,2],[3,3],[3,3],[3,3],[2,2],[3,3],[3,3],[3,3],[2,2],[3,3],[3,3],[3,3]]`
+> Input: `m = 3, n = 3, ops = [[2,2],[3,3],[3,3],[3,3],[2,2],[3,3],[3,3],[3,3],[2,2],[3,3],[3,3],[3,3]]`\
 > Output: `4`
 
 **Example 3:**
 
-> Input: `m = 3, n = 3, ops = []`
+> Input: `m = 3, n = 3, ops = []`\
 > Output: `9`
 
 **Constraints:**
@@ -47,7 +47,7 @@ class Solution:
     def maxCount(self, m: int, n: int, ops: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -57,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

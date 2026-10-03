@@ -1,10 +1,9 @@
 ---
 title: 344. Reverse String
-notebook: coding
 tags:
 - easy
-date: 2025-01-31 21:36:27
-updated: 2025-01-31 21:36:27
+date: "2025-01-31T21:36:27+08:00"
+lastmod: "2025-01-31T21:36:27+08:00"
 ---
 ## Problem
 
@@ -16,12 +15,12 @@ You must do this by modifying the input array [in-place](https://en.wikipedia.or
 
 **Example 1:**
 
-> Input: `s = ["h","e","l","l","o"]`
+> Input: `s = ["h","e","l","l","o"]`\
 > Output: `["o","l","l","e","h"]`
 
 **Example 2:**
 
-> Input: `s = ["H","a","n","n","a","h"]`
+> Input: `s = ["H","a","n","n","a","h"]`\
 > Output: `["h","a","n","n","a","H"]`
 
 **Constraints:**
@@ -39,7 +38,7 @@ class Solution:
         """
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -49,4 +48,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

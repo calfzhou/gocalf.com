@@ -1,10 +1,9 @@
 ---
 title: 436. Find Right Interval
-notebook: coding
 tags:
 - medium
-date: 2025-01-02 21:26:01
-updated: 2025-01-02 21:26:01
+date: "2025-01-02T21:26:01+08:00"
+lastmod: "2025-01-02T21:26:01+08:00"
 ---
 ## Problem
 
@@ -18,22 +17,22 @@ Return _an array of **right interval** indices for each interval `i`_. If no **r
 
 **Example 1:**
 
-> Input: `intervals = [[1,2]]`
-> Output: `[-1]`
+> Input: `intervals = [[1,2]]`\
+> Output: `[-1]`\
 > Explanation: There is only one interval in the collection, so it outputs -1.
 
 **Example 2:**
 
-> Input: `intervals = [[3,4],[2,3],[1,2]]`
-> Output: `[-1,0,1]`
+> Input: `intervals = [[3,4],[2,3],[1,2]]`\
+> Output: `[-1,0,1]`\
 > Explanation: There is no right interval for `[3,4]`.
 > The right interval for `[2,3]` is `[3,4]` since `start0 = 3` is the smallest start that is `>= end1 = 3`.
 > The right interval for `[1,2]` is `[2,3]` since `start1 = 2` is the smallest start that is `>= end2 = 2`.
 
 **Example 3:**
 
-> Input: `intervals = [[1,4],[2,3],[3,4]]`
-> Output: `[-1,2,-1]`
+> Input: `intervals = [[1,4],[2,3],[3,4]]`\
+> Output: `[-1,2,-1]`\
 > Explanation: There is no right interval for `[1,4]` and `[3,4]`.
 > The right interval for `[2,3]` is `[3,4]` since `start2 = 3` is the smallest start that is `>= end1 = 3`.
 
@@ -51,7 +50,7 @@ class Solution:
     def findRightInterval(self, intervals: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -61,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

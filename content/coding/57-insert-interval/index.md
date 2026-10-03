@@ -1,10 +1,9 @@
 ---
 title: 57. Insert Interval
-notebook: coding
 tags:
 - medium
-date: 2024-11-18 22:38:58
-updated: 2024-11-18 22:38:58
+date: "2024-11-18T22:38:58+08:00"
+lastmod: "2024-11-18T22:38:58+08:00"
 ---
 ## Problem
 
@@ -20,13 +19,13 @@ Return `intervals` _after the insertion_.
 
 **Example 1:**
 
-> Input: `intervals = [[1,3],[6,9]], newInterval = [2,5]`
+> Input: `intervals = [[1,3],[6,9]], newInterval = [2,5]`\
 > Output: `[[1,5],[6,9]]`
 
 **Example 2:**
 
-> Input: `intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]`
-> Output: `[[1,2],[3,10],[12,16]]`
+> Input: `intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]`\
+> Output: `[[1,2],[3,10],[12,16]]`\
 > Explanation: Because the new interval `[4,8]` overlaps with `[3,5],[6,7],[8,10]`.
 
 **Constraints:**
@@ -45,7 +44,7 @@ class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,6 +58,6 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 依然使用了二分查找，练一下用二分法查找小于目标值的最大的元素。

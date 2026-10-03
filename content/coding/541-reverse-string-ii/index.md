@@ -1,10 +1,9 @@
 ---
 title: 541. Reverse String II
-notebook: coding
 tags:
 - easy
-date: 2025-01-31 21:56:25
-updated: 2025-01-31 21:56:25
+date: "2025-01-31T21:56:25+08:00"
+lastmod: "2025-01-31T21:56:25+08:00"
 ---
 ## Problem
 
@@ -16,12 +15,12 @@ If there are fewer than `k` characters left, reverse all of them. If there are l
 
 **Example 1:**
 
-> Input: `s = "abcdefg", k = 2`
+> Input: `s = "abcdefg", k = 2`\
 > Output: `"bacdfeg"`
 
 **Example 2:**
 
-> Input: `s = "abcd", k = 2`
+> Input: `s = "abcd", k = 2`\
 > Output: `"bacd"`
 
 **Constraints:**
@@ -37,7 +36,7 @@ class Solution:
     def reverseStr(self, s: str, k: int) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -49,4 +48,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

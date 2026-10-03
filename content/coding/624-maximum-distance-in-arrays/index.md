@@ -1,10 +1,9 @@
 ---
 title: 624. Maximum Distance in Arrays
-notebook: coding
 tags:
 - medium
-date: 2025-02-19 10:06:46
-updated: 2025-02-19 10:06:46
+date: "2025-02-19T10:06:46+08:00"
+lastmod: "2025-02-19T10:06:46+08:00"
 ---
 ## Problem
 
@@ -18,13 +17,13 @@ Return _the maximum distance_.
 
 **Example 1:**
 
-> Input: `arrays = [[1,2,3],[4,5],[1,2,3]]`
-> Output: `4`
+> Input: `arrays = [[1,2,3],[4,5],[1,2,3]]`\
+> Output: `4`\
 > Explanation: One way to reach the maximum distance 4 is to pick 1 in the first or third array and pick 5 in the second array.
 
 **Example 2:**
 
-> Input: `arrays = [[1],[1]]`
+> Input: `arrays = [[1],[1]]`\
 > Output: `0`
 
 **Constraints:**
@@ -43,7 +42,7 @@ class Solution:
     def maxDistance(self, arrays: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -57,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

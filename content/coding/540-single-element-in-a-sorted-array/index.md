@@ -1,10 +1,9 @@
 ---
 title: 540. Single Element in a Sorted Array
-notebook: coding
 tags:
 - medium
-date: 2024-11-10 02:15:43
-updated: 2024-11-10 02:15:43
+date: "2024-11-10T02:15:43+08:00"
+lastmod: "2024-11-10T02:15:43+08:00"
 ---
 ## Problem
 
@@ -18,12 +17,12 @@ Your solution must run in `O(log n)` time and `O(1)` space.
 
 **Example 1:**
 
-> Input: `nums = [1,1,2,3,3,4,4,8,8]`
+> Input: `nums = [1,1,2,3,3,4,4,8,8]`\
 > Output: 2
 
 **Example 2:**
 
-> Input: `nums = [3,3,7,7,10,11,11]`
+> Input: `nums = [3,3,7,7,10,11,11]`\
 > Output: 10
 
 **Constraints:**
@@ -38,7 +37,7 @@ class Solution:
     def singleNonDuplicate(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -58,4 +57,4 @@ n 一定是个奇数，假设 `n = 2 * m + 1`
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

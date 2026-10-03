@@ -1,10 +1,9 @@
 ---
 title: 638. Shopping Offers
-notebook: coding
 tags:
 - medium
-date: 2024-11-27 09:39:11
-updated: 2024-11-27 09:39:11
+date: "2024-11-27T09:39:11+08:00"
+lastmod: "2024-11-27T09:39:11+08:00"
 ---
 ## Problem
 
@@ -20,21 +19,21 @@ Return _the lowest price you have to pay for exactly certain items as given, whe
 
 **Example 1:**
 
-> Input: `price = [2,5], special = [[3,0,5],[1,2,10]], needs = [3,2]`
-> Output: `14`
-> Explanation: There are two kinds of items, A and B. Their prices are $2 and $5 respectively.
-> In special offer 1, you can pay $5 for 3A and 0B
-> In special offer 2, you can pay $10 for 1A and 2B.
-> You need to buy 3A and 2B, so you may pay $10 for 1A and 2B (special offer #2), and $4 for 2A.
+> Input: `price = [2,5], special = [[3,0,5],[1,2,10]], needs = [3,2]`\
+> Output: `14`\
+> Explanation: There are two kinds of items, A and B. Their prices are \$2 and \$5 respectively.
+> In special offer 1, you can pay \$5 for 3A and 0B
+> In special offer 2, you can pay \$10 for 1A and 2B.
+> You need to buy 3A and 2B, so you may pay \$10 for 1A and 2B (special offer #2), and \$4 for 2A.
 
 **Example 2:**
 
-> Input: `price = [2,3,4], special = [[1,1,0,4],[2,2,1,9]], needs = [1,2,1]`
-> Output: `11`
-> Explanation: The price of A is $2, and $3 for B, $4 for C.
-> You may pay $4 for 1A and 1B, and $9 for 2A ,2B and 1C.
-> You need to buy 1A ,2B and 1C, so you may pay $4 for 1A and 1B (special offer #1), and $3 for 1B, $4 for 1C.
-> You cannot add more items, though only $9 for 2A ,2B and 1C.
+> Input: `price = [2,3,4], special = [[1,1,0,4],[2,2,1,9]], needs = [1,2,1]`\
+> Output: `11`\
+> Explanation: The price of A is \$2, and \$3 for B, \$4 for C.
+> You may pay \$4 for 1A and 1B, and \$9 for 2A ,2B and 1C.
+> You need to buy 1A ,2B and 1C, so you may pay \$4 for 1A and 1B (special offer #1), and \$3 for 1B, \$4 for 1C.
+> You cannot add more items, though only \$9 for 2A ,2B and 1C.
 
 **Constraints:**
 
@@ -53,7 +52,7 @@ class Solution:
     def shoppingOffers(self, price: List[int], special: List[List[int]], needs: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -69,4 +68,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

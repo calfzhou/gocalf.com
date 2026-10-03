@@ -1,10 +1,9 @@
 ---
 title: 63. Unique Paths II
-notebook: coding
 tags:
 - medium
-date: 2025-02-08 10:09:07
-updated: 2025-02-08 10:09:07
+date: "2025-02-08T10:09:07+08:00"
+lastmod: "2025-02-08T10:09:07+08:00"
 ---
 ## Problem
 
@@ -20,10 +19,11 @@ The testcases are generated so that the answer will be less than or equal to `2 
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]`
-> Output: `2`
+> Input: `obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]`\
+> Output: `2`\
 > Explanation: There is one obstacle in the middle of the `3x3` grid above.
 > There are two ways to reach the bottom-right corner:
 >
@@ -32,9 +32,10 @@ The testcases are generated so that the answer will be less than or equal to `2 
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `obstacleGrid = [[0,1],[0,0]]`
+> Input: `obstacleGrid = [[0,1],[0,0]]`\
 > Output: `1`
 
 **Constraints:**
@@ -51,7 +52,7 @@ class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,4 +66,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
