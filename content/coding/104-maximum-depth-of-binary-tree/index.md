@@ -1,10 +1,9 @@
 ---
 title: 104. Maximum Depth of Binary Tree
-notebook: coding
 tags:
 - easy
-date: 2024-11-23 22:27:00
-updated: 2024-11-23 22:27:00
+date: "2024-11-23T22:27:00+08:00"
+lastmod: "2024-11-23T22:27:00+08:00"
 ---
 ## Problem
 
@@ -16,14 +15,15 @@ A binary tree's **maximum depth** is the number of nodes along the longest path
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `root = [3,9,20,null,null,15,7]`
+> Input: `root = [3,9,20,null,null,15,7]`\
 > Output: `3`
 
 **Example 2:**
 
-> Input: `root = [1,null,2]`
+> Input: `root = [1,null,2]`\
 > Output: `2`
 
 **Constraints:**
@@ -46,7 +46,7 @@ class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

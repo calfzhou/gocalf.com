@@ -1,10 +1,9 @@
 ---
 title: 118. Pascal’s Triangle
-notebook: coding
 tags:
 - easy
-date: 2025-01-28 21:46:19
-updated: 2025-01-28 21:46:19
+date: "2025-01-28T21:46:19+08:00"
+lastmod: "2025-01-28T21:46:19+08:00"
 ---
 ## Problem
 
@@ -14,16 +13,17 @@ In **Pascal's triangle**, each number is the sum of the two numbers directly abo
 
 <https://leetcode.cn/problems/pascals-triangle/>
 
-![pascal|240](../119-pascals-triangle-ii/pascal.gif "pascal"){.invert-when-dark}
+![pascal|240](../119-pascals-triangle-ii/pascal.gif "pascal")
+{.invert-when-dark}
 
 **Example 1:**
 
-> Input: `numRows = 5`
+> Input: `numRows = 5`\
 > Output: `[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]`
 
 **Example 2:**
 
-> Input: `numRows = 1`
+> Input: `numRows = 1`\
 > Output: `[[1]]`
 
 **Constraints:**
@@ -37,7 +37,7 @@ class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -45,4 +45,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

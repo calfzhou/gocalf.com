@@ -1,11 +1,10 @@
 ---
 title: 给 HHKB 增加 YDKB 蓝牙模块
-notebook: notes
 tags:
   - hardware
   - calf
-date: 2024-06-11 16:52:29
-updated: 2025-04-26 09:12:46
+date: "2024-06-11T16:52:29+08:00"
+lastmod: "2025-04-26T09:12:46+08:00"
 ---
 ## 背景
 
@@ -26,7 +25,7 @@ HHKB Professional 2 Type-S 静电容键盘，2015 年购入，型号 `PD-KB400WS
 
 - 整个改装无需焊接，只需要拧螺丝拔排线换主控，非常容易。
 - USB / 蓝牙 4.0 双模，插线时可在有线或蓝牙间切换，充电也是直接通过 USB 接口。
-- USB 下支持全键无冲（可通过左右 {% kbd Shift %} + {% kbd N %} 切换），蓝牙下支持任意 6 键无冲。
+- USB 下支持全键无冲（可通过左右 {{< kbd text="Shift" >}} + {{< kbd text="N" >}} 切换），蓝牙下支持任意 6 键无冲。
 - 全键位都支持自定义，固件功能基于 tmk，使用 [ydkb.io](https://ydkb.io/) 图形化工具，简单易懂。
 - 使用标准 3.7v 锂电（默认不带电池），可自备，也可选购买本店定制的 2500mAh 电池。
 - 支持自动节能，极速唤醒。独创 Lock Mode，可防止键盘放包里按键被压耗电，携带更轻松。
@@ -45,7 +44,7 @@ HHKB Professional 2 Type-S 静电容键盘，2015 年购入，型号 `PD-KB400WS
 - 刷机模式（数据写入）：在上面基础上，LED3 快速闪烁。
 - 启动时蓝牙 未连接 状态指示：LED3 闪烁，如果一直未连接，约 15 秒左右会停止闪烁。
 - 启动时蓝牙 已连接 状态指示：LED2 和 LED3 同时较慢闪。每次亮的时间明显长于灭的时间。
-- 按键 {% kbd LShift %} + {% kbd RShift %} + {% kbd S %}：按上面的方式指示蓝牙连接状态。
+- 按键 {{< kbd text="LShift" >}} + {{< kbd text="RShift" >}} + {{< kbd text="S" >}}：按上面的方式指示蓝牙连接状态。
 - 手动进入 Lock Mode：三个灯同时亮起，然后再按 LED3 LED2 LED1 的顺序依次熄灭。
 - 从二级节能或 Lock Mode 唤醒：三个灯同时亮起，然后开始指示蓝牙连接状态。
 - 低电量提示：用键盘时，三个灯同时闪；节能时不闪。依然还可以使用两三天。
@@ -57,7 +56,7 @@ HHKB Professional 2 Type-S 静电容键盘，2015 年购入，型号 `PD-KB400WS
 
 1. 键盘闲置 3 秒没按任何按键后，进入一级节能。此模式下，检测按键频率降低，但是唤醒很快。
 2. 键盘 90 秒蓝牙未连接，或 2.5 小时未使用，进入二级节能。长按任意键 3 到 5 秒可以唤醒。
-3. 使用 Lock Mode，会直接进入二级节能，与 2 的区别是，此时，只有同时且仅长按 {% kbd F %} 和 {% kbd J %} 唤醒，其他键不行。
+3. 使用 Lock Mode，会直接进入二级节能，与 2 的区别是，此时，只有同时且仅长按 {{< kbd text="F" >}} 和 {{< kbd text="J" >}} 唤醒，其他键不行。
 
 ## 使用信息和常见故障排查
 
@@ -68,9 +67,9 @@ HHKB Professional 2 Type-S 静电容键盘，2015 年购入，型号 `PD-KB400WS
 
 新的 macOS 系统中，蓝牙连接那里就可以显示出键盘的剩余电量。
 
-按 {% kbd Fn %} + {% kbd E %}，可以通过键盘输出剩余电量的值，如 `70-1`。
+按 {{< kbd text="Fn" >}} + {{< kbd text="E" >}}，可以通过键盘输出剩余电量的值，如 `70-1`。
 
-按 {% kbd LShift %} + {% kbd RShift %} + {% kbd V %} 也可以输出剩余电量值。
+按 {{< kbd text="LShift" >}} + {{< kbd text="RShift" >}} + {{< kbd text="V" >}} 也可以输出剩余电量值。
 
 ### 查询和升级固件
 
@@ -109,7 +108,7 @@ HHKB Professional 2 Type-S 静电容键盘，2015 年购入，型号 `PD-KB400WS
 macOS 13 以上的系统，需要按照 [Bootloader, Flash Firmware - Reflash firmware in Mac](https://ydkb.io/help/#/en/bootloader/msd-bootloader?id=reflash-firmware-in-mac) 进行固件刷新。
 
 1. 下载最新的固件文件 `HHKB_BLE.BIN`。
-2. 按住 {% kbd ESC %} 键的同时，插入 USB 连线。电脑上会出现名为 `HHKB_BLE` 的磁盘。
+2. 按住 {{< kbd text="ESC" >}} 键的同时，插入 USB 连线。电脑上会出现名为 `HHKB_BLE` 的磁盘。
 3. `diskutil umount /Volumes/HHKB_BLE`
    1. 会提示 `Volume HHKB_BLE on disk2 unmounted`，其中 `disk2` 可能会不一样。
 4. `sudo dd if=./HHKB_BLE.BIN of=/dev/disk2 seek=4`，注意如果上一步提示的不是 `disk2` 则需要替换一下。
@@ -117,14 +116,14 @@ macOS 13 以上的系统，需要按照 [Bootloader, Flash Firmware - Reflash fi
 Windows 简单一些，按照 [Bootloader, Flash Firmware - Reflash firmware in Windows](https://ydkb.io/help/#/en/bootloader/msd-bootloader?id=reflash-firmware-in-windows) 操作即可。
 
 1. 下载最新的固件文件 `HHKB_BLE.BIN`。
-2. 按住 {% kbd ESC %} 键的同时，插入 USB 连线。电脑上会出现名为 `HHKB_BLE` 的磁盘。
+2. 按住 {{< kbd text="ESC" >}} 键的同时，插入 USB 连线。电脑上会出现名为 `HHKB_BLE` 的磁盘。
 3. 把 `HHKB_BLE.BIN` 拖到该磁盘根目录，覆盖掉同名文件，然后弹出设备（一般会自动弹出）即可。
 
 ### 修改按键
 
 修改按键对应的功能，跟刷固件的操作一致。只要在 [YD Keymap Builder for HHKB BLE](https://ydkb.io/?hhkb_ble) 页面里先做好期望的调整，再下载的固件文件中就包含所做的设置。
 
-比如在习惯了 macOS 之后，如果在 Windows 中用 HHKB，经常按错快捷键，可以考虑把 {% kbd Ctrl %} 键和 {% kbd ⌘ Cmd %}（即 {% kbd ⊞ Win %} 键）互换。
+比如在习惯了 macOS 之后，如果在 Windows 中用 HHKB，经常按错快捷键，可以考虑把 {{< kbd text="Ctrl" >}} 键和 {{< kbd text="⌘ Cmd" >}}（即 {{< kbd text="⊞ Win" >}} 键）互换。
 
 ### 蓝牙连接无法自动连上
 
@@ -137,7 +136,7 @@ Windows 简单一些，按照 [Bootloader, Flash Firmware - Reflash firmware in 
 [BLE 系列排错指南 - 蓝牙无法自动连接](https://ydkb.io/help/#/ble-series/troubleshooting?id=%e8%93%9d%e7%89%99%e6%97%a0%e6%b3%95%e8%87%aa%e5%8a%a8%e8%bf%9e%e6%8e%a5)
 
 1. 先删除电脑上已经配对的该蓝牙键盘。
-2. 在键盘上按 {% kbd LShift %} + {% kbd RShift %} + {% kbd LCtrl %} + {% kbd R %}，清除键盘端保存的配对信息。
+2. 在键盘上按 {{< kbd text="LShift" >}} + {{< kbd text="RShift" >}} + {{< kbd text="LCtrl" >}} + {{< kbd text="R" >}}，清除键盘端保存的配对信息。
 3. 设备搜索键盘，重新配对一次。
 
 > 2025-04-25 再次遇到。换电脑后容易出现这种情况，尤其 Windows 台式机开机之后无法自动蓝牙连接，可以按上述操作清除配对信息后再重新配对。

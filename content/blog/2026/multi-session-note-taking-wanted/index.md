@@ -1,9 +1,11 @@
 ---
 title: 需要一种支持「并发」的记笔记模式
 type: story
-ai_label: generated
-date: 2026-03-25 16:21:36
-updated: 2026-03-25 16:21:36
+date: "2026-03-25T16:21:36+08:00"
+lastmod: "2026-03-25T16:21:36+08:00"
+slug: multi-session-note-taking-wanted
+params:
+  ai_label: generated
 ---
 
 ## 起因：AI 工作台里的「并发会话」

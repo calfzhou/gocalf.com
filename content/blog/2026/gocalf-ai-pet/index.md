@@ -1,9 +1,11 @@
 ---
 title: GoCalf AI Pet
 type: story
-ai_label: polished
-date: 2026-05-22 00:00:58
-updated: 2026-06-06 16:57:35
+date: "2026-05-22T00:00:58+08:00"
+lastmod: "2026-06-06T16:57:35+08:00"
+slug: gocalf-ai-pet
+params:
+  ai_label: polished
 ---
 
 最近发现好多家 AI 公司都在做桌面宠物。

@@ -1,10 +1,9 @@
 ---
 title: 1128. Number of Equivalent Domino Pairs
-notebook: coding
 tags:
 - easy
-date: 2025-01-03 11:23:59
-updated: 2025-01-03 11:23:59
+date: "2025-01-03T11:23:59+08:00"
+lastmod: "2025-01-03T11:23:59+08:00"
 ---
 ## Problem
 
@@ -16,12 +15,12 @@ Return _the number of pairs_ `(i, j)` _for which_ `0 <= i < j < dominoes.length`
 
 **Example 1:**
 
-> Input: `dominoes = [[1,2],[2,1],[3,4],[5,6]]`
+> Input: `dominoes = [[1,2],[2,1],[3,4],[5,6]]`\
 > Output: `1`
 
 **Example 2:**
 
-> Input: `dominoes = [[1,2],[1,2],[1,1],[1,2],[2,2]]`
+> Input: `dominoes = [[1,2],[1,2],[1,1],[1,2],[2,2]]`\
 > Output: `3`
 
 **Constraints:**
@@ -37,7 +36,7 @@ class Solution:
     def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -49,4 +48,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

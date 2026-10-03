@@ -1,11 +1,9 @@
 ---
 title: 11. Container With Most Water
-notebook: coding
 tags:
 - medium
-date: 2024-11-11 02:38:27
-updated: 2024-11-11 11:44:19
-katex: true
+date: "2024-11-11T02:38:27+08:00"
+lastmod: "2024-11-11T11:44:19+08:00"
 ---
 ## Problem
 
@@ -21,15 +19,16 @@ Return _the maximum amount of water a container can store_.
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `height = [1,8,6,2,5,4,8,3,7]`
-> Output: `49`
+> Input: `height = [1,8,6,2,5,4,8,3,7]`\
+> Output: `49`\
 > Explanation: The above vertical lines are represented by array `[1,8,6,2,5,4,8,3,7]`. In this case, the max area of water (blue section) the container can contain is 49.
 
 **Example 2:**
 
-> Input: `height = [1,1]`
+> Input: `height = [1,1]`\
 > Output: `1`
 
 **Constraints:**
@@ -45,7 +44,7 @@ class Solution:
     def maxArea(self, height: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -81,7 +80,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Improve
 
@@ -101,4 +100,4 @@ class Solution:
 
 代码有两版实现，其中 `maxArea` 的逻辑复杂一些，但计算量小很多（仅在需要时计算容器面积），速度更快。`maxArea_simple` 逻辑更直接，但会计算每一个遇到的容器面积，速度略慢。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

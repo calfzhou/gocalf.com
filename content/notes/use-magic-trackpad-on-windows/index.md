@@ -1,12 +1,12 @@
 ---
 title: 在 Windows 中使用 Magic Trackpad
-notebook: notes
 tags:
 - hardware
-date: 2025-04-26 23:20:57
-updated: 2026-04-15 22:02:48
-references:
-- '[Win11使用magic trackpad （苹果妙控板） - 知乎](https://zhuanlan.zhihu.com/p/608208531)'
+date: "2025-04-26T23:20:57+08:00"
+lastmod: "2026-04-15T22:02:48+08:00"
+params:
+  references:
+  - '[Win11使用magic trackpad （苹果妙控板） - 知乎](https://zhuanlan.zhihu.com/p/608208531)'
 ---
 在 Windows 系统中使用苹果的 Magic Trackpad（妙控板）。
 
@@ -14,7 +14,7 @@ references:
 
 [vitoplantamura/MagicTrackpad2ForWindows: Magic Trackpad 2 Precision Touchpad driver for Windows 11, based on the imbushuo driver, signed by Microsoft](https://github.com/vitoplantamura/MagicTrackpad2ForWindows)
 
-{% badge_github vitoplantamura MagicTrackpad2ForWindows release:true %}
+{{< badge_github user="vitoplantamura" repo="MagicTrackpad2ForWindows" release=true >}}
 
 下载 release 压缩包，右键点击驱动文件 `./AMD64/AmtPtpDevice.inf`，选择「Install」。
 

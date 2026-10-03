@@ -1,10 +1,9 @@
 ---
 title: 46. Permutations
-notebook: coding
 tags:
 - easy
-date: 2025-02-06 09:26:43
-updated: 2025-02-06 09:26:43
+date: "2025-02-06T09:26:43+08:00"
+lastmod: "2025-02-06T09:26:43+08:00"
 ---
 ## Problem
 
@@ -16,17 +15,17 @@ Given an array `nums` of distinct integers, return all the possible permutations
 
 **Example 1:**
 
-> Input: `nums = [1,2,3]`
+> Input: `nums = [1,2,3]`\
 > Output: `[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]`
 
 **Example 2:**
 
-> Input: `nums = [0,1]`
+> Input: `nums = [0,1]`\
 > Output: `[[0,1],[1,0]]`
 
 **Example 3:**
 
-> Input: `nums = [1]`
+> Input: `nums = [1]`\
 > Output: `[[1]]`
 
 **Constraints:**
@@ -42,7 +41,7 @@ class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

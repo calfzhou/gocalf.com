@@ -1,10 +1,9 @@
 ---
 title: 1029. Two City Scheduling
-notebook: coding
 tags:
 - medium
-date: 2025-01-01 19:36:41
-updated: 2025-01-01 19:36:41
+date: "2025-01-01T19:36:41+08:00"
+lastmod: "2025-01-01T19:36:41+08:00"
 ---
 ## Problem
 
@@ -16,8 +15,8 @@ Return _the minimum cost to fly every person to a city_ such that exactly `n` pe
 
 **Example 1:**
 
-> Input: `costs = [[10,20],[30,200],[400,50],[30,20]]`
-> Output: `110`
+> Input: `costs = [[10,20],[30,200],[400,50],[30,20]]`\
+> Output: `110`\
 > Explanation:
 > The first person goes to city A for a cost of 10.
 > The second person goes to city A for a cost of 30.
@@ -28,12 +27,12 @@ Return _the minimum cost to fly every person to a city_ such that exactly `n` pe
 
 **Example 2:**
 
-> Input: `costs = [[259,770],[448,54],[926,667],[184,139],[840,118],[577,469]]`
+> Input: `costs = [[259,770],[448,54],[926,667],[184,139],[840,118],[577,469]]`\
 > Output: `1859`
 
 **Example 3:**
 
-> Input: `costs = [[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,359],[631,42]]`
+> Input: `costs = [[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,359],[631,42]]`\
 > Output: `3086`
 
 **Constraints:**
@@ -50,7 +49,7 @@ class Solution:
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -62,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

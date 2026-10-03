@@ -1,10 +1,9 @@
 ---
 title: 90. Subsets II
-notebook: coding
 tags:
 - easy
-date: 2025-02-05 09:55:31
-updated: 2025-02-05 09:55:31
+date: "2025-02-05T09:55:31+08:00"
+lastmod: "2025-02-05T09:55:31+08:00"
 ---
 ## Problem
 
@@ -18,12 +17,12 @@ The solution set **must not** contain duplicate subsets. Return the solution in 
 
 **Example 1:**
 
-> Input: `nums = [1,2,2]`
+> Input: `nums = [1,2,2]`\
 > Output: `[[],[1],[1,2],[1,2,2],[2],[2,2]]`
 
 **Example 2:**
 
-> Input: `nums = [0]`
+> Input: `nums = [0]`\
 > Output: `[[],[0]]`
 
 **Constraints:**
@@ -38,7 +37,7 @@ class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -52,4 +51,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

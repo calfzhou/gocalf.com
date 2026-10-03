@@ -1,10 +1,9 @@
 ---
 title: 1072. Flip Columns For Maximum Number of Equal Rows
-notebook: coding
 tags:
 - medium
-date: 2025-01-01 19:15:29
-updated: 2025-01-01 19:15:29
+date: "2025-01-01T19:15:29+08:00"
+lastmod: "2025-01-01T19:15:29+08:00"
 ---
 ## Problem
 
@@ -18,20 +17,20 @@ Return _the maximum number of rows that have all values equal after some number 
 
 **Example 1:**
 
-> Input: `matrix = [[0,1],[1,1]]`
-> Output: `1`
+> Input: `matrix = [[0,1],[1,1]]`\
+> Output: `1`\
 > Explanation: After flipping no values, 1 row has all values equal.
 
 **Example 2:**
 
-> Input: `matrix = [[0,1],[1,0]]`
-> Output: `2`
+> Input: `matrix = [[0,1],[1,0]]`\
+> Output: `2`\
 > Explanation: After flipping values in the first column, both rows have equal values.
 
 **Example 3:**
 
-> Input: `matrix = [[0,0,0],[0,0,1],[1,1,0]]`
-> Output: `2`
+> Input: `matrix = [[0,0,0],[0,0,1],[1,1,0]]`\
+> Output: `2`\
 > Explanation: After flipping values in the first two columns, the last two rows have equal values.
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -62,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

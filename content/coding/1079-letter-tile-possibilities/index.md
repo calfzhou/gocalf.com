@@ -1,10 +1,9 @@
 ---
 title: 1079. Letter Tile Possibilities
-notebook: coding
 tags:
 - medium
-date: 2025-02-17 16:01:51
-updated: 2025-02-17 16:01:51
+date: "2025-02-17T16:01:51+08:00"
+lastmod: "2025-02-17T16:01:51+08:00"
 ---
 ## Problem
 
@@ -16,18 +15,18 @@ Return _the number of possible non-empty sequences of letters_ you can make usin
 
 **Example 1:**
 
-> Input: `tiles = "AAB"`
-> Output: `8`
+> Input: `tiles = "AAB"`\
+> Output: `8`\
 > Explanation: The possible sequences are `"A"`, `"B"`, `"AA"`, `"AB"`, `"BA"`, `"AAB"`, `"ABA"`, `"BAA"`.
 
 **Example 2:**
 
-> Input: `tiles = "AAABBC"`
+> Input: `tiles = "AAABBC"`\
 > Output: `188`
 
 **Example 3:**
 
-> Input: `tiles = "V"`
+> Input: `tiles = "V"`\
 > Output: `1`
 
 **Constraints:**
@@ -42,7 +41,7 @@ class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

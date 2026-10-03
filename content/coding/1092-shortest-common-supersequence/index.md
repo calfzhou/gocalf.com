@@ -1,10 +1,9 @@
 ---
 title: 1092. Shortest Common Supersequence
-notebook: coding
 tags:
 - hard
-date: 2025-02-28 15:31:26
-updated: 2025-02-28 15:31:26
+date: "2025-02-28T15:31:26+08:00"
+lastmod: "2025-02-28T15:31:26+08:00"
 ---
 ## Problem
 
@@ -16,8 +15,8 @@ A string `s` is a **subsequence** of string `t` if deleting some number of chara
 
 **Example 1:**
 
-> Input: `str1 = "abac", str2 = "cab"`
-> Output: `"cabac"`
+> Input: `str1 = "abac", str2 = "cab"`\
+> Output: `"cabac"`\
 > Explanation:
 > `str1 = "abac"` is a subsequence of "`cabac"` because we can delete the first `"c"`.
 > `str2 = "cab"` is a subsequence of `"cabac"` because we can delete the last `"ac"`.
@@ -25,7 +24,7 @@ A string `s` is a **subsequence** of string `t` if deleting some number of chara
 
 **Example 2:**
 
-> Input: `str1 = "aaaaaaaa", str2 = "aaaaaaaa"`
+> Input: `str1 = "aaaaaaaa", str2 = "aaaaaaaa"`\
 > Output: `"aaaaaaaa"`
 
 **Constraints:**
@@ -40,7 +39,7 @@ class Solution:
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -52,9 +51,7 @@ class Solution:
 
 以 `str1 = "abac"`、`str2 = "cab"` 为例，根据 `lcs(i, j)` 表格求出 LCS 和 SCS 的过程如下图示：
 
-::: invert-when-dark
-{% diagramsnet lcs_scs.drawio %}
-:::
+{{< diagramsnet src="lcs_scs.drawio" >}}
 
 按上边提到的规则，找到从 `(m, n)` 到 `(0, 0)` 的路径。对于除了终点的任何一个格子，向上走的取所在行对应的字符（取自 str1），向左走的取所在列对应的字符（取自 str2），斜向左上走的说明所在行和列的字符相同。
 
@@ -62,4 +59,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

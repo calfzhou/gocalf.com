@@ -1,10 +1,9 @@
 ---
 title: 102. Binary Tree Level Order Traversal
-notebook: coding
 tags:
 - medium
-date: 2024-11-23 21:49:14
-updated: 2024-11-23 21:49:14
+date: "2024-11-23T21:49:14+08:00"
+lastmod: "2024-11-23T21:49:14+08:00"
 ---
 ## Problem
 
@@ -14,19 +13,20 @@ Given the `root` of a binary tree, return _the level order traversal of its node
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `root = [3,9,20,null,null,15,7]`
+> Input: `root = [3,9,20,null,null,15,7]`\
 > Output: `[[3],[9,20],[15,7]]`
 
 **Example 2:**
 
-> Input: `root = [1]`
+> Input: `root = [1]`\
 > Output: `[[1]]`
 
 **Example 3:**
 
-> Input: `root = []`
+> Input: `root = []`\
 > Output: `[]`
 
 **Constraints:**
@@ -47,7 +47,7 @@ class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -55,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

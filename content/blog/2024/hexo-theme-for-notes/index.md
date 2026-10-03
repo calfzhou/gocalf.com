@@ -1,8 +1,9 @@
 ---
 title: 准备为笔记场景定制主题
 type: story
-date: 2024-04-28 23:50:43
-updated: 2024-04-28 23:50:43
+date: "2024-04-28T23:50:43+08:00"
+lastmod: "2024-04-28T23:50:43+08:00"
+slug: hexo-theme-for-notes
 ---
 ## 背景
 

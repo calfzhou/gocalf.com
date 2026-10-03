@@ -1,10 +1,9 @@
 ---
 title: 1014. Best Sightseeing Pair
-notebook: coding
 tags:
 - medium
-date: 2024-12-27 11:06:44
-updated: 2024-12-27 11:06:44
+date: "2024-12-27T11:06:44+08:00"
+lastmod: "2024-12-27T11:06:44+08:00"
 ---
 ## Problem
 
@@ -18,13 +17,13 @@ Return _the maximum score of a pair of sightseeing spots_.
 
 **Example 1:**
 
-> Input: `values = [8,1,5,2,6]`
-> Output: `11`
+> Input: `values = [8,1,5,2,6]`\
+> Output: `11`\
 > Explanation: `i = 0`, `j = 2`, `values[i] + values[j] + i - j = 8 + 5 + 0 - 2 = 11`
 
 **Example 2:**
 
-> Input: `values = [1,2]`
+> Input: `values = [1,2]`\
 > Output: `2`
 
 **Constraints:**
@@ -39,7 +38,7 @@ class Solution:
     def maxScoreSightseeingPair(self, values: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -49,4 +48,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

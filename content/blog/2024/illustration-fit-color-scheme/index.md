@@ -1,7 +1,8 @@
 ---
 title: 插图适配明暗配色
-date: 2024-05-21 14:48:24
-updated: 2025-12-27 11:20:00
+date: "2024-05-21T14:48:24+08:00"
+lastmod: "2025-12-27T11:20:00+08:00"
+slug: illustration-fit-color-scheme
 ---
 ## 背景
 
@@ -33,16 +34,21 @@ filter: invert(1) hue-rotate(180deg);
 
 改变不了别人，就改变自己吧。在选择颜色的时候，尽量选那些反转之后不会太离谱的。以 [Tailwind CSS](https://tailwindcss.com/) 默认调色板为例，看一下不同颜色翻转前后的对比，尽量不要选那些太亮的彩色颜色。
 
-{% folding Color Palette 翻转前后对比 %}
-{% grid c:2 %}
-<!-- cell -->
-![原始色彩](colors.png) {.no-caption}
-<!-- cell -->
-![翻转的色彩](colors.png){.invert-when-dark .invert-when-light} {.no-caption}
-{% endgrid %}
-{% endfolding %}
+{{% folding title="Color Palette 翻转前后对比" %}}
+{{< grid columns=2 >}}
+{{< cell >}}
+![原始色彩](colors.png)
+{.no-caption}
+{{< /cell >}}
 
-比如选用 500 值的各个颜色，详见 [配色 - Tailwind Color Palette](../../notes/color-pattern/index.md#Tailwind-Color-Palette)
+{{< cell >}}
+![翻转的色彩](colors.png)
+{.invert-when-dark .invert-when-light .no-caption}
+{{< /cell >}}
+{{< /grid >}}
+{{% /folding %}}
+
+比如选用 500 值的各个颜色，详见 [配色 - Tailwind Color Palette](../../../notes/color-pattern/index.md#tailwind-color-palette)
 
 ## 当前的方案
 
@@ -60,8 +66,9 @@ filter: invert(1) hue-rotate(180deg);
 
 最后在图片的明暗风格跟页面的明暗主题不一致时，对图片应用 filter 进行颜色翻转。
 
-参见 [图片适配明暗配色](../../notes/hexo/index.md#图片适配明暗配色)。
+参见 [图片适配明暗配色](../../../notes/hexo/index.md#图片适配明暗配色)。
 
 本文开头提到的图片，按照这个逻辑处理完，看到的效果是：
 
-![适配后的效果](/notes/rubik-cube/high-center-formula.ink.svg){.invert-when-dark}
+![适配后的效果](/notes/rubik-cube/high-center-formula.ink.svg)
+{.invert-when-dark}

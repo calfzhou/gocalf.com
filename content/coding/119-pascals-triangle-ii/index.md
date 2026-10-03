@@ -1,11 +1,9 @@
 ---
 title: 119. Pascal's Triangle II
-notebook: coding
 tags:
 - easy
-katex: true
-date: 2025-01-28 21:15:24
-updated: 2025-01-28 21:15:24
+date: "2025-01-28T21:15:24+08:00"
+lastmod: "2025-01-28T21:15:24+08:00"
 ---
 ## Problem
 
@@ -13,23 +11,24 @@ Given an integer `rowIndex`, return the `rowIndexᵗʰ` (**0-indexed**) row of t
 
 In **Pascal's triangle**, each number is the sum of the two numbers directly above it as shown:
 
-![pascal|240](pascal.gif "pascal"){.invert-when-dark}
+![pascal|240](pascal.gif "pascal")
+{.invert-when-dark}
 
 <https://leetcode.cn/problems/pascals-triangle-ii/>
 
 **Example 1:**
 
-> Input: `rowIndex = 3`
+> Input: `rowIndex = 3`\
 > Output: `[1,3,3,1]`
 
 **Example 2:**
 
-> Input: `rowIndex = 0`
+> Input: `rowIndex = 0`\
 > Output: `[1]`
 
 **Example 3:**
 
-> Input: `rowIndex = 1`
+> Input: `rowIndex = 1`\
 > Output: `[1,1]`
 
 **Constraints:**
@@ -45,7 +44,7 @@ class Solution:
     def getRow(self, rowIndex: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -63,4 +62,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

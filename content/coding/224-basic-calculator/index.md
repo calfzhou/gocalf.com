@@ -1,10 +1,9 @@
 ---
 title: 224. Basic Calculator
-notebook: coding
 tags:
 - hard
-date: 2024-12-20 15:07:45
-updated: 2024-12-20 15:08:56
+date: "2024-12-20T15:07:45+08:00"
+lastmod: "2024-12-20T15:08:56+08:00"
 ---
 ## Problem
 
@@ -16,17 +15,17 @@ Given a string `s` representing a valid expression, implement a basic calculator
 
 **Example 1:**
 
-> Input: `s = "1 + 1"`
+> Input: `s = "1 + 1"`\
 > Output: `2`
 
 **Example 2:**
 
-> Input: `s = " 2-1 + 2 "`
+> Input: `s = " 2-1 + 2 "`\
 > Output: `3`
 
 **Example 3:**
 
-> Input: `s = "(1+(4+5+2)-3)+(6+8)"`
+> Input: `s = "(1+(4+5+2)-3)+(6+8)"`\
 > Output: `23`
 
 **Constraints:**
@@ -46,7 +45,7 @@ class Solution:
     def calculate(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,9 +55,7 @@ class Solution:
 
 比如表达式 `"(1+(4+5+2)-3)+(6+8)"`，其表达式树是：
 
-::: invert-when-dark
-{% diagramsnet case3-tree.drawio %}
-:::
+{{< diagramsnet src="case3-tree.drawio" >}}
 
 逆波兰表达式实际上就是这棵树后序遍历的结果，即：`1, 4, 5, +, 2, +, +, 3, -, 6, 8, +, +`。
 
@@ -122,13 +119,13 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 比较慢，可能系数太大了。唯一的好处是之后扩展更多的运算符方便一些。
 
 Test cases for solution inner methods:
 
-{% snippet solution_inner_test.py %}
+{{< snippet src="solution_inner_test.py" >}}
 
 ## Directly
 
@@ -136,4 +133,4 @@ Test cases for solution inner methods:
 
 可以维护一个栈，记录嵌套的括号累积下来的正负性，用来辅助确定下一个数字的符号。最终把所有数字加起来就行。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

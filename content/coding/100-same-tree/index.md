@@ -1,10 +1,9 @@
 ---
 title: 100. Same Tree
-notebook: coding
 tags:
 - easy
-date: 2024-11-23 19:15:36
-updated: 2024-11-23 19:15:36
+date: "2024-11-23T19:15:36+08:00"
+lastmod: "2024-11-23T19:15:36+08:00"
 ---
 ## Problem
 
@@ -16,23 +15,26 @@ Two binary trees are considered the same if they are structurally identical, and
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `p = [1,2,3], q = [1,2,3]`
+> Input: `p = [1,2,3], q = [1,2,3]`\
 > Output: `true`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `p = [1,2,3], q = [1,2,3]`
+> Input: `p = [1,2,3], q = [1,2,3]`\
 > Output: `true`
 
 **Example 3:**
 
-![case3](case3.png){.invert-when-dark}
+![case3](case3.png)
+{.invert-when-dark}
 
-> Input: `p = [1,2,1], q = [1,1,2]`
+> Input: `p = [1,2,1], q = [1,1,2]`\
 > Output: `false`
 
 **Constraints:**
@@ -53,7 +55,7 @@ class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -63,4 +65,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

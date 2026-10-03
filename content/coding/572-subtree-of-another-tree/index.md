@@ -1,10 +1,9 @@
 ---
 title: 572. Subtree of Another Tree
-notebook: coding
 tags:
 - easy
-date: 2024-11-18 23:41:31
-updated: 2024-11-18 23:41:31
+date: "2024-11-18T23:41:31+08:00"
+lastmod: "2024-11-18T23:41:31+08:00"
 ---
 ## Problem
 
@@ -16,16 +15,18 @@ A subtree of a binary tree `tree` is a tree that consists of a node in `tree` an
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `root = [3,4,5,1,2], subRoot = [4,1,2]`
+> Input: `root = [3,4,5,1,2], subRoot = [4,1,2]`\
 > Output: `true`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]`
+> Input: `root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]`\
 > Output: `false`
 
 **Constraints:**
@@ -48,7 +49,7 @@ class Solution:
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -62,6 +63,6 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 > 似乎用栈并不比直接用递归快。

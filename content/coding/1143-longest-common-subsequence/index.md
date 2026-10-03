@@ -1,10 +1,9 @@
 ---
 title: 1143. Longest Common Subsequence
-notebook: coding
 tags:
 - medium
-date: 2024-11-23 21:33:04
-updated: 2024-11-23 21:33:04
+date: "2024-11-23T21:33:04+08:00"
+lastmod: "2024-11-23T21:33:04+08:00"
 ---
 ## Problem
 
@@ -20,20 +19,20 @@ A **common subsequence** of two strings is a subsequence that is common to both 
 
 **Example 1:**
 
-> Input: `text1 = "abcde", text2 = "ace"`
-> Output: `3`
+> Input: `text1 = "abcde", text2 = "ace"`\
+> Output: `3`\
 > Explanation: The longest common subsequence is `"ace"` and its length is 3.
 
 **Example 2:**
 
-> Input: `text1 = "abc", text2 = "abc"`
-> Output: `3`
+> Input: `text1 = "abc", text2 = "abc"`\
+> Output: `3`\
 > Explanation: The longest common subsequence is `"abc"` and its length is 3.
 
 **Example 3:**
 
-> Input: `text1 = "abc", text2 = "def"`
-> Output: `0`
+> Input: `text1 = "abc", text2 = "def"`\
+> Output: `0`\
 > Explanation: There is no such common subsequence, so the result is 0.
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -68,4 +67,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
