@@ -1,10 +1,9 @@
 ---
 title: 3. Longest Substring Without Repeating Characters
-notebook: coding
 tags:
 - medium
-date: 2024-11-10 01:06:36
-updated: 2024-11-10 01:06:36
+date: "2024-11-10T01:06:36+08:00"
+lastmod: "2024-11-10T01:06:36+08:00"
 ---
 ## Problem
 
@@ -16,20 +15,20 @@ Given a string `s`, find the length of the **longest substring** without repeati
 
 **Example 1:**
 
-> Input: `s = "abcabcbb"`
-> Output: `3`
+> Input: `s = "abcabcbb"`\
+> Output: `3`\
 > Explanation: The answer is "abc", with the length of 3.
 
 **Example 2:**
 
-> Input: `s = "bbbbb"`
-> Output: `1`
+> Input: `s = "bbbbb"`\
+> Output: `1`\
 > Explanation: The answer is "b", with the length of 1.
 
 **Example 3:**
 
-> Input: `s = "pwwkew"`
-> Output: `3`
+> Input: `s = "pwwkew"`\
+> Output: `3`\
 > Explanation: The answer is "wke", with the length of 3.
 > Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
@@ -45,7 +44,7 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -61,10 +60,10 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## 快一些
 
 如果用哈希表动态地记录当前 substring 中的字符（key 是字符，value 是位置下标），则时间复杂度为 `O(n)`（基本上每个字符都会入栈一次，出栈一次），空间复杂度为 `O(m)`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

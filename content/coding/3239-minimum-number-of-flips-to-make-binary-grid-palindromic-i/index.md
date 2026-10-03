@@ -1,10 +1,9 @@
 ---
 title: 3239. Minimum Number of Flips to Make Binary Grid Palindromic I
-notebook: coding
 tags:
 - medium
-date: 2024-11-15 10:46:43
-updated: 2024-11-15 10:46:43
+date: "2024-11-15T10:46:43+08:00"
+lastmod: "2024-11-15T10:46:43+08:00"
 ---
 ## Problem
 
@@ -20,24 +19,30 @@ Return the **minimum** number of cells that need to be flipped to make **either*
 
 **Example 1:**
 
-> Input: `grid = [[1,0,0],[0,0,0],[0,0,1]]`
-> Output: `2`
+> Input: `grid = [[1,0,0],[0,0,0],[0,0,1]]`\
+> Output: `2`\
 > Explanation:
-> ![case1](case1.png){.invert-when-dark}
+>
+> ![case1](case1.png)
+> {.invert-when-dark}
+>
 > Flipping the highlighted cells makes all the rows palindromic.
 
 **Example 2:**
 
-> Input: `grid = [[0,1],[0,1],[0,0]]`
-> Output: `1`
+> Input: `grid = [[0,1],[0,1],[0,0]]`\
+> Output: `1`\
 > Explanation:
-> ![case2](case2.png){.invert-when-dark}
+>
+> ![case2](case2.png)
+> {.invert-when-dark}
+>
 > Flipping the highlighted cell makes all the columns palindromic.
 
 **Example 3:**
 
-> Input: `grid = [[1],[0]]`
-> Output: `0`
+> Input: `grid = [[1],[0]]`\
+> Output: `0`\
 > Explanation:
 > All rows are already palindromic.
 
@@ -55,7 +60,7 @@ class Solution:
     def minFlips(self, grid: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -69,4 +74,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

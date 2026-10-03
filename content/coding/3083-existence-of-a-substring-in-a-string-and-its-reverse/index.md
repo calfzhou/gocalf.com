@@ -1,10 +1,9 @@
 ---
 title: 3083. Existence of a Substring in a String and Its Reverse
-notebook: coding
 tags:
 - easy
-date: 2024-12-26 00:24:14
-updated: 2024-12-26 00:24:14
+date: "2024-12-26T00:24:14+08:00"
+lastmod: "2024-12-26T00:24:14+08:00"
 ---
 ## Problem
 
@@ -18,20 +17,20 @@ Return `true` _if such a substring exists, and_ `false` _otherwise._
 
 **Example 1:**
 
-> Input: `s = "leetcode"`
-> Output: `true`
+> Input: `s = "leetcode"`\
+> Output: `true`\
 > Explanation: Substring `"ee"` is of length 2 which is also present in `reverse(s) == "edocteel"`.
 
 **Example 2:**
 
-> Input: `s = "abcba"`
-> Output: `true`
+> Input: `s = "abcba"`\
+> Output: `true`\
 > Explanation: All of the substrings of length 2 `"ab"`, `"bc"`, `"cb"`, `"ba"` are also present in `reverse(s) == "abcba"`.
 
 **Example 3:**
 
-> Input: `s = "abcd"`
-> Output: `false`
+> Input: `s = "abcd"`\
+> Output: `false`\
 > Explanation: There is no substring of length 2 in s, which is also present in the reverse of s.
 
 **Constraints:**
@@ -46,7 +45,7 @@ class Solution:
     def isSubstringPresent(self, s: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

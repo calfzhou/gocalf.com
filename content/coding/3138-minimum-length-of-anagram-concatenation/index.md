@@ -1,10 +1,9 @@
 ---
 title: 3138. Minimum Length of Anagram Concatenation
-notebook: coding
 tags:
 - medium
-date: 2024-12-20 10:38:00
-updated: 2024-12-20 10:38:00
+date: "2024-12-20T10:38:00+08:00"
+lastmod: "2024-12-20T10:38:00+08:00"
 ---
 ## Problem
 
@@ -18,15 +17,15 @@ An **anagram** is formed by rearranging the letters of a string. For example, "a
 
 **Example 1:**
 
-> Input: `s = "abba"`
-> Output: `2`
+> Input: `s = "abba"`\
+> Output: `2`\
 > Explanation:
 > One possible string t could be `"ba"`.
 
 **Example 2:**
 
-> Input: `s = "cdef"`
-> Output: `4`
+> Input: `s = "cdef"`\
+> Output: `4`\
 > Explanation:
 > One possible string t could be `"cdef"`, notice that t can be equal to s.
 
@@ -42,7 +41,7 @@ class Solution:
     def minAnagramLength(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -58,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

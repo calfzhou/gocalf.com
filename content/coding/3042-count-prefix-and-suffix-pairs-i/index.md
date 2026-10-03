@@ -1,10 +1,9 @@
 ---
 title: 3042. Count Prefix and Suffix Pairs I
-notebook: coding
 tags:
 - easy
-date: 2025-01-08 11:21:04
-updated: 2025-01-08 11:21:04
+date: "2025-01-08T11:21:04+08:00"
+lastmod: "2025-01-08T11:21:04+08:00"
 ---
 ## Problem
 
@@ -26,8 +25,8 @@ Return _an integer denoting the **number** of index pairs_ `(i, j)` _such that_ 
 
 **Example 1:**
 
-> Input: `words = ["a","aba","ababa","aa"]`
-> Output: `4`
+> Input: `words = ["a","aba","ababa","aa"]`\
+> Output: `4`\
 > Explanation: In this example, the counted index pairs are:
 > `i = 0` and `j = 1` because `isPrefixAndSuffix("a", "aba")` is true.
 > `i = 0` and `j = 2` because `isPrefixAndSuffix("a", "ababa")` is true.
@@ -37,8 +36,8 @@ Return _an integer denoting the **number** of index pairs_ `(i, j)` _such that_ 
 
 **Example 2:**
 
-> Input: `words = ["pa","papa","ma","mama"]`
-> Output: `2`
+> Input: `words = ["pa","papa","ma","mama"]`\
+> Output: `2`\
 > Explanation: In this example, the counted index pairs are:
 > `i = 0` and `j = 1` because `isPrefixAndSuffix("pa", "papa")` is true.
 > `i = 2` and `j = 3` because `isPrefixAndSuffix("ma", "mama")` is true.
@@ -64,7 +63,7 @@ class Solution:
     def countPrefixSuffixPairs(self, words: List[str]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,4 +77,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

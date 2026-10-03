@@ -1,11 +1,9 @@
 ---
 title: 3261. Count Substrings That Satisfy K-Constraint II
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2024-11-13 22:54:53
-updated: 2024-11-13 22:54:53
+date: "2024-11-13T22:54:53+08:00"
+lastmod: "2024-11-13T22:54:53+08:00"
 ---
 ## Problem
 
@@ -26,15 +24,15 @@ Return an integer array `answer`, where `answer[i]` is the number of substrings 
 
 **Example 1:**
 
-> Input: `s = "0001111", k = 2, queries = [[0,6]]`
-> Output: `[26]`
+> Input: `s = "0001111", k = 2, queries = [[0,6]]`\
+> Output: `[26]`\
 > Explanation:
 > For the query `[0, 6]`, all substrings of `s[0..6] = "0001111"` satisfy the k-constraint except for the substrings `s[0..5] = "000111"` and `s[0..6] = "0001111"`.
 
 **Example 2:**
 
-> Input: `s = "010101", k = 1, queries = [[0,5],[1,4],[2,3]]`
-> Output: `[15,9,3]`
+> Input: `s = "010101", k = 1, queries = [[0,5],[1,4],[2,3]]`\
+> Output: `[15,9,3]`\
 > Explanation:
 > The substrings of `s` with a length greater than 3 do not satisfy the k-constraint.
 
@@ -55,7 +53,7 @@ class Solution:
     def countKConstraintSubstrings(self, s: str, k: int, queries: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -101,4 +99,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

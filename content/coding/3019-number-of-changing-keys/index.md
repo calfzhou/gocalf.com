@@ -1,10 +1,9 @@
 ---
 title: 3019. Number of Changing Keys
-notebook: coding
 tags:
 - easy
-date: 2025-01-07 00:19:30
-updated: 2025-01-07 00:19:30
+date: "2025-01-07T00:19:30+08:00"
+lastmod: "2025-01-07T00:19:30+08:00"
 ---
 ## Problem
 
@@ -18,8 +17,8 @@ Return _the number of times the user had to change the key._
 
 **Example 1:**
 
-> Input: `s = "aAbBcC"`
-> Output: `2`
+> Input: `s = "aAbBcC"`\
+> Output: `2`\
 > Explanation:
 > From `s[0] = 'a'` to `s[1] = 'A'`, there is no change of key as caps lock or shift is not counted.
 > From `s[1] = 'A'` to `s[2] = 'b'`, there is a change of key.
@@ -29,8 +28,8 @@ Return _the number of times the user had to change the key._
 
 **Example 2:**
 
-> Input: `s = "AaAaAaaA"`
-> Output: `0`
+> Input: `s = "AaAaAaaA"`\
+> Output: `0`\
 > Explanation: There is no change of key since only the letters `'a'` and `'A'` are pressed which does not require change of key.
 
 **Constraints:**
@@ -45,7 +44,7 @@ class Solution:
     def countKeyChanges(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -53,4 +52,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

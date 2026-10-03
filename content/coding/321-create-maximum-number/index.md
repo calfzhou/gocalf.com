@@ -1,11 +1,10 @@
 ---
 title: 321. Create Maximum Number
-notebook: coding
 tags:
 - hard
 - todo
-date: 2024-12-30 15:45:35
-updated: 2024-12-30 15:45:35
+date: "2024-12-30T15:45:35+08:00"
+lastmod: "2024-12-30T15:45:35+08:00"
 ---
 ## Problem
 
@@ -19,17 +18,17 @@ Return an array of the `k` digits representing the answer.
 
 **Example 1:**
 
-> Input: `nums1 = [3,4,6,5], nums2 = [9,1,2,5,8,3], k = 5`
+> Input: `nums1 = [3,4,6,5], nums2 = [9,1,2,5,8,3], k = 5`\
 > Output: `[9,8,6,5,3]`
 
 **Example 2:**
 
-> Input: `nums1 = [6,7], nums2 = [6,0,4], k = 5`
+> Input: `nums1 = [6,7], nums2 = [6,0,4], k = 5`\
 > Output: `[6,7,6,0,4]`
 
 **Example 3:**
 
-> Input: `nums1 = [3,9], nums2 = [8,9], k = 3`
+> Input: `nums1 = [3,9], nums2 = [8,9], k = 3`\
 > Output: `[9,8,9]`
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def maxNumber(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -62,7 +61,7 @@ class Solution:
 
 ### 选取
 
-在 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md) 中提到用单调栈确定数组中每个元素左侧/右侧第一个比当前值小/大的元素，其中 [正向扫描](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#Another%20O%20n) 时最终留在单调栈里的就是右侧没有比它更大值的元素集合（如果是在找右侧第一个比当前值大的元素）。代码示意：
+在 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md) 中提到用单调栈确定数组中每个元素左侧/右侧第一个比当前值小/大的元素，其中 [正向扫描](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#another-on) 时最终留在单调栈里的就是右侧没有比它更大值的元素集合（如果是在找右侧第一个比当前值大的元素）。代码示意：
 
 ```python
 def pick_max(nums: list[int]) -> list[int]:
@@ -142,11 +141,11 @@ def pick_max_sub(nums: list[int], k: int) -> list[int]:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 选取和合并逻辑的测试代码：
 
-{% snippet solution_inner_test.py %}
+{{< snippet src="solution_inner_test.py" >}}
 
 ## ToDo
 

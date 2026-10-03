@@ -1,11 +1,9 @@
 ---
 title: 3223. Minimum Length of String After Operations
-notebook: coding
 tags:
 - medium
-katex: false
-date: 2025-01-13 09:57:49
-updated: 2025-01-13 09:57:49
+date: "2025-01-13T09:57:49+08:00"
+lastmod: "2025-01-13T09:57:49+08:00"
 ---
 ## Problem
 
@@ -23,8 +21,8 @@ Return the **minimum** length of the final string `s` that you can achieve.
 
 **Example 1:**
 
-> Input: `s = "abaacbcbb"`
-> Output: `5`
+> Input: `s = "abaacbcbb"`\
+> Output: `5`\
 > Explanation:
 > We do the following operations:
 >
@@ -33,8 +31,8 @@ Return the **minimum** length of the final string `s` that you can achieve.
 
 **Example 2:**
 
-> Input: `s = "aa"`
-> Output: `2`
+> Input: `s = "aa"`\
+> Output: `2`\
 > Explanation:
 > We cannot perform any operations, so we return the length of the original string.
 
@@ -50,7 +48,7 @@ class Solution:
     def minimumLength(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -58,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

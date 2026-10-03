@@ -1,10 +1,9 @@
 ---
 title: 3232. Find if Digit Game Can Be Won
-notebook: coding
 tags:
 - easy
-date: 2024-11-30 09:36:15
-updated: 2024-11-30 09:36:15
+date: "2024-11-30T09:36:15+08:00"
+lastmod: "2024-11-30T09:36:15+08:00"
 ---
 ## Problem
 
@@ -18,22 +17,22 @@ Return `true` if Alice can win this game, otherwise, return `false`.
 
 **Example 1:**
 
-> Input: `nums = [1,2,3,4,10]`
-> Output: `false`
+> Input: `nums = [1,2,3,4,10]`\
+> Output: `false`\
 > Explanation:
 > Alice cannot win by choosing either single-digit or double-digit numbers.
 
 **Example 2:**
 
-> Input: `nums = [1,2,3,4,5,14]`
-> Output: `true`
+> Input: `nums = [1,2,3,4,5,14]`\
+> Output: `true`\
 > Explanation:
 > Alice can win by choosing single-digit numbers which have a sum equal to 15.
 
 **Example 3:**
 
-> Input: `nums = [5,5,5,25]`
-> Output: `true`
+> Input: `nums = [5,5,5,25]`\
+> Output: `true`\
 > Explanation:
 > Alice can win by choosing double-digit numbers which have a sum equal to 25.
 
@@ -49,7 +48,7 @@ class Solution:
     def canAliceWin(self, nums: List[int]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -57,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

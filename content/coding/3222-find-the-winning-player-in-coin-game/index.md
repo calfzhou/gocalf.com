@@ -1,10 +1,9 @@
 ---
 title: 3222. Find the Winning Player in Coin Game
-notebook: coding
 tags:
 - easy
-date: 2024-11-27 13:08:55
-updated: 2024-11-27 13:08:55
+date: "2024-11-27T13:08:55+08:00"
+lastmod: "2024-11-27T13:08:55+08:00"
 ---
 ## Problem
 
@@ -18,16 +17,16 @@ Return the _name_ of the player who wins the game if both players play **optimal
 
 **Example 1:**
 
-> Input: `x = 2, y = 7`
-> Output: `"Alice"`
+> Input: `x = 2, y = 7`\
+> Output: `"Alice"`\
 > Explanation:
 > The game ends in a single turn:
 > Alice picks 1 coin with a value of 75 and 4 coins with a value of 10.
 
 **Example 2:**
 
-> Input: `x = 4, y = 11`
-> Output: `"Bob"`
+> Input: `x = 4, y = 11`\
+> Output: `"Bob"`\
 > Explanation:
 > The game ends in 2 turns:
 > Alice picks 1 coin with a value of 75 and 4 coins with a value of 10.
@@ -44,7 +43,7 @@ class Solution:
     def winningPlayer(self, x: int, y: int) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -54,4 +53,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

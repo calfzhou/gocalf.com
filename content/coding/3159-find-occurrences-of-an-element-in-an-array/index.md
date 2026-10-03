@@ -1,10 +1,9 @@
 ---
 title: 3159. Find Occurrences of an Element in an Array
-notebook: coding
 tags:
 - medium
-date: 2024-12-27 00:33:15
-updated: 2024-12-27 00:33:15
+date: "2024-12-27T00:33:15+08:00"
+lastmod: "2024-12-27T00:33:15+08:00"
 ---
 ## Problem
 
@@ -18,8 +17,8 @@ Return an integer array `answer` containing the answers to all queries.
 
 **Example 1:**
 
-> Input: `nums = [1,3,1,7], queries = [1,3,2,4], x = 1`
-> Output: `[0,-1,2,-1]`
+> Input: `nums = [1,3,1,7], queries = [1,3,2,4], x = 1`\
+> Output: `[0,-1,2,-1]`\
 > Explanation:
 >
 > - For the 1ˢᵗ query, the first occurrence of 1 is at index 0.
@@ -29,8 +28,8 @@ Return an integer array `answer` containing the answers to all queries.
 
 **Example 2:**
 
-> Input: `nums = [1,2,3], queries = [10], x = 5`
-> Output: `[-1]`
+> Input: `nums = [1,2,3], queries = [10], x = 5`\
+> Output: `[-1]`\
 > Explanation:
 >
 > - For the 1ˢᵗ query, 5 doesn't exist in `nums`, so the answer is -1.
@@ -48,7 +47,7 @@ class Solution:
     def occurrencesOfElement(self, nums: List[int], queries: List[int], x: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -58,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

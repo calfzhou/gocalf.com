@@ -1,10 +1,9 @@
 ---
 title: 3151. Special Array I
-notebook: coding
 tags:
 - easy
-date: 2024-12-09 09:54:48
-updated: 2024-12-09 09:54:48
+date: "2024-12-09T09:54:48+08:00"
+lastmod: "2024-12-09T09:54:48+08:00"
 ---
 ## Problem
 
@@ -16,22 +15,22 @@ You are given an array of integers `nums`. Return `true` if `nums` is a **specia
 
 **Example 1:**
 
-> Input: `nums = [1]`
-> Output: `true`
+> Input: `nums = [1]`\
+> Output: `true`\
 > Explanation:
 > There is only one element. So the answer is true.
 
 **Example 2:**
 
-> Input: `nums = [2,1,4]`
-> Output: `true`
+> Input: `nums = [2,1,4]`\
+> Output: `true`\
 > Explanation:
 > There is only two pairs: `(2,1)` and `(1,4)`, and both of them contain numbers with different parity. So the answer is true.
 
 **Example 3:**
 
-> Input: `nums = [4,3,1,6]`
-> Output: `false`
+> Input: `nums = [4,3,1,6]`\
+> Output: `false`\
 > Explanation:
 > `nums[1]` and `nums[2]` are both odd. So the answer is false.
 
@@ -47,10 +46,10 @@ class Solution:
     def isArraySpecial(self, nums: List[int]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

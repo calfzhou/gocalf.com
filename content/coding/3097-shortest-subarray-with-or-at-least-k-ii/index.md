@@ -1,10 +1,9 @@
 ---
 title: 3097. Shortest Subarray With OR at Least K II
-notebook: coding
 tags:
 - medium
-date: 2025-01-17 18:58:21
-updated: 2025-01-17 18:58:21
+date: "2025-01-17T18:58:21+08:00"
+lastmod: "2025-01-17T18:58:21+08:00"
 ---
 ## Problem
 
@@ -25,7 +24,7 @@ class Solution:
     def minimumSubarrayLength(self, nums: List[int], k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -47,4 +46,4 @@ dp 中只有区间 `[l, r')` 的值可用，当 l 右移到 `r'` 时，就需要
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

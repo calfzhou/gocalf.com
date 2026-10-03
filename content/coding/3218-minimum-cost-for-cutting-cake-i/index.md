@@ -1,12 +1,10 @@
 ---
 title: 3218. Minimum Cost for Cutting Cake I
-notebook: coding
 tags:
 - medium
 - hard
-katex: true
-date: 2024-12-25 00:58:35
-updated: 2024-12-25 09:37:20
+date: "2024-12-25T00:58:35+08:00"
+lastmod: "2024-12-25T09:37:20+08:00"
 ---
 ## Problem
 
@@ -32,10 +30,12 @@ Return the **minimum** total cost to cut the entire cake into `1 x 1` pieces.
 
 **Example 1:**
 
-> Input: `m = 3, n = 2, horizontalCut = [1,3], verticalCut = [5]`
-> Output: `13`
+> Input: `m = 3, n = 2, horizontalCut = [1,3], verticalCut = [5]`\
+> Output: `13`\
 > Explanation:
-> ![case1](case1.gif){.invert-when-dark}
+>
+> ![case1](case1.gif)
+> {.invert-when-dark}
 >
 > - Perform a cut on the vertical line 0 with cost 5, current total cost is 5.
 > - Perform a cut on the horizontal line 0 on `3 x 1` subgrid with cost 1.
@@ -47,8 +47,8 @@ Return the **minimum** total cost to cut the entire cake into `1 x 1` pieces.
 
 **Example 2:**
 
-> Input: `m = 2, n = 2, horizontalCut = [7], verticalCut = [4]`
-> Output: `15`
+> Input: `m = 2, n = 2, horizontalCut = [7], verticalCut = [4]`\
+> Output: `15`\
 > Explanation:
 >
 > - Perform a cut on the horizontal line 0 with cost 7.
@@ -71,7 +71,7 @@ class Solution:
     def minimumCost(self, m: int, n: int, horizontalCut: List[int], verticalCut: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -92,7 +92,7 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Greedy
 
@@ -106,6 +106,6 @@ $$
 
 时间复杂度 `O(m log m + n log n)`，空间复杂度 `O(1)`（in-place 排序）。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 > 给排序后的 `horizontalCut` 和 `verticalCut` 都各加一个成本为 0 的虚拟切割线，能够简化边界条件的判定。

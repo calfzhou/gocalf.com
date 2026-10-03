@@ -1,10 +1,9 @@
 ---
 title: 3046. Split the Array
-notebook: coding
 tags:
 - easy
-date: 2024-12-28 00:28:20
-updated: 2024-12-28 00:28:20
+date: "2024-12-28T00:28:20+08:00"
+lastmod: "2024-12-28T00:28:20+08:00"
 ---
 ## Problem
 
@@ -20,14 +19,14 @@ Return `true` _if it is possible to split the array, and_ `false` _otherwise_.
 
 **Example 1:**
 
-> Input: `nums = [1,1,2,2,3,4]`
-> Output: `true`
+> Input: `nums = [1,1,2,2,3,4]`\
+> Output: `true`\
 > Explanation: One of the possible ways to split nums is `nums1 = [1,2,3]` and `nums2 = [1,2,4]`.
 
 **Example 2:**
 
-> Input: `nums = [1,1,1,1]`
-> Output: `false`
+> Input: `nums = [1,1,1,1]`\
+> Output: `false`\
 > Explanation: The only possible way to split nums is `nums1 = [1,1]` and `nums2 = [1,1]`. Both nums1 and nums2 do not contain distinct elements. Therefore, we return false.
 
 **Constraints:**
@@ -43,7 +42,7 @@ class Solution:
     def isPossibleToSplit(self, nums: List[int]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -53,4 +52,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

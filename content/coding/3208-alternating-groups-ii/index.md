@@ -1,10 +1,9 @@
 ---
 title: 3208. Alternating Groups II
-notebook: coding
 tags:
 - medium
-date: 2024-11-27 10:43:51
-updated: 2024-11-27 10:43:51
+date: "2024-11-27T10:43:51+08:00"
+lastmod: "2024-11-27T10:43:51+08:00"
 ---
 ## Problem
 
@@ -23,38 +22,46 @@ Return the number of **alternating** groups.
 
 **Example 1:**
 
-> Input: `colors = [0,1,0,1,0], k = 3`
-> Output: `3`
+> Input: `colors = [0,1,0,1,0], k = 3`\
+> Output: `3`\
 > Explanation:
 > ![case1-0|150](case1-0.png "case1-0")
 > Alternating groups:
-> {% grid w:150px %}
-<!-- cell -->
+> {{% grid min_width=150 %}}
+{{< cell >}}
 > ![case1-1|150](case1-1.png "case1-1")
-<!-- cell -->
+{{< /cell >}}
+
+{{< cell >}}
 > ![case1-2|150](case1-2.png "case1-2")
-<!-- cell -->
+{{< /cell >}}
+
+{{< cell >}}
 > ![case1-3|150](case1-3.png "case1-3")
-{% endgrid %}
+{{< /cell >}}
+{{% /grid %}}
 
 **Example 2:**
 
-> Input: `colors = [0,1,0,0,1,0,1], k = 6`
-> Output: `2`
+> Input: `colors = [0,1,0,0,1,0,1], k = 6`\
+> Output: `2`\
 > Explanation:
 > ![case2-0|150](case2-0.png "case2-0")
 > Alternating groups:
-> {% grid w:150px %}
-<!-- cell -->
+> {{% grid min_width=150 %}}
+{{< cell >}}
 > ![case2-1|150](case2-1.png "case2-1")
-<!-- cell -->
+{{< /cell >}}
+
+{{< cell >}}
 > ![case2-2|150](case2-2.png "case2-2")
-{% endgrid %}
+{{< /cell >}}
+{{% /grid %}}
 
 **Example 3:**
 
-> Input: `colors = [1,1,0,1], k = 4`
-> Output: `0`
+> Input: `colors = [1,1,0,1], k = 4`\
+> Output: `0`\
 > Explanation:
 > ![case3|150](case3.png "case3")
 
@@ -71,7 +78,7 @@ class Solution:
     def numberOfAlternatingGroups(self, colors: List[int], k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -89,4 +96,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

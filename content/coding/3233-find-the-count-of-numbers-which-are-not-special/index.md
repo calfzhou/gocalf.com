@@ -1,11 +1,9 @@
 ---
 title: 3233. Find the Count of Numbers Which Are Not Special
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-11-22 14:43:51
-updated: 2024-11-22 14:43:51
+date: "2024-11-22T14:43:51+08:00"
+lastmod: "2024-11-22T14:43:51+08:00"
 ---
 ## Problem
 
@@ -22,15 +20,15 @@ Return the count of numbers in the range `[l, r]` that are **not** **special**.
 
 **Example 1:**
 
-> Input: `l = 5, r = 7`
-> Output: `3`
+> Input: `l = 5, r = 7`\
+> Output: `3`\
 > Explanation:
 > There are no special numbers in the range `[5, 7]`.
 
 **Example 2:**
 
-> Input: `l = 4, r = 16`
-> Output: `11`
+> Input: `l = 4, r = 16`\
+> Output: `11`\
 > Explanation:
 > The special numbers in the range `[4, 16]` are 4 and 9.
 
@@ -45,7 +43,7 @@ class Solution:
     def nonSpecialCount(self, l: int, r: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,8 +63,8 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 在 LeetCode 上提交的话，一个可选的作 bú 弊 shì 方案是把质数表缓存到 `Solution.nonSpecialCount` 之外，甚至直接提前先算好整个质数表（上限取 $\lfloor\sqrt{1e9}\rfloor=31622$ 即可），并进一步计算出所有的 $\pi(n)$（小于 n 的质数个数），在 `Solution.nonSpecialCount` 里用常数时间计算 $\pi(r'+1)-\pi(l')$ 即可。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

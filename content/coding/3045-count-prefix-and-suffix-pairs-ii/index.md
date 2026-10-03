@@ -1,10 +1,9 @@
 ---
 title: 3045. Count Prefix and Suffix Pairs II
-notebook: coding
 tags:
 - hard
-date: 2025-01-08 11:21:25
-updated: 2025-01-08 11:21:25
+date: "2025-01-08T11:21:25+08:00"
+lastmod: "2025-01-08T11:21:25+08:00"
 ---
 ## Problem
 
@@ -26,7 +25,7 @@ class Solution:
     def countPrefixSuffixPairs(self, words: List[str]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -42,4 +41,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

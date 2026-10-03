@@ -1,10 +1,9 @@
 ---
 title: 3001. Minimum Moves to Capture The Queen
-notebook: coding
 tags:
 - medium
-date: 2024-12-05 10:04:04
-updated: 2024-12-05 10:04:04
+date: "2024-12-05T10:04:04+08:00"
+lastmod: "2024-12-05T10:04:04+08:00"
 ---
 ## Problem
 
@@ -31,8 +30,8 @@ Given that you can only move the white pieces, return _the **minimum** number of
 
 ![case1](case1.png)
 
-> Input: `a = 1, b = 1, c = 8, d = 8, e = 2, f = 3`
-> Output: `2`
+> Input: `a = 1, b = 1, c = 8, d = 8, e = 2, f = 3`\
+> Output: `2`\
 > Explanation: We can capture the black queen in two moves by moving the white rook to `(1, 3)` then to `(2, 3)`.
 > It is impossible to capture the black queen in less than two moves since it is not being attacked by any of the pieces at the beginning.
 
@@ -40,8 +39,8 @@ Given that you can only move the white pieces, return _the **minimum** number of
 
 ![case2](case2.png)
 
-> Input: `a = 5, b = 3, c = 3, d = 4, e = 5, f = 2`
-> Output: `1`
+> Input: `a = 5, b = 3, c = 3, d = 4, e = 5, f = 2`\
+> Output: `1`\
 > Explanation: We can capture the black queen in a single move by doing one of the following:
 >
 > - Move the white rook to `(5, 2)`.
@@ -59,7 +58,7 @@ class Solution:
     def minMovesToCaptureTheQueen(self, a: int, b: int, c: int, d: int, e: int, f: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -71,4 +70,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

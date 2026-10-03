@@ -1,12 +1,10 @@
 ---
 title: 300. Longest Increasing Subsequence
-notebook: coding
 tags:
 - medium
 - hard
-date: 2024-11-17 09:19:04
-updated: 2024-11-17 21:37:09
-katex: true
+date: "2024-11-17T09:19:04+08:00"
+lastmod: "2024-11-17T21:37:09+08:00"
 ---
 ## Problem
 
@@ -18,18 +16,18 @@ Given an integer array `nums`, return _the length of the longest **strictly incr
 
 **Example 1:**
 
-> Input: `nums = [10,9,2,5,3,7,101,18]`
-> Output: `4`
+> Input: `nums = [10,9,2,5,3,7,101,18]`\
+> Output: `4`\
 > Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
 
 **Example 2:**
 
-> Input: `nums = [0,1,0,3,2,3]`
+> Input: `nums = [0,1,0,3,2,3]`\
 > Output: `4`
 
 **Example 3:**
 
-> Input: `nums = [7,7,7,7,7,7,7]`
+> Input: `nums = [7,7,7,7,7,7,7]`\
 > Output: `1`
 
 **Constraints:**
@@ -41,7 +39,7 @@ Given an integer array `nums`, return _the length of the longest **strictly incr
 
 ## Test Cases
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -96,7 +94,7 @@ class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster - O(n log n)
 
@@ -262,9 +260,7 @@ $$
 
 连线的时候，任何一个数都只能跟它右边一列中，不高于它所在行，且高于它下边数字所在行的数字相连。
 
-::: invert-when-dark
-{% diagramsnet lic-algo.drawio %}
-:::
+{{< diagramsnet src="lic-algo.drawio" >}}
 
 从图中可以看出，数组 `[6, 3, 5, 10, 11, 2, 9, 14, 13, 7, 4, 8, 12]` 的 LIS 长度是 5，如 `3 - 5 - 10 - 11 - 14`、`3 - 5 - 10 - 11 - 13` 或 `3 - 5 - 7 - 8 - 12`（不止这些）。
 
@@ -272,8 +268,8 @@ $$
 
 总的时间复杂度是 `O(n log L)`（`L` 是 LIS 长度）最坏情况下是 `O(n log n)`。空间复杂度 `O(L)`，最坏情况 `O(n)`。
 
-{% snippet solution_nlogn.py %}
+{{< snippet src="solution_nlogn.py" >}}
 
 其中 `buffer` 的长度始终不会超出当前处理完的原数组长度，于是可以直接利用原数组的空间，额外的空间复杂度 `O(1)`。
 
-{% snippet solution_nlogn_1.py %}
+{{< snippet src="solution_nlogn_1.py" >}}

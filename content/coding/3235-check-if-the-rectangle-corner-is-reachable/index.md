@@ -1,11 +1,10 @@
 ---
 title: 3235. Check if the Rectangle Corner Is Reachable
-notebook: coding
 tags:
 - hard
 - difficult
-date: 2024-11-09 20:20:29
-updated: 2024-11-09 20:20:29
+date: "2024-11-09T20:20:29+08:00"
+lastmod: "2024-11-09T20:20:29+08:00"
 ---
 
 ## Problem
@@ -20,34 +19,45 @@ Return `true` if such a path exists, and `false` otherwise.
 
 **Example 1:**
 
-> Input: `xCorner = 3, yCorner = 4, circles = [[2,1,1]]`
-> Output: true
+> Input: `xCorner = 3, yCorner = 4, circles = [[2,1,1]]`\
+> Output: true\
 > Explanation:
-> ![case1](case1.png){.invert-when-dark}
+>
+> ![case1](case1.png)
+> {.invert-when-dark}
+>
 > The curve shows a possible path between `(0, 0)` and `(3, 4)`.
 
 **Example 2:**
 
-> Input: `xCorner = 3, yCorner = 3, circles = [[1,1,2]]`
-> Output: false
+> Input: `xCorner = 3, yCorner = 3, circles = [[1,1,2]]`\
+> Output: false\
 > Explanation:
-> ![case2](case2.png){.invert-when-dark}
+>
+> ![case2](case2.png)
+> {.invert-when-dark}
+>
 > No path exists from `(0, 0)` to `(3, 3)`.
 
 **Example 3:**
 
-> Input: `xCorner = 3, yCorner = 3, circles = [[2,1,1],[1,2,1]]`
-> Output: false
+> Input: `xCorner = 3, yCorner = 3, circles = [[2,1,1],[1,2,1]]`\
+> Output: false\
 > Explanation:
-> ![case3](case3.png){.invert-when-dark}
+>
+> ![case3](case3.png)
+> {.invert-when-dark}
+>
 > No path exists from `(0, 0)` to `(3, 3)`.
 
 **Example 4:**
 
-> Input: `xCorner = 4, yCorner = 4, circles = [[5,5,1]]`
-> Output: true
+> Input: `xCorner = 4, yCorner = 4, circles = [[5,5,1]]`\
+> Output: true\
 > Explanation:
-> ![case4](case4.png){.invert-when-dark}
+>
+> ![case4](case4.png)
+> {.invert-when-dark}
 
 **Constraints:**
 
@@ -63,7 +73,7 @@ class Solution:
     def canReachCorner(self, xCorner: int, yCorner: int, circles: List[List[int]]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -126,8 +136,8 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 Test cases for solution inner methods:
 
-{% snippet solution_inner_test.py %}
+{{< snippet src="solution_inner_test.py" >}}
