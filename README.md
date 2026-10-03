@@ -1,33 +1,36 @@
 # GoCalf
 
-## Hugo migration pilot (local branch)
+## Hugo migration (local branch; P4-C review)
 
-This branch currently publishes **16 pilot articles**, not the whole historical site.
-Remaining original material stays under `source/`, outside Hugo content. Use Hugo
-**0.166.0 extended** directly; the legacy Makefile/package scripts below still run Hexo.
-Do not install/prepare packages for this Hugo preview.
+This branch now contains **414 live articles**: 16 accepted B pilots and 398 C
+conversions. The retired Stellar wrapper and 75 editor/data/template/style files
+remain preserved under `source/`, outside Hugo publication. Coding `_utils` retains
+its import geometry but is explicitly excluded from output.
+
+Use Hugo **0.166.0 extended** directly. Do not install/prepare packages for this
+preview; the legacy Makefile/package scripts below still run Hexo.
 
 ```sh
-# Run from gocalf.com-hugo; choose another port if already occupied.
+# Choose a free port; stop your preview with Ctrl-C.
 hugo server --bind 127.0.0.1 --port 14740 --disableFastRender
 
-# Strict static build into a fresh isolated destination:
+# Fresh static validation; do not interfere with an existing preview lock.
 run=$(mktemp -d "$PWD/var/hugo-build-XXXXXX")
-hugo --destination "$run/public" --cacheDir "$run/cache" --panicOnWarning
+hugo --destination "$run/public" --cacheDir "$run/cache" --noBuildLock --panicOnWarning
 ```
 
-Stop your preview with Ctrl-C. The pinned HTTPS Sidera submodule is already initialized.
-Never target the preserved sibling `gocalf.com-public-hexo` as a build destination.
-New/migrated Markdown uses **YAML `---` front matter**; normal headings need no manual
-ID attributes. Hugo's default heading IDs are accepted; use explicit IDs only for a
-specific reviewed compatibility need. Keep authored dates; conversion is not publishing.
+Never target the preserved sibling `gocalf.com-public-hexo` as output. All migrated
+Markdown uses **YAML `---` front matter** and preserved authored instants. Ordinary
+headings use native Hugo IDs; explicit IDs require a specific reviewed need. Coding
+example fields use explicit backslash hard breaks, not global hard-wrapping. Image
+attributes follow native standalone/quoted-block placement.
 
-The pilot's Mermaid multiline-label issue is fixed in pinned Sidera **c45210b**:
-original diagram sources render as XML-safe SVG text without a library/sandbox change.
-Strict native and bounded interactive checks cover all 16 articles and the used cube/
-diagram/search/source-copy features; user P4-B review is still required, not full-site
-or production parity acceptance. Giscus is explicitly off; edit links/Jinrishici remain
-deferred. No deployment/site push. See the coordination P4-B report for evidence/limits.
+The existing Sidera pin **1e5c26d** is unchanged by C. Fresh strict normal/all-states
+builds, native metadata/source/resource checks, retained B regression and bounded
+expanded browser checks pass. See coordination `P4-C.md` and `p4-c/` for batch history,
+complete source accounting and limits. **C awaits user review**, not production
+certification. Comments remain off; Jinrishici/edit links remain deferred. No site
+push/deploy, anonymous candidate reproduction or P4-D/E execution is implied.
 
 ## Historical Hexo workflow (not Hugo)
 
