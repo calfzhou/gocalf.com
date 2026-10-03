@@ -1,10 +1,9 @@
 ---
 title: 2595. Number of Even and Odd Bits
-notebook: coding
 tags:
 - easy
-date: 2025-02-20 09:43:50
-updated: 2025-02-20 09:43:50
+date: "2025-02-20T09:43:50+08:00"
+lastmod: "2025-02-20T09:43:50+08:00"
 ---
 ## Problem
 
@@ -22,16 +21,16 @@ Return the array `[even, odd]`.
 
 **Example 1:**
 
-> Input: `n = 50`
-> Output: `[1,2]`
+> Input: `n = 50`\
+> Output: `[1,2]`\
 > Explanation:
 > The binary representation of 50 is `110010`.
 > It contains 1 on indices 1, 4, and 5.
 
 **Example 2:**
 
-> Input: `n = 2`
-> Output: `[0,1]`
+> Input: `n = 2`\
+> Output: `[0,1]`\
 > Explanation:
 > The binary representation of 2 is `10`.
 > It contains 1 only on index 1.
@@ -47,7 +46,7 @@ class Solution:
     def evenOddBit(self, n: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -55,4 +54,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

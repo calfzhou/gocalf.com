@@ -1,10 +1,9 @@
 ---
 title: 2657. Find the Prefix Common Array of Two Arrays
-notebook: coding
 tags:
 - medium
-date: 2025-01-14 09:39:56
-updated: 2025-01-14 09:39:56
+date: "2025-01-14T09:39:56+08:00"
+lastmod: "2025-01-14T09:39:56+08:00"
 ---
 ## Problem
 
@@ -20,8 +19,8 @@ A sequence of `n` integers is called a **permutation** if it contains all integ
 
 **Example 1:**
 
-> Input: `A = [1,3,2,4], B = [3,1,2,4]`
-> Output: `[0,2,3,4]`
+> Input: `A = [1,3,2,4], B = [3,1,2,4]`\
+> Output: `[0,2,3,4]`\
 > Explanation: At `i = 0`: no number is common, so `C[0] = 0`.
 > At `i = 1`: 1 and 3 are common in A and B, so `C[1] = 2`.
 > At `i = 2`: 1, 2, and 3 are common in A and B, so `C[2] = 3`.
@@ -29,8 +28,8 @@ A sequence of `n` integers is called a **permutation** if it contains all integ
 
 **Example 2:**
 
-> Input: `A = [2,3,1], B = [3,1,2]`
-> Output: `[0,1,3]`
+> Input: `A = [2,3,1], B = [3,1,2]`\
+> Output: `[0,1,3]`\
 > Explanation: At `i = 0`: no number is common, so `C[0] = 0`.
 > At `i = 1`: only 3 is common in A and B, so `C[1] = 1`.
 > At `i = 2`: 1, 2, and 3 are common in A and B, so `C[2] = 3`.
@@ -48,7 +47,7 @@ class Solution:
     def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -60,4 +59,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

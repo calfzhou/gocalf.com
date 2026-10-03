@@ -1,10 +1,9 @@
 ---
 title: 2661. First Completely Painted Row or Column
-notebook: coding
 tags:
 - medium
-date: 2025-01-20 21:18:42
-updated: 2025-01-20 21:18:42
+date: "2025-01-20T21:18:42+08:00"
+lastmod: "2025-01-20T21:18:42+08:00"
 ---
 ## Problem
 
@@ -18,18 +17,20 @@ Return _the smallest index_ `i` _at which either a row or a column will be compl
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `arr = [1,3,4,2], mat = [[1,4],[2,3]]`
-> Output: `2`
+> Input: `arr = [1,3,4,2], mat = [[1,4],[2,3]]`\
+> Output: `2`\
 > Explanation: The moves are shown in order, and both the first row and second column of the matrix become fully painted at arr`[2]`.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `arr = [2,8,7,4,1,3,5,6,9], mat = [[3,2,5],[1,4,6],[8,7,9]]`
-> Output: `3`
+> Input: `arr = [2,8,7,4,1,3,5,6,9], mat = [[3,2,5],[1,4,6],[8,7,9]]`\
+> Output: `3`\
 > Explanation: The second column becomes fully painted at `arr[3]`.
 
 **Constraints:**
@@ -50,7 +51,7 @@ class Solution:
     def firstCompleteIndex(self, arr: List[int], mat: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -62,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

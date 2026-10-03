@@ -1,10 +1,9 @@
 ---
 title: 2593. Find Score of an Array After Marking All Elements
-notebook: coding
 tags:
 - medium
-date: 2024-12-13 10:03:54
-updated: 2024-12-13 10:03:54
+date: "2024-12-13T10:03:54+08:00"
+lastmod: "2024-12-13T10:03:54+08:00"
 ---
 ## Problem
 
@@ -23,25 +22,25 @@ Return _the score you get after applying the above algorithm_.
 
 **Example 1:**
 
-> Input: `nums = [2,1,3,4,5,2]`
-> Output: `7`
+> Input: `nums = [2,1,3,4,5,2]`\
+> Output: `7`\
 > Explanation: We mark the elements as follows:
 >
-> - 1 is the smallest unmarked element, so we mark it and its two adjacent elements: `[`{% u 2 %}`,`{% u 1 %}`,`{% u 3 %}`,4,5,2]`.
-> - 2 is the smallest unmarked element, so we mark it and its left adjacent element: `[`{% u 2 %}`,`{% u 1 %}`,`{% u 3 %}`,4,`{% u 5 %}`,`{% u 2 %}`]`.
-> - 4 is the only remaining unmarked element, so we mark it: `[`{% u 2 %}`,`{% u 1 %}`,`{% u 3 %}`,`{% u 4 %}`,`{% u 5 %}`,`{% u 2 %}`]`.
+> - 1 is the smallest unmarked element, so we mark it and its two adjacent elements: `[`{{< u text="2" >}}`,`{{< u text="1" >}}`,`{{< u text="3" >}}`,4,5,2]`.
+> - 2 is the smallest unmarked element, so we mark it and its left adjacent element: `[`{{< u text="2" >}}`,`{{< u text="1" >}}`,`{{< u text="3" >}}`,4,`{{< u text="5" >}}`,`{{< u text="2" >}}`]`.
+> - 4 is the only remaining unmarked element, so we mark it: `[`{{< u text="2" >}}`,`{{< u text="1" >}}`,`{{< u text="3" >}}`,`{{< u text="4" >}}`,`{{< u text="5" >}}`,`{{< u text="2" >}}`]`.
 >
 > Our score is `1 + 2 + 4 = 7`.
 
 **Example 2:**
 
-> Input: `nums = [2,3,5,1,3,2]`
-> Output: `5`
+> Input: `nums = [2,3,5,1,3,2]`\
+> Output: `5`\
 > Explanation: We mark the elements as follows:
 >
-> - 1 is the smallest unmarked element, so we mark it and its two adjacent elements: `[2,3,`{% u 5 %}`,`{% u 1 %}`,`{% u 3 %}`,2]`.
-> - 2 is the smallest unmarked element, since there are two of them, we choose the left-most one, so we mark the one at index 0 and its right adjacent element: `[`{% u 2 %}`,`{% u 3 %}`,`{% u 5 %}`,`{% u 1 %}`,`{% u 3 %}`,2]`.
-> - 2 is the only remaining unmarked element, so we mark it: `[`{% u 2 %}`,`{% u 3 %}`,`{% u 5 %}`,`{% u 1 %}`,`{% u 3 %}`,`{% u 2 %}`]`.
+> - 1 is the smallest unmarked element, so we mark it and its two adjacent elements: `[2,3,`{{< u text="5" >}}`,`{{< u text="1" >}}`,`{{< u text="3" >}}`,2]`.
+> - 2 is the smallest unmarked element, since there are two of them, we choose the left-most one, so we mark the one at index 0 and its right adjacent element: `[`{{< u text="2" >}}`,`{{< u text="3" >}}`,`{{< u text="5" >}}`,`{{< u text="1" >}}`,`{{< u text="3" >}}`,2]`.
+> - 2 is the only remaining unmarked element, so we mark it: `[`{{< u text="2" >}}`,`{{< u text="3" >}}`,`{{< u text="5" >}}`,`{{< u text="1" >}}`,`{{< u text="3" >}}`,`{{< u text="2" >}}`]`.
 >
 > Our score is `1 + 2 + 2 = 5`.
 
@@ -57,7 +56,7 @@ class Solution:
     def findScore(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -67,4 +66,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

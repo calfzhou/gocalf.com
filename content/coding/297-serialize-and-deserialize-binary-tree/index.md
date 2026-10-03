@@ -1,10 +1,9 @@
 ---
 title: 297. Serialize and Deserialize Binary Tree
-notebook: coding
 tags:
 - hard
-date: 2024-11-16 22:09:26
-updated: 2024-11-16 22:09:26
+date: "2024-11-16T22:09:26+08:00"
+lastmod: "2024-11-16T22:09:26+08:00"
 ---
 ## Problem
 
@@ -18,14 +17,15 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `root = [1,2,3,null,null,4,5]`
+> Input: `root = [1,2,3,null,null,4,5]`\
 > Output: `[1,2,3,null,null,4,5]`
 
 **Example 2:**
 
-> Input: `root = []`
+> Input: `root = []`\
 > Output: `[]`
 
 **Constraints:**
@@ -67,7 +67,7 @@ class Codec:
 # ans = deser.deserialize(ser.serialize(root))
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -85,7 +85,7 @@ LeetCode 用的是层序，并把空的子节点用 `null` 记录占位。层序
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 可以看到序列化和反序列化的操作逻辑是完全一致的，唯一的区别就是前者在遍历过程中把节点的值读出来，后者把获取到的值和父子关系写到节点上。
 

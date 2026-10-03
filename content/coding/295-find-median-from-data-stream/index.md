@@ -1,10 +1,9 @@
 ---
 title: 295. Find Median from Data Stream
-notebook: coding
 tags:
 - hard
-date: 2024-11-16 18:40:50
-updated: 2024-11-16 18:40:50
+date: "2024-11-16T18:40:50+08:00"
+lastmod: "2024-11-16T18:40:50+08:00"
 ---
 ## Problem
 
@@ -23,10 +22,10 @@ Implement the MedianFinder class:
 
 **Example 1:**
 
-> Input
-> `["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"]`
-> `[[], [1], [2], [], [3], []]`
-> Output
+> Input\
+> `["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"]`\
+> `[[], [1], [2], [], [3], []]`\
+> Output\
 > `[null, null, null, 1.5, null, 2.0]`
 >
 > Explanation
@@ -72,7 +71,7 @@ class MedianFinder:
 # param_2 = obj.findMedian()
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -90,7 +89,7 @@ class MedianFinder:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Follow up 1
 
@@ -100,7 +99,7 @@ class MedianFinder:
 
 `addNum` 和 `findMedian` 的时间和空间复杂度都是 `O(1)`。
 
-{% snippet solution_follow1.py %}
+{{< snippet src="solution_follow1.py" >}}
 
 ## Follow up 2
 

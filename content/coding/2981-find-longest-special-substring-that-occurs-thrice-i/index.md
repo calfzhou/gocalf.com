@@ -1,11 +1,9 @@
 ---
 title: 2981. Find Longest Special Substring That Occurs Thrice I
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-12-10 16:36:27
-updated: 2024-12-10 16:47:34
+date: "2024-12-10T16:36:27+08:00"
+lastmod: "2024-12-10T16:47:34+08:00"
 ---
 ## Problem
 
@@ -21,22 +19,22 @@ A **substring** is a contiguous **non-empty** sequence of characters within a st
 
 **Example 1:**
 
-> Input: `s = "aaaa"`
-> Output: `2`
-> Explanation: The longest special substring which occurs thrice is "aa": substrings "{% u aa %}aa", "a{% u aa %}a", and "aa{% u aa %}".
+> Input: `s = "aaaa"`\
+> Output: `2`\
+> Explanation: The longest special substring which occurs thrice is "aa": substrings "{{< u text="aa" >}}aa", "a{{< u text="aa" >}}a", and "aa{{< u text="aa" >}}".
 > It can be shown that the maximum length achievable is 2.
 
 **Example 2:**
 
-> Input: `s = "abcdef"`
-> Output: `-1`
+> Input: `s = "abcdef"`\
+> Output: `-1`\
 > Explanation: There exists no special substring which occurs at least thrice. Hence return -1.
 
 **Example 3:**
 
-> Input: `s = "abcaba"`
-> Output: `1`
-> Explanation: The longest special substring which occurs thrice is "a": substrings "{% u a %}bcaba", "abc{% u a %}ba", and "abcab{% u a %}".
+> Input: `s = "abcaba"`\
+> Output: `1`\
+> Explanation: The longest special substring which occurs thrice is "a": substrings "{{< u text="a" >}}bcaba", "abc{{< u text="a" >}}ba", and "abcab{{< u text="a" >}}".
 > It can be shown that the maximum length achievable is 1.
 
 **Constraints:**
@@ -51,7 +49,7 @@ class Solution:
     def maximumLength(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -79,4 +77,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,11 +1,9 @@
 ---
 title: 2944. Minimum Number of Coins for Fruits
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-02-19 17:58:13
-updated: 2025-02-19 17:58:13
+date: "2025-02-19T17:58:13+08:00"
+lastmod: "2025-02-19T17:58:13+08:00"
 ---
 ## Problem
 
@@ -23,8 +21,8 @@ Return the **minimum** number of coins needed to acquire all the fruits.
 
 **Example 1:**
 
-> Input: `prices = [3,1,2]`
-> Output: `4`
+> Input: `prices = [3,1,2]`\
+> Output: `4`\
 > Explanation:
 >
 > - Purchase the 1ˢᵗ fruit with `prices[0] = 3` coins, you are allowed to take the 2ⁿᵈ fruit for free.
@@ -35,8 +33,8 @@ Return the **minimum** number of coins needed to acquire all the fruits.
 
 **Example 2:**
 
-> Input: `prices = [1,10,1,1]`
-> Output: `2`
+> Input: `prices = [1,10,1,1]`\
+> Output: `2`\
 > Explanation:
 >
 > - Purchase the 1ˢᵗ fruit with `prices[0] = 1` coin, you are allowed to take the 2ⁿᵈ fruit for free.
@@ -46,8 +44,8 @@ Return the **minimum** number of coins needed to acquire all the fruits.
 
 **Example 3:**
 
-> Input: `prices = [26,18,6,12,49,7,45,45]`
-> Output: `39`
+> Input: `prices = [26,18,6,12,49,7,45,45]`\
+> Output: `39`\
 > Explanation:
 >
 > - Purchase the 1ˢᵗ fruit with `prices[0] = 26` coin, you are allowed to take the 2ⁿᵈ fruit for free.
@@ -73,7 +71,7 @@ class Solution:
     def minimumCoins(self, prices: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -102,7 +100,7 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster
 
@@ -127,4 +125,4 @@ $$
 
 时间复杂度 `O(n)`，空间复杂度 `O(n)`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

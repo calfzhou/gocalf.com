@@ -1,10 +1,9 @@
 ---
 title: 2948. Make Lexicographically Smallest Array by Swapping Elements
-notebook: coding
 tags:
 - medium
-date: 2025-01-26 00:08:10
-updated: 2025-01-26 00:08:10
+date: "2025-01-26T00:08:10+08:00"
+lastmod: "2025-01-26T00:08:10+08:00"
 ---
 ## Problem
 
@@ -20,8 +19,8 @@ An array `a` is lexicographically smaller than an array `b` if in the first posi
 
 **Example 1:**
 
-> Input: `nums = [1,5,3,9,8], limit = 2`
-> Output: `[1,3,5,8,9]`
+> Input: `nums = [1,5,3,9,8], limit = 2`\
+> Output: `[1,3,5,8,9]`\
 > Explanation: Apply the operation 2 times:
 >
 > - Swap `nums[1]` with `nums[2]`. The array becomes `[1,3,5,9,8]`
@@ -32,8 +31,8 @@ An array `a` is lexicographically smaller than an array `b` if in the first posi
 
 **Example 2:**
 
-> Input: `nums = [1,7,6,18,2,1], limit = 3`
-> Output: `[1,6,7,18,1,2]`
+> Input: `nums = [1,7,6,18,2,1], limit = 3`\
+> Output: `[1,6,7,18,1,2]`\
 > Explanation: Apply the operation 3 times:
 >
 > - Swap `nums[1]` with `nums[2]`. The array becomes `[1,6,7,18,2,1]`
@@ -44,8 +43,8 @@ An array `a` is lexicographically smaller than an array `b` if in the first posi
 
 **Example 3:**
 
-> Input: `nums = [1,7,28,19,10], limit = 3`
-> Output: `[1,7,28,19,10]`
+> Input: `nums = [1,7,28,19,10], limit = 3`\
+> Output: `[1,7,28,19,10]`\
 > Explanation: `[1,7,28,19,10]` is the lexicographically smallest array we can obtain because we cannot apply the operation on any two indices.
 
 **Constraints:**
@@ -61,7 +60,7 @@ class Solution:
     def lexicographicallySmallestArray(self, nums: List[int], limit: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -79,4 +78,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

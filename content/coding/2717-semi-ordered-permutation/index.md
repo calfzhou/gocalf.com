@@ -1,10 +1,9 @@
 ---
 title: 2717. Semi-Ordered Permutation
-notebook: coding
 tags:
 - easy
-date: 2024-12-11 10:19:52
-updated: 2024-12-11 10:19:52
+date: "2024-12-11T10:19:52+08:00"
+lastmod: "2024-12-11T10:19:52+08:00"
 ---
 ## Problem
 
@@ -22,8 +21,8 @@ A **permutation** is a sequence of integers from `1` to `n` of length `n` contai
 
 **Example 1:**
 
-> Input: `nums = [2,1,4,3]`
-> Output: `2`
+> Input: `nums = [2,1,4,3]`\
+> Output: `2`\
 > Explanation: We can make the permutation semi-ordered using these sequence of operations:
 > 1 - swap `i = 0` and `j = 1`. The permutation becomes `[1,2,4,3]`.
 > 2 - swap `i = 2` and `j = 3`. The permutation becomes `[1,2,3,4]`.
@@ -31,8 +30,8 @@ A **permutation** is a sequence of integers from `1` to `n` of length `n` contai
 
 **Example 2:**
 
-> Input: `nums = [2,4,1,3]`
-> Output: `3`
+> Input: `nums = [2,4,1,3]`\
+> Output: `3`\
 > Explanation: We can make the permutation semi-ordered using these sequence of operations:
 > 1 - swap `i = 1` and `j = 2`. The permutation becomes `[2,1,4,3]`.
 > 2 - swap `i = 0` and `j = 1`. The permutation becomes `[1,2,4,3]`.
@@ -41,8 +40,8 @@ A **permutation** is a sequence of integers from `1` to `n` of length `n` contai
 
 **Example 3:**
 
-> Input: `nums = [1,3,4,2,5]`
-> Output: `0`
+> Input: `nums = [1,3,4,2,5]`\
+> Output: `0`\
 > Explanation: The permutation is already a semi-ordered permutation.
 
 **Constraints:**
@@ -58,7 +57,7 @@ class Solution:
     def semiOrderedPermutation(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -70,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 2658. Maximum Number of Fish in a Grid
-notebook: coding
 tags:
 - medium
-date: 2025-01-28 21:36:30
-updated: 2025-01-28 21:36:30
+date: "2025-01-28T21:36:30+08:00"
+lastmod: "2025-01-28T21:36:30+08:00"
 ---
 ## Problem
 
@@ -26,18 +25,20 @@ An **adjacent** cell of the cell `(r, c)`, is one of the cells `(r, c + 1)`, `(r
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `grid = [[0,2,1,0],[4,0,0,3],[1,0,0,4],[0,3,2,0]]`
-> Output: `7`
+> Input: `grid = [[0,2,1,0],[4,0,0,3],[1,0,0,4],[0,3,2,0]]`\
+> Output: `7`\
 > Explanation: The fisher can start at cell `(1,3)` and collect 3 fish, then move to cell `(2,3)` and collect 4 fish.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `grid = [[1,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,1]]`
-> Output: `1`
+> Input: `grid = [[1,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,1]]`\
+> Output: `1`\
 > Explanation: The fisher can start at cells `(0,0)` or `(3,3)` and collect a single fish.
 
 **Constraints:**
@@ -54,7 +55,7 @@ class Solution:
     def findMaxFish(self, grid: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -66,4 +67,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

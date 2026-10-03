@@ -1,10 +1,9 @@
 ---
 title: 76. Minimum Window Substring
-notebook: coding
 tags:
 - hard
-date: 2024-11-21 16:39:53
-updated: 2024-11-21 16:39:53
+date: "2024-11-21T16:39:53+08:00"
+lastmod: "2024-11-21T16:39:53+08:00"
 ---
 ## Problem
 
@@ -18,20 +17,20 @@ The testcases will be generated such that the answer is **unique**.
 
 **Example 1:**
 
-> Input: `s = "ADOBECODEBANC", t = "ABC"`
-> Output: `"BANC"`
+> Input: `s = "ADOBECODEBANC", t = "ABC"`\
+> Output: `"BANC"`\
 > Explanation: The minimum window substring `"BANC"` includes 'A', 'B', and 'C' from string t.
 
 **Example 2:**
 
-> Input: `s = "a", t = "a"`
-> Output: `"a"`
+> Input: `s = "a", t = "a"`\
+> Output: `"a"`\
 > Explanation: The entire string s is the minimum window.
 
 **Example 3:**
 
-> Input: `s = "a", t = "aa"`
-> Output: `""`
+> Input: `s = "a", t = "aa"`\
+> Output: `""`\
 > Explanation: Both 'a's from t must be included in the window.
 > Since the largest window of s only has one 'a', return empty string.
 
@@ -49,7 +48,7 @@ class Solution:
     def minWindow(self, s: str, t: str) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -71,8 +70,8 @@ class Solution:
 
 > 👇 单一循环体
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 > 👇 循环套循环
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

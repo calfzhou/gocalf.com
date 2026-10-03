@@ -1,10 +1,9 @@
 ---
 title: 2762. Continuous Subarrays
-notebook: coding
 tags:
 - medium
-date: 2024-12-14 12:12:44
-updated: 2024-12-14 12:12:44
+date: "2024-12-14T12:12:44+08:00"
+lastmod: "2024-12-14T12:12:44+08:00"
 ---
 ## Problem
 
@@ -20,8 +19,8 @@ A subarray is a contiguous **non-empty** sequence of elements within an array.
 
 **Example 1:**
 
-> Input: `nums = [5,4,2,4]`
-> Output: `8`
+> Input: `nums = [5,4,2,4]`\
+> Output: `8`\
 > Explanation:
 > Continuous subarray of size 1: `[5], [4], [2], [4]`.
 > Continuous subarray of size 2: `[5,4], [4,2], [2,4]`.
@@ -32,8 +31,8 @@ A subarray is a contiguous **non-empty** sequence of elements within an array.
 
 **Example 2:**
 
-> Input: `nums = [1,2,3]`
-> Output: `6`
+> Input: `nums = [1,2,3]`\
+> Output: `6`\
 > Explanation:
 > Continuous subarray of size 1: `[1], [2], [3]`.
 > Continuous subarray of size 2: `[1,2], [2,3]`.
@@ -52,7 +51,7 @@ class Solution:
     def continuousSubarrays(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

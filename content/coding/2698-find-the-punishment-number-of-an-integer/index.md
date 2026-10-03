@@ -1,10 +1,9 @@
 ---
 title: 2698. Find the Punishment Number of an Integer
-notebook: coding
 tags:
 - medium
-date: 2025-02-15 16:18:38
-updated: 2025-02-15 16:18:38
+date: "2025-02-15T16:18:38+08:00"
+lastmod: "2025-02-15T16:18:38+08:00"
 ---
 ## Problem
 
@@ -20,8 +19,8 @@ The **punishment number** of `n` is defined as the sum of the squares of all int
 
 **Example 1:**
 
-> Input: `n = 10`
-> Output: `182`
+> Input: `n = 10`\
+> Output: `182`\
 > Explanation: There are exactly 3 integers i in the range `[1, 10]` that satisfy the conditions in the statement:
 >
 > - 1 since `1 * 1 = 1`
@@ -32,8 +31,8 @@ The **punishment number** of `n` is defined as the sum of the squares of all int
 
 **Example 2:**
 
-> Input: `n = 37`
-> Output: `1478`
+> Input: `n = 37`\
+> Output: `1478`\
 > Explanation: There are exactly 4 integers i in the range `[1, 37]` that satisfy the conditions in the statement:
 >
 > - 1 since `1 * 1 = 1`.
@@ -54,7 +53,7 @@ class Solution:
     def punishmentNumber(self, n: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -72,4 +71,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

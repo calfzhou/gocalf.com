@@ -1,10 +1,9 @@
 ---
 title: 2558. Take Gifts From the Richest Pile
-notebook: coding
 tags:
 - easy
-date: 2024-12-12 11:26:06
-updated: 2024-12-12 11:26:06
+date: "2024-12-12T11:26:06+08:00"
+lastmod: "2024-12-12T11:26:06+08:00"
 ---
 ## Problem
 
@@ -20,8 +19,8 @@ Return _the number of gifts remaining after_ `k` _seconds._
 
 **Example 1:**
 
-> Input: `gifts = [25,64,9,4,100], k = 4`
-> Output: `29`
+> Input: `gifts = [25,64,9,4,100], k = 4`\
+> Output: `29`\
 > Explanation:
 > The gifts are taken in the following way:
 >
@@ -34,8 +33,8 @@ Return _the number of gifts remaining after_ `k` _seconds._
 
 **Example 2:**
 
-> Input: `gifts = [1,1,1,1], k = 4`
-> Output: `4`
+> Input: `gifts = [1,1,1,1], k = 4`\
+> Output: `4`\
 > Explanation:
 > In this case, regardless which pile you choose, you have to leave behind 1 gift in each pile.
 > That is, you can't take any pile with you.
@@ -54,7 +53,7 @@ class Solution:
     def pickGifts(self, gifts: List[int], k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -68,4 +67,4 @@ Python 内置的 [heapq](https://docs.python.org/3/library/heapq.html) 实现的
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

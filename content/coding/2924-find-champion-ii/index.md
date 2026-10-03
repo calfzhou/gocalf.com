@@ -1,10 +1,9 @@
 ---
 title: 2924. Find Champion II
-notebook: coding
 tags:
 - medium
-date: 2024-11-26 21:56:28
-updated: 2024-11-26 21:56:28
+date: "2024-11-26T21:56:28+08:00"
+lastmod: "2024-11-26T21:56:28+08:00"
 ---
 ## Problem
 
@@ -27,15 +26,17 @@ Return _the team that will be the **champion** of the tournament if there is a *
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `n = 3, edges = [[0,1],[1,2]]`
-> Output: `0`
+> Input: `n = 3, edges = [[0,1],[1,2]]`\
+> Output: `0`\
 > Explanation: Team 1 is weaker than team 0. Team 2 is weaker than team 1. So the champion is team 0.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
 Input: `n = 4, edges = [[0,2],[1,3],[1,2]]`
 Output: `-1`
@@ -59,7 +60,7 @@ class Solution:
     def findChampion(self, n: int, edges: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -71,4 +72,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

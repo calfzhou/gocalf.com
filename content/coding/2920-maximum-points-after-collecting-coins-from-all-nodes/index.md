@@ -1,11 +1,9 @@
 ---
 title: 2920. Maximum Points After Collecting Coins From All Nodes
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2025-01-23 19:57:14
-updated: 2025-01-23 19:57:14
+date: "2025-01-23T19:57:14+08:00"
+lastmod: "2025-01-23T19:57:14+08:00"
 ---
 ## Problem
 
@@ -24,10 +22,11 @@ Return _the **maximum points** you can get after collecting the coins from **all
 
 **Example 1:**
 
-![case1|40](case1.png "case1"){.invert-when-dark}
+![case1|40](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `edges = [[0,1],[1,2],[2,3]], coins = [10,10,3,3], k = 5`
-> Output: `11`
+> Input: `edges = [[0,1],[1,2],[2,3]], coins = [10,10,3,3], k = 5`\
+> Output: `11`\
 > Explanation:
 > Collect all the coins from node 0 using the first way. Total points `= 10 - 5 = 5`.
 > Collect all the coins from node 1 using the first way. Total points `= 5 + (10 - 5) = 10`.
@@ -37,10 +36,11 @@ Return _the **maximum points** you can get after collecting the coins from **all
 
 **Example 2:**
 
-![case2|120](case2.png "case2"){.invert-when-dark}
+![case2|120](case2.png "case2")
+{.invert-when-dark}
 
-> Input: `edges = [[0,1],[0,2]], coins = [8,4,4], k = 0`
-> Output: `16`
+> Input: `edges = [[0,1],[0,2]], coins = [8,4,4], k = 0`\
+> Output: `16`\
 > Explanation:
 > Coins will be collected from all the nodes using the first way. Therefore, total points `= (8 - 0) + (4 - 0) + (4 - 0) = 16`.
 
@@ -60,7 +60,7 @@ class Solution:
     def maximumPoints(self, edges: List[List[int]], coins: List[int], k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -85,4 +85,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

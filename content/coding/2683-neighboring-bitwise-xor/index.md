@@ -1,10 +1,9 @@
 ---
 title: 2683. Neighboring Bitwise XOR
-notebook: coding
 tags:
 - medium
-date: 2025-01-17 10:54:12
-updated: 2025-01-17 10:54:12
+date: "2025-01-17T10:54:12+08:00"
+lastmod: "2025-01-17T10:54:12+08:00"
 ---
 ## Problem
 
@@ -25,8 +24,8 @@ Return _**true** if such an array exists or **false** otherwise._
 
 **Example 1:**
 
-> Input: `derived = [1,1,0]`
-> Output: `true`
+> Input: `derived = [1,1,0]`\
+> Output: `true`\
 > Explanation: A valid original array that gives derived is `[0,1,0]`.
 > `derived[0] = original[0] ⊕ original[1] = 0 ⊕ 1 = 1`
 > `derived[1] = original[1] ⊕ original[2] = 1 ⊕ 0 = 1`
@@ -34,16 +33,16 @@ Return _**true** if such an array exists or **false** otherwise._
 
 **Example 2:**
 
-> Input: `derived = [1,1]`
-> Output: `true`
+> Input: `derived = [1,1]`\
+> Output: `true`\
 > Explanation: A valid original array that gives derived is `[0,1]`.
 > `derived[0] = original[0] ⊕ original[1] = 1`
 > `derived[1] = original[1] ⊕ original[0] = 1`
 
 **Example 3:**
 
-> Input: `derived = [1,0]`
-> Output: `false`
+> Input: `derived = [1,0]`\
+> Output: `false`\
 > Explanation: There is no valid original array that gives derived.
 
 **Constraints:**
@@ -59,7 +58,7 @@ class Solution:
     def doesValidArrayExist(self, derived: List[int]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -77,6 +76,6 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 3249. Count the Number of Good Nodes
-notebook: coding
 tags:
 - medium
-date: 2024-11-14 15:43:55
-updated: 2024-11-14 15:43:55
+date: "2024-11-14T15:43:55+08:00"
+lastmod: "2024-11-14T15:43:55+08:00"
 ---
 ## Problem
 
@@ -20,26 +19,35 @@ Return the number of **good** nodes in the given tree.
 
 **Example 1:**
 
-> Input: `edges = [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]]`
-> Output: `7`
+> Input: `edges = [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]]`\
+> Output: `7`\
 > Explanation:
-> ![case1](case1.png){.invert-when-dark}
+>
+> ![case1](case1.png)
+> {.invert-when-dark}
+>
 > All of the nodes of the given tree are good.
 
 **Example 2:**
 
-> Input: `edges = [[0,1],[1,2],[2,3],[3,4],[0,5],[1,6],[2,7],[3,8]]`
-> Output: `6`
+> Input: `edges = [[0,1],[1,2],[2,3],[3,4],[0,5],[1,6],[2,7],[3,8]]`\
+> Output: `6`\
 > Explanation:
-> ![case2](case2.png){.invert-when-dark}
+>
+> ![case2](case2.png)
+> {.invert-when-dark}
+>
 > There are 6 good nodes in the given tree. They are colored in the image above.
 
 **Example 3:**
 
-> Input: `edges = [[0,1],[1,2],[1,3],[1,4],[0,5],[5,6],[6,7],[7,8],[0,9],[9,10],[9,12],[10,11]]`
-> Output: `12`
+> Input: `edges = [[0,1],[1,2],[1,3],[1,4],[0,5],[5,6],[6,7],[7,8],[0,9],[9,10],[9,12],[10,11]]`\
+> Output: `12`\
 > Explanation:
-> ![case3](case3.png){.invert-when-dark}
+>
+> ![case3](case3.png)
+> {.invert-when-dark}
+>
 > All nodes except node 9 are good.
 
 **Constraints:**
@@ -57,7 +65,7 @@ class Solution:
     def countGoodNodes(self, edges: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -77,4 +85,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

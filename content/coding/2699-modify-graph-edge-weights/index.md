@@ -1,11 +1,10 @@
 ---
 title: 2699. Modify Graph Edge Weights
-notebook: coding
 tags:
 - hard
 - difficult
-date: 2024-12-11 23:28:33
-updated: 2024-12-11 23:28:33
+date: "2024-12-11T23:28:33+08:00"
+lastmod: "2024-12-11T23:28:33+08:00"
 ---
 ## Problem
 
@@ -23,26 +22,29 @@ Return _an array containing all edges (even unmodified ones) in any order if it 
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `n = 5, edges = [[4,1,-1],[2,0,-1],[0,3,-1],[4,3,-1]], source = 0, destination = 1, target = 5`
-> Output: `[[4,1,1],[2,0,1],[0,3,3],[4,3,1]]`
+> Input: `n = 5, edges = [[4,1,-1],[2,0,-1],[0,3,-1],[4,3,-1]], source = 0, destination = 1, target = 5`\
+> Output: `[[4,1,1],[2,0,1],[0,3,3],[4,3,1]]`\
 > Explanation: The graph above shows a possible modification to the edges, making the distance from `0` to `1` equal to 5.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `n = 3, edges = [[0,1,-1],[0,2,5]], source = 0, destination = 2, target = 6`
-> Output: `[]`
+> Input: `n = 3, edges = [[0,1,-1],[0,2,5]], source = 0, destination = 2, target = 6`\
+> Output: `[]`\
 > Explanation: The graph above contains the initial edges. It is not possible to make the distance from `0` to `2` equal to 6 by modifying the edge with weight -1. So, an empty array is returned.
 
 **Example 3:**
 
-![case3](case3.png){.invert-when-dark}
+![case3](case3.png)
+{.invert-when-dark}
 
-> Input: `n = 4, edges = [[1,0,4],[1,2,3],[2,3,5],[0,3,-1]], source = 0, destination = 2, target = 6`
-> Output: `[[1,0,4],[1,2,3],[2,3,5],[0,3,1]]`
+> Input: `n = 4, edges = [[1,0,4],[1,2,3],[2,3,5],[0,3,-1]], source = 0, destination = 2, target = 6`\
+> Output: `[[1,0,4],[1,2,3],[2,3,5],[0,3,1]]`\
 > Explanation: The graph above shows a modified graph having the shortest distance from `0` to `2` as 6.
 
 **Constraints:**
@@ -65,7 +67,7 @@ class Solution:
     def modifiedGraphEdges(self, n: int, edges: List[List[int]], source: int, destination: int, target: int) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -79,17 +81,13 @@ class Solution:
 
 如果 `dist < target` 就会麻烦一些。一个想法是令 `gap = target - dist`，在最短路径上任选一条 -1 边，将其权重改为 `1 + gap`（其他的都改为 1）。但这样改完之后，`source` 到 `destination` 的最短路径可能会变化，导致最短距离变得小于 `target`，比如下面这个情况（`source = 0, destination = 3, target = 10`）：
 
-::: invert-when-dark
-{% diagramsnet gap.drawio %}
-:::
+{{< diagramsnet src="gap.drawio" >}}
 
 把所有 -1 边的权重改成 1 之后，找到最短路径 `0 - 1 - 2 - 3`（蓝色），距离为 `dist = 3`。如果把 `target - dist = 7` 随机地加到了边 `(1, 2)` 上，就会导致最短路径变成 `0 - 1 - 3`（红色），距离为 6，小于 `target` 了。
 
 可以按最新的权重重新计算 `source` 到 `destination` 的最短距离，如果得到了比 `target` 小的最短距离，就再任选一条 -1 边，把新的到 gap 加上去。比如上图中，新的 `gap` 值为 4，任选一条红色路径上的 -1 边（如 `(0, 1)`），把 4 加上去，得到下图的结果：
 
-::: invert-when-dark
-{% diagramsnet gap2.drawio %}
-:::
+{{< diagramsnet src="gap2.drawio" >}}
 
 重复这一操作直到最短距离等于 `target`。
 
@@ -101,4 +99,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

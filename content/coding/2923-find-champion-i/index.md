@@ -1,10 +1,9 @@
 ---
 title: 2923. Find Champion I
-notebook: coding
 tags:
 - easy
-date: 2024-11-26 21:56:07
-updated: 2024-11-26 21:56:07
+date: "2024-11-26T21:56:07+08:00"
+lastmod: "2024-11-26T21:56:07+08:00"
 ---
 ## Problem
 
@@ -20,15 +19,15 @@ Return _the team that will be the champion of the tournament._
 
 **Example 1:**
 
-> Input: `grid = [[0,1],[0,0]]`
-> Output: `0`
+> Input: `grid = [[0,1],[0,0]]`\
+> Output: `0`\
 > Explanation: There are two teams in this tournament.
 > `grid[0][1] == 1` means that team 0 is stronger than team 1. So team 0 will be the champion.
 
 **Example 2:**
 
-> Input: `grid = [[0,0,1],[1,0,1],[0,0,0]]`
-> Output: `1`
+> Input: `grid = [[0,0,1],[1,0,1],[0,0,0]]`\
+> Output: `1`\
 > Explanation: There are three teams in this tournament.
 > `grid[1][0] == 1` means that team 1 is stronger than team 0.
 > `grid[1][2] == 1` means that team 1 is stronger than team 2.
@@ -51,7 +50,7 @@ class Solution:
     def findChampion(self, grid: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

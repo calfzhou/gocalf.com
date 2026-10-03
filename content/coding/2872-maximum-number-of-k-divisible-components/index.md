@@ -1,11 +1,9 @@
 ---
 title: 2872. Maximum Number of K-Divisible Components
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2024-12-21 15:12:19
-updated: 2024-12-21 15:12:19
+date: "2024-12-21T15:12:19+08:00"
+lastmod: "2024-12-21T15:12:19+08:00"
 ---
 ## Problem
 
@@ -21,10 +19,11 @@ Return _the **maximum number of components** in any valid split_.
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `n = 5, edges = [[0,2],[1,2],[1,3],[2,4]], values = [1,8,1,4,4], k = 6`
-> Output: `2`
+> Input: `n = 5, edges = [[0,2],[1,2],[1,3],[2,4]], values = [1,8,1,4,4], k = 6`\
+> Output: `2`\
 > Explanation: We remove the edge connecting node 1 with 2. The resulting split is valid because:
 >
 > - The value of the component containing nodes 1 and 3 is `values[1] + values[3] = 12`.
@@ -34,10 +33,11 @@ Return _the **maximum number of components** in any valid split_.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `n = 7, edges = [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]], values = [3,0,6,1,5,2,1], k = 3`
-> Output: `3`
+> Input: `n = 7, edges = [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]], values = [3,0,6,1,5,2,1], k = 3`\
+> Output: `3`\
 > Explanation: We remove the edge connecting node 0 with 2, and the edge connecting node 0 with 1. The resulting split is valid because:
 >
 > - The value of the component containing node 0 is `values[0] = 3`.
@@ -65,7 +65,7 @@ class Solution:
     def maxKDivisibleComponents(self, n: int, edges: List[List[int]], values: List[int], k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -83,4 +83,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

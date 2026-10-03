@@ -1,12 +1,10 @@
 ---
 title: 2809. Minimum Time to Make Array Sum At Most x
-notebook: coding
 tags:
 - hard
 - difficult
-katex: true
-date: 2024-12-14 16:33:42
-updated: 2024-12-14 16:33:42
+date: "2024-12-14T16:33:42+08:00"
+lastmod: "2024-12-14T16:33:42+08:00"
 ---
 ## Problem
 
@@ -22,8 +20,8 @@ Return _the **minimum** time in which you can make the sum of all elements of_ `
 
 **Example 1:**
 
-> Input: `nums1 = [1,2,3], nums2 = [1,2,3], x = 4`
-> Output: `3`
+> Input: `nums1 = [1,2,3], nums2 = [1,2,3], x = 4`\
+> Output: `3`\
 > Explanation:
 > For the 1st second, we apply the operation on `i = 0`. Therefore `nums1 = [0,2+2,3+3] = [0,4,6]`.
 > For the 2nd second, we apply the operation on `i = 1`. Therefore `nums1 = [0+1,0,6+3] = [1,0,9]`.
@@ -32,8 +30,8 @@ Return _the **minimum** time in which you can make the sum of all elements of_ `
 
 **Example 2:**
 
-> Input: `nums1 = [1,2,3], nums2 = [3,3,3], x = 4`
-> Output: `-1`
+> Input: `nums1 = [1,2,3], nums2 = [3,3,3], x = 4`\
+> Output: `-1`\
 > Explanation: It can be shown that the sum of `nums1` will always be greater than `x`, no matter which operations are performed.
 
 **Constraints:**
@@ -51,7 +49,7 @@ class Solution:
     def minimumTime(self, nums1: List[int], nums2: List[int], x: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -104,16 +102,12 @@ $$
 
 > 显然 t > i 的情况是不用考虑的，因为如果会对位置 i 操作，一定不能在大于 i 的时刻 t 进行操作。
 
-::: invert-when-dark
-{% diagramsnet ai_plus_t_bi.drawio %}
-:::
+{{< diagramsnet src="ai_plus_t_bi.drawio" >}}
 
 下表是按递推式算出来的所有 `f(t, i)`。其中红色的值取自 $a_i+t\times b_i+f(t-1,i-1)$（表示被选中），蓝色的值取自 $f(t,i-1)$（表示不选中）。
 
-::: invert-when-dark
-{% diagramsnet f_t_i.drawio %}
-:::
+{{< diagramsnet src="f_t_i.drawio" >}}
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

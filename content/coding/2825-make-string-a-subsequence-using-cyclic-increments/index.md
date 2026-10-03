@@ -1,10 +1,9 @@
 ---
 title: 2825. Make String a Subsequence Using Cyclic Increments
-notebook: coding
 tags:
 - medium
-date: 2024-12-04 10:12:57
-updated: 2024-12-04 10:12:57
+date: "2024-12-04T10:12:57+08:00"
+lastmod: "2024-12-04T10:12:57+08:00"
 ---
 ## Problem
 
@@ -20,16 +19,16 @@ Return `true` _if it is possible to make_ `str2` _a subsequence of_ `str1` _by p
 
 **Example 1:**
 
-> Input: str1 = "abc", str2 = "ad"
-> Output: true
+> Input: str1 = "abc", str2 = "ad"\
+> Output: true\
 > Explanation: Select index 2 in str1.
 > Increment str1[2] to become 'd'.
 > Hence, str1 becomes "abd" and str2 is now a subsequence. Therefore, true is returned.
 
 **Example 2:**
 
-> Input: str1 = "zc", str2 = "ad"
-> Output: true
+> Input: str1 = "zc", str2 = "ad"\
+> Output: true\
 > Explanation: Select indices 0 and 1 in str1.
 > Increment str1[0] to become 'a'.
 > Increment str1[1] to become 'd'.
@@ -37,8 +36,8 @@ Return `true` _if it is possible to make_ `str2` _a subsequence of_ `str1` _by p
 
 **Example 3:**
 
-> Input: str1 = "ab", str2 = "d"
-> Output: false
+> Input: str1 = "ab", str2 = "d"\
+> Output: false\
 > Explanation: In this example, it can be shown that it is impossible to make str2 a subsequence of str1 using the operation at most once.
 > Therefore, false is returned.
 
@@ -55,7 +54,7 @@ class Solution:
     def canMakeSubsequence(self, str1: str, str2: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -63,4 +62,4 @@ Python 里负数对正数取余数，结果也是正数，比如 `-25 % 26 = 1`�
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

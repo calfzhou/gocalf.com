@@ -1,11 +1,9 @@
 ---
 title: 292. Nim Game
-notebook: coding
 tags:
 - easy
-katex: true
-date: 2025-01-02 23:56:17
-updated: 2025-01-02 23:56:17
+date: "2025-01-02T23:56:17+08:00"
+lastmod: "2025-01-02T23:56:17+08:00"
 ---
 ## Problem
 
@@ -22,8 +20,8 @@ Given `n`, the number of stones in the heap, return `true` _if you can win the g
 
 **Example 1:**
 
-> Input: `n = 4`
-> Output: `false`
+> Input: `n = 4`\
+> Output: `false`\
 > Explanation: These are the possible outcomes:
 >
 > 1. You remove 1 stone. Your friend removes 3 stones, including the last stone. Your friend wins.
@@ -34,12 +32,12 @@ Given `n`, the number of stones in the heap, return `true` _if you can win the g
 
 **Example 2:**
 
-> Input: n = 1
+> Input: n = 1\
 > Output: true
 
 **Example 3:**
 
-> Input: n = 2
+> Input: n = 2\
 > Output: true
 
 **Constraints:**
@@ -53,7 +51,7 @@ class Solution:
     def canWinNim(self, n: int) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -76,4 +74,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,11 +1,9 @@
 ---
 title: 3258. Count Substrings That Satisfy K-Constraint I
-notebook: coding
 tags:
 - easy
-date: 2024-11-12 15:01:35
-updated: 2024-11-12 15:01:35
-katex: true
+date: "2024-11-12T15:01:35+08:00"
+lastmod: "2024-11-12T15:01:35+08:00"
 ---
 ## Problem
 
@@ -24,22 +22,22 @@ Return an integer denoting the number of substrings of `s` that satisfy the **k-
 
 **Example 1:**
 
-> Input: `s = "10101", k = 1`
-> Output: `12`
+> Input: `s = "10101", k = 1`\
+> Output: `12`\
 > Explanation:
 > Every substring of s except the substrings `"1010"`, `"10101"`, and `"0101"` satisfies the k-constraint.
 
 **Example 2:**
 
-> Input: `s = "1010101", k = 2`
-> Output: `25`
+> Input: `s = "1010101", k = 2`\
+> Output: `25`\
 > Explanation:
 > Every substring of `s` except the substrings with a length greater than 5 satisfies the k-constraint.
 
 **Example 3:**
 
-> Input: `s = "11111", k = 1`
-> Output: `15`
+> Input: `s = "11111", k = 1`\
+> Output: `15`\
 > Explanation:
 > All substrings of `s` satisfy the k-constraint.
 
@@ -56,7 +54,7 @@ class Solution:
     def countKConstraintSubstrings(self, s: str, k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,4 +76,4 @@ $\forall 1\le i\le n$，计算以 i 开头的符合 k-constraint 的子串个数
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
