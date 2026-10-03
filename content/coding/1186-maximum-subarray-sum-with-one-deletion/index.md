@@ -175,7 +175,6 @@ $$
   \end{cases} \\
   = & \max_{0\le i<n}\{ps(i)-\min\{low(i-1),low2(i)\}\}
 \end{array}
-
 $$
 
 {{< snippet src="solution3.py" >}}
