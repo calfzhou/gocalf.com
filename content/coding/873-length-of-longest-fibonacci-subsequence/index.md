@@ -1,11 +1,9 @@
 ---
 title: 873. Length of Longest Fibonacci Subsequence
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-02-27 15:55:25
-updated: 2025-02-27 15:55:25
+date: "2025-02-27T15:55:25+08:00"
+lastmod: "2025-02-27T15:55:25+08:00"
 ---
 ## Problem
 
@@ -22,14 +20,14 @@ A **subsequence** is derived from another sequence `arr` by deleting any number 
 
 **Example 1:**
 
-> Input: `arr = [1,2,3,4,5,6,7,8]`
-> Output: `5`
+> Input: `arr = [1,2,3,4,5,6,7,8]`\
+> Output: `5`\
 > Explanation: The longest subsequence that is fibonacci-like: `[1,2,3,5,8]`.
 
 **Example 2:**
 
-> Input: `arr = [1,3,7,11,12,14,18]`
-> Output: `3`
+> Input: `arr = [1,3,7,11,12,14,18]`\
+> Output: `3`\
 > Explanation: The longest subsequence that is fibonacci-like: `[1,11,12]`, `[3,11,14]` or `[7,11,18]`.
 
 **Constraints:**
@@ -44,7 +42,7 @@ class Solution:
     def lenLongestFibSubseq(self, arr: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -54,7 +52,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster
 
@@ -77,4 +75,4 @@ $$
 
 时间复杂度 `O(n²)`，空间复杂度 `O(n²)`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

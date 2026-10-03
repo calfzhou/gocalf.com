@@ -1,10 +1,9 @@
 ---
 title: 889. Construct Binary Tree from Preorder and Postorder Traversal
-notebook: coding
 tags:
 - medium
-date: 2025-02-23 20:48:27
-updated: 2025-02-23 20:48:27
+date: "2025-02-23T20:48:27+08:00"
+lastmod: "2025-02-23T20:48:27+08:00"
 ---
 ## Problem
 
@@ -16,14 +15,15 @@ If there exist multiple answers, you can **return any** of them.
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `preorder = [1,2,4,5,3,6,7], postorder = [4,5,2,6,7,3,1]`
+> Input: `preorder = [1,2,4,5,3,6,7], postorder = [4,5,2,6,7,3,1]`\
 > Output: `[1,2,3,4,5,6,7]`
 
 **Example 2:**
 
-> Input: `preorder = [1], postorder = [1]`
+> Input: `preorder = [1], postorder = [1]`\
 > Output: `[1]`
 
 **Constraints:**
@@ -49,7 +49,7 @@ class Solution:
     def constructFromPrePost(self, preorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -83,9 +83,7 @@ LRN: 7, 6, 1, 8, 2, 4, 5, 3
      ↑
 ```
 
-::: invert-when-dark
-{% diagramsnet demo1-01.drawio %}
-:::
+{{< diagramsnet src="demo1-01.drawio" >}}
 
 LRN 的下一个数字 6，跟栈顶一致，说明 6 没有其他子节点，直接出栈。再下一个数字 1 又跟新的栈顶一致，说明 1 也没有右子节点，出栈。再下一个数字 8 跟新的栈顶 4 不一致，说明 8 是 4 的右子树的最靠左的节点。
 
@@ -96,9 +94,7 @@ LRN: 7, 6, 1, 8, 2, 4, 5, 3
               ↑
 ```
 
-::: invert-when-dark
-{% diagramsnet demo1-02.drawio %}
-:::
+{{< diagramsnet src="demo1-02.drawio" >}}
 
 继续看 NLR 中 7 后边的数字，直到遇到 8（LRN 的当前数字），得到 2、8，说明这是 4 的右子树的最左边的路径，即 2 是 4 的右子节点，8 是 2 的左子节点（且是叶子节点）。
 
@@ -109,9 +105,7 @@ LRN: 7, 6, 1, 8, 2, 4, 5, 3
               ↑
 ```
 
-::: invert-when-dark
-{% diagramsnet demo1-03.drawio %}
-:::
+{{< diagramsnet src="demo1-03.drawio" >}}
 
 LRN 的后边两个数字 2、4 分别跟栈顶部的两个数字一致，说明 2 和 4 都没有其他子节点，直接出栈。
 
@@ -122,9 +116,7 @@ LRN: 7, 6, 1, 8, 2, 4, 5, 3
                        ↑
 ```
 
-::: invert-when-dark
-{% diagramsnet demo1-04.drawio %}
-:::
+{{< diagramsnet src="demo1-04.drawio" >}}
 
 NLR 的下一个数字和 LRN 的下一个数字都是 5，说明 5 就是当前栈顶 3 右子树的唯一节点。
 
@@ -135,9 +127,7 @@ LRN: 7, 6, 1, 8, 2, 4, 5, 3
                        ↑
 ```
 
-::: invert-when-dark
-{% diagramsnet demo1-05.drawio %}
-:::
+{{< diagramsnet src="demo1-05.drawio" >}}
 
 NLR 已经扫描完毕，而 LRN 的最后一个数字一定等于 NLR 的第一个数字，即为树根。二叉树构造完成。
 
@@ -153,4 +143,4 @@ NLR 已经扫描完毕，而 LRN 的最后一个数字一定等于 NLR 的第一
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 688. Knight Probability in Chessboard
-notebook: coding
 tags:
 - medium
-date: 2024-12-07 01:46:00
-updated: 2024-12-07 01:46:00
+date: "2024-12-07T01:46:00+08:00"
+lastmod: "2024-12-07T01:46:00+08:00"
 ---
 ## Problem
 
@@ -24,15 +23,15 @@ Return _the probability that the knight remains on the board after it has stoppe
 
 **Example 1:**
 
-> Input: `n = 3, k = 2, row = 0, column = 0`
-> Output: `0.06250`
+> Input: `n = 3, k = 2, row = 0, column = 0`\
+> Output: `0.06250`\
 > Explanation: There are two moves (to `(1,2)`, `(2,1)`) that will keep the knight on the board.
 > From each of those positions, there are also two moves that will keep the knight on the board.
 > The total probability the knight stays on the board is 0.0625.
 
 **Example 2:**
 
-> Input: `n = 1, k = 0, row = 0, column = 0`
+> Input: `n = 1, k = 0, row = 0, column = 0`\
 > Output: `1.00000`
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def knightProbability(self, n: int, k: int, row: int, column: int) -> float:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -68,8 +67,8 @@ class Solution:
 
 ### Backtrack with Cache
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### DP
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

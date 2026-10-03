@@ -1,10 +1,9 @@
 ---
 title: 769. Max Chunks To Make Sorted
-notebook: coding
 tags:
 - medium
-date: 2024-12-19 10:10:50
-updated: 2024-12-19 10:10:50
+date: "2024-12-19T10:10:50+08:00"
+lastmod: "2024-12-19T10:10:50+08:00"
 ---
 ## Problem
 
@@ -18,16 +17,16 @@ Return _the largest number of chunks we can make to sort the array_.
 
 **Example 1:**
 
-> Input: `arr = [4,3,2,1,0]`
-> Output: `1`
+> Input: `arr = [4,3,2,1,0]`\
+> Output: `1`\
 > Explanation:
 > Splitting into two or more chunks will not return the required result.
 > For example, splitting into `[4, 3]`, `[2, 1, 0]` will result in `[3, 4, 0, 1, 2]`, which isn't sorted.
 
 **Example 2:**
 
-> Input: arr = [1,0,2,3,4]
-> Output: 4
+> Input: arr = [1,0,2,3,4]\
+> Output: 4\
 > Explanation:
 > We can split into two chunks, such as `[1, 0]`, `[2, 3, 4]`.
 > However, splitting into `[1, 0]`, `[2]`, `[3]`, `[4]` is the highest number of chunks possible.
@@ -46,7 +45,7 @@ class Solution:
     def maxChunksToSorted(self, arr: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

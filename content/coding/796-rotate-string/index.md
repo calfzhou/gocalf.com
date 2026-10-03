@@ -1,10 +1,9 @@
 ---
 title: 796. Rotate String
-notebook: coding
 tags:
 - easy
-date: 2024-11-27 19:19:01
-updated: 2024-11-27 19:19:01
+date: "2024-11-27T19:19:01+08:00"
+lastmod: "2024-11-27T19:19:01+08:00"
 ---
 ## Problem
 
@@ -18,12 +17,12 @@ A **shift** on `s` consists of moving the leftmost character of `s` to the right
 
 **Example 1:**
 
-> Input: `s = "abcde", goal = "cdeab"`
+> Input: `s = "abcde", goal = "cdeab"`\
 > Output: `true`
 
 **Example 2:**
 
-> Input: `s = "abcde", goal = "abced"`
+> Input: `s = "abcde", goal = "abced"`\
 > Output: `false`
 
 **Constraints:**
@@ -38,7 +37,7 @@ class Solution:
     def rotateString(self, s: str, goal: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -48,4 +47,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

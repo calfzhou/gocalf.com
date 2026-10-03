@@ -1,11 +1,9 @@
 ---
 title: 767. Reorganize String
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-01-01 22:39:40
-updated: 2025-01-01 22:39:40
+date: "2025-01-01T22:39:40+08:00"
+lastmod: "2025-01-01T22:39:40+08:00"
 ---
 ## Problem
 
@@ -17,12 +15,12 @@ Return _any possible rearrangement of_ `s` _or return_ `""` _if not possible_.
 
 **Example 1:**
 
-> Input: `s = "aab"`
+> Input: `s = "aab"`\
 > Output: `"aba"`
 
 **Example 2:**
 
-> Input: `s = "aaab"`
+> Input: `s = "aaab"`\
 > Output: `""`
 
 **Constraints:**
@@ -37,7 +35,7 @@ class Solution:
     def reorganizeString(self, s: str) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -53,4 +51,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

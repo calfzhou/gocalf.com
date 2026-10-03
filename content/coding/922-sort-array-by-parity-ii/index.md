@@ -1,10 +1,9 @@
 ---
 title: 922. Sort Array By Parity II
-notebook: coding
 tags:
 - easy
-date: 2025-02-04 14:43:00
-updated: 2025-02-04 14:43:00
+date: "2025-02-04T14:43:00+08:00"
+lastmod: "2025-02-04T14:43:00+08:00"
 ---
 ## Problem
 
@@ -18,13 +17,13 @@ Return _any answer array that satisfies this condition_.
 
 **Example 1:**
 
-> Input: `nums = [4,2,5,7]`
-> Output: `[4,5,2,7]`
+> Input: `nums = [4,2,5,7]`\
+> Output: `[4,5,2,7]`\
 > Explanation: `[4,7,2,5]`, `[2,5,4,7]`, `[2,7,4,5]` would also have been accepted.
 
 **Example 2:**
 
-> Input: `nums = [2,3]`
+> Input: `nums = [2,3]`\
 > Output: `[2,3]`
 
 **Constraints:**
@@ -43,7 +42,7 @@ class Solution:
     def sortArrayByParityII(self, nums: List[int]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -55,4 +54,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

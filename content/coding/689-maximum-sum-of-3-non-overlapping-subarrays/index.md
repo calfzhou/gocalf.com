@@ -1,10 +1,9 @@
 ---
 title: 689. Maximum Sum of 3 Non-Overlapping Subarrays
-notebook: coding
 tags:
 - hard
-date: 2024-12-28 19:55:39
-updated: 2024-12-28 19:55:39
+date: "2024-12-28T19:55:39+08:00"
+lastmod: "2024-12-28T19:55:39+08:00"
 ---
 ## Problem
 
@@ -16,14 +15,14 @@ Return the result as a list of indices representing the starting position of eac
 
 **Example 1:**
 
-> Input: `nums = [1,2,1,2,6,7,5,1], k = 2`
-> Output: `[0,3,5]`
+> Input: `nums = [1,2,1,2,6,7,5,1], k = 2`\
+> Output: `[0,3,5]`\
 > Explanation: Subarrays `[1, 2]`, `[2, 6]`, `[7, 5]` correspond to the starting indices `[0, 3, 5]`.
 > We could have also taken `[2, 1]`, but an answer of `[1, 3, 5]` would be lexicographically larger.
 
 **Example 2:**
 
-> Input: nums = [1,2,1,2,1,2,1,2,1], k = 2
+> Input: nums = [1,2,1,2,1,2,1,2,1], k = 2\
 > Output: [0,2,4]
 
 **Constraints:**
@@ -39,7 +38,7 @@ class Solution:
     def maxSumOfThreeSubarrays(self, nums: List[int], k: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -61,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,11 +1,9 @@
 ---
 title: 72. Edit Distance
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-12-20 22:15:17
-updated: 2024-12-20 22:15:17
+date: "2024-12-20T22:15:17+08:00"
+lastmod: "2024-12-20T22:15:17+08:00"
 ---
 ## Problem
 
@@ -21,8 +19,8 @@ You have the following three operations permitted on a word:
 
 **Example 1:**
 
-> Input: `word1 = "horse", word2 = "ros"`
-> Output: `3`
+> Input: `word1 = "horse", word2 = "ros"`\
+> Output: `3`\
 > Explanation:
 > horse -> rorse (replace 'h' with 'r')
 > rorse -> rose (remove 'r')
@@ -30,8 +28,8 @@ You have the following three operations permitted on a word:
 
 **Example 2:**
 
-> Input: `word1 = "intention", word2 = "execution"`
-> Output: `5`
+> Input: `word1 = "intention", word2 = "execution"`\
+> Output: `5`\
 > Explanation:
 > intention -> inention (remove 't')
 > inention -> enention (replace 'i' with 'e')
@@ -51,7 +49,7 @@ class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -90,8 +88,8 @@ $$
 
 ### `O(min{m, n})` Space
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### `O(m * n)` Space
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

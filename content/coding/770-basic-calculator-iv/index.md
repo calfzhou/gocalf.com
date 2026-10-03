@@ -1,10 +1,9 @@
 ---
 title: 770. Basic Calculator IV
-notebook: coding
 tags:
 - hard
-date: 2024-12-20 19:15:33
-updated: 2024-12-20 19:15:33
+date: "2024-12-20T19:15:33+08:00"
+lastmod: "2024-12-20T19:15:33+08:00"
 ---
 ## Problem
 
@@ -35,17 +34,17 @@ The format of the output is as follows:
 
 **Example 1:**
 
-> Input: `expression = "e + 8 - a + 5", evalvars = ["e"], evalints = [1]`
+> Input: `expression = "e + 8 - a + 5", evalvars = ["e"], evalints = [1]`\
 > Output: `["-1*a","14"]`
 
 **Example 2:**
 
-> Input: `expression = "e - 8 + temperature - pressure", evalvars = ["e", "temperature"], evalints = [1, 12]`
+> Input: `expression = "e - 8 + temperature - pressure", evalvars = ["e", "temperature"], evalints = [1, 12]`\
 > Output: `["-1*pressure","5"]`
 
 **Example 3:**
 
-> Input: `expression = "(e + 8) * (e - 8)", evalvars = [], evalints = []`
+> Input: `expression = "(e + 8) * (e - 8)", evalvars = [], evalints = []`\
 > Output: `["1*e*e","-64"]`
 
 **Constraints:**
@@ -67,7 +66,7 @@ class Solution:
     def basicCalculatorIV(self, expression: str, evalvars: List[str], evalints: List[int]) -> List[str]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -98,7 +97,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 Test cases for solution inner methods: [solution_inner_test.py](solution_inner_test.py)。
 

@@ -1,11 +1,9 @@
 ---
 title: 96. Unique Binary Search Trees
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-12-20 23:58:17
-updated: 2024-12-21 00:34:18
+date: "2024-12-20T23:58:17+08:00"
+lastmod: "2024-12-21T00:34:18+08:00"
 ---
 ## Problem
 
@@ -15,14 +13,15 @@ Given an integer `n`, return _the number of structurally unique **BST**'s (binar
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: n = 3
+> Input: n = 3\
 > Output: 5
 
 **Example 2:**
 
-> Input: n = 1
+> Input: n = 1\
 > Output: 1
 
 **Constraints:**
@@ -36,7 +35,7 @@ class Solution:
     def numTrees(self, n: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -54,7 +53,7 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Math
 
@@ -73,6 +72,6 @@ $$
 f(n)=C_n=\frac{1}{n+1}\binom{2n}{n}=\frac{(2n)!}{(n+1)!n!}
 $$
 
-本题的 n 不是很大，可以直接用 Python 内置的阶乘函数（[`math.factorial`](https://docs.python.org/3/library/math.html#math.factorial)）计算，时间复杂度 `O(n)`，空间复杂度 `O(1)`。如果 n 比较大，也可以参考 [62. Unique Paths](../62-unique-paths/index.md) 中的 [方法](../62-unique-paths/index.md#Math) 计算 $\binom{2n}{n}$。
+本题的 n 不是很大，可以直接用 Python 内置的阶乘函数（[`math.factorial`](https://docs.python.org/3/library/math.html#math.factorial)）计算，时间复杂度 `O(n)`，空间复杂度 `O(1)`。如果 n 比较大，也可以参考 [62. Unique Paths](../62-unique-paths/index.md) 中的 [方法](../62-unique-paths/index.md#math) 计算 $\binom{2n}{n}$。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

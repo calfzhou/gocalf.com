@@ -1,10 +1,9 @@
 ---
 title: 743. Network Delay Time
-notebook: coding
 tags:
 - medium
-date: 2024-11-25 13:29:21
-updated: 2024-11-28 16:00:51
+date: "2024-11-25T13:29:21+08:00"
+lastmod: "2024-11-28T16:00:51+08:00"
 ---
 ## Problem
 
@@ -16,19 +15,20 @@ We will send a signal from a given node `k`. Return _the **minimum** time it tak
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2`
+> Input: `times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2`\
 > Output: `2`
 
 **Example 2:**
 
-> Input: `times = [[1,2,1]], n = 2, k = 1`
+> Input: `times = [[1,2,1]], n = 2, k = 1`\
 > Output: `1`
 
 **Example 3:**
 
-> Input: `times = [[1,2,1]], n = 2, k = 2`
+> Input: `times = [[1,2,1]], n = 2, k = 2`\
 > Output: `-1`
 
 **Constraints:**
@@ -48,7 +48,7 @@ class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -66,4 +66,4 @@ class Solution:
 
 > 这里直接借助 Python 自带的 [heapq](https://docs.python.org/3/library/heapq.html) 辅助堆的操作。
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

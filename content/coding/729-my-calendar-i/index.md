@@ -1,10 +1,9 @@
 ---
 title: 729. My Calendar I
-notebook: coding
 tags:
 - medium
-date: 2025-01-02 00:36:56
-updated: 2025-01-02 00:36:56
+date: "2025-01-02T00:36:56+08:00"
+lastmod: "2025-01-02T00:36:56+08:00"
 ---
 ## Problem
 
@@ -23,11 +22,11 @@ Implement the `MyCalendar` class:
 
 **Example 1:**
 
-> Input
-> `["MyCalendar", "book", "book", "book"]`
-> `[[], [10, 20], [15, 25], [20, 30]]`
-> Output
-> `[null, true, false, true]`
+> Input\
+> `["MyCalendar", "book", "book", "book"]`\
+> `[[], [10, 20], [15, 25], [20, 30]]`\
+> Output\
+> `[null, true, false, true]`\
 > Explanation
 >
 > ```c++
@@ -59,7 +58,7 @@ class MyCalendar:
 # param_1 = obj.book(startTime,endTime)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -75,4 +74,4 @@ class MyCalendar:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

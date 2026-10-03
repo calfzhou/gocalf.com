@@ -1,10 +1,9 @@
 ---
 title: 81. Search in Rotated Sorted Array II
-notebook: coding
 tags:
 - medium
-date: 2025-02-01 21:10:28
-updated: 2025-02-01 21:10:28
+date: "2025-02-01T21:10:28+08:00"
+lastmod: "2025-02-01T21:10:28+08:00"
 ---
 ## Problem
 
@@ -20,12 +19,12 @@ You must decrease the overall operation steps as much as possible.
 
 **Example 1:**
 
-> Input: `nums = [2,5,6,0,0,1,2], target = 0`
+> Input: `nums = [2,5,6,0,0,1,2], target = 0`\
 > Output: `true`
 
 **Example 2:**
 
-> Input: `nums = [2,5,6,0,0,1,2], target = 3`
+> Input: `nums = [2,5,6,0,0,1,2], target = 3`\
 > Output: `false`
 
 **Constraints:**
@@ -44,7 +43,7 @@ class Solution:
     def search(self, nums: List[int], target: int) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

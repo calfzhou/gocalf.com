@@ -1,10 +1,9 @@
 ---
 title: 73. Set Matrix Zeroes
-notebook: coding
 tags:
 - medium
-date: 2024-11-21 14:28:33
-updated: 2024-11-21 14:28:33
+date: "2024-11-21T14:28:33+08:00"
+lastmod: "2024-11-21T14:28:33+08:00"
 ---
 ## Problem
 
@@ -16,16 +15,18 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `matrix = [[1,1,1],[1,0,1],[1,1,1]]`
+> Input: `matrix = [[1,1,1],[1,0,1],[1,1,1]]`\
 > Output: `[[1,0,1],[0,0,0],[1,0,1]]`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]`
+> Input: `matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]`\
 > Output: `[[0,0,0,0],[0,4,5,0],[0,3,1,0]]`
 
 **Constraints:**
@@ -51,7 +52,7 @@ class Solution:
         """
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,10 +66,10 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Follow Up
 
 可以直接用 `matrix` 的第一行和第一列记录需要全部换成 `0` 的列和行。唯一需要注意的是 `matrix[0][0]` 是公共的元素，为了避免冲突，可以用单独的变量记录第一行和第一列是否需要换。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

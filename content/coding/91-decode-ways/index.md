@@ -1,11 +1,9 @@
 ---
 title: 91. Decode Ways
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-11-23 14:13:06
-updated: 2024-11-23 14:13:06
+date: "2024-11-23T14:13:06+08:00"
+lastmod: "2024-11-23T14:13:06+08:00"
 ---
 ## Problem
 
@@ -31,22 +29,22 @@ The test cases are generated so that the answer fits in a **32-bit** integer.
 
 **Example 1:**
 
-> Input: `s = "12"`
-> Output: `2`
+> Input: `s = "12"`\
+> Output: `2`\
 > Explanation:
 > `"12"` could be decoded as `"AB"` `(1 2)` or `"L"` `(12)`.
 
 **Example 2:**
 
-> Input: `s = "226"`
-> Output: `3`
+> Input: `s = "226"`\
+> Output: `3`\
 > Explanation:
 > `"226"` could be decoded as `"BZ"` `(2 26)`, `"VF"` `(22 6)`, or `"BBF"` `(2 2 6)`.
 
 **Example 3:**
 
-> Input: `s = "06"`
-> Output: `0`
+> Input: `s = "06"`\
+> Output: `0`\
 > Explanation:
 > `"06"` cannot be mapped to `"F"` because of the leading zero (`"6"` is different from `"06"`). In this case, the string is not a valid encoding, so return 0.
 
@@ -62,7 +60,7 @@ class Solution:
     def numDecodings(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -103,4 +101,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

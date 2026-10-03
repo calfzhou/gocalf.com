@@ -1,10 +1,9 @@
 ---
 title: 827. Making A Large Island
-notebook: coding
 tags:
 - hard
-date: 2025-01-31 22:46:37
-updated: 2025-01-31 22:46:37
+date: "2025-01-31T22:46:37+08:00"
+lastmod: "2025-01-31T22:46:37+08:00"
 ---
 ## Problem
 
@@ -18,20 +17,20 @@ An **island** is a 4-directionally connected group of `1`s.
 
 **Example 1:**
 
-> Input: `grid = [[1,0],[0,1]]`
-> Output: `3`
+> Input: `grid = [[1,0],[0,1]]`\
+> Output: `3`\
 > Explanation: Change one 0 to 1 and connect two 1s, then we get an island with `area = 3`.
 
 **Example 2:**
 
-> Input: `grid = [[1,1],[1,0]]`
-> Output: `4`
+> Input: `grid = [[1,1],[1,0]]`\
+> Output: `4`\
 > Explanation: Change the 0 to 1 and make the island bigger, only one island with `area = 4`.
 
 **Example 3:**
 
-> Input: `grid = [[1,1],[1,1]]`
-> Output: `4`
+> Input: `grid = [[1,1],[1,1]]`\
+> Output: `4`\
 > Explanation: Can't change any 0 to 1, only one island with `area = 4`.
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def largestIsland(self, grid: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

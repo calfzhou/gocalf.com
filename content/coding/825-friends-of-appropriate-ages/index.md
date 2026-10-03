@@ -1,10 +1,9 @@
 ---
 title: 825. Friends Of Appropriate Ages
-notebook: coding
 tags:
 - medium
-date: 2024-11-17 09:50:39
-updated: 2024-11-17 09:50:39
+date: "2024-11-17T09:50:39+08:00"
+lastmod: "2024-11-17T09:50:39+08:00"
 ---
 ## Problem
 
@@ -26,20 +25,20 @@ Return _the total number of friend requests made_.
 
 **Example 1:**
 
-> Input: `ages = [16,16]`
-> Output: `2`
+> Input: `ages = [16,16]`\
+> Output: `2`\
 > Explanation: 2 people friend request each other.
 
 **Example 2:**
 
-> Input: `ages = [16,17,18]`
-> Output: `2`
+> Input: `ages = [16,17,18]`\
+> Output: `2`\
 > Explanation: Friend requests are made 17 -> 16, 18 -> 17.
 
 **Example 3:**
 
-> Input: `ages = [20,30,100,110,120]`
-> Output: `3`
+> Input: `ages = [20,30,100,110,120]`\
+> Output: `3`\
 > Explanation: Friend requests are made 110 -> 100, 120 -> 110, 120 -> 100.
 
 **Constraints:**
@@ -55,15 +54,13 @@ class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
 第三个条件似乎没用？当 `age[y] > 100 && age[x] < 100` 成立的时候，第二条的 `age[y] > age[x]` 一定成立。
 
-::: invert-when-dark
-{% diagramsnet condition.drawio %}
-:::
+{{< diagramsnet src="condition.drawio" >}}
 
 条件一对应图中斜线下方的梯形区域，条件二对应对角线上方的三角形区域，条件三是条件二区域内部靠上部分的那个长条矩形。
 
@@ -77,4 +74,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

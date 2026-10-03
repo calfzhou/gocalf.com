@@ -1,10 +1,9 @@
 ---
 title: 89. Gray Code
-notebook: coding
 tags:
 - medium
-date: 2024-12-20 23:15:33
-updated: 2024-12-20 23:15:33
+date: "2024-12-20T23:15:33+08:00"
+lastmod: "2024-12-20T23:15:33+08:00"
 ---
 ## Problem
 
@@ -22,26 +21,26 @@ Given an integer `n`, return _any valid **n-bit gray code sequence**_.
 
 **Example 1:**
 
-> Input: `n = 2`
-> Output: `[0,1,3,2]`
+> Input: `n = 2`\
+> Output: `[0,1,3,2]`\
 > Explanation:
 > The binary representation of `[0,1,3,2]` is `[00,01,11,10]`.
 >
-> - 0{% u 0 %} and 0{% u 1 %} differ by one bit
-> - {% u 0 %}1 and {% u 1 %}1 differ by one bit
-> - 1{% u 1 %} and 1{% u 0 %} differ by one bit
-> - {% u 1 %}0 and {% u 0 %}0 differ by one bit
+> - 0{{< u text="0" >}} and 0{{< u text="1" >}} differ by one bit
+> - {{< u text="0" >}}1 and {{< u text="1" >}}1 differ by one bit
+> - 1{{< u text="1" >}} and 1{{< u text="0" >}} differ by one bit
+> - {{< u text="1" >}}0 and {{< u text="0" >}}0 differ by one bit
 >
 > `[0,2,3,1]` is also a valid gray code sequence, whose binary representation is `[00,10,11,01]`.
 >
-> - {% u 0 %}0 and {% u 1 %}0 differ by one bit
-> - 1{% u 0 %} and 1{% u 1 %} differ by one bit
-> - {% u 1 %}1 and {% u 0 %}1 differ by one bit
-> - 0{% u 1 %} and 0{% u 0 %} differ by one bit
+> - {{< u text="0" >}}0 and {{< u text="1" >}}0 differ by one bit
+> - 1{{< u text="0" >}} and 1{{< u text="1" >}} differ by one bit
+> - {{< u text="1" >}}1 and {{< u text="0" >}}1 differ by one bit
+> - 0{{< u text="1" >}} and 0{{< u text="0" >}} differ by one bit
 
 **Example 2:**
 
-> Input: `n = 1`
+> Input: `n = 1`\
 > Output: `[0,1]`
 
 **Constraints:**
@@ -55,7 +54,7 @@ class Solution:
     def grayCode(self, n: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -67,4 +66,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

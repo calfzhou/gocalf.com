@@ -1,10 +1,9 @@
 ---
 title: 731. My Calendar II
-notebook: coding
 tags:
 - medium
-date: 2025-01-02 16:19:06
-updated: 2025-01-02 16:19:06
+date: "2025-01-02T16:19:06+08:00"
+lastmod: "2025-01-02T16:19:06+08:00"
 ---
 ## Problem
 
@@ -23,11 +22,11 @@ Implement the `MyCalendarTwo` class:
 
 **Example 1:**
 
-> Input
-> `["MyCalendarTwo", "book", "book", "book", "book", "book", "book"]`
-> `[[], [10, 20], [50, 60], [10, 40], [5, 15], [5, 10], [25, 55]]`
-> Output
-> `[null, true, true, true, false, true, true]`
+> Input\
+> `["MyCalendarTwo", "book", "book", "book", "book", "book", "book"]`\
+> `[[], [10, 20], [50, 60], [10, 40], [5, 15], [5, 10], [25, 55]]`\
+> Output\
+> `[null, true, true, true, false, true, true]`\
 > Explanation
 >
 > ```c++
@@ -62,7 +61,7 @@ class MyCalendarTwo:
 # param_1 = obj.book(startTime,endTime)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -92,6 +91,6 @@ class MyCalendarTwo:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 > 此实现中未对相邻相连的两个时段做合并。比如 `[10, 20)` 和 `[20, 50)` 虽然可以连成一个完整的 `[10, 50)`，但代码中并未进行合并，不会影响后续处理逻辑。

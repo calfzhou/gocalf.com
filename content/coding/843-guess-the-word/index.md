@@ -1,10 +1,9 @@
 ---
 title: 843. Guess the Word
-notebook: coding
 tags:
 - hard
-date: 2024-12-29 22:55:31
-updated: 2024-12-29 22:55:31
+date: "2024-12-29T22:55:31+08:00"
+lastmod: "2024-12-29T22:55:31+08:00"
 ---
 ## Problem
 
@@ -28,8 +27,8 @@ The test cases are generated such that you can guess the secret word with a reas
 
 **Example 1:**
 
-> Input: `secret = "acckzz", words = ["acckzz","ccbazz","eiowzz","abcczz"], allowedGuesses = 10`
-> Output: `You guessed the secret word correctly.`
+> Input: `secret = "acckzz", words = ["acckzz","ccbazz","eiowzz","abcczz"], allowedGuesses = 10`\
+> Output: `You guessed the secret word correctly.`\
 > Explanation:
 > `master.guess("aaaaaa")` returns -1, because `"aaaaaa"` is not in wordlist.
 > `master.guess("acckzz")` returns 6, because `"acckzz"` is secret and has all 6 matches.
@@ -40,8 +39,8 @@ The test cases are generated such that you can guess the secret word with a reas
 
 **Example 2:**
 
-> Input: `secret = "hamada", words = ["hamada","khaled"], allowedGuesses = 10`
-> Output: `You guessed the secret word correctly.`
+> Input: `secret = "hamada", words = ["hamada","khaled"], allowedGuesses = 10`\
+> Output: `You guessed the secret word correctly.`\
 > Explanation: Since there are two words, you can guess both.
 
 **Constraints:**
@@ -67,7 +66,7 @@ class Solution:
     def findSecretWord(self, words: List[str], master: 'Master') -> None:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -81,7 +80,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster but May Fail
 
@@ -89,4 +88,4 @@ class Solution:
 
 每次随机挑一个候选单词去猜测，然后删掉匹配度不一致的其他候选词。时间复杂度是 `O(k * n)`，空间复杂度 `O(n)`。但是猜测的数量就不太稳定，有时候提交后测试会失败（猜测数量达到上限）。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

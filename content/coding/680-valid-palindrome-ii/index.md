@@ -1,10 +1,9 @@
 ---
 title: 680. Valid Palindrome II
-notebook: coding
 tags:
 - easy
-date: 2025-02-03 11:01:26
-updated: 2025-02-03 11:01:26
+date: "2025-02-03T11:01:26+08:00"
+lastmod: "2025-02-03T11:01:26+08:00"
 ---
 ## Problem
 
@@ -14,18 +13,18 @@ Given a string `s`, return `true` _if the_ `s` _can be palindrome after deleting
 
 **Example 1:**
 
-> Input: `s = "aba"`
+> Input: `s = "aba"`\
 > Output: `true`
 
 **Example 2:**
 
-> Input: `s = "abca"`
-> Output: `true`
+> Input: `s = "abca"`\
+> Output: `true`\
 > Explanation: You could delete the character `'c'`.
 
 **Example 3:**
 
-> Input: `s = "abc"`
+> Input: `s = "abc"`\
 > Output: `false`
 
 **Constraints:**
@@ -40,7 +39,7 @@ class Solution:
     def validPalindrome(self, s: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -52,4 +51,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

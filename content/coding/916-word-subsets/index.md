@@ -1,10 +1,9 @@
 ---
 title: 916. Word Subsets
-notebook: coding
 tags:
 - medium
-date: 2025-01-10 09:52:50
-updated: 2025-01-10 09:52:50
+date: "2025-01-10T09:52:50+08:00"
+lastmod: "2025-01-10T09:52:50+08:00"
 ---
 ## Problem
 
@@ -22,12 +21,12 @@ Return an array of all the **universal** strings in `words1`. You may return the
 
 **Example 1:**
 
-> Input: `words1 = ["amazon","apple","facebook","google","leetcode"], words2 = ["e","o"]`
+> Input: `words1 = ["amazon","apple","facebook","google","leetcode"], words2 = ["e","o"]`\
 > Output: `["facebook","google","leetcode"]`
 
 **Example 2:**
 
-> Input: `words1 = ["amazon","apple","facebook","google","leetcode"], words2 = ["l","e"]`
+> Input: `words1 = ["amazon","apple","facebook","google","leetcode"], words2 = ["l","e"]`\
 > Output: `["apple","google","leetcode"]`
 
 **Constraints:**
@@ -44,7 +43,7 @@ class Solution:
     def wordSubsets(self, words1: List[str], words2: List[str]) -> List[str]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -58,8 +57,8 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 用 [collections.Counter](https://docs.python.org/3/library/collections.html#collections.Counter) 会慢一些：
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

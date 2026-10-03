@@ -1,10 +1,9 @@
 ---
 title: 855. Exam Room
-notebook: coding
 tags:
 - medium
-date: 2024-12-23 11:39:00
-updated: 2024-12-23 11:39:00
+date: "2024-12-23T11:39:00+08:00"
+lastmod: "2024-12-23T11:39:00+08:00"
 ---
 ## Problem
 
@@ -24,10 +23,10 @@ Implement the `ExamRoom` class:
 
 **Example 1:**
 
-> Input
-> `["ExamRoom", "seat", "seat", "seat", "seat", "leave", "seat"]`
-> `[[10], [], [], [], [], [4], []]`
-> Output
+> Input\
+> `["ExamRoom", "seat", "seat", "seat", "seat", "leave", "seat"]`\
+> `[[10], [], [], [], [], [4], []]`\
+> Output\
 > `[null, 0, 9, 4, 2, null, 5]`
 >
 > Explanation
@@ -66,7 +65,7 @@ class ExamRoom:
 # obj.leave(p)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -109,10 +108,10 @@ else:
 
 ### Leave Fast, Seat Slow
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Seat Fast, Leave Slow
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 实际提交运行的话，这个策略比上一个快两百多倍。

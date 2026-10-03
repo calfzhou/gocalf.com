@@ -1,10 +1,9 @@
 ---
 title: 685. Redundant Connection II
-notebook: coding
 tags:
 - hard
-date: 2024-12-23 18:50:50
-updated: 2024-12-23 18:50:50
+date: "2024-12-23T18:50:50+08:00"
+lastmod: "2024-12-23T18:50:50+08:00"
 ---
 ## Problem
 
@@ -20,16 +19,18 @@ Return _an edge that can be removed so that the resulting graph is a rooted tree
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `edges = [[1,2],[1,3],[2,3]]`
+> Input: `edges = [[1,2],[1,3],[2,3]]`\
 > Output: `[2,3]`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `edges = [[1,2],[2,3],[3,4],[4,1],[1,5]]`
+> Input: `edges = [[1,2],[2,3],[3,4],[4,1],[1,5]]`\
 > Output: `[4,1]`
 
 **Constraints:**
@@ -47,7 +48,7 @@ class Solution:
     def findRedundantDirectedConnection(self, edges: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -55,9 +56,7 @@ class Solution:
 
 如果忽略边的方向，冗余的边依然会导致图中出现环，但在有向图中并不是任何一条边都可以被删掉。比如 `edges = [[2,1], [3,1], [4,2], [1,4]]`，环 `1 → 4 → 2 → 1` 上的边 `(1, 4)` 和 `(4, 2)` 都不是冗余的。
 
-::: invert-when-dark
-{% diagramsnet loop-and-bad.drawio %}
-:::
+{{< diagramsnet src="loop-and-bad.drawio" >}}
 
 在有向图中，冗余的边可能会导致某个节点的入度为 2（如 Example 1 和上边的 case）。这种情况下，冗余边一定是两条入边中的某一条。显然这两条入边，一定有一条在（忽略边方向的）环上，而另一条不在。把在环上的那条删掉就行。关键在于如果判断哪条边在环上。
 
@@ -69,4 +68,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
