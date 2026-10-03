@@ -1,10 +1,9 @@
 ---
 title: 212. Word Search II
-notebook: coding
 tags:
 - hard
-date: 2024-11-23 01:36:21
-updated: 2024-11-23 01:36:21
+date: "2024-11-23T01:36:21+08:00"
+lastmod: "2024-11-23T01:36:21+08:00"
 ---
 ## Problem
 
@@ -16,16 +15,18 @@ Each word must be constructed from letters of sequentially adjacent cells, where
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]`
+> Input: `board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]`\
 > Output: `["eat","oath"]`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `board = [["a","b"],["c","d"]], words = ["abcb"]`
+> Input: `board = [["a","b"],["c","d"]], words = ["abcb"]`\
 > Output: `[]`
 
 **Constraints:**
@@ -46,7 +47,7 @@ class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -66,4 +67,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 2127. Maximum Employees to Be Invited to a Meeting
-notebook: coding
 tags:
 - hard
-date: 2024-12-23 23:44:04
-updated: 2024-12-24 15:09:14
+date: "2024-12-23T23:44:04+08:00"
+lastmod: "2024-12-24T15:09:14+08:00"
 ---
 ## Problem
 
@@ -18,10 +17,11 @@ Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the 
 
 **Example 1:**
 
-![case1|236](case1.png "case1"){.invert-when-dark}
+![case1|236](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `favorite = [2,2,1,2]`
-> Output: `3`
+> Input: `favorite = [2,2,1,2]`\
+> Output: `3`\
 > Explanation:
 > The above figure shows how the company can invite employees 0, 1, and 2, and seat them at the round table.
 > All employees cannot be invited because employee 2 cannot sit beside employees 0, 1, and 3, simultaneously.
@@ -30,8 +30,8 @@ Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the 
 
 **Example 2:**
 
-> Input: `favorite = [1,2,0]`
-> Output: `3`
+> Input: `favorite = [1,2,0]`\
+> Output: `3`\
 > Explanation:
 > Each employee is the favorite person of at least one other employee, and the only way the company can invite them is if they invite every employee.
 > The seating arrangement will be the same as that in the figure given in example 1:
@@ -44,10 +44,11 @@ Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the 
 
 **Example 3:**
 
-![case3|219](case3.png "case3"){.invert-when-dark}
+![case3|219](case3.png "case3")
+{.invert-when-dark}
 
-> Input: `favorite = [3,0,1,4,1]`
-> Output: `4`
+> Input: `favorite = [3,0,1,4,1]`\
+> Output: `4`\
 > Explanation:
 > The above figure shows how the company will invite employees 0, 1, 3, and 4, and seat them at the round table.
 > Employee 2 cannot be invited because the two spots next to their favorite employee 1 are taken.
@@ -68,7 +69,7 @@ class Solution:
     def maximumInvitations(self, favorite: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -84,15 +85,11 @@ class Solution:
 
 如果环的长度超过 2，那么只能是让环上的所有人围成一圈，其他任何人都无法插入进去。
 
-::: invert-when-dark
-{% diagramsnet big-circle.drawio %}
-:::
+{{< diagramsnet src="big-circle.drawio" >}}
 
 但如果环的长度为 2（即两个人双向奔赴），他俩的两边都可以挂一串粉丝链路。而且如果有多个这样的 couple + 粉丝组合，全都可以围成一圈，仍然满足所有人都跟自己的最爱挨着坐。
 
-::: invert-when-dark
-{% diagramsnet couples.drawio %}
-:::
+{{< diagramsnet src="couples.drawio" >}}
 
 所以对于每一个环长度为 2 的子图，需要找出分别以两个顶点为终点的最长的路径（acyclic chain），可以用深度优先遍历处理。
 
@@ -102,7 +99,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 提交跑下来比较慢，可能系数太大了。而且显然第一步做的并查集并没有太大帮助，计算量基本都浪费了，可以考虑优化。
 
@@ -120,4 +117,4 @@ class Solution:
 
 时间复杂度和空间复杂度还是 `O(n)`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

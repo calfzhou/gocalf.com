@@ -1,10 +1,9 @@
 ---
 title: 2296. Design a Text Editor
-notebook: coding
 tags:
 - hard
-date: 2025-02-27 11:32:34
-updated: 2025-02-27 11:32:34
+date: "2025-02-27T11:32:34+08:00"
+lastmod: "2025-02-27T11:32:34+08:00"
 ---
 ## Problem
 
@@ -28,11 +27,11 @@ Implement the `TextEditor` class:
 
 **Example 1:**
 
-> Input
-> `["TextEditor", "addText", "deleteText", "addText", "cursorRight", "cursorLeft", "deleteText", "cursorLeft", "cursorRight"]`
-> `[[], ["leetcode"], [4], ["practice"], [3], [8], [10], [2], [6]]`
-> Output
-> `[null, null, 4, null, "etpractice", "leet", 4, "", "practi"]`
+> Input\
+> `["TextEditor", "addText", "deleteText", "addText", "cursorRight", "cursorLeft", "deleteText", "cursorLeft", "cursorRight"]`\
+> `[[], ["leetcode"], [4], ["practice"], [3], [8], [10], [2], [6]]`\
+> Output\
+> `[null, null, 4, null, "etpractice", "leet", 4, "", "practi"]`\
 > Explanation
 >
 > ```cpp
@@ -98,7 +97,7 @@ class TextEditor:
 # param_4 = obj.cursorRight(k)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -118,4 +117,4 @@ class TextEditor:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

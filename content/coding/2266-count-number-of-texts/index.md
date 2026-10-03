@@ -1,11 +1,9 @@
 ---
 title: 2266. Count Number of Texts
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-01-19 21:21:24
-updated: 2025-01-19 21:21:24
+date: "2025-01-19T21:21:24+08:00"
+lastmod: "2025-01-19T21:21:24+08:00"
 ---
 ## Problem
 
@@ -30,8 +28,8 @@ Since the answer may be very large, return it **modulo** `10⁹ + 7`.
 
 **Example 1:**
 
-> Input: `pressedKeys = "22233"`
-> Output: `8`
+> Input: `pressedKeys = "22233"`\
+> Output: `8`\
 > Explanation:
 > The possible text messages Alice could have sent are:
 > `"aaadd"`, `"abdd"`, `"badd"`, `"cdd"`, `"aaae"`, `"abe"`, `"bae"`, and `"ce"`.
@@ -39,8 +37,8 @@ Since the answer may be very large, return it **modulo** `10⁹ + 7`.
 
 **Example 2:**
 
-> Input: `pressedKeys = "222222222222222222222222222222222222"`
-> Output: `82876089`
+> Input: `pressedKeys = "222222222222222222222222222222222222"`\
+> Output: `82876089`\
 > Explanation:
 > There are 2082876103 possible text messages Alice could have sent.
 > Since we need to return the answer modulo `10⁹ + 7`, we return `2082876103 % (10⁹ + 7) = 82876089`.
@@ -57,7 +55,7 @@ class Solution:
     def countTexts(self, pressedKeys: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -75,4 +73,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

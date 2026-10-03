@@ -1,10 +1,9 @@
 ---
 title: 2275. Largest Combination With Bitwise AND Greater Than Zero
-notebook: coding
 tags:
 - medium
-date: 2025-01-12 08:41:07
-updated: 2025-01-12 08:41:07
+date: "2025-01-12T08:41:07+08:00"
+lastmod: "2025-01-12T08:41:07+08:00"
 ---
 ## Problem
 
@@ -21,8 +20,8 @@ Return _the size of the **largest** combination of_ `candidates` _with a bitwise
 
 **Example 1:**
 
-> Input: `candidates = [16,17,71,62,12,24,14]`
-> Output: `4`
+> Input: `candidates = [16,17,71,62,12,24,14]`\
+> Output: `4`\
 > Explanation: The combination `[16,17,62,24]` has a bitwise AND of `16 & 17 & 62 & 24 = 16 > 0`.
 > The size of the combination is 4.
 > It can be shown that no combination with a size greater than 4 has a bitwise AND greater than 0.
@@ -31,8 +30,8 @@ Return _the size of the **largest** combination of_ `candidates` _with a bitwise
 
 **Example 2:**
 
-> Input: `candidates = [8,8]`
-> Output: `2`
+> Input: `candidates = [8,8]`\
+> Output: `2`\
 > Explanation: The largest combination `[8,8]` has a bitwise AND of `8 & 8 = 8 > 0`.
 > The size of the combination is 2, so we return 2.
 
@@ -48,7 +47,7 @@ class Solution:
     def largestCombination(self, candidates: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

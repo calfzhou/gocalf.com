@@ -1,10 +1,9 @@
 ---
 title: 2337. Move Pieces to Obtain a String
-notebook: coding
 tags:
 - medium
-date: 2024-12-05 15:17:16
-updated: 2024-12-05 15:17:16
+date: "2024-12-05T15:17:16+08:00"
+lastmod: "2024-12-05T15:17:16+08:00"
 ---
 ## Problem
 
@@ -19,8 +18,8 @@ Return `true` _if it is possible to obtain the string_ `target` _by moving the p
 
 **Example 1:**
 
-> Input: `start = "_L__R__R_", target = "L______RR"`
-> Output: `true`
+> Input: `start = "_L__R__R_", target = "L______RR"`\
+> Output: `true`\
 > Explanation: We can obtain the string target from start by doing the following moves:
 >
 > - Move the first piece one step to the left, start becomes equal to `"L___R__R_"`.
@@ -31,15 +30,15 @@ Return `true` _if it is possible to obtain the string_ `target` _by moving the p
 
 **Example 2:**
 
-> Input: `start = "R_L_", target = "__LR"`
-> Output: `false`
+> Input: `start = "R_L_", target = "__LR"`\
+> Output: `false`\
 > Explanation: The `'R'` piece in the string start can move one step to the right to obtain `"_RL_".`
 > After that, no pieces can move anymore, so it is impossible to obtain the string target from start.
 
 **Example 3:**
 
-> Input: `start = "_R", target = "R_"`
-> Output: `false`
+> Input: `start = "_R", target = "R_"`\
+> Output: `false`\
 > Explanation: The piece in the string start can move only to the right, so it is impossible to obtain the string target from start.
 
 **Constraints:**
@@ -55,7 +54,7 @@ class Solution:
     def canChange(self, start: str, target: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -84,6 +83,6 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

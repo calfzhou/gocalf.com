@@ -1,10 +1,9 @@
 ---
 title: 227. Basic Calculator II
-notebook: coding
 tags:
 - medium
-date: 2024-12-20 16:02:58
-updated: 2024-12-20 16:02:58
+date: "2024-12-20T16:02:58+08:00"
+lastmod: "2024-12-20T16:02:58+08:00"
 ---
 ## Problem
 
@@ -20,17 +19,17 @@ You may assume that the given expression is always valid. All intermediate resul
 
 **Example 1:**
 
-> Input: s = "3+2*2"
+> Input: s = "3+2*2"\
 > Output: 7
 
 **Example 2:**
 
-> Input: s = " 3/2 "
+> Input: s = " 3/2 "\
 > Output: 1
 
 **Example 3:**
 
-> Input: s = " 3+5 / 2 "
+> Input: s = " 3+5 / 2 "\
 > Output: 5
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def calculate(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -58,7 +57,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Directly
 
@@ -68,4 +67,4 @@ class Solution:
 
 需要小心的是负数的除法。题目要求的是除法运算的结果只保留整数部分，即 `3 / 2 = 1.5 → 1`、`-3 / 2 = -1.5 → -1`。但 Python 中的整除运算（`//`）不符合这个要求（`-3 // 2 = -2`），需要用 [`math.trunc`](https://docs.python.org/3/library/math.html#math.trunc) 函数，`trunc(-3 / 2) = -1`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

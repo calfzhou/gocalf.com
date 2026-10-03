@@ -1,11 +1,9 @@
 ---
 title: 2209. Minimum White Tiles After Covering With Carpets
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2025-02-21 11:32:41
-updated: 2025-02-21 11:32:41
+date: "2025-02-21T11:32:41+08:00"
+lastmod: "2025-02-21T11:32:41+08:00"
 ---
 ## Problem
 
@@ -24,8 +22,8 @@ Return _the **minimum** number of white tiles still visible._
 
 ![case1|400](case1.png "case1")
 
-> Input: `floor = "10110101", numCarpets = 2, carpetLen = 2`
-> Output: `2`
+> Input: `floor = "10110101", numCarpets = 2, carpetLen = 2`\
+> Output: `2`\
 > Explanation:
 > The figure above shows one way of covering the tiles with the carpets such that only 2 white tiles are visible.
 > No other way of covering the tiles with the carpets can leave less than 2 white tiles visible.
@@ -34,8 +32,8 @@ Return _the **minimum** number of white tiles still visible._
 
 ![case2](case2.png)
 
-> Input: `floor = "11111", numCarpets = 2, carpetLen = 3`
-> Output: `0`
+> Input: `floor = "11111", numCarpets = 2, carpetLen = 3`\
+> Output: `0`\
 > Explanation:
 > The figure above shows one way of covering the tiles with the carpets such that no white tiles are visible.
 > Note that the carpets are able to overlap one another.
@@ -53,7 +51,7 @@ class Solution:
     def minimumWhiteTiles(self, floor: str, numCarpets: int, carpetLen: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -93,4 +91,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

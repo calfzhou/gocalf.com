@@ -1,10 +1,9 @@
 ---
 title: 2182. Construct String With Repeat Limit
-notebook: coding
 tags:
 - medium
-date: 2024-12-17 10:43:41
-updated: 2024-12-17 10:43:41
+date: "2024-12-17T10:43:41+08:00"
+lastmod: "2024-12-17T10:43:41+08:00"
 ---
 ## Problem
 
@@ -18,8 +17,8 @@ A string `a` is **lexicographically larger** than a string `b` if in the first p
 
 **Example 1:**
 
-> Input: `s = "cczazcc", repeatLimit = 3`
-> Output: `"zzcccac"`
+> Input: `s = "cczazcc", repeatLimit = 3`\
+> Output: `"zzcccac"`\
 > Explanation: We use all of the characters from s to construct the repeatLimitedString `"zzcccac"`.
 > The letter `'a'` appears at most 1 time in a row.
 > The letter `'c'` appears at most 3 times in a row.
@@ -30,8 +29,8 @@ A string `a` is **lexicographically larger** than a string `b` if in the first p
 
 **Example 2:**
 
-> Input: `s = "aababab", repeatLimit = 2`
-> Output: `"bbabaa"`
+> Input: `s = "aababab", repeatLimit = 2`\
+> Output: `"bbabaa"`\
 > Explanation: We use only some of the characters from s to construct the repeatLimitedString `"bbabaa"`.
 > The letter `'a'` appears at most 2 times in a row.
 > The letter `'b'` appears at most 2 times in a row.
@@ -51,7 +50,7 @@ class Solution:
     def repeatLimitedString(self, s: str, repeatLimit: int) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -67,4 +66,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

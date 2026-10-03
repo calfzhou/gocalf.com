@@ -1,10 +1,9 @@
 ---
 title: 684. Redundant Connection
-notebook: coding
 tags:
 - medium
-date: 2024-12-23 10:49:37
-updated: 2024-12-23 10:49:37
+date: "2024-12-23T10:49:37+08:00"
+lastmod: "2024-12-23T10:49:37+08:00"
 ---
 ## Problem
 
@@ -18,16 +17,18 @@ Return _an edge that can be removed so that the resulting graph is a tree of_ `n
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `edges = [[1,2],[1,3],[2,3]]`
+> Input: `edges = [[1,2],[1,3],[2,3]]`\
 > Output: `[2,3]`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `edges = [[1,2],[2,3],[3,4],[1,4],[1,5]]`
+> Input: `edges = [[1,2],[2,3],[3,4],[1,4],[1,5]]`\
 > Output: `[1,4]`
 
 **Constraints:**
@@ -47,7 +48,7 @@ class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,4 +66,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

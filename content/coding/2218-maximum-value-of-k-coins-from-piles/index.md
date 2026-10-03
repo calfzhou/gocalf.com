@@ -1,11 +1,9 @@
 ---
 title: 2218. Maximum Value of K Coins From Piles
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2025-01-21 22:48:51
-updated: 2025-01-21 22:48:51
+date: "2025-01-21T22:48:51+08:00"
+lastmod: "2025-01-21T22:48:51+08:00"
 ---
 ## Problem
 
@@ -19,18 +17,19 @@ Given a list `piles`, where `piles[i]` is a list of integers denoting the compos
 
 **Example 1:**
 
-![case1|600](case1.png "case1"){.invert-when-dark}
+![case1|600](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `piles = [[1,100,3],[7,8,9]], k = 2`
-> Output: `101`
+> Input: `piles = [[1,100,3],[7,8,9]], k = 2`\
+> Output: `101`\
 > Explanation:
 > The above diagram shows the different ways we can choose k coins.
 > The maximum total we can obtain is 101.
 
 **Example 2:**
 
-> Input: `piles = [[100],[100],[100],[100],[100],[100],[1,1,1,1,1,1,700]], k = 7`
-> Output: `706`
+> Input: `piles = [[100],[100],[100],[100],[100],[100],[1,1,1,1,1,1,700]], k = 7`\
+> Output: `706`\
 > Explanation:
 > The maximum total can be obtained if we choose all coins from the last pile.
 
@@ -48,7 +47,7 @@ class Solution:
     def maxValueOfCoins(self, piles: List[List[int]], k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -81,4 +80,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

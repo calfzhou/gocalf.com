@@ -1,11 +1,9 @@
 ---
 title: 377. Combination Sum IV
-notebook: coding
 tags:
 - medium
-date: 2024-11-24 20:52:25
-updated: 2024-11-24 20:52:25
-katex: true
+date: "2024-11-24T20:52:25+08:00"
+lastmod: "2024-11-24T20:52:25+08:00"
 ---
 ## Problem
 
@@ -17,8 +15,8 @@ The test cases are generated so that the answer can fit in a **32-bit** integer.
 
 **Example 1:**
 
-> Input: `nums = [1,2,3], target = 4`
-> Output: `7`
+> Input: `nums = [1,2,3], target = 4`\
+> Output: `7`\
 > Explanation:
 > The possible combination ways are:
 > `(1, 1, 1, 1)`
@@ -32,7 +30,7 @@ The test cases are generated so that the answer can fit in a **32-bit** integer.
 
 **Example 2:**
 
-> Input: `nums = [9], target = 3`
+> Input: `nums = [9], target = 3`\
 > Output: `0`
 
 **Constraints:**
@@ -51,7 +49,7 @@ class Solution:
     def combinationSum4(self, nums: List[int], target: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -75,4 +73,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 226. Invert Binary Tree
-notebook: coding
 tags:
 - easy
-date: 2024-11-23 18:58:59
-updated: 2024-11-23 18:58:59
+date: "2024-11-23T18:58:59+08:00"
+lastmod: "2024-11-23T18:58:59+08:00"
 ---
 ## Problem
 
@@ -14,21 +13,23 @@ Given the `root` of a binary tree, invert the tree, and return _its root_.
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `root = [4,2,7,1,3,6,9]`
+> Input: `root = [4,2,7,1,3,6,9]`\
 > Output: `[4,7,2,9,6,3,1]`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `root = [4,2,7,1,3,6,9]`
+> Input: `root = [4,2,7,1,3,6,9]`\
 > Output: `[4,7,2,9,6,3,1]`
 
 **Example 3:**
 
-> Input: `root = []`
+> Input: `root = []`\
 > Output: `[]`
 
 **Constraints:**
@@ -49,7 +50,7 @@ class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -57,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 23. Merge k Sorted Lists
-notebook: coding
 tags:
 - hard
-date: 2024-11-14 20:59:13
-updated: 2024-11-14 20:59:13
+date: "2024-11-14T20:59:13+08:00"
+lastmod: "2024-11-14T20:59:13+08:00"
 ---
 ## Problem
 
@@ -16,8 +15,8 @@ _Merge all the linked-lists into one sorted linked-list and return it._
 
 **Example 1:**
 
-> Input: `lists = [[1,4,5],[1,3,4],[2,6]]`
-> Output: `[1,1,2,3,4,4,5,6]`
+> Input: `lists = [[1,4,5],[1,3,4],[2,6]]`\
+> Output: `[1,1,2,3,4,4,5,6]`\
 > Explanation: The linked-lists are:
 >
 > ```text
@@ -33,12 +32,12 @@ _Merge all the linked-lists into one sorted linked-list and return it._
 
 **Example 2:**
 
-> Input: lists = `[]`
+> Input: lists = `[]`\
 > Output: `[]`
 
 **Example 3:**
 
-> Input: lists = `[[]]`
+> Input: lists = `[[]]`\
 > Output: `[]`
 
 **Constraints:**
@@ -62,7 +61,7 @@ class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -80,4 +79,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

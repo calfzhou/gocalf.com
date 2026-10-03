@@ -1,10 +1,9 @@
 ---
 title: 2264. Largest 3-Same-Digit Number in String
-notebook: coding
 tags:
 - easy
-date: 2025-01-08 00:17:44
-updated: 2025-01-08 00:17:44
+date: "2025-01-08T00:17:44+08:00"
+lastmod: "2025-01-08T00:17:44+08:00"
 ---
 ## Problem
 
@@ -24,21 +23,21 @@ Note:
 
 **Example 1:**
 
-> Input: `num = "6777133339"`
-> Output: `"777"`
+> Input: `num = "6777133339"`\
+> Output: `"777"`\
 > Explanation: There are two distinct good integers: `"777"` and `"333"`.
 > `"777"` is the largest, so we return `"777"`.
 
 **Example 2:**
 
-> Input: `num = "2300019"`
-> Output: `"000"`
+> Input: `num = "2300019"`\
+> Output: `"000"`\
 > Explanation: `"000"` is the only good integer.
 
 **Example 3:**
 
-> Input: `num = "42352338"`
-> Output: `""`
+> Input: `num = "42352338"`\
+> Output: `""`\
 > Explanation: No substring of length 3 consists of only one unique digit. Therefore, there are no good integers.
 
 **Constraints:**
@@ -53,10 +52,10 @@ class Solution:
     def largestGoodInteger(self, num: str) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

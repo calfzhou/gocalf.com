@@ -1,10 +1,9 @@
 ---
 title: 219. Contains Duplicate II
-notebook: coding
 tags:
 - easy
-date: 2025-01-29 22:36:39
-updated: 2025-01-29 22:36:39
+date: "2025-01-29T22:36:39+08:00"
+lastmod: "2025-01-29T22:36:39+08:00"
 ---
 ## Problem
 
@@ -14,17 +13,17 @@ Given an integer array `nums` and an integer `k`, return `true` _if there are tw
 
 **Example 1:**
 
-> Input: `nums = [1,2,3,1], k = 3`
+> Input: `nums = [1,2,3,1], k = 3`\
 > Output: `true`
 
 **Example 2:**
 
-> Input: `nums = [1,0,1,1], k = 1`
+> Input: `nums = [1,0,1,1], k = 1`\
 > Output: `true`
 
 **Example 3:**
 
-> Input: `nums = [1,2,3,1,2,3], k = 2`
+> Input: `nums = [1,2,3,1,2,3], k = 2`\
 > Output: `false`
 
 **Constraints:**
@@ -40,7 +39,7 @@ class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -48,4 +47,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

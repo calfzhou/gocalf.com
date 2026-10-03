@@ -1,10 +1,9 @@
 ---
 title: 2274. Maximum Consecutive Floors Without Special Floors
-notebook: coding
 tags:
 - medium
-date: 2025-01-06 00:20:47
-updated: 2025-01-06 00:20:47
+date: "2025-01-06T00:20:47+08:00"
+lastmod: "2025-01-06T00:20:47+08:00"
 ---
 ## Problem
 
@@ -18,8 +17,8 @@ Return _the **maximum** number of consecutive floors without a special floor_.
 
 **Example 1:**
 
-> Input: `bottom = 2, top = 9, special = [4,6]`
-> Output: `3`
+> Input: `bottom = 2, top = 9, special = [4,6]`\
+> Output: `3`\
 > Explanation: The following are the ranges (inclusive) of consecutive floors without a special floor:
 >
 > - `(2, 3)` with a total amount of 2 floors.
@@ -30,8 +29,8 @@ Return _the **maximum** number of consecutive floors without a special floor_.
 
 **Example 2:**
 
-> Input: `bottom = 6, top = 8, special = [7,6,8]`
-> Output: `0`
+> Input: `bottom = 6, top = 8, special = [7,6,8]`\
+> Output: `0`\
 > Explanation: Every floor rented is a special floor, so we return 0.
 
 **Constraints:**
@@ -47,7 +46,7 @@ class Solution:
     def maxConsecutive(self, bottom: int, top: int, special: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -55,4 +54,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

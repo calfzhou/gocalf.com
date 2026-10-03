@@ -1,10 +1,9 @@
 ---
 title: 2270. Number of Ways to Split Array
-notebook: coding
 tags:
 - medium
-date: 2025-01-03 10:02:43
-updated: 2025-01-03 10:02:43
+date: "2025-01-03T10:02:43+08:00"
+lastmod: "2025-01-03T10:02:43+08:00"
 ---
 ## Problem
 
@@ -21,8 +20,8 @@ Return _the number of **valid splits** in_ `nums`.
 
 **Example 1:**
 
-> Input: `nums = [10,4,-8,7]`
-> Output: `2`
+> Input: `nums = [10,4,-8,7]`\
+> Output: `2`\
 > Explanation:
 > There are three ways of splitting nums into two non-empty parts:
 >
@@ -34,8 +33,8 @@ Return _the number of **valid splits** in_ `nums`.
 
 **Example 2:**
 
-> Input: `nums = [2,3,1,0]`
-> Output: `2`
+> Input: `nums = [2,3,1,0]`\
+> Output: `2`\
 > Explanation:
 > There are two valid splits in nums:
 >
@@ -54,7 +53,7 @@ Tclass Solution:
     def waysToSplitArray(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +63,4 @@ Tclass Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 79. Word Search
-notebook: coding
 tags:
 - medium
-date: 2024-11-21 23:28:49
-updated: 2024-11-21 23:28:49
+date: "2024-11-21T23:28:49+08:00"
+lastmod: "2024-11-21T23:28:49+08:00"
 ---
 ## Problem
 
@@ -16,23 +15,26 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"`
+> Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"`\
 > Output: `true`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"`
+> Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"`\
 > Output: `true`
 
 **Example 3:**
 
-![case3](case3.png){.invert-when-dark}
+![case3](case3.png)
+{.invert-when-dark}
 
-> Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"`
+> Input: `board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"`\
 > Output: `false`
 
 **Constraints:**
@@ -52,7 +54,7 @@ class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -66,7 +68,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Follow up - Pruning
 
@@ -76,9 +78,7 @@ class Solution:
 
 比如下图的 `board`，目标 `word = "ABCDA"`。
 
-::: invert-when-dark
-{% diagramsnet abcda.drawio %}
-:::
+{{< diagramsnet src="abcda.drawio" >}}
 
 从 `board[0][1] = 'A'` 出发时，会发现 `board[1][1] = 'B'` 无法串出 `word[1:] = "BCDA"`；但是如果从 `board[1][0] = 'A'` 出发却可以。
 

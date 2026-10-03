@@ -1,10 +1,9 @@
 ---
 title: 2239. Find Closest Number to Zero
-notebook: coding
 tags:
 - easy
-date: 2025-01-20 21:00:20
-updated: 2025-01-20 21:00:20
+date: "2025-01-20T21:00:20+08:00"
+lastmod: "2025-01-20T21:00:20+08:00"
 ---
 ## Problem
 
@@ -14,8 +13,8 @@ Given an integer array `nums` of size `n`, return _the number with the value **c
 
 **Example 1:**
 
-> Input: `nums = [-4,-2,1,4,8]`
-> Output: `1`
+> Input: `nums = [-4,-2,1,4,8]`\
+> Output: `1`\
 > Explanation:
 > The distance from -4 to 0 is `|-4| = 4`.
 > The distance from -2 to 0 is `|-2| = 2`.
@@ -26,8 +25,8 @@ Given an integer array `nums` of size `n`, return _the number with the value **c
 
 **Example 2:**
 
-> Input: `nums = [2,-1,1]`
-> Output: `1`
+> Input: `nums = [2,-1,1]`\
+> Output: `1`\
 > Explanation: 1 and -1 are both the closest numbers to 0, so 1 being larger is returned.
 
 **Constraints:**
@@ -42,7 +41,7 @@ class Solution:
     def findClosestNumber(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -50,4 +49,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

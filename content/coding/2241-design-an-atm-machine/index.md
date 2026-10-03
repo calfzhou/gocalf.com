@@ -1,10 +1,9 @@
 ---
 title: 2241. Design an ATM Machine
-notebook: coding
 tags:
 - medium
-date: 2025-01-05 10:36:09
-updated: 2025-01-05 10:36:09
+date: "2025-01-05T10:36:09+08:00"
+lastmod: "2025-01-05T10:36:09+08:00"
 ---
 ## Problem
 
@@ -25,11 +24,11 @@ Implement the ATM class:
 
 **Example 1:**
 
-> Input
-> `["ATM", "deposit", "withdraw", "deposit", "withdraw", "withdraw"]`
-> `[[], [[0,0,1,2,1]], [600], [[0,1,0,1,1]], [600], [550]]`
-> Output
-> `[null, null, [0,0,1,0,1], null, [-1], [0,1,0,0,1]]`
+> Input\
+> `["ATM", "deposit", "withdraw", "deposit", "withdraw", "withdraw"]`\
+> `[[], [[0,0,1,2,1]], [600], [[0,1,0,1,1]], [600], [550]]`\
+> Output\
+> `[null, null, [0,0,1,0,1], null, [-1], [0,1,0,0,1]]`\
 > Explanation
 >
 > ```c++
@@ -80,7 +79,7 @@ class ATM:
 # param_2 = obj.withdraw(amount)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -90,4 +89,4 @@ class ATM:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 217. Contains Duplicate
-notebook: coding
 tags:
 - easy
-date: 2024-11-23 13:11:24
-updated: 2024-11-23 13:11:24
+date: "2024-11-23T13:11:24+08:00"
+lastmod: "2024-11-23T13:11:24+08:00"
 ---
 ## Problem
 
@@ -14,21 +13,21 @@ Given an integer array `nums`, return `true` if any value appears **at least twi
 
 **Example 1:**
 
-> Input: `nums = [1,2,3,1]`
-> Output: `true`
+> Input: `nums = [1,2,3,1]`\
+> Output: `true`\
 > Explanation:
 > The element 1 occurs at the indices 0 and 3.
 
 **Example 2:**
 
-> Input: `nums = [1,2,3,4]`
-> Output: `false`
+> Input: `nums = [1,2,3,4]`\
+> Output: `false`\
 > Explanation:
 > All elements are distinct.
 
 **Example 3:**
 
-> Input: `nums = [1,1,1,3,3,4,3,2,4,2]`
+> Input: `nums = [1,1,1,3,3,4,3,2,4,2]`\
 > Output: `true`
 
 **Constraints:**
@@ -43,7 +42,7 @@ class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -51,4 +50,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

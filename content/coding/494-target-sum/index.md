@@ -1,11 +1,9 @@
 ---
 title: 494. Target Sum
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-12-26 15:06:49
-updated: 2024-12-26 15:06:49
+date: "2024-12-26T15:06:49+08:00"
+lastmod: "2024-12-26T15:06:49+08:00"
 ---
 ## Problem
 
@@ -21,8 +19,8 @@ Return the number of different **expressions** that you can build, which evaluat
 
 **Example 1:**
 
-> Input: `nums = [1,1,1,1,1], target = 3`
-> Output: `5`
+> Input: `nums = [1,1,1,1,1], target = 3`\
+> Output: `5`\
 > Explanation: There are 5 ways to assign symbols to make the sum of nums be target 3.
 > `-1 + 1 + 1 + 1 + 1 = 3`
 > `+1 - 1 + 1 + 1 + 1 = 3`
@@ -32,7 +30,7 @@ Return the number of different **expressions** that you can build, which evaluat
 
 **Example 2:**
 
-> Input: `nums = [1], target = 1`
+> Input: `nums = [1], target = 1`\
 > Output: `1`
 
 **Constraints:**
@@ -49,7 +47,7 @@ class Solution:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -80,4 +78,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

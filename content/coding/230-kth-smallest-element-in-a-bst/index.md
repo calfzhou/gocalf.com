@@ -1,10 +1,9 @@
 ---
 title: 230. Kth Smallest Element in a BST
-notebook: coding
 tags:
 - medium
-date: 2024-11-23 22:14:01
-updated: 2024-11-23 22:14:01
+date: "2024-11-23T22:14:01+08:00"
+lastmod: "2024-11-23T22:14:01+08:00"
 ---
 ## Problem
 
@@ -14,16 +13,18 @@ Given the `root` of a binary search tree, and an integer `k`, return _the_ `kᵗ
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `root = [3,1,4,null,2], k = 1`
+> Input: `root = [3,1,4,null,2], k = 1`\
 > Output: `1`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `root = [5,3,6,2,4,null,null,1], k = 3`
+> Input: `root = [5,3,6,2,4,null,null,1], k = 3`\
 > Output: `3`
 
 **Constraints:**
@@ -47,7 +48,7 @@ class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 2109. Adding Spaces to a String
-notebook: coding
 tags:
 - medium
-date: 2024-12-03 10:55:30
-updated: 2024-12-03 10:55:30
+date: "2024-12-03T10:55:30+08:00"
+lastmod: "2024-12-03T10:55:30+08:00"
 ---
 ## Problem
 
@@ -18,24 +17,24 @@ Return _the modified string **after** the spaces have been added._
 
 **Example 1:**
 
-> Input: `s = "LeetcodeHelpsMeLearn", spaces = [8,13,15]`
-> Output: `"Leetcode Helps Me Learn"`
+> Input: `s = "LeetcodeHelpsMeLearn", spaces = [8,13,15]`\
+> Output: `"Leetcode Helps Me Learn"`\
 > Explanation:
-> The indices 8, 13, and 15 correspond to the underlined characters in "Leetcode{% u H %}elps{% u M %}e{% u L %}earn".
+> The indices 8, 13, and 15 correspond to the underlined characters in "Leetcode{{< u text="H" >}}elps{{< u text="M" >}}e{{< u text="L" >}}earn".
 > We then place spaces before those characters.
 
 **Example 2:**
 
-> Input: `s = "icodeinpython", spaces = [1,5,7,9]`
-> Output: `"i code in py thon"`
+> Input: `s = "icodeinpython", spaces = [1,5,7,9]`\
+> Output: `"i code in py thon"`\
 > Explanation:
-> The indices 1, 5, 7, and 9 correspond to the underlined characters in "i{% u c %}ode{% u i %}n{% u p %}y{% u t %}hon".
+> The indices 1, 5, 7, and 9 correspond to the underlined characters in "i{{< u text="c" >}}ode{{< u text="i" >}}n{{< u text="p" >}}y{{< u text="t" >}}hon".
 > We then place spaces before those characters.
 
 **Example 3:**
 
-> Input: `s = "spacing", spaces = [0,1,2,3,4,5,6]`
-> Output: `" s p a c i n g"`
+> Input: `s = "spacing", spaces = [0,1,2,3,4,5,6]`\
+> Output: `" s p a c i n g"`\
 > Explanation:
 > We are also able to place spaces before the first character of the string.
 
@@ -54,10 +53,10 @@ class Solution:
     def addSpaces(self, s: str, spaces: List[int]) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

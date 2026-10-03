@@ -1,10 +1,9 @@
 ---
 title: 211. Design Add and Search Words Data Structure
-notebook: coding
 tags:
 - medium
-date: 2024-11-22 23:09:07
-updated: 2024-11-22 23:09:07
+date: "2024-11-22T23:09:07+08:00"
+lastmod: "2024-11-22T23:09:07+08:00"
 ---
 ## Problem
 
@@ -20,11 +19,11 @@ Implement the `WordDictionary` class:
 
 **Example 1:**
 
-> Input
-> `["WordDictionary","addWord","addWord","addWord","search","search","search","search"]`
-> `[[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]]`
-> Output
-> `[null,null,null,null,false,true,true,true]`
+> Input\
+> `["WordDictionary","addWord","addWord","addWord","search","search","search","search"]`\
+> `[[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]]`\
+> Output\
+> `[null,null,null,null,false,true,true,true]`\
 > Explanation
 >
 > ```cpp
@@ -67,7 +66,7 @@ class WordDictionary:
 # param_2 = obj.search(word)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -85,10 +84,10 @@ class WordDictionary:
 
 ### Recursively
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Non-recursively
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 > 刻意将非递归方法写的跟递归的处理逻辑能对应上，可以注意从递归改为非递归时所做的调整。实际上就是树的深度优先遍历，这里将 `node` 设置为 `None` 来标识路径已经结束，可以从栈里弹出其他待处理的节点。
