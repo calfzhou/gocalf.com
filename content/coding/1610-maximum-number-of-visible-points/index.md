@@ -1,10 +1,9 @@
 ---
 title: 1610. Maximum Number of Visible Points
-notebook: coding
 tags:
 - hard
-date: 2024-12-21 21:55:57
-updated: 2024-12-21 21:55:57
+date: "2024-12-21T21:55:57+08:00"
+lastmod: "2024-12-21T21:55:57+08:00"
 ---
 ## Problem
 
@@ -12,7 +11,7 @@ You are given an array `points`, an integer `angle`, and your `location`, where 
 
 Initially, you are facing directly east from your position. You **cannot move** from your position, but you can **rotate**. In other words, `pos_x` and `pos_y` cannot be changed. Your field of view in **degrees** is represented by `angle`, determining how wide you can see from any given view direction. Let `d` be the amount in degrees that you rotate counterclockwise. Then, your field of view is the **inclusive** range of angles `[d - angle/2, d + angle/2]`.
 
-{% video https://assets.leetcode.com/uploads/2020/09/30/angle.mp4 width:480px %}
+{{< video src="https://assets.leetcode.com/uploads/2020/09/30/angle.mp4" width=480 >}}
 
 You can **see** some set of points if, for each point, the **angle** formed by the point, your position, and the immediate east direction from your position is **in your field of view**.
 
@@ -24,24 +23,26 @@ Return _the maximum number of points you can see_.
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `points = [[2,1],[2,2],[3,3]], angle = 90, location = [1,1]`
-> Output: `3`
+> Input: `points = [[2,1],[2,2],[3,3]], angle = 90, location = [1,1]`\
+> Output: `3`\
 > Explanation: The shaded region represents your field of view. All points can be made visible in your field of view, including `[3,3]` even though `[2,2]` is in front and in the same line of sight.
 
 **Example 2:**
 
-> Input: `points = [[2,1],[2,2],[3,4],[1,1]], angle = 90, location = [1,1]`
-> Output: `4`
+> Input: `points = [[2,1],[2,2],[3,4],[1,1]], angle = 90, location = [1,1]`\
+> Output: `4`\
 > Explanation: All points can be made visible in your field of view, including the one at your location.
 
 **Example 3:**
 
-![case3](case3.png){.invert-when-dark}
+![case3](case3.png)
+{.invert-when-dark}
 
-> Input: `points = [[1,0],[2,1]], angle = 13, location = [1,1]`
-> Output: `1`
+> Input: `points = [[1,0],[2,1]], angle = 13, location = [1,1]`\
+> Output: `1`\
 > Explanation: You can only see one of the two points, as shown above.
 
 **Constraints:**
@@ -59,7 +60,7 @@ class Solution:
     def visiblePoints(self, points: List[List[int]], angle: int, location: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -79,4 +80,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

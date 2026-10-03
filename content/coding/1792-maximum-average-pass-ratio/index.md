@@ -1,11 +1,9 @@
 ---
 title: 1792. Maximum Average Pass Ratio
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-12-15 20:10:53
-updated: 2024-12-15 20:10:53
+date: "2024-12-15T20:10:53+08:00"
+lastmod: "2024-12-15T20:10:53+08:00"
 ---
 ## Problem
 
@@ -21,13 +19,13 @@ Return _the **maximum** possible average pass ratio after assigning the_ `extraS
 
 **Example 1:**
 
-> Input: `classes = [[1,2],[3,5],[2,2]], extraStudents = 2`
-> Output: `0.78333`
+> Input: `classes = [[1,2],[3,5],[2,2]], extraStudents = 2`\
+> Output: `0.78333`\
 > Explanation: You can assign the two extra students to the first class. The average pass ratio will be equal to `(3/4 + 3/5 + 2/2) / 3 = 0.78333`.
 
 **Example 2:**
 
-> Input: `classes = [[2,4],[3,9],[4,5],[2,10]], extraStudents = 4`
+> Input: `classes = [[2,4],[3,9],[4,5],[2,10]], extraStudents = 4`\
 > Output: `0.53485`
 
 **Constraints:**
@@ -44,7 +42,7 @@ class Solution:
     def maxAverageRatio(self, classes: List[List[int]], extraStudents: int) -> float:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -70,4 +68,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

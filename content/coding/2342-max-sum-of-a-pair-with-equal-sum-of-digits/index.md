@@ -1,10 +1,9 @@
 ---
 title: 2342. Max Sum of a Pair With Equal Sum of Digits
-notebook: coding
 tags:
 - medium
-date: 2025-02-12 10:09:30
-updated: 2025-02-12 10:09:30
+date: "2025-02-12T10:09:30+08:00"
+lastmod: "2025-02-12T10:09:30+08:00"
 ---
 ## Problem
 
@@ -16,8 +15,8 @@ Return _the **maximum** value of_ `nums[i] + nums[j]` _that you can obtain over 
 
 **Example 1:**
 
-> Input: `nums = [18,43,36,13,7]`
-> Output: `54`
+> Input: `nums = [18,43,36,13,7]`\
+> Output: `54`\
 > Explanation: The pairs `(i, j)` that satisfy the conditions are:
 >
 > - `(0, 2)`, both numbers have a sum of digits equal to 9, and their sum is `18 + 36 = 54`.
@@ -27,8 +26,8 @@ Return _the **maximum** value of_ `nums[i] + nums[j]` _that you can obtain over 
 
 **Example 2:**
 
-> Input: `nums = [10,12,19,14]`
-> Output: `-1`
+> Input: `nums = [10,12,19,14]`\
+> Output: `-1`\
 > Explanation: There are no two numbers that satisfy the conditions, so we return -1.
 
 **Constraints:**
@@ -43,7 +42,7 @@ class Solution:
     def maximumSum(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -57,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

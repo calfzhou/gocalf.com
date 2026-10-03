@@ -1,10 +1,9 @@
 ---
 title: 1552. Magnetic Force Between Two Balls
-notebook: coding
 tags:
 - medium
-date: 2025-02-14 11:33:46
-updated: 2025-02-14 11:33:46
+date: "2025-02-14T11:33:46+08:00"
+lastmod: "2025-02-14T11:33:46+08:00"
 ---
 ## Problem
 
@@ -18,16 +17,17 @@ Given the integer array `position` and the integer `m`. Return _the required for
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `position = [1,2,3,4,7], m = 3`
-> Output: `3`
+> Input: `position = [1,2,3,4,7], m = 3`\
+> Output: `3`\
 > Explanation: Distributing the 3 balls into baskets 1, 4 and 7 will make the magnetic force between ball pairs `[3, 3, 6]`. The minimum magnetic force is 3. We cannot achieve a larger minimum magnetic force than 3.
 
 **Example 2:**
 
-> Input: `position = [5,4,3,2,1,1000000000], m = 2`
-> Output: `999999999`
+> Input: `position = [5,4,3,2,1,1000000000], m = 2`\
+> Output: `999999999`\
 > Explanation: We can use baskets 1 and 1000000000.
 
 **Constraints:**
@@ -45,7 +45,7 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -61,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

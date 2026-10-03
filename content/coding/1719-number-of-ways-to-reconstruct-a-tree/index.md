@@ -1,12 +1,11 @@
 ---
 title: 1719. Number Of Ways To Reconstruct A Tree
-notebook: coding
 tags:
 - hard
 - difficult
 - todo
-date: 2024-12-10 22:46:37
-updated: 2024-12-10 22:46:37
+date: "2024-12-10T22:46:37+08:00"
+lastmod: "2024-12-10T22:46:37+08:00"
 ---
 ## Problem
 
@@ -37,24 +36,26 @@ An **ancestor** of a node is any node on the path from the root to that node (ex
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `pairs = [[1,2],[2,3]]`
-> Output: `1`
+> Input: `pairs = [[1,2],[2,3]]`\
+> Output: `1`\
 > Explanation: There is exactly one valid rooted tree, which is shown in the above figure.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `pairs = [[1,2],[2,3],[1,3]]`
-> Output: `2`
+> Input: `pairs = [[1,2],[2,3],[1,3]]`\
+> Output: `2`\
 > Explanation: There are multiple valid rooted trees. Three of them are shown in the above figures.
 
 **Example 3:**
 
-> Input: `pairs = [[1,2],[2,3],[2,4],[1,5]]`
-> Output: `0`
+> Input: `pairs = [[1,2],[2,3],[2,4],[1,5]]`\
+> Output: `0`\
 > Explanation: There are no valid rooted trees.
 
 **Constraints:**
@@ -70,7 +71,7 @@ class Solution:
     def checkWays(self, pairs: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -84,6 +85,6 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 不是很快，还有优化空间。TODO。

@@ -1,10 +1,9 @@
 ---
 title: 171. Excel Sheet Column Number
-notebook: coding
 tags:
 - easy
-date: 2025-01-02 23:23:27
-updated: 2025-01-02 23:23:27
+date: "2025-01-02T23:23:27+08:00"
+lastmod: "2025-01-02T23:23:27+08:00"
 ---
 ## Problem
 
@@ -25,17 +24,17 @@ For example:
 
 **Example 1:**
 
-> Input: `columnTitle = "A"`
+> Input: `columnTitle = "A"`\
 > Output: `1`
 
 **Example 2:**
 
-> Input: `columnTitle = "AB"`
+> Input: `columnTitle = "AB"`\
 > Output: `28`
 
 **Example 3:**
 
-> Input: `columnTitle = "ZY"`
+> Input: `columnTitle = "ZY"`\
 > Output: `701`
 
 **Constraints:**
@@ -51,7 +50,7 @@ class Solution:
     def titleToNumber(self, columnTitle: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -63,4 +62,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

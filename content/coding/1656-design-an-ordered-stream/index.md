@@ -1,10 +1,9 @@
 ---
 title: 1656. Design an Ordered Stream
-notebook: coding
 tags:
 - easy
-date: 2025-02-24 10:01:02
-updated: 2025-02-24 10:01:02
+date: "2025-02-24T10:01:02+08:00"
+lastmod: "2025-02-24T10:01:02+08:00"
 ---
 ## Problem
 
@@ -21,12 +20,13 @@ Implement the `OrderedStream` class:
 
 **Example 1:**
 
-![case1](case1.gif){.invert-when-dark}
+![case1](case1.gif)
+{.invert-when-dark}
 
-> Input
-> `["OrderedStream", "insert", "insert", "insert", "insert", "insert"]`
-> `[[5], [3, "ccccc"], [1, "aaaaa"], [2, "bbbbb"], [5, "eeeee"], [4, "ddddd"]]`
-> Output
+> Input\
+> `["OrderedStream", "insert", "insert", "insert", "insert", "insert"]`\
+> `[[5], [3, "ccccc"], [1, "aaaaa"], [2, "bbbbb"], [5, "eeeee"], [4, "ddddd"]]`\
+> Output\
 > `[null, [], ["aaaaa"], ["bbbbb", "ccccc"], [], ["ddddd", "eeeee"]]`
 >
 > Explanation
@@ -70,7 +70,7 @@ class OrderedStream:
 # param_1 = obj.insert(idKey,value)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -80,4 +80,4 @@ class OrderedStream:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

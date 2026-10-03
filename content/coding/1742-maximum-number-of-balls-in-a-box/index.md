@@ -1,10 +1,9 @@
 ---
 title: 1742. Maximum Number of Balls in a Box
-notebook: coding
 tags:
 - easy
-date: 2025-02-13 10:07:26
-updated: 2025-02-13 10:07:26
+date: "2025-02-13T10:07:26+08:00"
+lastmod: "2025-02-13T10:07:26+08:00"
 ---
 ## Problem
 
@@ -18,8 +17,8 @@ Given two integers `lowLimit` and `highLimit`, return _the number of balls in th
 
 **Example 1:**
 
-> Input: `lowLimit = 1, highLimit = 10`
-> Output: `2`
+> Input: `lowLimit = 1, highLimit = 10`\
+> Output: `2`\
 > Explanation:
 >
 > ```text
@@ -31,8 +30,8 @@ Given two integers `lowLimit` and `highLimit`, return _the number of balls in th
 
 **Example 2:**
 
-> Input: lowLimit = 5, highLimit = 15
-> Output: 2
+> Input: lowLimit = 5, highLimit = 15\
+> Output: 2\
 > Explanation:
 >
 > ```text
@@ -44,8 +43,8 @@ Given two integers `lowLimit` and `highLimit`, return _the number of balls in th
 
 **Example 3:**
 
-> Input: lowLimit = 19, highLimit = 28
-> Output: 2
+> Input: lowLimit = 19, highLimit = 28\
+> Output: 2\
 > Explanation:
 >
 > ```text
@@ -66,7 +65,7 @@ class Solution:
     def countBalls(self, lowLimit: int, highLimit: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,4 +77,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

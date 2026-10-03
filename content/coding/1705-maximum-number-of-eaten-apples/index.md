@@ -1,10 +1,9 @@
 ---
 title: 1705. Maximum Number of Eaten Apples
-notebook: coding
 tags:
 - medium
-date: 2024-12-24 10:12:56
-updated: 2024-12-24 10:12:56
+date: "2024-12-24T10:12:56+08:00"
+lastmod: "2024-12-24T10:12:56+08:00"
 ---
 ## Problem
 
@@ -18,8 +17,8 @@ Given two integer arrays `days` and `apples` of length `n`, return _the maximum 
 
 **Example 1:**
 
-> Input: `apples = [1,2,3,5,2], days = [3,2,1,4,2]`
-> Output: `7`
+> Input: `apples = [1,2,3,5,2], days = [3,2,1,4,2]`\
+> Output: `7`\
 > Explanation: You can eat 7 apples:
 >
 > - On the first day, you eat an apple that grew on the first day.
@@ -29,8 +28,8 @@ Given two integer arrays `days` and `apples` of length `n`, return _the maximum 
 
 **Example 2:**
 
-> Input: `apples = [3,0,0,0,0,2], days = [3,0,0,0,0,2]`
-> Output: `5`
+> Input: `apples = [3,0,0,0,0,2], days = [3,0,0,0,0,2]`\
+> Output: `5`\
 > Explanation: You can eat 5 apples:
 >
 > - On the first to the third day you eat apples that grew on the first day.
@@ -51,7 +50,7 @@ class Solution:
     def eatenApples(self, apples: List[int], days: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,4 +64,4 @@ n 天之后，不会再有新的苹果，可以一次计算出堆顶的一拨苹
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

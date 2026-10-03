@@ -1,11 +1,9 @@
 ---
 title: 221. Maximal Square
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-01-01 11:10:50
-updated: 2025-01-01 11:10:50
+date: "2025-01-01T11:10:50+08:00"
+lastmod: "2025-01-01T11:10:50+08:00"
 ---
 ## Problem
 
@@ -15,21 +13,23 @@ Given an `m x n` binary `matrix` filled with `0`'s and `1`'s, _find the largest 
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]`
+> Input: `matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]`\
 > Output: `4`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `matrix = [["0","1"],["1","0"]]`
+> Input: `matrix = [["0","1"],["1","0"]]`\
 > Output: `1`
 
 **Example 3:**
 
-> Input: `matrix = [["0"]]`
+> Input: `matrix = [["0"]]`\
 > Output: `0`
 
 **Constraints:**
@@ -46,7 +46,7 @@ class Solution:
     def maximalSquare(self, matrix: List[List[str]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -90,4 +90,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

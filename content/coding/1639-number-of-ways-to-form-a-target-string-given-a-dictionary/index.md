@@ -1,11 +1,9 @@
 ---
 title: 1639. Number of Ways to Form a Target String Given a Dictionary
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2024-12-29 20:43:54
-updated: 2024-12-29 20:43:54
+date: "2024-12-29T20:43:54+08:00"
+lastmod: "2024-12-29T20:43:54+08:00"
 ---
 ## Problem
 
@@ -26,25 +24,25 @@ Return _the number of ways to form `target` from `words`_. Since the answer may 
 
 **Example 1:**
 
-> Input: `words = ["acca","bbbb","caca"], target = "aba"`
-> Output: `6`
+> Input: `words = ["acca","bbbb","caca"], target = "aba"`\
+> Output: `6`\
 > Explanation: There are 6 ways to form target.
-> "aba" -> index 0 ("{% u a %}cca"), index 1 ("b{% u b %}bb"), index 3 ("cac{% u a %}")
-> "aba" -> index 0 ("{% u a %}cca"), index 2 ("bb{% u b %}b"), index 3 ("cac{% u a %}")
-> "aba" -> index 0 ("{% u a %}cca"), index 1 ("b{% u b %}bb"), index 3 ("acc{% u a %}")
-> "aba" -> index 0 ("{% u a %}cca"), index 2 ("bb{% u b %}b"), index 3 ("acc{% u a %}")
-> "aba" -> index 1 ("c{% u a %}ca"), index 2 ("bb{% u b %}b"), index 3 ("acc{% u a %}")
-> "aba" -> index 1 ("c{% u a %}ca"), index 2 ("bb{% u b %}b"), index 3 ("cac{% u a %}")
+> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 1 ("b{{< u text="b" >}}bb"), index 3 ("cac{{< u text="a" >}}")
+> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 2 ("bb{{< u text="b" >}}b"), index 3 ("cac{{< u text="a" >}}")
+> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 1 ("b{{< u text="b" >}}bb"), index 3 ("acc{{< u text="a" >}}")
+> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 2 ("bb{{< u text="b" >}}b"), index 3 ("acc{{< u text="a" >}}")
+> "aba" -> index 1 ("c{{< u text="a" >}}ca"), index 2 ("bb{{< u text="b" >}}b"), index 3 ("acc{{< u text="a" >}}")
+> "aba" -> index 1 ("c{{< u text="a" >}}ca"), index 2 ("bb{{< u text="b" >}}b"), index 3 ("cac{{< u text="a" >}}")
 
 **Example 2:**
 
-> Input: `words = ["abba","baab"], target = "bab"`
-> Output: `4`
+> Input: `words = ["abba","baab"], target = "bab"`\
+> Output: `4`\
 > Explanation: There are 4 ways to form target.
-> "bab" -> index 0 ("{% u b %}aab"), index 1 ("b{% u a %}ab"), index 2 ("ab{% u b %}a")
-> "bab" -> index 0 ("{% u b %}aab"), index 1 ("b{% u a %}ab"), index 3 ("baa{% u b %}")
-> "bab" -> index 0 ("{% u b %}aab"), index 2 ("ba{% u a %}b"), index 3 ("baa{% u b %}")
-> "bab" -> index 1 ("a{% u b %}ba"), index 2 ("ba{% u a %}b"), index 3 ("baa{% u b %}")
+> "bab" -> index 0 ("{{< u text="b" >}}aab"), index 1 ("b{{< u text="a" >}}ab"), index 2 ("ab{{< u text="b" >}}a")
+> "bab" -> index 0 ("{{< u text="b" >}}aab"), index 1 ("b{{< u text="a" >}}ab"), index 3 ("baa{{< u text="b" >}}")
+> "bab" -> index 0 ("{{< u text="b" >}}aab"), index 2 ("ba{{< u text="a" >}}b"), index 3 ("baa{{< u text="b" >}}")
+> "bab" -> index 1 ("a{{< u text="b" >}}ba"), index 2 ("ba{{< u text="a" >}}b"), index 3 ("baa{{< u text="b" >}}")
 
 **Constraints:**
 
@@ -61,7 +59,7 @@ class Solution:
     def numWays(self, words: List[str], target: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -79,9 +77,7 @@ class Solution:
 
 为了方便，可以把每个 i 的可选区间左对齐，得到一个 m 行 `n'` 列的 grid（如下图）。用 `j'` 表示可选区间的第 `j'` 个位置，其对应于第 `(i + j')`ᵗʰ 字符，格子内的数值为 `occ(i+j', target[i])`。。
 
-::: invert-when-dark
-{% diagramsnet choose-from.drawio %}
-:::
+{{< diagramsnet src="choose-from.drawio" >}}
 
 对每一行做出选择，但每一行选的 `j'` 都不能小于上一行所选的 `j'`。这就相当于从上图右边 grid 的左上角，只能向右或向下移动，最终走到右下角，看有多少种走法。跟 [62. Unique Paths](../62-unique-paths/index.md) 是一样的，只不过每个格子都带上了「系数」。
 
@@ -89,9 +85,7 @@ class Solution:
 
 如下图的蓝色路径，三次向下走到达的格子坐标分别为 `(0, 0)`、`(1, 0)` 和 `(2, 1)`，对应于 `occ(0+0, "a") = 1`、`occ(1+0, "b") = 1` 和 `occ(2+1, "a") = 2`，共 `1 * 1 * 2 = 2` 个选择。
 
-::: invert-when-dark
-{% diagramsnet one-path.drawio %}
-:::
+{{< diagramsnet src="one-path.drawio" >}}
 
 把所有路径的选择数累加起来，就是最终的结果。
 
@@ -109,4 +103,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

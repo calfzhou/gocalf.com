@@ -1,10 +1,9 @@
 ---
 title: 1591. Strange Printer II
-notebook: coding
 tags:
 - hard
-date: 2024-12-22 22:58:24
-updated: 2024-12-22 22:58:24
+date: "2024-12-22T22:58:24+08:00"
+lastmod: "2024-12-22T22:58:24+08:00"
 ---
 ## Problem
 
@@ -21,22 +20,24 @@ Return `true` _if it is possible to print the matrix_ `targetGrid`_,_ _otherwise
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `targetGrid = [[1,1,1,1],[1,2,2,1],[1,2,2,1],[1,1,1,1]]`
+> Input: `targetGrid = [[1,1,1,1],[1,2,2,1],[1,2,2,1],[1,1,1,1]]`\
 > Output: `true`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `targetGrid = [[1,1,1,1],[1,1,3,3],[1,1,3,4],[5,5,1,4]]`
+> Input: `targetGrid = [[1,1,1,1],[1,1,3,3],[1,1,3,4],[5,5,1,4]]`\
 > Output: `true`
 
 **Example 3:**
 
-> Input: `targetGrid = [[1,2,1],[2,1,2],[1,2,1]]`
-> Output: `false`
+> Input: `targetGrid = [[1,2,1],[2,1,2],[1,2,1]]`\
+> Output: `false`\
 > Explanation: It is impossible to form targetGrid because it is not allowed to print the same color in different turns.
 
 **Constraints:**
@@ -53,7 +54,7 @@ class Solution:
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -71,7 +72,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster
 
@@ -87,8 +88,8 @@ class Solution:
 
 最坏情况时间复杂度都是 `O(m * n * k²)`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
-{% snippet solution3.py %}
+{{< snippet src="solution3.py" >}}
 
 > 实际提交之后的运行时间，`solution.py > solution2.py > solution3.py`（基本都是差 3 倍），但时间复杂度都差不多。尤其 solution2 和 solution3 哪个跑得快，跟测试用例的情况也有较大关系。

@@ -1,10 +1,9 @@
 ---
 title: 1752. Check if Array Is Sorted and Rotated
-notebook: coding
 tags:
 - easy
-date: 2025-02-02 11:17:42
-updated: 2025-02-02 11:17:42
+date: "2025-02-02T11:17:42+08:00"
+lastmod: "2025-02-02T11:17:42+08:00"
 ---
 ## Problem
 
@@ -18,21 +17,21 @@ There may be **duplicates** in the original array.
 
 **Example 1:**
 
-> Input: `nums = [3,4,5,1,2]`
-> Output: `true`
+> Input: `nums = [3,4,5,1,2]`\
+> Output: `true`\
 > Explanation: `[1,2,3,4,5]` is the original sorted array.
 > You can rotate the array by `x = 3` positions to begin on the the element of value 3: `[3,4,5,1,2]`.
 
 **Example 2:**
 
-> Input: `nums = [2,1,3,4]`
-> Output: `false`
+> Input: `nums = [2,1,3,4]`\
+> Output: `false`\
 > Explanation: There is no sorted array once rotated that can make nums.
 
 **Example 3:**
 
-> Input: `nums = [1,2,3]`
-> Output: `true`
+> Input: `nums = [1,2,3]`\
+> Output: `true`\
 > Explanation: `[1,2,3]` is the original sorted array.
 > You can rotate the array by `x = 0` positions (i.e. no rotation) to make nums.
 
@@ -48,7 +47,7 @@ class Solution:
     def check(self, nums: List[int]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -58,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

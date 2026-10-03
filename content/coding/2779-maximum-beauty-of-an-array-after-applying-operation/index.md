@@ -1,10 +1,9 @@
 ---
 title: 2779. Maximum Beauty of an Array After Applying Operation
-notebook: coding
 tags:
 - medium
-date: 2024-12-11 11:50:48
-updated: 2024-12-11 11:50:48
+date: "2024-12-11T11:50:48+08:00"
+lastmod: "2024-12-11T11:50:48+08:00"
 ---
 ## Problem
 
@@ -27,8 +26,8 @@ A **subsequence** of an array is a new array generated from the original array 
 
 **Example 1:**
 
-> Input: `nums = [4,6,1,2], k = 2`
-> Output: `3`
+> Input: `nums = [4,6,1,2], k = 2`\
+> Output: `3`\
 > Explanation: In this example, we apply the following operations:
 >
 > - Choose index 1, replace it with 4 (from range `[4,8]`), `nums = [4,4,1,2]`.
@@ -39,8 +38,8 @@ A **subsequence** of an array is a new array generated from the original array 
 
 **Example 2:**
 
-> Input: `nums = [1,1,1,1], k = 10`
-> Output: `4`
+> Input: `nums = [1,1,1,1], k = 10`\
+> Output: `4`\
 > Explanation: In this example we don't have to apply any operations.
 > The beauty of the array `nums` is 4 (whole array).
 
@@ -56,7 +55,7 @@ class Solution:
     def maximumBeauty(self, nums: List[int], k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -68,7 +67,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 一个可选的优化是窗口在移动过程中，即使（在数轴上的）宽度已经超过 `2 * k`，也并不需要真的缩小窗口，而是维持之前的大小继续往右移动。直到移动到某个位置，（在数轴上的）宽度又小于 `2 * k`，再扩大窗口。也就是说窗口的大小只增不减，直接用自身记录可行窗口的最大大小。
 
@@ -76,4 +75,4 @@ class Solution:
 
 时间复杂度不变，可以减少一些操作次数。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

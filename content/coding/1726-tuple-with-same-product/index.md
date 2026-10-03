@@ -1,10 +1,9 @@
 ---
 title: 1726. Tuple with Same Product
-notebook: coding
 tags:
 - medium
-date: 2025-02-06 10:55:52
-updated: 2025-02-06 10:55:52
+date: "2025-02-06T10:55:52+08:00"
+lastmod: "2025-02-06T10:55:52+08:00"
 ---
 ## Problem
 
@@ -14,8 +13,8 @@ Given an array `nums` of **distinct** positive integers, return _the number of t
 
 **Example 1:**
 
-> Input: `nums = [2,3,4,6]`
-> Output: `8`
+> Input: `nums = [2,3,4,6]`\
+> Output: `8`\
 > Explanation: There are 8 valid tuples:
 >
 > ```cpp
@@ -25,8 +24,8 @@ Given an array `nums` of **distinct** positive integers, return _the number of t
 
 **Example 2:**
 
-> Input: `nums = [1,2,4,5,10]`
-> Output: `16`
+> Input: `nums = [1,2,4,5,10]`\
+> Output: `16`\
 > Explanation: There are 16 valid tuples:
 >
 > ```cpp
@@ -49,7 +48,7 @@ class Solution:
     def tupleSameProduct(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -61,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

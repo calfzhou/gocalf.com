@@ -1,10 +1,9 @@
 ---
 title: 1790. Check if One String Swap Can Make Strings Equal
-notebook: coding
 tags:
 - easy
-date: 2025-02-05 10:06:55
-updated: 2025-02-05 10:06:55
+date: "2025-02-05T10:06:55+08:00"
+lastmod: "2025-02-05T10:06:55+08:00"
 ---
 ## Problem
 
@@ -16,20 +15,20 @@ Return `true` _if it is possible to make both strings equal by performing **at m
 
 **Example 1:**
 
-> Input: `s1 = "bank", s2 = "kanb"`
-> Output: `true`
+> Input: `s1 = "bank", s2 = "kanb"`\
+> Output: `true`\
 > Explanation: For example, swap the first character with the last character of `s2` to make `"bank"`.
 
 **Example 2:**
 
-> Input: `s1 = "attack", s2 = "defend"`
-> Output: `false`
+> Input: `s1 = "attack", s2 = "defend"`\
+> Output: `false`\
 > Explanation: It is impossible to make them equal with one string swap.
 
 **Example 3:**
 
-> Input: `s1 = "kelb", s2 = "kelb"`
-> Output: `true`
+> Input: `s1 = "kelb", s2 = "kelb"`\
+> Output: `true`\
 > Explanation: The two strings are already equal, so no string swap operation is required.
 
 **Constraints:**
@@ -45,7 +44,7 @@ class Solution:
     def areAlmostEqual(self, s1: str, s2: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -61,4 +60,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

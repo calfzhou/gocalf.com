@@ -1,10 +1,9 @@
 ---
 title: 1765. Map of Highest Peak
-notebook: coding
 tags:
 - medium
-date: 2025-01-01 20:51:57
-updated: 2025-01-01 20:51:57
+date: "2025-01-01T20:51:57+08:00"
+lastmod: "2025-01-01T20:51:57+08:00"
 ---
 ## Problem
 
@@ -27,19 +26,21 @@ Return _an integer matrix_ `height` _of size_ `m x n` _where_ `height[i][j]` _is
 
 **Example 1:**
 
-![case1|220](case1.png "case1"){.invert-when-dark}
+![case1|220](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `isWater = [[0,1],[0,0]]`
-> Output: `[[1,0],[2,1]]`
+> Input: `isWater = [[0,1],[0,0]]`\
+> Output: `[[1,0],[2,1]]`\
 > Explanation: The image shows the assigned heights of each cell.
 > The blue cell is the water cell, and the green cells are the land cells.
 
 **Example 2:**
 
-![case2|300](case2.png "case2"){.invert-when-dark}
+![case2|300](case2.png "case2")
+{.invert-when-dark}
 
-> Input: `isWater = [[0,0,1],[1,0,0],[0,0,0]]`
-> Output: `[[1,1,0],[0,1,1],[1,2,2]]`
+> Input: `isWater = [[0,0,1],[1,0,0],[0,0,0]]`\
+> Output: `[[1,1,0],[0,1,1],[1,2,2]]`\
 > Explanation: A height of 2 is the maximum possible height of any assignment.
 > Any height assignment that has a maximum height of 2 while still meeting the rules will also be accepted.
 
@@ -60,7 +61,7 @@ class Solution:
     def highestPeak(self, isWater: List[List[int]]) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -76,4 +77,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

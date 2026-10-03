@@ -1,11 +1,9 @@
 ---
 title: 664. Strange Printer
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2024-12-22 01:13:24
-updated: 2024-12-22 01:13:24
+date: "2024-12-22T01:13:24+08:00"
+lastmod: "2024-12-22T01:13:24+08:00"
 ---
 ## Problem
 
@@ -20,14 +18,14 @@ Given a string `s`, return _the minimum number of turns the printer needed to pr
 
 **Example 1:**
 
-> Input: s = "aaabbb"
-> Output: 2
+> Input: s = "aaabbb"\
+> Output: 2\
 > Explanation: Print "aaa" first and then print "bbb".
 
 **Example 2:**
 
-> Input: s = "aba"
-> Output: 2
+> Input: s = "aba"\
+> Output: 2\
 > Explanation: Print "aaa" first and then print "b" from the second place of the string, which will cover the existing character 'a'.
 
 **Constraints:**
@@ -42,7 +40,7 @@ class Solution:
     def strangePrinter(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -77,8 +75,8 @@ $$
 
 ### Iteratively
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Recursively
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

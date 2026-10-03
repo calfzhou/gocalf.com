@@ -1,10 +1,9 @@
 ---
 title: 1561. Maximum Number of Coins You Can Get
-notebook: coding
 tags:
 - medium
-date: 2025-01-22 20:58:34
-updated: 2025-01-22 20:58:34
+date: "2025-01-22T20:58:34+08:00"
+lastmod: "2025-01-22T20:58:34+08:00"
 ---
 ## Problem
 
@@ -24,8 +23,8 @@ Return the maximum number of coins that you can have.
 
 **Example 1:**
 
-> Input: `piles = [2,4,1,2,7,8]`
-> Output: `9`
+> Input: `piles = [2,4,1,2,7,8]`\
+> Output: `9`\
 > Explanation: Choose the triplet `(2, 7, 8)`, Alice Pick the pile with 8 coins, you the pile with 7 coins and Bob the last one.
 > Choose the triplet `(1, 2, 4)`, Alice Pick the pile with 4 coins, you the pile with 2 coins and Bob the last one.
 > The maximum number of coins which you can have are: `7 + 2 = 9`.
@@ -33,12 +32,12 @@ Return the maximum number of coins that you can have.
 
 **Example 2:**
 
-> Input: `piles = [2,4,5]`
+> Input: `piles = [2,4,5]`\
 > Output: `4`
 
 **Example 3:**
 
-> Input: `piles = [9,8,7,6,5,1,2,3,4]`
+> Input: `piles = [9,8,7,6,5,1,2,3,4]`\
 > Output: `18`
 
 **Constraints:**
@@ -54,7 +53,7 @@ class Solution:
     def maxCoins(self, piles: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -66,4 +65,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

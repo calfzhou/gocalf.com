@@ -1,10 +1,9 @@
 ---
 title: 1718. Construct the Lexicographically Largest Valid Sequence
-notebook: coding
 tags:
 - medium
-date: 2025-02-16 17:58:36
-updated: 2025-02-16 17:58:36
+date: "2025-02-16T17:58:36+08:00"
+lastmod: "2025-02-16T17:58:36+08:00"
 ---
 ## Problem
 
@@ -24,13 +23,13 @@ A sequence `a` is lexicographically larger than a sequence `b` (of the same leng
 
 **Example 1:**
 
-> Input: `n = 3`
-> Output: `[3,1,2,3,2]`
+> Input: `n = 3`\
+> Output: `[3,1,2,3,2]`\
 > Explanation: `[2,3,2,1,3]` is also a valid sequence, but `[3,1,2,3,2]` is the lexicographically largest valid sequence.
 
 **Example 2:**
 
-> Input: `n = 5`
+> Input: `n = 5`\
 > Output: `[5,3,1,4,3,5,2,4,2]`
 
 **Constraints:**
@@ -44,7 +43,7 @@ class Solution:
     def constructDistancedSequence(self, n: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,11 +1,9 @@
 ---
 title: 1760. Minimum Limit of Balls in a Bag
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-12-07 20:55:03
-updated: 2024-12-07 20:55:03
+date: "2024-12-07T20:55:03+08:00"
+lastmod: "2024-12-07T20:55:03+08:00"
 ---
 ## Problem
 
@@ -24,25 +22,25 @@ Return _the minimum possible penalty after performing the operations_.
 
 **Example 1:**
 
-> Input: `nums = [9], maxOperations = 2`
-> Output: `3`
+> Input: `nums = [9], maxOperations = 2`\
+> Output: `3`\
 > Explanation:
 >
-> - Divide the bag with 9 balls into two bags of sizes 6 and 3. `[`{% u 9 %}`] -> [6,3]`.
-> - Divide the bag with 6 balls into two bags of sizes 3 and 3. `[`{% u 6 %}`,3] -> [3,3,3]`.
+> - Divide the bag with 9 balls into two bags of sizes 6 and 3. `[`{{< u text="9" >}}`] -> [6,3]`.
+> - Divide the bag with 6 balls into two bags of sizes 3 and 3. `[`{{< u text="6" >}}`,3] -> [3,3,3]`.
 >
 > The bag with the most number of balls has 3 balls, so your penalty is 3 and you should return 3.
 
 **Example 2:**
 
-> Input: `nums = [2,4,8,2], maxOperations = 4`
-> Output: `2`
+> Input: `nums = [2,4,8,2], maxOperations = 4`\
+> Output: `2`\
 > Explanation:
 >
-> - Divide the bag with 8 balls into two bags of sizes 4 and 4. `[2,4,`{% u 8 %}`,2] -> [2,4,4,4,2]`.
-> - Divide the bag with 4 balls into two bags of sizes 2 and 2. `[2,`{% u 4 %}`,4,4,2] -> [2,2,2,4,4,2]`.
-> - Divide the bag with 4 balls into two bags of sizes 2 and 2. `[2,2,2,`{% u 4 %}`,4,2] -> [2,2,2,2,2,4,2]`.
-> - Divide the bag with 4 balls into two bags of sizes 2 and 2. `[2,2,2,2,2,`{% u 4 %}`,2] -> [2,2,2,2,2,2,2,2]`.
+> - Divide the bag with 8 balls into two bags of sizes 4 and 4. `[2,4,`{{< u text="8" >}}`,2] -> [2,4,4,4,2]`.
+> - Divide the bag with 4 balls into two bags of sizes 2 and 2. `[2,`{{< u text="4" >}}`,4,4,2] -> [2,2,2,4,4,2]`.
+> - Divide the bag with 4 balls into two bags of sizes 2 and 2. `[2,2,2,`{{< u text="4" >}}`,4,2] -> [2,2,2,2,2,4,2]`.
+> - Divide the bag with 4 balls into two bags of sizes 2 and 2. `[2,2,2,2,2,`{{< u text="4" >}}`,2] -> [2,2,2,2,2,2,2,2]`.
 >
 > The bag with the most number of balls has 2 balls, so your penalty is 2, and you should return 2.
 
@@ -58,7 +56,7 @@ class Solution:
     def minimumSize(self, nums: List[int], maxOperations: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -82,7 +80,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## 二分法
 
@@ -98,4 +96,4 @@ class Solution:
 
 时间复杂度应该小于 `O(n log n)`（循环 `log n` 次，每次用 `O(n)` 时间计算所有数字拆到目标值需要的次数），空间复杂度 `O(1)`。实际跑的时间跟上边差不多，略快一些些。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

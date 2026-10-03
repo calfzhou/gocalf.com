@@ -1,11 +1,9 @@
 ---
 title: 1769. Minimum Number of Operations to Move All Balls to Each Box
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-01-06 11:41:07
-updated: 2025-01-06 11:41:07
+date: "2025-01-06T11:41:07+08:00"
+lastmod: "2025-01-06T11:41:07+08:00"
 ---
 ## Problem
 
@@ -21,8 +19,8 @@ Each `answer[i]` is calculated considering the **initial** state of the boxes.
 
 **Example 1:**
 
-> Input: `boxes = "110"`
-> Output: `[1,1,3]`
+> Input: `boxes = "110"`\
+> Output: `[1,1,3]`\
 > Explanation: The answer for each box is as follows:
 >
 > 1) First box: you will have to move one ball from the second box to the first box in one operation.
@@ -31,7 +29,7 @@ Each `answer[i]` is calculated considering the **initial** state of the boxes.
 
 **Example 2:**
 
-> Input: `boxes = "001011"`
+> Input: `boxes = "001011"`\
 > Output: `[11,8,5,4,3,4]`
 
 **Constraints:**
@@ -47,7 +45,7 @@ class Solution:
     def minOperations(self, boxes: str) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -92,4 +90,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 1728. Cat and Mouse II
-notebook: coding
 tags:
 - hard
-date: 2025-02-11 16:36:37
-updated: 2025-02-11 16:36:37
+date: "2025-02-11T16:36:37+08:00"
+lastmod: "2025-02-11T16:36:37+08:00"
 ---
 ## Problem
 
@@ -39,22 +38,24 @@ Given a `rows x cols` matrix `grid` and two integers `catJump` and `mouseJump`, 
 
 **Example 1:**
 
-![case1|580](case1.png "case1"){.invert-when-dark}
+![case1|580](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `grid = ["####F","#C...","M...."], catJump = 1, mouseJump = 2`
-> Output: `true`
+> Input: `grid = ["####F","#C...","M...."], catJump = 1, mouseJump = 2`\
+> Output: `true`\
 > Explanation: Cat cannot catch Mouse on its turn nor can it get the food before Mouse.
 
 **Example 2:**
 
-![case2|580](case2.png "case2"){.invert-when-dark}
+![case2|580](case2.png "case2")
+{.invert-when-dark}
 
-> Input: `grid = ["M.C...F"], catJump = 1, mouseJump = 4`
+> Input: `grid = ["M.C...F"], catJump = 1, mouseJump = 4`\
 > Output: `true`
 
 **Example 3:**
 
-> Input: `grid = ["M.C...F"], catJump = 1, mouseJump = 3`
+> Input: `grid = ["M.C...F"], catJump = 1, mouseJump = 3`\
 > Output: `false`
 
 **Constraints:**
@@ -73,7 +74,7 @@ class Solution:
     def canMouseWin(self, grid: List[str], catJump: int, mouseJump: int) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -95,4 +96,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

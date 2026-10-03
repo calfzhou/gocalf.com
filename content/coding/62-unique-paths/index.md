@@ -1,11 +1,9 @@
 ---
 title: 62. Unique Paths
-notebook: coding
 tags:
 - medium
-date: 2024-11-19 01:14:33
-updated: 2024-11-19 10:15:26
-katex: true
+date: "2024-11-19T01:14:33+08:00"
+lastmod: "2024-11-19T10:15:26+08:00"
 ---
 ## Problem
 
@@ -19,15 +17,16 @@ The test cases are generated so that the answer will be less than or equal to `2
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `m = 3, n = 7`
+> Input: `m = 3, n = 7`\
 > Output: `28`
 
 **Example 2:**
 
-> Input: `m = 3, n = 2`
-> Output: `3`
+> Input: `m = 3, n = 2`\
+> Output: `3`\
 > Explanation: From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
 >
 > 1. Right -> Down -> Down
@@ -45,7 +44,7 @@ class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,15 +63,13 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Math
 
 如果把所有的 `u[i][j]` 都写下来，很容易发现这就是个斜的杨辉三角，`u[i][j]` 就对应于杨辉三角中 `i + j` 行（注意顶行是「行 0」）的 `i` 或 `j` 列（同样最左列也是「列 0」）。
 
-::: invert-when-dark
-{% diagramsnet pascal.drawio %}
-:::
+{{< diagramsnet src="pascal.drawio" >}}
 
 可以直接用杨辉三角的计算公式（组合数）：
 
@@ -86,4 +83,4 @@ $$
 
 整体时间复杂度为 `O(min{m,n})`，空间复杂度 `O(1)`。
 
-{% snippet solution_math.py %}
+{{< snippet src="solution_math.py" >}}

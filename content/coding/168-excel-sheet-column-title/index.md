@@ -1,10 +1,9 @@
 ---
 title: 168. Excel Sheet Column Title
-notebook: coding
 tags:
 - easy
-date: 2025-01-02 23:07:44
-updated: 2025-01-02 23:07:44
+date: "2025-01-02T23:07:44+08:00"
+lastmod: "2025-01-02T23:07:44+08:00"
 ---
 ## Problem
 
@@ -25,17 +24,17 @@ For example:
 
 **Example 1:**
 
-> Input: `columnNumber = 1`
+> Input: `columnNumber = 1`\
 > Output: `"A"`
 
 **Example 2:**
 
-> Input: `columnNumber = 28`
+> Input: `columnNumber = 28`\
 > Output: `"AB"`
 
 **Example 3:**
 
-> Input: `columnNumber = 701`
+> Input: `columnNumber = 701`\
 > Output: `"ZY"`
 
 **Constraints:**
@@ -49,7 +48,7 @@ class Solution:
     def convertToTitle(self, columnNumber: int) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

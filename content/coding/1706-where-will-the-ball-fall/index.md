@@ -1,10 +1,9 @@
 ---
 title: 1706. Where Will the Ball Fall
-notebook: coding
 tags:
 - medium
-date: 2025-02-15 14:39:40
-updated: 2025-02-15 14:39:40
+date: "2025-02-15T14:39:40+08:00"
+lastmod: "2025-02-15T14:39:40+08:00"
 ---
 ## Problem
 
@@ -23,10 +22,11 @@ Return _an array_ `answer` _of size_ `n` _where_ `answer[i]` _is the column that
 
 **Example 1:**
 
-![case1|500](case1.jpg "case1"){.invert-when-dark}
+![case1|500](case1.jpg "case1")
+{.invert-when-dark}
 
-> Input: `grid = [[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]`
-> Output: `[1,-1,-1,-1,-1]`
+> Input: `grid = [[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]`\
+> Output: `[1,-1,-1,-1,-1]`\
 > Explanation: This example is shown in the photo.
 > Ball b0 is dropped at column 0 and falls out of the box at column 1.
 > Ball b1 is dropped at column 1 and will get stuck in the box between column 2 and 3 and row 1.
@@ -36,13 +36,13 @@ Return _an array_ `answer` _of size_ `n` _where_ `answer[i]` _is the column that
 
 **Example 2:**
 
-> Input: `grid = [[-1]]`
-> Output: `[-1]`
+> Input: `grid = [[-1]]`\
+> Output: `[-1]`\
 > Explanation: The ball gets stuck against the left wall.
 
 **Example 3:**
 
-> Input: `grid = [[1,1,1,1,1,1],[-1,-1,-1,-1,-1,-1],[1,1,1,1,1,1],[-1,-1,-1,-1,-1,-1]]`
+> Input: `grid = [[1,1,1,1,1,1],[-1,-1,-1,-1,-1,-1],[1,1,1,1,1,1],[-1,-1,-1,-1,-1,-1]]`\
 > Output: `[0,1,2,3,4,-1]`
 
 **Constraints:**
@@ -59,7 +59,7 @@ class Solution:
     def findBall(self, grid: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -71,4 +71,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

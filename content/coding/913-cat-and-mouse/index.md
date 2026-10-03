@@ -1,10 +1,9 @@
 ---
 title: 913. Cat and Mouse
-notebook: coding
 tags:
 - hard
-date: 2024-12-30 23:07:41
-updated: 2024-12-30 23:07:41
+date: "2024-12-30T23:07:41+08:00"
+lastmod: "2024-12-30T23:07:41+08:00"
 ---
 ## Problem
 
@@ -34,16 +33,18 @@ Given a `graph`, and assuming both players play optimally, return
 
 **Example 1:**
 
-![case1|300](case1.png "case1"){.invert-when-dark}
+![case1|300](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `graph = [[2,5],[3],[0,4,5],[1,4,5],[2,3],[0,2,3]]`
+> Input: `graph = [[2,5],[3],[0,4,5],[1,4,5],[2,3],[0,2,3]]`\
 > Output: `0`
 
 **Example 2:**
 
-![case2|200](case2.png "case2"){.invert-when-dark}
+![case2|200](case2.png "case2")
+{.invert-when-dark}
 
-> Input: `graph = [[1,3],[0],[3],[0,2]]`
+> Input: `graph = [[1,3],[0],[3],[0,2]]`\
 > Output: `1`
 
 **Constraints:**
@@ -62,7 +63,7 @@ class Solution:
     def catMouseGame(self, graph: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,7 +79,7 @@ class Solution:
 
 对于任意一个状态，递归判定所有下游状态所能导致的游戏结果，如果 **有一个** 下游状态是当前移动者可以赢，那么当前状态就是它赢；如果 **所有** 下游状态都是对方赢，那么当前状态就是对方赢；其他情况都是平局。按此思路可以写出如下的递归逻辑：
 
-{% box color:red child:codeblock %}
+{{% box color="red" child="codeblock" %}}
 
 ```python
 @cache
@@ -96,7 +97,7 @@ def dfs(mouse: int, cat: int, moving: int) -> int:
 dfs(1, 2, MOUSE)
 ```
 
-{% endbox %}
+{{% /box %}}
 
 但是这样会陷入无限递归，解不出来。
 
@@ -128,4 +129,4 @@ dfs(1, 2, MOUSE)
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

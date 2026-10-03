@@ -1,11 +1,9 @@
 ---
 title: 542. 01 Matrix
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-01-01 20:34:53
-updated: 2025-01-01 20:34:53
+date: "2025-01-01T20:34:53+08:00"
+lastmod: "2025-01-01T20:34:53+08:00"
 ---
 ## Problem
 
@@ -17,16 +15,18 @@ The distance between two cells sharing a common edge is `1`.
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `mat = [[0,0,0],[0,1,0],[0,0,0]]`
+> Input: `mat = [[0,0,0],[0,1,0],[0,0,0]]`\
 > Output: `[[0,0,0],[0,1,0],[0,0,0]]`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `mat = [[0,0,0],[0,1,0],[1,1,1]]`
+> Input: `mat = [[0,0,0],[0,1,0],[1,1,1]]`\
 > Output: `[[0,0,0],[0,1,0],[1,2,1]]`
 
 **Constraints:**
@@ -47,7 +47,7 @@ class Solution:
     def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,4 +78,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
