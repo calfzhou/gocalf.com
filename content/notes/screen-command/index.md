@@ -1,12 +1,12 @@
 ---
 title: Screen 命令
-notebook: notes
 tags:
   - it/terminal
-date: 2025-11-28 19:53:32
-updated: 2025-12-21 20:32:48
-references:
-  - '[linux screen 命令详解 - David_Tang - 博客园](https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html)'
+date: "2025-11-28T19:53:32+08:00"
+lastmod: "2025-12-21T20:32:48+08:00"
+params:
+  references:
+    - '[linux screen 命令详解 - David_Tang - 博客园](https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html)'
 ---
 ## 介绍
 

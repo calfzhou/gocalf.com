@@ -1,11 +1,10 @@
 ---
 title: 字体 font-family 选择
-notebook: notes
 tags:
   - calf
   - it/font
-date: 2024-04-17 22:25:24
-updated: 2026-01-13 23:28:24
+date: "2024-04-17T22:25:24+08:00"
+lastmod: "2026-01-13T23:28:24+08:00"
 ---
 ## 网页文本字体的选择
 
@@ -81,9 +80,9 @@ VS Code `editor.fontFamily` setting: `'Ubuntu Mono', 'Source Code Pro', Consolas
 
 [fonts/UbuntuMono at master · powerline/fonts](https://github.com/powerline/fonts/tree/master/UbuntuMono)
 
-- {% mark ✓ color:green %} 中英文比例严格，能对齐。
-- {% mark ✓ color:green %} 英文长宽比很协调，不会显得很瘦。
-- {% mark ✓ color:green %} 字符 `liLI10O` 区分明显，适合编程。
+- {{< mark text="✓" color="green" >}} 中英文比例严格，能对齐。
+- {{< mark text="✓" color="green" >}} 英文长宽比很协调，不会显得很瘦。
+- {{< mark text="✓" color="green" >}} 字符 `liLI10O` 区分明显，适合编程。
 
 VS Code 最适宜的字体。
 
@@ -101,7 +100,7 @@ VS Code 中文部分最适宜的字体。
 
 Font Family: `Source Code Pro` or `Source Code Variable`
 
-- {% mark ✗ color:red %} 不支持中文，中文字符的宽度不等于两个英文字符
+- {{< mark text="✗" color="red" >}} 不支持中文，中文字符的宽度不等于两个英文字符
 
 非 HTML DOM 渲染的软件（如 iTerm2 等）最适宜的字体。
 
@@ -115,7 +114,7 @@ Font Family: `Source Code Pro` or `Source Code Variable`
 
 [GitHub - adobe-fonts/source-han-mono: Source Han Mono | 思源等宽 | 思源等寬 | 思源等寬 香港 | 源ノ等幅 | 본모노](https://github.com/adobe-fonts/source-han-mono)
 
-- {% mark ✗ color:red %} 中文字符的宽度不等于两个英文字符
+- {{< mark text="✗" color="red" >}} 中文字符的宽度不等于两个英文字符
 
 ### Noto Sans Mono
 
@@ -133,7 +132,7 @@ Font Family: `Source Code Pro` or `Source Code Variable`
 
 Font Family: `M+ 1m`
 
-- {% mark ✗ color:red %} 英文字符太瘦了
+- {{< mark text="✗" color="red" >}} 英文字符太瘦了
 
 ## 本站字体选择
 

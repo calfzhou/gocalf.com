@@ -1,16 +1,15 @@
 ---
 title: Mud Client PaoTin++
-notebook: notes
 tags:
   - software
-date: 2025-11-27 23:23:12
-updated: 2025-12-01 20:13:37
+date: "2025-11-27T23:23:12+08:00"
+lastmod: "2025-12-01T20:13:37+08:00"
 ---
 ## Info
 
 [mudclient/paotin at beta](https://github.com/mudclient/paotin/tree/beta)
 
-{% badge_github mudclient paotin branch:beta %}
+{{< badge_github user="mudclient" repo="paotin" branch="beta" >}}
 
 PaoTin++ 是一个基于 [TinTin++](https://github.com/scandum/tintin) 的定制发行版。包括一些尚未被合并进官方 TinTin++ 版本的 patch 和一些基础性的框架代码，企图能够对 TinTin++ 的功能有所增强。
 

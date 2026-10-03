@@ -1,11 +1,10 @@
 ---
 title: Linux Server Setup
-notebook: notes
 tags:
   - software/linux
   - it/server
-date: 2025-12-21 12:31:54
-updated: 2026-04-04 11:48:25
+date: "2025-12-21T12:31:54+08:00"
+lastmod: "2026-04-04T11:48:25+08:00"
 ---
 ## Ubuntu
 

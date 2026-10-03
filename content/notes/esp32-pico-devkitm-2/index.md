@@ -1,10 +1,9 @@
 ---
 title: ESP32-PICO-DevKitM-2 开发板
-notebook: notes
 tags:
   - it/embed
-date: 2025-12-27 20:13:23
-updated: 2025-12-27 20:13:23
+date: "2025-12-27T20:13:23+08:00"
+lastmod: "2025-12-27T20:13:23+08:00"
 ---
 ## Document
 
@@ -23,7 +22,7 @@ ESP32-PICO-DevKitM-2 是一款基于 [ESP32](https://www.espressif.com/zh-hans/
 
 ![外观图](20251101-150522.png)
 
-{% image 20251101-150552.png '组件布局' bg:'#f9fafb' %}
+{{< image src="20251101-150552.png" alt="组件布局" background="#f9fafb" >}}
 
 | 主要组件               | 描述                                                                                |
 | ------------------ | --------------------------------------------------------------------------------- |

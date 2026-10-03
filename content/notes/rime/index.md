@@ -1,14 +1,14 @@
 ---
 title: Rime 中州韵输入法引擎
-notebook: notes
 tags:
 - software
-date: 2024-07-26 21:38:51
-updated: 2026-04-15 00:39:22
-references:
-- '[自由输入法 RIME 简明配置指南 - 少数派](https://sspai.com/post/84373)'
-- "[RIME 输入法使用体验 - Hank's Blog](https://zhaohongxuan.github.io/2024/03/20/most-powerful-input-method-rime/)"
-- "[Rime 输入法指北 | Jiz4oh's Life](https://jiz4oh.com/2020/10/how-to-use-rime/)"
+date: "2024-07-26T21:38:51+08:00"
+lastmod: "2026-04-15T00:39:22+08:00"
+params:
+  references:
+  - '[自由输入法 RIME 简明配置指南 - 少数派](https://sspai.com/post/84373)'
+  - "[RIME 输入法使用体验 - Hank's Blog](https://zhaohongxuan.github.io/2024/03/20/most-powerful-input-method-rime/)"
+  - "[Rime 输入法指北 | Jiz4oh's Life](https://jiz4oh.com/2020/10/how-to-use-rime/)"
 ---
 ## 基本信息
 
@@ -17,23 +17,23 @@ references:
 客户端：
 
 - macOS: [rime/squirrel: 【鼠鬚管】Rime for macOS](https://github.com/rime/squirrel)
-  - {% badge_github rime squirrel release:true %}
+  - {{< badge_github user="rime" repo="squirrel" release=true >}}
   - 配置存储路径：`~/Library/Rime`
 - iOS: [‎元书输入法 App - App Store](https://apps.apple.com/us/app/%E5%85%83%E4%B9%A6%E8%BE%93%E5%85%A5%E6%B3%95/id6744464701)
   - [简介 | 元书输入法](https://ihsiao.com/apps/hamster/v3/docs/guides/intro/)
   - 「空山素影」皮肤：[luozikuan/kongshan-suying: 一款元书输入法皮肤](https://github.com/luozikuan/kongshan-suying)
 - Windows: [rime/weasel: 【小狼毫】Rime for Windows](https://github.com/rime/weasel)
-  - {% badge_github rime weasel release:true %}
+  - {{< badge_github user="rime" repo="weasel" release=true >}}
   - 配置存储路径：`%AppData%\Rime` → `C:\Users\<USER>\AppData\Roaming\Rime`
   - ⚠️ 自带的加载三方输入方案的功能有问题，不会拷贝子目录，导致方案无法正常加载。
 
 现成的配置方案：
 
 - ℞ [iDvel/rime-ice: Rime 配置：雾凇拼音 | 长期维护的简体词库](https://github.com/iDvel/rime-ice)
-  - {% badge_github iDvel rime-ice release:true %}
+  - {{< badge_github user="iDvel" repo="rime-ice" release=true >}}
   - > 雾凇拼音提供了一套开箱即用的完整配置，包含输入方案（全拼、常见双拼）、长期维护的开源词库及各项扩展功能。
 - ℞ [gaboolic/rime-frost: 白霜拼音：蒹葭苍苍，白露为霜](https://github.com/gaboolic/rime-frost)
-  - {% badge_github gaboolic rime-frost release:true %}
+  - {{< badge_github user="gaboolic" repo="rime-frost" release=true >}}
   - > 白霜拼音使用使用 745396750 字的高质量语料，进行分词，重新统计字频、词频，归一化，打造纯净、词频准确、智能的词库。白霜词库是目前 rime 方案下最好的开源词库，立志于打造不输于商业输入法的输入体验。
 
 > [!tip]
@@ -200,7 +200,7 @@ Recipes 里有：
 
 工具：[nopdan/rose: IME User Dictionary Converter. 输入法用户词库转换工具](https://github.com/nopdan/rose)
 
-{% badge_github nopdan rose release:true %}
+{{< badge_github user="nopdan" repo="rose" release=true >}}
 
 直接去 releases 中下载最新的版本。注意要下载 `rose.zip` 即预先编译好的二进制程序，还要下载 `data.zip`（目前知道 [v1.3.1](https://github.com/nopdan/rose/releases/tag/v1.3.1) 版本中有）。按照说明把 `data.zip` 解压到 `rose` 目录下。
 

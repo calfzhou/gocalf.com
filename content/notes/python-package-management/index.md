@@ -1,12 +1,12 @@
 ---
 title: Python Package Management
-notebook: notes
-updated: 2026-06-14 19:07:25
-date: 2025-11-17 22:21:03
+lastmod: "2026-06-14T19:07:25+08:00"
+date: "2025-11-17T22:21:03+08:00"
 tags:
   - it/python
-references:
-  - '[Python package dependency management - pip freeze - requirements.txt and constraints.txt](https://code-maven.com/python-package-dependency-management)'
+params:
+  references:
+    - '[Python package dependency management - pip freeze - requirements.txt and constraints.txt](https://code-maven.com/python-package-dependency-management)'
 ---
 ## Version and Virtual Environment
 

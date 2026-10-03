@@ -1,11 +1,10 @@
 ---
 title: 云打印机
-notebook: notes
 tags:
   - software
   - hardware
-date: 2026-04-04 20:34:29
-updated: 2026-04-05 22:52:52
+date: "2026-04-04T20:34:29+08:00"
+lastmod: "2026-04-05T22:52:52+08:00"
 ---
 ## 远程打印助手（互维云）
 

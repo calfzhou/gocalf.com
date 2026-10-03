@@ -1,12 +1,12 @@
 ---
 title: Tmux (Terminal Multiplexer)
-notebook: notes
 tags:
   - it/terminal
-date: 2025-11-28 20:32:11
-updated: 2025-11-30 00:27:49
-references:
-  - '[Tmux 使用教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2019/10/tmux.html)'
+date: "2025-11-28T20:32:11+08:00"
+lastmod: "2025-11-30T00:27:49+08:00"
+params:
+  references:
+    - '[Tmux 使用教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2019/10/tmux.html)'
 ---
 
 ## 介绍

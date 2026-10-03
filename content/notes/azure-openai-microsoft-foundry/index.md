@@ -1,10 +1,9 @@
 ---
 title: Azure OpenAI and Microsoft Foundry
-notebook: notes
 tags:
   - it/ai
-date: 2026-01-13 23:22:31
-updated: 2026-01-13 23:22:31
+date: "2026-01-13T23:22:31+08:00"
+lastmod: "2026-01-13T23:22:31+08:00"
 ---
 ## Background
 
@@ -153,7 +152,7 @@ curl --request POST \
 
 > Chatbox AI is an AI client application and smart assistant. Compatible with many cutting-edge AI models and APIs. Available on Windows, MacOS, Android, iOS, Web, and Linux.
 
-{% badge_github chatboxai chatbox %}
+{{< badge_github user="chatboxai" repo="chatbox" >}}
 
 v1.18,2
 

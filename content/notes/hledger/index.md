@@ -1,17 +1,16 @@
 ---
 title: Hledger
-notebook: notes
 tags:
   - software
   - knowledge/finance
-date: 2026-01-03 23:47:28
-updated: 2026-01-14 22:00:09
+date: "2026-01-03T23:47:28+08:00"
+lastmod: "2026-01-14T22:00:09+08:00"
 ---
 ## Info
 
 [Home - hledger](https://hledger.org/)
 
-{% badge_github simonmichael hledger release:true %}
+{{< badge_github user="simonmichael" repo="hledger" release=true >}}
 
 > **hledger** is friendly, fast, and dependable accounting software for tracking money, investments, cryptocurrencies, time, or any countable commodity. It uses human-readable **[plain text data](https://plaintextaccounting.org/)** that you control.
 
@@ -56,7 +55,8 @@ hledger also uses a couple of subtypes:
 
 #### 一图流
 
-![Hledger Transaction](20260108-220647.png){.invert-when-dark}
+![Hledger Transaction](20260108-220647.png)
+{.invert-when-dark}
 
 图片来自：[(Almost) everything you wanted to know about hledger transactions – A User's view of Hledger](https://hledgerfan.com/almost-everything-you-wanted-to-know-about-hledger-transactions/)
 

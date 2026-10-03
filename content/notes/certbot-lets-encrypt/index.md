@@ -1,12 +1,12 @@
 ---
 title: Certbot 申请 Let's Encrypt SSL 证书
-notebook: notes
 tags:
 - it/web
-date: 2024-07-22 16:28:46
-updated: 2024-07-22 16:28:46
-references:
-- '[CentOS7使用Certbot申请Wildcard证书(letsencrypt,nginx) - 知乎](https://zhuanlan.zhihu.com/p/154377608)'
+date: "2024-07-22T16:28:46+08:00"
+lastmod: "2024-07-22T16:28:46+08:00"
+params:
+  references:
+  - '[CentOS7使用Certbot申请Wildcard证书(letsencrypt,nginx) - 知乎](https://zhuanlan.zhihu.com/p/154377608)'
 ---
 ## 安装和使用 Certbot
 

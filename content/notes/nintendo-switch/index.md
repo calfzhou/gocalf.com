@@ -1,10 +1,9 @@
 ---
 title: Nintendo Switch
-notebook: notes
 tags:
 - hardware
-date: 2025-02-10 15:11:35
-updated: 2025-02-10 15:11:35
+date: "2025-02-10T15:11:35+08:00"
+lastmod: "2025-02-10T15:11:35+08:00"
 ---
 ## 开机进系统
 
@@ -19,7 +18,7 @@ updated: 2025-02-10 15:11:35
 
 [Switch DBI 图文使用教程](https://shipengliang.com/games/switch-dbi-%E5%9B%BE%E6%96%87%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html)
 
-{% badge_github rashevskyv dbi release:true %}
+{{< badge_github user="rashevskyv" repo="dbi" release=true >}}
 
 ## Android File Transfer / Open MTP
 
@@ -57,17 +56,17 @@ NSP 补丁或者 DLC 和 XCI 一起放到内存卡根目录，进入相册按 R 
 
 ## 游戏时长
 
-{% badge_github tallbl0nde NX-Activity-Log release:true %}
+{{< badge_github user="tallbl0nde" repo="NX-Activity-Log" release=true >}}
 
 [巨好用的游戏时长工具NX-Activity-Log（含软件和使用方法）](https://www.bilibili.com/read/cv18815639/)
 
 🔔 原始的 repo 很久不更新了，在 16.0.0 固件上有些问题，可以用下面这个 fork：
 
-{% badge_github zdm65477730 NX-Activity-Log release:true %}
+{{< badge_github user="zdm65477730" repo="NX-Activity-Log" release=true >}}
 
 ## 金手指 EdiZon SE
 
-{% badge_github tomvita EdiZon-SE release:true %}
+{{< badge_github user="tomvita" repo="EdiZon-SE" release=true >}}
 
 [Switch EdiZon SE 金手指插件使用 图文教程](https://shipengliang.com/games/switch-edizon-se-%E9%87%91%E6%89%8B%E6%8C%87%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8-%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B.html)
 
@@ -75,9 +74,9 @@ NSP 补丁或者 DLC 和 XCI 一起放到内存卡根目录，进入相册按 R 
 
 ## OVL Loader & 特斯拉菜单
 
-{% badge_github WerWolv nx-ovlloader release:true %}
+{{< badge_github user="WerWolv" repo="nx-ovlloader" release=true >}}
 
-{% badge_github WerWolv Tesla-Menu release:true %}
+{{< badge_github user="WerWolv" repo="Tesla-Menu" release=true >}}
 
 The Nintendo Switch overlay menu
 
@@ -91,7 +90,7 @@ The Nintendo Switch overlay menu
 
 ## Amiibo 模拟 Emuiibo
 
-{% badge_github XorTroll emuiibo release:true %}
+{{< badge_github user="XorTroll" repo="emuiibo" release=true >}}
 
 Virtual amiibo (amiibo emulation) system for Nintendo Switch
 

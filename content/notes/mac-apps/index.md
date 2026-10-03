@@ -1,11 +1,10 @@
 ---
 title: macOS Apps
-notebook: notes
 tags:
   - calf
   - software/mac
-date: 2024-04-16 22:56:13
-updated: 2026-04-03 22:44:26
+date: "2024-04-16T22:56:13+08:00"
+lastmod: "2026-04-03T22:44:26+08:00"
 ---
 ## 系统相关 / 实用工具
 

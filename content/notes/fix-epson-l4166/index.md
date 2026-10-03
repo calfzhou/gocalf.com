@@ -1,13 +1,13 @@
 ---
 title: Epson L4166 打印机变砖修复
-notebook: notes
 tags:
   - hardware
-date: 2024-05-21 23:40:41
-updated: 2024-05-21 23:40:41
-references:
-  - '[爱普生EPSON L4168 固件在线更新失败修复方法 - 知乎](https://zhuanlan.zhihu.com/p/293894725)'
-  - '[Espon L4166 "Printer Mode"成功修复记（2022-04-04） - 知乎](https://zhuanlan.zhihu.com/p/492703200)'
+date: "2024-05-21T23:40:41+08:00"
+lastmod: "2024-05-21T23:40:41+08:00"
+params:
+  references:
+    - '[爱普生EPSON L4168 固件在线更新失败修复方法 - 知乎](https://zhuanlan.zhihu.com/p/293894725)'
+    - '[Espon L4166 "Printer Mode"成功修复记（2022-04-04） - 知乎](https://zhuanlan.zhihu.com/p/492703200)'
 ---
 爱普生 Epson L416x 喷墨打印机，联网之后，可能是因为自动更新固件，一更新就会变砖（进入 Printer Mode）无法使用。
 

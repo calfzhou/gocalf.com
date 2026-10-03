@@ -1,16 +1,15 @@
 ---
 title: Database Migration Tools
-notebook: notes
 tags:
   - it/database
-date: 2024-06-29 17:08:06
-updated: 2024-06-29 17:18:24
+date: "2024-06-29T17:08:06+08:00"
+lastmod: "2024-06-29T17:18:24+08:00"
 ---
 ## golang-migrate
 
 [golang-migrate/migrate: Database migrations. CLI and Golang library.](https://github.com/golang-migrate/migrate)
 
-{% badge_github golang-migrate migrate release:true %}
+{{< badge_github user="golang-migrate" repo="migrate" release=true >}}
 
 ```bash
 curl -OL https://github.com/golang-migrate/migrate/releases/download/v4.15.0/migrate.linux-amd64.tar.gz
@@ -59,7 +58,7 @@ Commands:
 
 [pressly/goose: A database migration tool. Supports SQL migrations and Go functions.](https://github.com/pressly/goose)
 
-{% badge_github pressly goose release:true %}
+{{< badge_github user="pressly" repo="goose" release=true >}}
 
 ```bash
 brew install goose

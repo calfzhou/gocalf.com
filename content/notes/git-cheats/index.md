@@ -1,11 +1,9 @@
 ---
 title: Git Cheats
-notebook: notes
 tags:
   - it/git
-mermaid: true
-date: 2025-12-28 15:21:24
-updated: 2025-12-28 15:59:47
+date: "2025-12-28T15:21:24+08:00"
+lastmod: "2025-12-28T15:59:47+08:00"
 ---
 ## Useful Aliases
 

@@ -1,8 +1,7 @@
 ---
 title: 乐鑫科技 ESP32 Microcontroller Unit
-notebook: notes
-date: 2025-11-18 23:44:11
-updated: 2025-12-27 19:31:56
+date: "2025-11-18T23:44:11+08:00"
+lastmod: "2025-12-27T19:31:56+08:00"
 tags:
   - it/embed
 ---
@@ -81,9 +80,11 @@ ESP 产品主要有芯片（Soc）、模组（Module）以及开发板三种形�
 
 芯片命名规则：
 
-![ESP32 芯片命名规则](20251109-225141.png){.invert-when-dark}
+![ESP32 芯片命名规则](20251109-225141.png)
+{.invert-when-dark}
 
-![ESP32-S3 芯片命名规则](20251109-225154.png){.invert-when-dark}
+![ESP32-S3 芯片命名规则](20251109-225154.png)
+{.invert-when-dark}
 
 ## 乐鑫科技模组
 

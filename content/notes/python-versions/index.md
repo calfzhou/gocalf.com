@@ -1,12 +1,12 @@
 ---
 title: Python 各版本变化
-notebook: notes
 tags:
   - it/python
-date: 2024-05-15 23:17:06
-updated: 2024-05-15 23:17:06
-references:
-  - '[Python各版本的差异总结\_python版本-CSDN博客](https://blog.csdn.net/qq_35952638/article/details/103101820)'
+date: "2024-05-15T23:17:06+08:00"
+lastmod: "2024-05-15T23:17:06+08:00"
+params:
+  references:
+    - '[Python各版本的差异总结\_python版本-CSDN博客](https://blog.csdn.net/qq_35952638/article/details/103101820)'
 ---
 ## Python 3.12 in 2023
 

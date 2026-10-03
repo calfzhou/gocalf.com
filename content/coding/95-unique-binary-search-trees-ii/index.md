@@ -1,10 +1,9 @@
 ---
 title: 95. Unique Binary Search Trees II
-notebook: coding
 tags:
 - medium
-date: 2024-12-21 01:34:21
-updated: 2024-12-21 01:34:21
+date: "2024-12-21T01:34:21+08:00"
+lastmod: "2024-12-21T01:34:21+08:00"
 ---
 ## Problem
 
@@ -14,14 +13,15 @@ Given an integer `n`, return _all the structurally unique **BST**'s (binary sear
 
 **Example 1:**
 
-![case1](../96-unique-binary-search-trees/case1.png){.invert-when-dark}
+![case1](../96-unique-binary-search-trees/case1.png)
+{.invert-when-dark}
 
-> Input: `n = 3`
+> Input: `n = 3`\
 > Output: `[[1,null,2,null,3],[1,null,3,2],[2,1,3],[3,1,null,null,2],[3,2,null,1]]`
 
 **Example 2:**
 
-> Input: `n = 1`
+> Input: `n = 1`\
 > Output: `[[1]]`
 
 **Constraints:**
@@ -41,11 +41,11 @@ class Solution:
     def generateTrees(self, n: int) -> List[Optional[TreeNode]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
-跟 [96. Unique Binary Search Trees](../95-unique-binary-search-trees-ii/index.md) 一样，只不过这里是要列举出所有可能的 BST 来（这回不能直接用卡塔兰数的数学公式了）。
+跟 [96. Unique Binary Search Trees](index.md) 一样，只不过这里是要列举出所有可能的 BST 来（这回不能直接用卡塔兰数的数学公式了）。
 
 用递归来实现吧，借助 Python 内置的 [`functools.cache`](https://docs.python.org/3/library/functools.html#functools.cache) 缓存一些中间结果来加速（甚至复用一些二叉树节点）。
 
@@ -55,8 +55,8 @@ class Solution:
 
 ### Recursively
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Iteratively
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

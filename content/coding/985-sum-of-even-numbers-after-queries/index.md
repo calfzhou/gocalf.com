@@ -1,10 +1,9 @@
 ---
 title: 985. Sum of Even Numbers After Queries
-notebook: coding
 tags:
 - medium
-date: 2025-01-01 23:07:10
-updated: 2025-01-01 23:07:10
+date: "2025-01-01T23:07:10+08:00"
+lastmod: "2025-01-01T23:07:10+08:00"
 ---
 ## Problem
 
@@ -18,8 +17,8 @@ Return _an integer array_ `answer` _where_ `answer[i]` _is the answer to the_ `i
 
 **Example 1:**
 
-> Input: `nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]`
-> Output: `[8,6,2,4]`
+> Input: `nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]`\
+> Output: `[8,6,2,4]`\
 > Explanation: At the beginning, the array is `[1,2,3,4]`.
 > After adding 1 to `nums[0]`, the array is `[2,2,3,4]`, and the sum of even values is `2 + 2 + 4 = 8`.
 > After adding -3 to `nums[1]`, the array is `[2,-1,3,4]`, and the sum of even values is `2 + 4 = 6`.
@@ -28,7 +27,7 @@ Return _an integer array_ `answer` _where_ `answer[i]` _is the answer to the_ `i
 
 **Example 2:**
 
-> Input: `nums = [1], queries = [[4,0]]`
+> Input: `nums = [1], queries = [[4,0]]`\
 > Output: `[0]`
 
 **Constraints:**
@@ -46,7 +45,7 @@ class Solution:
     def sumEvenAfterQueries(self, nums: List[int], queries: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,4 +64,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

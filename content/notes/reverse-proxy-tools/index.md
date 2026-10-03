@@ -1,27 +1,26 @@
 ---
 title: 反向代理（内网穿透）工具
-notebook: notes
 tags:
   - it/network
   - software
-date: 2024-05-21 23:00:26
-updated: 2024-05-21 23:00:26
+date: "2024-05-21T23:00:26+08:00"
+lastmod: "2024-05-21T23:00:26+08:00"
 ---
 ## frp
 
-{% badge_github fatedier frp release:true %}
+{{< badge_github user="fatedier" repo="frp" release=true >}}
 
 > frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.
 >
 > frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。
 
-- {% mark ？ color:yellow %} 重量级/功能强/需要配置
+- {{< mark text="？" color="yellow" >}} 重量级/功能强/需要配置
   - 目前在用，一般场景配置挺简单的
-- {% mark ✓ color:green %} 支持多种传输协议
-- {% mark ✓ color:green %} 老牌工具
-- {% mark ✓ color:green %} 客户端自带多种插件，如 socks 代理、http 代理等
+- {{< mark text="✓" color="green" >}} 支持多种传输协议
+- {{< mark text="✓" color="green" >}} 老牌工具
+- {{< mark text="✓" color="green" >}} 客户端自带多种插件，如 socks 代理、http 代理等
   - socks 代理 +1
-- {% mark ✗ color:red %} 必须有自己部署的服务端
+- {{< mark text="✗" color="red" >}} 必须有自己部署的服务端
 
 [Full configuration file for frps (Server)](https://github.com/fatedier/frp/blob/dev/conf/frps_full.ini)
 
@@ -38,14 +37,14 @@ brew services list | grep frp
 
 ## bore
 
-{% badge_github ekzhang bore release:true %}
+{{< badge_github user="ekzhang" repo="bore" release=true >}}
 
 > A modern, simple TCP tunnel in Rust that exposes local ports to a remote server, bypassing standard NAT connection firewalls. **That’s all it does: no more, and no less.**
 
-- {% mark ？ color:yellow %} 新工具
-- {% mark ✓ color:green %} 非常简单（像 ngrok）
-- {% mark ✓ color:green %} 有免费的服务端 bore.hub，也可以部署自己的服务端
-- {% mark ✓ color:green %} 任何 tcp 协议均可
+- {{< mark text="？" color="yellow" >}} 新工具
+- {{< mark text="✓" color="green" >}} 非常简单（像 ngrok）
+- {{< mark text="✓" color="green" >}} 有免费的服务端 bore.hub，也可以部署自己的服务端
+- {{< mark text="✓" color="green" >}} 任何 tcp 协议均可
 
 ```bash
 brew install ekzhang/bore/bore
@@ -66,9 +65,9 @@ docker run -it --init --rm --network host ekzhang/bore local 8080 --to bore.pub
 
 Reverse proxy that creates a secure tunnel from a public endpoint to a locally running web service.
 
-- {% mark ✓ color:green %} 快速试用很方便
-- {% mark ✓ color:green %} 支持 TLS、TCP tunnels
-- {% mark ✗ color:red %} 贵，免费版只能体验一下，很慢，不稳定
+- {{< mark text="✓" color="green" >}} 快速试用很方便
+- {{< mark text="✓" color="green" >}} 支持 TLS、TCP tunnels
+- {{< mark text="✗" color="red" >}} 贵，免费版只能体验一下，很慢，不稳定
 
 可免费使用，for quick demos。常规版本是 $25 / month。
 
@@ -108,11 +107,11 @@ ssh USER@NNN.tcp.ngrok.io -p PORT
 
 ## nps
 
-{% badge_github ehang-io nps release:true %}
+{{< badge_github user="ehang-io" repo="nps" release=true >}}
 
 > NPS is a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.
 >
 > nps是一款轻量级、高性能、功能强大的内网穿透代理服务器。目前支持tcp、udp流量转发，可支持任何tcp、udp上层协议（访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析等等……），此外还支持内网http代理、内网socks5代理、p2p等，并带有功能强大的web管理端。
 
-- {% mark ✗ color:red %} 很久未更新
-- {% mark ✓ color:green %} 轻量级
+- {{< mark text="✗" color="red" >}} 很久未更新
+- {{< mark text="✓" color="green" >}} 轻量级

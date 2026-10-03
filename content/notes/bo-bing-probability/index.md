@@ -1,12 +1,10 @@
 ---
 title: 博饼点数概率
-notebook: notes
 tags:
   - game/board
   - math/probability
-katex: true
-date: 2026-01-03 14:28:41
-updated: 2026-01-03 14:28:41
+date: "2026-01-03T14:28:41+08:00"
+lastmod: "2026-01-03T14:28:41+08:00"
 ---
 ## Info
 

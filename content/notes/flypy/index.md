@@ -1,10 +1,9 @@
 ---
 title: 小鹤双拼、小鹤音形
-notebook: notes
 tags:
   - software
-date: 2025-04-26 12:32:08
-updated: 2025-07-02 23:04:33
+date: "2025-04-26T12:32:08+08:00"
+lastmod: "2025-07-02T23:04:33+08:00"
 ---
 [小鹤音形 flypy](https://flypy.cc/)
 
@@ -26,7 +25,8 @@ updated: 2025-07-02 23:04:33
 
 ### 键位图
 
-![小鹤双拼键位图](heup.png){.invert-when-dark}
+![小鹤双拼键位图](heup.png)
+{.invert-when-dark}
 
 ### 记忆口诀
 

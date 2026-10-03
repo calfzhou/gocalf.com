@@ -1,11 +1,9 @@
 ---
 title: Quantum Computing
-notebook: notes
 tags:
   - it/quantum
-date: 2025-12-28 12:56:00
-updated: 2025-12-28 12:56:00
-katex: true
+date: "2025-12-28T12:56:00+08:00"
+lastmod: "2025-12-28T12:56:00+08:00"
 ---
 ## Basic
 
@@ -41,7 +39,8 @@ $$\ket{\varphi}=a\ket{0}+b\ket{1}=\begin{pmatrix}a \\ b\end{pmatrix}$$
 
 ### 布洛赫球面（Bloch Sphere）
 
-![Bloch Sphere](EF5FE80F-1136-4B45-88AE-7A99E83F2819.png){.invert-when-dark}
+![Bloch Sphere](EF5FE80F-1136-4B45-88AE-7A99E83F2819.png)
+{.invert-when-dark}
 
 Qubit state: $\cos{\left(\theta/2\right)}\ket{0}+e^{i\varphi}\sin{\left(\theta/2\right)}\ket{1}$
 

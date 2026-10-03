@@ -1,10 +1,9 @@
 ---
 title: 复式记账 - 借贷记账法
-notebook: notes
 tags:
   - knowledge/finance
-date: 2026-01-04 23:07:24
-updated: 2026-01-04 23:07:24
+date: "2026-01-04T23:07:24+08:00"
+lastmod: "2026-01-04T23:07:24+08:00"
 ---
 ## 资料
 

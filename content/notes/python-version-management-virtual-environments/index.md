@@ -1,19 +1,19 @@
 ---
 title: Python Version Management & Virtual Environments
-notebook: notes
-updated: 2026-06-14 20:13:37
-date: 2025-11-17 22:21:03
+lastmod: "2026-06-14T20:13:37+08:00"
+date: "2025-11-17T22:21:03+08:00"
 tags:
   - it/python
-references:
-  - '[Managing Multiple Python Versions With pyenv – Real Python](https://realpython.com/intro-to-pyenv/#working-with-multiple-environments)'
+params:
+  references:
+    - '[Managing Multiple Python Versions With pyenv – Real Python](https://realpython.com/intro-to-pyenv/#working-with-multiple-environments)'
 ---
 ## uv
 
 - [astral-sh/uv: An extremely fast Python package and project manager, written in Rust.](https://github.com/astral-sh/uv)
 - Documents: [uv](https://docs.astral.sh/uv/)
 
-{% badge_github astral-sh uv release:true %}
+{{< badge_github user="astral-sh" repo="uv" release=true >}}
 
 > A single tool to replace `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv`, and more.
 
@@ -83,7 +83,7 @@ uv run <command>
 
 ## Python Version Management - pyenv (Deprecated)
 
-{% badge_github pyenv pyenv release:true %}
+{{< badge_github user="pyenv" repo="pyenv" release=true >}}
 
 > pyenv lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.
 
@@ -147,7 +147,7 @@ To select a pyenv-installed Python as the version to use, run one of the followi
 
 ## Virtual Environments Management - pyenv-virtualenv (Deprecated)
 
-{% badge_github pyenv pyenv-virtualenv release:true %}
+{{< badge_github user="pyenv" repo="pyenv-virtualenv" release=true >}}
 
 > pyenv-virtualenv is a [pyenv](https://github.com/pyenv/pyenv) plugin that provides features to manage virtualenvs and conda environments for Python on UNIX-like systems.
 
