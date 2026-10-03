@@ -1,10 +1,9 @@
 ---
 title: 3270. Find the Key of the Numbers
-notebook: coding
 tags:
 - easy
-date: 2025-01-11 09:13:43
-updated: 2025-01-11 09:13:43
+date: "2025-01-11T09:13:43+08:00"
+lastmod: "2025-01-11T09:13:43+08:00"
 ---
 ## Problem
 
@@ -21,8 +20,8 @@ Return the `key` of the three numbers **without** leading zeros (_if any_).
 
 **Example 1:**
 
-> Input: `num1 = 1, num2 = 10, num3 = 1000`
-> Output: `0`
+> Input: `num1 = 1, num2 = 10, num3 = 1000`\
+> Output: `0`\
 > Explanation:
 > On padding, `num1` becomes `"0001"`, `num2` becomes `"0010"`, and `num3` remains `"1000"`.
 >
@@ -35,12 +34,12 @@ Return the `key` of the three numbers **without** leading zeros (_if any_).
 
 **Example 2:**
 
-> Input: `num1 = 987, num2 = 879, num3 = 798`
+> Input: `num1 = 987, num2 = 879, num3 = 798`\
 > Output: `777`
 
 **Example 3:**
 
-> Input: `num1 = 1, num2 = 2, num3 = 3`
+> Input: `num1 = 1, num2 = 2, num3 = 3`\
 > Output: `1`
 
 **Constraints:**
@@ -54,10 +53,10 @@ class Solution:
     def generateKey(self, num1: int, num2: int, num3: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

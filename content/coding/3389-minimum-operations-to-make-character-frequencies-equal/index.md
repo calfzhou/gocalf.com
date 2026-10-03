@@ -1,11 +1,9 @@
 ---
 title: 3389. Minimum Operations to Make Character Frequencies Equal
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2024-12-19 18:13:43
-updated: 2024-12-19 18:13:43
+date: "2024-12-19T18:13:43+08:00"
+lastmod: "2024-12-19T18:13:43+08:00"
 ---
 ## Problem
 
@@ -27,22 +25,22 @@ Return the **minimum** number of operations required to make `s` **good**.
 
 **Example 1:**
 
-> Input: `s = "acab"`
-> Output: `1`
+> Input: `s = "acab"`\
+> Output: `1`\
 > Explanation:
 > We can make s good by deleting one occurrence of character `'a'`.
 
 **Example 2:**
 
-> Input: `s = "wddw"`
-> Output: `0`
+> Input: `s = "wddw"`\
+> Output: `0`\
 > Explanation:
 > We do not need to perform any operations since s is initially good.
 
 **Example 3:**
 
-> Input: `s = "aaabc"`
-> Output: `2`
+> Input: `s = "aaabc"`\
+> Output: `2`\
 > Explanation:
 > We can make s good by applying these operations:
 >
@@ -61,7 +59,7 @@ class Solution:
     def makeStringGood(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -106,4 +104,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

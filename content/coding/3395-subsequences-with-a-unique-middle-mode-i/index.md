@@ -1,11 +1,9 @@
 ---
 title: 3395. Subsequences with a Unique Middle Mode I
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2025-01-04 22:29:23
-updated: 2025-01-05 22:24:20
+date: "2025-01-04T22:29:23+08:00"
+lastmod: "2025-01-05T22:24:20+08:00"
 ---
 ## Problem
 
@@ -33,22 +31,22 @@ A sequence of numbers `seq` of size 5 contains a **unique middle mode** if the _
 
 **Example 1:**
 
-> Input: `nums = [1,1,1,1,1,1]`
-> Output: `6`
+> Input: `nums = [1,1,1,1,1,1]`\
+> Output: `6`\
 > Explanation:
 > `[1, 1, 1, 1, 1]` is the only subsequence of size 5 that can be formed, and it has a unique middle mode of 1. This subsequence can be formed in 6 different ways, so the output is 6.
 
 **Example 2:**
 
-> Input: `nums = [1,2,2,3,3,4]`
-> Output: `4`
+> Input: `nums = [1,2,2,3,3,4]`\
+> Output: `4`\
 > Explanation:
 > `[1, 2, 2, 3, 4]` and `[1, 2, 3, 3, 4]` each have a unique middle mode because the number at index 2 has the greatest frequency in the subsequence. `[1, 2, 2, 3, 3]` does not have a unique middle mode because 2 and 3 appear twice.
 
 **Example 3:**
 
-> Input: nums = [0,1,2,3,4,5,6,7,8]
-> Output: 0
+> Input: nums = [0,1,2,3,4,5,6,7,8]\
+> Output: 0\
 > Explanation:
 > There is no subsequence of length 5 with a unique middle mode.
 
@@ -64,7 +62,7 @@ class Solution:
     def subsequencesWithMiddleMode(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -90,7 +88,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 > 这里其实有大量计算是重复的，因为 lb、rb 并不是每次都变，还可以进一步优化。
 
@@ -134,4 +132,4 @@ $$
 
 最终时间复杂度 `O(n)`，空间复杂度 `O(K) ≈ O(n)`。Runtime beats 100%，还算没辜负眼花缭乱的一天。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

@@ -1,11 +1,9 @@
 ---
 title: 3414. Maximum Score of Non-overlapping Intervals
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2025-01-13 22:31:19
-updated: 2025-01-13 22:31:19
+date: "2025-01-13T22:31:19+08:00"
+lastmod: "2025-01-13T22:31:19+08:00"
 ---
 ## Problem
 
@@ -23,15 +21,15 @@ Two intervals are said to be **non-overlapping** if they do not share any points
 
 **Example 1:**
 
-> Input: `intervals = [[1,3,2],[4,5,2],[1,5,5],[6,9,3],[6,7,1],[8,9,1]]`
-> Output: `[2,3]`
+> Input: `intervals = [[1,3,2],[4,5,2],[1,5,5],[6,9,3],[6,7,1],[8,9,1]]`\
+> Output: `[2,3]`\
 > Explanation:
 > You can choose the intervals with indices 2, and 3 with respective weights of 5, and 3.
 
 **Example 2:**
 
-> Input: `intervals = [[5,8,1],[6,7,7],[4,7,3],[9,10,6],[7,8,2],[11,14,3],[3,5,5]]`
-> Output: `[1,3,5,6]`
+> Input: `intervals = [[5,8,1],[6,7,7],[4,7,3],[9,10,6],[7,8,2],[11,14,3],[3,5,5]]`\
+> Output: `[1,3,5,6]`\
 > Explanation:
 > You can choose the intervals with indices 1, 3, 5, and 6 with respective weights of 7, 6, 3, and 5.
 
@@ -50,13 +48,13 @@ class Solution:
     def maximumWeight(self, intervals: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
 跟 [435. Non-overlapping Intervals](../435-non-overlapping-intervals/index.md) 类似，但是增加了权重，且限制最多只能选 4 个区间（另外 overlap 的判定也有不同，本题单个端点重合的也算 overlap）。
 
-由于权重的不确定性，[435. Non-overlapping Intervals](../435-non-overlapping-intervals/index.md) 中的 [贪心算法](../435-non-overlapping-intervals/index.md#Faster) 不再可用（`res[j] <= res[i]` 不再成立）。只能按照普通的动态规划去计算（本题中用 dp 替代 res）。
+由于权重的不确定性，[435. Non-overlapping Intervals](../435-non-overlapping-intervals/index.md) 中的 [贪心算法](../435-non-overlapping-intervals/index.md#faster) 不再可用（`res[j] <= res[i]` 不再成立）。只能按照普通的动态规划去计算（本题中用 dp 替代 res）。
 
 依然先对所有区间按右端点排序。因为结果需要返回选中的区间下标，所以要对下标数组排序。
 
@@ -83,4 +81,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

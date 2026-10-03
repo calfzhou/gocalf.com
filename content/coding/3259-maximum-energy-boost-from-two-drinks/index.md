@@ -1,11 +1,9 @@
 ---
 title: 3259. Maximum Energy Boost From Two Drinks
-notebook: coding
 tags:
 - medium
-date: 2024-11-26 22:54:49
-updated: 2024-11-26 22:54:49
-katex: true
+date: "2024-11-26T22:54:49+08:00"
+lastmod: "2024-11-26T22:54:49+08:00"
 ---
 ## Problem
 
@@ -21,15 +19,15 @@ Return the **maximum** total energy boost you can gain in the next `n` hours.
 
 **Example 1:**
 
-> Input: `energyDrinkA = [1,3,1], energyDrinkB = [3,1,1]`
-> Output: `5`
+> Input: `energyDrinkA = [1,3,1], energyDrinkB = [3,1,1]`\
+> Output: `5`\
 > Explanation:
 > To gain an energy boost of `5`, drink only the energy drink A (or only B).
 
 **Example 2:**
 
-> Input: `energyDrinkA = [4,1,1], energyDrinkB = [1,1,3]`
-> Output: `7`
+> Input: `energyDrinkA = [4,1,1], energyDrinkB = [1,1,3]`\
+> Output: `7`\
 > Explanation:
 > To gain an energy boost of `7`:
 > Drink the energy drink A for the first hour.
@@ -49,7 +47,7 @@ class Solution:
     def maxEnergyBoost(self, energyDrinkA: List[int], energyDrinkB: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -81,4 +79,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

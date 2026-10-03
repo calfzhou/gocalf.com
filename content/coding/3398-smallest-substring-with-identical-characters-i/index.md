@@ -1,11 +1,9 @@
 ---
 title: 3398. Smallest Substring With Identical Characters I
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2025-01-04 15:28:44
-updated: 2025-01-04 16:05:25
+date: "2025-01-04T15:28:44+08:00"
+lastmod: "2025-01-04T16:05:25+08:00"
 ---
 ## Problem
 
@@ -25,21 +23,21 @@ Return the **minimum** length after the operations.
 
 **Example 1:**
 
-> Input: `s = "000001", numOps = 1`
-> Output: `2`
+> Input: `s = "000001", numOps = 1`\
+> Output: `2`\
 > Explanation:
 > By changing `s[2]` to `'1'`, s becomes `"001001"`. The longest substrings with identical characters are `s[0..1]` and `s[3..4]`.
 
 **Example 2:**
 
-> Input: `s = "0000", numOps = 2`
-> Output: `1`
+> Input: `s = "0000", numOps = 2`\
+> Output: `1`\
 > Explanation:
 > By changing `s[0]` and `s[2]` to `'1'`, s becomes `"1010"`.
 
 **Example 3:**
 
-> Input: `s = "0101", numOps = 0`
+> Input: `s = "0101", numOps = 0`\
 > Output: `1`
 
 **Constraints:**
@@ -55,7 +53,7 @@ class Solution:
     def minLength(self, s: str, numOps: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -87,7 +85,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## 二分法
 
@@ -105,4 +103,4 @@ class Solution:
 
 时间复杂度也是 `O(n log n)`，实际跑下来速度跟上边最大堆方法差不多。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

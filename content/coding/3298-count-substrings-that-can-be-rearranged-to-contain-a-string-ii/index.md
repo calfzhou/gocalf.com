@@ -1,10 +1,9 @@
 ---
 title: 3298. Count Substrings That Can Be Rearranged to Contain a String II
-notebook: coding
 tags:
 - hard
-date: 2025-01-09 10:25:43
-updated: 2025-01-09 10:25:43
+date: "2025-01-09T10:25:43+08:00"
+lastmod: "2025-01-09T10:25:43+08:00"
 ---
 ## Problem
 

@@ -1,10 +1,9 @@
 ---
 title: 338. Counting Bits
-notebook: coding
 tags:
 - easy
-date: 2024-11-22 20:04:18
-updated: 2024-11-22 20:04:18
+date: "2024-11-22T20:04:18+08:00"
+lastmod: "2024-11-22T20:04:18+08:00"
 ---
 ## Problem
 
@@ -14,8 +13,8 @@ Given an integer `n`, return _an array_ `ans` _of length_ `n + 1` _such that for
 
 **Example 1:**
 
-> Input: `n = 2`
-> Output: `[0,1,1]`
+> Input: `n = 2`\
+> Output: `[0,1,1]`\
 > Explanation:
 >
 > ```text
@@ -26,8 +25,8 @@ Given an integer `n`, return _an array_ `ans` _of length_ `n + 1` _such that for
 
 **Example 2:**
 
-> Input: n = 5
-> Output: [0,1,1,2,1,2]
+> Input: n = 5\
+> Output: [0,1,1,2,1,2]\
 > Explanation:
 >
 > ```text
@@ -55,7 +54,7 @@ class Solution:
     def countBits(self, n: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,7 +64,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Follow Up - O(n)
 
@@ -87,7 +86,7 @@ class Solution:
 
 这样对于每个数，都只需要常数时间进行计算和查表，总时间是 `O(n)`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 ## Faster O(n)
 
@@ -99,7 +98,7 @@ class Solution:
 
 总的时间复杂度也是 `O(n)`，但系数要小得多。
 
-{% snippet solution3.py %}
+{{< snippet src="solution3.py" >}}
 
 三种算法的实际运行时间对比：
 

@@ -1,10 +1,9 @@
 ---
 title: 3240. Minimum Number of Flips to Make Binary Grid Palindromic II
-notebook: coding
 tags:
 - medium
-date: 2024-11-16 12:23:01
-updated: 2024-11-16 12:23:01
+date: "2024-11-16T12:23:01+08:00"
+lastmod: "2024-11-16T12:23:01+08:00"
 ---
 ## Problem
 
@@ -20,24 +19,30 @@ Return the **minimum** number of cells that need to be flipped to make **all** r
 
 **Example 1:**
 
-> Input: `grid = [[1,0,0],[0,1,0],[0,0,1]]`
-> Output: `3`
+> Input: `grid = [[1,0,0],[0,1,0],[0,0,1]]`\
+> Output: `3`\
 > Explanation:
-> ![case1](case1.png){.invert-when-dark}
+>
+> ![case1](case1.png)
+> {.invert-when-dark}
 
 **Example 2:**
 
-> Input: `grid = [[0,1],[0,1],[0,0]]`
-> Output: `2`
+> Input: `grid = [[0,1],[0,1],[0,0]]`\
+> Output: `2`\
 > Explanation:
-> ![case2](case2.png){.invert-when-dark}
+>
+> ![case2](case2.png)
+> {.invert-when-dark}
 
 **Example 3:**
 
-> Input: `grid = [[1],[1]]`
-> Output: `2`
+> Input: `grid = [[1],[1]]`\
+> Output: `2`\
 > Explanation:
-> ![case3](case3.png){.invert-when-dark}
+>
+> ![case3](case3.png)
+> {.invert-when-dark}
 
 **Constraints:**
 
@@ -53,7 +58,7 @@ class Solution:
     def minFlips(self, grid: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -73,4 +78,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

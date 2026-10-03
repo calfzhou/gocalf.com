@@ -1,10 +1,9 @@
 ---
 title: 3285. Find Indices of Stable Mountains
-notebook: coding
 tags:
 - easy
-date: 2024-12-19 00:10:02
-updated: 2024-12-19 00:10:02
+date: "2024-12-19T00:10:02+08:00"
+lastmod: "2024-12-19T00:10:02+08:00"
 ---
 ## Problem
 
@@ -18,8 +17,8 @@ Return an array containing the indices of _all_ **stable** mountains in **any** 
 
 **Example 1:**
 
-> Input: `height = [1,2,3,4,5], threshold = 2`
-> Output: `[3,4]`
+> Input: `height = [1,2,3,4,5], threshold = 2`\
+> Output: `[3,4]`\
 > Explanation:
 >
 > - Mountain 3 is stable because `height[2] == 3` is greater than `threshold == 2`.
@@ -27,12 +26,12 @@ Return an array containing the indices of _all_ **stable** mountains in **any** 
 
 **Example 2:**
 
-> Input: `height = [10,1,10,1,10], threshold = 3`
+> Input: `height = [10,1,10,1,10], threshold = 3`\
 > Output: `[1,3]`
 
 **Example 3:**
 
-> Input: `height = [10,1,10,1,10], threshold = 10`
+> Input: `height = [10,1,10,1,10], threshold = 10`\
 > Output: `[]`
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def stableMountains(self, height: List[int], threshold: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

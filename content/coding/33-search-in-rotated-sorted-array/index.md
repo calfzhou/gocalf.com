@@ -1,10 +1,9 @@
 ---
 title: 33. Search in Rotated Sorted Array
-notebook: coding
 tags:
 - medium
-date: 2024-11-15 18:35:36
-updated: 2024-11-15 18:35:36
+date: "2024-11-15T18:35:36+08:00"
+lastmod: "2024-11-15T18:35:36+08:00"
 ---
 ## Problem
 
@@ -20,17 +19,17 @@ You must write an algorithm with `O(log n)` runtime complexity.
 
 **Example 1:**
 
-> Input: `nums = [4,5,6,7,0,1,2], target = 0`
+> Input: `nums = [4,5,6,7,0,1,2], target = 0`\
 > Output: `4`
 
 **Example 2:**
 
-> Input: `nums = [4,5,6,7,0,1,2], target = 3`
+> Input: `nums = [4,5,6,7,0,1,2], target = 3`\
 > Output: `-1`
 
 **Example 3:**
 
-> Input: `nums = [1], target = 0`
+> Input: `nums = [1], target = 0`\
 > Output: `-1`
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -62,14 +61,12 @@ class Solution:
 
 各种情况如下图示（`L = nums[l], M = nums[m], R = nums[r]`）。
 
-::: invert-when-dark
-{% diagramsnet cases.drawio %}
-:::
+{{< diagramsnet src="cases.drawio" >}}
 
 其中 t1、t3、t6、t7 四种情况下，需要进入左半边，而 t2、t4、t5、t8 情况需要进入右半边。每种情况的判定条件根据图示可以确定下来。
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 这里 `while` 循环的条件可以直接用 `while l <= r`（[problem 153](../153-find-minimum-in-rotated-sorted-array/index.md) 用的是 `while l < r - 1` 加收尾处理）。

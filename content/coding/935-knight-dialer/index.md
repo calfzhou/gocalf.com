@@ -1,11 +1,9 @@
 ---
 title: 935. Knight Dialer
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-12-10 14:29:41
-updated: 2024-12-10 14:29:41
+date: "2024-12-10T14:29:41+08:00"
+lastmod: "2024-12-10T14:29:41+08:00"
 ---
 ## Problem
 
@@ -29,20 +27,20 @@ As the answer may be very large, **return the answer modulo** `10⁹ + 7`.
 
 **Example 1:**
 
-> Input: `n = 1`
-> Output: `10`
+> Input: `n = 1`\
+> Output: `10`\
 > Explanation: We need to dial a number of length 1, so placing the knight over any numeric cell of the 10 cells is sufficient.
 
 **Example 2:**
 
-> Input: `n = 2`
-> Output: `20`
+> Input: `n = 2`\
+> Output: `20`\
 > Explanation: All the valid number we can dial are `[04, 06, 16, 18, 27, 29, 34, 38, 40, 43, 49, 60, 61, 67, 72, 76, 81, 83, 92, 94]`.
 
 **Example 3:**
 
-> Input: `n = 3131`
-> Output: `136006598`
+> Input: `n = 3131`\
+> Output: `136006598`\
 > Explanation: Please take care of the mod.
 
 **Constraints:**
@@ -56,7 +54,7 @@ class Solution:
     def knightDialer(self, n: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -85,7 +83,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster
 
@@ -129,7 +127,7 @@ $$
 
 时间和空间复杂度不变，但运算量会少很多。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 ## O(log n)
 
@@ -205,7 +203,7 @@ $$
 
 因为本题会一直对 `10⁹ + 7` 取模，不涉及到大整数计算，所以二进制位数带来的时间复杂度是常数，最终时间复杂度是 `O(log n)`。
 
-{% snippet solution3.py %}
+{{< snippet src="solution3.py" >}}
 
 附：三段代码的运行时长（μs）对比：
 

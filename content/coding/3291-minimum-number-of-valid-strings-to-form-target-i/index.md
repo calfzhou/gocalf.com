@@ -1,12 +1,10 @@
 ---
 title: 3291. Minimum Number of Valid Strings to Form Target I
-notebook: coding
 tags:
 - medium
 - hard
-katex: true
-date: 2024-12-17 16:11:08
-updated: 2024-12-18 16:23:05
+date: "2024-12-17T16:11:08+08:00"
+lastmod: "2024-12-18T16:23:05+08:00"
 ---
 ## Problem
 
@@ -22,8 +20,8 @@ Return the **minimum** number of **valid** strings that can be _concatenated_ to
 
 **Example 1:**
 
-> Input: `words = ["abc","aaaaa","bcdef"], target = "aabcdabc"`
-> Output: `3`
+> Input: `words = ["abc","aaaaa","bcdef"], target = "aabcdabc"`\
+> Output: `3`\
 > Explanation:
 > The target string can be formed by concatenating:
 >
@@ -33,8 +31,8 @@ Return the **minimum** number of **valid** strings that can be _concatenated_ to
 
 **Example 2:**
 
-> Input: `words = ["abababab","ab"], target = "ababaababa"`
-> Output: `2`
+> Input: `words = ["abababab","ab"], target = "ababaababa"`\
+> Output: `2`\
 > Explanation:
 > The target string can be formed by concatenating:
 >
@@ -43,7 +41,7 @@ Return the **minimum** number of **valid** strings that can be _concatenated_ to
 
 **Example 3:**
 
-> Input: `words = ["abcdef"], target = "xyz"`
+> Input: `words = ["abcdef"], target = "xyz"`\
 > Output: `-1`
 
 **Constraints:**
@@ -62,7 +60,7 @@ class Solution:
     def minValidStrings(self, words: List[str], target: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,7 +76,7 @@ $$
 
 最后的结果取 `dp(0)`。
 
-用 `words` 构建前缀树（参见 [208. Implement Trie (Prefix Tree)](../208-implement-trie-prefix-tree/index.md)、[139. Word Break](../139-word-break/index.md#Improve)），定义一个 `match` 方法在前缀树中找到能匹配指定字符串的最长前缀，其长度即为 `plenᵢ`。
+用 `words` 构建前缀树（参见 [208. Implement Trie (Prefix Tree)](../208-implement-trie-prefix-tree/index.md)、[139. Word Break](../139-word-break/index.md#improve)），定义一个 `match` 方法在前缀树中找到能匹配指定字符串的最长前缀，其长度即为 `plenᵢ`。
 
 时间复杂度 `O(k m + n²)`，其中 k 是 `words` 中单词的平均长度，m 是 `words` 的长度，n 是 `target` 的长度。空间复杂度 `O(k m + n)`。
 
@@ -86,7 +84,7 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster - AC 自动机
 
@@ -102,8 +100,8 @@ $$
 
 时间复杂度 `O(km + n)`，空间复杂度 `O(km + n)`。
 
-{% snippet solution_ac.py %}
+{{< snippet src="solution_ac.py" >}}
 
 附：针对 AC 自动机的构建和多模式前缀搜索的 test cases：
 
-{% snippet solution_ac_test.py %}
+{{< snippet src="solution_ac_test.py" >}}

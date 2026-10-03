@@ -1,11 +1,9 @@
 ---
 title: 435. Non-overlapping Intervals
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-11-18 15:57:32
-updated: 2024-11-18 15:57:32
+date: "2024-11-18T15:57:32+08:00"
+lastmod: "2024-11-18T15:57:32+08:00"
 ---
 ## Problem
 
@@ -17,20 +15,20 @@ Given an array of intervals `intervals` where `intervals[i] = [startᵢ, endᵢ]
 
 **Example 1:**
 
-> Input: `intervals = [[1,2],[2,3],[3,4],[1,3]]`
-> Output: `1`
+> Input: `intervals = [[1,2],[2,3],[3,4],[1,3]]`\
+> Output: `1`\
 > Explanation: `[1,3]` can be removed and the rest of the intervals are non-overlapping.
 
 **Example 2:**
 
-> Input: `intervals = [[1,2],[1,2],[1,2]]`
-> Output: `2`
+> Input: `intervals = [[1,2],[1,2],[1,2]]`\
+> Output: `2`\
 > Explanation: You need to remove two `[1,2]` to make the rest of the intervals non-overlapping.
 
 **Example 3:**
 
-> Input: `intervals = [[1,2],[2,3]]`
-> Output: `0`
+> Input: `intervals = [[1,2],[2,3]]`\
+> Output: `0`\
 > Explanation: You don't need to remove any of the intervals since they're already non-overlapping.
 
 **Constraints:**
@@ -46,7 +44,7 @@ class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -97,7 +95,7 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster
 
@@ -133,4 +131,4 @@ $$
 
 虽然总的时间复杂度还是 `O(n log n)`，但遍历部分下降到 `O(n)`，还是能快一些。如果用 in-place 排序，附加的空间复杂度降为 `O(1)`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

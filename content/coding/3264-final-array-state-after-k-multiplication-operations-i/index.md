@@ -1,10 +1,9 @@
 ---
 title: 3264. Final Array State After K Multiplication Operations I
-notebook: coding
 tags:
 - easy
-date: 2024-12-13 01:36:18
-updated: 2024-12-13 01:36:18
+date: "2024-12-13T01:36:18+08:00"
+lastmod: "2024-12-13T01:36:18+08:00"
 ---
 ## Problem
 
@@ -21,8 +20,8 @@ Return an integer array denoting the _final state_ of `nums` after performing al
 
 **Example 1:**
 
-> Input: `nums = [2,1,3,5,6], k = 5, multiplier = 2`
-> Output: `[8,4,6,5,6]`
+> Input: `nums = [2,1,3,5,6], k = 5, multiplier = 2`\
+> Output: `[8,4,6,5,6]`\
 > Explanation:
 >
 > | Operation         | Result            |
@@ -35,8 +34,8 @@ Return an integer array denoting the _final state_ of `nums` after performing al
 
 **Example 2:**
 
-> Input: `nums = [1,2], k = 3, multiplier = 4`
-> Output: `[16,8]`
+> Input: `nums = [1,2], k = 3, multiplier = 4`\
+> Output: `[16,8]`\
 > Explanation:
 >
 > | Operation         | Result    |
@@ -59,7 +58,7 @@ class Solution:
     def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -73,8 +72,8 @@ class Solution:
 
 ## Min Heap
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Find Directly
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

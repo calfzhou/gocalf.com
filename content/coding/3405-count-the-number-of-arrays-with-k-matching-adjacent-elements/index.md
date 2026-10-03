@@ -1,11 +1,9 @@
 ---
 title: 3405. Count the Number of Arrays with K Matching Adjacent Elements
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2025-01-03 19:16:49
-updated: 2025-01-03 19:16:49
+date: "2025-01-03T19:16:49+08:00"
+lastmod: "2025-01-03T19:16:49+08:00"
 ---
 ## Problem
 
@@ -22,8 +20,8 @@ Since the answer may be very large, return it **modulo** `10⁹ + 7`.
 
 **Example 1:**
 
-> Input: `n = 3, m = 2, k = 1`
-> Output: `4`
+> Input: `n = 3, m = 2, k = 1`\
+> Output: `4`\
 > Explanation:
 >
 > - There are 4 good arrays. They are `[1, 1, 2]`, `[1, 2, 2]`, `[2, 1, 1]` and `[2, 2, 1]`.
@@ -31,8 +29,8 @@ Since the answer may be very large, return it **modulo** `10⁹ + 7`.
 
 **Example 2:**
 
-> Input: `n = 4, m = 2, k = 2`
-> Output: `6`
+> Input: `n = 4, m = 2, k = 2`\
+> Output: `6`\
 > Explanation:
 >
 > - The good arrays are `[1, 1, 1, 2]`, `[1, 1, 2, 2]`, `[1, 2, 2, 2]`, `[2, 1, 1, 1]`, `[2, 2, 1, 1]` and `[2, 2, 2, 1]`.
@@ -40,8 +38,8 @@ Since the answer may be very large, return it **modulo** `10⁹ + 7`.
 
 **Example 3:**
 
-> Input: `n = 5, m = 2, k = 0`
-> Output: `2`
+> Input: `n = 5, m = 2, k = 0`\
+> Output: `2`\
 > Explanation:
 >
 > - The good arrays are `[1, 2, 1, 2, 1]` and `[2, 1, 2, 1, 2]`. Hence, the answer is 2.
@@ -59,7 +57,7 @@ class Solution:
     def countGoodArrays(self, n: int, m: int, k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -97,4 +95,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

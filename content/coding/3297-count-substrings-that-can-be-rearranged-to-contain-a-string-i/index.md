@@ -1,10 +1,9 @@
 ---
 title: 3297. Count Substrings That Can Be Rearranged to Contain a String I
-notebook: coding
 tags:
 - medium
-date: 2025-01-09 10:18:28
-updated: 2025-01-09 10:18:28
+date: "2025-01-09T10:18:28+08:00"
+lastmod: "2025-01-09T10:18:28+08:00"
 ---
 ## Problem
 
@@ -22,21 +21,21 @@ Return the total number of **valid** substrings of `word1`.
 
 **Example 1:**
 
-> Input: `word1 = "bcca", word2 = "abc"`
-> Output: `1`
+> Input: `word1 = "bcca", word2 = "abc"`\
+> Output: `1`\
 > Explanation:
 > The only valid substring is `"bcca"` which can be rearranged to `"abcc"` having `"abc"` as a prefix.
 
 **Example 2:**
 
-> Input: `word1 = "abcabc", word2 = "abc"`
-> Output: `10`
+> Input: `word1 = "abcabc", word2 = "abc"`\
+> Output: `10`\
 > Explanation:
 > All the substrings except substrings of size 1 and size 2 are valid.
 
 **Example 3:**
 
-> Input: `word1 = "abcabc", word2 = "aaabc"`
+> Input: `word1 = "abcabc", word2 = "aaabc"`\
 > Output: `0`
 
 **Constraints:**
@@ -52,7 +51,7 @@ class Solution:
     def validSubstringCount(self, word1: str, word2: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -66,4 +65,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

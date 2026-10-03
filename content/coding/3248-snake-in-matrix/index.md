@@ -1,10 +1,9 @@
 ---
 title: 3248. Snake in Matrix
-notebook: coding
 tags:
 - easy
-date: 2024-11-21 10:05:04
-updated: 2024-11-21 10:05:04
+date: "2024-11-21T10:05:04+08:00"
+lastmod: "2024-11-21T10:05:04+08:00"
 ---
 ## Problem
 
@@ -20,21 +19,17 @@ Return the position of the final cell where the snake ends up after executing `c
 
 **Example 1:**
 
-> Input: `n = 2, commands = ["RIGHT","DOWN"]`
-> Output: `3`
+> Input: `n = 2, commands = ["RIGHT","DOWN"]`\
+> Output: `3`\
 > Explanation:
-> ::: invert-when-dark
-{% diagramsnet case1.drawio %}
-:::
+> {{< diagramsnet src="case1.drawio" >}}
 
 **Example 2:**
 
-> Input: `n = 3, commands = ["DOWN","RIGHT","UP"]`
-> Output: `1`
+> Input: `n = 3, commands = ["DOWN","RIGHT","UP"]`\
+> Output: `1`\
 > Explanation:
-> ::: invert-when-dark
-{% diagramsnet case2.drawio %}
-:::
+> {{< diagramsnet src="case2.drawio" >}}
 
 **Constraints:**
 
@@ -50,7 +45,7 @@ class Solution:
     def finalPositionOfSnake(self, n: int, commands: List[str]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -63,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

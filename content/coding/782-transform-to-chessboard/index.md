@@ -1,10 +1,9 @@
 ---
 title: 782. Transform to Chessboard
-notebook: coding
 tags:
 - hard
-date: 2024-12-08 14:21:21
-updated: 2024-12-08 14:21:21
+date: "2024-12-08T14:21:21+08:00"
+lastmod: "2024-12-08T14:21:21+08:00"
 ---
 ## Problem
 
@@ -18,28 +17,31 @@ A **chessboard board** is a board where no `0`'s and no `1`'s are 4-directionall
 
 **Example 1:**
 
-![case1|400](case1.png "case1"){.invert-when-dark}
+![case1|400](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `board = [[0,1,1,0],[0,1,1,0],[1,0,0,1],[1,0,0,1]]`
-> Output: `2`
+> Input: `board = [[0,1,1,0],[0,1,1,0],[1,0,0,1],[1,0,0,1]]`\
+> Output: `2`\
 > Explanation: One potential sequence of moves is shown.
 > The first move swaps the first and second column.
 > The second move swaps the second and third row.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `board = [[0,1],[1,0]]`
-> Output: `0`
+> Input: `board = [[0,1],[1,0]]`\
+> Output: `0`\
 > Explanation: Also note that the board with 0 in the top left corner, is also a valid chessboard.
 
 **Example 3:**
 
-![case3](case2.png){.invert-when-dark}
+![case3](case2.png)
+{.invert-when-dark}
 
-> Input: `board = [[1,0],[1,0]]`
-> Output: `-1`
+> Input: `board = [[1,0],[1,0]]`\
+> Output: `-1`\
 > Explanation: No matter what sequence of moves you make, you cannot end with a valid chessboard.
 
 **Constraints:**
@@ -56,7 +58,7 @@ class Solution:
     def movesToChessboard(self, board: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -82,4 +84,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

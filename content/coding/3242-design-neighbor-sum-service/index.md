@@ -1,10 +1,9 @@
 ---
 title: 3242. Design Neighbor Sum Service
-notebook: coding
 tags:
 - easy
-date: 2024-11-09 22:15:20
-updated: 2024-11-09 22:15:20
+date: "2024-11-09T22:15:20+08:00"
+lastmod: "2024-11-09T22:15:20+08:00"
 ---
 ## Problem
 
@@ -16,18 +15,21 @@ Implement the `NeighborSum` class:
 - `int adjacentSum(int value)` returns the **sum** of elements which are adjacent neighbors of `value`, that is either to the top, left, right, or bottom of `value` in `grid`.
 - `int diagonalSum(int value)` returns the **sum** of elements which are diagonal neighbors of `value`, that is either to the top-left, top-right, bottom-left, or bottom-right of `value` in `grid`.
 
-![problem](problem.png){.invert-when-dark}
+![problem](problem.png)
+{.invert-when-dark}
 
 <https://leetcode.cn/problems/design-neighbor-sum-service/>
 
 **Example 1:**
 
-> Input:
-> `["NeighborSum", "adjacentSum", "adjacentSum", "diagonalSum", "diagonalSum"]`
-> `[[[[0, 1, 2], [3, 4, 5], [6, 7, 8]]], [1], [4], [4], [8]]`
-> Output: `[null, 6, 16, 16, 4]`
+> Input:\
+> `["NeighborSum", "adjacentSum", "adjacentSum", "diagonalSum", "diagonalSum"]`\
+> `[[[[0, 1, 2], [3, 4, 5], [6, 7, 8]]], [1], [4], [4], [8]]`\
+> Output: `[null, 6, 16, 16, 4]`\
 > Explanation:
-> ![case1](case1.png){.invert-when-dark}
+>
+> ![case1](case1.png)
+> {.invert-when-dark}
 >
 > - The adjacent neighbors of 1 are 0, 2, and 4.
 > - The adjacent neighbors of 4 are 1, 3, 5, and 7.
@@ -36,12 +38,14 @@ Implement the `NeighborSum` class:
 
 **Example 2:**
 
-> Input:
-> `["NeighborSum", "adjacentSum", "diagonalSum"]`
-> `[[[[1, 2, 0, 3], [4, 7, 15, 6], [8, 9, 10, 11], [12, 13, 14, 5]]], [15], [9]]`
-> Output: `[null, 23, 45]`
+> Input:\
+> `["NeighborSum", "adjacentSum", "diagonalSum"]`\
+> `[[[[1, 2, 0, 3], [4, 7, 15, 6], [8, 9, 10, 11], [12, 13, 14, 5]]], [15], [9]]`\
+> Output: `[null, 23, 45]`\
 > Explanation:
-> ![case2](case2.png){.invert-when-dark}
+>
+> ![case2](case2.png)
+> {.invert-when-dark}
 >
 > - The adjacent neighbors of 15 are 0, 10, 7, and 6.
 > - The diagonal neighbors of 9 are 4, 12, 14, and 15.
@@ -75,7 +79,7 @@ class NeighborSum:
 # param_2 = obj.diagonalSum(value)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -94,4 +98,4 @@ class NeighborSum:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

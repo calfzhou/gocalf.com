@@ -1,11 +1,9 @@
 ---
 title: 3243. Shortest Distance After Road Addition Queries I
-notebook: coding
 tags:
 - medium
-date: 2024-11-19 12:50:29
-updated: 2024-11-19 12:50:29
-katex: true
+date: "2024-11-19T12:50:29+08:00"
+lastmod: "2024-11-19T12:50:29+08:00"
 ---
 ## Problem
 
@@ -23,24 +21,39 @@ Return an array `answer` where for each `i` in the range `[0, queries.length - 1
 
 **Example 1:**
 
-> Input: `n = 5, queries = [[2,4],[0,2],[0,4]]`
-> Output: `[3,2,1]`
+> Input: `n = 5, queries = [[2,4],[0,2],[0,4]]`\
+> Output: `[3,2,1]`\
 > Explanation:
-> ![case1-1](case1-1.png){.invert-when-dark}
+>
+> ![case1-1](case1-1.png)
+> {.invert-when-dark}
+>
 > After the addition of the road from 2 to 4, the length of the shortest path from 0 to 4 is 3.
-> ![case1-2](case1-2.png){.invert-when-dark}
+>
+> ![case1-2](case1-2.png)
+> {.invert-when-dark}
+>
 > After the addition of the road from 0 to 2, the length of the shortest path from 0 to 4 is 2.
-> ![case1-3](case1-3.png){.invert-when-dark}
+>
+> ![case1-3](case1-3.png)
+> {.invert-when-dark}
+>
 > After the addition of the road from 0 to 4, the length of the shortest path from 0 to 4 is 1.
 
 **Example 2:**
 
-> Input: `n = 4, queries = [[0,3],[0,2]]`
-> Output: `[1,1]`
+> Input: `n = 4, queries = [[0,3],[0,2]]`\
+> Output: `[1,1]`\
 > Explanation:
-> ![case2-1](case2-1.png){.invert-when-dark}
+>
+> ![case2-1](case2-1.png)
+> {.invert-when-dark}
+>
 > After the addition of the road from 0 to 3, the length of the shortest path from 0 to 3 is 1.
-> ![case2-2](case2-2.png){.invert-when-dark}
+>
+> ![case2-2](case2-2.png)
+> {.invert-when-dark}
+>
 > After the addition of the road from 0 to 2, the length of the shortest path remains 1.
 
 **Constraints:**
@@ -59,7 +72,7 @@ class Solution:
     def shortestDistanceAfterQueries(self, n: int, queries: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -79,4 +92,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

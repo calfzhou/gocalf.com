@@ -1,10 +1,9 @@
 ---
 title: 3280. Convert Date to Binary
-notebook: coding
 tags:
 - easy
-date: 2025-01-01 00:12:01
-updated: 2025-01-01 00:12:01
+date: "2025-01-01T00:12:01+08:00"
+lastmod: "2025-01-01T00:12:01+08:00"
 ---
 ## Problem
 
@@ -18,15 +17,15 @@ Return the **binary** representation of `date`.
 
 **Example 1:**
 
-> Input: `date = "2080-02-29"`
-> Output: `"100000100000-10-11101"`
+> Input: `date = "2080-02-29"`\
+> Output: `"100000100000-10-11101"`\
 > Explanation:
 > 100000100000, 10, and 11101 are the binary representations of 2080, 02, and 29 respectively.
 
 **Example 2:**
 
-> Input: `date = "1900-01-01"`
-> Output: `"11101101100-1-1"`
+> Input: `date = "1900-01-01"`\
+> Output: `"11101101100-1-1"`\
 > Explanation:
 > 11101101100, 1, and 1 are the binary representations of 1900, 1, and 1 respectively.
 
@@ -43,10 +42,10 @@ class Solution:
     def convertDateToBinary(self, date: str) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,11 +1,9 @@
 ---
 title: 3266. Final Array State After K Multiplication Operations II
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2024-12-14 00:56:32
-updated: 2024-12-14 00:56:32
+date: "2024-12-14T00:56:32+08:00"
+lastmod: "2024-12-14T00:56:32+08:00"
 ---
 ## Problem
 
@@ -24,8 +22,8 @@ Return an integer array denoting the _final state_ of `nums` after performing al
 
 **Example 1:**
 
-> Input: `nums = [2,1,3,5,6], k = 5, multiplier = 2`
-> Output: `[8,4,6,5,6]`
+> Input: `nums = [2,1,3,5,6], k = 5, multiplier = 2`\
+> Output: `[8,4,6,5,6]`\
 > Explanation:
 >
 > | Operation         | Result            |
@@ -38,8 +36,8 @@ Return an integer array denoting the _final state_ of `nums` after performing al
 
 **Example 2:**
 
-> Input: `nums = [100000,2000], k = 2, multiplier = 1000000`
-> Output: `[999999307,999999993]`
+> Input: `nums = [100000,2000], k = 2, multiplier = 1000000`\
+> Output: `[999999307,999999993]`\
 > Explanation:
 >
 > | Operation             | Result                       |
@@ -62,7 +60,7 @@ class Solution:
     def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -159,4 +157,4 @@ def clog(a: int, b: int) -> int:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
