@@ -1,26 +1,27 @@
 ---
 title: Using ESP IDF
-notebook: notes
 tags:
   - it/embed
-date: 2025-12-27 21:37:46
-updated: 2025-12-27 23:02:17
+date: "2025-12-27T21:37:46+08:00"
+lastmod: "2025-12-27T23:02:17+08:00"
 ---
 ## ESP-IDF
 
 [espressif/esp-idf: Espressif IoT Development Framework. Official development framework for Espressif SoCs.](https://github.com/espressif/esp-idf)
 
-{% badge_github espressif esp-idf release:true %}
+{{< badge_github user="espressif" repo="esp-idf" release=true >}}
 
 ## ESP-IDF VS Code Extension
 
 [espressif/vscode-esp-idf-extension: Visual Studio Code extension for ESP-IDF projects](https://github.com/espressif/vscode-esp-idf-extension)
 
-{% badge_github espressif vscode-esp-idf-extension release:true %}
+{{< badge_github user="espressif" repo="vscode-esp-idf-extension" release=true >}}
 
-![Commands](20251101-212619.png){.invert-when-light}
+![Commands](20251101-212619.png)
+{.invert-when-light}
 
-![Advanced](20251101-212704.png){.invert-when-light}
+![Advanced](20251101-212704.png)
+{.invert-when-light}
 
 [Standard Toolchain Setup for Linux and macOS - ESP32 - — ESP-IDF Programming Guide latest documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html)
 
@@ -36,7 +37,8 @@ pyenv virtualenv 3.14.0 esp
 
 Setup the extension (Express mode):
 
-![Setup the extension](20251101-193056.png){.invert-when-light}
+![Setup the extension](20251101-193056.png)
+{.invert-when-light}
 
 👆 Changed the python path to `~/.espressif/python_env/idf5.5_py3.14_env/bin/python3`
 
@@ -154,7 +156,8 @@ python $IDF_PATH/tools/idf_tools.py install qemu-xtensa
 
 If succeed:
 
-![Hello World](20251101-223709.png){.invert-when-light}
+![Hello World](20251101-223709.png)
+{.invert-when-light}
 
 Use Command: Start/Stop QEMU Server » Stop QEMU to stop it.
 
@@ -171,7 +174,8 @@ pytest_hello_world.py EEEEEEEEEEEEEFFFF
 
 [Establish Serial Connection with ESP32 - ESP32 - — ESP-IDF Programming Guide latest documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html)
 
-![Development Board with USB-to-UART Bridge](20251101-225303.png){.invert-when-dark}
+![Development Board with USB-to-UART Bridge](20251101-225303.png)
+{.invert-when-dark}
 
 Need install the USB driver:
 
@@ -180,7 +184,8 @@ Need install the USB driver:
 > [!caution]
 > 要小心使用的 USB 线，有些线可能只能用来充电，或者有什么毛病，也会导致接到电脑上看不到设备！
 
-![UART Bridge Device](20251102-005619.png){.invert-when-light}
+![UART Bridge Device](20251102-005619.png)
+{.invert-when-light}
 
 ```shell-session
 $ ll /dev/tty.*; ll /dev/cu.*

@@ -1,18 +1,18 @@
 ---
 title: Semantic Commit Message
-notebook: notes
 tags:
   - it/git
-date: 2024-05-21 19:36:09
-updated: 2024-05-21 19:36:09
-references:
-  - '[Karma - Git Commit Msg](https://karma-runner.github.io/6.4/dev/git-commit-msg.html)'
+date: "2024-05-21T19:36:09+08:00"
+lastmod: "2024-05-21T19:36:09+08:00"
+params:
+  references:
+    - '[Karma - Git Commit Msg](https://karma-runner.github.io/6.4/dev/git-commit-msg.html)'
 ---
 ## Git Commit Message Format
 
 > In the repository we use and enforce the commit message conventions. The conventions are verified using [commitlint](https://conventional-changelog.github.io/commitlint/) with [Angular config](https://www.npmjs.com/package/@commitlint/config-angular).
 
-{% badge_github conventional-changelog commitlint release:true %}
+{{< badge_github user="conventional-changelog" repo="commitlint" release=true >}}
 
 > commitlint checks if your commit messages meet the [conventional commit format](https://conventionalcommits.org/).
 

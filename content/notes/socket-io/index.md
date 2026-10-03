@@ -1,16 +1,15 @@
 ---
 title: Socket.IO
-notebook: notes
 tags:
   - it/websocket
-date: 2024-05-23 23:57:34
-updated: 2024-05-23 23:57:34
+date: "2024-05-23T23:57:34+08:00"
+lastmod: "2024-05-23T23:57:34+08:00"
 ---
 [Socket.IO](https://socket.io/)
 
 [Introduction | Socket.IO](https://socket.io/docs/v4/)
 
-{% badge_github socketio socket.io release:true %}
+{{< badge_github user="socketio" repo="socket.io" release=true >}}
 
 ## 关于版本
 
@@ -34,13 +33,13 @@ JS Socket.IO | Socket.IO protocol | Engine.IO protocol
 
 [googollee/go-socket.io: socket.io library for golang, a realtime application framework.](https://github.com/googollee/go-socket.io)
 
-{% badge_github googollee go-socket.io release:true %}
+{{< badge_github user="googollee" repo="go-socket.io" release=true >}}
 
 客户端如果是微信小程序，也可以选择官方列出来的 [weapp-socketio/weapp.socket.io](https://github.com/weapp-socketio/weapp.socket.io)，目前最新版本应该是相当于 Socket.IO 3.x（但也可以支持较低的 4.x 版本）。如果要跟 googollee/go-socket.io 搭配，需要使用 2.2.0 版本。
 
 [weapp-socketio/weapp.socket.io: A WebSocket client for building WeChat Mini Program implement by socket.io](https://github.com/weapp-socketio/weapp.socket.io)
 
-{% badge_github weapp-socketio weapp.socket.io release:true %}
+{{< badge_github user="weapp-socketio" repo="weapp.socket.io" release=true >}}
 
 ## 二进制数据
 

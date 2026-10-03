@@ -1,10 +1,9 @@
 ---
 title: 数据仓库分层建模和规范
-notebook: notes
 tags:
   - it/bigdata
-date: 2024-04-13 21:27:05
-updated: 2024-04-13 21:27:05
+date: "2024-04-13T21:27:05+08:00"
+lastmod: "2024-04-13T21:27:05+08:00"
 ---
 
 ## 仓库分层
@@ -180,7 +179,7 @@ ETL 任务其实并不关心数仓表的分区情况，除非要用 drop partiti
 - ods__table_di, etl_day_inc: 同步一天数据，可以 drop partition
 - ods__table_di, etl_day_inc: 不同多天数据，理论上可以多次 drop partition，但目前暂不实现
 
-{% folding 这部分内容暂未在实战中洗礼 open:false %}
+{{% folding title="这部分内容暂未在实战中洗礼" open=false %}}
 
 ## 指标命名规则
 
@@ -284,4 +283,4 @@ ETL 任务其实并不关心数仓表的分区情况，除非要用 drop partiti
 - 统一维度管理，保证维度定义、维度值的一致性。
 - 统一数据出口，实现维度和指标元数据信息的唯一出口，维值和指标数据的唯一出口。
 
-{% endfolding %}
+{{% /folding %}}

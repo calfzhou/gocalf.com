@@ -1,11 +1,10 @@
 ---
 title: 小智 AI 聊天机器人
-notebook: notes
 tags:
   - it/embed
   - it/ai
-date: 2025-12-27 21:45:47
-updated: 2025-12-27 21:45:47
+date: "2025-12-27T21:45:47+08:00"
+lastmod: "2025-12-27T21:45:47+08:00"
 ---
 ## Info
 
@@ -13,7 +12,7 @@ updated: 2025-12-27 21:45:47
 
 > 让我们一起探索人工智能与机器人技术的迷人世界！
 
-{% badge_github 78 xiaozhi-esp32 release:true %}
+{{< badge_github user="78" repo="xiaozhi-esp32" release=true >}}
 
 小智的官方服务器 [Xiaozhi](https://xiaozhi.me/)
 
@@ -115,6 +114,6 @@ ESP32-S3 开发板：[​小智AI聊天机器人面包板DIY硬件清单与接�
 
 [xinnan-tech/xiaozhi-esp32-server: 本项目为xiaozhi-esp32提供后端服务，帮助您快速搭建ESP32设备控制服务器。Backend service for xiaozhi-esp32, helps you quickly build an ESP32 device control server.](https://github.com/xinnan-tech/xiaozhi-esp32-server)
 
-{% badge_github xinnan-tech xiaozhi-esp32-server release:true %}
+{{< badge_github user="xinnan-tech" repo="xiaozhi-esp32-server" release=true >}}
 
 [第十五章 告别在线平台：一步步搭建小智AI开源服务端，打通本地联调之路 - 知乎](https://zhuanlan.zhihu.com/p/1917995119191236926)

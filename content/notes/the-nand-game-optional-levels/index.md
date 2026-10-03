@@ -1,18 +1,16 @@
 ---
 title: The Nand Game - Optional Levels
-notebook: notes
 tags:
 - game/puzzle
 - it/hardware
-mermaid: true
-date: 2025-07-19 20:18:05
-updated: 2026-05-18 21:40:10
+date: "2025-07-19T20:18:05+08:00"
+lastmod: "2026-05-18T21:40:10+08:00"
 ---
 ## All Levels
 
 - [The Nand Game](../the-nand-game/index.md) - Hardware Levels
 - [The Nand Game - Software Levels](../the-nand-game-software-levels/index.md)
-- [The Nand Game - Optional Levels](../the-nand-game-optional-levels/index.md)
+- [The Nand Game - Optional Levels](index.md)
 
 ## Levels: Transistor level
 
@@ -36,7 +34,7 @@ Be careful not to shortcut the circuit by connecting a voltage (1) directly to g
 
 两个 nmos「串联」到 ground，可以实现 a 和 b 同时为 1 时输出 0；否则 disconnect。
 
-::: invert-when-dark
+{{% block class="invert-when-dark" %}}
 
 ```mermaid
 flowchart BT
@@ -60,7 +58,7 @@ subgraph zero
 end
 ```
 
-:::
+{{% /block %}}
 
 👍 Totally 4c.
 
@@ -70,7 +68,7 @@ Build an INV gate from CMOS transistors.
 
 因为需要 4 个 CMOS 才能构造出一个 NAND，如果用 NAND 构造 INV 就会比较浪费。
 
-::: invert-when-dark
+{{% block class="invert-when-dark" %}}
 
 ```mermaid
 flowchart BT
@@ -88,7 +86,7 @@ subgraph zero
 end
 ```
 
-:::
+{{% /block %}}
 
 👍 Totally 2c.
 
@@ -102,7 +100,7 @@ NOR is an universal logic gate just like NAND. Using only NOR gates any other lo
 
 两个 pmos「串联」到 voltage，可以实现 a 和 b 同时为 0 时输出 1；否则 disconnect。
 
-::: invert-when-dark
+{{% block class="invert-when-dark" %}}
 
 ```mermaid
 flowchart BT
@@ -126,7 +124,7 @@ subgraph zero
 end
 ```
 
-:::
+{{% /block %}}
 
 👍 Totally 4c.
 
@@ -139,7 +137,7 @@ Build a **nand**-gate from only **nor**-gates.
 - `a nand b = inv(a and b) = inv(inv a nor inv b)`
 - `inv x = x nor x`
 
-::: invert-when-dark
+{{% block class="invert-when-dark" %}}
 
 ```mermaid
 flowchart BT
@@ -149,7 +147,7 @@ n1 & n2 --> n3[nor]
 n3 & n3 --> n4[nor] --> o(((o)))
 ```
 
-:::
+{{% /block %}}
 
 Totally 4c.
 
@@ -159,14 +157,14 @@ Build a **nand**-gate from only **and** and **inv** gates.
 
 `a nand b = inv(a and b)`.
 
-::: invert-when-dark
+{{% block class="invert-when-dark" %}}
 
 ```mermaid
 flowchart BT
 a((a)) & b((b)) --> and[and] --> inv[inv] --> o(((o)))
 ```
 
-:::
+{{% /block %}}
 
 Totally 2c.
 
@@ -210,7 +208,7 @@ The number of bits to move is indicated by the 4-bit **n** input.
 
 一个 **shl 1** 可以左移 1 位，需要至少 15 个才能实现左移 15 位。
 
-::: invert-when-dark
+{{% block class="invert-when-dark" %}}
 
 ```mermaid
 flowchart BT
@@ -249,7 +247,7 @@ end
 sel3 ==> O(((O)))
 ```
 
-:::
+{{% /block %}}
 
 ❓ Totally 19c256n:
 
@@ -270,7 +268,7 @@ Output the largest of two 16-bit numbers.
 
 按照有符号数就很简单，计算 `A - B`，如果结果是负数，则 B 更大，否则 A 就是最大的。
 
-::: invert-when-dark
+{{% block class="invert-when-dark" %}}
 
 ```mermaid
 flowchart BT
@@ -281,7 +279,7 @@ B ==>|D1| select16
 A ==>|D0| select16
 ```
 
-:::
+{{% /block %}}
 
 ❓ Totally 2c225n (**is neg** not counting):
 

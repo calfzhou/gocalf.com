@@ -1,17 +1,15 @@
 ---
 title: The Nand Game - Software Levels
-notebook: notes
 tags:
 - game/puzzle
 - it/hardware
-katex: true
-date: 2025-07-15 23:38:35
-updated: 2026-05-18 21:54:22
+date: "2025-07-15T23:38:35+08:00"
+lastmod: "2026-05-18T21:54:22+08:00"
 ---
 ## All Levels
 
 - [The Nand Game](../the-nand-game/index.md) - Hardware Levels
-- [The Nand Game - Software Levels](../the-nand-game-software-levels/index.md)
+- [The Nand Game - Software Levels](index.md)
 - [The Nand Game - Optional Levels](../the-nand-game-optional-levels/index.md)
 
 ## Assembler Quick Reference
@@ -102,11 +100,11 @@ Write a program with four instructions:
 2) Add 1 to the D register
 3) Jump unconditionally
 
-就是在 Hardware 最后 [Computer](../the-nand-game/index.md#Computer) 那关的 ROM 里填入指令。
+就是在 Hardware 最后 [Computer](../the-nand-game/index.md#computer) 那关的 ROM 里填入指令。
 
 > The word at the PC address in the program memory is the **I** input to the control unit.
 
-需要结合 [Control Unit](../the-nand-game/index.md#Control%20Unit)、 [ALU Instruction](../the-nand-game/index.md#ALU%20Instruction)、[ALU](../the-nand-game/index.md#ALU) 和 [Condition](../the-nand-game/index.md#Condition) 看指令每一位的取值。
+需要结合 [Control Unit](../the-nand-game/index.md#control-unit)、 [ALU Instruction](../the-nand-game/index.md#alu-instruction)、[ALU](../the-nand-game/index.md#alu) 和 [Condition](../the-nand-game/index.md#condition) 看指令每一位的取值。
 
 > Note: Inside ALU instruction: `alu(X=D, Y=A/*A)`.
 
@@ -180,7 +178,8 @@ So `I = ci | lt | eq | gt = 0x8007` (i.e. `JMP`).
 
 #### All together
 
-![Machine code](20250617-005346.png){.invert-when-dark}
+![Machine code](20250617-005346.png)
+{.invert-when-dark}
 
 持续运行的效果相当于对寄存器 D 从 0 开始逐步递增。
 
@@ -1462,7 +1461,7 @@ The keyboard input is memory-mapped to address `6000`.
 
 The function should return when the keypress ends, i.e. when the input changes back to `0`.
 
-参考前边 [Keyboard input](#Keyboard%20input)。
+参考前边 [Keyboard input](#keyboard-input)。
 
 ```nasm
 function getChar 0
@@ -1605,7 +1604,8 @@ return
 
 Pop the two top values from the stack and compare them. If the first is greater than the second, push the value -1 (`FFFF` in hex). Otherwise push 0.
 
-![|120](20250622-223615.png "Eq"){.invert-when-dark}
+![|120](20250622-223615.png "Eq")
+{.invert-when-dark}
 
 这里文字描述跟图片有出入。文字说的是如果 **先出栈的数 > 后出栈的数**，结果为 -1。但图中先出栈 5，大于后出栈的 3，结果却为 0。
 
@@ -1774,7 +1774,8 @@ sub
 
 有个问题是它不会遵循从左向右的计算顺序，比如`100 - 2 + 2 - (7 + 10)` 会得到如下的表达式，结果是 113 而不是期望的 83。
 
-![|480](20250622-215112.png "Expression tree"){.invert-when-dark}
+![|480](20250622-215112.png "Expression tree")
+{.invert-when-dark}
 
 ## Software Level: Functions
 
