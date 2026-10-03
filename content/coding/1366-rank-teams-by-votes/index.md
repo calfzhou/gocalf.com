@@ -1,10 +1,9 @@
 ---
 title: 1366. Rank Teams by Votes
-notebook: coding
 tags:
 - medium
-date: 2024-12-29 00:42:59
-updated: 2024-12-29 00:42:59
+date: "2024-12-29T00:42:59+08:00"
+lastmod: "2024-12-29T00:42:59+08:00"
 ---
 ## Problem
 
@@ -20,8 +19,8 @@ Return _a string of all teams **sorted** by the ranking system_.
 
 **Example 1:**
 
-> Input: `votes = ["ABC","ACB","ABC","ACB","ACB"]`
-> Output: `"ACB"`
+> Input: `votes = ["ABC","ACB","ABC","ACB","ACB"]`\
+> Output: `"ACB"`\
 > Explanation:
 > Team A was ranked first place by 5 voters. No other team was voted as first place, so team A is the first team.
 > Team B was ranked second by 2 voters and ranked third by 3 voters.
@@ -30,15 +29,15 @@ Return _a string of all teams **sorted** by the ranking system_.
 
 **Example 2:**
 
-> Input: `votes = ["WXYZ","XYZW"]`
-> Output: `"XWYZ"`
+> Input: `votes = ["WXYZ","XYZW"]`\
+> Output: `"XWYZ"`\
 > Explanation:
 > X is the winner due to the tie-breaking rule. X has the same votes as W for the first position, but X has one vote in the second position, while W does not have any votes in the second position.
 
 **Example 3:**
 
-> Input: `votes = ["ZMNAGUEDSJYLBOPHRQICWFXTVK"]`
-> Output: `"ZMNAGUEDSJYLBOPHRQICWFXTVK"`
+> Input: `votes = ["ZMNAGUEDSJYLBOPHRQICWFXTVK"]`\
+> Output: `"ZMNAGUEDSJYLBOPHRQICWFXTVK"`\
 > Explanation: Only one voter, so their votes are used for the ranking.
 
 **Constraints:**
@@ -57,7 +56,7 @@ class Solution:
     def rankTeams(self, votes: List[str]) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -71,4 +70,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 1267. Count Servers that Communicate
-notebook: coding
 tags:
 - medium
-date: 2025-01-23 13:10:15
-updated: 2025-01-23 13:10:15
+date: "2025-01-23T13:10:15+08:00"
+lastmod: "2025-01-23T13:10:15+08:00"
 ---
 ## Problem
 
@@ -16,26 +15,29 @@ Return the number of servers that communicate with any other server.
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `grid = [[1,0],[0,1]]`
-> Output: `0`
+> Input: `grid = [[1,0],[0,1]]`\
+> Output: `0`\
 > Explanation: No servers can communicate with others.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `grid = [[1,0],[1,1]]`
-> Output: `3`
+> Input: `grid = [[1,0],[1,1]]`\
+> Output: `3`\
 > Explanation: All three servers can communicate with at least one other server.
 
 **Example 3:**
 
-![case3](case3.png){.invert-when-dark}
+![case3](case3.png)
+{.invert-when-dark}
 
-> Input: `grid = [[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]]`
-> Output: `4`
+> Input: `grid = [[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]]`\
+> Output: `4`\
 > Explanation: The two servers in the first row can communicate with each other. The two servers in the third column can communicate with each other. The server at right bottom corner can't communicate with any other server.
 
 **Constraints:**
@@ -53,7 +55,7 @@ class Solution:
     def countServers(self, grid: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -67,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

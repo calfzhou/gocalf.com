@@ -1,11 +1,9 @@
 ---
 title: 1186. Maximum Subarray Sum with One Deletion
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-01-06 16:05:11
-updated: 2025-01-08 17:35:33
+date: "2025-01-06T16:05:11+08:00"
+lastmod: "2025-01-08T17:35:33+08:00"
 ---
 ## Problem
 
@@ -17,20 +15,20 @@ Note that the subarray needs to be **non-empty** after deleting one element.
 
 **Example 1:**
 
-> Input: `arr = [1,-2,0,3]`
-> Output: `4`
+> Input: `arr = [1,-2,0,3]`\
+> Output: `4`\
 > Explanation: Because we can choose `[1, -2, 0, 3]` and drop -2, thus the subarray `[1, 0, 3]` becomes the maximum value.
 
 **Example 2:**
 
-> Input: `arr = [1,-2,-2,3]`
-> Output: `3`
+> Input: `arr = [1,-2,-2,3]`\
+> Output: `3`\
 > Explanation: We just choose `[3]` and it's the maximum sum.
 
 **Example 3:**
 
-> Input: `arr = [-1,-1,-1,-1]`
-> Output: `-1`
+> Input: `arr = [-1,-1,-1,-1]`\
+> Output: `-1`\
 > Explanation: The final subarray needs to be non-empty. You can't choose `[-1]` and delete -1 from it, then get an empty subarray to make the sum equals to 0.
 
 **Constraints:**
@@ -45,7 +43,7 @@ class Solution:
     def maximumSum(self, arr: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -92,7 +90,7 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Less Space
 
@@ -125,13 +123,13 @@ $$
 
 时间复杂度 `O(n)`，空间复杂度 `O(1)`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 > 开始没直接用这个办法是没想好怎么处理「至多删除一个」数字，因为在 subarray 之外的数字，删不删是没影响的。实际上 dd 表示的就是「至多」删除一次，不是一定要删除一次，只要在递推过程中不会多删除就可以了，至于删了更大还是不删更大，是自适应的。
 
 ## Another DP
 
-在 [53. Maximum Subarray](../53-maximum-subarray/index.md) 定义的 [第二种 DP](../53-maximum-subarray/index.md#Another%20DP) 的基础上，重新看如何解本题。沿用那边定义的 `ps(i) = Σarr[0...i]` 和 `low(i)`（`arr[0...i]` 的（小于等于零的）最小前缀和）。
+在 [53. Maximum Subarray](../53-maximum-subarray/index.md) 定义的 [第二种 DP](../53-maximum-subarray/index.md#another-dp) 的基础上，重新看如何解本题。沿用那边定义的 `ps(i) = Σarr[0...i]` 和 `low(i)`（`arr[0...i]` 的（小于等于零的）最小前缀和）。
 
 $$
 \begin{array}{rcl}
@@ -140,7 +138,7 @@ $$
 \end{array}
 $$
 
-[上边](../1186-maximum-subarray-sum-with-one-deletion/index.md#Less%20Space) 定义的 dl 可以用 ps 和 low 重写为：$dl(i)=ps(i)-low(i-1)$（不用 `low(i)` 因为需要保证 subarray 不为空）。
+[上边](index.md#less-space) 定义的 dl 可以用 ps 和 low 重写为：$dl(i)=ps(i)-low(i-1)$（不用 `low(i)` 因为需要保证 subarray 不为空）。
 
 然后把 dd 也改造成在 ps 里减去一个值的形式，如 `dd = ps - low2`，可得：
 
@@ -180,4 +178,4 @@ $$
 
 $$
 
-{% snippet solution3.py %}
+{{< snippet src="solution3.py" >}}

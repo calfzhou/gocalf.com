@@ -1,11 +1,9 @@
 ---
 title: 139. Word Break
-notebook: coding
 tags:
 - medium
-date: 2024-11-11 22:57:42
-updated: 2024-11-11 22:57:42
-katex: true
+date: "2024-11-11T22:57:42+08:00"
+lastmod: "2024-11-11T22:57:42+08:00"
 ---
 ## Problem
 
@@ -17,20 +15,20 @@ Given a string `s` and a dictionary of strings `wordDict`, return `true` if `s` 
 
 **Example 1:**
 
-> Input: `s = "leetcode", wordDict = ["leet","code"]`
-> Output: `true`
+> Input: `s = "leetcode", wordDict = ["leet","code"]`\
+> Output: `true`\
 > Explanation: Return true because "leetcode" can be segmented as "leet code".
 
 **Example 2:**
 
-> Input: `s = "applepenapple", wordDict = ["apple","pen"]`
-> Output: `true`
+> Input: `s = "applepenapple", wordDict = ["apple","pen"]`\
+> Output: `true`\
 > Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
 > Note that you are allowed to reuse a dictionary word.
 
 **Example 3:**
 
-> Input: `s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]`
+> Input: `s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]`\
 > Output: `false`
 
 **Constraints:**
@@ -48,7 +46,7 @@ class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -74,7 +72,7 @@ $$can_{i,j}=s_{i,j}\in D\lor \exists p:(i\le p<j,can_{i,p}\land can_{p+1,j})$$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Improve
 
@@ -100,8 +98,8 @@ $$
 
 优化之后的代码：
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 Inner method test cases:
 
-{% snippet solution2_inner_test.py %}
+{{< snippet src="solution2_inner_test.py" >}}

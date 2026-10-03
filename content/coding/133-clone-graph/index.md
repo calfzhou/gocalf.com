@@ -1,10 +1,9 @@
 ---
 title: 133. Clone Graph
-notebook: coding
 tags:
 - medium
-date: 2024-11-10 15:35:08
-updated: 2024-11-10 15:35:08
+date: "2024-11-10T15:35:08+08:00"
+lastmod: "2024-11-10T15:35:08+08:00"
 ---
 ## Problem
 
@@ -33,10 +32,11 @@ The given node will always be the first node with `val = 1`. You must return the
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `adjList = [[2,4],[1,3],[2,4],[1,3]]`
-> Output: `[[2,4],[1,3],[2,4],[1,3]]`
+> Input: `adjList = [[2,4],[1,3],[2,4],[1,3]]`\
+> Output: `[[2,4],[1,3],[2,4],[1,3]]`\
 > Explanation: There are 4 nodes in the graph.
 > 1st node (val = 1)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
 > 2nd node (val = 2)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
@@ -45,16 +45,17 @@ The given node will always be the first node with `val = 1`. You must return the
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `adjList = [[]]`
-> Output: `[[]]`
+> Input: `adjList = [[]]`\
+> Output: `[[]]`\
 > Explanation: Note that the input contains one empty list. The graph consists of only one node with val = 1 and it does not have any neighbors.
 
 **Example 3:**
 
-> Input: `adjList = []`
-> Output: `[]`
+> Input: `adjList = []`\
+> Output: `[]`\
 > Explanation: This an empty graph, it does not have any nodes.
 
 **Constraints:**
@@ -81,7 +82,7 @@ class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -99,4 +100,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

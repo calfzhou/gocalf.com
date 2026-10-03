@@ -1,10 +1,9 @@
 ---
 title: 1250. Check If It Is a Good Array
-notebook: coding
 tags:
 - hard
-date: 2024-12-28 21:47:40
-updated: 2024-12-28 21:47:40
+date: "2024-12-28T21:47:40+08:00"
+lastmod: "2024-12-28T21:47:40+08:00"
 ---
 ## Problem
 
@@ -16,21 +15,21 @@ Return `True` if the array is **good** otherwise return `False`.
 
 **Example 1:**
 
-> Input: `nums = [12,5,7,23]`
-> Output: `true`
+> Input: `nums = [12,5,7,23]`\
+> Output: `true`\
 > Explanation: Pick numbers 5 and 7.
 > `5*3 + 7*(-2) = 1`
 
 **Example 2:**
 
-> Input: `nums = [29,6,10]`
-> Output: `true`
+> Input: `nums = [29,6,10]`\
+> Output: `true`\
 > Explanation: Pick numbers 29, 6 and 10.
 > `29*1 + 6*(-3) + 10*(-1) = 1`
 
 **Example 3:**
 
-> Input: `nums = [3,6]`
+> Input: `nums = [3,6]`\
 > Output: `false`
 
 **Constraints:**
@@ -45,7 +44,7 @@ class Solution:
     def isGoodArray(self, nums: List[int]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,6 +58,6 @@ Python 里 [`math.gcd`](https://docs.python.org/3/library/math.html#math.gcd) �
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

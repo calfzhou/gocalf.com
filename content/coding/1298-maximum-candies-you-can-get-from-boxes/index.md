@@ -1,10 +1,9 @@
 ---
 title: 1298. Maximum Candies You Can Get from Boxes
-notebook: coding
 tags:
 - hard
-date: 2024-12-28 20:38:00
-updated: 2024-12-28 20:38:00
+date: "2024-12-28T20:38:00+08:00"
+lastmod: "2024-12-28T20:38:00+08:00"
 ---
 ## Problem
 
@@ -23,8 +22,8 @@ Return _the maximum number of candies you can get following the rules above_.
 
 **Example 1:**
 
-> Input: `status = [1,0,1,0], candies = [7,5,4,100], keys = [[],[],[1],[]], containedBoxes = [[1,2],[3],[],[]], initialBoxes = [0]`
-> Output: `16`
+> Input: `status = [1,0,1,0], candies = [7,5,4,100], keys = [[],[],[1],[]], containedBoxes = [[1,2],[3],[],[]], initialBoxes = [0]`\
+> Output: `16`\
 > Explanation: You will be initially given box 0. You will find 7 candies in it and boxes 1 and 2.
 > Box 1 is closed and you do not have a key for it so you will open box 2. You will find 4 candies and a key to box 1 in box 2.
 > In box 1, you will find 5 candies and box 3 but you will not find a key to box 3 so box 3 will remain closed.
@@ -32,8 +31,8 @@ Return _the maximum number of candies you can get following the rules above_.
 
 **Example 2:**
 
-> Input: `status = [1,0,0,0,0,0], candies = [1,1,1,1,1,1], keys = [[1,2,3,4,5],[],[],[],[],[]], containedBoxes = [[1,2,3,4,5],[],[],[],[],[]], initialBoxes = [0]`
-> Output: `6`
+> Input: `status = [1,0,0,0,0,0], candies = [1,1,1,1,1,1], keys = [[1,2,3,4,5],[],[],[],[],[]], containedBoxes = [[1,2,3,4,5],[],[],[],[],[]], initialBoxes = [0]`\
+> Output: `6`\
 > Explanation: You have initially box 0. Opening it you can find boxes 1,2,3,4 and 5 and their keys.
 > The total number of candies will be 6.
 
@@ -60,7 +59,7 @@ class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -74,4 +73,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

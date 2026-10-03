@@ -1,10 +1,9 @@
 ---
 title: 1261. Find Elements in a Contaminated Binary Tree
-notebook: coding
 tags:
 - medium
-date: 2025-02-21 16:34:05
-updated: 2025-02-21 16:34:05
+date: "2025-02-21T16:34:05+08:00"
+lastmod: "2025-02-21T16:34:05+08:00"
 ---
 ## Problem
 
@@ -26,13 +25,14 @@ Implement the `FindElements` class:
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input
-> `["FindElements","find","find"]`
-> `[[[-1,null,-1]],[1],[2]]`
-> Output
-> `[null,false,true]`
+> Input\
+> `["FindElements","find","find"]`\
+> `[[[-1,null,-1]],[1],[2]]`\
+> Output\
+> `[null,false,true]`\
 > Explanation
 >
 > ```cpp
@@ -43,13 +43,14 @@ Implement the `FindElements` class:
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input
-> `["FindElements","find","find","find"]`
-> `[[[-1,-1,-1,-1,-1]],[1],[3],[5]]`
-> Output
-> `[null,true,true,false]`
+> Input\
+> `["FindElements","find","find","find"]`\
+> `[[[-1,-1,-1,-1,-1]],[1],[3],[5]]`\
+> Output\
+> `[null,true,true,false]`\
 > Explanation
 >
 > ```cpp
@@ -61,13 +62,14 @@ Implement the `FindElements` class:
 
 **Example 3:**
 
-![case3](case3.png){.invert-when-dark}
+![case3](case3.png)
+{.invert-when-dark}
 
-> Input
-> `["FindElements","find","find","find","find"]`
-> `[[[-1,null,-1,-1,null,-1]],[2],[3],[4],[5]]`
-> Output
-> `[null,true,false,false,true]`
+> Input\
+> `["FindElements","find","find","find","find"]`\
+> `[[[-1,null,-1,-1,null,-1]],[2],[3],[4],[5]]`\
+> Output\
+> `[null,true,false,false,true]`\
 > Explanation
 >
 > ```cpp
@@ -109,7 +111,7 @@ class FindElements:
 # param_1 = obj.find(target)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -125,8 +127,8 @@ class FindElements:
 
 ### Less Space
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Less Time
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

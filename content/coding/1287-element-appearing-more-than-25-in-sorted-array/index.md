@@ -1,10 +1,9 @@
 ---
 title: 1287. Element Appearing More Than 25% In Sorted Array
-notebook: coding
 tags:
 - easy
-date: 2025-02-17 11:03:18
-updated: 2025-02-17 11:03:18
+date: "2025-02-17T11:03:18+08:00"
+lastmod: "2025-02-17T11:03:18+08:00"
 ---
 ## Problem
 
@@ -14,12 +13,12 @@ Given an integer array **sorted** in non-decreasing order, there is exactly one 
 
 **Example 1:**
 
-> Input: `arr = [1,2,2,6,6,6,6,7,10]`
+> Input: `arr = [1,2,2,6,6,6,6,7,10]`\
 > Output: `6`
 
 **Example 2:**
 
-> Input: `arr = [1,1]`
+> Input: `arr = [1,1]`\
 > Output: `1`
 
 **Constraints:**
@@ -34,7 +33,7 @@ class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -55,4 +54,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

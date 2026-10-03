@@ -1,10 +1,9 @@
 ---
 title: 1367. Linked List in Binary Tree
-notebook: coding
 tags:
 - medium
-date: 2024-12-30 01:02:05
-updated: 2024-12-30 01:02:05
+date: "2024-12-30T01:02:05+08:00"
+lastmod: "2024-12-30T01:02:05+08:00"
 ---
 ## Problem
 
@@ -18,23 +17,25 @@ In this context downward path means a path that starts at some node and goes dow
 
 **Example 1:**
 
-![case1|220](case1.png "case1"){.invert-when-dark}
+![case1|220](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `head = [4,2,8], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`
-> Output: `true`
+> Input: `head = [4,2,8], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`\
+> Output: `true`\
 > Explanation: Nodes in blue form a subpath in the binary Tree.
 
 **Example 2:**
 
-![case2|220](case2.png "case2"){.invert-when-dark}
+![case2|220](case2.png "case2")
+{.invert-when-dark}
 
-> Input: `head = [1,4,2,6], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`
+> Input: `head = [1,4,2,6], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`\
 > Output: `true`
 
 **Example 3:**
 
-> Input: `head = [1,4,2,6,8], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`
-> Output: `false`
+> Input: `head = [1,4,2,6,8], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]`\
+> Output: `false`\
 > Explanation: There is no path in the binary tree that contains all the elements of the linked list from head.
 
 **Constraints:**
@@ -61,7 +62,7 @@ class Solution:
     def isSubPath(self, head: Optional[ListNode], root: Optional[TreeNode]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -73,4 +74,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

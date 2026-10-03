@@ -1,10 +1,9 @@
 ---
 title: 1206. Design Skiplist
-notebook: coding
 tags:
 - hard
-date: 2024-12-28 23:59:57
-updated: 2024-12-28 23:59:57
+date: "2024-12-28T23:59:57+08:00"
+lastmod: "2024-12-28T23:59:57+08:00"
 ---
 ## Problem
 
@@ -14,7 +13,8 @@ A **skiplist** is a data structure that takes `O(log(n))` time to add, erase and
 
 For example, we have a Skiplist containing `[30,40,50,60,70,90]` and we want to add `80` and `45` into it. The Skiplist works this way:
 
-![skiplist|500](skiplist.gif "skiplist"){.invert-when-dark}
+![skiplist|500](skiplist.gif "skiplist")
+{.invert-when-dark}
 
 > Artyom Kalinin \[CC BY-SA 3.0\], via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Skip_list_add_element-en.gif "Artyom Kalinin [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons")
 
@@ -35,10 +35,10 @@ Note that duplicates may exist in the Skiplist, your code needs to handle this s
 
 **Example 1:**
 
-> Input
-> `["Skiplist", "add", "add", "add", "search", "add", "search", "erase", "erase", "search"]`
-> `[[], [1], [2], [3], [0], [4], [1], [0], [1], [1]]`
-> Output
+> Input\
+> `["Skiplist", "add", "add", "add", "search", "add", "search", "erase", "erase", "search"]`\
+> `[[], [1], [2], [3], [0], [4], [1], [0], [1], [1]]`\
+> Output\
 > `[null, null, null, null, false, null, true, false, true, false]`
 >
 > Explanation
@@ -86,7 +86,7 @@ class Skiplist:
 # param_3 = obj.erase(num)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -105,4 +105,4 @@ class Skiplist:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,11 +1,9 @@
 ---
 title: 3410. Maximize Subarray Sum After Removing All Occurrences of One Element
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2025-01-08 17:37:47
-updated: 2025-01-08 17:37:47
+date: "2025-01-08T17:37:47+08:00"
+lastmod: "2025-01-08T17:37:47+08:00"
 ---
 ## Problem
 
@@ -24,23 +22,23 @@ A **subarray** is a contiguous **non-empty** sequence of elements within an arra
 
 **Example 1:**
 
-> Input: `nums = [-3,2,-2,-1,3,-2,3]`
-> Output: `7`
+> Input: `nums = [-3,2,-2,-1,3,-2,3]`\
+> Output: `7`\
 > Explanation:
 > We can have the following arrays after at most one operation:
 >
-> - The original array is `nums = [-3, 2, -2, -1,` {% u 3, -2, 3 %}`]`. The maximum subarray sum is `3 + (-2) + 3 = 4`.
-> - Deleting all occurences of `x = -3` results in `nums = [2, -2, -1,` {% u 3, -2, 3 %}`]`. The maximum subarray sum is `3 + (-2) + 3 = 4`.
-> - Deleting all occurences of `x = -2` results in `nums = [-3,` {% u 2, -1, 3, 3 %}`]`. The maximum subarray sum is `2 + (-1) + 3 + 3 = 7`.
-> - Deleting all occurences of `x = -1` results in `nums = [-3, 2, -2,` {% u 3, -2, 3 %}`]`. The maximum subarray sum is `3 + (-2) + 3 = 4`.
-> - Deleting all occurences of `x = 3` results in `nums = [-3,` {% u 2 %}`, -2, -1, -2]`. The maximum subarray sum is 2.
+> - The original array is `nums = [-3, 2, -2, -1,` {{< u text="3, -2, 3" >}}`]`. The maximum subarray sum is `3 + (-2) + 3 = 4`.
+> - Deleting all occurences of `x = -3` results in `nums = [2, -2, -1,` {{< u text="3, -2, 3" >}}`]`. The maximum subarray sum is `3 + (-2) + 3 = 4`.
+> - Deleting all occurences of `x = -2` results in `nums = [-3,` {{< u text="2, -1, 3, 3" >}}`]`. The maximum subarray sum is `2 + (-1) + 3 + 3 = 7`.
+> - Deleting all occurences of `x = -1` results in `nums = [-3, 2, -2,` {{< u text="3, -2, 3" >}}`]`. The maximum subarray sum is `3 + (-2) + 3 = 4`.
+> - Deleting all occurences of `x = 3` results in `nums = [-3,` {{< u text="2" >}}`, -2, -1, -2]`. The maximum subarray sum is 2.
 >
 > The output is `max(4, 4, 7, 4, 2) = 7`.
 
 **Example 2:**
 
-> Input: `nums = [1,2,3,4]`
-> Output: `10`
+> Input: `nums = [1,2,3,4]`\
+> Output: `10`\
 > Explanation:
 > It is optimal to not perform any operations.
 
@@ -56,7 +54,7 @@ class Solution:
     def maxSubarraySum(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -71,7 +69,7 @@ class Solution:
 
 如果直接 [遍历每个负数，计算其所有 occurrences 被删掉之后的最大子数组](solution_slow.py)，时间复杂度是 `O(n²)`，肯定会超时。这里有大量的重复计算。
 
-沿用前两题中 [第二种 DP](../1186-maximum-subarray-sum-with-one-deletion/index.md#Another%20DP) 的定义，`ps(i) = Σnums[0...i]` 和 `low(i)`（`nums[0...i]` 的（小于等于零的）最小前缀和）。调整 `low2(i)` 的含义为 `arr[0...i]` 的（小于等于零的）最小前缀和再加上额外被删掉的数字的所有 occurrences 所能得到的最小值（在 `ps(i)` 中减去此值，就是以 i 为右端点但是删掉至多一个数字的所有 occurrences 之后的最大 subarray 和）。
+沿用前两题中 [第二种 DP](../1186-maximum-subarray-sum-with-one-deletion/index.md#another-dp) 的定义，`ps(i) = Σnums[0...i]` 和 `low(i)`（`nums[0...i]` 的（小于等于零的）最小前缀和）。调整 `low2(i)` 的含义为 `arr[0...i]` 的（小于等于零的）最小前缀和再加上额外被删掉的数字的所有 occurrences 所能得到的最小值（在 `ps(i)` 中减去此值，就是以 i 为右端点但是删掉至多一个数字的所有 occurrences 之后的最大 subarray 和）。
 
 在 [problem 1186](../1186-maximum-subarray-sum-with-one-deletion/index.md) 中只允许删除一个位置的数字，low2 的状态转移为：
 
@@ -106,4 +104,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

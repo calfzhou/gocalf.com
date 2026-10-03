@@ -1,11 +1,9 @@
 ---
 title: 714. Best Time to Buy and Sell Stock with Transaction Fee
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-12-18 22:06:17
-updated: 2024-12-18 22:06:17
+date: "2024-12-18T22:06:17+08:00"
+lastmod: "2024-12-18T22:06:17+08:00"
 ---
 ## Problem
 
@@ -22,8 +20,8 @@ Find the maximum profit you can achieve. You may complete as many transactions a
 
 **Example 1:**
 
-> Input: `prices = [1,3,2,8,4,9], fee = 2`
-> Output: `8`
+> Input: `prices = [1,3,2,8,4,9], fee = 2`\
+> Output: `8`\
 > Explanation: The maximum profit can be achieved by:
 >
 > - Buying at `prices[0] = 1`
@@ -35,7 +33,7 @@ Find the maximum profit you can achieve. You may complete as many transactions a
 
 **Example 2:**
 
-> Input: `prices = [1,3,7,5,10,3], fee = 3`
+> Input: `prices = [1,3,7,5,10,3], fee = 3`\
 > Output: `6`
 
 **Constraints:**
@@ -51,7 +49,7 @@ class Solution:
     def maxProfit(self, prices: List[int], fee: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,7 +63,7 @@ class Solution:
 
 这次是在 [122. Best Time to Buy and Sell Stock II](../122-best-time-to-buy-and-sell-stock-ii/index.md)（交易任意多次）的基础上，增加了每次交易的交易费。
 
-在 [122. Best Time to Buy and Sell Stock II](../122-best-time-to-buy-and-sell-stock-ii/index.md) 中已经定义了 [动态规划的状态及其转移函数](../122-best-time-to-buy-and-sell-stock-ii/index.md#DP)，那么直接在转移函数上，把交易费的影响加上去即可。更新后的转移函数为：
+在 [122. Best Time to Buy and Sell Stock II](../122-best-time-to-buy-and-sell-stock-ii/index.md) 中已经定义了 [动态规划的状态及其转移函数](../122-best-time-to-buy-and-sell-stock-ii/index.md#dp)，那么直接在转移函数上，把交易费的影响加上去即可。更新后的转移函数为：
 
 $$
 \begin{cases}
@@ -80,4 +78,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

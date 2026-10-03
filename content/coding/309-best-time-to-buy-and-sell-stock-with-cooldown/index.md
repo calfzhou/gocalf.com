@@ -1,11 +1,9 @@
 ---
 title: 309. Best Time to Buy and Sell Stock with Cooldown
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-12-18 21:54:59
-updated: 2024-12-18 21:54:59
+date: "2024-12-18T21:54:59+08:00"
+lastmod: "2024-12-18T21:54:59+08:00"
 ---
 ## Problem
 
@@ -21,13 +19,13 @@ Find the maximum profit you can achieve. You may complete as many transactions a
 
 **Example 1:**
 
-> Input: `prices = [1,2,3,0,2]`
-> Output: `3`
+> Input: `prices = [1,2,3,0,2]`\
+> Output: `3`\
 > Explanation: `transactions = [buy, sell, cooldown, buy, sell]`
 
 **Example 2:**
 
-> Input: `prices = [1]`
+> Input: `prices = [1]`\
 > Output: `0`
 
 **Constraints:**
@@ -42,7 +40,7 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -55,7 +53,7 @@ class Solution:
 
 这次是在 [122. Best Time to Buy and Sell Stock II](../122-best-time-to-buy-and-sell-stock-ii/index.md)（交易任意多次）的基础上，增加了 cooldown 一天的要求。
 
-在 [122. Best Time to Buy and Sell Stock II](../122-best-time-to-buy-and-sell-stock-ii/index.md) 中已经定义了 [动态规划的状态及其转移函数](../122-best-time-to-buy-and-sell-stock-ii/index.md#DP)，那么直接在转移函数上，把冷静期的影响加上去即可。更新后的转移函数为：
+在 [122. Best Time to Buy and Sell Stock II](../122-best-time-to-buy-and-sell-stock-ii/index.md) 中已经定义了 [动态规划的状态及其转移函数](../122-best-time-to-buy-and-sell-stock-ii/index.md#dp)，那么直接在转移函数上，把冷静期的影响加上去即可。更新后的转移函数为：
 
 $$
 \begin{cases}
@@ -70,4 +68,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

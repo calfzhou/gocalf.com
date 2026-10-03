@@ -1,10 +1,9 @@
 ---
 title: 1260. Shift 2D Grid
-notebook: coding
 tags:
 - easy
-date: 2025-01-03 11:05:26
-updated: 2025-01-03 11:05:26
+date: "2025-01-03T11:05:26+08:00"
+lastmod: "2025-01-03T11:05:26+08:00"
 ---
 ## Problem
 
@@ -22,21 +21,23 @@ Return the _2D grid_ after applying shift operation `k` times.
 
 **Example 1:**
 
-![case1|400](case1.png "case1"){.invert-when-dark}
+![case1|400](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `grid = [[1,2,3],[4,5,6],[7,8,9]], k = 1`
+> Input: `grid = [[1,2,3],[4,5,6],[7,8,9]], k = 1`\
 > Output: `[[9,1,2],[3,4,5],[6,7,8]]`
 
 **Example 2:**
 
-![case2|400](case2.png "case2"){.invert-when-dark}
+![case2|400](case2.png "case2")
+{.invert-when-dark}
 
-> Input: `grid = [[3,8,1,9],[19,7,2,5],[4,6,11,10],[12,0,21,13]], k = 4`
+> Input: `grid = [[3,8,1,9],[19,7,2,5],[4,6,11,10],[12,0,21,13]], k = 4`\
 > Output: `[[12,0,21,13],[3,8,1,9],[19,7,2,5],[4,6,11,10]]`
 
 **Example 3:**
 
-> Input: `grid = [[1,2,3],[4,5,6],[7,8,9]], k = 9`
+> Input: `grid = [[1,2,3],[4,5,6],[7,8,9]], k = 9`\
 > Output: `[[1,2,3],[4,5,6],[7,8,9]]`
 
 **Constraints:**
@@ -55,7 +56,7 @@ class Solution:
     def shiftGrid(self, grid: List[List[int]], k: int) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -63,4 +64,4 @@ In-place 轮换比较麻烦，一般的实现方式也是需要用 `O(m * n)` �
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

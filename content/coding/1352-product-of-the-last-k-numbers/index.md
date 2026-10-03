@@ -1,10 +1,9 @@
 ---
 title: 1352. Product of the Last K Numbers
-notebook: coding
 tags:
 - medium
-date: 2025-02-14 14:19:00
-updated: 2025-02-14 14:19:00
+date: "2025-02-14T14:19:00+08:00"
+lastmod: "2025-02-14T14:19:00+08:00"
 ---
 ## Problem
 
@@ -22,11 +21,11 @@ The test cases are generated so that, at any time, the product of any contiguous
 
 **Example 1:**
 
-> Input
-> `["ProductOfNumbers","add","add","add","add","add","getProduct","getProduct","getProduct","add","getProduct"]`
+> Input\
+> `["ProductOfNumbers","add","add","add","add","add","getProduct","getProduct","getProduct","add","getProduct"]`\
 > `[[],[3],[0],[2],[5],[4],[2],[3],[4],[8],[2]]`
 >
-> Output
+> Output\
 > `[null,null,null,null,null,null,20,40,0,null,32]`
 >
 > Explanation
@@ -75,7 +74,7 @@ class ProductOfNumbers:
 # param_2 = obj.getProduct(k)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -87,4 +86,4 @@ class ProductOfNumbers:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 208. Implement Trie (Prefix Tree)
-notebook: coding
 tags:
 - medium
-date: 2024-11-22 17:59:34
-updated: 2024-11-22 17:59:34
+date: "2024-11-22T17:59:34+08:00"
+lastmod: "2024-11-22T17:59:34+08:00"
 ---
 ## Problem
 
@@ -21,10 +20,10 @@ Implement the Trie class:
 
 **Example 1:**
 
-> Input
-> `["Trie", "insert", "search", "search", "startsWith", "insert", "search"]`
-> `[[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]`
-> Output
+> Input\
+> `["Trie", "insert", "search", "search", "startsWith", "insert", "search"]`\
+> `[[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]`\
+> Output\
 > `[null, null, true, false, true, null, true]`
 >
 > Explanation
@@ -70,7 +69,7 @@ class Trie:
 # param_3 = obj.startsWith(prefix)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,4 +77,4 @@ class Trie:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

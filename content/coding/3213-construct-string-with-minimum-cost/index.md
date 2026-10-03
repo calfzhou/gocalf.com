@@ -1,13 +1,13 @@
 ---
 title: 3213. Construct String with Minimum Cost
-notebook: coding
 tags:
 - hard
 - difficult
-date: 2024-12-17 21:39:12
-updated: 2024-12-17 23:48:27
-references:
-- '[Aho-Corasick Algorithm in Python - GeeksforGeeks](https://www.geeksforgeeks.org/aho-corasick-algorithm-in-python/)'
+date: "2024-12-17T21:39:12+08:00"
+lastmod: "2024-12-17T23:48:27+08:00"
+params:
+  references:
+  - '[Aho-Corasick Algorithm in Python - GeeksforGeeks](https://www.geeksforgeeks.org/aho-corasick-algorithm-in-python/)'
 ---
 ## Problem
 
@@ -27,8 +27,8 @@ Return the **minimum** cost to make `s` equal to `target`. If it's not possible,
 
 **Example 1:**
 
-> Input: `target = "abcdef", words = ["abdef","abc","d","def","ef"], costs = [100,1,1,10,5]`
-> Output: `7`
+> Input: `target = "abcdef", words = ["abdef","abc","d","def","ef"], costs = [100,1,1,10,5]`\
+> Output: `7`\
 > Explanation:
 > The minimum cost can be achieved by performing the following operations:
 >
@@ -38,8 +38,8 @@ Return the **minimum** cost to make `s` equal to `target`. If it's not possible,
 
 **Example 2:**
 
-> Input: `target = "aaaa", words = ["z","zz","zzz"], costs = [1,10,100]`
-> Output: `-1`
+> Input: `target = "aaaa", words = ["z","zz","zzz"], costs = [1,10,100]`\
+> Output: `-1`\
 > Explanation:
 > It is impossible to make s equal to target, so we return -1.
 
@@ -59,7 +59,7 @@ class Solution:
     def minimumCost(self, target: str, words: List[str], costs: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -71,7 +71,7 @@ class Solution:
 
 看以位置 i 开头的子字符串 `target[i:]`，记 `dp(i)` 表示该子问题的最小 cost。从位置 i 开始能够在 `words` 中匹配到哪些单词，设 `target[i:j]` 是 words 中的一个单词，那么 `dp(i) = min{cost(target[i:j]) + dp(j)}`。
 
-用 words 和 costs 构建前缀树（参见 [208. Implement Trie (Prefix Tree)](../208-implement-trie-prefix-tree/index.md)），把单词的 cost 记录在词尾节点上。加一个 lookup 方法（类似于 [139. Word Break](../139-word-break/index.md#Improve)），找出 `target[i:]` 中以位置 i 开头所有可以匹配到的单词。
+用 words 和 costs 构建前缀树（参见 [208. Implement Trie (Prefix Tree)](../208-implement-trie-prefix-tree/index.md)），把单词的 cost 记录在词尾节点上。加一个 lookup 方法（类似于 [139. Word Break](../139-word-break/index.md#improve)），找出 `target[i:]` 中以位置 i 开头所有可以匹配到的单词。
 
 设 target 的长度为 n，单词数量为 m，单词平均长度 k（本题的 k、m、n 量级相当）。时间复杂度是 `O(mk + n²)`，空间复杂度 `O(mk + n)`。
 
@@ -107,8 +107,8 @@ return dp[n]
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 附：针对 AC 自动机的构建和多模式匹配的 test cases：
 
-{% snippet solution_ac_test.py %}
+{{< snippet src="solution_ac_test.py" >}}

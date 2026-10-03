@@ -1,10 +1,9 @@
 ---
 title: 128. Longest Consecutive Sequence
-notebook: coding
 tags:
 - medium
-date: 2024-11-09 20:37:50
-updated: 2024-11-09 20:37:50
+date: "2024-11-09T20:37:50+08:00"
+lastmod: "2024-11-09T20:37:50+08:00"
 ---
 ## Problem
 
@@ -16,13 +15,13 @@ You must write an algorithm that runs in `O(n)` time.
 
 **Example 1:**
 
-> Input: nums = [100,4,200,1,3,2]
-> Output: 4
+> Input: nums = [100,4,200,1,3,2]\
+> Output: 4\
 > Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 
 **Example 2:**
 
-> Input: nums = [0,3,7,2,5,8,4,6,0,1]
+> Input: nums = [0,3,7,2,5,8,4,6,0,1]\
 > Output: 9
 
 **Constraints:**
@@ -37,7 +36,7 @@ class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -63,4 +62,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

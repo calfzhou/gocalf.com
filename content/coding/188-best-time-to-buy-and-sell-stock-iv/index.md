@@ -1,11 +1,9 @@
 ---
 title: 188. Best Time to Buy and Sell Stock IV
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2024-12-18 20:55:31
-updated: 2024-12-18 20:55:31
+date: "2024-12-18T20:55:31+08:00"
+lastmod: "2024-12-18T20:55:31+08:00"
 ---
 ## Problem
 
@@ -19,14 +17,14 @@ Find the maximum profit you can achieve. You may complete at most `k` transactio
 
 **Example 1:**
 
-> Input: `k = 2, prices = [2,4,1]`
-> Output: `2`
+> Input: `k = 2, prices = [2,4,1]`\
+> Output: `2`\
 > Explanation: Buy on day 1 (`price = 2`) and sell on day 2 (`price = 4`), `profit = 4-2 = 2`.
 
 **Example 2:**
 
-> Input: `k = 2, prices = [3,2,6,5,0,3]`
-> Output: `7`
+> Input: `k = 2, prices = [3,2,6,5,0,3]`\
+> Output: `7`\
 > Explanation: Buy on day 2 (`price = 2`) and sell on day 3 (`price = 6`), `profit = 6-2 = 4`. Then buy on day 5 (`price = 0`) and sell on day 6 (`price = 3`), `profit = 3-0 = 3`.
 
 **Constraints:**
@@ -42,7 +40,7 @@ class Solution:
     def maxProfit(self, k: int, prices: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -54,7 +52,7 @@ class Solution:
 
 本题是交易至多指定的 k 次。
 
-在 [123. Best Time to Buy and Sell Stock III](../123-best-time-to-buy-and-sell-stock-iii/index.md) 中特别定义了 [动态规划的状态及其转移函数](../123-best-time-to-buy-and-sell-stock-iii/index.md#DP)，虽然对那道题的帮助不是很大，但稍加扩展就可以直接应用于本题。
+在 [123. Best Time to Buy and Sell Stock III](../123-best-time-to-buy-and-sell-stock-iii/index.md) 中特别定义了 [动态规划的状态及其转移函数](../123-best-time-to-buy-and-sell-stock-iii/index.md#dp)，虽然对那道题的帮助不是很大，但稍加扩展就可以直接应用于本题。
 
 定义 `buy(i, j)` 表示在第 i 天结束前，（至少买入 1 次）至多买入 j 次，最大的现金余额（同样设可以借钱买股票，初始余额为 0），`sell(i, j)` 表示在第 i 天结束前，至多卖出 j 次，最大的现金余额。
 
@@ -78,4 +76,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

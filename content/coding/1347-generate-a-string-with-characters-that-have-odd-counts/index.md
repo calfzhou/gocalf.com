@@ -1,10 +1,9 @@
 ---
 title: 1374. Generate a String With Characters That Have Odd Counts
-notebook: coding
 tags:
 - easy
-date: 2025-01-03 10:37:05
-updated: 2025-01-03 10:37:05
+date: "2025-01-03T10:37:05+08:00"
+lastmod: "2025-01-03T10:37:05+08:00"
 ---
 ## Problem
 
@@ -16,19 +15,19 @@ The returned string must contain only lowercase English letters. If there are mu
 
 **Example 1:**
 
-> Input: `n = 4`
-> Output: `"pppz"`
+> Input: `n = 4`\
+> Output: `"pppz"`\
 > Explanation: `"pppz"` is a valid string since the character `'p'` occurs three times and the character `'z'` occurs once. Note that there are many other valid strings such as `"ohhh"` and `"love"`.
 
 **Example 2:**
 
-> Input: `n = 2`
-> Output: `"xy"`
+> Input: `n = 2`\
+> Output: `"xy"`\
 > Explanation: `"xy"` is a valid string since the characters `'x'` and `'y'` occur once. Note that there are many other valid strings such as `"ag"` and `"ur"`.
 
 **Example 3:**
 
-> Input: `n = 7`
+> Input: `n = 7`\
 > Output: `"holasss"`
 
 **Constraints:**
@@ -42,7 +41,7 @@ class Solution:
     def generateTheString(self, n: int) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -50,4 +49,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

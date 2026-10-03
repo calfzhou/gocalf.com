@@ -1,10 +1,9 @@
 ---
 title: 1346. Check If N and Its Double Exist
-notebook: coding
 tags:
 - easy
-date: 2024-12-01 09:38:41
-updated: 2024-12-01 09:38:41
+date: "2024-12-01T09:38:41+08:00"
+lastmod: "2024-12-01T09:38:41+08:00"
 ---
 ## Problem
 
@@ -18,14 +17,14 @@ Given an array `arr` of integers, check if there exist two indices `i` and `j` s
 
 **Example 1:**
 
-> Input: `arr = [10,2,5,3]`
-> Output: `true`
+> Input: `arr = [10,2,5,3]`\
+> Output: `true`\
 > Explanation: For `i = 0` and `j = 2`, `arr[i] == 10 == 2 * 5 == 2 * arr[j]`
 
 **Example 2:**
 
-> Input: `arr = [3,1,7,11]`
-> Output: `false`
+> Input: `arr = [3,1,7,11]`\
+> Output: `false`\
 > Explanation: There is no i and j that satisfy the conditions.
 
 **Constraints:**
@@ -40,7 +39,7 @@ class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -54,6 +53,6 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

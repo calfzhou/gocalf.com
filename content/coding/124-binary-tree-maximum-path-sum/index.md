@@ -1,11 +1,9 @@
 ---
 title: 124. Binary Tree Maximum Path Sum
-notebook: coding
 tags:
 - hard
-date: 2024-11-26 01:12:58
-updated: 2024-11-26 01:12:58
-katex: true
+date: "2024-11-26T01:12:58+08:00"
+lastmod: "2024-11-26T01:12:58+08:00"
 ---
 ## Problem
 
@@ -19,18 +17,20 @@ Given the `root` of a binary tree, return _the maximum **path sum** of any **non
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `root = [1,2,3]`
-> Output: `6`
+> Input: `root = [1,2,3]`\
+> Output: `6`\
 > Explanation: The optimal path is `2 -> 1 -> 3` with a path sum of `2 + 1 + 3 = 6`.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `root = [-10,9,20,null,null,15,7]`
-> Output: `42`
+> Input: `root = [-10,9,20,null,null,15,7]`\
+> Output: `42`\
 > Explanation: The optimal path is `15 -> 20 -> 7` with a path sum of `15 + 20 + 7 = 42`.
 
 **Constraints:**
@@ -51,7 +51,7 @@ class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -79,4 +79,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

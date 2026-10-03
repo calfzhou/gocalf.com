@@ -1,10 +1,9 @@
 ---
 title: 121. Best Time to Buy and Sell Stock
-notebook: coding
 tags:
 - easy
-date: 2024-11-25 23:53:15
-updated: 2024-11-25 23:53:15
+date: "2024-11-25T23:53:15+08:00"
+lastmod: "2024-11-25T23:53:15+08:00"
 ---
 ## Problem
 
@@ -18,15 +17,15 @@ Return _the maximum profit you can achieve from this transaction_. If you cannot
 
 **Example 1:**
 
-> Input: `prices = [7,1,5,3,6,4]`
-> Output: `5`
+> Input: `prices = [7,1,5,3,6,4]`\
+> Output: `5`\
 > Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
 > Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
 **Example 2:**
 
-> Input: `prices = [7,6,4,3,1]`
-> Output: `0`
+> Input: `prices = [7,6,4,3,1]`\
+> Output: `0`\
 > Explanation: In this case, no transactions are done and the max profit = 0.
 
 **Constraints:**
@@ -41,7 +40,7 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -51,4 +50,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

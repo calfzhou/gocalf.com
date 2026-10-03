@@ -1,10 +1,9 @@
 ---
 title: 1299. Replace Elements with Greatest Element on Right Side
-notebook: coding
 tags:
 - easy
-date: 2025-02-16 17:25:34
-updated: 2025-02-16 17:25:34
+date: "2025-02-16T17:25:34+08:00"
+lastmod: "2025-02-16T17:25:34+08:00"
 ---
 ## Problem
 
@@ -16,8 +15,8 @@ After doing so, return the array.
 
 **Example 1:**
 
-> Input: `arr = [17,18,5,4,6,1]`
-> Output: `[18,6,6,6,1,-1]`
+> Input: `arr = [17,18,5,4,6,1]`\
+> Output: `[18,6,6,6,1,-1]`\
 > Explanation:
 >
 > - index 0 --> the greatest element to the right of index 0 is index 1 (18).
@@ -29,8 +28,8 @@ After doing so, return the array.
 
 **Example 2:**
 
-> Input: `arr = [400]`
-> Output: `[-1]`
+> Input: `arr = [400]`\
+> Output: `[-1]`\
 > Explanation: There are no elements to the right of index 0.
 
 **Constraints:**
@@ -45,7 +44,7 @@ class Solution:
     def replaceElements(self, arr: List[int]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -55,4 +54,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

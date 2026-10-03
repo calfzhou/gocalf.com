@@ -1,10 +1,9 @@
 ---
 title: 125. Valid Palindrome
-notebook: coding
 tags:
 - easy
-date: 2024-11-26 11:10:30
-updated: 2024-11-26 11:10:30
+date: "2024-11-26T11:10:30+08:00"
+lastmod: "2024-11-26T11:10:30+08:00"
 ---
 ## Problem
 
@@ -16,20 +15,20 @@ Given a string `s`, return `true` _if it is a **palindrome**, or_ `false` _other
 
 **Example 1:**
 
-> Input: `s = "A man, a plan, a canal: Panama"`
-> Output: `true`
+> Input: `s = "A man, a plan, a canal: Panama"`\
+> Output: `true`\
 > Explanation: `"amanaplanacanalpanama"` is a palindrome.
 
 **Example 2:**
 
-> Input: `s = "race a car"`
-> Output: `false`
+> Input: `s = "race a car"`\
+> Output: `false`\
 > Explanation: `"raceacar"` is not a palindrome.
 
 **Example 3:**
 
-> Input: `s = " "`
-> Output: `true`
+> Input: `s = " "`\
+> Output: `true`\
 > Explanation: s is an empty string `""` after removing non-alphanumeric characters.
 > Since an empty string reads the same forward and backward, it is a palindrome.
 
@@ -45,7 +44,7 @@ class Solution:
     def isPalindrome(self, s: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -53,4 +52,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
