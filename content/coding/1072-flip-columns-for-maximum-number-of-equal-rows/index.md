@@ -13,7 +13,7 @@ You can choose any number of columns in the matrix and flip every cell in that c
 
 Return _the maximum number of rows that have all values equal after some number of flips_.
 
-<https://todo>
+<https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/>
 
 **Example 1:**
 
