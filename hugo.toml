@@ -45,7 +45,7 @@ footer_text = '''本站所有文章除特别声明外，均采用 [CC BY-NC-SA 4
 
 Copyright © 2011-2026 [gocalf.com](/) 保留所有权利。'''
 [params.identity]
-image = '/images/calf.png'
+image = '/images/gocalf-circle.svg'
 subtitle = 'Calf 的自留地 · 昙花一现 | 或有月下赏花人 应无所憾'
 
 [[menus.primary]]
@@ -81,7 +81,7 @@ name = '关于'
 pageRef = '/about'
 weight = 4
 [menus.primary.params]
-icon = 'gocalf-brand'
+icon = 'about'
 color = '#3370FF'
 
 [[menus.social]]
