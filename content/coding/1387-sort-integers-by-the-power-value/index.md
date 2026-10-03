@@ -1,10 +1,9 @@
 ---
 title: 1387. Sort Integers by The Power Value
-notebook: coding
 tags:
 - medium
-date: 2024-12-22 00:34:03
-updated: 2024-12-22 00:34:03
+date: "2024-12-22T00:34:03+08:00"
+lastmod: "2024-12-22T00:34:03+08:00"
 ---
 ## Problem
 
@@ -25,8 +24,8 @@ Notice that for any integer `x` `(lo <= x <= hi)` it is **guaranteed** that `x` 
 
 **Example 1:**
 
-> Input: `lo = 12, hi = 15, k = 2`
-> Output: `13`
+> Input: `lo = 12, hi = 15, k = 2`\
+> Output: `13`\
 > Explanation: The power of 12 is 9 (`12 --> 6 --> 3 --> 10 --> 5 --> 16 --> 8 --> 4 --> 2 --> 1`)
 > The power of 13 is 9
 > The power of 14 is 17
@@ -36,8 +35,8 @@ Notice that for any integer `x` `(lo <= x <= hi)` it is **guaranteed** that `x` 
 
 **Example 2:**
 
-> Input: `lo = 7, hi = 11, k = 4`
-> Output: `7`
+> Input: `lo = 7, hi = 11, k = 4`\
+> Output: `7`\
 > Explanation: The power array corresponding to the interval `[7, 8, 9, 10, 11]` is `[16, 3, 19, 6, 14]`.
 > The interval sorted by power is `[8, 10, 11, 7, 9]`.
 > The fourth number in the sorted array is 7.
@@ -54,7 +53,7 @@ class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

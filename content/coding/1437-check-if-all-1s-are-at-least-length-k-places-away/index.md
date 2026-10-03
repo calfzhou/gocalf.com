@@ -1,10 +1,9 @@
 ---
 title: 1437. Check If All 1's Are at Least Length K Places Away
-notebook: coding
 tags:
 - easy
-date: 2025-01-03 10:24:38
-updated: 2025-01-03 10:24:38
+date: "2025-01-03T10:24:38+08:00"
+lastmod: "2025-01-03T10:24:38+08:00"
 ---
 ## Problem
 
@@ -14,18 +13,20 @@ Given an binary array `nums` and an integer `k`, return `true` _if all_ `1`_'s a
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `nums = [1,0,0,0,1,0,0,1], k = 2`
-> Output: `true`
+> Input: `nums = [1,0,0,0,1,0,0,1], k = 2`\
+> Output: `true`\
 > Explanation: Each of the 1s are at least 2 places away from each other.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `nums = [1,0,0,1,0,1], k = 2`
-> Output: `false`
+> Input: `nums = [1,0,0,1,0,1], k = 2`\
+> Output: `false`\
 > Explanation: The second 1 and third 1 are only one apart from each other.
 
 **Constraints:**
@@ -41,7 +42,7 @@ class Solution:
     def kLengthApart(self, nums: List[int], k: int) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -49,4 +50,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

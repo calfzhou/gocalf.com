@@ -1,10 +1,9 @@
 ---
 title: 1368. Minimum Cost to Make at Least One Valid Path in a Grid
-notebook: coding
 tags:
 - hard
-date: 2025-01-18 21:32:29
-updated: 2025-01-18 21:32:29
+date: "2025-01-18T21:32:29+08:00"
+lastmod: "2025-01-18T21:32:29+08:00"
 ---
 ## Problem
 
@@ -27,27 +26,30 @@ Return _the minimum cost to make the grid have at least one valid path_.
 
 **Example 1:**
 
-![case1|400](case1.png "case1"){.invert-when-dark}
+![case1|400](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `grid = [[1,1,1,1],[2,2,2,2],[1,1,1,1],[2,2,2,2]]`
-> Output: `3`
+> Input: `grid = [[1,1,1,1],[2,2,2,2],[1,1,1,1],[2,2,2,2]]`\
+> Output: `3`\
 > Explanation: You will start at point `(0, 0)`.
 > The path to `(3, 3)` is as follows. `(0, 0) --> (0, 1) --> (0, 2) --> (0, 3)` change the arrow to down with `cost = 1 --> (1, 3) --> (1, 2) --> (1, 1) --> (1, 0)` change the arrow to down with `cost = 1 --> (2, 0) --> (2, 1) --> (2, 2) --> (2, 3)` change the arrow to down with `cost = 1 --> (3, 3)`
 > The total `cost = 3`.
 
 **Example 2:**
 
-![case2|350](case2.png "case2"){.invert-when-dark}
+![case2|350](case2.png "case2")
+{.invert-when-dark}
 
-> Input: `grid = [[1,1,3],[3,2,2],[1,1,4]]`
-> Output: `0`
+> Input: `grid = [[1,1,3],[3,2,2],[1,1,4]]`\
+> Output: `0`\
 > Explanation: You can follow the path from `(0, 0)` to `(2, 2)`.
 
 **Example 3:**
 
-![case3|200](case3.png "case3"){.invert-when-dark}
+![case3|200](case3.png "case3")
+{.invert-when-dark}
 
-> Input: `grid = [[1,2],[4,3]]`
+> Input: `grid = [[1,2],[4,3]]`\
 > Output: `1`
 
 **Constraints:**
@@ -64,7 +66,7 @@ class Solution:
     def minCost(self, grid: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,4 +80,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

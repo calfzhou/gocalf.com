@@ -1,10 +1,9 @@
 ---
 title: 207. Course Schedule
-notebook: coding
 tags:
 - medium
-date: 2024-11-22 17:17:02
-updated: 2024-11-22 17:17:02
+date: "2024-11-22T17:17:02+08:00"
+lastmod: "2024-11-22T17:17:02+08:00"
 ---
 ## Problem
 
@@ -18,15 +17,15 @@ Return `true` if you can finish all courses. Otherwise, return `false`.
 
 **Example 1:**
 
-> Input: `numCourses = 2, prerequisites = [[1,0]]`
-> Output: `true`
+> Input: `numCourses = 2, prerequisites = [[1,0]]`\
+> Output: `true`\
 > Explanation: There are a total of 2 courses to take.
 > To take course 1 you should have finished course 0. So it is possible.
 
 **Example 2:**
 
-> Input: `numCourses = 2, prerequisites = [[1,0],[0,1]]`
-> Output: `false`
+> Input: `numCourses = 2, prerequisites = [[1,0],[0,1]]`\
+> Output: `false`\
 > Explanation: There are a total of 2 courses to take.
 > To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
 
@@ -45,7 +44,7 @@ class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -63,4 +62,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 1408. String Matching in an Array
-notebook: coding
 tags:
 - easy
-date: 2025-01-07 09:47:38
-updated: 2025-01-07 09:47:38
+date: "2025-01-07T09:47:38+08:00"
+lastmod: "2025-01-07T09:47:38+08:00"
 ---
 ## Problem
 
@@ -16,21 +15,21 @@ A **substring** is a contiguous sequence of characters within a string.
 
 **Example 1:**
 
-> Input: `words = ["mass","as","hero","superhero"]`
-> Output: `["as","hero"]`
+> Input: `words = ["mass","as","hero","superhero"]`\
+> Output: `["as","hero"]`\
 > Explanation: `"as"` is substring of `"mass"` and `"hero"` is substring of `"superhero"`.
 > `["hero","as"]` is also a valid answer.
 
 **Example 2:**
 
-> Input: `words = ["leetcode","et","code"]`
-> Output: `["et","code"]`
+> Input: `words = ["leetcode","et","code"]`\
+> Output: `["et","code"]`\
 > Explanation: `"et"`, `"code"` are substring of `"leetcode"`.
 
 **Example 3:**
 
-> Input: `words = ["blue","green","bu"]`
-> Output: `[]`
+> Input: `words = ["blue","green","bu"]`\
+> Output: `[]`\
 > Explanation: No string of words is substring of another string.
 
 **Constraints:**
@@ -47,7 +46,7 @@ class Solution:
     def stringMatching(self, words: List[str]) -> List[str]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

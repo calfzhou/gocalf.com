@@ -1,10 +1,9 @@
 ---
 title: 1472. Design Browser History
-notebook: coding
 tags:
 - medium
-date: 2025-02-26 10:09:29
-updated: 2025-02-26 10:09:29
+date: "2025-02-26T10:09:29+08:00"
+lastmod: "2025-02-26T10:09:29+08:00"
 ---
 ## Problem
 
@@ -21,11 +20,11 @@ Implement the `BrowserHistory` class:
 
 **Example 1:**
 
-> Input:
-> `["BrowserHistory","visit","visit","visit","back","back","forward","visit","forward","back","back"]`
-> `[["leetcode.com"],["google.com"],["facebook.com"],["youtube.com"],[1],[1],[1],["linkedin.com"],[2],[2],[7]]`
-> Output:
-> `[null,null,null,null,"facebook.com","google.com","facebook.com",null,"linkedin.com","google.com","leetcode.com"]`
+> Input:\
+> `["BrowserHistory","visit","visit","visit","back","back","forward","visit","forward","back","back"]`\
+> `[["leetcode.com"],["google.com"],["facebook.com"],["youtube.com"],[1],[1],[1],["linkedin.com"],[2],[2],[7]]`\
+> Output:\
+> `[null,null,null,null,"facebook.com","google.com","facebook.com",null,"linkedin.com","google.com","leetcode.com"]`\
 > Explanation:
 >
 > ```cpp
@@ -75,7 +74,7 @@ class BrowserHistory:
 # param_3 = obj.forward(steps)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -87,4 +86,4 @@ class BrowserHistory:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

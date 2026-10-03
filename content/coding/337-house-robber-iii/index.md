@@ -1,11 +1,9 @@
 ---
 title: 337. House Robber III
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-12-19 22:28:05
-updated: 2024-12-19 22:39:02
+date: "2024-12-19T22:28:05+08:00"
+lastmod: "2024-12-19T22:39:02+08:00"
 ---
 ## Problem
 
@@ -19,18 +17,20 @@ Given the `root` of the binary tree, return _the maximum amount of money the thi
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `root = [3,2,3,null,3,null,1]`
-> Output: `7`
+> Input: `root = [3,2,3,null,3,null,1]`\
+> Output: `7`\
 > Explanation: Maximum amount of money the thief can rob `= 3 + 3 + 1 = 7`.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `root = [3,4,5,1,3,null,1]`
-> Output: `9`
+> Input: `root = [3,4,5,1,3,null,1]`\
+> Output: `9`\
 > Explanation: Maximum amount of money the thief can rob `= 4 + 5 = 9`.
 
 **Constraints:**
@@ -51,7 +51,7 @@ class Solution:
     def rob(self, root: Optional[TreeNode]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -83,11 +83,11 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Another DP
 
-如果嫌访问第二层子节点会有太多是否为空的判定，也可以改造一下状态变量的定义。其实类似于 [198. House Robber](../198-house-robber/index.md) 中定义的 [第二种 DP](../198-house-robber/index.md#Another%20DP)，明确抢还是不抢当前房间。
+如果嫌访问第二层子节点会有太多是否为空的判定，也可以改造一下状态变量的定义。其实类似于 [198. House Robber](../198-house-robber/index.md) 中定义的 [第二种 DP](../198-house-robber/index.md#another-dp)，明确抢还是不抢当前房间。
 
 定义 `ty(u)` 表示抢房间 u 的最大总额，`tn(u)` 表示不抢房间 u 的最大总额。
 
@@ -106,6 +106,6 @@ $$
 
 最终结果取 `max{ty(root), tn(root)}`。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 PS：上边是记录 `ty(u)` 和 `tn(u)` 这两个值，也可以考虑记录 `t(u)` 和 `tn(u)`，其中 `t(u) = max{ty(u), tn(u)}`，代码见 [solution3.py](solution3.py)。

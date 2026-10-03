@@ -1,10 +1,9 @@
 ---
 title: 1847. Closest Room
-notebook: coding
 tags:
 - hard
-date: 2024-12-16 23:50:39
-updated: 2024-12-26 00:04:19
+date: "2024-12-16T23:50:39+08:00"
+lastmod: "2024-12-26T00:04:19+08:00"
 ---
 ## Problem
 
@@ -23,8 +22,8 @@ Return _an array_ `answer` _of length_ `k` _where_ `answer[j]` _contains the ans
 
 **Example 1:**
 
-> Input: `rooms = [[2,2],[1,2],[3,2]], queries = [[3,1],[3,3],[5,2]]`
-> Output: `[3,-1,3]`
+> Input: `rooms = [[2,2],[1,2],[3,2]], queries = [[3,1],[3,3],[5,2]]`\
+> Output: `[3,-1,3]`\
 > Explanation: The answers to the queries are as follows:
 > Query = `[3,1]`: Room number 3 is the closest as `abs(3 - 3) = 0`, and its size of 2 is at least 1. The answer is 3.
 > Query = `[3,3]`: There are no rooms with a size of at least 3, so the answer is -1.
@@ -32,8 +31,8 @@ Return _an array_ `answer` _of length_ `k` _where_ `answer[j]` _contains the ans
 
 **Example 2:**
 
-> Input: `rooms = [[1,4],[2,3],[3,5],[4,1],[5,2]], queries = [[2,3],[2,4],[2,5]]`
-> Output: `[2,1,3]`
+> Input: `rooms = [[1,4],[2,3],[3,5],[4,1],[5,2]], queries = [[2,3],[2,4],[2,5]]`\
+> Output: `[2,1,3]`\
 > Explanation: The answers to the queries are as follows:
 > Query = `[2,3]`: Room number 2 is the closest as `abs(2 - 2) = 0`, and its size of 3 is at least 3. The answer is 2.
 > Query = `[2,4]`: Room numbers 1 and 3 both have sizes of at least 4. The answer is 1 since it is smaller.
@@ -55,7 +54,7 @@ class Solution:
     def closestRoom(self, rooms: List[List[int]], queries: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -87,22 +86,22 @@ AVL 树的详细信息参见 [DSA AVL Trees](https://www.w3schools.com/dsa/dsa_d
 
 > Runtime beats `7+%`:
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Python list - Fast
 
 > Runtime beats `100%`:
 
-{% snippet solution_fast.py %}
+{{< snippet src="solution_fast.py" >}}
 
 ## Monotonic Stack
 
-在 [2940. Find Building Where Alice and Bob Can Meet](../2940-find-building-where-alice-and-bob-can-meet/index.md) 中尝试 [基于单调栈 + 二分搜索的解法](../2940-find-building-where-alice-and-bob-can-meet/index.md#Monotonic%20Stack) 时，觉得这道题也可以用类似的逻辑处理。
+在 [2940. Find Building Where Alice and Bob Can Meet](../2940-find-building-where-alice-and-bob-can-meet/index.md) 中尝试 [基于单调栈 + 二分搜索的解法](../2940-find-building-where-alice-and-bob-can-meet/index.md#monotonic-stack) 时，觉得这道题也可以用类似的逻辑处理。
 
-核心区别只有两个。一个是本题需要往两个方向找，既要找 preferred 右边第一个，也要找 preferred 左边第一个，可以通过两次循环达成。另一个是 preferred 不一定是存在的房间号，不能用跟 [problem 2940](../2940-find-building-where-alice-and-bob-can-meet/index.md#Monotonic%20Stack) 一样的方式（即用当前扫描到的房间号查出 prefer 此房间号的所有查询），需要对 preferred 和 roomId 做分段匹配。
+核心区别只有两个。一个是本题需要往两个方向找，既要找 preferred 右边第一个，也要找 preferred 左边第一个，可以通过两次循环达成。另一个是 preferred 不一定是存在的房间号，不能用跟 [problem 2940](../2940-find-building-where-alice-and-bob-can-meet/index.md#monotonic-stack) 一样的方式（即用当前扫描到的房间号查出 prefer 此房间号的所有查询），需要对 preferred 和 roomId 做分段匹配。
 
 各种边界条件细节需要小心处理。
 
 时间复杂度是 `O(n log n + k log k + k log n)`，空间复杂度 `O(n + k)`，跟上边一样。实际运行时间跟 [problem 2940](../2940-find-building-where-alice-and-bob-can-meet/index.md) 也很像，用单调栈比用有序集合慢一倍。
 
-{% snippet solution3.py %}
+{{< snippet src="solution3.py" >}}

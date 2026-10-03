@@ -1,10 +1,9 @@
 ---
 title: 1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence
-notebook: coding
 tags:
 - easy
-date: 2024-12-02 11:17:09
-updated: 2024-12-02 11:17:09
+date: "2024-12-02T11:17:09+08:00"
+lastmod: "2024-12-02T11:17:09+08:00"
 ---
 ## Problem
 
@@ -18,20 +17,20 @@ A **prefix** of a string `s` is any leading contiguous substring of `s`.
 
 **Example 1:**
 
-> Input: `sentence = "i love eating burger", searchWord = "burg"`
-> Output: `4`
+> Input: `sentence = "i love eating burger", searchWord = "burg"`\
+> Output: `4`\
 > Explanation: `"burg"` is prefix of `"burger"` which is the 4th word in the sentence.
 
 **Example 2:**
 
-> Input: `sentence = "this problem is an easy problem", searchWord = "pro"`
-> Output: `2`
+> Input: `sentence = "this problem is an easy problem", searchWord = "pro"`\
+> Output: `2`\
 > Explanation: `"pro"` is prefix of `"problem"` which is the 2nd and the 6th word in the sentence, but we return `2` as it's the minimal index.
 
 **Example 3:**
 
-> Input: `sentence = "i am tired", searchWord = "you"`
-> Output: `-1`
+> Input: `sentence = "i am tired", searchWord = "you"`\
+> Output: `-1`\
 > Explanation: `"you"` is not a prefix of any word in the sentence.
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -62,4 +61,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

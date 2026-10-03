@@ -1,10 +1,9 @@
 ---
 title: 739. Daily Temperatures
-notebook: coding
 tags:
 - medium
-date: 2024-12-18 17:20:13
-updated: 2024-12-18 23:33:05
+date: "2024-12-18T17:20:13+08:00"
+lastmod: "2024-12-18T23:33:05+08:00"
 ---
 ## Problem
 
@@ -14,17 +13,17 @@ Given an array of integers `temperatures` represents the daily temperatures, ret
 
 **Example 1:**
 
-> Input: `temperatures = [73,74,75,71,69,72,76,73]`
+> Input: `temperatures = [73,74,75,71,69,72,76,73]`\
 > Output: `[1,1,4,2,1,1,0,0]`
 
 **Example 2:**
 
-> Input: `temperatures = [30,40,50,60]`
+> Input: `temperatures = [30,40,50,60]`\
 > Output: `[1,1,1,0]`
 
 **Example 3:**
 
-> Input: `temperatures = [30,60,90]`
+> Input: `temperatures = [30,60,90]`\
 > Output: `[1,1,0]`
 
 **Constraints:**
@@ -39,7 +38,7 @@ class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -49,10 +48,10 @@ class Solution:
 
 ### Backward Iteration
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Forward Iteration
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 这里用正向循环就可以做 in-place 修改。

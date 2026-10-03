@@ -1,10 +1,9 @@
 ---
 title: 1400. Construct K Palindrome Strings
-notebook: coding
 tags:
 - medium
-date: 2025-01-11 09:49:54
-updated: 2025-01-11 09:49:54
+date: "2025-01-11T09:49:54+08:00"
+lastmod: "2025-01-11T09:49:54+08:00"
 ---
 ## Problem
 
@@ -14,21 +13,21 @@ Given a string `s` and an integer `k`, return `true` _if you can use all the cha
 
 **Example 1:**
 
-> Input: `s = "annabelle", k = 2`
-> Output: `true`
+> Input: `s = "annabelle", k = 2`\
+> Output: `true`\
 > Explanation: You can construct two palindromes using all characters in s.
 > Some possible constructions `"anna" + "elble"`, `"anbna" + "elle"`, `"anellena" + "b"`
 
 **Example 2:**
 
-> Input: `s = "leetcode", k = 3`
-> Output: `false`
+> Input: `s = "leetcode", k = 3`\
+> Output: `false`\
 > Explanation: It is impossible to construct 3 palindromes using all the characters of s.
 
 **Example 3:**
 
-> Input: `s = "true", k = 4`
-> Output: true
+> Input: `s = "true", k = 4`\
+> Output: true\
 > Explanation: The only possible solution is to put each character in a separate string.
 
 **Constraints:**
@@ -44,7 +43,7 @@ class Solution:
     def canConstruct(self, s: str, k: int) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

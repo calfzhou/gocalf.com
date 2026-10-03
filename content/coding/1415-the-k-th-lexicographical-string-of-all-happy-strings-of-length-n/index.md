@@ -1,10 +1,9 @@
 ---
 title: 1415. The k-th Lexicographical String of All Happy Strings of Length n
-notebook: coding
 tags:
 - medium
-date: 2025-02-19 11:07:53
-updated: 2025-02-19 11:07:53
+date: "2025-02-19T11:07:53+08:00"
+lastmod: "2025-02-19T11:07:53+08:00"
 ---
 ## Problem
 
@@ -23,20 +22,20 @@ Return _the kᵗʰ string_ of this list or return an **empty string** if there a
 
 **Example 1:**
 
-> Input: `n = 1, k = 3`
-> Output: `"c"`
+> Input: `n = 1, k = 3`\
+> Output: `"c"`\
 > Explanation: The list `["a", "b", "c"]` contains all happy strings of length 1. The third string is `"c"`.
 
 **Example 2:**
 
-> Input: `n = 1, k = 4`
-> Output: `""`
+> Input: `n = 1, k = 4`\
+> Output: `""`\
 > Explanation: There are only 3 happy strings of length 1.
 
 **Example 3:**
 
-> Input: `n = 3, k = 9`
-> Output: `"cab"`
+> Input: `n = 3, k = 9`\
+> Output: `"cab"`\
 > Explanation: There are 12 different happy string of length 3 `["aba", "abc", "aca", "acb", "bab", "bac", "bca", "bcb", "cab", "cac", "cba", "cbc"]`. You will find the 9ᵗʰ string = `"cab"`
 
 **Constraints:**
@@ -51,7 +50,7 @@ class Solution:
     def getHappyString(self, n: int, k: int) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -65,4 +64,4 @@ Happy string 除了第一位有 `'a'`、`'b'`、`'c'` 三个选择外，之后�
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

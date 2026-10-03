@@ -1,10 +1,9 @@
 ---
 title: 145. Binary Tree Postorder Traversal
-notebook: coding
 tags:
 - easy
-date: 2024-12-21 20:02:11
-updated: 2024-12-21 20:02:11
+date: "2024-12-21T20:02:11+08:00"
+lastmod: "2024-12-21T20:02:11+08:00"
 ---
 ## Problem
 
@@ -14,26 +13,30 @@ Given the `root` of a binary tree, return _the postorder traversal of its nodes
 
 **Example 1:**
 
-> Input: `root = [1,null,2,3]`
-> Output: `[3,2,1]`
+> Input: `root = [1,null,2,3]`\
+> Output: `[3,2,1]`\
 > Explanation:
-> ![case1|200](case1.png "case1"){.invert-when-dark}
+>
+> ![case1|200](case1.png "case1")
+> {.invert-when-dark}
 
 **Example 2:**
 
-> Input: `root = [1,2,3,4,5,null,8,null,null,6,7,9]`
-> Output: `[4,6,7,5,2,9,8,3,1]`
+> Input: `root = [1,2,3,4,5,null,8,null,null,6,7,9]`\
+> Output: `[4,6,7,5,2,9,8,3,1]`\
 > Explanation:
-> ![case2|350](case2.png "case2"){.invert-when-dark}
+>
+> ![case2|350](case2.png "case2")
+> {.invert-when-dark}
 
 **Example 3:**
 
-> Input: `root = []`
+> Input: `root = []`\
 > Output: `[]`
 
 **Example 4:**
 
-> Input: `root = [1]`
+> Input: `root = [1]`\
 > Output: `[1]`
 
 **Constraints:**
@@ -56,7 +59,7 @@ class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +67,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

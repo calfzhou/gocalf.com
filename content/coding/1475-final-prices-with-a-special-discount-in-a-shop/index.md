@@ -1,10 +1,9 @@
 ---
 title: 1475. Final Prices With a Special Discount in a Shop
-notebook: coding
 tags:
 - easy
-date: 2024-12-18 11:31:56
-updated: 2024-12-18 23:05:48
+date: "2024-12-18T11:31:56+08:00"
+lastmod: "2024-12-18T23:05:48+08:00"
 ---
 ## Problem
 
@@ -18,8 +17,8 @@ Return an integer array `answer` where `answer[i]` is the final price you will p
 
 **Example 1:**
 
-> Input: `prices = [8,4,6,2,3]`
-> Output: `[4,2,4,2,3]`
+> Input: `prices = [8,4,6,2,3]`\
+> Output: `[4,2,4,2,3]`\
 > Explanation:
 > For item 0 with `price[0]=8` you will receive a discount equivalent to prices[1]=4, therefore, the final price you will pay is `8 - 4 = 4`.
 > For item 1 with `price[1]=4` you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is `4 - 2 = 2`.
@@ -28,13 +27,13 @@ Return an integer array `answer` where `answer[i]` is the final price you will p
 
 **Example 2:**
 
-> Input: `prices = [1,2,3,4,5]`
-> Output: `[1,2,3,4,5]`
+> Input: `prices = [1,2,3,4,5]`\
+> Output: `[1,2,3,4,5]`\
 > Explanation: In this case, for all items, you will not receive any discount at all.
 
 **Example 3:**
 
-> Input: `prices = [10,1,1,6]`
+> Input: `prices = [10,1,1,6]`\
 > Output: `[9,0,1,6]`
 
 **Constraints:**
@@ -49,7 +48,7 @@ class Solution:
     def finalPrices(self, prices: List[int]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,7 +58,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## O(n log n)
 
@@ -71,7 +70,7 @@ class Solution:
 
 不过实际提交跑就很慢，可能系数太大了。
 
-{% snippet solution_nlogn.py %}
+{{< snippet src="solution_nlogn.py" >}}
 
 ## O(n)
 
@@ -89,7 +88,7 @@ class Solution:
 4. 第 -4 个元素 4：栈顶 6 大于 4，弹出。栈顶变为 2，小于等于 6，说明 2 就是其右边第一个不大于它的元素，即为相应的折扣。将 4 入栈（即 `[2, 4]`）。
 5. 第 -5 个元素 8：栈顶 4 小于等于 8，即为相应折扣。将 8 入栈（即 `[2, 4, 8]`）。
 
-{% snippet solution_n.py %}
+{{< snippet src="solution_n.py" >}}
 
 ## Another O(n)
 
@@ -107,4 +106,4 @@ class Solution:
 
 正向扫描优点还挺多的，首先扫描方向更符合直觉，其次代码简洁很多，再次如果做 in-place 修改，修改操作发生在被修改元素（的下标）出栈的时候，修改之后也就不会被访问到，比较安全（节省空间）。而逆向扫描，修改操作发生在入栈的时候，需要注意入栈的应该是修改前的值。但有些场景需要入栈下标（如 [739. Daily Temperatures](../739-daily-temperatures/index.md)），那么通过下标再引用对应元素值的时候，就要注意应该取到修改前还是修改后的值，从而考虑是否必需开辟额外的存储空间记录修改后的值。
 
-{% snippet solution_n2.py %}
+{{< snippet src="solution_n2.py" >}}

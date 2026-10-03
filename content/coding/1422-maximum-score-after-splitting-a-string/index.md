@@ -1,10 +1,9 @@
 ---
 title: 1422. Maximum Score After Splitting a String
-notebook: coding
 tags:
 - easy
-date: 2025-01-01 10:33:57
-updated: 2025-01-01 10:33:57
+date: "2025-01-01T10:33:57+08:00"
+lastmod: "2025-01-01T10:33:57+08:00"
 ---
 ## Problem
 
@@ -16,8 +15,8 @@ The score after splitting a string is the number of **zeros** in the **left** su
 
 **Example 1:**
 
-> Input: `s = "011101"`
-> Output: `5`
+> Input: `s = "011101"`\
+> Output: `5`\
 > Explanation:
 > All possible ways of splitting s into two non-empty substrings are:
 > `left = "0"` and `right = "11101"`, `score = 1 + 4 = 5`
@@ -28,8 +27,8 @@ The score after splitting a string is the number of **zeros** in the **left** su
 
 **Example 2:**
 
-> Input: `s = "00111"`
-> Output: `5`
+> Input: `s = "00111"`\
+> Output: `5`\
 > Explanation: When `left = "00"` and `right = "111"`, we get the maximum `score = 2 + 3 = 5`
 
 **Example 3:**
@@ -49,7 +48,7 @@ class Solution:
     def maxScore(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -57,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

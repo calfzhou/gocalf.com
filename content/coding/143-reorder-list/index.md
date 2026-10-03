@@ -1,10 +1,9 @@
 ---
 title: 143. Reorder List
-notebook: coding
 tags:
 - medium
-date: 2024-11-14 16:58:45
-updated: 2024-11-14 16:58:45
+date: "2024-11-14T16:58:45+08:00"
+lastmod: "2024-11-14T16:58:45+08:00"
 ---
 ## Problem
 
@@ -22,16 +21,18 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `head = [1,2,3,4]`
+> Input: `head = [1,2,3,4]`\
 > Output: `[1,4,2,3]`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `head = [1,2,3,4,5]`
+> Input: `head = [1,2,3,4,5]`\
 > Output: `[1,5,2,4,3]`
 
 **Constraints:**
@@ -54,7 +55,7 @@ class Solution:
         """
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -70,4 +71,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 2577. Minimum Time to Visit a Cell In a Grid
-notebook: coding
 tags:
 - hard
-date: 2024-11-29 11:44:33
-updated: 2024-11-29 11:44:33
+date: "2024-11-29T11:44:33+08:00"
+lastmod: "2024-11-29T11:44:33+08:00"
 ---
 ## Problem
 
@@ -18,10 +17,11 @@ Return _the **minimum** time required in which you can visit the bottom-right ce
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `grid = [[0,1,3,2],[5,1,2,5],[4,3,8,6]]`
-> Output: `7`
+> Input: `grid = [[0,1,3,2],[5,1,2,5],[4,3,8,6]]`\
+> Output: `7`\
 > Explanation: One of the paths that we can take is the following:
 >
 > - at `t = 0`, we are on the cell `(0,0)`.
@@ -36,10 +36,11 @@ Return _the **minimum** time required in which you can visit the bottom-right ce
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `grid = [[0,2,4],[3,2,1],[1,0,4]]`
-> Output: `-1`
+> Input: `grid = [[0,2,4],[3,2,1],[1,0,4]]`\
+> Output: `-1`\
 > Explanation: There is no path from the top left to the bottom-right cell.
 
 **Constraints:**
@@ -58,7 +59,7 @@ class Solution:
     def minimumTime(self, grid: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,4 +79,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

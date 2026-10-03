@@ -1,11 +1,9 @@
 ---
 title: 198. House Robber
-notebook: coding
 tags:
 - medium
-date: 2024-11-20 17:39:05
-updated: 2024-11-20 17:42:44
-katex: true
+date: "2024-11-20T17:39:05+08:00"
+lastmod: "2024-11-20T17:42:44+08:00"
 ---
 ## Problem
 
@@ -17,15 +15,15 @@ Given an integer array `nums` representing the amount of money of each house, re
 
 **Example 1:**
 
-> Input: `nums = [1,2,3,1]`
-> Output: `4`
+> Input: `nums = [1,2,3,1]`\
+> Output: `4`\
 > Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
 > Total amount you can rob = 1 + 3 = 4.
 
 **Example 2:**
 
-> Input: `nums = [2,7,9,3,1]`
-> Output: `12`
+> Input: `nums = [2,7,9,3,1]`\
+> Output: `12`\
 > Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
 > Total amount you can rob = 2 + 9 + 1 = 12.
 
@@ -41,7 +39,7 @@ class Solution:
     def rob(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,7 +76,7 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Another DP
 
@@ -105,6 +103,6 @@ $$
 \end{array}
 $$
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 整体上 `t[i]` 的逻辑和处理都更简单直接，但思考过程中总是会不自觉地绕到 `t'[i]` 上。主要可能是因为 `t[i]` 不明确房间是抢还是不抢，这种不明确性在思考的时候总会想要避免。

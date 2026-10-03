@@ -1,11 +1,9 @@
 ---
 title: 1462. Course Schedule IV
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-01-27 22:28:30
-updated: 2025-01-27 22:28:30
+date: "2025-01-27T22:28:30+08:00"
+lastmod: "2025-01-27T22:28:30+08:00"
 ---
 ## Problem
 
@@ -23,24 +21,26 @@ Return _a boolean array_ `answer`_, where_ `answer[j]` _is the answer to the_ `j
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `numCourses = 2, prerequisites = [[1,0]], queries = [[0,1],[1,0]]`
-> Output: `[false,true]`
+> Input: `numCourses = 2, prerequisites = [[1,0]], queries = [[0,1],[1,0]]`\
+> Output: `[false,true]`\
 > Explanation: The pair `[1, 0]` indicates that you have to take course 1 before you can take course 0.
 > Course 0 is not a prerequisite of course 1, but the opposite is true.
 
 **Example 2:**
 
-> Input: `numCourses = 2, prerequisites = [], queries = [[1,0],[0,1]]`
-> Output: `[false,false]`
+> Input: `numCourses = 2, prerequisites = [], queries = [[1,0],[0,1]]`\
+> Output: `[false,false]`\
 > Explanation: There are no prerequisites, and each course is independent.
 
 **Example 3:**
 
-![case3](case3.png){.invert-when-dark}
+![case3](case3.png)
+{.invert-when-dark}
 
-> Input: `numCourses = 3, prerequisites = [[1,2],[1,0],[2,0]], queries = [[1,0],[1,2]]`
+> Input: `numCourses = 3, prerequisites = [[1,2],[1,0],[2,0]], queries = [[1,0],[1,2]]`\
 > Output: `[true,true]`
 
 **Constraints:**
@@ -63,14 +63,14 @@ class Solution:
     def checkIfPrerequisite(self, numCourses: int, prerequisites: List[List[int]], queries: List[List[int]]) -> List[bool]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
 系列题：
 
 - [207. Course Schedule](../207-course-schedule/index.md)
-- [1462. Course Schedule IV](../1462-course-schedule-iv/index.md)
+- [1462. Course Schedule IV](index.md)
 
 跟 [207. Course Schedule](../207-course-schedule/index.md) 类似，用有向图来表示课程之间的依赖关系。图中的任意两个顶点 u 和 v 各自代表一个课程，如果 u 是 v 的直接前置依赖课程，则作有向边 `(u, v)`。
 
@@ -90,4 +90,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

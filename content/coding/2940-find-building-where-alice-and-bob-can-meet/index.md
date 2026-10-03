@@ -1,10 +1,9 @@
 ---
 title: 2940. Find Building Where Alice and Bob Can Meet
-notebook: coding
 tags:
 - hard
-date: 2024-12-22 16:30:11
-updated: 2024-12-25 21:50:23
+date: "2024-12-22T16:30:11+08:00"
+lastmod: "2024-12-25T21:50:23+08:00"
 ---
 ## Problem
 
@@ -20,8 +19,8 @@ Return _an array_ `ans` _where_ `ans[i]` _is **the index of the leftmost buildin
 
 **Example 1:**
 
-> Input: `heights = [6,4,8,5,2,7], queries = [[0,1],[0,3],[2,4],[3,4],[2,2]]`
-> Output: `[2,5,-1,5,2]`
+> Input: `heights = [6,4,8,5,2,7], queries = [[0,1],[0,3],[2,4],[3,4],[2,2]]`\
+> Output: `[2,5,-1,5,2]`\
 > Explanation: In the first query, Alice and Bob can move to building 2 since `heights[0] < heights[2]` and `heights[1] < heights[2]`.
 > In the second query, Alice and Bob can move to building 5 since `heights[0] < heights[5]` and `heights[3] < heights[5]`.
 > In the third query, Alice cannot meet Bob since Alice cannot move to any other building.
@@ -32,8 +31,8 @@ Return _an array_ `ans` _where_ `ans[i]` _is **the index of the leftmost buildin
 
 **Example 2:**
 
-> Input: `heights = [5,3,8,2,6,1,4,6], queries = [[0,7],[3,5],[5,2],[3,0],[1,6]]`
-> Output: `[7,6,-1,4,6]`
+> Input: `heights = [5,3,8,2,6,1,4,6], queries = [[0,7],[3,5],[5,2],[3,0],[1,6]]`\
+> Output: `[7,6,-1,4,6]`\
 > Explanation: In the first query, Alice can directly move to Bob's building since `heights[0] < heights[7]`.
 > In the second query, Alice and Bob can move to building 6 since `heights[3] < heights[6]` and `heights[5] < heights[6]`.
 > In the third query, Alice cannot meet Bob since Bob cannot move to any other building.
@@ -57,7 +56,7 @@ class Solution:
     def leftmostBuildingQueries(self, heights: List[int], queries: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -71,13 +70,13 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Monotonic Stack
 
 在 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md) 中提到，找左侧/右侧第一个比当前元素小/大的问题，可以用单调栈线性时间求解。不过这里并不是找右侧第一个比当前元素大的，而是找更大的（因为 `heights[aᵢ] ≥ heights[bᵢ]`）。
 
-实际上在通过单调栈遍历原数组的时候，如果按照 [逆序扫描数组](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#O%20n) 的逻辑，任何时候，栈里存放的都是比当前元素大的，而且是排序的。那就可以对栈做二分查找。
+实际上在通过单调栈遍历原数组的时候，如果按照 [逆序扫描数组](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#on) 的逻辑，任何时候，栈里存放的都是比当前元素大的，而且是排序的。那就可以对栈做二分查找。
 
 每个 query 都可以转换成 `(heights[aᵢ], bᵢ)` 格式，在转换的同时记录 `heights` 中每个位置对应的所有查询。然后配合单调栈逆序扫描 `heights` 数组，在处理到某个位置的时候，用二分法在栈中查找 `heights[aᵢ]` 即可。
 
@@ -103,4 +102,4 @@ if idx >= 0:
     answer[j] = stack[idx]
 ```
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

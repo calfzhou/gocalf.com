@@ -1,10 +1,9 @@
 ---
 title: 496. Next Greater Element I
-notebook: coding
 tags:
 - easy
-date: 2024-12-18 16:42:28
-updated: 2024-12-18 23:33:05
+date: "2024-12-18T16:42:28+08:00"
+lastmod: "2024-12-18T23:33:05+08:00"
 ---
 ## Problem
 
@@ -20,8 +19,8 @@ Return _an array_ `ans` _of length_ `nums1.length` _such that_ `ans[i]` _is the 
 
 **Example 1:**
 
-> Input: `nums1 = [4,1,2], nums2 = [1,3,4,2]`
-> Output: `[-1,3,-1]`
+> Input: `nums1 = [4,1,2], nums2 = [1,3,4,2]`\
+> Output: `[-1,3,-1]`\
 > Explanation: The next greater element for each value of nums1 is as follows:
 >
 > - 4 is underlined in `nums2 = [1,3,4,2]`. There is no next greater element, so the answer is -1.
@@ -30,8 +29,8 @@ Return _an array_ `ans` _of length_ `nums1.length` _such that_ `ans[i]` _is the 
 
 **Example 2:**
 
-> Input: `nums1 = [2,4], nums2 = [1,2,3,4]`
-> Output: `[3,-1]`
+> Input: `nums1 = [2,4], nums2 = [1,2,3,4]`\
+> Output: `[3,-1]`\
 > Explanation: The next greater element for each value of nums1 is as follows:
 >
 > - 2 is underlined in `nums2 = [1,2,3,4]`. The next greater element is 3.
@@ -53,11 +52,11 @@ class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
-在 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#O%20n) 中提到这类找左侧/右侧第一个比当前元素小/大的问题，都可以使用单调栈，线性时间可解。
+在 [1475. Final Prices With a Special Discount in a Shop](../1475-final-prices-with-a-special-discount-in-a-shop/index.md#on) 中提到这类找左侧/右侧第一个比当前元素小/大的问题，都可以使用单调栈，线性时间可解。
 
 本题可以先对 nums2，利用单调栈计算每个元素的 next greater 元素，用哈希表保存结果。然后遍历 nums1，从哈希表中查到对应的结果。
 
@@ -67,8 +66,8 @@ class Solution:
 
 ### Backward Iteration
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Forward Iteration
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

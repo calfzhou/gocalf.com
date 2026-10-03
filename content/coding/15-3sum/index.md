@@ -1,11 +1,9 @@
 ---
 title: 15. 3Sum
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2024-11-13 11:40:03
-updated: 2024-11-13 11:40:03
+date: "2024-11-13T11:40:03+08:00"
+lastmod: "2024-11-13T11:40:03+08:00"
 ---
 ## Problem
 
@@ -17,8 +15,8 @@ Notice that the solution set must not contain duplicate triplets.
 
 **Example 1:**
 
-> Input: `nums = [-1,0,1,2,-1,-4]`
-> Output: `[[-1,-1,2],[-1,0,1]]`
+> Input: `nums = [-1,0,1,2,-1,-4]`\
+> Output: `[[-1,-1,2],[-1,0,1]]`\
 > Explanation:
 > `nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0`.
 > `nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0`.
@@ -28,14 +26,14 @@ Notice that the solution set must not contain duplicate triplets.
 
 **Example 2:**
 
-> Input: nums = `[0,1,1]`
-> Output: `[]`
+> Input: nums = `[0,1,1]`\
+> Output: `[]`\
 > Explanation: The only possible triplet does not sum up to 0.
 
 **Example 3:**
 
-> Input: `nums = [0,0,0]`
-> Output: `[[0,0,0]]`
+> Input: `nums = [0,0,0]`\
+> Output: `[[0,0,0]]`\
 > Explanation: The only possible triplet sums up to 0.
 
 **Constraints:**
@@ -50,7 +48,7 @@ class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -82,7 +80,7 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Simpler
 
@@ -98,7 +96,7 @@ class Solution:
 
 代码简洁不少，但速度却慢了不少。可能因为这次是整个数组排序，遍历的时候比较次数也更多一些。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 ## Faster
 
@@ -106,4 +104,4 @@ class Solution:
 
 整体时间复杂度还是 `O(n²)`，不过省去了整体排序的时间，其他判断的时间也能减少不少。
 
-{% snippet solution3.py %}
+{{< snippet src="solution3.py" >}}

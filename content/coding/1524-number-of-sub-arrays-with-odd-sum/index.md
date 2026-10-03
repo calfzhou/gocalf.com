@@ -1,11 +1,9 @@
 ---
 title: 1524. Number of Sub-arrays With Odd Sum
-notebook: coding
 tags:
 - medium
-katex: true
-date: 2025-02-26 15:54:51
-updated: 2025-02-26 15:54:51
+date: "2025-02-26T15:54:51+08:00"
+lastmod: "2025-02-26T15:54:51+08:00"
 ---
 ## Problem
 
@@ -17,23 +15,23 @@ Since the answer can be very large, return it modulo `10⁹ + 7`.
 
 **Example 1:**
 
-> Input: `arr = [1,3,5]`
-> Output: `4`
+> Input: `arr = [1,3,5]`\
+> Output: `4`\
 > Explanation: All subarrays are `[[1],[1,3],[1,3,5],[3],[3,5],[5]]`
 > All sub-arrays sum are `[1,4,9,3,8,5]`.
 > Odd sums are `[1,9,3,5]` so the answer is 4.
 
 **Example 2:**
 
-> Input: `arr = [2,4,6]`
-> Output: `0`
+> Input: `arr = [2,4,6]`\
+> Output: `0`\
 > Explanation: All subarrays are `[[2],[2,4],[2,4,6],[4],[4,6],[6]]`
 > All sub-arrays sum are `[2,6,12,4,10,6]`.
 > All sub-arrays have even sum and the answer is 0.
 
 **Example 3:**
 
-> Input: `arr = [1,2,3,4,5,6,7]`
+> Input: `arr = [1,2,3,4,5,6,7]`\
 > Output: `16`
 
 **Constraints:**
@@ -48,7 +46,7 @@ class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -84,11 +82,11 @@ $$
 
 `O(n)` 空间：
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 `O(1)` 空间：
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 ## Another Way
 
@@ -139,4 +137,4 @@ $$
 
 > 这个乘积的数学含义可以再梳理一下。TODO
 
-{% snippet solution3.py %}
+{{< snippet src="solution3.py" >}}

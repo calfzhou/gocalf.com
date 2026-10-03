@@ -1,11 +1,9 @@
 ---
 title: 141. Linked List Cycle
-notebook: coding
 tags:
 - easy
-katex: true
-date: 2024-11-12 16:19:49
-updated: 2024-11-12 16:19:49
+date: "2024-11-12T16:19:49+08:00"
+lastmod: "2024-11-12T16:19:49+08:00"
 ---
 ## Problem
 
@@ -19,26 +17,29 @@ Return `true` _if there is a cycle in the linked list_. Otherwise, return `fals
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `head = [3,2,0,-4], pos = 1`
-> Output: `true`
+> Input: `head = [3,2,0,-4], pos = 1`\
+> Output: `true`\
 > Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `head = [1,2], pos = 0`
-> Output: `true`
+> Input: `head = [1,2], pos = 0`\
+> Output: `true`\
 > Explanation: There is a cycle in the linked list, where the tail connects to the 0th node.
 
 **Example 3:**
 
-![case3](case3.png){.invert-when-dark}
+![case3](case3.png)
+{.invert-when-dark}
 
-> Input: `head = [1], pos = -1`
-> Output: `false`
+> Input: `head = [1], pos = -1`\
+> Output: `false`\
 > Explanation: There is no cycle in the linked list.
 
 **Constraints:**
@@ -62,7 +63,7 @@ class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,4 +79,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

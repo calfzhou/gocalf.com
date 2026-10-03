@@ -1,10 +1,9 @@
 ---
 title: 2290. Minimum Obstacle Removal to Reach Corner
-notebook: coding
 tags:
 - hard
-date: 2024-11-28 14:50:16
-updated: 2024-11-28 14:50:16
+date: "2024-11-28T14:50:16+08:00"
+lastmod: "2024-11-28T14:50:16+08:00"
 ---
 ## Problem
 
@@ -21,20 +20,22 @@ Return _the **minimum** number of **obstacles** to **remove** so you can move fr
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `grid = [[0,1,1],[1,1,0],[1,1,0]]`
-> Output: `2`
+> Input: `grid = [[0,1,1],[1,1,0],[1,1,0]]`\
+> Output: `2`\
 > Explanation: We can remove the obstacles at `(0, 1)` and `(0, 2)` to create a path from `(0, 0)` to `(2, 2)`.
 > It can be shown that we need to remove at least 2 obstacles, so we return 2.
 > Note that there may be other ways to remove 2 obstacles to create a path.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `grid = [[0,1,0,0,0],[0,1,0,1,0],[0,0,0,1,0]]`
-> Output: `0`
+> Input: `grid = [[0,1,0,0,0],[0,1,0,1,0],[0,0,0,1,0]]`\
+> Output: `0`\
 > Explanation: We can move from `(0, 0)` to `(2, 4)` without removing any obstacles, so we return 0.
 
 **Constraints:**
@@ -53,7 +54,7 @@ class Solution:
     def minimumObstacles(self, grid: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -83,4 +84,4 @@ Dijkstra 算法详解参见 [DSA Dijkstra's Algorithm](https://www.w3schools.com
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
