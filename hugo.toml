@@ -43,8 +43,6 @@ edit_url = ''
 footer_menu = 'footer'
 footer_text = '''本站所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
 
-本地迁移预览由 [Hugo](https://gohugo.io/) 和 [Sidera](https://github.com/calfzhou/hugo-theme-sidera) 生成；尚未部署到 [GitHub Pages](https://pages.github.com/)。
-
 Copyright © 2011-2024 [gocalf.com](/) 保留所有权利。'''
 [params.identity]
 image = '/images/calf.png'

@@ -1,0 +1,3 @@
+# GoCalf-only final footer credit; keep the migration status truthful.
+[built_with]
+other = "本地迁移预览由 [Hugo](https://gohugo.io/) 和 [Sidera](https://github.com/calfzhou/hugo-theme-sidera) 生成；尚未部署到 [GitHub Pages](https://pages.github.com/)。"
