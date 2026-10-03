@@ -1,10 +1,9 @@
 ---
 title: 647. Palindromic Substrings
-notebook: coding
 tags:
 - medium
-date: 2024-11-10 17:25:53
-updated: 2024-11-10 17:25:53
+date: "2024-11-10T17:25:53+08:00"
+lastmod: "2024-11-10T17:25:53+08:00"
 ---
 ## Problem
 
@@ -18,14 +17,14 @@ A **substring** is a contiguous sequence of characters within the string.
 
 **Example 1:**
 
-> Input: `s = "abc"`
-> Output: 3
+> Input: `s = "abc"`\
+> Output: 3\
 > Explanation: Three palindromic strings: "a", "b", "c".
 
 **Example 2:**
 
-> Input: `s = "aaa"`
-> Output: 6
+> Input: `s = "aaa"`\
+> Output: 6\
 > Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
 
 **Constraints:**
@@ -40,7 +39,7 @@ class Solution:
     def countSubstrings(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -54,4 +53,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

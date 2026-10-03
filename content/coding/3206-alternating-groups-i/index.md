@@ -1,10 +1,9 @@
 ---
 title: 3206. Alternating Groups I
-notebook: coding
 tags:
 - easy
-date: 2024-11-26 10:35:56
-updated: 2024-11-26 10:35:56
+date: "2024-11-26T10:35:56+08:00"
+lastmod: "2024-11-26T10:35:56+08:00"
 ---
 ## Problem
 
@@ -23,26 +22,31 @@ Return the number of **alternating** groups.
 
 **Example 1:**
 
-> Input: `colors = [1,1,1]`
-> Output: `0`
+> Input: `colors = [1,1,1]`\
+> Output: `0`\
 > Explanation:
 > ![case1|150](case1.png "case1")
 
 **Example 2:**
 
-> Input: `colors = [0,1,0,0,1]`
-> Output: `3`
+> Input: `colors = [0,1,0,0,1]`\
+> Output: `3`\
 > Explanation:
 > ![case2-0|150](case2-0.png "case2-0")
 > Alternating groups:
-> {% grid w:150px %}
-<!-- cell -->
+> {{% grid min_width=150 %}}
+{{< cell >}}
 > ![case2-1|150](case2-1.png "case2-1")
-<!-- cell -->
+{{< /cell >}}
+
+{{< cell >}}
 > ![case2-2|150](case2-2.png "case2-2")
-<!-- cell -->
+{{< /cell >}}
+
+{{< cell >}}
 > ![case2-3|150](case2-3.png "case2-3")
-{% endgrid %}
+{{< /cell >}}
+{{% /grid %}}
 
 **Constraints:**
 
@@ -56,7 +60,7 @@ class Solution:
     def numberOfAlternatingGroups(self, colors: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +68,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

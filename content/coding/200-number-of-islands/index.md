@@ -1,10 +1,9 @@
 ---
 title: 200. Number of Islands
-notebook: coding
 tags:
 - medium
-date: 2024-11-21 10:40:59
-updated: 2024-11-21 10:40:59
+date: "2024-11-21T10:40:59+08:00"
+lastmod: "2024-11-21T10:40:59+08:00"
 ---
 ## Problem
 
@@ -58,7 +57,7 @@ class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -70,4 +69,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

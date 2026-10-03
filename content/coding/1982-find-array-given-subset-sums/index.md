@@ -1,11 +1,10 @@
 ---
 title: 1982. Find Array Given Subset Sums
-notebook: coding
 tags:
 - hard
 - difficult
-date: 2024-12-09 22:09:31
-updated: 2024-12-09 22:09:31
+date: "2024-12-09T22:09:31+08:00"
+lastmod: "2024-12-09T22:09:31+08:00"
 ---
 ## Problem
 
@@ -21,8 +20,8 @@ An array `sub` is a **subset** of an array `arr` if `sub` can be obtained from `
 
 **Example 1:**
 
-> Input: `n = 3, sums = [-3,-2,-1,0,0,1,2,3]`
-> Output: `[1,2,-3]`
+> Input: `n = 3, sums = [-3,-2,-1,0,0,1,2,3]`\
+> Output: `[1,2,-3]`\
 > Explanation: `[1,2,-3]` is able to achieve the given subset sums:
 >
 > - `[]`: sum is 0
@@ -38,14 +37,14 @@ An array `sub` is a **subset** of an array `arr` if `sub` can be obtained from `
 
 **Example 2:**
 
-> Input: `n = 2, sums = [0,0,0,0]`
-> Output: `[0,0]`
+> Input: `n = 2, sums = [0,0,0,0]`\
+> Output: `[0,0]`\
 > Explanation: The only correct answer is `[0,0]`.
 
 **Example 3:**
 
-> Input: `n = 4, sums = [0,0,5,5,4,-1,4,9,9,-1,4,3,4,8,3,8]`
-> Output: `[0,-1,4,5]`
+> Input: `n = 4, sums = [0,0,5,5,4,-1,4,9,9,-1,4,3,4,8,3,8]`\
+> Output: `[0,-1,4,5]`\
 > Explanation: `[0,-1,4,5]` is able to achieve the given subset sums.
 
 **Constraints:**
@@ -61,7 +60,7 @@ class Solution:
     def recoverArray(self, n: int, sums: List[int]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -97,4 +96,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

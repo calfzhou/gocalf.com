@@ -1,10 +1,9 @@
 ---
 title: 51. N-Queens
-notebook: coding
 tags:
 - hard
-date: 2024-12-01 01:45:08
-updated: 2024-12-02 10:44:34
+date: "2024-12-01T01:45:08+08:00"
+lastmod: "2024-12-02T10:44:34+08:00"
 ---
 ## Problem
 
@@ -18,15 +17,16 @@ Each solution contains a distinct board configuration of the n-queens' placement
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `n = 4`
-> Output: `[[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]`
+> Input: `n = 4`\
+> Output: `[[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]`\
 > Explanation: There exist two distinct solutions to the 4-queens puzzle as shown above
 
 **Example 2:**
 
-> Input: `n = 1`
+> Input: `n = 1`\
 > Output: `[["Q"]]`
 
 **Constraints:**
@@ -40,7 +40,7 @@ class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,10 +64,10 @@ class Solution:
 
 ### Recursively
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Iteratively
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 不用递归的话，需要注意缓存的更新时机，避免设置了但没有清理，或者漏了设置。

@@ -1,10 +1,9 @@
 ---
 title: 954. Array of Doubled Pairs
-notebook: coding
 tags:
 - medium
-date: 2024-12-09 16:19:51
-updated: 2024-12-09 16:19:51
+date: "2024-12-09T16:19:51+08:00"
+lastmod: "2024-12-09T16:19:51+08:00"
 ---
 ## Problem
 
@@ -14,18 +13,18 @@ Given an integer array of even length `arr`, return `true` _if it is possible to
 
 **Example 1:**
 
-> Input: `arr = [3,1,3,6]`
+> Input: `arr = [3,1,3,6]`\
 > Output: `false`
 
 **Example 2:**
 
-> Input: `arr = [2,1,2,6]`
+> Input: `arr = [2,1,2,6]`\
 > Output: `false`
 
 **Example 3:**
 
-> Input: `arr = [4,-2,2,-4]`
-> Output: `true`
+> Input: `arr = [4,-2,2,-4]`\
+> Output: `true`\
 > Explanation: We can take two groups, `[-2,-4]` and `[2,4]` to form `[-2,-4,2,4]` or `[2,4,-2,-4]`.
 
 **Constraints:**
@@ -41,7 +40,7 @@ class Solution:
     def canReorderDoubled(self, arr: List[int]) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -55,4 +54,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 19. Remove Nth Node From End of List
-notebook: coding
 tags:
 - medium
-date: 2024-11-14 17:47:46
-updated: 2024-11-14 17:47:46
+date: "2024-11-14T17:47:46+08:00"
+lastmod: "2024-11-14T17:47:46+08:00"
 ---
 ## Problem
 
@@ -14,19 +13,20 @@ Given the `head` of a linked list, remove the `nᵗʰ` node from the end of the 
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `head = [1,2,3,4,5], n = 2`
+> Input: `head = [1,2,3,4,5], n = 2`\
 > Output: `[1,2,3,5]`
 
 **Example 2:**
 
-> Input: `head = [1], n = 1`
+> Input: `head = [1], n = 1`\
 > Output: `[]`
 
 **Example 3:**
 
-> Input: `head = [1,2], n = 1`
+> Input: `head = [1,2], n = 1`\
 > Output: `[1]`
 
 **Constraints:**
@@ -48,7 +48,7 @@ class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -58,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

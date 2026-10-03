@@ -1,10 +1,9 @@
 ---
 title: 2056. Number of Valid Move Combinations On Chessboard
-notebook: coding
 tags:
 - hard
-date: 2024-12-04 22:32:05
-updated: 2024-12-04 22:32:05
+date: "2024-12-04T22:32:05+08:00"
+lastmod: "2024-12-04T22:32:05+08:00"
 ---
 ## Problem
 
@@ -48,31 +47,35 @@ Return _the number of **valid** move combinations_.
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `pieces = ["rook"], positions = [[1,1]]`
-> Output: `15`
+> Input: `pieces = ["rook"], positions = [[1,1]]`\
+> Output: `15`\
 > Explanation: The image above shows the possible squares the piece can move to.
 
 **Example 2:**
 
-![case1](case2.png){.invert-when-dark}
+![case1](case2.png)
+{.invert-when-dark}
 
-> Input: `pieces = ["queen"], positions = [[1,1]]`
-> Output: `22`
+> Input: `pieces = ["queen"], positions = [[1,1]]`\
+> Output: `22`\
 > Explanation: The image above shows the possible squares the piece can move to.
 
 **Example 3:**
 
-![case1](case3.png){.invert-when-dark}
+![case1](case3.png)
+{.invert-when-dark}
 
-> Input: `pieces = ["bishop"], positions = [[4,3]]`
-> Output: `12`
+> Input: `pieces = ["bishop"], positions = [[4,3]]`\
+> Output: `12`\
 > Explanation: The image above shows the possible squares the piece can move to.
 
 **Example 4:**
 
-![case1](case4.png){.invert-when-dark}
+![case1](case4.png)
+{.invert-when-dark}
 
 > `输入：pieces = ["rook","rook"], positions = [[1,1],[8,8]]`
 > `输出：223`
@@ -87,7 +90,8 @@ Return _the number of **valid** move combinations_.
 
 **Example 5:**
 
-![case1](case5.png){.invert-when-dark}
+![case1](case5.png)
+{.invert-when-dark}
 
 > `输入：pieces = ["queen","bishop"], positions = [[5,7],[3,4]]`
 > `输出：281`
@@ -116,7 +120,7 @@ class Solution:
     def countCombinations(self, pieces: List[str], positions: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -156,4 +160,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

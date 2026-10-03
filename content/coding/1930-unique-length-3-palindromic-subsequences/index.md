@@ -1,10 +1,9 @@
 ---
 title: 1930. Unique Length-3 Palindromic Subsequences
-notebook: coding
 tags:
 - medium
-date: 2025-01-04 10:40:47
-updated: 2025-01-04 10:40:47
+date: "2025-01-04T10:40:47+08:00"
+lastmod: "2025-01-04T10:40:47+08:00"
 ---
 ## Problem
 
@@ -22,8 +21,8 @@ A **subsequence** of a string is a new string generated from the original string
 
 **Example 1:**
 
-> Input: `s = "aabca"`
-> Output: `3`
+> Input: `s = "aabca"`\
+> Output: `3`\
 > Explanation: The 3 palindromic subsequences of length 3 are:
 >
 > - `"aba"` (subsequence of `"aabca"`)
@@ -32,14 +31,14 @@ A **subsequence** of a string is a new string generated from the original string
 
 **Example 2:**
 
-> Input: `s = "adc"`
-> Output: `0`
+> Input: `s = "adc"`\
+> Output: `0`\
 > Explanation: There are no palindromic subsequences of length 3 in `"adc"`.
 
 **Example 3:**
 
-> Input: `s = "bbcbaba"`
-> Output: `4`
+> Input: `s = "bbcbaba"`\
+> Output: `4`\
 > Explanation: The 4 palindromic subsequences of length 3 are:
 >
 > - `"bbb"` (subsequence of `"bbcbaba"`)
@@ -59,7 +58,7 @@ class Solution:
     def countPalindromicSubsequence(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -77,4 +76,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

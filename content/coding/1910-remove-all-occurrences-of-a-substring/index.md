@@ -1,10 +1,9 @@
 ---
 title: 1910. Remove All Occurrences of a Substring
-notebook: coding
 tags:
 - medium
-date: 2025-02-11 09:30:46
-updated: 2025-02-11 09:30:46
+date: "2025-02-11T09:30:46+08:00"
+lastmod: "2025-02-11T09:30:46+08:00"
 ---
 ## Problem
 
@@ -20,26 +19,26 @@ A **substring** is a contiguous sequence of characters in a string.
 
 **Example 1:**
 
-> Input: `s = "daabcbaabcbc", part = "abc"`
-> Output: `"dab"`
+> Input: `s = "daabcbaabcbc", part = "abc"`\
+> Output: `"dab"`\
 > Explanation: The following operations are done:
 >
-> - `s = "da`{% u abc %}`baabcbc"`, remove `"abc"` starting at index 2, so `s = "dabaabcbc"`.
-> - `s = "daba`{% u abc %}`bc"`, remove `"abc"` starting at index 4, so `s = "dababc"`.
-> - `s = "dab`{% u abc %}`"`, remove `"abc"` starting at index 3, so `s = "dab"`.
+> - `s = "da`{{< u text="abc" >}}`baabcbc"`, remove `"abc"` starting at index 2, so `s = "dabaabcbc"`.
+> - `s = "daba`{{< u text="abc" >}}`bc"`, remove `"abc"` starting at index 4, so `s = "dababc"`.
+> - `s = "dab`{{< u text="abc" >}}`"`, remove `"abc"` starting at index 3, so `s = "dab"`.
 >
 > Now s has no occurrences of `"abc".`
 
 **Example 2:**
 
-> Input: `s = "axxxxyyyyb", part = "xy"`
-> Output: `"ab"`
+> Input: `s = "axxxxyyyyb", part = "xy"`\
+> Output: `"ab"`\
 > Explanation: The following operations are done:
 >
-> - `s = "axxx`{% u xy %}`yyyb"`, remove `"xy"` starting at index 4 so `s = "axxxyyyb"`.
-> - `s = "axx`{% u xy %}`yyb"`, remove `"xy"` starting at index 3 so `s = "axxyyb"`.
-> - `s = "ax`{% u xy %}`yb"`, remove `"xy"` starting at index 2 so `s = "axyb"`.
-> - `s = "a`{% u xy %}`b"`, remove `"xy"` starting at index 1 so `s = "ab"`.
+> - `s = "axxx`{{< u text="xy" >}}`yyyb"`, remove `"xy"` starting at index 4 so `s = "axxxyyyb"`.
+> - `s = "axx`{{< u text="xy" >}}`yyb"`, remove `"xy"` starting at index 3 so `s = "axxyyb"`.
+> - `s = "ax`{{< u text="xy" >}}`yb"`, remove `"xy"` starting at index 2 so `s = "axyb"`.
+> - `s = "a`{{< u text="xy" >}}`b"`, remove `"xy"` starting at index 1 so `s = "ab"`.
 >
 > Now s has no occurrences of `"xy"`.
 
@@ -56,7 +55,7 @@ class Solution:
     def removeOccurrences(self, s: str, part: str) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -68,4 +67,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

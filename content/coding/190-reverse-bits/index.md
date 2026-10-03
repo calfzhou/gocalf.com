@@ -1,11 +1,9 @@
 ---
 title: 190. Reverse Bits
-notebook: coding
 tags:
 - easy
-date: 2024-11-19 15:57:07
-updated: 2024-11-19 15:57:07
-katex: true
+date: "2024-11-19T15:57:07+08:00"
+lastmod: "2024-11-19T15:57:07+08:00"
 ---
 ## Problem
 
@@ -20,14 +18,14 @@ Reverse bits of a given 32 bits unsigned integer.
 
 **Example 1:**
 
-> Input: `n = 00000010100101000001111010011100`
-> Output: `964176192 (00111001011110000010100101000000)`
+> Input: `n = 00000010100101000001111010011100`\
+> Output: `964176192 (00111001011110000010100101000000)`\
 > Explanation: The input binary string `00000010100101000001111010011100` represents the unsigned integer 43261596, so return 964176192 which its binary representation is `00111001011110000010100101000000`.
 
 **Example 2:**
 
-> Input: `n = 11111111111111111111111111111101`
-> Output: `3221225471 (10111111111111111111111111111111)`
+> Input: `n = 11111111111111111111111111111101`\
+> Output: `3221225471 (10111111111111111111111111111111)`\
 > Explanation: The input binary string `11111111111111111111111111111101` represents the unsigned integer 4294967293, so return 3221225471 which its binary representation is `10111111111111111111111111111111`.
 
 **Constraints:**
@@ -38,7 +36,7 @@ Reverse bits of a given 32 bits unsigned integer.
 
 ## Test Cases
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -53,7 +51,7 @@ class Solution:
     def reverseBits(self, n: int) -> int:
 ```
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster
 
@@ -98,4 +96,4 @@ $$
 
 而之前普通循环的方法需要大约 `16 * 7 = 112` 次运算，还不包括循环控制之类的操作。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}

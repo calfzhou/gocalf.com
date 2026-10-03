@@ -1,10 +1,9 @@
 ---
 title: 2559. Count Vowel Strings in Ranges
-notebook: coding
 tags:
 - medium
-date: 2025-01-02 10:12:27
-updated: 2025-01-02 10:12:27
+date: "2025-01-02T10:12:27+08:00"
+lastmod: "2025-01-02T10:12:27+08:00"
 ---
 ## Problem
 
@@ -20,8 +19,8 @@ Return _an array_ `ans` _of size_ `queries.length`_, where_ `ans[i]` _is the ans
 
 **Example 1:**
 
-> Input: `words = ["aba","bcb","ece","aa","e"], queries = [[0,2],[1,4],[1,1]]`
-> Output: `[2,3,0]`
+> Input: `words = ["aba","bcb","ece","aa","e"], queries = [[0,2],[1,4],[1,1]]`\
+> Output: `[2,3,0]`\
 > Explanation: The strings starting and ending with a vowel are `"aba"`, `"ece"`, `"aa"` and `"e"`.
 > The answer to the query `[0,2]` is 2 (strings `"aba"` and `"ece"`).
 > to query `[1,4]` is 3 (strings `"ece"`, `"aa"`, `"e"`).
@@ -30,8 +29,8 @@ Return _an array_ `ans` _of size_ `queries.length`_, where_ `ans[i]` _is the ans
 
 **Example 2:**
 
-> Input: `words = ["a","e","i"], queries = [[0,2],[0,1],[2,2]]`
-> Output: `[3,2,1]`
+> Input: `words = ["a","e","i"], queries = [[0,2],[0,1],[2,2]]`\
+> Output: `[3,2,1]`\
 > Explanation: Every string satisfies the conditions, so we return `[3,2,1]`.
 
 **Constraints:**
@@ -50,7 +49,7 @@ class Solution:
     def vowelStrings(self, words: List[str], queries: List[List[int]]) -> List[int]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

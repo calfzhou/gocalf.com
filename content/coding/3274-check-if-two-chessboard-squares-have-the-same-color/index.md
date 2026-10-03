@@ -1,10 +1,9 @@
 ---
 title: 3274. Check if Two Chessboard Squares Have the Same Color
-notebook: coding
 tags:
 - easy
-date: 2024-12-03 10:39:15
-updated: 2024-12-03 10:39:15
+date: "2024-12-03T10:39:15+08:00"
+lastmod: "2024-12-03T10:39:15+08:00"
 ---
 ## Problem
 
@@ -22,15 +21,15 @@ The coordinate will always represent a valid chessboard square. The coordinate w
 
 **Example 1:**
 
-> Input: coordinate1 = "a1", coordinate2 = "c3"
-> Output: true
+> Input: coordinate1 = "a1", coordinate2 = "c3"\
+> Output: true\
 > Explanation:
 > Both squares are black.
 
 **Example 2:**
 
-> Input: coordinate1 = "a1", coordinate2 = "h3"
-> Output: false
+> Input: coordinate1 = "a1", coordinate2 = "h3"\
+> Output: false\
 > Explanation:
 > Square "a1" is black and "h3" is white.
 
@@ -47,7 +46,7 @@ class Solution:
     def checkTwoChessboards(self, coordinate1: str, coordinate2: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -57,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 20. Valid Parentheses
-notebook: coding
 tags:
 - easy
-date: 2024-11-14 18:17:00
-updated: 2024-11-14 18:17:00
+date: "2024-11-14T18:17:00+08:00"
+lastmod: "2024-11-14T18:17:00+08:00"
 ---
 ## Problem
 
@@ -20,22 +19,22 @@ An input string is valid if:
 
 **Example 1:**
 
-> Input: `s = "()"`
+> Input: `s = "()"`\
 > Output: `true`
 
 **Example 2:**
 
-> Input: `s = "()[]{}"`
+> Input: `s = "()[]{}"`\
 > Output: `true`
 
 **Example 3:**
 
-> Input: `s = "(]"`
+> Input: `s = "(]"`\
 > Output: `false`
 
 **Example 4:**
 
-> Input: `s = "([])"`
+> Input: `s = "([])"`\
 > Output: `true`
 
 **Constraints:**
@@ -50,7 +49,7 @@ class Solution:
     def isValid(self, s: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -64,4 +63,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

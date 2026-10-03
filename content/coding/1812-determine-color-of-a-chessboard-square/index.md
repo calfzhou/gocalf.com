@@ -1,10 +1,9 @@
 ---
 title: 1812. Determine Color of a Chessboard Square
-notebook: coding
 tags:
 - easy
-date: 2024-12-09 09:34:57
-updated: 2024-12-09 09:34:57
+date: "2024-12-09T09:34:57+08:00"
+lastmod: "2024-12-09T09:34:57+08:00"
 ---
 ## Problem
 
@@ -20,19 +19,19 @@ The coordinate will always represent a valid chessboard square. The coordinate w
 
 **Example 1:**
 
-> Input: `coordinates = "a1"`
-> Output: `false`
+> Input: `coordinates = "a1"`\
+> Output: `false`\
 > Explanation: From the chessboard above, the square with coordinates `"a1"` is black, so return `false`.
 
 **Example 2:**
 
-> Input: `coordinates = "h3"`
-> Output: `true`
+> Input: `coordinates = "h3"`\
+> Output: `true`\
 > Explanation: From the chessboard above, the square with coordinates `"h3"` is white, so return `true`.
 
 **Example 3:**
 
-> Input: `coordinates = "c7"`
+> Input: `coordinates = "c7"`\
 > Output: `false`
 
 **Constraints:**
@@ -48,7 +47,7 @@ class Solution:
     def squareIsWhite(self, coordinates: str) -> bool:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

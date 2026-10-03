@@ -1,10 +1,9 @@
 ---
 title: 2017. Grid Game
-notebook: coding
 tags:
 - medium
-date: 2025-01-22 00:21:38
-updated: 2025-01-22 00:21:38
+date: "2025-01-22T00:21:38+08:00"
+lastmod: "2025-01-22T00:21:38+08:00"
 ---
 ## Problem
 
@@ -20,30 +19,33 @@ The **first** robot wants to **minimize** the number of points collected by the 
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `grid = [[2,5,4],[1,5,1]]`
-> Output: `4`
+> Input: `grid = [[2,5,4],[1,5,1]]`\
+> Output: `4`\
 > Explanation: The optimal path taken by the first robot is shown in red, and the optimal path taken by the second robot is shown in blue.
 > The cells visited by the first robot are set to 0.
 > The second robot will collect `0 + 0 + 4 + 0 = 4` points.
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `grid = [[3,3,1],[8,5,2]]`
-> Output: `4`
+> Input: `grid = [[3,3,1],[8,5,2]]`\
+> Output: `4`\
 > Explanation: The optimal path taken by the first robot is shown in red, and the optimal path taken by the second robot is shown in blue.
 > The cells visited by the first robot are set to 0.
 > The second robot will collect `0 + 3 + 1 + 0 = 4` points.
 
 **Example 3:**
 
-![case3](case3.png){.invert-when-dark}
+![case3](case3.png)
+{.invert-when-dark}
 
-> Input: `grid = [[1,3,1,15],[1,3,3,1]]`
-> Output: `7`
+> Input: `grid = [[1,3,1,15],[1,3,3,1]]`\
+> Output: `7`\
 > Explanation: The optimal path taken by the first robot is shown in red, and the optimal path taken by the second robot is shown in blue.
 > The cells visited by the first robot are set to 0.
 > The second robot will collect `0 + 1 + 3 + 3 + 0 = 7` points.
@@ -62,7 +64,7 @@ class Solution:
     def gridGame(self, grid: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,4 +80,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

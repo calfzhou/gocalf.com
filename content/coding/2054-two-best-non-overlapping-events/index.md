@@ -1,11 +1,10 @@
 ---
 title: 2054. Two Best Non-Overlapping Events
-notebook: coding
 tags:
 - medium
 - todo
-date: 2024-12-08 21:09:16
-updated: 2024-12-08 21:09:16
+date: "2024-12-08T21:09:16+08:00"
+lastmod: "2024-12-08T21:09:16+08:00"
 ---
 ## Problem
 
@@ -19,26 +18,29 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 
 **Example 1:**
 
-![case1|400](case1.png "case1"){.invert-when-dark}
+![case1|400](case1.png "case1")
+{.invert-when-dark}
 
-> Input: `events = [[1,3,2],[4,5,2],[2,4,3]]`
-> Output: `4`
+> Input: `events = [[1,3,2],[4,5,2],[2,4,3]]`\
+> Output: `4`\
 > Explanation: Choose the green events, 0 and 1 for a sum of `2 + 2 = 4`.
 
 **Example 2:**
 
-![case2|400](case2.png "case2"){.invert-when-dark}
+![case2|400](case2.png "case2")
+{.invert-when-dark}
 
-> Input: `events = [[1,3,2],[4,5,2],[1,5,5]]`
-> Output: `5`
+> Input: `events = [[1,3,2],[4,5,2],[1,5,5]]`\
+> Output: `5`\
 > Explanation: Choose event 2 for a sum of `5`.
 
 **Example 3:**
 
-![case3|400](case3.png "case3"){.invert-when-dark}
+![case3|400](case3.png "case3")
+{.invert-when-dark}
 
-> Input: `events = [[1,5,3],[1,5,1],[6,6,5]]`
-> Output: `8`
+> Input: `events = [[1,5,3],[1,5,1],[6,6,5]]`\
+> Output: `8`\
 > Explanation: Choose events 0 and 2 for a sum of `3 + 5 = 8`.
 
 **Constraints:**
@@ -55,7 +57,7 @@ class Solution:
     def maxTwoEvents(self, events: List[List[int]]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -71,6 +73,6 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 不是很快，才 `34+%`，回头再优化。

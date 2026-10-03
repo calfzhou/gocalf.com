@@ -1,10 +1,9 @@
 ---
 title: 1957. Delete Characters to Make Fancy String
-notebook: coding
 tags:
 - easy
-date: 2024-11-27 18:50:03
-updated: 2024-11-27 18:50:03
+date: "2024-11-27T18:50:03+08:00"
+lastmod: "2024-11-27T18:50:03+08:00"
 ---
 ## Problem
 
@@ -18,16 +17,16 @@ Return _the final string after the deletion_. It can be shown that the answer wi
 
 **Example 1:**
 
-> Input: `s = "le`{%u e %}`etcode"`
-> Output: `"leetcode"`
+> Input: `s = "le`{{< u text="e" >}}`etcode"`\
+> Output: `"leetcode"`\
 > Explanation:
 > Remove an 'e' from the first group of 'e's to create "leetcode".
 > No three consecutive characters are equal, so return "leetcode".
 
 **Example 2:**
 
-> Input: `s = "`{%u a %}`aab`{%u aa %}`aa"`
-> Output: `"aabaa"`
+> Input: `s = "`{{< u text="a" >}}`aab`{{< u text="aa" >}}`aa"`\
+> Output: `"aabaa"`\
 > Explanation:
 > Remove an 'a' from the first group of 'a's to create "aabaaaa".
 > Remove two 'a's from the second group of 'a's to create "aabaa".
@@ -35,8 +34,8 @@ Return _the final string after the deletion_. It can be shown that the answer wi
 
 **Example 3:**
 
-> Input: `s = "aab"`
-> Output: `"aab"`
+> Input: `s = "aab"`\
+> Output: `"aab"`\
 > Explanation: No three consecutive characters are equal, so return "aab".
 
 **Constraints:**
@@ -51,7 +50,7 @@ class Solution:
     def makeFancyString(self, s: str) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,4 +58,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

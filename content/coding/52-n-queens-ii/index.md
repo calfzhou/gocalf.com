@@ -1,10 +1,9 @@
 ---
 title: 52. N-Queens II
-notebook: coding
 tags:
 - hard
-date: 2024-12-02 10:46:48
-updated: 2024-12-02 10:46:48
+date: "2024-12-02T10:46:48+08:00"
+lastmod: "2024-12-02T10:46:48+08:00"
 ---
 ## Problem
 
@@ -16,15 +15,16 @@ Given an integer `n`, return _the number of distinct solutions to the **n-queen
 
 **Example 1:**
 
-![case1](../51-n-queens/case1.png){.invert-when-dark}
+![case1](../51-n-queens/case1.png)
+{.invert-when-dark}
 
-> Input: n = 4
-> Output: 2
+> Input: n = 4\
+> Output: 2\
 > Explanation: There are two distinct solutions to the 4-queens puzzle as shown.
 
 **Example 2:**
 
-> Input: n = 1
+> Input: n = 1\
 > Output: 1
 
 **Constraints:**
@@ -38,7 +38,7 @@ class Solution:
     def totalNQueens(self, n: int) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -48,10 +48,10 @@ class Solution:
 
 ### Recursively
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Iteratively
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 递归版本可以去掉记录每行的皇后摆放的位置，因为每一层递归的局部变量里已经记录了该信息。而非递归版还是需要的。

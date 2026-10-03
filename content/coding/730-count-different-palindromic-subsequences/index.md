@@ -1,11 +1,9 @@
 ---
 title: 730. Count Different Palindromic Subsequences
-notebook: coding
 tags:
 - hard
-katex: true
-date: 2024-12-31 21:29:10
-updated: 2024-12-31 21:29:10
+date: "2024-12-31T21:29:10+08:00"
+lastmod: "2024-12-31T21:29:10+08:00"
 ---
 ## Problem
 
@@ -21,15 +19,15 @@ Two sequences `a₁, a₂, ...` and `b₁, b₂, ...` are different if there is 
 
 **Example 1:**
 
-> Input: `s = "bccb"`
-> Output: `6`
+> Input: `s = "bccb"`\
+> Output: `6`\
 > Explanation: The 6 different non-empty palindromic subsequences are `'b'`, `'c'`, `'bb'`, `'cc'`, `'bcb'`, `'bccb'`.
 > Note that `'bcb'` is counted only once, even though it occurs twice.
 
 **Example 2:**
 
-> Input: `s = "abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba"`
-> Output: `104860361`
+> Input: `s = "abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba"`\
+> Output: `104860361`\
 > Explanation: There are 3104860382 different non-empty palindromic subsequences, which is 104860361 modulo `10⁹ + 7`.
 
 **Constraints:**
@@ -44,7 +42,7 @@ class Solution:
     def countPalindromicSubsequences(self, s: str) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -78,4 +76,4 @@ $$
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

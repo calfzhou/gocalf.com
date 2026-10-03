@@ -1,10 +1,9 @@
 ---
 title: 1980. Find Unique Binary String
-notebook: coding
 tags:
 - medium
-date: 2025-02-20 09:57:26
-updated: 2025-02-20 09:57:26
+date: "2025-02-20T09:57:26+08:00"
+lastmod: "2025-02-20T09:57:26+08:00"
 ---
 ## Problem
 
@@ -14,20 +13,20 @@ Given an array of strings `nums` containing `n` **unique** binary strings each o
 
 **Example 1:**
 
-> Input: `nums = ["01","10"]`
-> Output: `"11"`
+> Input: `nums = ["01","10"]`\
+> Output: `"11"`\
 > Explanation: `"11"` does not appear in nums. `"00"` would also be correct.
 
 **Example 2:**
 
-> Input: `nums = ["00","01"]`
-> Output: `"11"`
+> Input: `nums = ["00","01"]`\
+> Output: `"11"`\
 > Explanation: `"11"` does not appear in nums. `"10"` would also be correct.
 
 **Example 3:**
 
-> Input: `nums = ["111","011","001"]`
-> Output: `"101"`
+> Input: `nums = ["111","011","001"]`\
+> Output: `"101"`\
 > Explanation: `"101"` does not appear in nums. `"000"`, `"010"`, `"100"`, and `"110"` would also be correct.
 
 **Constraints:**
@@ -45,7 +44,7 @@ class Solution:
     def findDifferentBinaryString(self, nums: List[str]) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -57,4 +56,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

@@ -1,10 +1,9 @@
 ---
 title: 3174. Clear Digits
-notebook: coding
 tags:
 - easy
-date: 2025-02-10 10:07:28
-updated: 2025-02-10 10:07:28
+date: "2025-02-10T10:07:28+08:00"
+lastmod: "2025-02-10T10:07:28+08:00"
 ---
 ## Problem
 
@@ -20,15 +19,15 @@ Return the resulting string after removing all digits.
 
 **Example 1:**
 
-> Input: `s = "abc"`
-> Output: `"abc"`
+> Input: `s = "abc"`\
+> Output: `"abc"`\
 > Explanation:
 > There is no digit in the string.
 
 **Example 2:**
 
-> Input: `s = "cb34"`
-> Output: `""`
+> Input: `s = "cb34"`\
+> Output: `""`\
 > Explanation:
 > First, we apply the operation on `s[2]`, and s becomes `"c4"`.
 > Then we apply the operation on `s[1]`, and s becomes `""`.
@@ -46,7 +45,7 @@ class Solution:
     def clearDigits(self, s: str) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -58,4 +57,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

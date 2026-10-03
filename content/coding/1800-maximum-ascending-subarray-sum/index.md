@@ -1,10 +1,9 @@
 ---
 title: 1800. Maximum Ascending Subarray Sum
-notebook: coding
 tags:
 - easy
-date: 2025-02-04 15:14:11
-updated: 2025-02-04 15:14:11
+date: "2025-02-04T15:14:11+08:00"
+lastmod: "2025-02-04T15:14:11+08:00"
 ---
 ## Problem
 
@@ -18,20 +17,20 @@ A subarray `[numsl, numsl+1, ..., numsr-1, numsr]` is **ascending** if for all `
 
 **Example 1:**
 
-> Input: `nums = [10,20,30,5,10,50]`
-> Output: `65`
+> Input: `nums = [10,20,30,5,10,50]`\
+> Output: `65`\
 > Explanation: `[5,10,50]` is the ascending subarray with the maximum sum of 65.
 
 **Example 2:**
 
-> Input: `nums = [10,20,30,40,50]`
-> Output: `150`
+> Input: `nums = [10,20,30,40,50]`\
+> Output: `150`\
 > Explanation: `[10,20,30,40,50]` is the ascending subarray with the maximum sum of 150.
 
 **Example 3:**
 
-> Input: `nums = [12,17,15,13,10,11,12]`
-> Output: `33`
+> Input: `nums = [12,17,15,13,10,11,12]`\
+> Output: `33`\
 > Explanation: `[10,11,12]` is the ascending subarray with the maximum sum of 33.
 
 **Constraints:**
@@ -46,7 +45,7 @@ class Solution:
     def maxAscendingSum(self, nums: List[int]) -> int:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,4 +55,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

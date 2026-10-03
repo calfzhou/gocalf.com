@@ -1,10 +1,9 @@
 ---
 title: 2080. Range Frequency Queries
-notebook: coding
 tags:
 - medium
-date: 2025-02-18 10:01:40
-updated: 2025-02-18 10:01:40
+date: "2025-02-18T10:01:40+08:00"
+lastmod: "2025-02-18T10:01:40+08:00"
 ---
 ## Problem
 
@@ -23,10 +22,10 @@ A **subarray** is a contiguous sequence of elements within an array. `arr[left..
 
 **Example 1:**
 
-> Input
-> `["RangeFreqQuery", "query", "query"]`
-> `[[[12, 33, 4, 56, 22, 2, 34, 33, 22, 12, 34, 56]], [1, 2, 4], [0, 11, 33]]`
-> Output
+> Input\
+> `["RangeFreqQuery", "query", "query"]`\
+> `[[[12, 33, 4, 56, 22, 2, 34, 33, 22, 12, 34, 56]], [1, 2, 4], [0, 11, 33]]`\
+> Output\
 > `[null, 1, 2]`
 >
 > Explanation
@@ -61,7 +60,7 @@ class RangeFreqQuery:
 # param_1 = obj.query(left,right,value)
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -73,4 +72,4 @@ class RangeFreqQuery:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}

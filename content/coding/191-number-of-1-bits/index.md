@@ -1,10 +1,9 @@
 ---
 title: 191. Number of 1 Bits
-notebook: coding
 tags:
 - easy
-date: 2024-11-19 16:52:28
-updated: 2024-11-19 16:52:28
+date: "2024-11-19T16:52:28+08:00"
+lastmod: "2024-11-19T16:52:28+08:00"
 ---
 ## Problem
 
@@ -16,22 +15,22 @@ Given a positive integer `n`, write a function that returns the number of set bi
 
 **Example 1:**
 
-> Input: `n = 11`
-> Output: `3`
+> Input: `n = 11`\
+> Output: `3`\
 > Explanation:
 > The input binary string `1011` has a total of three set bits.
 
 **Example 2:**
 
-> Input: `n = 128`
-> Output: `1`
+> Input: `n = 128`\
+> Output: `1`\
 > Explanation:
 > The input binary string `10000000` has a total of one set bit.
 
 **Example 3:**
 
-> Input: `n = 2147483645`
-> Output: `30`
+> Input: `n = 2147483645`\
+> Output: `30`\
 > Explanation:
 > The input binary string `1111111111111111111111111111101` has a total of thirty set bits.
 
@@ -43,7 +42,7 @@ Given a positive integer `n`, write a function that returns the number of set bi
 
 ## Test Cases
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -56,7 +55,7 @@ class Solution:
     def hammingWeight(self, n: int) -> int:
 ```
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Faster
 
@@ -66,7 +65,7 @@ class Solution:
 
 对于一个 32 bits 二进制数，可以分成 8 段，每段是一个 4 bit 二进制数，直接查表得到这一段内 `1` 的个数，8 段的结果累加即可。
 
-{% snippet solution2.py %}
+{{< snippet src="solution2.py" >}}
 
 ## Another Way
 
@@ -80,4 +79,4 @@ class Solution:
 
 循环的次数跟 n 中 `1` 的个数一致。
 
-{% snippet solution3.py %}
+{{< snippet src="solution3.py" >}}

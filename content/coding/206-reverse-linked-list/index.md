@@ -1,10 +1,9 @@
 ---
 title: 206. Reverse Linked List
-notebook: coding
 tags:
 - easy
-date: 2024-11-21 19:21:49
-updated: 2024-11-21 19:21:49
+date: "2024-11-21T19:21:49+08:00"
+lastmod: "2024-11-21T19:21:49+08:00"
 ---
 ## Problem
 
@@ -14,21 +13,23 @@ Given the `head` of a singly linked list, reverse the list, and return _the reve
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `head = [1,2,3,4,5]`
+> Input: `head = [1,2,3,4,5]`\
 > Output: `[5,4,3,2,1]`
 
 **Example 2:**
 
-![case2](case2.png){.invert-when-dark}
+![case2](case2.png)
+{.invert-when-dark}
 
-> Input: `head = [1,2]`
+> Input: `head = [1,2]`\
 > Output: `[2,1]`
 
 **Example 3:**
 
-> Input: `head = []`
+> Input: `head = []`\
 > Output: `[]`
 
 **Constraints:**
@@ -50,7 +51,7 @@ class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -62,8 +63,8 @@ class Solution:
 
 ### Iteratively
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ### Recursively
 
-{% snippet solution_recursive.py %}
+{{< snippet src="solution_recursive.py" >}}

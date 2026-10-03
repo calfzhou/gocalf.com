@@ -1,10 +1,9 @@
 ---
 title: 5. Longest Palindromic Substring
-notebook: coding
 tags:
 - medium
-date: 2024-11-10 03:29:56
-updated: 2024-11-10 03:40:23
+date: "2024-11-10T03:29:56+08:00"
+lastmod: "2024-11-10T03:40:23+08:00"
 ---
 ## Problem
 
@@ -17,13 +16,13 @@ Given a string `s`, return _the longest palindromic substring_ in `s`.
 
 **Example 1:**
 
-> Input: `s = "babad"`
-> Output: `"bab"`
+> Input: `s = "babad"`\
+> Output: `"bab"`\
 > Explanation: `"aba"` is also a valid answer.
 
 **Example 2:**
 
-> Input: s = `"cbbd"`
+> Input: s = `"cbbd"`\
 > Output: `"bb"`
 
 **Constraints:**
@@ -38,7 +37,7 @@ class Solution:
     def longestPalindrome(self, s: str) -> str:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -61,7 +60,7 @@ Palindromic string（回文）一定是按中间位置对称的。注意奇数�
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 ## Extra
 

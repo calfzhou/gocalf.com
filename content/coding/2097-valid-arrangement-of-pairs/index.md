@@ -1,11 +1,10 @@
 ---
 title: 2097. Valid Arrangement of Pairs
-notebook: coding
 tags:
 - hard
 - todo
-date: 2024-11-30 15:07:50
-updated: 2024-11-30 15:07:50
+date: "2024-11-30T15:07:50+08:00"
+lastmod: "2024-11-30T15:07:50+08:00"
 ---
 ## Problem
 
@@ -19,8 +18,8 @@ Return _**any** valid arrangement of_ `pairs`.
 
 **Example 1:**
 
-> Input: `pairs = [[5,1],[4,5],[11,9],[9,4]]`
-> Output: `[[11,9],[9,4],[4,5],[5,1]]`
+> Input: `pairs = [[5,1],[4,5],[11,9],[9,4]]`\
+> Output: `[[11,9],[9,4],[4,5],[5,1]]`\
 > Explanation:
 > This is a valid arrangement since endᵢ₋₁ always equals startᵢ.
 > end₀ = 9 == 9 = start₁
@@ -29,8 +28,8 @@ Return _**any** valid arrangement of_ `pairs`.
 
 **Example 2:**
 
-> Input: `pairs = [[1,3],[3,2],[2,1]]`
-> Output: `[[1,3],[3,2],[2,1]]`
+> Input: `pairs = [[1,3],[3,2],[2,1]]`\
+> Output: `[[1,3],[3,2],[2,1]]`\
 > Explanation:
 > This is a valid arrangement since endᵢ₋₁ always equals startᵢ.
 > end₀ = 3 == 3 = start₁
@@ -39,8 +38,8 @@ Return _**any** valid arrangement of_ `pairs`.
 
 **Example 3:**
 
-> Input: `pairs = [[1,2],[1,3],[2,1]]`
-> Output: `[[1,2],[2,1],[1,3]]`
+> Input: `pairs = [[1,2],[1,3],[2,1]]`\
+> Output: `[[1,2],[2,1],[1,3]]`\
 > Explanation:
 > This is a valid arrangement since endᵢ₋₁ always equals startᵢ.
 > end₀ = 2 == 2 = start₁
@@ -62,7 +61,7 @@ class Solution:
     def validArrangement(self, pairs: List[List[int]]) -> List[List[int]]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -90,6 +89,6 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
 
 空间消耗还好，运行速度不是很快，回头再优化【TODO】

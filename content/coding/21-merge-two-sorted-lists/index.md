@@ -1,10 +1,9 @@
 ---
 title: 21. Merge Two Sorted Lists
-notebook: coding
 tags:
 - easy
-date: 2024-11-14 18:36:57
-updated: 2024-11-14 18:36:57
+date: "2024-11-14T18:36:57+08:00"
+lastmod: "2024-11-14T18:36:57+08:00"
 ---
 ## Problem
 
@@ -18,19 +17,20 @@ Return _the head of the merged linked list_.
 
 **Example 1:**
 
-![case1](case1.png){.invert-when-dark}
+![case1](case1.png)
+{.invert-when-dark}
 
-> Input: `list1 = [1,2,4], list2 = [1,3,4]`
+> Input: `list1 = [1,2,4], list2 = [1,3,4]`\
 > Output: `[1,1,2,3,4,4]`
 
 **Example 2:**
 
-> Input: `list1 = [], list2 = []`
+> Input: `list1 = [], list2 = []`\
 > Output: `[]`
 
 **Example 3:**
 
-> Input: `list1 = [], list2 = [0]`
+> Input: `list1 = [], list2 = [0]`\
 > Output: `[0]`
 
 **Constraints:**
@@ -51,7 +51,7 @@ class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
 ```
 
-{% snippet solution_test.py %}
+{{< snippet src="solution_test.py" >}}
 
 ## Thoughts
 
@@ -59,4 +59,4 @@ class Solution:
 
 ## Code
 
-{% snippet solution.py %}
+{{< snippet src="solution.py" >}}
