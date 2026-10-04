@@ -37,7 +37,7 @@ lastmod: "2025-12-27T21:53:31+08:00"
 
 链接： [https://pan.baidu.com/s/19s12rYZjJoB7SwEDYAcvtw](https://pan.baidu.com/s/19s12rYZjJoB7SwEDYAcvtw) 提取码：5kdk
 
-![BEE BLOCK 光敏传感器](20251115-145549.png)
+![BEE BLOCK 光敏传感器|240](20251115-145549.png)
 
 模块内置可调电位器，用于设定光照强度阈值。
 

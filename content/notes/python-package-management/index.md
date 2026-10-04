@@ -23,6 +23,7 @@ Use `uv`. See [Python Version Management & Virtual Environments](../python-versi
 TL;DR
 
 > Keep the list of immediate dependencies in **requirements.txt** without declaring version numbers.
+>
 > Keep the output of **pip freeze** with the specific version numbers in **constraints.txt**.
 
 ### Adding new packages

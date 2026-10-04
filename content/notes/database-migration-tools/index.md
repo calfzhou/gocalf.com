@@ -81,6 +81,7 @@ goose -dir PATH/TO/MIGRATION/FOLDER URI status
 最终进入代码版本控制的 migration 文件应该用 sequential versions。参见 [Hybrid Versioning](https://github.com/pressly/goose?tab=readme-ov-file#hybrid-versioning)。
 
 > Migrations created during the development process are timestamped and sequential versions are ran on production.
+>
 > We believe this method will prevent the problem of conflicting versions when writing software in a team environment.
 
 常用命令：
