@@ -92,16 +92,12 @@ Build a **nand** component using **relays** (default on relay and default off r
 
 So, `a nand b = inv(a and b) = relay-on(c=relay-off(c=a, in=b), in=1)`
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 a((a)) -->|c| r1["relay (default off)"]
 b((b)) -->|in| r1 -->|c| r2["relay (default on)"]
 v((v)) -->|in| r2 --> o(((o)))
 ```
-
-{{% /block %}}
 
 👍 Totally 2c.
 
@@ -111,14 +107,10 @@ Build an inverter (**inv**) component using the **nand** component.
 
 `inv a = inv(a and a) = a nand a`
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 i((i)) & i --> nand --> o(((o)))
 ```
-
-{{% /block %}}
 
 👍 Totally 1c1n.
 
@@ -128,14 +120,10 @@ Build an **and** gate using only **nand** and **inv** components (might no
 
 `a and b = inv(a nand b)`
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 a((a)) & b((b)) --> nand --> inv --> o(((o)))
 ```
-
-{{% /block %}}
 
 👍 Totally 2c2n.
 
@@ -145,16 +133,12 @@ Build an **or** gate.
 
 `a or b = (inv a) nand (inv b)`
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 a((a)) --> i1[inv]
 b((b)) --> i2[inv]
 i1 & i2 --> nand --> o(((o)))
 ```
-
-{{% /block %}}
 
 Totally 3c3n.
 
@@ -169,16 +153,12 @@ Build an **xor** gate.
 
 `c = a nand b; a xor b = (a nand c) nand (b nand c)`
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 a((a)) --> n1[nand] & n0[nand]
 b((b)) --> n0 & n2[nand]
 n0 --> j@{ shape: f-circ } --> n1 & n2 --> n3[nand] --> o(((o)))
 ```
-
-{{% /block %}}
 
 👍 Totally 4c4n.
 
@@ -207,8 +187,6 @@ The **h** output is the high bit, the **l** is the low bit.
 
 Then the **and** and the **xor** can share the same one **nand**.
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 a((a)) --> n1[nand] & n0[nand]
@@ -217,8 +195,6 @@ j --> inv --> h(((h)))
 j --> n1 & n2[nand] --> n3[nand] --> l(((l)))
 b --> n2
 ```
-
-{{% /block %}}
 
 👍 Totally 5c5n.
 
@@ -245,8 +221,6 @@ The output is a two-bit value. The **h** output is the high bit, the **l** i
 
 把 **half-add** 和 **or** 展开，可以发现 h1 和 h2 的输入端和输出端都各接了一个 **inv**，可以抵消掉。
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 a((a)) --> a1n1[nand] & a1n0[nand]
@@ -261,8 +235,6 @@ j2 --> n1
 j2 --> a2n1 & a2n2[nand] --> a2n3[nand] --> l(((l)))
 c --> a2n2
 ```
-
-{{% /block %}}
 
 👍 Totally 9c9n.
 
@@ -292,8 +264,6 @@ Goal: `add2(<a1, a0>, <b1, b0>, ci) => co, s1, s0`
 - `h1, l1 = add(a1, b1, h0)`
 - `co, s1, s0 = h1, l1, l0`
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 subgraph a [" "]
@@ -310,8 +280,6 @@ add1 -->|h| add2
 add2 -->|l| s1(((s1)))
 add1 -->|l| s0(((s0)))
 ```
-
-{{% /block %}}
 
 👍 Totally 2c18n:
 
@@ -337,8 +305,6 @@ Goal: `O = I + 1`
 
 Simply connect an **1** (`1 = inv 0`) to the c-port of **add 16**.
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 I16((I)) ==>|A| add16[add 16]
@@ -347,8 +313,6 @@ zero[0] --> inv -->|c| add16
 add16 -->|c| j2@{ shape: f-circ }
 add16 ==>|S| O16(((O)))
 ```
-
-{{% /block %}}
 
 👍 Totally 2c145n (**0** not counting):
 
@@ -385,8 +349,6 @@ Goal: `O16 = A16 - B16`
 
 `inv16(B16)` 即为其反码，加一可以通过给 **add 16** 的 c 端传 **1** 实现。
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 A((A)) ==>|A| add16[add 16]
@@ -394,8 +356,6 @@ B((B)) ==> i16[inv 16] ==>|B| add16
 zero[0] --> inv -->|c| add16 -->|c| j@{ shape: f-circ }
 add16 ==>|S| O(((O)))
 ```
-
-{{% /block %}}
 
 👍 Totally 3c161n (**0** not counting):
 
@@ -417,16 +377,12 @@ Should output 1 if and only if all bits in the input are 0.
 
 `o = inv(b3 or b2 or b1 or b1)`
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 b3((b3)) & b2((b2)) --> or1[or]
 b1((b1)) & b0((b0)) --> or2[or]
 or1 & or2 --> or --> inv --> o(((o)))
 ```
-
-{{% /block %}}
 
 👍 Totally 4c10n:
 
@@ -453,15 +409,11 @@ Bits are numbered from right to left, starting with 0 as the rightmost bit. So b
 
 因为负数的补码的最高位恒为 1，直接输出最高位即可。
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 I16((I)) ==> spliter[splitter16]
 spliter -->|15| O(((O)))
 ```
-
-{{% /block %}}
 
 👍 Totally 0c0n.
 
@@ -488,8 +440,6 @@ $$
 
 即 `o = (d1 nand s) nand (d0 nand inv s)`
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 s((s)) & d1((d1)) --> n1[nand]
@@ -497,8 +447,6 @@ s --> inv
 inv & d0((d0)) --> n2[nand]
 n1 & n2 --> n3[nand] --> o(((o)))
 ```
-
-{{% /block %}}
 
 👍 Totally 4c4n:
 
@@ -526,15 +474,11 @@ The **s** (selector) determines if the **d** (data) bit is dispatched throug
 - `c0 = d and inv s = (d and inv d) or (d and inv s) = d and (inv d or inv s) = d and (d nand s)`
 - 两个 `d nand s` 可以复用。
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 s((s)) & d((d)) --> nand --> inv --> c1(((c1)))
 nand & d --> and --> c0(((c0)))
 ```
-
-{{% /block %}}
 
 👍 Totally 3c4n:
 
@@ -563,8 +507,6 @@ The two bit-flags **op0** and **op1** select which out of four operations ar
 | 1   | 0   | X xor Y  |
 | 1   | 1   | invert X |
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 op1([op1]) -->|s| s3[select 16] ==> O(((O)))
@@ -575,8 +517,6 @@ xor ==>|D0| s1
 or ==>|D1| s2 ==>|D0| s3
 and ==>|D0| s2
 ```
-
-{{% /block %}}
 
 👍 Totally 7c352n:
 
@@ -607,8 +547,6 @@ op1 决定了是加法还是减法，所以 `O = select16(s=op1, D1=sub16, D0=ad
 
 op0 决定了加减法运算的第二个输入是 Y 还是 1，即 `select16(s=op0, D1=Y, D0=1)`。这里需要一个 16-bit 的数字 1，可以通过给 bundler16 的最低位输入 1 得到。因为需要用到 16-bit 数字 1 的时候，op0 一定是 1，所以可以直接用它作为源头的 1。似乎可以省略 bundler16，直接把 op0 接到 select16 上也行。
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 op1([op1]) -->|s| s1[select 16] ==> O(((O)))
@@ -619,8 +557,6 @@ sub16 ==>|D1| s1
 add16 ==>|D0| s1
 Y((Y)) ==>|D0| s0
 ```
-
-{{% /block %}}
 
 👍 Totally 4c433n:
 
@@ -663,8 +599,6 @@ This affects the operands as shown here for the example of `X - Y`:
 | 1   | 0   | 0 - Y               |
 | 1   | 1   | 0 - X               |
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 u((u)) -->|s| su[select 16] ==> O(((O)))
@@ -682,8 +616,6 @@ Y((Y)) ==>|D1| sl
 X ==>|D0| sl
 Y ==>|D0| sr
 ```
-
-{{% /block %}}
 
 👍 Totally 6c1041n:
 
@@ -728,8 +660,6 @@ Then, `output = (lt and is-neg) or (eq and is-zero) or (gt and is-pos)`.
 
 把 **or** 和 **and** 分解开可以发现它俩相连的地方会有两个连在一起的 **inv**，可以抵消掉。直接可视化地优化，比计算逻辑函数要清晰的多。
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 lt((lt)) --> n-lt[nand] --> n-le[nand] --> i-le[inv] --> n-o[nand] --> o(((o)))
@@ -740,8 +670,6 @@ neg --> jn@{ shape: f-circ } --> n-lt & or-pos[or]
 zero --> jz@{ shape: f-circ } --> n-eq & or-pos
 or-pos --> i-pos[inv] --> n-gt
 ```
-
-{{% /block %}}
 
 👍 Totally 9c56n (**is-neg** not counting):
 
@@ -909,16 +837,12 @@ Effect of inputs when cl=1:
 
 需要用另一个 **d-latch** 在 **cl** = 0 时，把前一个 **d-latch** 的输出写进来，并提供给最终的输出。即 `output = d-latch(st=inv(cl), d=o1)`。这样当 **cl** 变为 1 之后，output 可以维持住。
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 st((st)) & cl((cl)) --> and -->|st| latch1[d latch] -->|d| latch2[d latch] --> o(((o)))
 cl --> inv -->|st| latch2
 d((d)) -->|d| latch1
 ```
-
-{{% /block %}}
 
 👍 Totally 4c11n:
 
@@ -938,8 +862,6 @@ A **2-bit DFF** component works like a data flip-flop, except two bits (**d1**
 
 Simply use two **dff** components.
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 st((st)) -->|st| dff1[dff] & dff0[dff]
@@ -958,8 +880,6 @@ subgraph output [" "]
     o0
 end
 ```
-
-{{% /block %}}
 
 👍 Totally 2c22n:
 
@@ -996,8 +916,6 @@ The counter output changes when **cl** (clock signal) changes to 0.
 
 该 **select** 的输出则通过一个 **register** 保存，其 st 和 cl 分别取 `inv(cl)` 和 cl 即可。**register** 的输出再连一个 **inc** 后，接到 **select** 的 D0 上，用于当 **st** = 0 时，对 output 自增。
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart BT
 st((st)) -->|s| select[select 16]
@@ -1007,8 +925,6 @@ cl((cl)) --> inv
 cl -->|cl| register
 J ==> inc[inc 16] ==>|D0| select
 ```
-
-{{% /block %}}
 
 ![|480](20250604-012659.png "Counter")
 

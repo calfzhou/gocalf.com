@@ -46,8 +46,6 @@ E | Encrypt | 加密
 
 ### 架构
 
-{{% block class="invert-when-dark" %}}
-
 ```mermaid
 flowchart LR
   public["公钥\n（主公钥 & 所有子公钥）\n[C][S][A][E]"]
@@ -72,8 +70,6 @@ flowchart LR
   public --- sec
   sec --- revoke
 ```
-
-{{% /block %}}
 
 ## 安装 GnuPG
 
