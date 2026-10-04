@@ -6,5 +6,5 @@ params:
   logo: "/images/gocalf.png"
   name: "笔记"
   list_order: modification
-  page_size: 8
+  page_size: 16
 ---
