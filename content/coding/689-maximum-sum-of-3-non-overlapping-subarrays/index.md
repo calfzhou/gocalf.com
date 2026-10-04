@@ -28,7 +28,7 @@ Return the result as a list of indices representing the starting position of eac
 **Constraints:**
 
 - `1 <= nums.length <= 2 * 10⁴`
-- `1 <= nums[i] < 216`
+- `1 <= nums[i] < 2¹⁶`
 - `1 <= k <= floor(nums.length / 3)`
 
 ## Test Cases
