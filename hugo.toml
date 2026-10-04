@@ -162,39 +162,21 @@ weight = 2
 
 [[menus.footer]]
 parent = "content"
-name = "笔记 · 杂七杂八"
-url = "/notes/"
+name = "所有笔记"
+url = "/preset/notes/"
 weight = 1
 
 [[menus.footer]]
 parent = "content"
-name = "笔记 · Coding"
-url = "/coding/"
+name = "所有博客"
+url = "/preset/blog/"
 weight = 2
 
 [[menus.footer]]
 parent = "content"
-name = "博客 · 近期发布"
-url = "/blog/"
-weight = 3
-
-[[menus.footer]]
-parent = "content"
-name = "博客 · 归档"
-url = "/blog/archives/"
-weight = 4
-
-[[menus.footer]]
-parent = "content"
-name = "所有 Wiki 项目"
+name = "所有文档"
 url = "/preset/docs/"
-weight = 5
-
-[[menus.footer]]
-parent = "content"
-name = "所有笔记本"
-url = "/preset/notes/"
-weight = 6
+weight = 3
 
 [[menus.footer]]
 identifier = "contact"
