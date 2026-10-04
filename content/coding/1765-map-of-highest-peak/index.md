@@ -31,7 +31,7 @@ Return _an integer matrix_ `height` _of size_ `m x n` _where_ `height[i][j]` _is
 
 > Input: `isWater = [[0,1],[0,0]]`\
 > Output: `[[1,0],[2,1]]`\
-> Explanation: The image shows the assigned heights of each cell.
+> Explanation: The image shows the assigned heights of each cell.\
 > The blue cell is the water cell, and the green cells are the land cells.
 
 **Example 2:**
@@ -41,7 +41,7 @@ Return _an integer matrix_ `height` _of size_ `m x n` _where_ `height[i][j]` _is
 
 > Input: `isWater = [[0,0,1],[1,0,0],[0,0,0]]`\
 > Output: `[[1,1,0],[0,1,1],[1,2,2]]`\
-> Explanation: A height of 2 is the maximum possible height of any assignment.
+> Explanation: A height of 2 is the maximum possible height of any assignment.\
 > Any height assignment that has a maximum height of 2 while still meeting the rules will also be accepted.
 
 **Constraints:**

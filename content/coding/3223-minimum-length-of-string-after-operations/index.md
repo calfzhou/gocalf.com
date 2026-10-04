@@ -23,7 +23,7 @@ Return the **minimum** length of the final string `s` that you can achieve.
 
 > Input: `s = "abaacbcbb"`\
 > Output: `5`\
-> Explanation:
+> Explanation:\
 > We do the following operations:
 >
 > - Choose index 2, then remove the characters at indices 0 and 3. The resulting string is `s = "bacbcbb"`.
@@ -33,7 +33,7 @@ Return the **minimum** length of the final string `s` that you can achieve.
 
 > Input: `s = "aa"`\
 > Output: `2`\
-> Explanation:
+> Explanation:\
 > We cannot perform any operations, so we return the length of the original string.
 
 **Constraints:**

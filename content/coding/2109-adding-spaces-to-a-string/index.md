@@ -19,23 +19,23 @@ Return _the modified string **after** the spaces have been added._
 
 > Input: `s = "LeetcodeHelpsMeLearn", spaces = [8,13,15]`\
 > Output: `"Leetcode Helps Me Learn"`\
-> Explanation:
-> The indices 8, 13, and 15 correspond to the underlined characters in "Leetcode{{< u text="H" >}}elps{{< u text="M" >}}e{{< u text="L" >}}earn".
+> Explanation:\
+> The indices 8, 13, and 15 correspond to the underlined characters in "Leetcode{{< u text="H" >}}elps{{< u text="M" >}}e{{< u text="L" >}}earn".\
 > We then place spaces before those characters.
 
 **Example 2:**
 
 > Input: `s = "icodeinpython", spaces = [1,5,7,9]`\
 > Output: `"i code in py thon"`\
-> Explanation:
-> The indices 1, 5, 7, and 9 correspond to the underlined characters in "i{{< u text="c" >}}ode{{< u text="i" >}}n{{< u text="p" >}}y{{< u text="t" >}}hon".
+> Explanation:\
+> The indices 1, 5, 7, and 9 correspond to the underlined characters in "i{{< u text="c" >}}ode{{< u text="i" >}}n{{< u text="p" >}}y{{< u text="t" >}}hon".\
 > We then place spaces before those characters.
 
 **Example 3:**
 
 > Input: `s = "spacing", spaces = [0,1,2,3,4,5,6]`\
 > Output: `" s p a c i n g"`\
-> Explanation:
+> Explanation:\
 > We are also able to place spaces before the first character of the string.
 
 **Constraints:**

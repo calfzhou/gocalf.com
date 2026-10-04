@@ -24,8 +24,8 @@ The **first** robot wants to **minimize** the number of points collected by the 
 
 > Input: `grid = [[2,5,4],[1,5,1]]`\
 > Output: `4`\
-> Explanation: The optimal path taken by the first robot is shown in red, and the optimal path taken by the second robot is shown in blue.
-> The cells visited by the first robot are set to 0.
+> Explanation: The optimal path taken by the first robot is shown in red, and the optimal path taken by the second robot is shown in blue.\
+> The cells visited by the first robot are set to 0.\
 > The second robot will collect `0 + 0 + 4 + 0 = 4` points.
 
 **Example 2:**
@@ -35,8 +35,8 @@ The **first** robot wants to **minimize** the number of points collected by the 
 
 > Input: `grid = [[3,3,1],[8,5,2]]`\
 > Output: `4`\
-> Explanation: The optimal path taken by the first robot is shown in red, and the optimal path taken by the second robot is shown in blue.
-> The cells visited by the first robot are set to 0.
+> Explanation: The optimal path taken by the first robot is shown in red, and the optimal path taken by the second robot is shown in blue.\
+> The cells visited by the first robot are set to 0.\
 > The second robot will collect `0 + 3 + 1 + 0 = 4` points.
 
 **Example 3:**
@@ -46,8 +46,8 @@ The **first** robot wants to **minimize** the number of points collected by the 
 
 > Input: `grid = [[1,3,1,15],[1,3,3,1]]`\
 > Output: `7`\
-> Explanation: The optimal path taken by the first robot is shown in red, and the optimal path taken by the second robot is shown in blue.
-> The cells visited by the first robot are set to 0.
+> Explanation: The optimal path taken by the first robot is shown in red, and the optimal path taken by the second robot is shown in blue.\
+> The cells visited by the first robot are set to 0.\
 > The second robot will collect `0 + 1 + 3 + 3 + 0 = 7` points.
 
 **Constraints:**

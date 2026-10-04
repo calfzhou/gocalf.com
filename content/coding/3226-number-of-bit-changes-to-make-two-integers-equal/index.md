@@ -19,22 +19,22 @@ Return the _number of changes_ needed to make `n` equal to `k`. If it is impossi
 
 > Input: `n = 13, k = 4`\
 > Output: `2`\
-> Explanation:
-> Initially, the binary representations of `n` and `k` are `n = 1101₂` and `k = 0100₂`.
+> Explanation:\
+> Initially, the binary representations of `n` and `k` are `n = 1101₂` and `k = 0100₂`.\
 > We can change the first and fourth bits of `n`. The resulting integer is `n = 0100₂ = k`.
 
 **Example 2:**
 
 > Input: `n = 21, k = 21`\
 > Output: `0`\
-> Explanation:
+> Explanation:\
 > `n` and `k` are already equal, so no changes are needed.
 
 **Example 3:**
 
 > Input: `n = 14, k = 13`\
 > Output: `-1`\
-> Explanation:
+> Explanation:\
 > It is not possible to make `n` equal to `k`.
 
 **Constraints:**

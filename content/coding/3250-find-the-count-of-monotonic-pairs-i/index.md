@@ -26,7 +26,7 @@ Since the answer may be very large, return it **modulo** `10⁹ + 7`.
 
 > Input: `nums = [2,3,2]`\
 > Output: `4`\
-> Explanation:
+> Explanation:\
 > The good pairs are:
 >
 > 1. ([0, 1, 1], [2, 2, 1])

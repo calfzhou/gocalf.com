@@ -22,14 +22,14 @@ Return the count of numbers in the range `[l, r]` that are **not** **special**.
 
 > Input: `l = 5, r = 7`\
 > Output: `3`\
-> Explanation:
+> Explanation:\
 > There are no special numbers in the range `[5, 7]`.
 
 **Example 2:**
 
 > Input: `l = 4, r = 16`\
 > Output: `11`\
-> Explanation:
+> Explanation:\
 > The special numbers in the range `[4, 16]` are 4 and 9.
 
 **Constraints:**

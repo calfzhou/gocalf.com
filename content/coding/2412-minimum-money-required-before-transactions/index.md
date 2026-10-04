@@ -19,8 +19,8 @@ Return _the minimum amount of_ `money` _required before any transaction so that 
 
 > Input: `transactions = [[2,1],[5,0],[4,2]]`\
 > Output: `10`\
-> Explanation:
-> Starting with `money = 10`, the transactions can be performed in any order.
+> Explanation:\
+> Starting with `money = 10`, the transactions can be performed in any order.\
 > It can be shown that starting with `money < 10` will fail to complete all transactions in some order.
 
 **Example 2:**

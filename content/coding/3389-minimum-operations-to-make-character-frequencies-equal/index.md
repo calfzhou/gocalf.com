@@ -27,21 +27,21 @@ Return the **minimum** number of operations required to make `s` **good**.
 
 > Input: `s = "acab"`\
 > Output: `1`\
-> Explanation:
+> Explanation:\
 > We can make s good by deleting one occurrence of character `'a'`.
 
 **Example 2:**
 
 > Input: `s = "wddw"`\
 > Output: `0`\
-> Explanation:
+> Explanation:\
 > We do not need to perform any operations since s is initially good.
 
 **Example 3:**
 
 > Input: `s = "aaabc"`\
 > Output: `2`\
-> Explanation:
+> Explanation:\
 > We can make s good by applying these operations:
 >
 > - Change one occurrence of `'a'` to `'b'`

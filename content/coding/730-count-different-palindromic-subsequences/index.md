@@ -21,7 +21,7 @@ Two sequences `a₁, a₂, ...` and `b₁, b₂, ...` are different if there is 
 
 > Input: `s = "bccb"`\
 > Output: `6`\
-> Explanation: The 6 different non-empty palindromic subsequences are `'b'`, `'c'`, `'bb'`, `'cc'`, `'bcb'`, `'bccb'`.
+> Explanation: The 6 different non-empty palindromic subsequences are `'b'`, `'c'`, `'bb'`, `'cc'`, `'bcb'`, `'bccb'`.\
 > Note that `'bcb'` is counted only once, even though it occurs twice.
 
 **Example 2:**

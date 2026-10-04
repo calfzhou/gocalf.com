@@ -26,22 +26,22 @@ Return _the number of ways to form `target` from `words`_. Since the answer may 
 
 > Input: `words = ["acca","bbbb","caca"], target = "aba"`\
 > Output: `6`\
-> Explanation: There are 6 ways to form target.
-> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 1 ("b{{< u text="b" >}}bb"), index 3 ("cac{{< u text="a" >}}")
-> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 2 ("bb{{< u text="b" >}}b"), index 3 ("cac{{< u text="a" >}}")
-> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 1 ("b{{< u text="b" >}}bb"), index 3 ("acc{{< u text="a" >}}")
-> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 2 ("bb{{< u text="b" >}}b"), index 3 ("acc{{< u text="a" >}}")
-> "aba" -> index 1 ("c{{< u text="a" >}}ca"), index 2 ("bb{{< u text="b" >}}b"), index 3 ("acc{{< u text="a" >}}")
+> Explanation: There are 6 ways to form target.\
+> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 1 ("b{{< u text="b" >}}bb"), index 3 ("cac{{< u text="a" >}}")\
+> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 2 ("bb{{< u text="b" >}}b"), index 3 ("cac{{< u text="a" >}}")\
+> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 1 ("b{{< u text="b" >}}bb"), index 3 ("acc{{< u text="a" >}}")\
+> "aba" -> index 0 ("{{< u text="a" >}}cca"), index 2 ("bb{{< u text="b" >}}b"), index 3 ("acc{{< u text="a" >}}")\
+> "aba" -> index 1 ("c{{< u text="a" >}}ca"), index 2 ("bb{{< u text="b" >}}b"), index 3 ("acc{{< u text="a" >}}")\
 > "aba" -> index 1 ("c{{< u text="a" >}}ca"), index 2 ("bb{{< u text="b" >}}b"), index 3 ("cac{{< u text="a" >}}")
 
 **Example 2:**
 
 > Input: `words = ["abba","baab"], target = "bab"`\
 > Output: `4`\
-> Explanation: There are 4 ways to form target.
-> "bab" -> index 0 ("{{< u text="b" >}}aab"), index 1 ("b{{< u text="a" >}}ab"), index 2 ("ab{{< u text="b" >}}a")
-> "bab" -> index 0 ("{{< u text="b" >}}aab"), index 1 ("b{{< u text="a" >}}ab"), index 3 ("baa{{< u text="b" >}}")
-> "bab" -> index 0 ("{{< u text="b" >}}aab"), index 2 ("ba{{< u text="a" >}}b"), index 3 ("baa{{< u text="b" >}}")
+> Explanation: There are 4 ways to form target.\
+> "bab" -> index 0 ("{{< u text="b" >}}aab"), index 1 ("b{{< u text="a" >}}ab"), index 2 ("ab{{< u text="b" >}}a")\
+> "bab" -> index 0 ("{{< u text="b" >}}aab"), index 1 ("b{{< u text="a" >}}ab"), index 3 ("baa{{< u text="b" >}}")\
+> "bab" -> index 0 ("{{< u text="b" >}}aab"), index 2 ("ba{{< u text="a" >}}b"), index 3 ("baa{{< u text="b" >}}")\
 > "bab" -> index 1 ("a{{< u text="b" >}}ba"), index 2 ("ba{{< u text="a" >}}b"), index 3 ("baa{{< u text="b" >}}")
 
 **Constraints:**

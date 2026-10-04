@@ -21,17 +21,17 @@ Return the **maximum** total energy boost you can gain in the next `n` hours.
 
 > Input: `energyDrinkA = [1,3,1], energyDrinkB = [3,1,1]`\
 > Output: `5`\
-> Explanation:
+> Explanation:\
 > To gain an energy boost of `5`, drink only the energy drink A (or only B).
 
 **Example 2:**
 
 > Input: `energyDrinkA = [4,1,1], energyDrinkB = [1,1,3]`\
 > Output: `7`\
-> Explanation:
-> To gain an energy boost of `7`:
-> Drink the energy drink A for the first hour.
-> Switch to the energy drink B and we lose the energy boost of the second hour.
+> Explanation:\
+> To gain an energy boost of `7`:\
+> Drink the energy drink A for the first hour.\
+> Switch to the energy drink B and we lose the energy boost of the second hour.\
 > Gain the energy boost of the drink B in the third hour.
 
 **Constraints:**

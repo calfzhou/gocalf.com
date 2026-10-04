@@ -21,7 +21,7 @@ A **substring** is a contiguous **non-empty** sequence of characters within a st
 
 > Input: `s = "aaaa"`\
 > Output: `2`\
-> Explanation: The longest special substring which occurs thrice is "aa": substrings "{{< u text="aa" >}}aa", "a{{< u text="aa" >}}a", and "aa{{< u text="aa" >}}".
+> Explanation: The longest special substring which occurs thrice is "aa": substrings "{{< u text="aa" >}}aa", "a{{< u text="aa" >}}a", and "aa{{< u text="aa" >}}".\
 > It can be shown that the maximum length achievable is 2.
 
 **Example 2:**
@@ -34,7 +34,7 @@ A **substring** is a contiguous **non-empty** sequence of characters within a st
 
 > Input: `s = "abcaba"`\
 > Output: `1`\
-> Explanation: The longest special substring which occurs thrice is "a": substrings "{{< u text="a" >}}bcaba", "abc{{< u text="a" >}}ba", and "abcab{{< u text="a" >}}".
+> Explanation: The longest special substring which occurs thrice is "a": substrings "{{< u text="a" >}}bcaba", "abc{{< u text="a" >}}ba", and "abcab{{< u text="a" >}}".\
 > It can be shown that the maximum length achievable is 1.
 
 **Constraints:**

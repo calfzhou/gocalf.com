@@ -29,7 +29,7 @@ Return the **minimum** cost to make `s` equal to `target`. If it's not possible,
 
 > Input: `target = "abcdef", words = ["abdef","abc","d","def","ef"], costs = [100,1,1,10,5]`\
 > Output: `7`\
-> Explanation:
+> Explanation:\
 > The minimum cost can be achieved by performing the following operations:
 >
 > - Select index 1 and append `"abc"` to s at a cost of 1, resulting in s = `"abc"`.
@@ -40,7 +40,7 @@ Return the **minimum** cost to make `s` equal to `target`. If it's not possible,
 
 > Input: `target = "aaaa", words = ["z","zz","zzz"], costs = [1,10,100]`\
 > Output: `-1`\
-> Explanation:
+> Explanation:\
 > It is impossible to make s equal to target, so we return -1.
 
 **Constraints:**

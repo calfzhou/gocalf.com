@@ -26,7 +26,7 @@ Return an integer array `results` of size `n - k + 1`, where `results[i]` is the
 
 > Input: `nums = [1,2,3,4,3,2,5], k = 3`\
 > Output: `[3,4,-1,-1,-1]`\
-> Explanation:
+> Explanation:\
 > There are 5 subarrays of `nums` of size 3:
 >
 > - `[1, 2, 3]` with the maximum element 3.

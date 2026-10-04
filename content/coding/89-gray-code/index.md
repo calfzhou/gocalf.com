@@ -23,7 +23,7 @@ Given an integer `n`, return _any valid **n-bit gray code sequence**_.
 
 > Input: `n = 2`\
 > Output: `[0,1,3,2]`\
-> Explanation:
+> Explanation:\
 > The binary representation of `[0,1,3,2]` is `[00,01,11,10]`.
 >
 > - 0{{< u text="0" >}} and 0{{< u text="1" >}} differ by one bit

@@ -25,7 +25,7 @@ Note:
 
 > Input: `num = "6777133339"`\
 > Output: `"777"`\
-> Explanation: There are two distinct good integers: `"777"` and `"333"`.
+> Explanation: There are two distinct good integers: `"777"` and `"333"`.\
 > `"777"` is the largest, so we return `"777"`.
 
 **Example 2:**

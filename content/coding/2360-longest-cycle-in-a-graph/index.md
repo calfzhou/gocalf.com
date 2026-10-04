@@ -24,7 +24,7 @@ A cycle is a path that starts and ends at the **same** node.
 
 > Input: `edges = [3,3,4,2,3]`\
 > Output: `3`\
-> Explanation: The longest cycle in the graph is the cycle: `2 -> 4 -> 3 -> 2`.
+> Explanation: The longest cycle in the graph is the cycle: `2 -> 4 -> 3 -> 2`.\
 > The length of this cycle is 3, so 3 is returned.
 
 **Example 2:**

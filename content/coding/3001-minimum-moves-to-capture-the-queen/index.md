@@ -32,7 +32,7 @@ Given that you can only move the white pieces, return _the **minimum** number of
 
 > Input: `a = 1, b = 1, c = 8, d = 8, e = 2, f = 3`\
 > Output: `2`\
-> Explanation: We can capture the black queen in two moves by moving the white rook to `(1, 3)` then to `(2, 3)`.
+> Explanation: We can capture the black queen in two moves by moving the white rook to `(1, 3)` then to `(2, 3)`.\
 > It is impossible to capture the black queen in less than two moves since it is not being attacked by any of the pieces at the beginning.
 
 **Example 2:**

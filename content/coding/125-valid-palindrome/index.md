@@ -29,7 +29,7 @@ Given a string `s`, return `true` _if it is a **palindrome**, or_ `false` _other
 
 > Input: `s = " "`\
 > Output: `true`\
-> Explanation: s is an empty string `""` after removing non-alphanumeric characters.
+> Explanation: s is an empty string `""` after removing non-alphanumeric characters.\
 > Since an empty string reads the same forward and backward, it is a palindrome.
 
 **Constraints:**

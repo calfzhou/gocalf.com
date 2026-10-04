@@ -32,7 +32,7 @@ Return `true` _if it is possible to obtain the string_ `target` _by moving the p
 
 > Input: `start = "R_L_", target = "__LR"`\
 > Output: `false`\
-> Explanation: The `'R'` piece in the string start can move one step to the right to obtain `"_RL_".`
+> Explanation: The `'R'` piece in the string start can move one step to the right to obtain `"_RL_".`\
 > After that, no pieces can move anymore, so it is impossible to obtain the string target from start.
 
 **Example 3:**

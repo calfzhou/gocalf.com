@@ -22,7 +22,7 @@ Return the **minimum** number of **valid** strings that can be _concatenated_ to
 
 > Input: `words = ["abc","aaaaa","bcdef"], target = "aabcdabc"`\
 > Output: `3`\
-> Explanation:
+> Explanation:\
 > The target string can be formed by concatenating:
 >
 > - Prefix of length 2 of `words[1]`, i.e. `"aa"`.
@@ -33,7 +33,7 @@ Return the **minimum** number of **valid** strings that can be _concatenated_ to
 
 > Input: `words = ["abababab","ab"], target = "ababaababa"`\
 > Output: `2`\
-> Explanation:
+> Explanation:\
 > The target string can be formed by concatenating:
 >
 > - Prefix of length 5 of `words[0]`, i.e. `"ababa"`.

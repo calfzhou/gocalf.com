@@ -24,8 +24,8 @@ Return the number of **alternating** groups.
 
 > Input: `colors = [0,1,0,1,0], k = 3`\
 > Output: `3`\
-> Explanation:
-> ![case1-0|150](case1-0.png "case1-0")
+> Explanation:\
+> ![case1-0|150](case1-0.png "case1-0")\
 > Alternating groups:
 > {{% grid min_width=150 %}}
 {{< cell >}}
@@ -45,8 +45,8 @@ Return the number of **alternating** groups.
 
 > Input: `colors = [0,1,0,0,1,0,1], k = 6`\
 > Output: `2`\
-> Explanation:
-> ![case2-0|150](case2-0.png "case2-0")
+> Explanation:\
+> ![case2-0|150](case2-0.png "case2-0")\
 > Alternating groups:
 > {{% grid min_width=150 %}}
 {{< cell >}}
@@ -62,7 +62,7 @@ Return the number of **alternating** groups.
 
 > Input: `colors = [1,1,0,1], k = 4`\
 > Output: `0`\
-> Explanation:
+> Explanation:\
 > ![case3|150](case3.png "case3")
 
 **Constraints:**

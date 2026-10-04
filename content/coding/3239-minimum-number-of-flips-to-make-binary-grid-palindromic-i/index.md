@@ -43,7 +43,7 @@ Return the **minimum** number of cells that need to be flipped to make **either*
 
 > Input: `grid = [[1],[0]]`\
 > Output: `0`\
-> Explanation:
+> Explanation:\
 > All rows are already palindromic.
 
 **Constraints:**

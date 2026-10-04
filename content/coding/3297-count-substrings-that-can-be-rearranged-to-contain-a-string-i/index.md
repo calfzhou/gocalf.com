@@ -23,14 +23,14 @@ Return the total number of **valid** substrings of `word1`.
 
 > Input: `word1 = "bcca", word2 = "abc"`\
 > Output: `1`\
-> Explanation:
+> Explanation:\
 > The only valid substring is `"bcca"` which can be rearranged to `"abcc"` having `"abc"` as a prefix.
 
 **Example 2:**
 
 > Input: `word1 = "abcabc", word2 = "abc"`\
 > Output: `10`\
-> Explanation:
+> Explanation:\
 > All the substrings except substrings of size 1 and size 2 are valid.
 
 **Example 3:**

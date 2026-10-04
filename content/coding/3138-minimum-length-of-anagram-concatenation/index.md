@@ -19,14 +19,14 @@ An **anagram** is formed by rearranging the letters of a string. For example, "a
 
 > Input: `s = "abba"`\
 > Output: `2`\
-> Explanation:
+> Explanation:\
 > One possible string t could be `"ba"`.
 
 **Example 2:**
 
 > Input: `s = "cdef"`\
 > Output: `4`\
-> Explanation:
+> Explanation:\
 > One possible string t could be `"cdef"`, notice that t can be equal to s.
 
 **Constraints:**

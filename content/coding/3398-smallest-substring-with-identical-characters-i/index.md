@@ -25,14 +25,14 @@ Return the **minimum** length after the operations.
 
 > Input: `s = "000001", numOps = 1`\
 > Output: `2`\
-> Explanation:
+> Explanation:\
 > By changing `s[2]` to `'1'`, s becomes `"001001"`. The longest substrings with identical characters are `s[0..1]` and `s[3..4]`.
 
 **Example 2:**
 
 > Input: `s = "0000", numOps = 2`\
 > Output: `1`\
-> Explanation:
+> Explanation:\
 > By changing `s[0]` and `s[2]` to `'1'`, s becomes `"1010"`.
 
 **Example 3:**

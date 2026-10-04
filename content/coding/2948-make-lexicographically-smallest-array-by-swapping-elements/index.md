@@ -26,7 +26,7 @@ An array `a` is lexicographically smaller than an array `b` if in the first posi
 > - Swap `nums[1]` with `nums[2]`. The array becomes `[1,3,5,9,8]`
 > - Swap `nums[3]` with `nums[4]`. The array becomes `[1,3,5,8,9]`
 >
-> We cannot obtain a lexicographically smaller array by applying any more operations.
+> We cannot obtain a lexicographically smaller array by applying any more operations.\
 > Note that it may be possible to get the same result by doing different operations.
 
 **Example 2:**

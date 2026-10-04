@@ -24,7 +24,7 @@ The **diameter** of a tree is the length of the _longest_ path between any two n
 
 > Input: `edges1 = [[0,1],[0,2],[0,3]], edges2 = [[0,1]]`\
 > Output: `3`\
-> Explanation:
+> Explanation:\
 > We can obtain a tree of diameter 3 by connecting node 0 from the first tree with any node from the second tree.
 
 ![case2](case2.png)
@@ -34,7 +34,7 @@ The **diameter** of a tree is the length of the _longest_ path between any two n
 
 > Input: `edges1 = [[0,1],[0,2],[0,3],[2,4],[2,5],[3,6],[2,7]], edges2 = [[0,1],[0,2],[0,3],[2,4],[2,5],[3,6],[2,7]]`\
 > Output: `5`\
-> Explanation:
+> Explanation:\
 > We can obtain a tree of diameter 5 by connecting node 0 from the first tree with node 0 from the second tree.
 
 **Constraints:**

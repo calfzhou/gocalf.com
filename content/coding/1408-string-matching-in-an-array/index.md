@@ -17,7 +17,7 @@ A **substring** is a contiguous sequence of characters within a string.
 
 > Input: `words = ["mass","as","hero","superhero"]`\
 > Output: `["as","hero"]`\
-> Explanation: `"as"` is substring of `"mass"` and `"hero"` is substring of `"superhero"`.
+> Explanation: `"as"` is substring of `"mass"` and `"hero"` is substring of `"superhero"`.\
 > `["hero","as"]` is also a valid answer.
 
 **Example 2:**

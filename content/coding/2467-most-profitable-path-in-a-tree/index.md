@@ -34,7 +34,7 @@ Return _the **maximum** net income Alice can have if she travels towards the opt
 
 > Input: `edges = [[0,1],[1,2],[1,3],[3,4]], bob = 3, amount = [-2,4,2,-4,6]`\
 > Output: `6`\
-> Explanation:
+> Explanation:\
 > The above diagram represents the given tree. The game goes as follows:
 >
 > - Alice is initially on node 0, Bob on node 3. They open the gates of their respective nodes.
@@ -59,8 +59,8 @@ Return _the **maximum** net income Alice can have if she travels towards the opt
 
 > Input: `edges = [[0,1]], bob = 1, amount = [-7280,2350]`\
 > Output: `-7280`\
-> Explanation:
-> Alice follows the path `0->1` whereas Bob follows the path `1->0`.
+> Explanation:\
+> Alice follows the path `0->1` whereas Bob follows the path `1->0`.\
 > Thus, Alice opens the gate at node 0 only. Hence, her net income is -7280.
 
 **Constraints:**

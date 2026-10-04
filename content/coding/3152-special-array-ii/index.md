@@ -21,7 +21,7 @@ Return an array of booleans `answer` such that `answer[i]` is `true` if `nums[fr
 
 > Input: `nums = [3,4,1,2,6], queries = [[0,4]]`\
 > Output: `[false]`\
-> Explanation:
+> Explanation:\
 > The subarray is `[3,4,1,2,6]`. 2 and 6 are both even.
 
 **Example 2:**

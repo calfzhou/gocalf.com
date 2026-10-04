@@ -20,29 +20,29 @@ Return _**any** valid arrangement of_ `pairs`.
 
 > Input: `pairs = [[5,1],[4,5],[11,9],[9,4]]`\
 > Output: `[[11,9],[9,4],[4,5],[5,1]]`\
-> Explanation:
-> This is a valid arrangement since endᵢ₋₁ always equals startᵢ.
-> end₀ = 9 == 9 = start₁
-> end₁ = 4 == 4 = start₂
+> Explanation:\
+> This is a valid arrangement since endᵢ₋₁ always equals startᵢ.\
+> end₀ = 9 == 9 = start₁\
+> end₁ = 4 == 4 = start₂\
 > end₂ = 5 == 5 = start₃
 
 **Example 2:**
 
 > Input: `pairs = [[1,3],[3,2],[2,1]]`\
 > Output: `[[1,3],[3,2],[2,1]]`\
-> Explanation:
-> This is a valid arrangement since endᵢ₋₁ always equals startᵢ.
-> end₀ = 3 == 3 = start₁
-> end₁ = 2 == 2 = start₂
+> Explanation:\
+> This is a valid arrangement since endᵢ₋₁ always equals startᵢ.\
+> end₀ = 3 == 3 = start₁\
+> end₁ = 2 == 2 = start₂\
 > The arrangements `[[2,1],[1,3],[3,2]]` and `[[3,2],[2,1],[1,3]]` are also valid.
 
 **Example 3:**
 
 > Input: `pairs = [[1,2],[1,3],[2,1]]`\
 > Output: `[[1,2],[2,1],[1,3]]`\
-> Explanation:
-> This is a valid arrangement since endᵢ₋₁ always equals startᵢ.
-> end₀ = 2 == 2 = start₁
+> Explanation:\
+> This is a valid arrangement since endᵢ₋₁ always equals startᵢ.\
+> end₀ = 2 == 2 = start₁\
 > end₁ = 1 == 1 = start₂
 
 **Constraints:**

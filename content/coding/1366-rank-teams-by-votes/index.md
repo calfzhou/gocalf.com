@@ -21,17 +21,17 @@ Return _a string of all teams **sorted** by the ranking system_.
 
 > Input: `votes = ["ABC","ACB","ABC","ACB","ACB"]`\
 > Output: `"ACB"`\
-> Explanation:
-> Team A was ranked first place by 5 voters. No other team was voted as first place, so team A is the first team.
-> Team B was ranked second by 2 voters and ranked third by 3 voters.
-> Team C was ranked second by 3 voters and ranked third by 2 voters.
+> Explanation:\
+> Team A was ranked first place by 5 voters. No other team was voted as first place, so team A is the first team.\
+> Team B was ranked second by 2 voters and ranked third by 3 voters.\
+> Team C was ranked second by 3 voters and ranked third by 2 voters.\
 > As most of the voters ranked C second, team C is the second team, and team B is the third.
 
 **Example 2:**
 
 > Input: `votes = ["WXYZ","XYZW"]`\
 > Output: `"XWYZ"`\
-> Explanation:
+> Explanation:\
 > X is the winner due to the tie-breaking rule. X has the same votes as W for the first position, but X has one vote in the second position, while W does not have any votes in the second position.
 
 **Example 3:**

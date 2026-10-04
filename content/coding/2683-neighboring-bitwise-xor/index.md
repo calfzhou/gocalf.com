@@ -26,17 +26,17 @@ Return _**true** if such an array exists or **false** otherwise._
 
 > Input: `derived = [1,1,0]`\
 > Output: `true`\
-> Explanation: A valid original array that gives derived is `[0,1,0]`.
-> `derived[0] = original[0] ⊕ original[1] = 0 ⊕ 1 = 1`
-> `derived[1] = original[1] ⊕ original[2] = 1 ⊕ 0 = 1`
+> Explanation: A valid original array that gives derived is `[0,1,0]`.\
+> `derived[0] = original[0] ⊕ original[1] = 0 ⊕ 1 = 1`\
+> `derived[1] = original[1] ⊕ original[2] = 1 ⊕ 0 = 1`\
 > `derived[2] = original[2] ⊕ original[0] = 0 ⊕ 0 = 0`
 
 **Example 2:**
 
 > Input: `derived = [1,1]`\
 > Output: `true`\
-> Explanation: A valid original array that gives derived is `[0,1]`.
-> `derived[0] = original[0] ⊕ original[1] = 1`
+> Explanation: A valid original array that gives derived is `[0,1]`.\
+> `derived[0] = original[0] ⊕ original[1] = 1`\
 > `derived[1] = original[1] ⊕ original[0] = 1`
 
 **Example 3:**

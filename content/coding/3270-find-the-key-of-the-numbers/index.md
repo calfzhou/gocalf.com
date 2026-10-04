@@ -22,7 +22,7 @@ Return the `key` of the three numbers **without** leading zeros (_if any_).
 
 > Input: `num1 = 1, num2 = 10, num3 = 1000`\
 > Output: `0`\
-> Explanation:
+> Explanation:\
 > On padding, `num1` becomes `"0001"`, `num2` becomes `"0010"`, and `num3` remains `"1000"`.
 >
 > - The 1ˢᵗ digit of the `key` is `min(0, 0, 1)`.

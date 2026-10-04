@@ -24,15 +24,15 @@ Return the number of **alternating** groups.
 
 > Input: `colors = [1,1,1]`\
 > Output: `0`\
-> Explanation:
+> Explanation:\
 > ![case1|150](case1.png "case1")
 
 **Example 2:**
 
 > Input: `colors = [0,1,0,0,1]`\
 > Output: `3`\
-> Explanation:
-> ![case2-0|150](case2-0.png "case2-0")
+> Explanation:\
+> ![case2-0|150](case2-0.png "case2-0")\
 > Alternating groups:
 > {{% grid min_width=150 %}}
 {{< cell >}}

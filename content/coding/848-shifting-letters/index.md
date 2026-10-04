@@ -23,9 +23,9 @@ Return _the final string after all such shifts to s are applied_.
 
 > Input: `s = "abc", shifts = [3,5,9]`\
 > Output: `"rpl"`\
-> Explanation: We start with `"abc".`
-> After shifting the first 1 letters of s by 3, we have `"dbc"`.
-> After shifting the first 2 letters of s by 5, we have `"igc"`.
+> Explanation: We start with `"abc".`\
+> After shifting the first 1 letters of s by 3, we have `"dbc"`.\
+> After shifting the first 2 letters of s by 5, we have `"igc"`.\
 > After shifting the first 3 letters of s by 9, we have `"rpl"`, the answer.
 
 **Example 2:**

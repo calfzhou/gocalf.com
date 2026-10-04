@@ -19,17 +19,17 @@ Return _the final string after the deletion_. It can be shown that the answer wi
 
 > Input: `s = "le`{{< u text="e" >}}`etcode"`\
 > Output: `"leetcode"`\
-> Explanation:
-> Remove an 'e' from the first group of 'e's to create "leetcode".
+> Explanation:\
+> Remove an 'e' from the first group of 'e's to create "leetcode".\
 > No three consecutive characters are equal, so return "leetcode".
 
 **Example 2:**
 
 > Input: `s = "`{{< u text="a" >}}`aab`{{< u text="aa" >}}`aa"`\
 > Output: `"aabaa"`\
-> Explanation:
-> Remove an 'a' from the first group of 'a's to create "aabaaaa".
-> Remove two 'a's from the second group of 'a's to create "aabaa".
+> Explanation:\
+> Remove an 'a' from the first group of 'a's to create "aabaaaa".\
+> Remove two 'a's from the second group of 'a's to create "aabaa".\
 > No three consecutive characters are equal, so return "aabaa".
 
 **Example 3:**

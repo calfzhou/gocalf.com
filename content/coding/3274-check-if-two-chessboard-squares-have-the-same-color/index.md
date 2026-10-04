@@ -23,14 +23,14 @@ The coordinate will always represent a valid chessboard square. The coordinate w
 
 > Input: coordinate1 = "a1", coordinate2 = "c3"\
 > Output: true\
-> Explanation:
+> Explanation:\
 > Both squares are black.
 
 **Example 2:**
 
 > Input: coordinate1 = "a1", coordinate2 = "h3"\
 > Output: false\
-> Explanation:
+> Explanation:\
 > Square "a1" is black and "h3" is white.
 
 **Constraints:**

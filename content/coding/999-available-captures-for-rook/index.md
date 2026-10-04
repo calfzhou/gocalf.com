@@ -23,7 +23,7 @@ Return the **number of pawns** the white rook is **attacking**.
 
 > Input: `board = [[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".","R",".",".",".","p"],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."]]`\
 > Output: `3`\
-> Explanation:
+> Explanation:\
 > In this example, the rook is attacking all the pawns.
 
 **Example 2:**
@@ -32,7 +32,7 @@ Return the **number of pawns** the white rook is **attacking**.
 
 > Input: `board = [[".",".",".",".",".",".",".","."],[".","p","p","p","p","p",".","."],[".","p","p","B","p","p",".","."],[".","p","B","R","B","p",".","."],[".","p","p","B","p","p",".","."],[".","p","p","p","p","p",".","."],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."]]`\
 > Output: `0`\
-> Explanation:
+> Explanation:\
 > The bishops are blocking the rook from attacking any of the pawns.
 
 **Example 3:**
@@ -41,7 +41,7 @@ Return the **number of pawns** the white rook is **attacking**.
 
 > Input: `board = [[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".","p",".",".",".","."],["p","p",".","R",".","p","B","."],[".",".",".",".",".",".",".","."],[".",".",".","B",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".",".",".",".",".","."]]`\
 > Output: `3`\
-> Explanation:
+> Explanation:\
 > The rook is attacking the pawns at positions `b5`, `d6`, and `f5`.
 
 **Constraints:**

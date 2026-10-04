@@ -30,7 +30,7 @@ The **level** of a node is the number of edges along the path between it and the
 > - Swap 7 and 5. The 3rd level becomes `[5,6,8,7]`.
 > - Swap 8 and 7. The 3rd level becomes `[5,6,7,8]`.
 >
-> We used 3 operations so return 3.
+> We used 3 operations so return 3.\
 > It can be proven that 3 is the minimum number of operations needed.
 
 **Example 2:**
@@ -46,7 +46,7 @@ The **level** of a node is the number of edges along the path between it and the
 > - Swap 7 and 4. The 3rd level becomes `[4,6,5,7]`.
 > - Swap 6 and 5. The 3rd level becomes `[4,5,6,7]`.
 >
-> We used 3 operations so return 3.
+> We used 3 operations so return 3.\
 > It can be proven that 3 is the minimum number of operations needed.
 
 **Example 3:**

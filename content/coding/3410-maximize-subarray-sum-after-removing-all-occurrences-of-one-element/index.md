@@ -24,7 +24,7 @@ A **subarray** is a contiguous **non-empty** sequence of elements within an arra
 
 > Input: `nums = [-3,2,-2,-1,3,-2,3]`\
 > Output: `7`\
-> Explanation:
+> Explanation:\
 > We can have the following arrays after at most one operation:
 >
 > - The original array is `nums = [-3, 2, -2, -1,` {{< u text="3, -2, 3" >}}`]`. The maximum subarray sum is `3 + (-2) + 3 = 4`.
@@ -39,7 +39,7 @@ A **subarray** is a contiguous **non-empty** sequence of elements within an arra
 
 > Input: `nums = [1,2,3,4]`\
 > Output: `10`\
-> Explanation:
+> Explanation:\
 > It is optimal to not perform any operations.
 
 **Constraints:**

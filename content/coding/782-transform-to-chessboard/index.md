@@ -22,8 +22,8 @@ A **chessboard board** is a board where no `0`'s and no `1`'s are 4-directionall
 
 > Input: `board = [[0,1,1,0],[0,1,1,0],[1,0,0,1],[1,0,0,1]]`\
 > Output: `2`\
-> Explanation: One potential sequence of moves is shown.
-> The first move swaps the first and second column.
+> Explanation: One potential sequence of moves is shown.\
+> The first move swaps the first and second column.\
 > The second move swaps the second and third row.
 
 **Example 2:**

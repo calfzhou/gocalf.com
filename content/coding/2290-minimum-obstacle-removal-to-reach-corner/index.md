@@ -25,8 +25,8 @@ Return _the **minimum** number of **obstacles** to **remove** so you can move fr
 
 > Input: `grid = [[0,1,1],[1,1,0],[1,1,0]]`\
 > Output: `2`\
-> Explanation: We can remove the obstacles at `(0, 1)` and `(0, 2)` to create a path from `(0, 0)` to `(2, 2)`.
-> It can be shown that we need to remove at least 2 obstacles, so we return 2.
+> Explanation: We can remove the obstacles at `(0, 1)` and `(0, 2)` to create a path from `(0, 0)` to `(2, 2)`.\
+> It can be shown that we need to remove at least 2 obstacles, so we return 2.\
 > Note that there may be other ways to remove 2 obstacles to create a path.
 
 **Example 2:**

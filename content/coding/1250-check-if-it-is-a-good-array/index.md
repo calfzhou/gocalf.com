@@ -17,14 +17,14 @@ Return `True` if the array is **good** otherwise return `False`.
 
 > Input: `nums = [12,5,7,23]`\
 > Output: `true`\
-> Explanation: Pick numbers 5 and 7.
+> Explanation: Pick numbers 5 and 7.\
 > `5*3 + 7*(-2) = 1`
 
 **Example 2:**
 
 > Input: `nums = [29,6,10]`\
 > Output: `true`\
-> Explanation: Pick numbers 29, 6 and 10.
+> Explanation: Pick numbers 29, 6 and 10.\
 > `29*1 + 6*(-3) + 10*(-1) = 1`
 
 **Example 3:**
