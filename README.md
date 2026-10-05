@@ -86,8 +86,8 @@ line separation is intentional. Preserve real math; escape literal currency doll
 Open `content/` as the vault. Its `.obsidian/`, `_templates/`, `.gitignore` and
 `.editorconfig` belong to the editor. Keep Markdown-relative links and adjacent
 attachments. Templater maps Notes, Coding and Blog to the matching templates.
-Use the Hugo Coding archetype when you also need Python companion files; the editor
-Coding template supplies the article structure without inventing missing resources.
+Both the Hugo Coding archetype and the editor Coding template provide Python companion
+files. The editor copies template text only and leaves existing companions untouched.
 
 Hugo's content mount and ignore rules exclude editor settings/plugins/templates,
 local trash/caches, `_utils`, Python bytecode, edit-history files and the consistency

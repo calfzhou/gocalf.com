@@ -23,7 +23,7 @@
       "template": "_templates/coding.md"
     },
     {
-      "folder": "_posts",
+      "folder": "blog",
       "template": "_templates/post.md"
     }
   ],
