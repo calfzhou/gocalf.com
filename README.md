@@ -89,7 +89,7 @@ attachments. Templater maps Notes, Coding and Blog to the matching templates.
 Both the Hugo Coding archetype and the editor Coding template provide Python companion
 files. The editor copies template text only and leaves existing companions untouched.
 
-Hugo's content mount and ignore rules exclude editor settings/plugins/templates,
+Hugo's native ignore rules exclude editor settings/plugins/templates,
 local trash/caches, `_utils`, Python bytecode, edit-history files and the consistency
 report from all output formats. These exclusions are not Git secrecy: tracked plugin
 settings are still part of repository history. Never put credentials in tracked files

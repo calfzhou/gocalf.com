@@ -5,13 +5,8 @@ defaultContentLanguage = 'zh'
 locale = 'zh-CN'
 timeZone = 'Asia/Shanghai'
 disableKinds = ['RSS']
-# Preserve Python editor/import geometry without publishing support code.
+# Keep editor configuration, templates and support files out of content output.
 ignoreFiles = ['(^|/)(\.[^/]+|_templates|_utils|__pycache__)(/|$)', '(^|/)consistency-report\.md$', '\.edtz$', '\.py[co]$']
-# Exclude editor data at the content mount, including non-Markdown resources.
-[[module.mounts]]
-source = 'content'
-target = 'content'
-files = ['! **/.*', '! **/.*/**', '! **/_templates/**', '! **/_utils/**', '! **/__pycache__/**', '! **/consistency-report.md', '! **/*.edtz', '! **/*.pyc', '! **/*.pyo']
 [taxonomies]
 _merge = 'shallow'
 [permalinks.term]
