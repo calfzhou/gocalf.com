@@ -10,7 +10,7 @@
     if (settled) return;
     settled = true;
     clearTimeout(timer);
-    host.dataset.state = 'unavailable'; // Leave the empty widget hidden.
+    host.dataset.state = 'unavailable'; // Leave the reserved line empty.
   };
   const timer = setTimeout(unavailable, 12000);
   const load = () => {
@@ -24,7 +24,7 @@
         settled = true;
         clearTimeout(timer);
         sentence.textContent = text;
-        host.hidden = false;
+        host.removeAttribute('aria-hidden');
         host.dataset.state = 'ready';
       }, unavailable);
     } catch { unavailable(); }

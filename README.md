@@ -132,9 +132,11 @@ component override preserves the theme's native menu lookup and adds the welcome
 partial only once. Set the flag to false to omit the widget and its loader.
 
 The browser loads the official Jinrishici SDK; returned sentence text is assigned
-with `textContent`, not parsed as HTML. The widget stays empty and hidden until a
-valid sentence arrives, including when JavaScript is unavailable, the service fails,
-or the request takes too long. There is no placeholder text or empty spacing. The SDK
+with `textContent`, not parsed as HTML. One empty line is reserved until a valid
+sentence arrives, including when JavaScript is unavailable, the service fails, or
+the request takes too long. There is no placeholder text. The existing 15px widget
+font is unchanged; narrower side padding lets typical 12/16-character sentences
+fit one line. Longer sentences can still wrap without clipping. The SDK
 is trusted third-party JavaScript running in the page; it contacts its provider and
 may keep its own browser identifier. Nothing is fetched during the Hugo build, and
 no provider token is embedded in source or logs.

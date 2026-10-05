@@ -7,5 +7,4 @@
 
 /* The welcome sentence is separate from the menu and follows native sidebar type. */
 .gocalf-welcome { margin: 0 0 28px; }
-.gocalf-welcome[hidden] { display: none; }
-.gocalf-welcome p { margin: 0; }
+.gocalf-welcome p { margin: 0; padding-inline: 6px; min-block-size: 1lh; }
