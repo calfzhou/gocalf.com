@@ -89,6 +89,36 @@ attachments. Templater maps Notes, Coding and Blog to the matching templates.
 Both the Hugo Coding archetype and the editor Coding template provide Python companion
 files. The editor copies template text only and leaves existing companions untouched.
 
+### Create a note with Templater
+
+Create an **empty** note in `notes/`, `coding/` or `blog/`, or use Templater's
+“Create new note from template” command with the matching template. Vault paths
+are relative to `content/`, so do not prefix them with `content/` or `source/`.
+
+- An `Untitled` / `未命名` note asks for an ASCII slug and then a display title.
+- A named note such as `notes/my-note.md` uses `my-note` as its slug, asks for its
+  display title, and becomes `notes/my-note/index.md`. A Unicode/spaced filename
+  asks for a separate slug while preserving that name as the suggested title.
+- New blog bundles use `blog/YYYY/slug/index.md`, with YYYY taken from the note's
+  creation date. Coding bundles use `coding/slug/index.md`.
+- An empty `index.md` already placed in `notes/slug/`, `coding/slug/` or
+  `blog/YYYY/slug/` is completed in place; its title is suggested from the bundle
+  name, not the word “index”. Section `_index.md` and collection-root `index.md`
+  are not article-template targets. Nor is an extra Markdown resource in an existing
+  leaf bundle a new article.
+- Every generated article uses YAML, `draft: true`, one captured creation timestamp
+  for both `date` and `lastmod`, and the current native fields/shortcodes. Review it
+  and set `draft: false` when ready. Existing content or front matter is rejected,
+  rather than replacing it or resetting authored dates.
+- Cancelling or entering an invalid slug/title does not move the note or create
+  companions. An existing destination bundle is never overwritten. Coding loads its
+  companion template text before moving the note, preserves existing companion files
+  in an in-place bundle, and never runs Python.
+
+These templates are for new empty articles, not mass conversion or template insertion
+into an existing article. Obsidian and Templater still control their normal dialog,
+file-event and YAML serialization behavior; the site does not install or run them.
+
 Hugo's native ignore rules exclude editor settings/plugins/templates,
 local trash/caches, `_utils`, Python bytecode, edit-history files and the consistency
 report from all output formats. These exclusions are not Git secrecy: tracked plugin
