@@ -32,6 +32,15 @@ make preview port=14740  # also drafts and future content
 target is provided. Existing output, backups and user caches are never deleted by
 these recipes. For authoritative comparisons, build into a fresh directory.
 
+## Theme manual
+
+The theme-owned Sidera manual is mounted at `/sidera/`, with the **Sidera** menu
+entry immediately before **关于**. Its source stays in `themes/sidera/docs/content`;
+do not copy it into the site content tree. Updating the pinned theme also updates
+the bundled manual. It uses Chinese theme controls around the English manual body,
+the default docs sidebar, explicit dates and AI disclosure. Manual comments remain
+disabled independently of the site's article comment setting.
+
 ## Create content
 
 ```sh

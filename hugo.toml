@@ -7,6 +7,14 @@ timeZone = 'Asia/Shanghai'
 disableKinds = ['RSS']
 # Keep editor configuration, templates and support files out of content output.
 ignoreFiles = ['(^|/)(\.[^/]+|_templates|_utils|__pycache__)(/|$)', '(^|/)consistency-report\.md$', '\.edtz$', '\.py[co]$']
+# Preserve site content and explicitly mount the theme-owned user manual.
+[[module.mounts]]
+source = 'content'
+target = 'content'
+[[module.mounts]]
+source = 'themes/sidera/docs/content'
+target = 'content/sidera'
+
 [taxonomies]
 _merge = 'shallow'
 [permalinks.term]
@@ -86,9 +94,16 @@ weight = 3
 icon = 'blog'
 color = '#FFA500'
 [[menus.primary]]
+name = 'Sidera'
+pageRef = '/sidera'
+weight = 4
+[menus.primary.params]
+icon = 'sidera-bold-duotone'
+
+[[menus.primary]]
 name = '关于'
 pageRef = '/about'
-weight = 4
+weight = 5
 [menus.primary.params]
 icon = 'about'
 color = '#3370FF'
