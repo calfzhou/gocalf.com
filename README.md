@@ -107,3 +107,12 @@ at the domain root, preserve trailing-slash routes, and serve `404.html` with HT
 assets and existing URLs on the chosen host. A build does not configure DNS or Pages.
 Comments and source-edit links are optional and currently off; configure only this
 site's actual Giscus/source identity before enabling them.
+
+The Pages workflow builds on pushes and pull requests to `main`, using the exact
+committed theme submodule and checksum-verified Hugo **0.166.0 extended**. It uploads
+a build artifact but **does not publish automatically**. Publishing requires a
+manual workflow run on `main` with `deploy` explicitly enabled and the repository's
+Pages environment/permissions configured. No Node/pnpm installation is involved.
+
+The workflow's Linux binary URL and SHA-256 are pinned together; update and verify
+both when deliberately upgrading Hugo. Local builds do not run this installer.
