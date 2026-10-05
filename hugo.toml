@@ -1,5 +1,3 @@
-# P4-B private migration scaffold, not deployment configuration.
-# Current scope/remaining avatar/content decisions: migration-project/P4-B.md.
 baseURL = 'https://gocalf.com/'
 title = 'GoCalf'
 theme = 'sidera'
@@ -8,7 +6,12 @@ locale = 'zh-CN'
 timeZone = 'Asia/Shanghai'
 disableKinds = ['RSS']
 # Preserve Python editor/import geometry without publishing support code.
-ignoreFiles = ['(^|/)_utils(/|$)']
+ignoreFiles = ['(^|/)(\.[^/]+|_templates|_utils|__pycache__)(/|$)', '(^|/)consistency-report\.md$', '\.edtz$', '\.py[co]$']
+# Exclude editor data at the content mount, including non-Markdown resources.
+[[module.mounts]]
+source = 'content'
+target = 'content'
+excludeFiles = ['**/.*', '**/.*/**', '**/_templates/**', '**/_utils/**', '**/__pycache__/**', '**/consistency-report.md', '**/*.edtz', '**/*.pyc', '**/*.pyo']
 [taxonomies]
 _merge = 'shallow'
 [permalinks.term]
@@ -31,14 +34,14 @@ _merge = 'deep'
 [params]
 description = '1/100 ALGO&MATH; 1/100 IT&GAME; 1/100 INFO&SHARING; 1/100 WHO KNOWS'
 color_mode = 'dark'
-# Explicitly unconfigured/off: production category/node IDs have not been verified.
+# Comments are opt-in; configure this site’s Giscus identity before enabling.
 comments = false
 link_heading_checks = true
 taxonomy_hierarchy = ['tags']
 right = ['toc']
 license = '本文由 [Calf](/) 原创，采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
 share = ['link', 'wechat', 'email']
-# Do not invent unpushed main/content edit URLs. Final display policy awaits review.
+# Optional source-edit URL; leave empty to omit edit links.
 edit_url = ''
 footer_menu = 'footer'
 footer_text = '''本站所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
