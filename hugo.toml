@@ -26,11 +26,22 @@ _merge = 'shallow'
 _merge = 'deep'
 [markup.goldmark.extensions.passthrough]
 _merge = 'deep'
+[params.giscus]
+repo = 'calfzhou/gocalf.com'
+repo_id = 'R_kgDOLtX9yA'
+category = 'Announcements'
+category_id = 'DIC_kwDOLtX9yM4Ce98o'
+strict = false
+reactions = true
+input_position = 'top'
+
 [params]
 description = '1/100 ALGO&MATH; 1/100 IT&GAME; 1/100 INFO&SHARING; 1/100 WHO KNOWS'
 color_mode = 'dark'
-# Comments are opt-in; configure this site’s Giscus identity before enabling.
-comments = false
+# Comments use this site's verified repository and pathname-equivalent identity.
+comments = true
+# Site-owned welcome service; no raw HTML in Markdown is required.
+jinrishici = true
 link_heading_checks = true
 taxonomy_hierarchy = ['tags']
 right = ['toc']

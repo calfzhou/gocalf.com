@@ -1,0 +1,9 @@
+{{- /* Site welcome precedes the first left menu; native menu behavior is unchanged. */ -}}
+{{- if and (eq .Region "left") (eq .Instance "left-menu-1") .Page.Site.Params.jinrishici -}}
+  {{- partial "gocalf/jinrishici.html" . -}}
+{{- end -}}
+{{- $page := .Page -}}{{- $owner := .Owner -}}{{- $s := .Settings -}}{{- $ctx := . -}}
+  {{- if $s.menu -}}
+    {{- if index $page.Site.Menus $s.menu -}}{{- partial "sidera/menu.html" (merge . (dict "Name" $s.menu)) -}}
+    {{- else -}}{{- partial "sidera/fallback-menu.html" . -}}{{- end -}}
+  {{- end -}}

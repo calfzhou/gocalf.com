@@ -105,8 +105,8 @@ The configured canonical URL is `https://gocalf.com/`. Serve the generated direc
 at the domain root, preserve trailing-slash routes, and serve `404.html` with HTTP
 404 for missing URLs. The static `CNAME` contains the custom domain. Validate HTTPS,
 assets and existing URLs on the chosen host. A build does not configure DNS or Pages.
-Comments and source-edit links are optional and currently off; configure only this
-site's actual Giscus/source identity before enabling them.
+Comments use this site's verified Giscus repository and Announcements category.
+Source-edit links remain off.
 
 The Pages workflow builds on pushes and pull requests to `main`, using the exact
 committed theme submodule and checksum-verified Hugo **0.166.0 extended**. It uploads
@@ -116,3 +116,28 @@ Pages environment/permissions configured. No Node/pnpm installation is involved.
 
 The workflow's Linux binary URL and SHA-256 are pinned together; update and verify
 both when deliberately upgrading Hugo. Local builds do not run this installer.
+
+
+## Visitor services
+
+`params.comments = true` enables eligible article comments through the configured
+GoCalf Giscus repository/category. Identity follows each native article pathname;
+`strict = false` retains the existing matching policy. Queries and heading fragments
+do not change the discussion term. Do not submit test comments or reactions from a
+local preview: the provider uses real discussions.
+
+`params.jinrishici = true` shows the welcome sentence before the first left-side menu,
+without replacing Sidera's collection/sidebar defaults. A small site-owned menu
+component override preserves the theme's native menu lookup and adds the welcome
+partial only once. Set the flag to false to omit the widget and its loader.
+
+The browser loads the official Jinrishici SDK; returned sentence text is assigned
+with `textContent`, not parsed as HTML. The widget stays empty and hidden until a
+valid sentence arrives, including when JavaScript is unavailable, the service fails,
+or the request takes too long. There is no placeholder text or empty spacing. The SDK
+is trusted third-party JavaScript running in the page; it contacts its provider and
+may keep its own browser identifier. Nothing is fetched during the Hugo build, and
+no provider token is embedded in source or logs.
+
+These integrations use trusted native templates/scripts. Keep Markdown raw-HTML
+rendering disabled; article authors do not need permission to inject scripts.

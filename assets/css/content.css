@@ -4,3 +4,8 @@
 .cube-view { width: 100%; height: var(--cube-height); max-width: 100%; }
 .cube-view canvas { display: block; max-width: 100%; }
 .cube-error { color: var(--text); }
+
+/* The welcome sentence is separate from the menu and follows native sidebar type. */
+.gocalf-welcome { margin: 0 0 28px; }
+.gocalf-welcome[hidden] { display: none; }
+.gocalf-welcome p { margin: 0; }
