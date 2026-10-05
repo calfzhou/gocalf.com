@@ -11,7 +11,7 @@ ignoreFiles = ['(^|/)(\.[^/]+|_templates|_utils|__pycache__)(/|$)', '(^|/)consis
 [[module.mounts]]
 source = 'content'
 target = 'content'
-excludeFiles = ['**/.*', '**/.*/**', '**/_templates/**', '**/_utils/**', '**/__pycache__/**', '**/consistency-report.md', '**/*.edtz', '**/*.pyc', '**/*.pyo']
+files = ['! **/.*', '! **/.*/**', '! **/_templates/**', '! **/_utils/**', '! **/__pycache__/**', '! **/consistency-report.md', '! **/*.edtz', '! **/*.pyc', '! **/*.pyo']
 [taxonomies]
 _merge = 'shallow'
 [permalinks.term]
