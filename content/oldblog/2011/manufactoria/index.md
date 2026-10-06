@@ -37,17 +37,15 @@ Engineer）来测试和修复他们制造的机器人，所谓的“测试”就
 
 Matrix67 的这篇博客是一年多之前发的了，后来我又找到了这个游戏的 [官方网站](http://pleasingfungus.com/)（[http://pleasingfungus\.com/#!/Manufactoria](http://pleasingfungus.com/#!/Manufactoria)），发现游戏版本更新了，细节上有不少改进，增加了不少测试用例，统计出来的运行时间也有所变化（另外要注意的是，在新版本中如果想让两个传送带正交于某个方格，需要按 Shift 键，否则就会替换）。
 
-[下载源码归档（ZIP）](manufactoria-source.zip)
+{{< download src="Manufactoria.swf" text="下载 Manufactoria.swf" >}}
 
-下载包保留本地 SWF 和原文中的解法代码，不包含游戏的开发源码。Flash 已淘汰，不提供在线运行或模拟器。
-
-原先的 Flash 嵌入已移除，本地保存的 SWF 仅提供归档下载。它依赖已淘汰的 Flash 运行环境，现代浏览器不能直接运行；这里不提供模拟器，也不保证下载后可运行。历史外部链接：[Manufactoria @ Kongregate](https://www.kongregate.com/en/games/PleasingFungus/manufactoria)。
+原先的 Flash 嵌入已移除，本地保存的 SWF 仅提供文件下载。它依赖已淘汰的 Flash 运行环境，现代浏览器不能直接运行；这里不提供模拟器，也不保证下载后可运行。历史外部链接：[Manufactoria @ Kongregate](https://www.kongregate.com/en/games/PleasingFungus/manufactoria)。
 
 分享一下我在各关的解法（进入一个关卡，点击磁盘图标，在文本框中粘贴解法代码即可；注意贴入的代码中的关卡序号不需要与当前所在的关卡序号一致，游戏会自动跳转到正确的关卡，除非你还没有激活那一关）。另外很多关卡都有无数种解法，我一般会尽量优化使之元件个数最少（比较测试时间没有太大意义，一旦下一个版本的测试用例变化，测试时间就不一样了）。也推荐参考 [@837951602 的解法整理](https://github.com/837951602/Blog/blob/master/Implements/MANUFACTORIA%20cheapest%20designs.md)。
 
 下面这张图是游戏当前版本（v1\.30）的关卡分布图，为了方便查找，我特意用红色字体添加了关卡序号在每关图标的左上角处。其中第 29 到 31 关是隐藏关，要通过了第 24 关才能显示出来。
 
-{{< image src="images/2011/11/manufactoria-main.png" alt="manufactoria-main" caption="Manufactoria 主界面（添加了关卡序号）" >}}
+{{< image src="manufactoria-main.png" alt="manufactoria-main" caption="Manufactoria 主界面（添加了关卡序号）" >}}
 
 我的各关卡解决方案（第 30 和 31 关没有时间优化了，其他关都是尽可能优化过的）：
 

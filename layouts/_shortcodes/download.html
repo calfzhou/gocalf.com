@@ -1,0 +1,8 @@
+{{- $src := .Get "src" -}}
+{{- $name := .Get "name" | default $src -}}
+{{- if or (not (findRE `^[A-Za-z0-9][A-Za-z0-9._-]*$` $src)) (not (findRE `^[A-Za-z0-9][A-Za-z0-9._-]*$` $name)) -}}
+  {{- errorf "download: src and name must be simple attachment filenames (%s)" .Position -}}
+{{- end -}}
+{{- $file := .Page.Resources.Get $src -}}
+{{- if not $file -}}{{- errorf "download: missing bundle attachment %q (%s)" $src .Position -}}{{- end -}}
+<a href="{{ $file.RelPermalink }}" download="{{ $name }}">{{ .Get "text" | default $name }}</a>

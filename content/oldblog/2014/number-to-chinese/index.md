@@ -280,8 +280,8 @@ for position, digit in reversed(list(_enumerate_digits(number))):
 
 ## JavaScript 版本 {#id9}
 
-代码介绍完了，原先用于试输入数字的 JavaScript 版本现仅提供源码包下载，不再显示或运行表单。历史源码链接：[http://jsfiddle\.net/calfzhou/tGEz7/](http://jsfiddle.net/calfzhou/tGEz7/)。
+代码介绍完了，原先用于试输入数字的 JavaScript 版本现仅提供HTML 文件下载，不再显示或运行表单。历史源码链接：[http://jsfiddle\.net/calfzhou/tGEz7/](http://jsfiddle.net/calfzhou/tGEz7/)。
 
-[下载源码归档（ZIP）](number-to-chinese-source.zip)
+{{< download src="number-to-chinese.html.txt" name="number-to-chinese.html" text="下载 JavaScript 版本（HTML）" >}}
 
-下载包保留原文、Python 2.7 示例和内嵌 JavaScript 表单源码。原页面的 Bootstrap 样式未打包；不保证离线完整或能够运行。
+HTML 保留原来的 JavaScript 和表单，未包含旧站的 Bootstrap 样式。

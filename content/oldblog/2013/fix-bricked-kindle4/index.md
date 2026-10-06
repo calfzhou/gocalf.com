@@ -76,11 +76,11 @@ Ethernet 驱动，[点此下载](http://b.billgong.com/wp-content/uploads/2012/0
 
 装好驱动，进入网络中心，看到有一块新的网卡设备。点击右键查看属性，在 IPv4 选项中，将 IP 地址设置为“192\.168\.15\.200”，子网掩码是默认的“255\.255\.255\.0”。
 
-用 SSH 客户端（我用的是 Putty）登录 Kindle，IP 地址为 192\.168\.15\.244，用户名是 root。密码可以先试试“mario”（针对 4\.0 系统），如果不行，当时可使用序列号计算密码（针对 4\.0\.1 系统）。原计算器现仅提供源码包下载，不再在页面中运行。
+用 SSH 客户端（我用的是 Putty）登录 Kindle，IP 地址为 192\.168\.15\.244，用户名是 root。密码可以先试试“mario”（针对 4\.0 系统），如果不行，当时可使用序列号计算密码（针对 4\.0\.1 系统）。原计算器现仅提供HTML 文件下载，不再在页面中运行。
 
-[下载源码归档（ZIP）](fix-bricked-kindle4-source.zip)
+{{< download src="kindle_root_password.html.txt" name="kindle_root_password.html" text="下载计算器（HTML）" >}}
 
-下载包保留原 HTML 和 MD5 脚本及版权声明，仅供查看历史源码；不保证旧固件兼容性或设备恢复安全。
+HTML 已包含原来的 MD5 脚本及版权声明，供下载查看。
 
 其实 root 密码就是“fiona”加上序列号 MD5 值中的一部分。生成代码如下（Python
 2\.7\.\*）：
