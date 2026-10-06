@@ -285,4 +285,3 @@ for position, digit in reversed(list(_enumerate_digits(number))):
 [下载源码归档（ZIP）](number-to-chinese-source.zip)
 
 下载包保留原文、Python 2.7 示例和内嵌 JavaScript 表单源码。原页面的 Bootstrap 样式未打包；不保证离线完整或能够运行。
-

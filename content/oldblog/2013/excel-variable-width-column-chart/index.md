@@ -255,4 +255,3 @@ Range 对话框，将数据范围设置为 TableData 的 X 列整列数据。然
 
 > [!NOTE]
 > Highcharts 从 6\.0\.0 版本开始也加入了 varwide 类型，详见 [varwide demo](https://www.highcharts.com/demo/variwide)。
-

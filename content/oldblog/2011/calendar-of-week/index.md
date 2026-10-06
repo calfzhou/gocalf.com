@@ -78,4 +78,3 @@ $$
 [下载源码归档（ZIP）](calendar-of-week-source.zip)
 
 下载包保留本地 HTML、CSS 和 JavaScript 的相对目录。原页面依赖未固定版本的远程 jQuery，未包含该外部依赖；不保证离线完整或能够运行。
-

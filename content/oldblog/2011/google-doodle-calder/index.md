@@ -39,4 +39,3 @@ Canvas 也一无所知。就像电视上有个广告词：“我们不生产水�
 [下载源码归档（ZIP）](google-doodle-calder-source.zip)
 
 下载包保留原 HTML、JavaScript 及其中的署名。它含有旧式脚本、Google 搜索链接和远程备用图片，外部资源未打包；不保证离线完整或能够运行。
-

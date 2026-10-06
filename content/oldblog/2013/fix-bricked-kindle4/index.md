@@ -111,4 +111,3 @@ rm /var/local/system/.framework_retries
 ## 5\. 完成 {#id2}
 
 这些都弄完了，长按电源键重启 Kindle，终于恢复了。
-

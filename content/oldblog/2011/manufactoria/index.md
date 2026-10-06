@@ -140,12 +140,12 @@ Level 12: Soldiers! OUTPUT: With blue as 1 and red as 0, multiply by 8!
 
 Level 13: Officers! OUTPUT: With blue as 1 and red as 0, add 1 to the binary string!
 :   给输入的数字做加 1 操作。开始的时候感觉是无法完成的，但仔细想想就很简单。加 1 操作，从二进制的角度来看，就是把末尾的 1 都变成 0，最后一个 0 变成 1。主要的难点是要从最后一位往前加，所以要不端地循环，每次都处理最后一个没有处理过的色点。另外在优化的时候发现，可以先把末尾的 1 变成黄色，这样就不需要再另外使用分隔符号了。分隔符用来标记字串的中止以及当前处理到的位置。
-    
+
     19 个元件，81580 时间。
 
 Level 14: Generals! OUTPUT: Substract 1 from the binary string! (Input\>= 1)
 :   减 1 操作，跟第 13 关其实是一样的，红色和蓝色互换就好了。19 个元件，79750 时间。
-    
+
     但这一关还可以再稍微调整一下布局，变成 18 个元件，81686 时间。
 
 Level 15: Robotanks! ACCEPT: With blue as 1 and red as 0, accept binary strings \> 15!
@@ -159,34 +159,34 @@ Level 17: Androids! ACCEPT: Some number of blue, then the same number of red!
 
 Level 18: Robo\-children! ACCEPT: An equal number of blue and red, in any order!
 :   判断色带上蓝色和红色的数量是否恰好相等。依旧是每次循环检查一对。23 个元件，266582 时间。
-    
+
     PS：2024\-10 [@837951602](https://github.com/837951602) 在评论中提供了一个更优的解法，只用 20 个元件。
 
 Level 19: Police! OUTPUT: Put a yellow in the middle of the (even\-length) string!
 :   输入的色带上有偶数个色点（不用判断是否满足），要求在中间位置插入一个黄色。这一关开始想了好久，排满了整个棋盘才搞定，后来一直优化到 40 个元件。想到了两种方案，一种是在颜色串的首尾各放一个色点，每次循环的时候让两个色点分别向中间移动一格，直到二者相遇。另一种是用起始位置放两个色点，每次循环的时候一个色点往后移动一格，另一个色点往后移动两个。我最后的优化版是采用第二种方法的。40 个元件，291584 时间。
-    
+
     如果输入的色带上有奇数个色点，那我的算法会在中间色点的后方插入黄色。
 
 Level 20: Judiciary! ACCEPT: (Even\-length) strings that repeat midway through!
 :   判断色带上的色点（偶数个）是否恰好前半部分与后半部分的排列完全一样。比如如果前半部分是红蓝红红蓝，后半部分也必须是红蓝红红蓝。这一关我是直接利用了第 19 关和第 29 关（恰好我是先完成了第 29 关才回过头玩的这关），即先给这个颜色串的中间位置添加一个黄色（直接照搬第 19 关的布局），然后利用第 29 关的布局判断黄色分割的两个子串是否完全一致。
-    
+
     52 个元件，319428 时间。
 
 Level 21: Teachers! ACCEPT: X blue, then X red, then X more blue, for any X!
 :   要求色带上恰好是有若干个蓝色，跟着同样数目的红色和另外同样数目个蓝色。也可以是一个色点都没有。跟第 17 关的算法完全一样，只要再考虑考虑布局即可。
-    
+
     20 个元件，76590 时间。
 
 Level 22: Politicians! ACCEPT: If there are exactly twice as many blues as red!
 :   判断色带上蓝色是否恰好是红色的两倍。这一关其实跟第 18 关没有太大区别，一个简单高效的解决办法就是先把蓝色减半，然套用第 18 关的布局来检测减半后的蓝色是否与红色数目相等。
-    
+
     给蓝色减半的时候，比较传统的办法是用一个黄色作为色串终止符，从头开始，每读到一个红色就写一个红色，读到两个蓝色之后写一个蓝色。或着稍微变化一下，不用额外的黄色作终止符，而是在遍历的时候直接用黄色替换红色，用一个绿色替换两个蓝色。
-    
+
     用 29 个元件，296870 时间。
 
 Level 23: Academics! OUTPUT: Reverse the input string!
 :   把输入的颜色串反转。基本的方法就是把第一个色点放到色串的最后，再把第二个色点放到倒数第二位。除了用一个黄色标记色串的终止外，在用一个绿色分割尚未处理的色串和部分反转了的色串。
-    
+
     用 25 个元素，227328 时间。
 
 Level 24: Engineers! ACCEPT: Perfectly symmetrical strings!
@@ -200,9 +200,9 @@ Level 26: Roboplanes! OUTPUT: All of the blue, but none of the red!
 
 Level 27: Rocket Planes! OUTPUT: The input, but with all blues moved to the front!
 :   把输入中的蓝色都移动到红色的前面。
-    
+
     这一关有点儿意思，我最后设计的方法是直接利用第 23 关反转输入的方法。在第 23 关的布局中，中轴线左边是针对第一个是蓝色的处理，右边是针对第一个是红色的处理。在这一关里依旧保留右半边，但把左半边改成遇到蓝色就直接写一个蓝色回去。最后的效果就是不断地把红色往最后写，直到红色全都聚集到后半部分。
-    
+
     用 16 个元件，12390 时间。
 
 Level 28: Robomecha! OUTPUT: The input, but with the last symbol moved to the front!
@@ -213,9 +213,8 @@ Level 29: Seraphim! ACCEPT: Two identical strings, separated by a green!
 
 Level 30: Ophanim! ACCEPT: Read the tape as two numbers, A and B, split by a green: accept if A \> B!
 :   由绿色点分开的两个色串，从二进制数字的角度判断是否前一个数大于后一个数。
-    
+
     我用的方法是求 B \- A，当然不用记录完整的结果，只要记录借位状态即可。不过我没有再进行优化，现在用了 88 个元件，60617 时间。估计能优化掉一小半的元件。
 
 Level 31: Metatron! OUTPUT: Read the tape as two numbers, A and B, split by a green: output A + B!
 :   计算被绿色分开的两个数字之和。基本上就是从最低位逐位加上去。同样是还没有优化，应该能减少一半以上的元件。现在用 120 个元件，108630 时间。
-
