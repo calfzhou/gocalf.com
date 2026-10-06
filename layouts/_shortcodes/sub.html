@@ -1,0 +1,1 @@
+{{- if ne (len .Params) 1 -}}{{ errorf "sub requires one plain-text argument" }}{{- end -}}<sub>{{ .Get 0 }}</sub>

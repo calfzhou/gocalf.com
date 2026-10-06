@@ -1,0 +1,3 @@
+{{- $code := highlight .Inner (.Get 0) (dict "hl_inline" true "noClasses" false) -}}
+{{- /* Chroma's HTML/PHP lexer adds a terminal newline, not authored inline text. */ -}}
+<span class="chroma">{{ $code | replaceRE "\n</code>$" "</code>" | safeHTML }}</span>
