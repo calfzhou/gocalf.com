@@ -383,7 +383,7 @@ filter.register('before_post_render', require('./backtick_code_block')(ctx));
 
 所以直接引入 markdown-it 的 插件 [@mdit/plugin-snippet](https://mdit-plugins.github.io/snippet.html)，可以将 asset 文件中的代码注入到 markdown，但并不会被 Hexo 内置的 syntax highlighting 处理，而只是得到普通的 `<pre><code>...</code></pre>` 片段。
 
-自定义的 [snippet tag](https://github.com/calfzhou/gocalf.com/blob/main/plugins/tags/snippet.js) 是手动调用了 Hexo 内置的 syntax highlighting（参考了 Hexo 自带的 [include_code tag](https://github.com/hexojs/hexo/blob/master/lib/plugins/tag/include_code.ts)）：
+自定义的 [snippet tag](https://github.com/calfzhou/gocalf.com/blob/37f4437b5da272af06f28e74d7227441f7284737/plugins/tags/snippet.js) 是手动调用了 Hexo 内置的 syntax highlighting（参考了 Hexo 自带的 [include_code tag](https://github.com/hexojs/hexo/blob/master/lib/plugins/tag/include_code.ts)）：
 
 ```js
 return hexo.extend.highlight.exec(hexo.config.syntax_highlighter, {

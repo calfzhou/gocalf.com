@@ -240,7 +240,7 @@ filter: invert(1) hue-rotate(180deg);
 :::
 ```
 
-或者用自定义的 Hexo 标签插件 [`invert`](https://github.com/calfzhou/gocalf.com/blob/main/plugins/tags/invert.js)：
+或者用自定义的 Hexo 标签插件 [`invert`](https://github.com/calfzhou/gocalf.com/blob/37f4437b5da272af06f28e74d7227441f7284737/plugins/tags/invert.js)：
 
 ```markdown
 {% invert %}
