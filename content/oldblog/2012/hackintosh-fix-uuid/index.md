@@ -1,0 +1,66 @@
+---
+title: 解决黑苹果 Unable to Determine UUID 错误
+slug: hackintosh-fix-uuid
+date: '2012-03-02T23:09:00+08:00'
+lastmod: '2012-03-02T23:09:00+08:00'
+tags:
+- Hackintosh
+categories:
+- 操作系统
+summary: 前几天在写 app 的最后阶段要进行本地化（localization），其中要做的一件事就是创建语言文件（Localizable\.strings）。要在控制台运行
+  genstrings 命令来扫描源代码中 NSLocalizedString 宏所使用到的文字。由于使用的是黑苹果，在运行 genstrings 时遇到了“Unable
+  to Determine UUID”的错误，解决方法倒也容易。
+keywords:
+- genstrings
+- Localizable.strings
+- Unable to Determine UUID
+- UUID
+- 黑苹果
+---
+
+前几天在写 app 的最后阶段要进行本地化（localization），其中要做的一件事就是创建语言文件（Localizable\.strings）。要在控制台运行 genstrings 命令来扫描源代码中 NSLocalizedString 宏所使用到的文字。由于使用的是黑苹果（安装过程参见 [Dell E6400 安装 MacOS 雪豹 10\.6](../../2011/dell-e6400-install-mac/index.md) 和 [Dell E6400 升级到 MacOS 10\.6\.8](../../2011/dell-e6400-mac-10-6-8/index.md)），在运行 genstrings 时遇到了“Unable
+to Determine UUID”的错误，解决方法倒也容易。
+
+运行 genstrings 的语句是：
+
+````text {linenos=false}
+genstrings ./Classes/*.m
+````
+
+得到了这样的错误信息：
+
+````text {linenos=false}
+genstrings[3851:10b] _CFGetHostUUIDString: unable to determine UUID for host. Error: 35
+````
+
+虽然想不通这么个小程序为什么需要 UUID，但解决方法是：进入目录 /Library/Preferences/SystemConfiguration，用 root 权限修改其中的 NetworkInterfaces\.plist 文件，在控制台的操作命令为：
+
+````bash {linenos=false}
+cd /Library/Preferences/SystemConfiguration
+sudo vi NetworkInterfaces.plist
+````
+
+给这个文件中添加一个 IEEE80211 相关的 dict（原本会有其他一些 dict，不用管它们），内容如下：
+
+````xml {linenos=table}
+<dict>
+  <key>BSD Name</key>
+  <string>en3</string>
+  <key>IOBuiltin</key>
+  <false/>
+  <key>IOInterfaceType</key>
+  <integer>6</integer>
+  <key>IOInterfaceUnit</key>
+  <integer>3</integer>
+  <key>IOLocation</key>
+  <string></string>
+  <key>IOMACAddress</key>
+  <data>ABbPoF5V</data>
+  <key>IOPathMatch</key>
+  <string>IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/P0P3@1C,2/IOPCI2PCIBridge/pci14e4,4311@0/AirPort_Brcm43xx/IO80211Interface</string>
+  <key>SCNetworkInterfaceType</key>
+  <string>IEEE80211</string>
+</dict>
+````
+
+添加好后保存此文件，然后重启系统。问题就解决了。
