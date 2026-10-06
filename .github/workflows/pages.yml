@@ -26,7 +26,6 @@ jobs:
     env:
       HUGO_VERSION: '0.166.0'
       HUGO_SHA256: '0e39b901e3f919f1daae05c8ff64f0c14c8a348ef46886d63f8e6d1bb2653885'
-      HUGO_CACHEDIR: ${{ runner.temp }}/hugo-cache
     steps:
       - uses: actions/checkout@v4
         with:
@@ -47,6 +46,7 @@ jobs:
           echo "$RUNNER_TEMP/hugo-bin" >> "$GITHUB_PATH"
       - name: Build production site
         run: |
+          export HUGO_CACHEDIR="$RUNNER_TEMP/hugo-cache"
           hugo version
           make build
       - name: Check artifact boundary
