@@ -9,7 +9,7 @@ date: "2024-04-13T17:37:33+08:00"
 
 {{< quot text="早期的博客" ornament=false >}}
 
-{{< link href="https://blog.gocalf.com/" text="GoCalf Blok - 1/100 ALGO&MATH; 1/100 IT&GAME; 1/100 INFO&SHARING; 1/100 WHO KNOWS" image="https://blog.gocalf.com/theme/images/favicon.ico" alt="" >}}
+{{< link href="https://blog.gocalf.com/" text="GoCalf Blog - 1/100 ALGO&MATH; 1/100 IT&GAME; 1/100 INFO&SHARING; 1/100 WHO KNOWS" image="https://blog.gocalf.com/theme/images/favicon.ico" alt="" >}}
 
 ---
 
