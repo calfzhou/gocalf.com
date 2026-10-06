@@ -99,7 +99,7 @@ pageRef = '/sidera'
 weight = 4
 [menus.primary.params]
 icon = 'sidera-bold-duotone'
-
+color = '#9a805f'
 [[menus.primary]]
 name = '关于'
 pageRef = '/about'
