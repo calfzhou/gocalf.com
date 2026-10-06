@@ -1,0 +1,52 @@
+{
+  "kind": "variable-width",
+  "size": [
+    640,
+    400
+  ],
+  "title": "Variable Width Column Chart",
+  "rawData": [
+    {
+      "name": "A",
+      "x": 5.2,
+      "y": 5.6
+    },
+    {
+      "name": "B",
+      "x": 3.9,
+      "y": 10.1
+    },
+    {
+      "name": "C",
+      "x": 11.5,
+      "y": 1.2
+    },
+    {
+      "name": "D",
+      "x": 2.4,
+      "y": 17.8
+    },
+    {
+      "name": "E",
+      "x": 8.1,
+      "y": 8.4
+    }
+  ],
+  "gap_ratio": 0.2,
+  "x_range": [
+    0,
+    36.076
+  ],
+  "y_range": [
+    0,
+    20,
+    5
+  ],
+  "colors": [
+    "#3399ff",
+    "#ff3300",
+    "#9fd42e",
+    "#ff9900",
+    "#ff6633"
+  ]
+}
