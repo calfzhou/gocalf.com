@@ -26,8 +26,6 @@ keywords:
 今天就来介绍一下我是怎么制作不等宽柱状图（Variable Width Column Chart）的。也有人称其为 Marimekko
 Chart，我没有仔细去考证，二者好像也并不完全一样。
 
-<!--more-->
-
 注：以下操作是基于 Microsoft Office Excel 2013 进行的，其他版本可能会有一些差异，但思路是相通的。
 
 ## 数据和目标效果 {#id1}

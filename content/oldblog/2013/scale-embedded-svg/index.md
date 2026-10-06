@@ -24,8 +24,6 @@ keywords:
 
 随即发现一个问题，位图会随着页面宽度的变窄而自动缩小，但是 SVG 图片却并没有变化，页面宽度变窄后，它们就害羞似的藏起一半脸来。怎么让 SVG 图片也能随着页面宽度变化而自动缩放呢？
 
-<!--more-->
-
 这里主要针对已经以 `.svg` 扩展名保存的 SVG 图片文件。把这种格式的图片嵌入到 HTML 页面中主要有 [三种方法](http://www.w3schools.com/svg/svg_inhtml.asp)，即用 `<embed>`、`<object>` 或者 `<iframe>` 标签，具体的语法分别是：
 
 ````html {linenos=false}

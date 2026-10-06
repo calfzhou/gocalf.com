@@ -25,8 +25,6 @@ keywords:
 现在 Google 经常会在它的 Doodle 中加入各种有趣的元素，今天这个就用到了 HTML5 的 Canvas，在支持 HTML5
 Canvas 的浏览器里，可以看到 3D 的动态 Doodle，还可以拖动哦。为了便于以后查看和保存，我把这个 Doodle 相关的脚本扒下来，在此留存。
 
-<!--more-->
-
 今天（2011 年 7 月 22 日）是伟大的动态雕塑发明人 [亚历山大·考尔德](http://en.wikipedia.org/wiki/Alexander_Calder) （[Alexander
 Calder](https://artsy.net/artist/alexander-calder)）诞辰 113 周年，Google 用它的 Doodle 为大家在浏览器上展示了 Calder 的动态雕塑作品 The
 Star (1960)。原作如下图示。
