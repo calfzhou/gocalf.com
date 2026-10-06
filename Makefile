@@ -1,46 +1,25 @@
-PATH  := node_modules/.bin:$(PATH)
-SHELL := /bin/bash
+SHELL := /bin/sh
+.DEFAULT_GOAL := help
 
-list:
-	$(info Available targets:)
-	$(info )
-	@LC_ALL=C $(MAKE) -pRrq -f $(firstword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/(^|\n)# Files(\n|$$)/,/(^|\n)# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | grep -E -v -e '^[^[:alnum:]]' -e '^$@$$'
+# Pass author input through the environment, never interpolate it into shell code.
+override slug := $(value slug)
+override title := $(value title)
+export slug title
+port ?= 14740
+export port
 
-install:
-	pnpm install
-
-clean:
-	pnpm run clean
+.PHONY: help list build serve server preview note post coding page draft
+help list:
+	@printf '%s\n' 'make build                 Production build (no drafts/future/expired)' 'make serve [port=14740]     Published-content preview' 'make preview [port=14740]   Include drafts and future content' 'make note|post|coding|page|draft slug=slug title="Title"' 'No install, clean, push or deployment targets.'
 
 build:
-	pnpm run build
+	hugo --environment production --buildDrafts=false --buildFuture=false --buildExpired=false --panicOnWarning
 
-rebuild: clean build
+serve server:
+	hugo server --bind 127.0.0.1 --port "$$port" --disableFastRender
 
-server:
-	pnpm run server
+preview:
+	hugo server --bind 127.0.0.1 --port "$$port" --disableFastRender --buildDrafts --buildFuture
 
-s: clean server
-
-slug :=
-title :=
-
-check-slug-and-title:
-ifndef slug
-	$(error slug is not set, use `make note slug=slug title=title`)
-endif
-ifndef title
-	$(error title is not set, use `make note slug=slug title=title`)
-endif
-
-note: check-slug-and-title
-	hexo new note -p "../notes/$(slug)/index.md" "$(title)"
-
-post: check-slug-and-title
-	hexo new post -p "$(shell date '+%Y')/$(slug)" "$(title)"
-
-coding: check-slug-and-title
-	hexo new coding -p "../coding/$(slug)/index.md" "$(title)"
-	cp scaffolds/coding/* "source/coding/$(slug)/"
-
-.PHONY: list install clean build rebuild clean server s note post coding
+note post coding page draft:
+	@sh scripts/new-content.sh $@

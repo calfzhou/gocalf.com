@@ -1,0 +1,255 @@
+baseURL = 'https://gocalf.com/'
+title = 'GoCalf'
+theme = 'sidera'
+defaultContentLanguage = 'zh'
+locale = 'zh-CN'
+timeZone = 'Asia/Shanghai'
+disableKinds = ['RSS']
+# Keep editor configuration, templates and support files out of content output.
+ignoreFiles = ['(^|/)(\.[^/]+|_templates|_utils|__pycache__)(/|$)', '(^|/)consistency-report\.md$', '\.edtz$', '\.py[co]$']
+# Preserve site content and explicitly mount the theme-owned user manual.
+[[module.mounts]]
+source = 'content'
+target = 'content'
+[[module.mounts]]
+source = 'themes/sidera/docs/content'
+target = 'content/sidera'
+
+[taxonomies]
+_merge = 'shallow'
+[permalinks.term]
+_merge = 'shallow'
+[permalinks.page]
+blog = '/blog/:year/:month/:day/:slug/'
+[frontmatter]
+date = ['date', 'publishDate', 'pubdate', 'published']
+publishDate = ['publishDate', 'pubdate', 'published', 'date']
+lastmod = ['lastmod', 'modified', 'publishDate', 'pubdate', 'published', 'date']
+[pagination]
+path = 'page'
+disableAliases = true
+[markup.tableOfContents]
+_merge = 'shallow'
+[markup.goldmark.parser]
+_merge = 'deep'
+[markup.goldmark.extensions.passthrough]
+_merge = 'deep'
+[params.giscus]
+repo = 'calfzhou/gocalf.com'
+repo_id = 'R_kgDOLtX9yA'
+category = 'Announcements'
+category_id = 'DIC_kwDOLtX9yM4Ce98o'
+strict = false
+reactions = true
+input_position = 'top'
+
+[params]
+description = '1/100 ALGO&MATH; 1/100 IT&GAME; 1/100 INFO&SHARING; 1/100 WHO KNOWS'
+color_mode = 'dark'
+# Comments use this site's verified repository and pathname-equivalent identity.
+comments = true
+# Site-owned welcome service; no raw HTML in Markdown is required.
+jinrishici = true
+link_heading_checks = true
+taxonomy_hierarchy = ['tags']
+right = ['toc']
+license = '本文由 [Calf](/) 原创，采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
+share = ['link', 'wechat', 'email']
+# Optional source-edit URL; leave empty to omit edit links.
+edit_url = ''
+footer_menu = 'footer'
+footer_text = '''本站所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
+
+Copyright © 2011-2026 [gocalf.com](/) 保留所有权利。'''
+[params.identity]
+image = '/images/gocalf-circle.svg'
+subtitle = 'Calf 的自留地 · 昙花一现 | 或有月下赏花人 应无所憾'
+
+[[menus.primary]]
+name = '主页'
+pageRef = '/'
+weight = -1
+[menus.primary.params]
+icon = 'home'
+
+[[menus.primary]]
+name = '笔记'
+pageRef = '/notes'
+weight = 1
+[menus.primary.params]
+icon = 'notebook'
+color = '#1BCDFC'
+[[menus.primary]]
+name = 'Coding'
+pageRef = '/coding'
+weight = 2
+[menus.primary.params]
+icon = 'gocalf-coding'
+color = '#3DC550'
+[[menus.primary]]
+name = '博客'
+pageRef = '/blog'
+weight = 3
+[menus.primary.params]
+icon = 'blog'
+color = '#FFA500'
+[[menus.primary]]
+name = 'Sidera'
+pageRef = '/sidera'
+weight = 4
+[menus.primary.params]
+icon = 'sidera-bold-duotone'
+color = '#9a805f'
+[[menus.primary]]
+name = '关于'
+pageRef = '/about'
+weight = 5
+[menus.primary.params]
+icon = 'about'
+color = '#3370FF'
+
+[[menus.social]]
+name = "Email"
+url = "mailto:calf.zhou@gmail.com"
+weight = 1
+[menus.social.params]
+icon = "gocalf-gmail"
+
+[[menus.social]]
+name = "GitHub"
+url = "https://github.com/calfzhou"
+weight = 2
+[menus.social.params]
+icon = "gocalf-github"
+
+[[menus.social]]
+name = "Facebook"
+url = "https://www.facebook.com/calfzhou"
+weight = 3
+[menus.social.params]
+icon = "gocalf-facebook"
+
+[[menus.social]]
+name = "Telegram"
+url = "https://t.me/calfzhou"
+weight = 4
+[menus.social.params]
+icon = "gocalf-telegram"
+
+[[menus.social]]
+name = "PGP"
+url = "/pgp/"
+weight = 5
+[menus.social.params]
+icon = "gocalf-fingerprint"
+
+[[menus.social]]
+name = "切换主题"
+weight = 6
+[menus.social.params]
+onclick = "Sidera.cycleColorMode()"
+icon = "color-mode"
+
+[[menus.footer]]
+identifier = "gocalf"
+name = "GoCalf"
+weight = 1
+
+[[menus.footer]]
+parent = "gocalf"
+name = "主页"
+url = "/"
+weight = 1
+
+[[menus.footer]]
+parent = "gocalf"
+name = "关于"
+url = "/about/"
+weight = 2
+
+[[menus.footer]]
+parent = "gocalf"
+name = "PGP 信息"
+url = "/pgp/"
+weight = 3
+
+[[menus.footer]]
+parent = "gocalf"
+name = "旧站"
+url = "https://blog.gocalf.com/"
+weight = 4
+
+[[menus.footer]]
+identifier = "content"
+name = "内容"
+weight = 2
+
+[[menus.footer]]
+parent = "content"
+name = "所有笔记"
+url = "/preset/notes/"
+weight = 1
+
+[[menus.footer]]
+parent = "content"
+name = "所有博客"
+url = "/preset/blog/"
+weight = 2
+
+[[menus.footer]]
+parent = "content"
+name = "所有文档"
+url = "/preset/docs/"
+weight = 3
+
+[[menus.footer]]
+identifier = "contact"
+name = "联系我"
+weight = 3
+
+[[menus.footer]]
+parent = "contact"
+name = "Email"
+url = "mailto:calf.zhou@gmail.com"
+weight = 1
+
+[[menus.footer]]
+parent = "contact"
+name = "GitHub"
+url = "https://github.com/calfzhou"
+weight = 2
+
+[[menus.footer]]
+parent = "contact"
+name = "Facebook"
+url = "https://www.facebook.com/calfzhou"
+weight = 3
+
+[[menus.footer]]
+parent = "contact"
+name = "Telegram"
+url = "https://t.me/calfzhou"
+weight = 4
+
+[[menus.footer]]
+identifier = "thanks"
+name = "特别感谢"
+weight = 4
+
+[[menus.footer]]
+parent = "thanks"
+name = "Hexo Stellar"
+url = "https://xaoxuu.com/wiki/stellar/"
+weight = 2
+
+[[menus.footer]]
+parent = "thanks"
+name = "霞鹜文楷"
+url = "https://github.com/lxgw/LxgwWenKai"
+weight = 3
+
+[[menus.footer]]
+parent = "thanks"
+name = "今日诗词"
+url = "https://www.jinrishici.com/"
+weight = 4

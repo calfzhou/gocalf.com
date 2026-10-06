@@ -18,11 +18,11 @@
   "Mark as `good`": {
     "scope": "markdown",
     "prefix": "good",
-    "body": "{% mark ✓ color:green %}"
+    "body": "{{< mark text=\"✓\" color=\"green\" >}}"
   },
   "Mark as `bad`": {
     "scope": "markdown",
     "prefix": "bad",
-    "body": "{% mark ✗ color:red %}"
+    "body": "{{< mark text=\"✗\" color=\"red\" >}}"
   },
 }

@@ -1,0 +1,10 @@
+/* Site-owned preservation utilities; not blanket raw-HTML/author-style support. */
+.prose .source-linebreaks :is(td,th) { white-space: pre-line; }
+.prose .gocalf-cube { width: var(--cube-width); max-width: 100%; margin: 1rem auto; }
+.cube-view { width: 100%; height: var(--cube-height); max-width: 100%; }
+.cube-view canvas { display: block; max-width: 100%; }
+.cube-error { color: var(--text); }
+
+/* The welcome sentence is separate from the menu and follows native sidebar type. */
+.gocalf-welcome { margin: 0 0 28px; }
+.gocalf-welcome p { margin: 0; padding-inline: 6px; min-block-size: 1lh; }

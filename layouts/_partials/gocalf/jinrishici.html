@@ -1,0 +1,5 @@
+<section class="gocalf-welcome text-widget" data-gocalf-poem aria-hidden="true" aria-label="{{ T "gocalf_poem_title" }}">
+  <p class="authored-text" data-poem-text></p>
+</section>
+{{- $script := resources.Get "js/jinrishici.js" | minify | fingerprint -}}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>

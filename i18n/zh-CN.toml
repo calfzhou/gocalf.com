@@ -1,0 +1,6 @@
+# Site build credit.
+[built_with]
+other = "由 [Hugo](https://gohugo.io/) 和 [Sidera](https://github.com/calfzhou/hugo-theme-sidera) 构建。"
+
+[gocalf_poem_title]
+other = "今日诗词"
