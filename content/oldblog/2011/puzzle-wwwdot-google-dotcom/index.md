@@ -3,16 +3,12 @@ title: 数学趣题 WWWDOT-GOOGLE=DOTCOM
 slug: puzzle-wwwdot-google-dotcom
 date: '2011-07-13T22:49:00+08:00'
 lastmod: '2011-08-03T20:56:00+08:00'
-authors:
-- Calf
 tags:
 - Puzzle
 - Google
 categories:
 - 数学
 summary: 一道关于 Google 的数字游戏题。
-params:
-  lang: zh_cn
 keywords:
 - 智力题
 - Math Puzzle

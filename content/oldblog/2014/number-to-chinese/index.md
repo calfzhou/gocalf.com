@@ -3,8 +3,6 @@ title: 将整数数字转换成中文
 slug: number-to-chinese
 date: '2014-01-28T09:30:00+08:00'
 lastmod: '2014-01-28T09:30:00+08:00'
-authors:
-- Calf
 tags:
 - Python
 - Unit Test
@@ -12,8 +10,6 @@ tags:
 categories:
 - 程序开发
 summary: 一个简单的开发问题，（用 Python）编写一段程序，将一个任意给定的整数转换成对应的中文读法。比如输入数字 \-12345，输出字符串“负一万二千三百四十五”。
-params:
-  lang: zh_cn
 keywords:
 - Python
 - 中文数字
@@ -30,7 +26,7 @@ keywords:
 > [!NOTE]
 > 实际上，对于同一个数字，用中文的读法可能不唯一，在不同的场合也可能会有不同的习惯。我这里采用 Google 拼音输入法提供的读法。
 
-## 准备工作 {#id2}
+## 准备工作
 
 基本的方法很简单，从高位到低位依次把每个数字映射成对应的汉字，再把位数对应的汉字加上就可以了。如果是负数，则在前面加一个“负”即可。
 
@@ -58,7 +54,7 @@ CHINESE_UNITS = ['', '十', '百', '千']
 CHINESE_GROUP_UNITS = ['', '万', '亿', '兆']
 ````
 
-## 初始版本 {#id3}
+## 初始版本
 
 常量定义好之后，就先写个最简单的处理方法。负数和零就不多说了，只看正数的情况。
 
@@ -120,7 +116,7 @@ return ''.join(words)
 
 啊，由于工作原因，代码风格有所调整。以前在 Python 里函数名采用驼峰方式，首字母大写。现在改用小写加下划线了。
 
-## 单元测试 {#id4}
+## 单元测试
 
 显然上面的代码是有问题的，比如如果数字中有 0，有些结果就不太对。对于 11 到 19 的处理也有问题。因此需要做单元测试，多准备各种情况的测试用例尽可能覆盖更多的特殊情况。
 
@@ -176,11 +172,11 @@ add_tests()
 python -m unittest test_translate_number_to_chinese
 ````
 
-## 大刀阔斧进行修改 {#id5}
+## 大刀阔斧进行修改
 
 准备好测试方法和足够的测试用例后，就可以放心地对代码进行修改了。每次修改一点儿，都可以跑一下单元测试，看看又成功或者失败了几个用例，总结出规律，继续改进。
 
-### 特殊的“0” {#id6}
+### 特殊的“0”
 
 目前主要的问题在于对“0”的处理上，上面的程序忽略了所有的“0”。
 
@@ -223,13 +219,13 @@ for position, digit in reversed(list(_enumerate_digits(number))):
 # End core loop.
 ````
 
-### 全零的万组 {#id7}
+### 全零的万组
 
 接下来遇到的问题是，如果一个万组完全是 0，就不要再添加对应的单位了，比如 100000000：一亿（现在会输出“一亿万”）。
 
 解决方法很简单，把上面的 `if unit == 0:` 改成 `if unit == 0 and not group_is_zero:` 即可。完整代码略。
 
-### 麻烦的“1” {#id8}
+### 麻烦的“1”
 
 最后一种特殊的情况是由数字“1”引起的。
 
@@ -278,7 +274,7 @@ for position, digit in reversed(list(_enumerate_digits(number))):
 # End core loop.
 ````
 
-## JavaScript 版本 {#id9}
+## JavaScript 版本
 
 代码介绍完了，原先用于试输入数字的 JavaScript 版本现仅提供HTML 文件下载，不再显示或运行表单。历史源码链接：[http://jsfiddle\.net/calfzhou/tGEz7/](http://jsfiddle.net/calfzhou/tGEz7/)。
 

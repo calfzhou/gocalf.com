@@ -3,16 +3,12 @@ title: 求内积最大的子数组
 slug: max-inner-product
 date: '2011-10-29T23:09:00+08:00'
 lastmod: '2011-10-30T15:05:00+08:00'
-authors:
-- Calf
 tags:
 - Interview Question
 categories:
 - 算法
 summary: 问题描述：有两个长度均为 n 的整数数组 A 和 B，现在要从这两个数组中各抽出 s 个数字，分别构成两个新的数组 C 和 D，要求数组 C 和
   D 的内积最大。
-params:
-  lang: zh_cn
 keywords:
 - Google 面试题
 - 数组内积

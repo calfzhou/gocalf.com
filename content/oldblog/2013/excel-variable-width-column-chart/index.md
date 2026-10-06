@@ -3,15 +3,11 @@ title: 在 Excel 中制作不等宽柱状图
 slug: excel-variable-width-column-chart
 date: '2013-12-13T14:35:00+08:00'
 lastmod: '2019-09-30T16:00:00+08:00'
-authors:
-- Calf
 tags:
 - Excel
 categories:
 - 有用知识
 summary: 介绍一下我是怎么在 Microsoft Office Excel 中制作不等宽柱状图（Variable Width Column Chart）的。
-params:
-  lang: zh_cn
 keywords:
 - Microsoft Excel
 - Variable Width Column Chart
@@ -28,7 +24,7 @@ Chart，我没有仔细去考证，二者好像也并不完全一样。
 
 注：以下操作是基于 Microsoft Office Excel 2013 进行的，其他版本可能会有一些差异，但思路是相通的。
 
-## 数据和目标效果 {#id1}
+## 数据和目标效果
 
 假设我们有这样一组数据，一共五个对象，每个对象都有两个数值属性（x 和 y）。我们希望用柱子的宽度表示 x 的大小（这里只考虑 x 是非负数的情况），高度表示 y 的大小。
 
@@ -48,7 +44,7 @@ Chart，我没有仔细去考证，二者好像也并不完全一样。
 
 一个柱子是有宽度和高度的，二者共同构成了这个柱子的面积。在 Excel 内置的图表类型中，面积图最接近这个需求。因此可以想到用面积图来模拟不同宽度的柱子。为了区分不同的对象，我们可以为每一个对象画一个面积图，把多个这样的面积图叠加起来，并让每一个柱子在横轴方向的位置不重叠，就能得到想要的样子了。下面就跟着我具体操作一遍。
 
-## 基础数据和第一次扩展 {#id2}
+## 基础数据和第一次扩展
 
 首先在 Excel 中把原始数据录入进去。我个人比较喜欢把数据组织成 Excel 表（Excel
 2007 才开始有此功能）。这是将一块普通的单元格区域转换成一种有内在联系的表结构，可以更加方便地管理和操作表中的数据。如果你还没有接触过，可以参考 [官方的文档](http://office.microsoft.com/en-us/excel-help/overview-of-excel-tables-HA010048546.aspx)（[中文文档](http://office.microsoft.com/zh-cn/excel-help/overview-of-excel-tables-HA010048546.aspx)），你一定会爱上它。对于今天要做的不等宽柱状图，Excel 表并不是必需的，但它会使得公式更加直观。我今天给出的每一个公式，都会用两种形式（使用 Excel 表和不使用 Excel 表）给出，以方便那些确实不习惯 Excel 表的童鞋。一定要注意，如果你用 Excel 表，那么对于任何一列，其每一行的公式都是一样的。而如果不用 Excel 表，我所给出的公式只是该列第一行的公式，你要特别小心公式中什么地方应该加“\$”，什么时候不加“\$”，后续行的公式会自动根据有没有“\$”进行变换。
@@ -98,7 +94,7 @@ Left 列的计算公式是：
 =$E2-$D2
 ````
 
-## 面积图数据扩展 {#id3}
+## 面积图数据扩展
 
 前面提到了，我们要用一系列面积图来模拟不等宽柱状图，每一个柱子对应一条面积图曲线。而为了描述一个柱子，需要有四个坐标数据，即柱子矩形的四个顶点。因此原始数据中每一行就要扩展成为 4 行新的数据（分别对应一个柱子的左下、左上、右上、右下顶点）。那我们就来创建一个新的 Excel 表来计算这些数据。
 
@@ -165,7 +161,7 @@ TableArea 的第二列叫作 ItemId，用于计算这一行数据对应于原始
 
 {{< image src="data_ready.png" alt="data_ready" caption="准备完毕的两个 Excel 表" >}}
 
-## 作图 {#id4}
+## 作图
 
 现在来创建不等宽柱状体的主体结构。
 
@@ -197,7 +193,7 @@ Position 从默认的 Next to Axis 改为 None。
 
 {{< image src="chart_demo.png" alt="chart_demo" caption="不等宽柱状图的主体结构" >}}
 
-## 添加数据标签 {#id5}
+## 添加数据标签
 
 有了主体结构后，大家可以根据需要自行美化图表了，这里我介绍一下如何添加目标效果中的位于柱子上方的数据标签，算作抛砖引玉吧。
 
@@ -243,7 +239,7 @@ Range 对话框，将数据范围设置为 TableData 的 X 列整列数据。然
 - 不用 Excel 表的示例文件：[variable\_width\_column\_no\_table\.xlsx](variable_width_column_no_table.xlsx)
 
 
-## Highcharts 版本 {#highcharts}
+## Highcharts 版本
 
 旧站当时使用 [Highcharts](http://www.highcharts.com/) 渲染动态图表。Highchart 也并不直接支持不等宽柱状图，但是可以用完全相同的方法来进行模拟。下面保留依据原始数据重绘的静态图，不再提供交互；原始数据可在图后下载。也可参考历史链接 [我共享的 jsfiddle](http://jsfiddle.net/calfzhou/TUt2U/)：
 

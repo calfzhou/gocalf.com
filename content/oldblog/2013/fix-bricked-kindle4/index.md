@@ -3,15 +3,11 @@ title: Kindle 4 修砖记
 slug: fix-bricked-kindle4
 date: '2013-07-29T10:13:00+08:00'
 lastmod: '2013-07-29T10:13:00+08:00'
-authors:
-- Calf
 tags:
 - Kindle
 categories:
 - 数码电子
 summary: 入手一年的 Kindle 4 突然变成砖头了，屏幕显示“Your Kindle Needs Repair”，花了大半个晚上的时间才修好它，简单记录一下。
-params:
-  lang: zh_cn
 keywords:
 - Kindle 4
 - unbrick
@@ -34,7 +30,7 @@ Repair”，原来就是传说中的变成砖头了。
 修砖需要用到的一些工具，我观察到的都是 Windows 程序，所以一切操作都在 Windows
 7 的虚拟机中进行。如果是 Windows XP，可能在驱动方面会稍微麻烦一些。
 
-## 1\. 让 Kindle 进入诊断模式 {#kindle}
+## 1\. 让 Kindle 进入诊断模式
 
 工具：Kindle Select Boot，我是在 [这里](http://www.mobileread.com/forums/showthread.php?t=169645) 下载到的。
 
@@ -49,7 +45,7 @@ Device 就得再来一次了。
 device 的信息，在下半部的 Profile 那里选择 Kindle
 diags（当时没截图，现在也懒得再折腾一次 Kindle 了）。点击右下角的 Start 按钮，就可以让 Kindle 进入诊断模式。
 
-## 2\. 将 mmcblk0p1\.img 拷贝到 Kindle 中 {#mmcblk0p1-img-kindle}
+## 2\. 将 mmcblk0p1\.img 拷贝到 Kindle 中
 
 需要下载一个叫做 mmcblk0p1\.img 的文件，其实我也不清楚这到底是什么，看起来是个镜像文件。我下载的是 [mmcblk0p1\_410\.img](http://60.211.209.221/cdn.baidupcs.com/file/01589c0ba1f05e9e4f55e35d02ffc05b?xcode=053458c9324860ffda9317ddb745a10aa9749899cf109a05&fid=2601356780-250528-1879823735&time=1374668763&sign=FDTAXER-DCb740ccc5511e5e8fedcff06b081203-7N%2BEg07f9BuUIjG8wPMKIV8gURM%3D&to=cb&fm=N,B,T&expires=8h&rt=sh&r=586640283&logid=1498755034&sh=1&wsiphost=ipdbm)（点击下载），RAR 压缩包的大小是 144MB，解压后 358MB。
 
@@ -60,7 +56,7 @@ mode”，电脑就会将 Kindle 识别为 U 盘，将下载解压后的 \.img �
 
 拷贝完成后，在 Kindle 上按左方向键退出 U 盘模式，并返回主菜单。
 
-## 3\. SSH 登录到 Kindle {#ssh-kindle}
+## 3\. SSH 登录到 Kindle
 
 在 SSH 登录之前，先要确认一下 Kindle 系统的版本和序列号（Serial
 Number），以便获取 root 密码。系统版本我是没注意到，序列号在 Kindle 诊断模式主菜单第一项里就能找到。
@@ -92,7 +88,7 @@ password = 'fiona%s' % hashlib.md5('%s\n' % serial_number).hexdigest()[7:11]
 print password
 ````
 
-## 4\. 进行系统恢复 {#id1}
+## 4\. 进行系统恢复
 
 SSH 登录成功后，在终端中运行如下命令来恢复系统（大概需要几分钟的时间）：
 
@@ -108,6 +104,6 @@ rm /var/local/system/.framework_reboots
 rm /var/local/system/.framework_retries
 ````
 
-## 5\. 完成 {#id2}
+## 5\. 完成
 
 这些都弄完了，长按电源键重启 Kindle，终于恢复了。

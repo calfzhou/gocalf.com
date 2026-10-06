@@ -3,15 +3,11 @@ title: 自动机编程游戏：Manufactoria（流水线编程）
 slug: manufactoria
 date: '2011-11-03T21:42:00+08:00'
 lastmod: '2011-11-03T21:42:00+08:00'
-authors:
-- Calf
 tags:
 - Puzzle
 categories:
 - 游戏
 summary: 前几天在 Matrix67 的博客里看到了这个益智小游戏：Manufactoria，抽空玩了玩，虽然关卡不算多，但非常有趣。这是个程序设计类的游戏，感觉就像是个状态机吧（有限自动机？），从纸带上读取数据，具有分支和写数据的功能，利用简单的几种原件组装成一台可以识别特定模式或者完成指定运算的机器。
-params:
-  lang: zh_cn
 keywords:
 - Manufactoria
 - 图灵机

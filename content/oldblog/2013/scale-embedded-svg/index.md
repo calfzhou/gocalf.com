@@ -3,16 +3,12 @@ title: 让页面中嵌入的 SVG 图片可以缩放
 slug: scale-embedded-svg
 date: '2013-11-19T21:52:00+08:00'
 lastmod: '2013-11-19T21:52:00+08:00'
-authors:
-- Calf
 tags:
 - HTML
 - SVG
 categories:
 - 建站
 summary: 在 HTMl 页面中用 \<object\> 标签嵌入的 SVG 图片如何能跟随窗口大小自动缩放呢？
-params:
-  lang: zh_cn
 keywords:
 - Scalable Vector Graphics
 - Auto Scale
