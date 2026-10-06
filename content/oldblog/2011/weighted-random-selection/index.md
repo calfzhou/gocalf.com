@@ -194,7 +194,7 @@ map = Table[
 ListLinePlot[map / retry, PlotMarkers -> Automatic]
 ````
 
-{{< image src="mathematica_random_sample.png" alt="mathematica_random_sample" caption="Mathematica RandomSample 随机选取 m 个元素，第 i 个元素被选中的概率" >}}
+{{< figure src="mathematica_random_sample.png" alt="mathematica_random_sample" caption="Mathematica ` RandomSample ` 随机选取 m 个元素，第 i 个元素被选中的概率" loading="lazy" >}}
 
 苦苦思考了好几天，但并没有想到一个直观的方法可以给之前的 ` RandomSample ` 加上权重处理。因为那概率式子太复杂，实在不知道该怎么去凑。不过在下一篇文章中将会介绍一个神奇的算法（当然不是我想出来的），并且会给出我的证明。
 
