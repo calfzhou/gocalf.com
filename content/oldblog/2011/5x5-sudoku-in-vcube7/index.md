@@ -42,7 +42,7 @@ keywords:
 
 接着来设计花样，先找一个五阶对角线数独的分布，用下面这段随意写出的 Python 代码就可以搞定。
 
-````python {linenos=table}
+```python {linenos=table}
 def FillBoard(board, n, xy):
   x = xy % n
   y = xy // n
@@ -75,21 +75,21 @@ def GenerateBoard(n):
 
 cnt = 5
 board = GenerateBoard(cnt)
-````
+```
 
 用程序找到第一组解是：
 
-````text {linenos=table}
+```text {linenos=table}
 [1, 2, 3, 4, 5]
 [2, 4, 5, 3, 1]
 [5, 3, 2, 1, 4]
 [3, 1, 4, 5, 2]
 [4, 5, 1, 2, 3]
-````
+```
 
 下面来确定每个数字在每一面所对应的颜色。首先六个面的面心是不能动的，因此每个面的 2 号颜色就都确定了。接着要考虑每个面的底色（就是棱块和角块的颜色），这个颜色不能随便选，要考虑魔方六个面的位置关系。我所选定的方案是，面心色蓝、红、绿、橙、黄、黑分别的对应于棱角色黑、蓝、黄、绿、橙、红。最后给每个面分配第 1、3、4、5 号颜色，稍微注意一下限制条件就好了。最后得到六个面的配色方案（程序中的 W 对应于黑色）：
 
-````python {linenos=table}
+```python {linenos=table}
 def ApplyColor(board, colors):
   newboard = [[colors[v] for v in row] for row in board]
   return newboard
@@ -111,6 +111,6 @@ for colors in allcolors:
   colorboard = ApplyColor(board, colors)
   DrawBoard(colorboard)
   print()
-````
+```
 
 最后一步就是纯体力活——转魔方。这里就不详细说了，基本的过程是先把棱块和角块转好，最后就可以随意调换每个面中部的颜色了。因为图案看起来乱乱的，转的时候很容易忘记哪边已经转好哪边还没转，只能是小心仔细慢慢进行。

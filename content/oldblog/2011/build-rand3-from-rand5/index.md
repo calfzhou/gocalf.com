@@ -37,15 +37,15 @@ $$
 
 基于这个想法，我们来看看这个算法是什么样子的：
 
-````python {linenos=table}
+```python {linenos=table}
 def Rand3():
     x = -1
     while not 0 <= x < 3:
         x = Rand5()
     return x
-````
+```
 
-````cpp {linenos=table}
+```cpp {linenos=table}
 int Rand3()
 {
     int x;
@@ -55,7 +55,7 @@ int Rand3()
     } while (x >= 3);
     return x;
 }
-````
+```
 
 算法很简单，x 是我们最终要输出的数字，只要它不在 \[0,
 3\) 范围内，就不断地调用 Rand5 来更新它。直观地看，算法输出的数字只有 0、1、2 这三个，而且对任何一个都没有偏袒，那么显然每个数字的概率都是 1/3，那让我们来严格地计算一下。
@@ -96,15 +96,15 @@ $$
 
 改变一下题目，如果要求利用 Rand5 编写 Rand7 怎么办？很简单，用两个 Rand5 可以拼出 Rand25，然后就用前面的方法即可：
 
-````python {linenos=table}
+```python {linenos=table}
 def Rand7():
     x = -1
     while not 0 <= x < 21:
         x = Rand5() * 5 + Rand5()
     return x % 7
-````
+```
 
-````cpp {linenos=table}
+```cpp {linenos=table}
 int Rand7()
 {
     int x;
@@ -114,6 +114,6 @@ int Rand7()
     } while (x >= 21);
     return x % 7;
 }
-````
+```
 
 【2013 年 11 月 7 日】可以直接算出，按照这种方法，平均每运行一次 Rand7，需要调用 Rand5 的次数。这里 m 等于 2，p 等于 21/25，所以最后的结果是 50/21，大约是 2\.38。

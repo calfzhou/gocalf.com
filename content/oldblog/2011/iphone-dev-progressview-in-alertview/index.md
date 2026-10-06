@@ -25,7 +25,7 @@ Bar）使得用户了解处理进度。这个进度条应该是在一个模态�
 
 我们知道，如果要显示一个 alert 窗口（比如用来显示错误或警告信息、询问用户是否确认某操作等等），只要简单地创建一个 UIAlertView 对象，再调用其 show 方法即可。示意代码如下：
 
-````objc {linenos=table}
+```objc {linenos=table}
 UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:@"Title"
                                                      message:@"Message"
                                                     delegate:nil
@@ -33,13 +33,13 @@ UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:@"Title"
                                            otherButtonTitles:nil]
                           autorelease];
 [alertView show];
-````
+```
 
 如果要添加一个进度条，只要先创建并设置好一个 [UIProgressView](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIProgressView_Class/Reference/Reference.html) 的实例，再利用 addSubbiew 方法添加到 alertView 中即可。
 
 在实际应用中，我可能需要在类中保存进度条的对象实例，以便更新其状态，因此先在自己的 ViewController 类中添加成员变量：
 
-````objc {linenos=table}
+```objc {linenos=table}
 //  MySampleViewController.h
 #import <UIKit/UIKit.h>
 
@@ -49,11 +49,11 @@ UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:@"Title"
 }
 
 @end
-````
+```
 
 接下来写一个叫做 showProgressAlert 的方法来创建并显示带有进度条的 alert 窗口，其中高亮的部分就是把进度条添加到 alertView 中：
 
-````objc {linenos=table hl_lines="9 10 11"}
+```objc {linenos=table hl_lines="9 10 11"}
 - (void)showProgressAlert:(NSString*)title withMessage:(NSString*)message {
     UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:title
                                                          message:message
@@ -68,19 +68,19 @@ UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:@"Title"
 
     [alertView show];
 }
-````
+```
 
 为了让数据处理的子进程能够方便地修改进度条的值，再添加一个简单的方法：
 
-````objc {linenos=table}
+```objc {linenos=table}
 - (void)updateProgress:(NSNumber*)progress {
     progressView_.progress = [progress floatValue];
 }
-````
+```
 
 另外，数据处理完毕后，我们还需要让进度条以及 alertView 消失，由于之前并没有保存 alertView 的实例，可以通过进度条的 superview 访问之：
 
-````objc {linenos=table}
+```objc {linenos=table}
 - (void)dismissProgressAlert {
     if (progressView_ == nil) {
         return;
@@ -94,11 +94,11 @@ UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:@"Title"
     [progressView_ release];
     progressView_ = nil;
 }
-````
+```
 
 假设处理数据的方法叫 processData，当然它会在一个单独的线程中运行，下面的片段示意了如何更新进度条状态，以及最后如何让它消失。
 
-````objc {linenos=table}
+```objc {linenos=table}
 - (void)processData:(int)total {
     for (int i = 0; i < total; ++i) {
         // Update UI to show progess.
@@ -118,7 +118,7 @@ UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:@"Title"
                         waitUntilDone:YES];
     // Other finalizations.
 }
-````
+```
 
 在实际使用中，带进度条的 alert view 大概长得是这样的：
 

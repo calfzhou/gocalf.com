@@ -81,28 +81,28 @@ HTML 已包含原来的 MD5 脚本及版权声明，供下载查看。
 其实 root 密码就是“fiona”加上序列号 MD5 值中的一部分。生成代码如下（Python
 2\.7\.\*）：
 
-````python {linenos=table}
+```python {linenos=table}
 import hashlib
 serial_number = 'USE YOUR OWN SERIAL NUMBER'
 password = 'fiona%s' % hashlib.md5('%s\n' % serial_number).hexdigest()[7:11]
 print password
-````
+```
 
 ## 4\. 进行系统恢复
 
 SSH 登录成功后，在终端中运行如下命令来恢复系统（大概需要几分钟的时间）：
 
-````bash {linenos=false}
+```bash {linenos=false}
 dd if=/mnt/us/mmcblk0p1_410.img of=/dev/mmcblk0p1 bs=4K
-````
+```
 
 成功后，我又运行了另外几个命令以免还是不能重启，有的命令根本就没执行成功，可能要看具体的情况了：
 
-````bash {linenos=false}
+```bash {linenos=false}
 dd if=/dev/zero of=/dev/mmcblk0p3 bs=4K
 rm /var/local/system/.framework_reboots
 rm /var/local/system/.framework_retries
-````
+```
 
 ## 5\. 完成
 

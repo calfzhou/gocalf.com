@@ -36,7 +36,7 @@ $$
 
 下面用一段 Python 程序来实现这个过程，这里设计了一个类，叫做 ` RandomSelector `，提供方法 ` AddItem `，在遍历数据的时候把每个元素通过这个函数传进来，最后通过 ` SelectedItem ` 获取随机选择的元素。这么做主要是为了强调事先不知道元素的总数。
 
-````python {linenos=table}
+```python {linenos=table}
 from random import Random
 
 class RandomSelector:
@@ -57,11 +57,11 @@ class RandomSelector:
     if self._rand.randint(0, self._count) == 0:
       self._selectedItem = item
     self._count += 1
-````
+```
 
 在 Python 2\.5 中，` yield ` 不仅是个语句，更是一个表达式（详见 [PEP 342 \-\- Coroutines via Enhanced Generators](http://www.python.org/dev/peps/pep-0342/)，查阅 Generator 和 Coroutine，中文叫做“生成器”和“协程”），利用 ` yield ` 可以把程序写的更简洁一些：
 
-````python {linenos=table}
+```python {linenos=table}
 from random import Random
 
 def RandomSelect(rand=None):
@@ -75,11 +75,11 @@ def RandomSelect(rand=None):
     if rand.randint(0, count) == 0:
       selection = item
     count += 1
-````
+```
 
 下面这段程序示意了如何调用 ` RandomSelect ` 函数来测验其随机效果：
 
-````python {linenos=table}
+```python {linenos=table}
 # Sample code to use RandomSelect function
 n = 10
 repeat = 100000
@@ -93,19 +93,19 @@ for i in xrange(repeat):
     selection = selector.send(item)
   occurrences[selection] += 1
 print occurrences
-````
+```
 
 十个元素，重复十万次，理论上每个元素会被选中恰好一万次。某次实验结果如下：
 
-````text {linenos=false}
+```text {linenos=false}
 [10020, 10084, 10003, 10008, 9985, 10145, 9987, 9925, 9955, 9888]
-````
+```
 
 可见每个元素被选中的次数相差不大，是等概率的。
 
 如果用 C\#，就可以利用 ` IEnumerable ` 来实现，比如：
 
-````c# {linenos=table}
+```c# {linenos=table}
 public static bool RandomSelect(
     IEnumerable source,
     Random random,
@@ -132,7 +132,7 @@ public static bool RandomSelect(
 
     return (count> 0);
 }
-````
+```
 
 核心代码也就那么两三行而已，时间复杂度为 O\(n\)（并且只遍历一次），空间复杂度为 O\(1\)。其中 Python 的 ` random.randint(x, y) ` 返回 \[x,
 y\] 之间的随机整数；C\# 的 ` Random.Next(x) ` 返回 \[0,
@@ -147,7 +147,7 @@ OK，问题解决了。结束之前再做个简单的扩展，改成等概率随
 
 这里就给出 Python 的程序片段：
 
-````python {linenos=table}
+```python {linenos=table}
 from random import Random
 
 def RandomSample(m=1, rand=None):
@@ -165,7 +165,7 @@ def RandomSample(m=1, rand=None):
       if idx < m:
         selection[idx] = item
     count += 1
-````
+```
 
 时间复杂度 O\(n\)，空间复杂度 O\(m\)（不可能是 O\(1\) 的）。概率的计算方法为：
 

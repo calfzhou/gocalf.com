@@ -64,7 +64,7 @@ keywords:
 
 接下来对句子模板做第一次扫描，并根据情况更新相应汉字的字数和总字数。处理的方法很简单，每看到一个汉字，就要给它的计数加 1，总字数加 1。任何一个汉字，如果计数从 0 变成 1，即第一次遇到它，就要再给它的计数和总字数加 1，同时对“个”字执行同样的操作。把这个过程叫做“increase”操作，即：
 
-````text {linenos=table}
+```text {linenos=table}
 def increase(character c):
     if c.count == 0:
         c.count += 2
@@ -73,7 +73,7 @@ def increase(character c):
     else:
         c.count += 1
         total.count += 1
-````
+```
 
 比如首先看到“这”字，当前计数为 0，执行 increase 操作给它的个数加 2，总字数加 2，再对“个”字执行 increase 操作。由于“个”字此时的计数也是 0，因此它的计数直接加到 2，总字数加 2，这时注意还要再对“个”字执行一次 increase 操作。但第二次对“个”字执行 increase 操作时，由于其当前计数是 2 不是 0，所以直接给计数和总字数分别加 1 就行了。处理完第一个字“这”之后，计数情况为：2 个“这”，3 个“个”，总字数 5。
 
@@ -99,14 +99,11 @@ def increase(character c):
 
 - “一”、“这”、“句”等字的计数没有发生变化，并且这些数字对应的汉字已经全部统计过了，所以不必对它们做别的处理。
 
-
 - “二”、“三”、“十”等字，计数从没有变成了若干个，就要用跟刚才一样的方法，把这些数字翻译成中文并增加相应汉字的计数。
-
 
 - “个”字和总字数，我本来是想加入 10 和 25，但现在分别是 14 和 44，所以要把刚才加入的 10 和 25 都去掉，换成 14 和 25。比如把 10 换成 14，先对 “十”字做 decrease 操作，然后分别对“十”和“四”字执行 increase 操作。decrease 的过程如下所示，注意，由于每个字的计数都是直接从 0 涨到 2 的，所以也会直接从 2 降到 0。
 
-
-````text {linenos=table}
+```text {linenos=table}
 def decrease(character c):
     if c.count == 2:
         c.count -= 2
@@ -115,7 +112,7 @@ def decrease(character c):
     else:
         c.count -= 1
         total.count -= 1
-````
+```
 
 这样处理完后得到的新一轮计数为：
 
@@ -152,19 +149,15 @@ def decrease(character c):
 
 1. 所有汉字的计数和总字数均初始化为 0；
 
-
 2. 遍历句子模板中的每一个汉字，对其计数做“increase”操作，得到一组新的计数；
-
 
 3. 比较当前计数数组与前一轮计数数组中的每一项：
 
    1. 如果二者一致，无操作；
 
-
    2. 否则，对前一轮的数值对应的每个汉字执行 decrease 操作（0 除外），对当前数值对应的每个汉字执行 increase 操作（0 除外）；
 
 4. 重复步骤 3，直到相邻两轮计数数组完全一致。
-
 
 其中 increase 和 decrease 操作均如前所述，不再重复了。
 
@@ -184,11 +177,11 @@ def decrease(character c):
 
 想到一个比较简单的变通方法就是修改之前的 decrease 操作。本来一个汉字如果是第一次出现，计数就直接从 0 涨到 2，如果要去掉，也直接从 2 回到 0。这样避免了出现“一个 XX”的情况。这其实不是必须的，如果把条件放宽，允许出现“一个 XX”（仍然符合自我统计的要求，只是显得有点儿多余），可以让 decrease 操作把计数从 2 降到 1。写出来大概是这样：
 
-````text {linenos=table}
+```text {linenos=table}
 def decrease(character c):
     c.count -= 1
     total.count -= 1
-````
+```
 
 根据这个规则重新迭代计算，结果如下表示，发现到第 9 次迭代后就收敛完毕。
 
@@ -228,7 +221,7 @@ def decrease(character c):
 
 改造后的 decrease 操作大致是这样的：
 
-````text {linenos=table}
+```text {linenos=table}
 def decrease(character c):
     if c.count == 2 and random.choice(0, 1) == 0:
         c.count -= 2
@@ -237,7 +230,7 @@ def decrease(character c):
     else:
         c.count -= 1
         total.count -= 1
-````
+```
 
 用上面遇到问题的模板来说，以 3 作为随机数种子时可以得到这样的迭代过程，其中第 9 次和第 10 次的结果一致，是一个可行解。
 

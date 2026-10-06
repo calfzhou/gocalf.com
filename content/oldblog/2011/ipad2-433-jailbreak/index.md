@@ -25,28 +25,22 @@ keywords:
 
 1. 确认当前固件版本是 iOS 4\.3\.3 \(8J2\)（Settings\-\>General\-\>About\-\>Version）。
 
-
 2. 开启浏览器 Safari。
-
 
 3. 在地址栏中敲入 [http://www\.jailbreakme\.com](http://www.jailbreakme.com) （上次 iPhone
    4 也是这样的），打开页面。
 
 4. 在左侧 Cydia 图标下方可以看到有个 FREE 按钮（据说以后 iOS 越狱将要收费，似乎看到前兆了），点击。
 
-
 5. FREE 按钮变成 INSTALL，再点击。
 
-
 6. Safari 被自动关闭，在桌面上可以看到出现了 Cydia 的图标，并且正在下载中。
-
 
 7. 等待下载完成，打开 Cydia，越狱成功。
 
    {{< image src="cydia-ipad2-ios433-225x300.jpg" alt="cydia-ipad2-ios433" caption="Cydia on iPad2 iOS 4.3.3" original="cydia-ipad2-ios433.jpg" >}}
 
 8. 如果想装盗版的软件，可以添加 hackluo\.us 源，地址是 [http://cydia\.hackluo\.us](http://cydia.hackluo.us)。
-
 
 9. 在这个源中找到 AppSync for
    4\.0\+，安装即可。[weiphone 网](http://bbs.weiphone.com) 上说安装威锋源 [http://apt\.weiphone\.com](http://apt.weiphone.com) 的 AppSync\-for\-4\.0\+，不过很多人都反映这个在安装的时候会出现 Size

@@ -28,7 +28,7 @@ keywords:
 
 如果在 App 中需要状态栏一直是隐藏着的，可以在 ` <YOUR_APP>AppDelegate ` 的 ` application:didFinishLaunchingWithOptions: ` 函数中进行设置，比如下面这段示意代码可以让状态栏以淡出的方式隐藏起来：
 
-````objc {linenos=table hl_lines="3"}
+```objc {linenos=table hl_lines="3"}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
@@ -39,15 +39,13 @@ keywords:
 
     return YES;
 }
-````
+```
 
 相关的方法或属性是 [UIApplication](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html) 的：
 
 - [setStatusBarHidden:withAnimation:](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instm/UIApplication/setStatusBarHidden:withAnimation:)（iOS 3\.2\+）
 
-
 - [statusBarHidden](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instp/UIApplication/statusBarHidden)（iOS 2\.0\+）
-
 
 另外还有一个方法 [setStatusBarHidden:animated:](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/DeprecationAppendix/AppendixADeprecatedAPI.html#//apple_ref/occ/instm/UIApplication/setStatusBarHidden:animated:)，已经不推荐使用了（deprecated
 in iOS 3\.2）。
@@ -62,10 +60,10 @@ hidden”（不用手动输入，可以直接在下拉菜单中选取）。这�
 
 也可以以文本方式修改，在根节点中添加 UIStatusBarHidden 键值，值设为 true 即可：
 
-````xml {linenos=false}
+```xml {linenos=false}
 <key>UIStatusBarHidden</key>
 <true/>
-````
+```
 
 ## 三、在运行过程中隐藏或显示状态栏
 

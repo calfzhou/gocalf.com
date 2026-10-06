@@ -44,7 +44,7 @@ keywords:
 
 又啰嗦了。看一下这部分的代码（Python 2\.7\.x）。
 
-````python {linenos=table}
+```python {linenos=table}
 # -*- coding: utf-8 -*-
 
 CHINESE_NEGATIVE = '负'
@@ -52,7 +52,7 @@ CHINESE_ZERO = '零'
 CHINESE_DIGITS = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九']
 CHINESE_UNITS = ['', '十', '百', '千']
 CHINESE_GROUP_UNITS = ['', '万', '亿', '兆']
-````
+```
 
 ## 初始版本
 
@@ -62,7 +62,7 @@ CHINESE_GROUP_UNITS = ['', '万', '亿', '兆']
 
 因此首先需要从高位到低位枚举每一位数字，要同时知道数字和对应的数位（比如个位是 0，十亿位是 9，等等）。下面这段简单的程序是从低位开始枚举，使用的时候只要反转（reverse）一下就可以了。
 
-````python {linenos=table}
+```python {linenos=table}
 def _enumerate_digits(number):
 """
 :type number: int|long
@@ -74,11 +74,11 @@ while number > 0:
     number //= 10
     yield position, digit
     position += 1
-````
+```
 
 然后来写第一个版本的目标函数，translate\_number\_to\_chinese。
 
-````python {linenos=table}
+```python {linenos=table}
 def translate_number_to_chinese(number):
 """
 :type number: int|long
@@ -112,7 +112,7 @@ for position, digit in reversed(list(_enumerate_digits(number))):
 # End core loop.
 
 return ''.join(words)
-````
+```
 
 啊，由于工作原因，代码风格有所调整。以前在 Python 里函数名采用驼峰方式，首字母大写。现在改用小写加下划线了。
 
@@ -130,7 +130,7 @@ return ''.join(words)
 
 以前用 C# 的时候，做数据驱动的测试非常方便，只要给测试方法添加 [DataSource Attribute](http://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.datasourceattribute.aspx) 就可以了。在 Python 里没有发现直接的方法，不过可以自己写一个简单的函数来处理，原理就是用数据文件中的每一个测试用例给测试类动态添加一个测试方法。
 
-````python {linenos=table}
+```python {linenos=table}
 # -*- coding: utf-8 -*-
 from unittest import TestCase
 from foo import translate_number_to_chinese
@@ -160,7 +160,7 @@ def add_tests():
                     create_number_test_function(number, expected))
 
 add_tests()
-````
+```
 
 上面的示意中，假设测试用例保存在一个叫做“number\_data\.txt” 的 TSV 文件中。每行用 TAB 分割为两列，分别是阿拉伯数字和期望的中文读法。
 
@@ -168,9 +168,9 @@ add_tests()
 
 假设这段测试代码所在的文件叫做“test\_translate\_number\_to\_chinese\.py”，那么在命令行运行如下命令就可以把所有的测试用例都测一遍。
 
-````shell {linenos=table}
+```shell {linenos=table}
 python -m unittest test_translate_number_to_chinese
-````
+```
 
 ## 大刀阔斧进行修改
 
@@ -190,7 +190,7 @@ python -m unittest test_translate_number_to_chinese
 
 把上面 translate\_number\_to\_chinese 中的 core loop 修改一下，得到：
 
-````python {linenos=table}
+```python {linenos=table}
 # Begin core loop.
 # Version 0.2
 group_is_zero = True
@@ -217,7 +217,7 @@ for position, digit in reversed(list(_enumerate_digits(number))):
         group_is_zero = True
 
 # End core loop.
-````
+```
 
 ### 全零的万组
 
@@ -237,13 +237,13 @@ for position, digit in reversed(list(_enumerate_digits(number))):
 
 解决的方法是在上面的 `words.append(CHINESE_DIGITS[digit])` 前面增加条件：
 
-````python {linenos=table}
+```python {linenos=table}
 if digit != 1 or unit != 1 or not group_is_zero or (group == 0 and need_zero):
-````
+```
 
 最后完整的 core loop 代码为：
 
-````python {linenos=table}
+```python {linenos=table}
 # Begin core loop.
 # Version 0.4
 group_is_zero = True
@@ -272,7 +272,7 @@ for position, digit in reversed(list(_enumerate_digits(number))):
         group_is_zero = True
 
 # End core loop.
-````
+```
 
 ## JavaScript 版本
 

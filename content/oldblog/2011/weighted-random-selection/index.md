@@ -33,7 +33,7 @@ n）个元素的权重为 w{{< sub "i" >}}（\>
 
 虽然加了个权重，但解法依旧非常简单，在 [单次遍历，等概率随机选取问题](../random-selection/index.md) 中的 ` RandomSelect ` 函数上稍作修改就得到本问题的解法，依旧是 O\(n\) 时间，O\(1\) 辅助空间：
 
-````python {linenos=table}
+```python {linenos=table}
 from random import Random
 
 def WeightedRandomSelect(rand=None):
@@ -47,7 +47,7 @@ def WeightedRandomSelect(rand=None):
     totalweight += weight
     if rand.random() * totalweight < weight:
       selection = item
-````
+```
 
 其中 Python 的 ` random.random() ` 返回 \[0,
 1\) 之间的随机小数。
@@ -74,7 +74,7 @@ $$
 
 下面这段程序调用 ` WeightedRandomSelect ` 对一组具有等差数列权重的元素进行选取。
 
-````python {linenos=table}
+```python {linenos=table}
 # Sample code to use WeightedRandomSelect function
 # Use an arithmetic sequence as weights
 n = 10
@@ -91,20 +91,20 @@ for i in xrange(repeat):
     selection = selector.send((item, weights[item]))
   occurrences[selection] += 1
 print occurrences
-````
+```
 
 某次运行结果为：
 
-````text {linenos=false}
+```text {linenos=false}
 [1723, 3644, 5405, 7326, 9027, 10903, 12678, 14784, 16345, 18165]
-````
+```
 
 而对于这组权重的概率理论值为：
 
-````text {linenos=false}
+```text {linenos=false}
 1 : 2 : 3 : 4 : 5 : 6 : 7 : 8 : 9 : 10
 = 0.0181818 : 0.0363636 : 0.0545455 : 0.0727273 : 0.0909091 : 0.109091 : 0.127273 : 0.145455 : 0.163636 : 0.181818
-````
+```
 
 可见程序是正确的。
 
@@ -139,7 +139,7 @@ $$
 对于给定的一组权重，可以用下面这段程序计算出任意 m、i（程序中的 i 是从 0 开始的）对应的概率数值（请无视其 coding
 style）：
 
-````python {linenos=table}
+```python {linenos=table}
 def Foo(weights, ids, totalweight, m, i, times):
   if times == m: return 1
   p = 0.0
@@ -158,7 +158,7 @@ def CalcSampleProbability(weights, m, i):
   ids.remove(i)
   p = Foo(weights, ids, sum(weights), m, i, 0)
   return 1 - p
-````
+```
 
 可惜算法的复杂度非常高，` CalcSampleProbability ` 需要 O\(n^m\) 时间来完成一次计算。期待高手改进。
 
@@ -179,7 +179,7 @@ def CalcSampleProbability(weights, m, i):
 
 Mathematica 提供了 ` RandomSample ` 函数，支持带权选取，当然它是在遍历之前就已经知道元素个数的。给它一组等差分布的权重，可以看出十万次随机选取后得到的概率分布与上面的理论分布非常接近。
 
-````text {linenos=false}
+```text {linenos=false}
 count = 10;
 weights = Range[count];
 elems = Range[count];
@@ -192,7 +192,7 @@ map = Table[
     freq, {m, 1, count, 1}
 ];
 ListLinePlot[map / retry, PlotMarkers -> Automatic]
-````
+```
 
 {{< figure src="mathematica_random_sample.png" alt="mathematica_random_sample" caption="Mathematica ` RandomSample ` 随机选取 m 个元素，第 i 个元素被选中的概率" loading="lazy" >}}
 

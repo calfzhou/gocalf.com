@@ -22,17 +22,17 @@ keywords:
 
 这里主要针对已经以 `.svg` 扩展名保存的 SVG 图片文件。把这种格式的图片嵌入到 HTML 页面中主要有 [三种方法](http://www.w3schools.com/svg/svg_inhtml.asp)，即用 `<embed>`、`<object>` 或者 `<iframe>` 标签，具体的语法分别是：
 
-````html {linenos=false}
+```html {linenos=false}
 <embed src="path-to-image.svg" type="image/svg+xml" />
 <object data="path-to-image.svg" type="image/svg+xml"></object>
 <iframe src="path-to-image.svg"></iframe>
-````
+```
 
 当然，对于大多数浏览器，你也可以直接用 `<img>` 标签，即：
 
-````html {linenos=false}
+```html {linenos=false}
 <img src="path-to-image.svg" alt="some text"/>
-````
+```
 
 如果用 `<img>` 标签，那事情就简单了，它跟其他 `<img>` 标签里的位图一样，都可以在 CSS 的控制下随着页面而缩放，当然跟位图不同的是，它在缩放的时候不会有锯齿出现。
 
@@ -42,10 +42,10 @@ keywords:
 
 在询问了万能的 Google 之后，发现了解决的办法。原来如果 SVG 的根结点如果设置了 `width` 和 `height` 属性，图片就不会自动缩放，所要做的就是去掉这两个属性（在 [Inkscape](http://inkscape.org/) 中删除它们会使得它们被修改为 `100%`），然后根据图片中内容所占用的区域，设置 `viewBox`。有人说还要设置 `preserveAspectRatio`，不过我还没有仔细研究这个属性的具体影响，反正目前看起来加不加都行。
 
-````text {linenos=false}
+```text {linenos=false}
 preserveAspectRatio="xMinYMin meet"
 viewBox="0 0 {width} {height}"
-````
+```
 
 把其中的 `{width}` 和 `{height}` 用实际的数值替换掉就可以了。
 
@@ -59,10 +59,10 @@ viewBox="0 0 {width} {height}"
 
 关键的区别在于，我们可以通过 CSS 来指定矢量图的最大宽度，让它不要超出页面（或者父级区块）的范围，比如：
 
-````css {linenos=false}
+```css {linenos=false}
 object[type="image/svg+xml"] {
     max-width: 100%;
 }
-````
+```
 
 这种设置可以让图片在窗口变窄时跟着缩小，同时保留默认展示宽度。

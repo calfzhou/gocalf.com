@@ -37,12 +37,12 @@ keywords:
 程序（in
 Python）写出来那也是相当的简洁直观（为了跟后面的程序区分开来，这里取名 ` SlowFibonacci `）。
 
-````python {linenos=table}
+```python {linenos=table}
 def SlowFibonacci(n):
   assert n >= 0, 'invalid n'
   if n < 2: return n  # F(0) = 0, F(1) = 1
   return SlowFibonacci(n - 1) + SlowFibonacci(n - 2)
-````
+```
 
 这个算法的时间复杂度有着跟 Fibonacci 类似的递推方程：T\(n\) = T\(n \- 1\) \+ T\(n
 \- 2\) \+ O\(1\)，很容易得到  **T\(n\) = O\(1\.618 ^
@@ -54,7 +54,7 @@ n\)** （1\.618 就是黄金分割，$(1+\sqrt5)/2$）。空间复杂度取决�
 = 0 和 n =
 1 开始，逐个求出所有小于 n 的 Fibonacci 数，最后就可以算出 F\(n\)。由于每次计算值需要用到前两个 Fibonacci 数，更小的数就可以丢弃了，可以将空间复杂度降到最低。算法如下：
 
-````python {linenos=table}
+```python {linenos=table}
 def NormFibonacci(n):
   assert n >= 0, 'invalid n'
   if n == 0: return 0
@@ -62,7 +62,7 @@ def NormFibonacci(n):
   for i in xrange(n - 1):
     (prev, curr) = (curr, prev + curr)
   return curr
-````
+```
 
 显然时间复杂度是  **O\(n\)** ，空间复杂度是  **O\(1\)** 。
 
@@ -110,8 +110,7 @@ n\)）。下面的 Python 程序直接利用的 numpy 库中的矩阵乘法（�
 
 - Using numpy Library
 
-
-````python {linenos=table}
+```python {linenos=table}
 from numpy import matrix
 
 def MatrixPower(mat, n):
@@ -133,12 +132,11 @@ def FastFibonacci(n):
   mat = matrix([[1, 1], [1, 0]], dtype=object)
   mat = MatrixPower(mat, n - 1)
   return mat[0, 0]
-````
+```
 
 - Without numpy Library
 
-
-````python {linenos=table}
+```python {linenos=table}
 def DotProduct(x, y):
   n = len(x)
   assert len(y) == n, 'x and y must have the same length'
@@ -180,7 +178,7 @@ def FastFibonacci(n):
   mat = [[1, 1], [1, 0]]
   mat = MatrixPower(mat, n - 1)
   return mat[0][0]
-````
+```
 
 二阶方阵相乘一次可以看成是常数时间（虽然这个常数会比较大），因此整个算法的时间复杂度是  **O\(log
 n\)** ，空间复杂度是  **O\(1\)** 。
@@ -195,12 +193,9 @@ n\) 的算法，让我们来直观地比较比较它们。
 
 - 递归法拟合结果：0\.000501741 \* 1\.61816 ^ n，RSquare = 0\.999993。
 
-
 - 递推法拟合结果：0\.000788421 \+ 0\.000115831 \* n，RSquare = 0\.999464。
 
-
 - 矩阵法拟合结果：\-0\.0114923 \+ 0\.0253609 log\(n\)，RSquare = 0\.986576。
-
 
 下图是 n \<= 35 时，三种算法的千次运行耗时比较。其中红色为 O\(1\.618 ^
 n\) 的递归法；蓝色为 O\(n\) 的递推法；绿色为 O\(log

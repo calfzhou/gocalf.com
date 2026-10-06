@@ -32,21 +32,17 @@ keywords:
 
 - 前序（NLR）：` A B D C E G H F I `
 
-
 - 中序（LNR）：` D B A G E H C F I `
-
 
 - 后序（LRN）：` D B G H E I F C A `
 
-
 - 层序：` A B C D E F G H I `
-
 
 ## 一、用递归处理二叉树的前序、中序和后序遍历
 
 递归真是一个迷人东西，它可以把复杂的逻辑变得异常简洁，这也是自然界的表现形式之一。基于递归的前、中、后序遍历二叉树的程序几乎完全相同，用两个递归调用分别处理左、右子树，剩下的事情就是打印根结点。为节省篇幅，直接把三个程序写在一起，用一个参数来控制是哪种遍历方式，也可以更方便地看出三者之间的区别。
 
-````python {linenos=table}
+```python {linenos=table}
 def VisitTree_Recursive(root, order):
   if root:
     if order == 'NLR': print(root.data)
@@ -54,7 +50,7 @@ def VisitTree_Recursive(root, order):
     if order == 'LNR': print(root.data)
     VisitTree_Recursive(root.right, order)
     if order == 'LRN': print(root.data)
-````
+```
 
 ## 二、非递归的前序、中序遍历
 
@@ -62,7 +58,7 @@ def VisitTree_Recursive(root, order):
 
 前序和中序都是非常简单的，当遇到一个非空的根结点时，打印其数据（如果是前序遍历），并将其压栈，然后递归地（这里用循环来模拟递归）处理其左子结点；当没有左子结点时，从栈中弹出之前遇到的某个根结点（它没有左子结点，或者左子结点已经处理完毕，需要再处理右子结点），打印数据（如果是中序遍历），然后继续处理右子结点。同样地，把两种遍历方式写在一起以便比较。
 
-````python {linenos=table}
+```python {linenos=table}
 def VisitTree(root, order):
   s = []
   while root or s:
@@ -74,7 +70,7 @@ def VisitTree(root, order):
       root = s.pop()
       if order == 'LNR': print(root.data)
       root = root.right
-````
+```
 
 ## 三、非递归的后序遍历
 
@@ -82,7 +78,7 @@ def VisitTree(root, order):
 
 首先想到的改动就是在上面的程序的第 9 行到 11 行，不要从栈 s 中将根结点弹出，而是直接开始处理右子结点。但这就会带来一个问题：什么时候弹出根结点？实际上当左子树遍历完成、或者右子树遍历完成时，我们都会在栈里看到根结点，为了区分这两种状态，添加一个临时变量记录前一次访问的结点，如果前一个结点是根结点的右子树，就说明左右子树全都遍历完成了。非常简单。
 
-````python {linenos=table}
+```python {linenos=table}
 def VisitTreeLRN(root):
   s = []
   pre = None
@@ -96,7 +92,7 @@ def VisitTreeLRN(root):
     else:
       pre = s.pop()
       print(pre.data)
-````
+```
 
 ## 四、非递归的层序遍历
 
@@ -104,7 +100,7 @@ def VisitTreeLRN(root):
 
 处理过程非常简明，遇到一个结点，打印信息，然后依次将左、右子结点加入队列等待后续处理。
 
-````python {linenos=table}
+```python {linenos=table}
 from collections import deque
 
 def VisitTree_LevelOrder(root):
@@ -115,13 +111,13 @@ def VisitTree_LevelOrder(root):
     print(root.data)
     if root.left: q.append(root.left)
     if root.right: q.append(root.right)
-````
+```
 
 ## 附录
 
 上面的 python 代码基于 v2\.7。另外可以用下面这段代码来定义最简单的二叉树结点类，生成最上面图示的二叉树：
 
-````python {linenos=table}
+```python {linenos=table}
 class Node:
   def __init__(self, data, left = None, right = None):
     self.data = data
@@ -138,4 +134,4 @@ d = Node('D')
 b = Node('B', d)
 a = Node('A', b, c)
 root = a
-````
+```

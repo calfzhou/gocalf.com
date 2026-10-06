@@ -34,7 +34,7 @@ R\[i\]），假设现在我们总共有 s 的资源，要求设计一个调度�
 
 先看算法，稍后再做证明。
 
-````python {linenos=table}
+```python {linenos=table}
 def ScheduleTasks(R, O, n, s):
   # R: request
   # O: occupancy
@@ -47,7 +47,7 @@ def ScheduleTasks(R, O, n, s):
       return (False, tasks)
     s -= occ
   return (True, tasks)
-````
+```
 
 显然这是贪心法，那么贪心法是否一定能得到可行解呢？
 

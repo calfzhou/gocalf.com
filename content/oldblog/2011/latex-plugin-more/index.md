@@ -24,9 +24,7 @@ keywords:
 
 1. 在启用 MathJax 的情况下，修复 ` $$...!$$ ` 无法显示公式源码的问题。
 
-
 2. 限制公式的修饰符为 ` [latex] ` 和 ` [/latex] `。
-
 
 根据 [LaTeX for WordPress](http://wordpress.org/extend/plugins/latex/) 主页上的说明，如果不想对公式进行渲染，只显示公式的源码，需要在第二个 ` $$ ` 前面加 ` ! `。但在实际使用中发现开启了 MathJax 的时候无法实现这一效果。仔细看了一下 MathJax 的文档，原来虽然插件把 ` $$a^2+b^2+c^2!$$ ` 这样的代码转换成了 ` \(a^2+b^2+c^2!\) `，但后者又被 MathJax 的 JavaScript 给渲染成 $a^2+b^2+c^2$ 了。而要解决这个问题也很简单，只要给页面的 ` body ` 标签添加一个 ` tex2jax_ignore ` 的 class，就可以阻止 MathJax 的处理（参见 [The tex2jax Preprocessor](http://www.mathjax.org/docs/1.1/options/tex2jax.html)）。
 
@@ -34,7 +32,7 @@ keywords:
 
 至于公式的修饰符，插件支持 ` \(...\) `、` \[...\] `、` $$...$$ `、` [latex]...[/latex] `、` [tex]...[/tex] `，但我还是担心这样的代码在一些程序源代码中也很容易出现（比如正则表达式），所以还是决定只用 latex 作为标记。这个修改很简单，只要对 ` /wp-content/plugins/latex/latex.php ` （v3\.1）做如下改动即可：
 
-````diff {linenos=false}
+```diff {linenos=false}
 108c108,109
 < $regex = '#\$\$(.*?)\$\$#si';
 ---
@@ -44,7 +42,7 @@ keywords:
 < $toParse = str_replace(array("\(", "\)", "\[", "\]", "[latex]", "[tex]", "[/latex]", "[/tex]"), array("$$", " $$", "$$!", " $$", "$$", " $$", "$$", " $$"), $toParse);
 ---
 > // $toParse = str_replace(array("\(", "\)", "\[", "\]", "[latex]", "[/latex]", "[tex]", "[/tex]"), array("$$", " $$", "$$!", " $$", "$$", " $$", "$$", " $$"), $toParse);
-````
+```
 
 这样修改之后，依旧支持插件原本的 inline、single
 line 以及显示源码的处理。要在单独的一行中显示公式，就在 ` [latex] ` 后面加 ` ! `；如果要显示公式源码，就在 ` [/latex] ` 前面加 ` ! `。

@@ -27,7 +27,7 @@ keywords:
 
 要关注的代码段落是 365 行至 378 行：
 
-````php4 {linenos=table linenostart=365}
+```php4 {linenos=table linenostart=365}
 if((!empty($_DCACHE['advs']) || $globaladvs) && !defined('IN_ADMINCP')) {
   require_once DISCUZ_ROOT.'./include/advertisements.inc.php';
 }
@@ -42,13 +42,13 @@ if(isset($allowvisit) && $allowvisit == 0 && !(CURSCRIPT == 'member' && ($action
   }
   periodscheck('visitbanperiods');
 }
-````
+```
 
 从 369 行开始的那段代码是对被禁止的用户组或者账户进行屏蔽，以及处理论坛暂时关闭的情况，就在它前面加上对游客的限制即可。判断是游客还是已登录用户的方法就是看有没有 uid 信息，游客是没有 uid 的。另外，虽然游客不能访问论坛的任何页面，但总要让他能够注册或者登录，所以要把相关页面的权限放开。除了 371 行所列的那几项之外，还需要开放 register，除非论坛注册也不对外开放。
 
 修改的内容如下，只是多加了一个判断而已：
 
-````diff {linenos=false}
+```diff {linenos=false}
 368a369,374
 > /* Forbid tourists visiting the bbs. Add by calf, Apr 15, 2009 */
 > if(!$discuz_uid && !(defined('CURSCRIPT') && in_array(CURSCRIPT, array('logging', 'wap', 'seccode', 'ajax', 'register')))) {
@@ -56,6 +56,6 @@ if(isset($allowvisit) && $allowvisit == 0 && !(CURSCRIPT == 'member' && ($action
 > }
 > /* End of Add */
 >
-````
+```
 
 这样修改后，未登录状态下访问论坛会得到类似于“您无权进行当前操作，这可能因以下原因之一造成：对不起，您还没有登录，无法进行此操作。”的提示信息，并直接跳转到登录界面。

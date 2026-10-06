@@ -57,9 +57,9 @@ keywords:
 
 安装 Homebrew 非常方便，首先要安装 [Command Line Tools for Xcode](https://developer.apple.com/downloads/index.action)，然后运行
 
-````bash {linenos=false}
+```bash {linenos=false}
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-````
+```
 
 在使用 Homebrew 的过程中，要注意经常更新它。在 brew 的世界中，24 小时就已经是非常久了。所以在安装某个包或者做其他操作之前，一般都要运行 ` brew update ` 和 ` brew doctor `，前者用于更新 Homebrew 自身和各个软件包，后者用于排查可能会遇到的问题。我之前没注意这个（也是因为那时候还没太依赖于 Homebrew），有一次安装一个程序，总是提示我有一个依赖没有装，但那个依赖明明就在那儿，百思不得其解，还跑到 github 上发 issue 去问，被拍了一顿。其实只要 brew update 一下就知道，我安装的那个依赖包太老了，升级了就好了。
 
@@ -73,26 +73,26 @@ Homebrew 默认会掌控系统中的 ` /usr/local ` 目录，目前我这个目�
 
 Homebrew 的 Python 已经安装了 pip，用于管理 Python 的软件包。根据 ` brew info python ` 提供的提示，运行下列命令对 pip 进行更新：
 
-````bash {linenos=table}
+```bash {linenos=table}
 pip install --upgrade setuptools
 pip install --upgrade pip
-````
+```
 
 我现在使用 [virtualenv](http://virtualenv.readthedocs.org/en/latest/) 来管理 Python 的环境，用 [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/) 来方便地使用 virtualenv。分别用 pip 进行安装：
 
-````bash {linenos=table}
+```bash {linenos=table}
 pip install virtualenv
 pip install virtualenvwrapper
-````
+```
 
 virtualenvwrapper 提供了很多方便的命令，还支持命令的 tab completion，这些都包含在 virtualenvwrapper\.sh 文件中。在 ` ~/.bash_profile ` 中引入该文件来激活相关的命令和功能：
 
-````bash {linenos=table}
+```bash {linenos=table}
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
 [ -f "/usr/local/bin/virtualenvwrapper.sh" ] && source "/usr/local/bin/virtualenvwrapper.sh"
-````
+```
 
 准备好后就可以用 ` mkvirtualenv ENVNAME ` 来创建一个新的 virtualenv，用 ` workon ` 命令来切换环境，用 ` deactive ` 退出虚拟环境。更多的命令可以查看 [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/) 的文档。
 
@@ -120,11 +120,11 @@ ipython 除了 shell console 外，还提供 Qt console，详细的信息查看�
 
 关于主机名，Mac 系统下默认应该是 localhost，可以通过 scutil 命令修改成想要的值：
 
-````bash {linenos=table}
+```bash {linenos=table}
 $ sudo scutil --set HostName MYNAME
 $ hostname
 MYNAME
-````
+```
 
 配合上 iTerm 的配色、ls 的颜色等，我的 shell 看起来是这样的：
 
@@ -176,10 +176,10 @@ PyCharm 里强烈推荐自带的 Darcula 配色，感觉在 GUI 界面中，这�
 
 我现在也是用 IntelliJ IDEA 来做 Java 开发，使用体验跟 PyCharm 类似。Java 项目的依赖管理用 Maven，Homebrew 里也提供了安装。建议目前使用 Maven 3\.0\.\*：
 
-````bash {linenos=table}
+```bash {linenos=table}
 brew tap homebrew/versions
 brew install maven30
-````
+```
 
 当然如果要用最新的 3\.2\.\*，可以直接 ` brew install maven `。
 

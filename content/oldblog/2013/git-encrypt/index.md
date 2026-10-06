@@ -36,9 +36,7 @@ keywords:
 
 - git\-crypt: [https://www\.agwa\.name/projects/git\-crypt/](https://www.agwa.name/projects/git-crypt/)
 
-
 - git\-encrypt: [https://github\.com/shadowhand/git\-encrypt](https://github.com/shadowhand/git-encrypt)
-
 
 分别是用 C\+\+ 和 Shell 写的。最后我选择了后者，当然以后也许会改变，反正加密解密算法跟工具是分离的，换工具并不会带来太多问题。
 
@@ -50,23 +48,23 @@ keywords:
 
 假设云端存储用 Dropbox，在本地对应的目录是 ` ~/dropbox `。（以下操作都是针对 Linux 平台的，Windows 的话可以去看一下官方文档）。先进入 dropbox 目录并创建一个新的 git 仓库（如果没有一个现成的）：
 
-````shell {linenos=table}
+```shell {linenos=table}
 cd ~/dropbox
 mkdir myrepo.git
 cd myrepo.git
 git init --bare
-````
+```
 
 这个仓库将会被同步到云端，任何提交到该仓库的隐私信息都应该是被加密过的。当然千万不要把密钥也存在这里。
 
 然后去工作目录，比如叫 ` ~/personal `，创建一个本地仓库（或者从 dropbox 中 clone 一个过来）：
 
-````shell {linenos=table}
+```shell {linenos=table}
 cd ~/personal
 mkdir myrepo
 cd myrepo
 git init
-````
+```
 
 然后就要做好加密解密的准备工作了，直接在本地仓库的根目录运行 ` gitcrypt init ` 命令，根据提示输入相应的信息。它首先会问你是否需要生成一个随机的 salt 值和密码，你可以同意或拒绝，拒绝的话就自己提供 salt 值和密码。如果你只有这个本地仓库，那建议直接使用随机生成的，那样足够复杂，更安全些。如果还需要在别的机器上 clone 这个仓库，那还是自己设置一下，免得忘了密码。然后选择加密算法，默认的是 aes\-256\-ecb（ECB 加密模式比较简单，相对容易破解，推荐使用 aes\-256\-cbc；当然 OpenSSL 提供了很多加密算法，大家可以自行选择；另外，发现一篇很直观的文章，可以看看，[分组对称加密模式](http://blog.csdn.net/aaaaatiger/article/details/2525561)）。接下来会问你是否使用 ` .git/info/attribute `，选择是就好了。最后问你需要对什么文件进行加密，默认是 ` * ` 表示所有文件。你可以根据需要进行设置，比如我这里让它加密所有以“private\-”开头的文件，就输入 ` private-* `。
 
@@ -76,27 +74,27 @@ git init
 
 假设我创建两个文件，分别叫做 ` diary.txt ` 和 ` private-diary.txt `。其中后者是绝对不想让别人看到的。假设内容分别如下：
 
-````text {linenos=table}
+```text {linenos=table}
 $ cat diary.txt
 今天天气不错，挺风和日丽的。
 我心情也还好，没有什么烦心事。
 $ cat private-diary.txt
 一点儿都不开心，那个人烦死了，老骚扰我。
 我想暴走啊，想暴走。
-````
+```
 
 好，然后将这两个文件都提交到仓库中，并将修改推到云端：
 
-````shell {linenos=table}
+```shell {linenos=table}
 git add *.txt
 git commit -m 'Add some diaries.'
 git remote add origin ~/dropbox/myrepo.git
 git push origin master
-````
+```
 
 有人会问，不对啊，还没给私密日记加密啊。好，我们来把云端仓库再 clone 一份看看。
 
-````text {linenos=table}
+```text {linenos=table}
 $ git clone ~/dropbox/myrepo.git ~/personal/myrepo2
 $ cd ~/personal/myrepo2
 $ ls
@@ -108,13 +106,13 @@ $ cat private-diary.txt
 U2FsdGVkX1/lfLd83fEEk8Gnaiixe5hdSPR7qgP+SFD9PSX6yNSX8osvd73gKqQG
 Q4ndGa6A0RAuClmMO1E5tRnxKhk2jIHmiR6qyGKjx73BR2164PHnf3NioZM0tN25
 88FtrD+Mqhq+b3MEsXLu2A==
-````
+```
 
 可见，如果别人 clone 了你的云端仓库，他也只能看到加密后的信息。
 
 如果这份 clone 的主人也是你，你现在想在这里查看或者修改你的文档，只要再运行一次 ` gitcrypt init `，输入同样的 salt 和密码，保持其它设置也都一致，最后再运行一次 ` git reset --hard HEAD ` 就好了。
 
-````text {linenos=table}
+```text {linenos=table}
 $ gitcrypt init
 blah blah (use the exact same configuration)
 $ git reset --hard HEAD
@@ -122,7 +120,7 @@ HEAD is now at 10c8613 Add some diaries.
 $ cat private-diary.txt
 一点儿都不开心，那个人烦死了，老骚扰我。
 我想暴走啊，想暴走。
-````
+```
 
 关于 salt 和密码。解密的时候只要有密码就够了，加密的时候则需要同时提供 salt 和密码。用 salt 一方面可以在密码太简单的情况下加大破解难度（参见 [Rainbow table](http://en.wikipedia.org/wiki/Rainbow_table)），另一方面使用相同的 salt 可以让每次加密得到的密文是一致的。如果你在第二次 clone 后改用不同的 salt，并不会影响密文的解密，但是 git 会认为那些文件被修改了，而 diff 的时候去看不到任何差异。我觉得这个不太合理啊，期待这个工具的更新。
 
@@ -130,9 +128,7 @@ $ cat private-diary.txt
 
 - [GIT transparent encryption](http://syncom.appspot.com/papers/git_encryption.txt) or [https://gist\.github\.com/shadowhand/873637](https://gist.github.com/shadowhand/873637)
 
-
 - [Transparently encrypt repository contents with GPG](http://git.661346.n2.nabble.com/Transparently-encrypt-repository-contents-with-GPG-td2470145.html)
-
 
 当然也有反对的声音，所以建议大家先多了解了解再决定要不要使用这个方法。
 

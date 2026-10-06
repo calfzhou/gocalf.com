@@ -23,26 +23,26 @@ to Determine UUID”的错误，解决方法倒也容易。
 
 运行 genstrings 的语句是：
 
-````text {linenos=false}
+```text {linenos=false}
 genstrings ./Classes/*.m
-````
+```
 
 得到了这样的错误信息：
 
-````text {linenos=false}
+```text {linenos=false}
 genstrings[3851:10b] _CFGetHostUUIDString: unable to determine UUID for host. Error: 35
-````
+```
 
 虽然想不通这么个小程序为什么需要 UUID，但解决方法是：进入目录 /Library/Preferences/SystemConfiguration，用 root 权限修改其中的 NetworkInterfaces\.plist 文件，在控制台的操作命令为：
 
-````bash {linenos=false}
+```bash {linenos=false}
 cd /Library/Preferences/SystemConfiguration
 sudo vi NetworkInterfaces.plist
-````
+```
 
 给这个文件中添加一个 IEEE80211 相关的 dict（原本会有其他一些 dict，不用管它们），内容如下：
 
-````xml {linenos=table}
+```xml {linenos=table}
 <dict>
   <key>BSD Name</key>
   <string>en3</string>
@@ -61,6 +61,6 @@ sudo vi NetworkInterfaces.plist
   <key>SCNetworkInterfaceType</key>
   <string>IEEE80211</string>
 </dict>
-````
+```
 
 添加好后保存此文件，然后重启系统。问题就解决了。

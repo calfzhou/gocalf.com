@@ -59,17 +59,17 @@ TOOLS）DESIGN，在 Table Name 的文本框中输入 TableData。
 
 首先增加一列，叫作 Width。在这一列中我们对将要作为柱状图宽度的 X 数据进行一些变换，主要是为了（在不直接修改原数据的情况下）更方便地控制展示效果。具体应该怎么变换，取决于原数据本身的分布情况，我一般会把原数据缩放到平均在几十到几百这个范围（后面会讲到为什么这样做）。在这里我用把 X 放大 10 倍作为 Width，因此这一列的公式为：
 
-````text {linenos=table}
+```text {linenos=table}
 =[@X]*10
 =$B2*10
-````
+```
 
 然后再添加两列，分别叫作 Right 和 Left，这两列用于计算每个柱子的右边界和坐边界在横轴上的位置。在写这两列的公式之前，先要考虑一下柱子的间距。假设我们需要让每两个相邻的柱子之间有相等的间隔，我们可以自己指定这个间隔的绝对数值，或者设定一个相对于柱子宽度的比例然后用公式进行自动调节。我在这里设置间隔为柱子平均宽度的 20%，因此其公式为：
 
-````text {linenos=table}
+```text {linenos=table}
 =CEILING(AVERAGE(TableData[Width])*0.2,1)
 =CEILING(AVERAGE($D$2:$D$6)*0.2,1)
-````
+```
 
 其中 CEILING 函数做了个上取整，这不是必须的，大家可以自行把握。另外注意我是对上面新加的 Width 列求的平均值，而不是原数据中的 X。
 
@@ -82,17 +82,17 @@ Define Name 来为其指定一个名字，比如叫作“Gap”。
 
 Right 列的计算公式是：
 
-````text {linenos=table}
+```text {linenos=table}
 =SUM(TableData[[#Headers],[Width]]:[@Width])+(COUNT(TableData[[#Headers],[Width]]:[@Width])-1)*Gap
 =SUM($D$1:$D2)+(COUNT($D$1:$D2)-1)*Gap
-````
+```
 
 Left 列的计算公式是：
 
-````text {linenos=table}
+```text {linenos=table}
 =[@Right]-[@Width]
 =$E2-$D2
-````
+```
 
 ## 面积图数据扩展
 
@@ -108,54 +108,54 @@ Left 列的计算公式是：
 
 TableArea 的第二列叫作 ItemId，用于计算这一行数据对应于原始数据表中的第几行（设第一行为 1），计算公式为：
 
-````text {linenos=table}
+```text {linenos=table}
 =INT([@Index]/4)+1
 =INT($A11/4)+1
-````
+```
 
 第三列叫作 IsLeft，其值为 TRUE 或者 FALSE，表示该行数据是否对应一个柱子的左边界，计算公式为：
 
-````text {linenos=table}
+```text {linenos=table}
 =MOD([@Index],4)<2
 =MOD($A11,4)<2
-````
+```
 
 第四列叫作 IsBottom，其值也是 TRUE 或者 FALSE，表示该行数据是否对应一个柱子的下边界（对于高度为非负数的柱子），计算公式为：
 
-````text {linenos=table}
+```text {linenos=table}
 =MOD([@Index]+1,4)<2
 =MOD($A11+1,4)<2
-````
+```
 
 第五列叫作 ItemName，是把该行所对应的对象的名字映射过来得到的，计算公式为：
 
-````text {linenos=table}
+```text {linenos=table}
 =OFFSET(TableData[[#Headers],[Item]],[@ItemId],0,1,1)
 =OFFSET($A$1,$B11,0,1,1)
-````
+```
 
 第六列叫作 ItemHeight，是把该行所对应的对象的 Y 数据（即柱子高度）映射过来得到的，计算公式为：
 
-````text {linenos=table}
+```text {linenos=table}
 =OFFSET(TableData[[#Headers],[Y]],[@ItemId],0,1,1)
 =OFFSET($C$1,$B11,0,1,1)
-````
+```
 
 接下来就是画面积图实际使用的数据了。
 
 第七列叫作 X，这个 X 跟原始数据中的 X 可不是一回事儿。这里的 X 表示该行所对应的柱子顶点的横轴坐标。如果该行对应一个柱子的左边界，那其值为 TableData 的 Left 列数值；反之，如果该行对应一个柱子的右边界，其值为 TableData 的 Right 列数值。此列的计算公式为：
 
-````text {linenos=table}
+```text {linenos=table}
 =OFFSET(IF([@IsLeft],TableData[[#Headers],[Left]],TableData[[#Headers],[Right]]),[@ItemId],0,1,1)
 =OFFSET(IF($C11,$F$1,$E$1),$B11,0,1,1)
-````
+```
 
 所有的柱子都共享上面那一列横坐标数据，但我们需要为每一个柱子准备一列数据来提供相应的纵坐标，因此在 X 列后面添加 5 列，名字分别是原始数据中五个对象的名字，即 A、B、C、D 和 E。它们的公式差不多，以 A 列为例，它的数据包含对象 A 的柱子面积图每个顶点的纵坐标。如果当前行对应的对象是 A，而且当前行对应柱子的上边界时，相应的数据就应该是 A 对象的 Y 数据，否则就应该为 0。计算公式为：
 
-````text {linenos=table}
+```text {linenos=table}
 =IF(OR([@ItemName]<>TableArea[[#Headers],[A]],[@IsBottom]),0,[@ItemHeight])
 =IF(OR($E11<>H$10,$D11),0,$F11)
-````
+```
 
 对于其他几列，只要把公式中的“\[A\]”改为对应的列名即可。
 
@@ -199,10 +199,10 @@ Position 从默认的 Next to Axis 改为 None。
 
 先在 TableData 中添加一列叫作 Mid，用于计算每个柱子中心点的横坐标，公式为
 
-````text {linenos=table}
+```text {linenos=table}
 =([@Left]+[@Right])/2
 =($F2+$E2)/2
-````
+```
 
 用鼠标右键点击图表，选择 Select Data，然后点击 Legend Entries (Series) \-\> Add 增加新的一组数据。在弹出的 Edit
 Series 框中，把 Series name 设置为 Label，把 Series values 设置为 TableData 中 Y 列整列数据。
@@ -235,9 +235,7 @@ Range 对话框，将数据范围设置为 TableData 的 X 列整列数据。然
 
 - 使用 Excel 表的示例文件：[variable\_width\_column\.xlsx](variable_width_column.xlsx)
 
-
 - 不用 Excel 表的示例文件：[variable\_width\_column\_no\_table\.xlsx](variable_width_column_no_table.xlsx)
-
 
 ## Highcharts 版本
 

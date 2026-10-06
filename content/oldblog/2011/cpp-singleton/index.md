@@ -28,7 +28,7 @@ Pattern）是设计模式中的一种，它用来保证系统中最多只能存�
 
 Singleton\.h：
 
-````cpp {linenos=table}
+```cpp {linenos=table}
 #ifndef _SINGLETON_H_
 #define _SINGLETON_H_
 
@@ -53,11 +53,11 @@ private:
 };
 
 #endif
-````
+```
 
 Singleton\.cpp：
 
-````cpp {linenos=table}
+```cpp {linenos=table}
 #include "Singleton.h"
 #include <iostream>
 #include <boost/thread.hpp>
@@ -91,7 +91,7 @@ Singleton& Singleton::GetInstance()
     }
     return *s_instance;
 }
-````
+```
 
 这个类写的也不完美啦，比如双重判定也会有失效的时候，不过凑合用吧，哈哈。不过话说 boost 库里也有 singleton，我为什么要自己写个呢，无奈地飘过。
 
@@ -103,7 +103,7 @@ Library）之后，我才意识到模板类可以帮助我（话说我真的是�
 
 不妨把这个单例基类叫做 ` ISingleton ` 吧，看起来好像是个 interface 呢。代码如下：
 
-````cpp {linenos=table}
+```cpp {linenos=table}
 #ifndef _ISingleton_H_
 #define _ISingleton_H_
 
@@ -146,11 +146,11 @@ template <typename T>
 std::auto_ptr<T> ISingleton<T>::s_instance;
 
 #endif
-````
+```
 
 要利用 ` ISingleton ` 创建一个自己的单例类，比如 ` MySingleton `，可以使用如下的代码：
 
-````cpp {linenos=table}
+```cpp {linenos=table}
 #include "Singleton.h"
 #include "ISingleton.h"
 #include <iostream>
@@ -179,6 +179,6 @@ private:
     MySingleton(const MySingleton&);
     MySingleton& operator =(const MySingleton&);
 };
-````
+```
 
 最最重要的，千万不要忘了把 ` MySingleton ` 的构造和析构函数弄成 ` private ` 的，还要添加两个友元。有人说 ` ISingleton ` 和 ` MySingleton ` 的析构函数都要加 ` virtual `，我倒是觉得没有必要呢，你说呢？另外要注意，` MySingleton ` 不能被继承哦。

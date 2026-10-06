@@ -43,7 +43,7 @@ n\)。
 
 实际上，如果仔细考量上面的寻找分界点的方法，就会发现它跟二分查找是多么的相似啊。因此另外一种方法就是将二分查找算法修改一下，相当于把找分界点跟搜索指定元素结合起来。在每次二分的时候，除了跟中间值做比较外，也要跟两端的数值做比较，以此来确定对哪一半分治处理。直接写出这种方法下的查找函数算法：
 
-````python {linenos=table}
+```python {linenos=table}
 def CycleBSearch(arr, val):
   left = 0
   right = len(arr) - 1
@@ -63,9 +63,9 @@ def CycleBSearch(arr, val):
       else:
         right = mid - 1   # val is in left side
   return -1               # cannot find val
-````
+```
 
-````cpp {linenos=table}
+```cpp {linenos=table}
 #include <functional>
 using namespace std;
 
@@ -128,6 +128,6 @@ RandomAccessIterator CycleBinarySearch(RandomAccessIterator first,
     // cannot find value
     return last;
 }
-````
+```
 
 话说我还是更喜欢 Python 啊。

@@ -51,12 +51,12 @@ installed improperly and cannot be
 used\.（或者是 AppleACPIPlatform\.kext）。这不是刚才替换的那两个老版本的文件么，啊，想起来了，刚才在 Win
 7 里用 MacDrive 把两个文件复制过去之后，还应该要修改权限并删除缓存呢，这些都还没有做，能让我把系统启动起来就很不错了。赶紧打开 Console，依次输入下面这些命令（如果当前用户不是 root，还需要在命令前面加 sudo）（另外命令中的 ` Mac\ OS ` 需要替换成你的 Mac 系统所在分区的卷标）（忘了试一试直接用 /System/Linrary 行不行了，应该是同一个目录的）：
 
-````bash {linenos=false}
+```bash {linenos=false}
 cd /Volumes/Mac\ OS/System/Library
 chmod -R 755 Extensions
 chown -R root:wheel Extensions
 kextcache -v 1 -l -s -n -t -arch i386 -arch x86_64 -m /Volumes/Mac\ OS/System/Library/Caches/com.apple.kext.caches/Startup/Extensions.mkext /Volumes/Mac\ OS/System/Library/Extensions
-````
+```
 
 完成之后重启系统，就不会再遇到那样的错误提示了。
 
@@ -72,24 +72,18 @@ kextcache -v 1 -l -s -n -t -arch i386 -arch x86_64 -m /Volumes/Mac\ OS/System/Li
 
 - NullCPUPowerManagement\.kext：禁用电源管理，解决 IntelCPUPowerManagement\.kext 的 HPET 错误。
 
-
 - OpenHaltRestart\.kext：解决重启或关机问题。
-
 
 - OSXRestart\.kext：解决重启问题。
 
-
 - PlatformUUID\.kext：解决 UUID 错误。
 
-
 - IOAHCIBlockStorageInjector\.kext：解决本地硬盘图标为橙色的补丁。
-
 
 - AppleRTC\.kext：装 10\.6\.3 的时候不知道这是干什么用的，但似乎是 Real Time
   Clock 的驱动，应该是修改过的，主要是解决某些主板上，睡眠唤醒后 BIOS 重置的问题。
 
 - LegacyAppleAirPortBrcm4311\.kext：BRCM 无线网卡的驱动，对我来说根本没用，上次放着它主要是希望奇迹能够发生，然而我那个无线网卡身上似乎不会有奇迹出现。
-
 
 最后还是要面对声卡的问题，我又尝试着把 AppleHDA\.kext 去掉，换上 VoodooHDA\.kext，嘿，还真就好了。不知道最开始的时候有 VoodooHDA\.kext，为什么还必须放 AppleHDA\.kext。或者因为我之前那个 VoodooHDA\.kext 太老了吧。
 
@@ -120,12 +114,9 @@ kextcache -v 1 -l -s -n -t -arch i386 -arch x86_64 -m /Volumes/Mac\ OS/System/Li
 
     - [IOAudioFamily\.kext](IOAudioFamily.kext_.zip)：基本的声卡驱动框架。
 
-
     - [OSvKernDSPLib\.kext](OSvKernDSPLib.kext_.zip)：内核的数字音频信号处理库。
 
-
     - [HDAEnabler\.kext](HDAEnabler.kext_.zip)
-
 
     - [VoodooHDA\.kext](VoodooHDA.kext_.zip)
 
@@ -133,13 +124,11 @@ kextcache -v 1 -l -s -n -t -arch i386 -arch x86_64 -m /Volumes/Mac\ OS/System/Li
 
     - [IONetworkingFamily\.kext](IONetworkingFamily.kext_.zip)：基本的网卡驱动，有些网卡可以直接驱动。里面包含 AppleBCM5701Ethernet\.kext，AppleIntel8254XEthernet\.kext，AppleRTL8139Ethernet\.kext，AppleRTL8169Ethernet\.kext，AppleUSBEthernet\.kext，AppleUSBGigEthernet\.kext，AppleYukon2\.kext，Intel82574L\.kext，nvenet\.kext。
 
-
     - [Intel82566MM\.kext](Intel82566MM.kext_.zip)
 
   - PS/2（鼠标、键盘、触摸板）
 
     - [ApplePS2Controller\.kext](ApplePS2Controller.kext_.zip)
-
 
     - [AppleACPIPS2Nub\.kext](AppleACPIPS2Nub.kext_.zip)
 
@@ -151,7 +140,6 @@ kextcache -v 1 -l -s -n -t -arch i386 -arch x86_64 -m /Volumes/Mac\ OS/System/Li
       Clock 控制等，其下还包含 AppleACPIButtons\.kext，AppleACPIEC\.kext，AppleACPIPCI\.kext。
 
     - [IOACPIFamily\.kext](IOACPIFamily.kext_.zip)：作用于支持 ACPI 电源管理标准的驱动，例如电源按钮、电池、PS/2、USB、HPET 等。这里的这个解决了部分笔记本风扇不正常问题，只支持 32 位。
-
 
     - [VoodooBattery\.kext](VoodooBattery.kext_.zip)
 

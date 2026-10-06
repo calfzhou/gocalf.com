@@ -21,12 +21,9 @@ Reader 从已故的博客 [钟磬居](http://www.zhongqingju.com)（链接已失
 
 - 关键词：WordPress，Blog，LaTeX，插件；
 
-
 - 适用人群：了解 LaTex，需要在 WordPress 搭建的 Blog 内用 LaTeX 书写数学公式的人；
 
-
 - 平台：WordPress 2\.x。
-
 
 如果你的博客跟我们这个一样，也是用 WordPress 系统搭建的；如果你跟我一样，也希望可以在 Blog 中用 LaTeX 书写数学公式，那么这篇文章或许对你有所帮助。
 
@@ -34,12 +31,9 @@ Reader 从已故的博客 [钟磬居](http://www.zhongqingju.com)（链接已失
 
 1. 利用 LaTeX 软件或在线服务（如 [mimetex](http://www.forkosh.com/mimetex.html)，[LaTeX Equation Editor](http://www.codecogs.com/components/equationeditor/equationeditor.php)）生成公式的图片，将图片上传到自己的站点或者 PicasaWeb，然后在文章中插入该图片；
 
-
 2. 为自己的站点安装 LaTeX 的相关软件，使其可以解析 LaTeX 并生成图片；
 
-
 3. 利用插件（[dahnielson\_mimetex](http://en.dahnielson.com/2006/09/mimetex-plugin.html)），动态地向公开的服务发出请求，获取公式图片并显示。
-
 
 如果你一年也写不了一两个数学公式，那么用第一种方法最方便了，避免了在服务器上安装各种各样的软件或插件。但如果需要频繁写公式，那这个方法显然太麻烦，每个公式要到生成一张图片，上传，插入；修改公式的时候还要再重复一遍。
 
@@ -54,7 +48,7 @@ wordpress\.com 的用户都可以在博客中使用一对 ` $ ` 来书写 LaTeX�
 
 一共只有五处简单的修改，第一处是修改 description，把新加的参数写进去，以免日后忘记：
 
-````diff {linenos=false}
+```diff {linenos=false}
 5,7c5,7
 < Description: Use &lt;tex&gt;&lt;/tex&gt; tags to embed LaTeX math in posts, see the <a href="http://www.forkosh.com/mimetex.html">mimeTeX manual</a> for details.
 < Version: 1.2
@@ -63,7 +57,7 @@ wordpress\.com 的用户都可以在博客中使用一对 ` $ ` 来书写 LaTeX�
 > Description: Use &lt;tex bg="000000~ffffff" fg="000000~ffffff" sz="-4~4" escaped="true|false"&gt;&lt;/tex&gt; tags to embed LaTeX math in posts.
 > Version: 1.2.1
 > Author: Anders Dahnielson; Modified by calf (April 12, 2009)
-````
+```
 
 这个插件最初的语法只是 ` <tex></tex> `，我给它添加了四个参数：
 
@@ -81,17 +75,17 @@ escaped
 
 第二处修改是正则表达式，在 dahnielson\_mimetex 类的 parse 函数中，修改过的正则表达式可以匹配刚刚提到的四个参数：
 
-````diff {linenos=false}
+```diff {linenos=false}
 32c32,33
 < $regex = '#<tex>(.*?)</tex>#si';
 ---
 > $regex = '#<tex(?:s|bg=["']([w]+)["']|fg=["']([w]+)["']|'.
 > 'sz=["']([0-9+-]+)["']|escaped=["'](true|false)?["'])*>(.*?)</tex>#si';
-````
+```
 
 第三处修改是提取公式文本和参数，也就是对上面正则表达式的匹配结果做处理：
 
-````diff {linenos=false}
+```diff {linenos=false}
 38,40c39,50
 < $formula_text = $match[1];
 < $formula_hash = md5($formula_text);
@@ -109,41 +103,39 @@ escaped
 > $formula_text_html = htmlspecialchars($formula_text);
 > $formula_hash = md5($formula_text.'_'.$formula_bg.'_'.$formula_fg.'_'.$formula_sz.'_1.2.1');
 > $formula_filename = 'tex_'.$formula_hash.'.png';
-````
+```
 
 这里我添加了一个变量 ` $formula_text_html `，用来记录 html 转义过的公式内容，稍后会看到这样做的目的。
 
 第四处是设置 LaTeX 服务地址，原先 forkosh\.dreamhost\.com 的服务已经不能用了（很简短的公式还行，稍微复杂的公式都没法得到想要的结果），改成 l\.wordpress\.com 的服务：
 
-````diff {linenos=false}
+```diff {linenos=false}
 49c59,61
 < $mimetex_host = curl_init('http://www.forkosh.dreamhost.com/cgi-bin/mimetexpublic.cgi?formdata='.urlencode($formula_text));
 ---
 > $req_url = 'http://l.wordpress.com/latex.php?latex='.urlencode($formula_text).
 > '&bg='.urlencode($formula_bg).'&fg='.urlencode($formula_fg).'&s='.urlencode($formula_sz);
 > $mimetex_host = curl_init($req_url);
-````
+```
 
 最后一处修改是展示获取到的图片。我给 img 标签加了 class 属性，便于修改样式。添加了 title 属性，当鼠标放在图片上时，可以看到公式内容。注意这里 alt 和 title 都是用 html 转义后的公式内容，这样可以避免公式中的一些特殊字符把 html 结构搞乱：
 
-````diff {linenos=false}
+```diff {linenos=false}
 58c70
 < return "<img src="$cache_formula_url" alt="$formula_text" />";
 ---
 > return "<img class="mimetex" src="$cache_formula_url" alt="$formula_text_html" title="$formula_text_html" />";
-````
+```
 
 - 下载 [修改前的插件](dahnielson_mimetex_v12.zip)（MD5：61aa23a9907c8fb777ef61c186070878）；
 
-
 - 下载 [修改后的插件](dahnielson_mimetex_v121.zip)（MD5：3d17d45b6f2375d9ded05988bfa470c0）。
-
 
 修改好后就可以使用了，如果是第一次用这个插件，别忘了给你的站点开一个有写权限的 cache 目录（/wp\-content/cache/）。
 
 试用一下吧，在文章中输入这样的内容：
 
-````latex {linenos=false}
+```latex {linenos=false}
 <tex fg="0000ff" sz="2">\begin{array}{rcl}
 p & = & \frac{1}{5}+\frac{2}{5}\times\left(\frac{1}{5}+\frac{2}{5}\times\left(\frac{1}{5}+\frac{2}{5}\times\left(\cdots\right)\right)\right) \\
 & = & \frac{1}{5}\times\sum_{i=0}^\infty \left(\frac{2}{5}\right)^i \\
@@ -151,7 +143,7 @@ p & = & \frac{1}{5}+\frac{2}{5}\times\left(\frac{1}{5}+\frac{2}{5}\times\left(\f
 & = & \frac{1}{5}\times\frac{5}{3} \\
 & = & \frac{1}{3}
 \end{array}</tex>
-````
+```
 
 可以得到图片：
 

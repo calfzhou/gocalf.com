@@ -57,17 +57,13 @@ NGC 平台转移到了 Wii 上面，其重要性不言而喻。新生的塞尔�
 
 - [剧情介绍](index.md)
 
-
 - [主要角色简介](../zelda-tp-characters/index.md)
-
 
 - 上部：光之精灵篇
 
   - [初章 英雄传说的扉页（被神选中的少年）](../zelda-tp-ch1/index.md)
 
-
   - [第二章 死亡山巅的咆哮（大地的子民）](../zelda-tp-ch2/index.md)
-
 
   - [第三章 深海鱼族的传说（最后的影之碎片）](../zelda-tp-ch3/index.md)
 
@@ -75,49 +71,35 @@ NGC 平台转移到了 Wii 上面，其重要性不言而喻。新生的塞尔�
 
   - [第四章 沙漠深处的审判（死者之沙漠）](../zelda-tp-ch4/index.md)
 
-
   - [第五章 冰封魔镜的罪恶（雪山！兽人！爱！）](../zelda-tp-ch5/index.md)
-
 
   - [第六章 时间遗忘的裂缝（时之神殿）](../zelda-tp-ch6/index.md)
 
-
   - [第七章 天堂神殿的挽歌（天空之城）](../zelda-tp-ch7/index.md)
 
-
   - [第八章 黎明之前的黑暗（伪王）](../zelda-tp-ch8/index.md)
-
 
   - [第九章 斩破黑暗的利刃（黎明公主）](../zelda-tp-ch9/index.md)
 
 - [终章 世界秩序的平衡（光与影）](../../2012/zelda-tp-epilogue/index.md)
 
-
 - 附录
 
   - [必须要知道的几个秘密](../../2012/zelda-tp-appendix/index.md#必须要知道的几个秘密)
 
-
   - [心之碎片](../../2012/zelda-tp-appendix/index.md#心之碎片)
-
 
   - [非剧情道具](../../2012/zelda-tp-appendix/index.md#非剧情道具)
 
-
   - [瓶子](../../2012/zelda-tp-appendix/index.md#瓶子)
-
 
   - [奥义](../../2012/zelda-tp-appendix/index.md#奥义)
 
-
   - [金色虫](../../2012/zelda-tp-appendix/index.md#金色虫)
-
 
   - [鬼魂之魂](../../2012/zelda-tp-appendix/index.md#鬼魂之魂)
 
-
   - [钓鱼](../../2012/zelda-tp-appendix/index.md#钓鱼)
-
 
   - [试炼的洞窟](../../2012/zelda-tp-appendix/index.md#试炼的洞窟)
 

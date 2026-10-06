@@ -25,7 +25,7 @@ Font 来显示公式么，怎么会有这么多图片格式的字符。
 原来这些图片格式的字符是为了让那些古老的不支持 Web
 Font 的浏览器也可以正常地显示 LaTeX 公式，好吧，可怕的向下兼容。在 MathJax 将其改进之前，我决定先删掉这些图片。先要关闭这种图片字体的功能，直接修改插件的源代码 ` blog/wp-content/plugins/latex/latex.php `，找到关于 MathJax 配置的代码，修改为：
 
-````html+php {linenos=table hl_lines="6"}
+```html+php {linenos=table hl_lines="6"}
 function add_latex_mathjax_code(){
     echo '<script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -36,7 +36,7 @@ function add_latex_mathjax_code(){
         });</script>
         <script type="text/javascript" src="'.get_option("mathjax_server").'"></script>';
 }
-````
+```
 
 其中第 6 行就是新添加的内容（还有第 5 行末尾的逗号），这样 MathJax 就不会再使用图片字体，然后把上面提到的那个目录整个删掉就可以了。当然 TeX 目录下还有其他几个文件夹，如 eot、otf 和 svg，这些可不要删，要不然在什么浏览器上都无法显示公式了。
 

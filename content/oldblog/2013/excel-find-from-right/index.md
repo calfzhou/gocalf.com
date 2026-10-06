@@ -27,9 +27,9 @@ Excel 里面字符串查找用的 [FIND](http://office.microsoft.com/en-au/excel
 
 我的处理方法是这样的，假设单元格 A1 存放着包含分隔符的完整字符串（如上面提到的“abc,defg,hi,jkl”），那么查找最右一个逗号的公式为：
 
-````text {linenos=false}
+```text {linenos=false}
 =FIND(CHAR(1),SUBSTITUTE(A1,",",CHAR(1),LEN(A1)-LEN(SUBSTITUTE(A1,",",""))))
-````
+```
 
 这个公式的结果显然是 12。
 
@@ -37,15 +37,11 @@ Excel 里面字符串查找用的 [FIND](http://office.microsoft.com/en-au/excel
 
 1. ` SUBSTITUTE(A1,",","") `：把原字符串中的逗号全部删除（替换成空字符串），得到临时字符串 text1；
 
-
 2. ` LEN(A1)-LEN(text1) `：用原字符串的长度减去 text1 的长度，即可知道原字符串中总共有多少个逗号，num2；
-
 
 3. ` SUBSTITUTE(A1,",",CHAR(1),num2) `：利用 SUBSTITUE 函数，把原字符串中的最后一个逗号替换成特殊字符 CHAR\(1\)，得到临时字符串 text3；
 
-
 4. ` FIND(CHAR(1),text3) `：在 text3 中查找特殊字符 CHAR\(1\)，其位置就是原字符串中最后一个逗号的位置 pos。
-
 
 真是一个奇妙的方法。
 
@@ -55,9 +51,9 @@ Excel 里面字符串查找用的 [FIND](http://office.microsoft.com/en-au/excel
 
 上面那个公式只是适用于单个字符的查找，如果分隔符是多个字符，就需要稍微修改一下。假设单元格 B1 里面存放着分隔符本身，那么公式可以修改为：
 
-````text {linenos=false}
+```text {linenos=false}
 =FIND(CHAR(1),SUBSTITUTE(A1,B1,CHAR(1),(LEN(A1)-LEN(SUBSTITUTE(A1,B1,"")))/LEN(B1)))
-````
+```
 
 唯一的变化就是上述的第 2 步，原字符串的长度减去 text1 的长度后，要除以分隔符本身的长度，才是分隔符的个数。
 

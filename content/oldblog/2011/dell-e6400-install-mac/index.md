@@ -36,34 +36,26 @@ E6400 有关的部分和遇到的一些问题为主吧，这款机器似乎是�
 
   - North Bridge: Intel Cantiga PM45
 
-
   - Source Bridge: Intel 82801 IEM ICH9M\-E
 
 - BIOS: Phoenix 05/11/09
 
-
 - CPU: Intel Core2 Duo P9600 2800MHz \(10\.5 x 267\)
-
 
 - Memory: 2G\*2, 800MHz Dual
 
-
 - Storage: Intel ICH9M\-E/M SATA AHCI Controller
 
-
 - Video: nVIDIA Quadro NVS160M \(256MB\)
-
 
 - Audio:  IDT 92HD 71B7 @ Intel 82801 IB ICH9 \- High Definition Audio
   Controller \[A\-3\] PCI
 
 - Display: 1440x900
 
-
 - Network
 
   - Ethernet: Intel 82567LG Gigabit Network Connection
-
 
   - WiFi: Intel WiFi Link 5300 AGN（最让人头疼的硬件，驱动无解）
 
@@ -89,12 +81,9 @@ disk image\.\.\.，将生成的文件（\.dmg）保存在某个 NTFS 分区上�
 
 - 有些镜像格式无法被后面用到的安装助手识别，这个工具可以做一次格式转换；
 
-
 - 去掉原镜像的写保护，以便稍后替换 OSInstall（也可以直接下载一个别人替换过的镜像，那就不用装这个工具了，也可以跳过后面的 MacDriver）；
 
-
 - 可以对原镜像文件做检验。
-
 
 接下来就要祭出 Leopard 硬盘安装助手（v0\.3）了。它不需要安装，但在 Win
 7 系统中必须以管理员身份运行（右键点击，选择 Run as
@@ -106,9 +95,9 @@ partition type to AF: Success”、“All done, have fun\!”时就算成功了�
 
 接下来要替换 OSInstall，这需要安装工具 MacDriver（v8\.0\.4\.10），这是个收费软件。装好之后重启系统，就可以进入刚才用硬盘安装助手写入的 HFS 安装分区了。让 Windows 显示隐藏文件和系统文件，下载一个 PC 用的 OSInstall，替换掉
 
-````text {linenos=false}
+```text {linenos=false}
 X:\System\Library\PrivateFrameworks\Install.framework\Frameworks\OSInstall.framework\Versions\A\
-````
+```
 
 里面的同名文件。这样做的目的是使得 Mac 可以安装在 MBR 分区表下（否则 Mac 只能装在 GPT（GUID）分区表下，但 Windows 默认都是用 MBR）。（还是直接下载一个已经替换好了的镜像吧，省的麻烦。）
 
@@ -129,21 +118,15 @@ OS 对应的目录也不太一样，这里就不多说了）。
 
   - fakesmc\.kext：模拟苹果机的 SMC，必须的！
 
-
   - NullCPUPowerManagement\.kext：禁用电源管理，解决 IntelCPUPowerManagement\.kext 的 HPET 错误。
-
 
   - OpenHaltRestart\.kext：解决重启或关机问题。
 
-
   - OSXRestart\.kext：解决重启问题。
-
 
   - PlatformUUID\.kext：解决 UUID 错误。
 
-
   - Disabler\.kext：屏蔽不能正常启动的补丁。
-
 
   - IOAHCIBlockStorageInjector\.kext：解决本地硬盘图标为橙色的补丁。
 
@@ -155,16 +138,13 @@ OS 对应的目录也不太一样，这里就不多说了）。
 
   - IOAudioFamily\.kext
 
-
   - HDAEnabler\.kext
-
 
   - VoodooHDA\.kext
 
 - Ethernet
 
   - IONetworkingFamily\.kext
-
 
   - Intel82566MM\.kext
 
@@ -175,7 +155,6 @@ OS 对应的目录也不太一样，这里就不多说了）。
 - PS/2（鼠标、键盘、触摸板）
 
   - ApplePS2Controller\.kext（或者 VoodoPS2Controller\.kext）
-
 
   - AppleACPIPS2Nub\.kext
 
@@ -207,7 +186,6 @@ OS 对应的目录也不太一样，这里就不多说了）。
 
   - AppleRTC\.kext
 
-
   - OSvKernDSPLib\.kext
 
 ## 安装
@@ -221,32 +199,24 @@ BootThink 的一些操作：
 
 - c：Leopard 原版光盘启动；
 
-
 - Alt：进入 startup manager，选取启动分区；
-
 
 - Shift：安全模式；
 
-
 - Ctrl\+V（或 \-v）：Verbose 模式；
-
 
 - Ctrl\+S：单用户模式；
 
-
 - \#g=WxHxDEPTH（如 1440x900x32）：设置分辨率；
-
 
 - \#g=\~：取消分辨率设置；
 
-
 - \-32：以 32 位模式启动。
-
 
 我的 E6400 用 64 位总是有些驱动有问题，只好用 32 位了。在安装和启动 Mac 的时候，都要在 BootThink 里输入 ` -x32 `，或者修改 ` B:\Darwin\com.apple.Boot.plist `，添加 Kernel
 Flags，值为 ` arch=i386 `。我的此文件内容如下：
 
-````xml {linenos=table}
+```xml {linenos=table}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -271,14 +241,14 @@ Flags，值为 ` arch=i386 `。我的此文件内容如下：
     <string></string>
   </dict>
 </plist>
-````
+```
 
 好了，重启电脑，进入 BootThink 引导，选择启动 Mac 安装盘分区。成功话可以看到苹果图标和风火轮，选择语言，然后就进入安装界面。这时候要对目标分区做格式化，点击菜单“实用工具 \-\> 磁盘工具\.\.\.”，在对话框中选择之前格式化成 NTFS 的空白分区，将选择模式“Mac
 OS 扩展（日志式）”，填写卷标，点击“抹掉”。成功之后关闭窗口，继续安装，接受软解许可协议，然后就是选择安装组件。有人建议不用选“打印机支持”，太占体积了。选好之后继续，选择刚才格式化好的目标分区，点击安装。
 
 如果是用硬盘安装的话，不用等太久就装好了。装好之后会自动重启，不过由于安装过程中，Windows 系统盘的活动分区属性被取消了，如果直接重启将无法进入 Windows，可以利用重启前的一点时间处理一下。点击菜单“实用工具 \-\> 终端”，用 diskutil 命令来设置活动分区。
 
-````text {linenos=false}
+```text {linenos=false}
 # diskutil list
 ... blah blah ...（查看 C:\ 在哪里，比如我的在 /dev/disk0 分区 1）
 # fdisk -e /dev/disk0
@@ -286,7 +256,7 @@ f 1
 w
 y
 quit
-````
+```
 
 重启电脑，进入 BootThink，这时候就可以看到安装好的 Mac 系统分区了，引导它启动即可（如果装的是 32 位，也没改 ` com.apple.Boot.plist `，就需要输入 ` -x32 ` 以 32 位模式启动）。
 

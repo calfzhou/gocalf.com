@@ -34,7 +34,7 @@ Pointer，也是个指针，但这个指针的值不能被修改（不能再指�
 
 下面这段 C\+\+ 程序示意了两种指针的区别，其中被注释掉的两行（高亮显示）是因为会无法编译。
 
-````cpp {linenos=table hl_lines="14 17"}
+```cpp {linenos=table hl_lines="14 17"}
 int a1 = 1;
 int b1 = 2;
 int c1 = 3;
@@ -57,15 +57,15 @@ pointerToConst = &b2;
 cout << "*pointer = " << *pointer << "\n"
      << "*pointerToConst = " << *pointerToConst << "\n"
      << "*constPointer = " << *constPointer << endl;
-````
+```
 
 显然程序的输出应该是：
 
-````text {linenos=table}
+```text {linenos=table}
 *pointer = 110
 *pointerToConst = 20
 *constPointer = 103
-````
+```
 
 对英文名称理解清楚了，记不记中文名字也就无所谓了吧。我的记忆方法就是“Pointer
 to Const”翻译为“常量的指针”，简称“常量指针”；“Const
@@ -73,7 +73,7 @@ Pointer”翻译为“指针常量”。
 
 最后简单总结一下跟 const 相关的变量的写法：
 
-````cpp {linenos=table}
+```cpp {linenos=table}
 int a = 0;
 int b = 1;
 
@@ -113,4 +113,4 @@ int* pb = &b;
 pointerToConstPointer = &pb;
 //*pointerToConstPointer = pb;
 **pointerToConstPointer = 10;
-````
+```

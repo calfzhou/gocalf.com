@@ -177,39 +177,27 @@ rows:
 
 - 100% compatible Excel XLSX files\.
 
-
 - Full formatting\.
-
 
 - Merged cells\.
 
-
 - Defined names\.
-
 
 - Charts\.
 
-
 - Autofilters\.
-
 
 - Data validation and drop down lists\.
 
-
 - Conditional formatting\.
-
 
 - Worksheet PNG/JPEG images\.
 
-
 - Rich multi\-format strings\.
-
 
 - Cell comments\.
 
-
 - Memory optimisation mode for writing large files\.
-
 
 ### 优点
 
@@ -344,17 +332,17 @@ Excel 的 com 接口的具体细节我就不介绍了，需要的话直接查阅
 
 要想得到一个可以操作的 excel 对象，一般可以有两种方式：
 
-````python {linenos=false}
+```python {linenos=false}
 import win32com.client
 
 excel = win32com.client.Dispatch('Excel.Application')
-````
+```
 
-````python {linenos=false}
+```python {linenos=false}
 import win32com.client
 
 excel = win32com.client.DispatchEx('Excel.Application')
-````
+```
 
 二者的区别在于，Dispatch 方法会试图寻找并复用一个已有的 Excel 进程（比如你已经在运行着的 Excel 程序），而 DispatchEx 则一定会创建一个新的 Excel 进程。一般情况使用前者就可以了，还能节省一些资源的开销。但也会带来一些麻烦，有一些状态是在一个 Excel 进程内共享的，你在同进程的其他窗口内操作有可能会影响到 Python 程序所要进行的处理，导致各种错误。比如当你手动开启的 Excel 窗口中，某个单元格正处于编辑状态，那 Python 程序控制的大部分操作都有可能失败（即使它操作的是另一个文件），因为一个 Excel 进程中无法让两个单元格同时被编辑。
 
@@ -368,11 +356,11 @@ excel = win32com.client.DispatchEx('Excel.Application')
 
 我一般都会让程序控制的 Excel 进程在调试过程中可见，正式使用时不可见，通过类似这样的命令（假设你有一个叫做 ` is_debug ` 的变量记录当前是否在调试状态）：
 
-````python {linenos=false hl_lines="2 3"}
+```python {linenos=false hl_lines="2 3"}
 excel = win32com.client.DispatchEx('Excel.Application')
 if is_debug:
     excel.Visible = True
-````
+```
 
 ### 关于保存并覆盖已有文件
 
@@ -380,14 +368,14 @@ if is_debug:
 
 可以把 DisplayAlert 属性关闭，这样 Excel 就不会弹出确认窗，而是直接覆盖同名文件。
 
-````python {linenos=false hl_lines="2"}
+```python {linenos=false hl_lines="2"}
 orig_display_alerts = excel.DisplayAlerts
 excel.DisplayAlerts = False
 try:
     book.SaveAs(save_as_file_path)
 finally:
     excel.DisplayAlerts = orig_display_alerts
-````
+```
 
 ### 关于结束 Excel 进程
 
@@ -397,7 +385,7 @@ finally:
 
 我一般会在我的处理完成后（关闭了我自己打开或者创建的 Excel 文件），判断一下当前 Excel 进程是否还开启着其他的文档，如果没有了才会结束该进程。
 
-````python {linenos=false hl_lines="1"}
+```python {linenos=false hl_lines="1"}
 number_of_workbooks = excel.Workbooks.Count
 if number_of_workbooks > 0:
     logging.debug(
@@ -411,13 +399,13 @@ else:
     excel.Quit()
 
 del excel
-````
+```
 
 ### 关于枚举常量
 
 Excel API 中有各种各样的枚举常量，我还没有找到在 Python 中直接引用这些常量的方法，目前的办法是找到所需的常数的值，自己定义这些常数。比如我用到了如下这些枚举常量：
 
-````python {linenos=table}
+```python {linenos=table}
 class ExcelConstants(object):
     # XlFileFormat Enumeration
     xlOpenXMLWorkbook = 51  # Open XML Workbook.
@@ -433,16 +421,16 @@ class ExcelConstants(object):
 
     # XlLineStyle enumeration
     xlContinuous = 1
-````
+```
 
 要想知道某一个枚举常量的数值，可以查阅 MSDN 中 [Excel Enumerations](http://msdn.microsoft.com/en-us/library/office/ff838815.aspx) 相关的资料。
 
 【2014 年 7 月 31 日更新】感谢 [@依云](https://blog.gocalf.com/python-read-write-excel.html#comment-1329532357) 提醒，在 Python 也能够直接引用相关的常量，即通过 ` win32com.client.constants ` 获取常量的值。不过这里还有一点比较 tricky 的地方，如果直接用 Dispatch 或者 DispatchEx 得到 Excel 对象，是无法从 constants 中取出常量值的，需要 [手动运行 makepy](http://timgolden.me.uk/python/win32_how_do_i/generate-a-static-com-proxy.html)，或者通过 ` win32com.client.gencache.EnsureDispatch ` 获得 Excel 对象：
 
-````python {linenos=table}
+```python {linenos=table}
 import win32com
 from win32com.client import constants
 excel = win32com.client.gencache.EnsureDispatch('Excel.Application')
 print constants.xlOpenXMLWorkbook  # will be 51
 print constants.xlCenter  # will be -4108
-````
+```

@@ -26,19 +26,15 @@ Desktop（App\-V）使用的一个虚拟分区，我也不记得是装了什么�
 
 1. 按 Win\+R，输入 regedit 并回车，打开注册表编辑器；
 
-
 2. 找到 HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer
-
 
 3. 在 Explorer 这个键值下添加如下两个 DWORD（32 位）值：
 
    1. 第一个名为 ` NoDrives `，值为 16 进制的 ` 10000 `，也就是十进制的 ` 65536 `；
 
-
    2. 第二个名为 ` NoViewOnDrive `，值同样是 16 进制的 ` 10000 `；
 
 4. 重启一下 explorer 即可。
-
 
 再次进入我的电脑，就可以看到那讨厌的 Q 分区消失了。
 

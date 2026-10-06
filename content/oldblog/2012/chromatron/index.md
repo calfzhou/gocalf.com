@@ -28,15 +28,11 @@ OS 都支持哦。
 
 1. [Chromatron 1 代 v1\.14](chromatron1_v1.14.zip)
 
-
 2. [Chromatron 2 代 v1\.5](chromatron2_v1.5.zip)
-
 
 3. [Chromatron 3 代 v1\.1](chromatron3_v1.1.zip)
 
-
 4. [Chromatron 4 代 v1\.0](chromatron4_v1.0.zip)
-
 
 这个游戏中除了反射镜、三棱镜等传统光学元件外，还有一些现实中不一定存在的非常神奇的元件，比如多普勒仪（Doppler），如果红色光线从一端射入，另一端就会射出绿色光线，类似地，绿色光线会变成蓝色，而蓝色会变成红色。如果反过来使用，颜色的变化也反之。再比如量子纠缠分光器（Quantum
 Tangler），它将输入的光线变成两条向相反方向射出的光线，并且这两条光线是量子纠缠的，其中一条光线被多普勒仪改变颜色时，另外那条光线就会变为相反的颜色。又如可移动的光线传送器（Mobile
@@ -60,8 +56,7 @@ Gate）、互补器（Complementor）等等。所有的元件如下图示。
 
 - Chromatron 1 代 v1\.14
 
-
-````text {linenos=false}
+```text {linenos=false}
 1-01-hI
 1-02-hXioDr
 1-03-nJtNcl
@@ -112,12 +107,11 @@ Gate）、互补器（Complementor）等等。所有的元件如下图示。
 1-48-sUjtcnzJuEsYNY
 1-49-DwMGMKrsgEBHhNtGdtdnng
 1-50-CbNiHScQhwxKoEzwDVCZhTwJxM
-````
+```
 
 - Chromatron 2 代 v1\.5
 
-
-````text {linenos=false}
+```text {linenos=false}
 2-01-BRgqgZhjqZ
 2-02-mDGXzupcMGJagFoXNowP
 2-03-coOEOBOy
@@ -168,12 +162,11 @@ Gate）、互补器（Complementor）等等。所有的元件如下图示。
 2-48-hIwQHFerNyjjzwCvIzdBdExaJLpvHV
 2-49-yDaCritKcoHrusoqKzjzhCJc
 2-50-OtMzBDBwNdCsNurGuGjHtvjJQKPYubIIochxDhNLsPcCCbym
-````
+```
 
 - Chromatron 3 代 v1\.1
 
-
-````text {linenos=false}
+```text {linenos=false}
 3-01-oCcmcO
 3-02-JeHgwAgrMvETdMuBuL
 3-03-gOCggnjMBFOSyZdJCGsU
@@ -224,12 +217,11 @@ Gate）、互补器（Complementor）等等。所有的元件如下图示。
 3-48-uECVirMYMDMWNyCDNKMKNiCtMxOdtsiFtKiRtYjiukjAtejL
 3-49-BPMTIeIkxIoWnGtwiEdisD
 3-50-OnNlCrNyCICbioCWtYDnjijWiUtwtIiChgNKCNixtiesEiey
-````
+```
 
 - Chromatron 4 代 v1\.0
 
-
-````text {linenos=false}
+```text {linenos=false}
 4-01-OqHQhHOi
 4-02-OHDxoYCboSHbci
 4-03-tZGYsVyb
@@ -280,6 +272,6 @@ Gate）、互补器（Complementor）等等。所有的元件如下图示。
 4-48-nLMVriNgCtIkIRcCBKcTyUtYjgjkoSjG
 4-49-BEssOXjClPmBCjsjJlMzhzENiVdEoRDVeser
 4-50-BCMCcCHODwNHNOuaFpGZjhnGEbIRrKzadshHsHne
-````
+```
 
 如果没玩过这个游戏，那就赶快开始吧！

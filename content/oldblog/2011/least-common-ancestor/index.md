@@ -35,7 +35,7 @@ log\(n\)，最坏情况 h = n）。
 
 如果想再稍微节省一点儿时间和空间，可以先找出第一条分支路径，并用这些结点建立哈希表，然后从另外一个指定结点开始向上走到树根，每次遇到一个结点就到哈希表中查一下，一旦发现某个结点存在于哈希表中，这个结点就是所求的 LCA。这个方法的代码示意如下：
 
-````python {linenos=table}
+```python {linenos=table}
 def FindLCA(node1, node2):
   # Special cases.
   if not node1 or not node2:
@@ -57,7 +57,7 @@ def FindLCA(node1, node2):
 
   # These two nodes have no common ancestor.
   return None
-````
+```
 
 时间和空间复杂度都是 O\(h\)。
 
@@ -65,7 +65,7 @@ def FindLCA(node1, node2):
 
 上面的方法需要至少一个跟深度相当的缓存，在空间上还是有一些浪费的。可以使用更节省空间的方法，就是先计算出两个结点各自的深度，如果深度不同，则将较靠下的一个结点拉上去，直到两个结点在同一深度处。然后同步向根结点前进，首次相遇时则为最小公共祖先。示意代码（python 2\.7）如下：
 
-````python {linenos=table}
+```python {linenos=table}
 def FindLCA(node1, node2):
   # Special cases.
   if not node1 or not node2:
@@ -90,7 +90,7 @@ def FindLCA(node1, node2):
     node2 = node2.parent
 
   return None
-````
+```
 
 这样时间复杂度是 O\(h\)，空间复杂度是 O\(1\)。
 
@@ -102,7 +102,7 @@ def FindLCA(node1, node2):
 
 我们采取前序遍历，即 N\-L\-R 的顺序，使用堆栈来避免递归并且记录完整的分支路径。那么，在二叉树中查找指定结点的算法可以这样写：
 
-````python {linenos=table}
+```python {linenos=table}
 class Dir:
   (Undef, Left, Right) = range(3)
 
@@ -130,7 +130,7 @@ def FindNodes(root, nodeSet, findAll=True):
     curr = curr.right
 
   return pathDict
-````
+```
 
 其中 ` Dir ` 这个类相当于是一个枚举，用来定义当前的分支方向。` FindNodes ` 除了需要二叉树根结点外，还需要一个待查找的结点集合。这个函数可以在二叉树中找到所有（或第一个）待查找结点的分支路径，并返回一个字典（结点
 \-\-\> 路径）。
@@ -139,7 +139,7 @@ def FindNodes(root, nodeSet, findAll=True):
 
 有了 ` FindNodes ` 函数的支持，我们就可改写前面的 ` FindLCA ` 函数，即先遍历二叉树求出两个结点的分支路径，然后比较这两条路径找出 LCA：
 
-````python {linenos=table}
+```python {linenos=table}
 def FindLCA(root, node1, node2):
   # Special cases.
   if not root or not node1 or not node2:
@@ -165,7 +165,7 @@ def FindLCA(root, node1, node2):
     lca = path1[i]
 
   return lca
-````
+```
 
 遍历二叉树查找所有指定的结点需要 O\(n\) 时间，O\(h\) 额外空间；对比两条分支路径需要 O\(h\) 的时间，因此总的时间代价为 O\(n\)，空间代价为 O\(h\)。
 
@@ -179,15 +179,13 @@ def FindLCA(root, node1, node2):
 
 1. LCA 就是其中的一个结点，而另一个结点是它的子孙；
 
-
 2. 两个结点分别位于 LCA 的左子树和右子树中。
-
 
 对于第一种可能，前序遍历时首先找到的结点就是 LCA，剩下的事情就是确定第二个结点在它下面。中序和后序也都可以做，但没有这么美妙。
 
 对于第二种可能，假设在前序遍历过程中，首先找到了一个结点（比如下面的 H），根据非递归前序遍历的算法特性，这时候栈里一定是依次存储了结点 A（根节点）、B、D、G（请自行思考为什么没有 C、E、F），再结合 LCA 的特性，很容易发现，LCA 要么是 H 自身（对应于上面第一种情况），要么就只能是 A、B、D 或 G。剩下的事情就太美妙，继续遍历二叉树，直到找到另外一个结点。这时候看看 A、B、D、G 和 H 中还有谁在栈里，最靠下的那个就是 LCA。怎么判定谁在栈里？怎么判定最靠下？用辅助变量呗。
 
-````text {linenos=false}
+```text {linenos=false}
     A
    /
   B
@@ -203,11 +201,11 @@ E
     G
    /
   H
-````
+```
 
 示意程序代码：
 
-````python {linenos=table}
+```python {linenos=table}
 def FindLCA(root, node1, node2):
   nodeset = set([node1, node2])   # Also supports 3 or more nodes.
   s = []          # A stack to help performing N-L-R traversing.
@@ -232,7 +230,7 @@ def FindLCA(root, node1, node2):
         mindepth = len(s)
       root = root.right
   return None if nodeset else lca
-````
+```
 
 可以跟 [程序基本功之遍历二叉树](../../2012/traversing-binary-tree/index.md) 中的  **非递归前序遍历**  的程序对比一下，会发现改动之处是非常小的。
 

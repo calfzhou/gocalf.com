@@ -27,21 +27,21 @@ keywords:
 
 当然需要给 WordPress 创建一个数据库（比如叫做 ` my_wordpress `）以及用户（比如 ` wp_user `）：
 
-````text {linenos=table}
+```text {linenos=table}
 $ mysql -uroot -p
 mysql> CREATE DATABASE my_wordpress;
 mysql> GRANT ALL PRIVILEGES ON my_wordpress.* TO wp_user@localhost IDENTIFIED BY "use-your-real-password";
 mysql> FLUSH PRIVILEGES;
 mysql> EXIT
-````
+```
 
 ## 暂停博客
 
 在对源博客数据打包前，先要暂停它的服务，避免不必要的数据错误或者遗失。我选择了 [最省事的方法](http://sivel.net/2009/06/wordpress-maintenance-mode-without-a-plugin/)，直接在博客根目录下创建一个名为 ` .maintenance ` 的文件，内容为：
 
-````php {linenos=table}
+```php {linenos=table}
 <?php $upgrading = time(); ?>
-````
+```
 
 这样再访问源博客的时候，页面会提示“正在执行例行维护，请一分钟后回来”。当然了，这里的“一分钟”是写死的，什么时候来看都是同样的提示。
 
@@ -51,27 +51,27 @@ mysql> EXIT
 
 WordPress 博客的文章、评论等数据都保存在数据库中，直接 dump 出来就可以做备份或者迁移。我就直接用 mysqldump 命令来导出现有的数据：
 
-````bash {linenos=table}
+```bash {linenos=table}
 mysqldump -uDB_USER_NAME -pDB_USER_PASSWORD DB_NAME | gzip > my-worpress.sql.gz
-````
+```
 
 命令中大写的部分需要用自己的用户名、密码和数据库名替换。导出的文件用 gzip 压缩一下以便通过网络复制到目标机器。
 
 附件、插件、主题等都保存在 wp\-content 目录中，直接压缩打包：
 
-````bash {linenos=table}
+```bash {linenos=table}
 tar -zcf content.tar.gz wp-content
-````
+```
 
 ## 在目标机器恢复数据
 
 上面打包好的两个文件可以通过 scp、ftp 等工具传送到新的机器上，然后分别将数据恢复出来即可。
 
-````bash {linenos=table}
+```bash {linenos=table}
 gunzip < my-worpress.sql.gz | mysql -uwp_user -pYOUR_PASSWORD my_wordpress
 tar -zxf content.tar.gz
 cp -Rp wp-content/* PATH-TO-YOUR-WORDPRESS-wp-content-FOLDER
-````
+```
 
 ## 配置文件
 

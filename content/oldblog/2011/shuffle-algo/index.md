@@ -32,7 +32,7 @@ place），不要生成新的数组。用 O\(n\) 时间、O\(1\) 辅助空间。
 
 用 Python 来写一段简单的程序描述这个算法：
 
-````python {linenos=table}
+```python {linenos=table}
 from random import Random
 
 def Shuffle(li):
@@ -40,7 +40,7 @@ def Shuffle(li):
   for x in xrange(len(li) - 1, 0, -1):  # 逆序遍历 li
     y = rand.randint(0, x)              # 从剩余数据中随机选取一个
     li[x], li[y] = li[y], li[x]         # 将随机选取的元素与当前位置元素互换
-````
+```
 
 主要的代码仅仅三行而已，浅显易懂。
 
@@ -55,7 +55,7 @@ $$
 实际上 Python 用户一定知道，在 Random 类中就有现成的 shuffle 方法，处理方法与我上面的程序是一样的。顺便也贴在这里学习一下。以下代码来自于
 Python 2\.5 ` Lib\random.py `：
 
-````python {linenos=table linenostart=250}
+```python {linenos=table linenostart=250}
 def shuffle(self, x, random=None, int=int):
   """x, random=random.random -> shuffle list x in place; return None.
 
@@ -69,4 +69,4 @@ def shuffle(self, x, random=None, int=int):
     # pick an element in x[:i+1] with which to exchange x[i]
     j = int(random() * (i+1))
     x[i], x[j] = x[j], x[i]
-````
+```

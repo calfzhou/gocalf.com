@@ -39,7 +39,7 @@ L \- a 次移动，P1 向前移动了 L \- a 个位置（相当于后退了 a）
 
 算法示意：
 
-````python {linenos=table}
+```python {linenos=table}
 def CheckRing(head):
   l1 = 0  # length of the chain before the ring
   l2 = 0  # length of the ring
@@ -75,4 +75,4 @@ def CheckRing(head):
     pos2 = pos2.next
     l1 += 1
   return (l1, l2)
-````
+```

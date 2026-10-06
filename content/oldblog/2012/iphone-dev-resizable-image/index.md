@@ -35,18 +35,18 @@ stretchableImage 方法有两个整数参数，分别用来指定图片的左边
 > end cap and the middle portion together and then subtracting that
 > value from the width of the image:
 >
-> ````objc {linenos=false}
+> ```objc {linenos=false}
 > rightCapWidth = image.size.width - (image.leftCapWidth + 1);
-> ````
+> ```
 >
 > The middle \(stretchable\) portion is assumed to be 1 pixel wide\. The
 > bottom end cap is therefore computed by adding the size of the top
 > end cap and the middle portion together and then subtracting that
 > value from the height of the image:
 >
-> ````objc {linenos=false}
+> ```objc {linenos=false}
 > bottomCapHeight = image.size.height - (image.topCapHeight + 1);
-> ````
+> ```
 
 原来已经规定了中间可拉伸区域必须是 1x1 的，因此右边和下边的端帽宽度就由图片的宽度和高度、左边和上边的端帽宽度决定。在设计非对称图案时需要注意一下。
 
@@ -55,7 +55,7 @@ stretchableImage 方法有两个整数参数，分别用来指定图片的左边
 
 下面这个程序片段给试图添加了三个 UIImageView，分别显示原始大小的图片、无端帽拉伸之后的图片、和指定了正确的端帽宽度（用 stretchableImage）后拉伸的图片。
 
-````objc {linenos=table hl_lines="7 8"}
+```objc {linenos=table hl_lines="7 8"}
 - (void)viewDidLoad
 {
   [super viewDidLoad];
@@ -83,7 +83,7 @@ stretchableImage 方法有两个整数参数，分别用来指定图片的左边
   imageView3.center = CGPointMake(160, 340);
   [self.view addSubview:imageView3];
 }
-````
+```
 
 运行后效果如下图示：
 
