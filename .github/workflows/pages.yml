@@ -67,8 +67,9 @@ jobs:
           path: ./public
 
   deploy:
-    # Builds never publish on push or pull request. Publishing is an explicit action.
-    if: github.event_name == 'workflow_dispatch' && inputs.deploy && github.ref == 'refs/heads/main'
+    # Successful main pushes publish automatically. PRs never deploy.
+    # Manual main runs publish only when deploy is explicitly enabled.
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.deploy))
     needs: build
     runs-on: ubuntu-24.04
     timeout-minutes: 10

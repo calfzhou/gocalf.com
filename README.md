@@ -149,9 +149,15 @@ Source-edit links remain off.
 
 The Pages workflow builds on pushes and pull requests to `main`, using the exact
 committed theme submodule and checksum-verified Hugo **0.166.0 extended**. It uploads
-a build artifact but **does not publish automatically**. Publishing requires a
-manual workflow run on `main` with `deploy` explicitly enabled and the repository's
-Pages environment/permissions configured. No Node/pnpm installation is involved.
+a build artifact and **automatically deploys successful pushes to `main`** to GitHub
+Pages. Pull requests build and upload an artifact but never deploy. Failed, cancelled
+or skipped builds cannot publish. No recurring build or deployment approval is required
+for successful main pushes under the current Pages environment configuration.
+
+Manual workflow runs remain available: on `main`, enable `deploy` to publish, or leave
+it disabled for a build-only run. Other branches cannot deploy. Pages still requires
+the repository's environment/permissions to be configured. No Node/pnpm installation
+is involved.
 
 The workflow's Linux binary URL and SHA-256 are pinned together; update and verify
 both when deliberately upgrading Hugo. Local builds do not run this installer.
