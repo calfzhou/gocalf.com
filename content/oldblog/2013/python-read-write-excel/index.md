@@ -26,7 +26,7 @@ keywords:
 
 我主要尝试了四种工具，在此并不会给出他们的排名，因为在不同的应用场景下，做出的选择会不同。
 
-{{< rich-table >}}
+{{< rich-table cellwidth=200 >}}
 headers:
 - text: ''
   colspan: 1

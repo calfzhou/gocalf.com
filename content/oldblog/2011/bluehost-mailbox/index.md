@@ -29,7 +29,7 @@ keywords:
 > recipient domain\. We recommend contacting the other email provider
 > for further information about the cause of this error\. The error
 > that the other server returned was: 550 550 \#5\.1\.0 Address rejected
-> [xxx@xxxxxxxx\.com](mailto:xxx@xxxxxxxx.com) \(state 14\)\.\
+> [xxx@xxxxxxxx\.com](mailto:xxx@xxxxxxxx.com) \(state 14\)\.
 
 看起来应该是 DNS 的问题（跨服务商就是这点比较麻烦啊）。仔细察看了 GoDaddy 上 DNS
 Manager 里面的内容，发现 Mail
