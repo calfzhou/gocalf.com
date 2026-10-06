@@ -20,6 +20,7 @@ _merge = 'shallow'
 [permalinks.term]
 _merge = 'shallow'
 [permalinks.page]
+oldblog = '/oldblog/:slug/'
 blog = '/blog/:year/:month/:day/:slug/'
 [frontmatter]
 date = ['date', 'publishDate', 'pubdate', 'published']
