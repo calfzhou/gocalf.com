@@ -2,10 +2,24 @@
 title: 我的笔记工具使用历程
 type: story
 date: "2024-04-13T15:27:19+08:00"
-lastmod: "2025-12-27T14:23:18+08:00"
+lastmod: "2026-10-06T17:08:22+08:00"
 slug: note-taking-tools
 ---
 {{% timeline %}}
+
+{{< event title="2026 年" >}}
+Hexo 自身及其官方插件都几乎不怎么更新了。更重要的问题是，Hexo 的理念是「博客」，博客文章是一等公民，文章页和普通页面的很多处理逻辑都不统一。于是决定转向 Hugo。Hugo 并不局限于「博客」，而且它的 section 概念可以很方便地把笔记和博客区分开来。与 Obsidian 配合也更自然顺畅。
+{{< grid >}}
+{{< cell >}}
+{{< link href="https://obsidian.md/" text="Obsidian - Sharpen your thinking" image="obsidian.svg" alt="" >}}
+{{< /cell >}}
+{{< cell >}}
+{{< link href="https://gohugo.io/" text="Hugo - The world’s fastest framework for building websites" image="hugo.svg" alt="" >}}
+{{< link href="https://github.com/calfzhou/hugo-theme-sidera" text="Sidera - A Hugo theme for blogs, notebooks, and connected knowledge" image="/images/sidera-parallax-square.svg" alt="" >}}
+{{< /cell >}}
+{{< /grid >}}
+
+{{< /event >}}
 
 {{< event title="2025 年" >}}
 最终还是无法忍受 Joplin 的同步问题，几乎不敢在手机上编辑，桌面端的同步状态也经常卡死。换手机之后，即便手机数据整体迁移到新手机，进入 Joplin 依然要重新从头开始同步，极慢且反复出错。换成 Obsidian，甚爱。同时把 Hexo 的 `source` 目录做成 Obsidian vault，可以直接在 Obsidian 里编辑，很方便。
