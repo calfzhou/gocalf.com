@@ -100,6 +100,7 @@ pageRef = '/oldblog'
 weight = 4
 [menus.primary.params]
 icon = 'gocalf-oldblog-bold-duotone'
+color = '#1166F9'
 [[menus.primary]]
 name = 'Sidera'
 pageRef = '/sidera'
@@ -137,13 +138,6 @@ weight = 3
 icon = "gocalf-facebook"
 
 [[menus.social]]
-name = "Telegram"
-url = "https://t.me/calfzhou"
-weight = 4
-[menus.social.params]
-icon = "gocalf-telegram"
-
-[[menus.social]]
 name = "PGP"
 url = "/pgp/"
 weight = 5
@@ -179,12 +173,6 @@ parent = "gocalf"
 name = "PGP 信息"
 url = "/pgp/"
 weight = 3
-
-[[menus.footer]]
-parent = "gocalf"
-name = "旧站"
-url = "https://blog.gocalf.com/"
-weight = 4
 
 [[menus.footer]]
 identifier = "content"
@@ -231,12 +219,6 @@ parent = "contact"
 name = "Facebook"
 url = "https://www.facebook.com/calfzhou"
 weight = 3
-
-[[menus.footer]]
-parent = "contact"
-name = "Telegram"
-url = "https://t.me/calfzhou"
-weight = 4
 
 [[menus.footer]]
 identifier = "thanks"
