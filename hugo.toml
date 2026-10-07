@@ -95,16 +95,22 @@ weight = 3
 icon = 'blog'
 color = '#FFA500'
 [[menus.primary]]
+name = '旧站'
+pageRef = '/oldblog'
+weight = 4
+[menus.primary.params]
+icon = 'gocalf-oldblog-bold-duotone'
+[[menus.primary]]
 name = 'Sidera'
 pageRef = '/sidera'
-weight = 4
+weight = 5
 [menus.primary.params]
 icon = 'sidera-bold-duotone'
 color = '#9a805f'
 [[menus.primary]]
 name = '关于'
 pageRef = '/about'
-weight = 5
+weight = 6
 [menus.primary.params]
 icon = 'about'
 color = '#3370FF'
