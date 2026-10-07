@@ -1,0 +1,23 @@
+{{- $page := .Page -}}
+{{- $cellWidth := .Get "cellwidth" | default 140 -}}
+{{- if not (findRE `^[1-9][0-9]*$` (string $cellWidth)) -}}{{ errorf "rich-table cellwidth must be a positive pixel width" }}{{- end -}}
+{{- $table := .Inner | transform.Unmarshal -}}
+{{- $columns := len (index $table.rows 0) -}}
+<table style="position:relative">
+<thead><tr>
+{{- $total := 0 -}}
+{{- range $table.headers -}}
+  {{- $span := int .colspan -}}
+  {{- if lt $span 1 -}}{{ errorf "rich-table requires positive header spans" }}{{- end -}}
+  {{- $total = add $total $span -}}
+  <th colspan="{{ $span }}" scope="{{ if gt $span 1 }}colgroup{{ else }}col{{ end }}">{{ $page.RenderString .text }}</th>
+{{- end -}}
+{{- if ne $total $columns -}}{{ errorf "rich-table header/body width mismatch" }}{{- end -}}
+</tr></thead>
+<tbody>
+{{- range $table.rows -}}
+  {{- if ne (len .) $columns -}}{{ errorf "rich-table has a ragged row" }}{{- end -}}
+  <tr>{{ range . }}<td style="{{ printf "min-width:%spx" (string $cellWidth) | safeCSS }}">{{ $page.RenderString . }}</td>{{ end }}</tr>
+{{- end -}}
+</tbody>
+</table>
