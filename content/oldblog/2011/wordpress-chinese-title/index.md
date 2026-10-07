@@ -32,4 +32,4 @@ around 就是暂时禁用 Cufon。我现在使用的主题是大名鼎鼎的 Lig
 Settings，在 General settings 中就可以看到 Cufon
 settings，改为 Disabled 即可。
 
-关闭 Cufon 之后，明显感觉到英文标题没有以前好看了，不过为了能显示中文，只好先忍痛割爱了。当然如果愿意，也可以准备一个中文字体，在上面提到的第二个链接中可以自行创建。在 WordPress 的安装目录 ` ./wp-content/themes/lightword/js/ ` 中可以看到相关 JavaScript，比如 LightWord 主题使用的是 vera 字体，在目录中可以看到 ` vera.font.js ` 和 ` vera\_extra.font.js ` 两个文件。
+关闭 Cufon 之后，明显感觉到英文标题没有以前好看了，不过为了能显示中文，只好先忍痛割爱了。当然如果愿意，也可以准备一个中文字体，在上面提到的第二个链接中可以自行创建。在 WordPress 的安装目录 ` ./wp-content/themes/lightword/js/ ` 中可以看到相关 JavaScript，比如 LightWord 主题使用的是 vera 字体，在目录中可以看到 ` vera.font.js ` 和 ` vera_extra.font.js ` 两个文件。

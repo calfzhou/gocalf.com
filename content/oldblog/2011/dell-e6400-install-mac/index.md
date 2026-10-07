@@ -33,30 +33,17 @@ E6400 有关的部分和遇到的一些问题为主吧，这款机器似乎是�
 为 PC 装 Mac 系统最头疼的当然是硬件驱动了，所以在安装前要先搞清楚机器的硬件情况。
 
 - Chip set
-
   - North Bridge: Intel Cantiga PM45
-
   - Source Bridge: Intel 82801 IEM ICH9M\-E
-
 - BIOS: Phoenix 05/11/09
-
 - CPU: Intel Core2 Duo P9600 2800MHz \(10\.5 x 267\)
-
 - Memory: 2G\*2, 800MHz Dual
-
 - Storage: Intel ICH9M\-E/M SATA AHCI Controller
-
 - Video: nVIDIA Quadro NVS160M \(256MB\)
-
-- Audio:  IDT 92HD 71B7 @ Intel 82801 IB ICH9 \- High Definition Audio
-  Controller \[A\-3\] PCI
-
+- Audio:  IDT 92HD 71B7 @ Intel 82801 IB ICH9 \- High Definition Audio Controller \[A\-3\] PCI
 - Display: 1440x900
-
 - Network
-
   - Ethernet: Intel 82567LG Gigabit Network Connection
-
   - WiFi: Intel WiFi Link 5300 AGN（最让人头疼的硬件，驱动无解）
 
 ## 工具和准备工作
@@ -80,9 +67,7 @@ disk image\.\.\.，将生成的文件（\.dmg）保存在某个 NTFS 分区上�
 使用 HFS\-Explorer 把下载的安装盘镜像处理一下生成另外一个镜像，主要有三个作用：
 
 - 有些镜像格式无法被后面用到的安装助手识别，这个工具可以做一次格式转换；
-
 - 去掉原镜像的写保护，以便稍后替换 OSInstall（也可以直接下载一个别人替换过的镜像，那就不用装这个工具了，也可以跳过后面的 MacDriver）；
-
 - 可以对原镜像文件做检验。
 
 接下来就要祭出 Leopard 硬盘安装助手（v0\.3）了。它不需要安装，但在 Win
@@ -115,106 +100,61 @@ OS 对应的目录也不太一样，这里就不多说了）。
 驱动的选择至关重要啊，选择的不好，轻则某个硬件不工作，重则四国、五国、风火轮（在系统加载时出现用四国或者五国文字写的提示信息，或者风火轮图标一直转却无法进入系统）。这里列出我选择的驱动和补丁。
 
 - 系统补丁
-
   - fakesmc\.kext：模拟苹果机的 SMC，必须的！
-
   - NullCPUPowerManagement\.kext：禁用电源管理，解决 IntelCPUPowerManagement\.kext 的 HPET 错误。
-
   - OpenHaltRestart\.kext：解决重启或关机问题。
-
   - OSXRestart\.kext：解决重启问题。
-
   - PlatformUUID\.kext：解决 UUID 错误。
-
   - Disabler\.kext：屏蔽不能正常启动的补丁。
-
   - IOAHCIBlockStorageInjector\.kext：解决本地硬盘图标为橙色的补丁。
-
 - Video
-
   - NVinject\.kext
-
 - Audio
-
   - IOAudioFamily\.kext
-
   - HDAEnabler\.kext
-
   - VoodooHDA\.kext
-
 - Ethernet
-
   - IONetworkingFamily\.kext
-
   - Intel82566MM\.kext
-
 - WiFi
-
   - :\-\( 我那无解的无线网卡，凑合用了个 LegacyAppleAirPortBrcm4311\.kext，不五国，也没效果
-
 - PS/2（鼠标、键盘、触摸板）
-
   - ApplePS2Controller\.kext（或者 VoodoPS2Controller\.kext）
-
   - AppleACPIPS2Nub\.kext
-
 - Battery
-
   - VoodooBattery\.kext
-
 - Bluetooth
-
   - DellBluetoothHCI\.kext
-
 - SD Reader
-
   - VoodooSDHC\.kext
-
 - PCMCIA
-
   - IOPCIFamily\.kext
-
 - Chip set
-
   - AHCIPortInjector\.kext：可以识别 Intel 芯片组的 AHCI。
-
 - 风扇
-
   - IOACPIFamily\.kext：解决部分笔记本风扇不正常问题，只支持 32 位。
-
 - 还有几个已经不记得是干什么用的了
-
   - AppleRTC\.kext
-
   - OSvKernDSPLib\.kext
 
 ## 安装
 
 动手安装之前还要注意几件事情。
 
-首先是 Snow
-Lopard 需要 SATA 硬盘支持，所以要确认 BIOS 中 SATA 模式设定为 AHCI（默认可能是 IRRT）。
+首先是 Snow Lopard 需要 SATA 硬盘支持，所以要确认 BIOS 中 SATA 模式设定为 AHCI（默认可能是 IRRT）。
 
 BootThink 的一些操作：
 
 - c：Leopard 原版光盘启动；
-
 - Alt：进入 startup manager，选取启动分区；
-
 - Shift：安全模式；
-
 - Ctrl\+V（或 \-v）：Verbose 模式；
-
 - Ctrl\+S：单用户模式；
-
 - \#g=WxHxDEPTH（如 1440x900x32）：设置分辨率；
-
 - \#g=\~：取消分辨率设置；
-
 - \-32：以 32 位模式启动。
 
-我的 E6400 用 64 位总是有些驱动有问题，只好用 32 位了。在安装和启动 Mac 的时候，都要在 BootThink 里输入 ` -x32 `，或者修改 ` B:\Darwin\com.apple.Boot.plist `，添加 Kernel
-Flags，值为 ` arch=i386 `。我的此文件内容如下：
+我的 E6400 用 64 位总是有些驱动有问题，只好用 32 位了。在安装和启动 Mac 的时候，都要在 BootThink 里输入 ` -x32 `，或者修改 ` B:\Darwin\com.apple.Boot.plist `，添加 Kernel Flags，值为 ` arch=i386 `。我的此文件内容如下：
 
 ```xml {linenos=table}
 <?xml version="1.0" encoding="UTF-8"?>

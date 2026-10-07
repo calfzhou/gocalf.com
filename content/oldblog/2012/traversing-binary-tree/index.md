@@ -26,16 +26,14 @@ keywords:
 
 概念就不用多解释了，前、中、后是指根结点的访问时机，在左、右子树之前、中间、或之后。层序就是从根结点开始从上至下、从左到右地依次访问。
 
-{{< image src="bin-tree.png" alt="bin-tree" caption="一棵二叉树" >}}
+![一棵二叉树](bin-tree.png)
+{.invert-when-dark}
 
 如上图所示的一棵二叉树，对应的遍历结果分别是：
 
 - 前序（NLR）：` A B D C E G H F I `
-
 - 中序（LNR）：` D B A G E H C F I `
-
 - 后序（LRN）：` D B G H E I F C A `
-
 - 层序：` A B C D E F G H I `
 
 ## 一、用递归处理二叉树的前序、中序和后序遍历

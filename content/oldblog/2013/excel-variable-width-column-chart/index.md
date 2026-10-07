@@ -38,7 +38,8 @@ Chart，我没有仔细去考证，二者好像也并不完全一样。
 
 最后做成的图是这样的：
 
-{{< image src="variable_width_column_chart.png" alt="variable_width_column_chart" caption="在 Excel 中根据上述数据制作的不等宽柱状图" >}}
+![在 Excel 中根据上述数据制作的不等宽柱状图](variable_width_column_chart.png)
+{.invert-when-dark}
 
 那么应该怎么产生这样的效果呢？内置的柱状图并没有办法调节每个柱子的宽度，所以看起来不应该是从这个角度去做。
 
@@ -182,7 +183,8 @@ Axis，将 AXIS OPTIONS \-\> Axis Type 由默认的 Automatically select based o
 
 {{< image src="use_date_axis.png" alt="use_date_axis" caption="改成 Date Axis" >}}
 
-{{< image src="trapezoid_vs_rectangle.png" alt="trapezoid_vs_rectangle" caption="应用 Date Axis 之前（等宽梯形）和之后（不等宽矩形）的图形对比" >}}
+![应用 Date Axis 之前（等宽梯形）和之后（不等宽矩形）的图形对比](trapezoid_vs_rectangle.png)
+{.invert-when-dark}
 
 然后把横轴的刻度和标签隐藏起来，即把 TICK MARKS \-\> Major type 从默认的 Outside 改为 None，把 LABELS \-\> Label
 Position 从默认的 Next to Axis 改为 None。
@@ -191,7 +193,8 @@ Position 从默认的 Next to Axis 改为 None。
 
 修改一下图的标题之后，不等宽柱状图的主体结构就完成了。
 
-{{< image src="chart_demo.png" alt="chart_demo" caption="不等宽柱状图的主体结构" >}}
+![不等宽柱状图的主体结构](chart_demo.png)
+{.invert-when-dark}
 
 ## 添加数据标签
 
@@ -243,7 +246,8 @@ Range 对话框，将数据范围设置为 TableData 的 X 列整列数据。然
 
 [http://jsfiddle\.net/calfzhou/TUt2U/](http://jsfiddle.net/calfzhou/TUt2U/)
 
-{{< image src="variable-width-column-chart.svg" alt="不等宽柱状图：A 到 E 的宽度和高度均采用原始数据" caption="Variable Width Column Chart（静态图）" >}}
+![Variable Width Column Chart（静态图）](variable-width-column-chart.svg)
+{.invert-when-dark}
 
 [原始数据（JSON）](variable-width-column-chart.json)
 

@@ -125,9 +125,6 @@ Temple）。
 
 参考：
 
-- [《塞尔达传说：黄昏公主》图文全攻略](http://wii.tgbus.com/glmj/gl/200611/20061129114849.shtml) by WiiBbs 攻研部
-  Szh、三代鬼彻、天堂的翅膀
-
+- [《塞尔达传说：黄昏公主》图文全攻略](http://wii.tgbus.com/glmj/gl/200611/20061129114849.shtml) by WiiBbs 攻研部 Szh、三代鬼彻、天堂的翅膀
 - [《塞尔达传说 黄昏公主》完美攻略研究](http://www.cngba.com/thread-16520313-1-1.html) by www\.cngba\.com 鸡蛋
-
 - [Wii《塞尔达传说：黎明公主》流程攻略](http://tv.duowan.com/0710/57154029137.html)

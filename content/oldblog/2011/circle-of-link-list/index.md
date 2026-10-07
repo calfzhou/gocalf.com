@@ -31,7 +31,8 @@ keywords:
 L\)，显然 x = L \- a。下面这张图可以清晰地表明这种关系，经过 x =
 L \- a 次移动，P1 向前移动了 L \- a 个位置（相当于后退了 a），到达 P1\' 处，而 P2 向前移动了 2L \- 2a 个位置（相当于后退了 2a），到达 P2\' 处，显然 P1\' 和 P2\' 是同一点。
 
-{{< image src="two_pointers_in_ring.svg" alt="two_pointers_in_ring" caption="慢指针（P1）转一周之内，必然与快指针（P2）相遇" width=428 >}}
+![慢指针（P1）转一周之内，必然与快指针（P2）相遇|428](two_pointers_in_ring.svg)
+{.invert-when-dark}
 
 在知道链表内有环后，求环长是一件非常简单的事情，只要从刚才那个相遇点开始，固定 P2，继续移动 P1，直到 P1 与 P2 再次相遇，所经过的步数就是环长。
 

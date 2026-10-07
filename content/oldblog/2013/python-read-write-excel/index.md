@@ -26,7 +26,7 @@ keywords:
 
 我主要尝试了四种工具，在此并不会给出他们的排名，因为在不同的应用场景下，做出的选择会不同。
 
-{{< rich-table cellwidth=200 >}}
+{{< rich-table >}}
 headers:
 - text: ''
   colspan: 1
@@ -40,23 +40,10 @@ headers:
   colspan: 1
 rows:
 - - 介绍
-  - '可以创建 Excel 2007
-
-    或更高版本的 XLSX
-
-    文件'
-  - '即 [python\-excel](http://www.python-excel.org/)，含
-
-    [xlrd](https://pypi.python.org/pypi/xlrd)、[xlwt](https://pypi.python.org/pypi/xlwt)
-    和
-
-    [xlutils](https://pypi.python.org/pypi/xlutils) 三大模块，分别提供读、写和其他功能'
-  - '可以读写 Excel 2007 XLSX
-
-    和 XLSM 文件'
-  - '直接通过 COM 组件与Microsoft
-
-    Excel 进程通信，调用其各种功能实现对 Excel 文件的操作'
+  - '可以创建 Excel 2007 或更高版本的 XLSX 文件'
+  - '即 [python\-excel](http://www.python-excel.org/)，含 [xlrd](https://pypi.python.org/pypi/xlrd)、[xlwt](https://pypi.python.org/pypi/xlwt) 和 [xlutils](https://pypi.python.org/pypi/xlutils) 三大模块，分别提供读、写和其他功能'
+  - '可以读写 Excel 2007 XLSX 和 XLSM 文件'
+  - '直接通过 COM 组件与Microsoft Excel 进程通信，调用其各种功能实现对 Excel 文件的操作'
 - - 读
   - ❌
   - ✅
@@ -105,66 +92,36 @@ rows:
 - - 使用场景
   - '- 要创建 XLSX 文件
 
-
-
     - 不需要读取已有文件
-
-
 
     - 需要实现比较复杂的功能
 
-
-
     - 数据量可能会很大
-
-
 
     - 需要跨平台'
   - '- 要读取 XLS 或 XLSX 文件
 
-
-
     - 要生成 XLS 文件
 
-
-
     - 需要的功能不太复杂
-
-
 
     - 需要跨平台'
   - '- 要处理 XLSX 文件
 
-
-
     - 需要修改已有文件，或者在写入过程中需要不断修改
-
-
 
     - 需要的功能比较复杂
 
-
-
     - 数据量可能会很大
-
-
 
     - 需要跨平台'
   - '- 需要处理各种文件格式
 
-
-
     - 需要用到特别复杂的功能
-
-
 
     - 在修改文件时，不希望对原有信息造成任何意外破坏
 
-
-
     - 数据量很小，或者愿意等待
-
-
 
     - 仅在 Windows 中使用'
 {{< /rich-table >}}
@@ -176,27 +133,16 @@ rows:
 这应该是个比较新的项目，在 GitHub 上看它最早的提交是在 2013 年 1 月份。其官方文档中宣称它支持：
 
 - 100% compatible Excel XLSX files\.
-
 - Full formatting\.
-
 - Merged cells\.
-
 - Defined names\.
-
 - Charts\.
-
 - Autofilters\.
-
 - Data validation and drop down lists\.
-
 - Conditional formatting\.
-
 - Worksheet PNG/JPEG images\.
-
 - Rich multi\-format strings\.
-
 - Cell comments\.
-
 - Memory optimisation mode for writing large files\.
 
 ### 优点

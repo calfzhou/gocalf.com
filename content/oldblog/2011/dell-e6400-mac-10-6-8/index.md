@@ -71,18 +71,11 @@ kextcache -v 1 -l -s -n -t -arch i386 -arch x86_64 -m /Volumes/Mac\ OS/System/Li
 刚才那个 dsdt\.aml 既然能够解决那么多问题，就意味着我可以去掉好多 kext 了，总共去掉了以下这些 kext：
 
 - NullCPUPowerManagement\.kext：禁用电源管理，解决 IntelCPUPowerManagement\.kext 的 HPET 错误。
-
 - OpenHaltRestart\.kext：解决重启或关机问题。
-
 - OSXRestart\.kext：解决重启问题。
-
 - PlatformUUID\.kext：解决 UUID 错误。
-
 - IOAHCIBlockStorageInjector\.kext：解决本地硬盘图标为橙色的补丁。
-
-- AppleRTC\.kext：装 10\.6\.3 的时候不知道这是干什么用的，但似乎是 Real Time
-  Clock 的驱动，应该是修改过的，主要是解决某些主板上，睡眠唤醒后 BIOS 重置的问题。
-
+- AppleRTC\.kext：装 10\.6\.3 的时候不知道这是干什么用的，但似乎是 Real Time Clock 的驱动，应该是修改过的，主要是解决某些主板上，睡眠唤醒后 BIOS 重置的问题。
 - LegacyAppleAirPortBrcm4311\.kext：BRCM 无线网卡的驱动，对我来说根本没用，上次放着它主要是希望奇迹能够发生，然而我那个无线网卡身上似乎不会有奇迹出现。
 
 最后还是要面对声卡的问题，我又尝试着把 AppleHDA\.kext 去掉，换上 VoodooHDA\.kext，嘿，还真就好了。不知道最开始的时候有 VoodooHDA\.kext，为什么还必须放 AppleHDA\.kext。或者因为我之前那个 VoodooHDA\.kext 太老了吧。
@@ -96,67 +89,39 @@ kextcache -v 1 -l -s -n -t -arch i386 -arch x86_64 -m /Volumes/Mac\ OS/System/Li
 最后把用到的 kext 之类的都放在这里吧。
 
 - 放在 BootThink 的 Darwin 目录下：
-
   - [dsdt\.aml](dsdt.aml_.zip)：可以搞定关机、重启、休眠、断电、原生电源管理、原生显卡驱动、解决 BIOS 重置、以及将 BCM 无线网卡识别为内置。
-
 - 放在 BootThink 的 Darwin\\System\\LibrarySL\\Extensions 目录下：
-
   - 系统补丁
-
     - [FakeSMC\.kext](FakeSMC.kext_.zip)：黑苹果机必须的！一方面是对 Mac
       OS 必须的 AppleSMC\.kext（System Management
       Controller）的模拟；另一方面仿造苹果的 Dont Steal Mac OS
       X\.kext（苹果系统与苹果机器 EFI 模块之间的通信加密解密）。
-
     - [Disabler\.kext](Disabler.kext_.zip)：屏蔽不能正常启动的补丁。
-
   - Audio
-
     - [IOAudioFamily\.kext](IOAudioFamily.kext_.zip)：基本的声卡驱动框架。
-
     - [OSvKernDSPLib\.kext](OSvKernDSPLib.kext_.zip)：内核的数字音频信号处理库。
-
     - [HDAEnabler\.kext](HDAEnabler.kext_.zip)
-
     - [VoodooHDA\.kext](VoodooHDA.kext_.zip)
-
   - Ethernet
-
     - [IONetworkingFamily\.kext](IONetworkingFamily.kext_.zip)：基本的网卡驱动，有些网卡可以直接驱动。里面包含 AppleBCM5701Ethernet\.kext，AppleIntel8254XEthernet\.kext，AppleRTL8139Ethernet\.kext，AppleRTL8169Ethernet\.kext，AppleUSBEthernet\.kext，AppleUSBGigEthernet\.kext，AppleYukon2\.kext，Intel82574L\.kext，nvenet\.kext。
-
     - [Intel82566MM\.kext](Intel82566MM.kext_.zip)
-
   - PS/2（鼠标、键盘、触摸板）
-
     - [ApplePS2Controller\.kext](ApplePS2Controller.kext_.zip)
-
     - [AppleACPIPS2Nub\.kext](AppleACPIPS2Nub.kext_.zip)
-
   - 电源管理、Battery
-
     - [AppleACPIPlatform\.kext](AppleACPIPlatform.kext_.zip)：（升级到 10\.6\.8 后要复制到 Mac 分区的 /System/Library/Extensions，修改权限并更新缓存）这是 Advanced
       Configuration and Power
       Interface 高级配置和电源管理接口驱动，进行电源管理，睡眠，Real\-Time
       Clock 控制等，其下还包含 AppleACPIButtons\.kext，AppleACPIEC\.kext，AppleACPIPCI\.kext。
-
     - [IOACPIFamily\.kext](IOACPIFamily.kext_.zip)：作用于支持 ACPI 电源管理标准的驱动，例如电源按钮、电池、PS/2、USB、HPET 等。这里的这个解决了部分笔记本风扇不正常问题，只支持 32 位。
-
     - [VoodooBattery\.kext](VoodooBattery.kext_.zip)
-
   - Bluetooth
-
     - [DellBluetoothHCI\.kext](DellBluetoothHCI.kext_.zip)
-
   - SD Reader
-
     - [VoodooSDHC\.kext](VoodooSDHC.kext_.zip)
-
   - PCMCIA
-
     - [IOPCIFamily\.kext](IOPCIFamily.kext_.zip)：（升级到 10\.6\.8 后要复制到 Mac 分区的 /System/Library/Extensions，修改权限并更新缓存）PCI 设备的基本驱动。
-
   - Chip set
-
     - [AHCIPortInjector\.kext](AHCIPortInjector.kext_.zip)：可以识别 Intel 芯片组的 AHCI（如果无法正确识别 AHCI，启动时有可能会 hang 在 Still
       Waiting for Root Device）。
 

@@ -35,7 +35,6 @@ keywords:
 找到了两个实现此功能的工具，分别是
 
 - git\-crypt: [https://www\.agwa\.name/projects/git\-crypt/](https://www.agwa.name/projects/git-crypt/)
-
 - git\-encrypt: [https://github\.com/shadowhand/git\-encrypt](https://github.com/shadowhand/git-encrypt)
 
 分别是用 C\+\+ 和 Shell 写的。最后我选择了后者，当然以后也许会改变，反正加密解密算法跟工具是分离的，换工具并不会带来太多问题。
@@ -127,7 +126,6 @@ $ cat private-diary.txt
 最后，一些关于 transparent git encryption 的讨论：
 
 - [GIT transparent encryption](http://syncom.appspot.com/papers/git_encryption.txt) or [https://gist\.github\.com/shadowhand/873637](https://gist.github.com/shadowhand/873637)
-
 - [Transparently encrypt repository contents with GPG](http://git.661346.n2.nabble.com/Transparently-encrypt-repository-contents-with-GPG-td2470145.html)
 
 当然也有反对的声音，所以建议大家先多了解了解再决定要不要使用这个方法。

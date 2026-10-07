@@ -162,18 +162,20 @@ def CalcSampleProbability(weights, m, i):
 
 可惜算法的复杂度非常高，` CalcSampleProbability ` 需要 O\(n^m\) 时间来完成一次计算。期待高手改进。
 
-来看一下等权重、等差数列权重和等比数列权重的 n 选 m 概率分布图（图中 i 依旧采用 1
-\<= i \<= n 的取值范围）：
+来看一下等权重、等差数列权重和等比数列权重的 n 选 m 概率分布图（图中 i 依旧采用 1 \<= i \<= n 的取值范围）：
 
-{{< image src="equal-p-chart.svg" alt="等值权重随机选取 m 个元素，第 i 个元素被选中的概率" caption="等值权重随机选取 m 个元素，第 i 个元素被选中的概率（静态图）" >}}
+![等值权重随机选取 m 个元素，第 i 个元素被选中的概率（静态图）](equal-p-chart.svg)
+{.invert-when-dark}
 
 [原始数据（JSON）](equal-p-chart.json)
 
-{{< image src="arithmetic-p-chart.svg" alt="等差分布权重随机选取 m 个元素，第 i 个元素被选中的概率" caption="等差分布权重随机选取 m 个元素，第 i 个元素被选中的概率（静态图）" >}}
+![等差分布权重随机选取 m 个元素，第 i 个元素被选中的概率（静态图）](arithmetic-p-chart.svg)
+{.invert-when-dark}
 
 [原始数据（JSON）](arithmetic-p-chart.json)
 
-{{< image src="geometric-p-chart.svg" alt="等比分布权重随机选取 m 个元素，第 i 个元素被选中的概率" caption="等比分布权重随机选取 m 个元素，第 i 个元素被选中的概率（静态图）" >}}
+![等比分布权重随机选取 m 个元素，第 i 个元素被选中的概率（静态图）](geometric-p-chart.svg)
+{.invert-when-dark}
 
 [原始数据（JSON）](geometric-p-chart.json)
 
@@ -194,7 +196,8 @@ map = Table[
 ListLinePlot[map / retry, PlotMarkers -> Automatic]
 ```
 
-{{< figure src="mathematica_random_sample.png" alt="mathematica_random_sample" caption="Mathematica ` RandomSample ` 随机选取 m 个元素，第 i 个元素被选中的概率" loading="lazy" >}}
+![Mathematica ` RandomSample ` 随机选取 m 个元素，第 i 个元素被选中的概率](mathematica_random_sample.png)
+{.invert-when-dark}
 
 苦苦思考了好几天，但并没有想到一个直观的方法可以给之前的 ` RandomSample ` 加上权重处理。因为那概率式子太复杂，实在不知道该怎么去凑。不过在下一篇文章中将会介绍一个神奇的算法（当然不是我想出来的），并且会给出我的证明。
 

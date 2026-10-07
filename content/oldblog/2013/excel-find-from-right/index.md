@@ -36,11 +36,8 @@ Excel 里面字符串查找用的 [FIND](http://office.microsoft.com/en-au/excel
 看起来很复杂，其实一步步拆解开并不是太难，基本的原理是这样的：
 
 1. ` SUBSTITUTE(A1,",","") `：把原字符串中的逗号全部删除（替换成空字符串），得到临时字符串 text1；
-
 2. ` LEN(A1)-LEN(text1) `：用原字符串的长度减去 text1 的长度，即可知道原字符串中总共有多少个逗号，num2；
-
 3. ` SUBSTITUTE(A1,",",CHAR(1),num2) `：利用 SUBSTITUE 函数，把原字符串中的最后一个逗号替换成特殊字符 CHAR\(1\)，得到临时字符串 text3；
-
 4. ` FIND(CHAR(1),text3) `：在 text3 中查找特殊字符 CHAR\(1\)，其位置就是原字符串中最后一个逗号的位置 pos。
 
 真是一个奇妙的方法。

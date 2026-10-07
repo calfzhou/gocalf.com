@@ -177,6 +177,7 @@ n 的情况。当 m 与 n 接近时，可以用 n 个辅助空间存储所有元
 
 用同样一组具有等差分布权重的元素调用 ` WeightedRandomSample ` 十万次，得到如下的概率分布，与理论分布非常接近。
 
-{{< image src="weighted_sample-chart.svg" alt="用 WeightedRandomSample 函数随机选取 m 个元素，第 i 个元素被选中的概率" caption="用 WeightedRandomSample 函数随机选取 m 个元素，第 i 个元素被选中的概率（静态图）" >}}
+![用 WeightedRandomSample 函数随机选取 m 个元素，第 i 个元素被选中的概率（静态图）](weighted_sample-chart.svg)
+{.invert-when-dark}
 
 [原始数据（JSON）](weighted_sample-chart.json)

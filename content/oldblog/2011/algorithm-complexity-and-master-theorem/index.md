@@ -46,11 +46,8 @@ $$
 假设有两个函数 f\(n\) 和 g\(n\)，都是定义在正整数集上的正函数。上述四个记号的含义分别是：
 
 - f\(n\) = O\(g\(n\)\)：$\exists c>0,n_0\in\mathbb{N},\forall n\geq n_0,f(n)\leq c g(n)$；f 的阶 **不高于**  g 的阶。
-
 - f\(n\) = Ω\(g\(n\)\)：$\exists c>0,n_0\in\mathbb{N},\forall n\geq n_0,f(n)\geq c g(n)$；f 的阶 **不低于**  g 的阶。
-
 - f\(n\) = θ\(g\(n\)\)：$\iff f(n)=O(g(n))\&\&f(n)=\Omega(g(n))$；f 的阶 **等于**  g 的阶。
-
 - f\(n\) = o\(g\(n\)\)：$\forall\varepsilon > 0,\exists n_0\in \mathbb{N},\forall n\geq n_0,f(n)/g(n) < \varepsilon$；f 的阶 **低于**  g 的阶。
 
 可见，记号 O 给出了函数 f\(n\) 在渐进意义下的上界（但不一定是最小的），相反，记号Ω给出的是下界（不一定是最大的）。如果上界与下界相同，表示 f\(n\) 和 g\(n\) 在渐进意义下是同阶的（θ），亦即复杂度一样。
@@ -58,21 +55,13 @@ $$
 列举一些常见的函数之间的渐进阶的关系：
 
 - $\log n!=\Theta(n\log n)$
-
 - $\log n^2=\Theta(\log n)$
-
 - $\log n^2=O(\sqrt n)$
-
 - $n=\Omega(\log^2n)$
-
 - $\log^2n=\Omega(\log n)$
-
 - $2^n=\Omega(n^2)$
-
 - $2^n=O(3^n)$
-
 - $n!=o(n^n)$
-
 - $2^n=o(n!)$
 
 有些人可能会把这几个记号跟算法的最坏、最好、平均情况复杂度混淆，它们有区别，也有一定的联系。
@@ -91,9 +80,7 @@ $$
 f\(n\)，则有：
 
 1. 若 $f(n)=O(n^{\log_b a-\varepsilon}),\varepsilon > 0$，那么 $T(n)=\Theta(n^{\log_b a})$。
-
 2. 若 $f(n)=\Theta(n^{\log_b a})$，那么 $T(n)=\Theta(n^{\log_b a}\log n)$。
-
 3. 若 $f(n)=\Omega(n^{\log_b a+\varepsilon}),\varepsilon > 0$，并且对于某个常数 c \< 1 和充分大的 n 有 $a f(n/b)\leq c f(n)$，那么 $T(n)=\Theta(f(n))$。
 
 比如常见的二分查找算法，时间复杂度的递推方程为 T\(n\) = T\(n / 2\) \+

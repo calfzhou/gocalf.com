@@ -22,11 +22,8 @@ keywords:
 如果你喜欢订阅几大校园 BBS 全站十大，强烈推荐 [gdh](http://www.truevue.org/) 做的十大博客（需翻墙）：
 
 - 水木十大：[http://smthot\.blogspot\.com/](http://smthot.blogspot.com/)
-
 - 小百合十大：[http://lilytop\.blogspot\.com/](http://lilytop.blogspot.com/)
-
 - 饮水思源十大：[http://sjtutop\.blogspot\.com/](http://sjtutop.blogspot.com/)
-
 - 日月光华十大：[http://fudantop\.blogspot\.com/](http://fudantop.blogspot.com/)
 
 之前就一直用 [Google Reader](https://www.google.com/reader) 订阅着水木的十大，不过非常郁闷的是水木 RSS 中的文章不完整，稍微长点儿文章就被截断了，再有就是图片附件都看不到，要点开进入到水木才能看得到。但经常有很不错的文章，却因为种种原因被删除或者合集了，再想看到原文原图就很困难了，带来了不少遗憾。

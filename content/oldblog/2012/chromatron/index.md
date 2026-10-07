@@ -27,11 +27,8 @@ OS 都支持哦。
 我这里也提供 Windows 版的下载：
 
 1. [Chromatron 1 代 v1\.14](chromatron1_v1.14.zip)
-
 2. [Chromatron 2 代 v1\.5](chromatron2_v1.5.zip)
-
 3. [Chromatron 3 代 v1\.1](chromatron3_v1.1.zip)
-
 4. [Chromatron 4 代 v1\.0](chromatron4_v1.0.zip)
 
 这个游戏中除了反射镜、三棱镜等传统光学元件外，还有一些现实中不一定存在的非常神奇的元件，比如多普勒仪（Doppler），如果红色光线从一端射入，另一端就会射出绿色光线，类似地，绿色光线会变成蓝色，而蓝色会变成红色。如果反过来使用，颜色的变化也反之。再比如量子纠缠分光器（Quantum

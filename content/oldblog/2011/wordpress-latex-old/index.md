@@ -147,4 +147,5 @@ p & = & \frac{1}{5}+\frac{2}{5}\times\left(\frac{1}{5}+\frac{2}{5}\times\left(\f
 
 可以得到图片：
 
-{{< image src="0313Freq.gif" alt="0313Freq.gif" caption="" >}}
+![0313Freq.gif](0313Freq.gif)
+{.invert-when-dark .no-caption}
