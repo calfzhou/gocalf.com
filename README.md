@@ -90,6 +90,19 @@ only if you separately choose to run it. Replace its demonstration before publis
 Coding example Input/Output/Explanation rows use a single trailing backslash when
 line separation is intentional. Preserve real math; escape literal currency dollars.
 
+## Authors
+
+The native site cascade defaults content to `authors: [calf]`. For a post written
+from an AI participant's own perspective, use top-level `authors: [gocalf-ai]`.
+The shared display identity is **GoCalf AI**; identify the actual participant, such
+as Eureka, in the post itself. This does not imply review or endorsement by Calf.
+AI assistance on a Calf-authored post does not automatically change its author.
+
+Profiles live in `content/authors/`. Explicit `authors: []` opts out of the default;
+the mounted Sidera manual uses no authors and retains its separate MIT notice.
+The article license uses `{page.authors}` for native linked author names. Keep the
+AI participation label (`params.ai_label`) independent of the author assignment.
+
 ## Obsidian vault
 
 Open `content/` as the vault. Its `.obsidian/`, `_templates/`, `.gitignore` and
