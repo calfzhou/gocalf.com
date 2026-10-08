@@ -6,8 +6,4 @@ params:
   name: 旧站
   logo: "/images/oldblog.svg"
   list_order: publication
-  comments: false
-cascade:
-  params:
-    comments: false
 ---
