@@ -175,9 +175,6 @@ m\) 时间）以保持其结构（` heapreplace(heap, (key, index)) `）。
 m\)，占用 O\(m\) 辅助空间。这样的处理比较适用于 m \<\<
 n 的情况。当 m 与 n 接近时，可以用 n 个辅助空间存储所有元素的键值，当遍历结束后用 O\(n\) 时间对这 n 个元素执行快速选择算法，选出 m 个最大的元素即可，耗时 O\(n\)，辅助空间 O\(n\)。
 
-用同样一组具有等差分布权重的元素调用 ` WeightedRandomSample ` 十万次，得到如下的概率分布，与理论分布非常接近。
+用同样一组具有等差分布权重的元素调用 `WeightedRandomSample` 十万次，得到如下的概率分布，与理论分布非常接近。
 
-![用 WeightedRandomSample 函数随机选取 m 个元素，第 i 个元素被选中的概率（静态图）](weighted_sample-chart.svg)
-{.invert-when-dark}
-
-[原始数据（JSON）](weighted_sample-chart.json)
+{{< echarts src="weighted-sample.json" caption="用 WeightedRandomSample 函数随机选取 m 个元素，第 i 个元素被选中的概率" height=500 />}}

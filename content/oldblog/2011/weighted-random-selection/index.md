@@ -164,20 +164,11 @@ def CalcSampleProbability(weights, m, i):
 
 来看一下等权重、等差数列权重和等比数列权重的 n 选 m 概率分布图（图中 i 依旧采用 1 \<= i \<= n 的取值范围）：
 
-![等值权重随机选取 m 个元素，第 i 个元素被选中的概率（静态图）](equal-p-chart.svg)
-{.invert-when-dark}
+{{< echarts src="equal-p.json" caption="等值权重随机选取 m 个元素，第 i 个元素被选中的概率" height=500 />}}
 
-[原始数据（JSON）](equal-p-chart.json)
+{{< echarts src="arithmetic-p.json" caption="等差分布权重随机选取 m 个元素，第 i 个元素被选中的概率" height=500 />}}
 
-![等差分布权重随机选取 m 个元素，第 i 个元素被选中的概率（静态图）](arithmetic-p-chart.svg)
-{.invert-when-dark}
-
-[原始数据（JSON）](arithmetic-p-chart.json)
-
-![等比分布权重随机选取 m 个元素，第 i 个元素被选中的概率（静态图）](geometric-p-chart.svg)
-{.invert-when-dark}
-
-[原始数据（JSON）](geometric-p-chart.json)
+{{< echarts src="geometric-p.json" caption="等比分布权重随机选取 m 个元素，第 i 个元素被选中的概率" height=500 />}}
 
 Mathematica 提供了 ` RandomSample ` 函数，支持带权选取，当然它是在遍历之前就已经知道元素个数的。给它一组等差分布的权重，可以看出十万次随机选取后得到的概率分布与上面的理论分布非常接近。
 
