@@ -11,6 +11,13 @@
     "next": "Cmd-Shift-ArrowDown",
     "disable": "Cmd-Shift-ArrowRight"
   },
+  "chatHotkeys": {
+    "newConversation": "alt+n",
+    "conversationHistory": "alt+h",
+    "deleteConversation": "alt+d",
+    "focusInput": "alt+m",
+    "focusModelSelector": "alt+shift+m"
+  },
   "suggestionDelay": 500,
   "debug": false,
   "onlyOnHotkey": false,
@@ -36,5 +43,7 @@
   "systemPrompt": "You are GitHub Copilot, an AI assistant. You are helping the user with their tasks in Obsidian.",
   "invertEnterSendBehavior": false,
   "extraCACerts": "",
-  "enableMarkdownRendering": true
+  "githubEnterpriseHostname": "",
+  "enableMarkdownRendering": true,
+  "openChatOnStartup": true
 }

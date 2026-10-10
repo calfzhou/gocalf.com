@@ -1,21 +1,24 @@
 {
-  "collectAttachmentUsedByMultipleNotesMode": "Skip",
   "consistencyReportFile": "consistency-report.md",
-  "emptyAttachmentFolderBehavior": "DeleteWithEmptyParents",
   "excludePaths": [
-    "consistency-report.md",
-    "blog"
+    "consistency-report.md"
   ],
-  "excludePathsFromAttachmentCollecting": [],
+  "externalAttachmentLinkMode": "Report",
   "includePaths": [],
-  "moveAttachmentToProperFolderUsedByMultipleNotesMode": "CopyAll",
-  "shouldChangeNoteBacklinksDisplayText": true,
-  "shouldCollectAttachmentsAutomatically": false,
-  "shouldDeleteAttachmentsWithNote": false,
-  "shouldDeleteExistingFilesWhenMovingNote": false,
-  "shouldMoveAttachmentsWithNote": false,
+  "isCustomAttachmentLocationSuggestionDeclined": false,
+  "maxVaultRootPathLength": 0,
+  "proposedCollectSettings": null,
+  "proposedRenameDeleteSettings": null,
+  "sharedAttachmentPaths": [],
+  "shouldCreateNoteToPreserveOriginalName": false,
+  "shouldEnsurePathCompatibilityOnAndroid": false,
+  "shouldEnsurePathCompatibilityOnEveryPlatform": false,
+  "shouldEnsurePathCompatibilityOnIos": false,
+  "shouldEnsurePathCompatibilityOnLinux": false,
+  "shouldEnsurePathCompatibilityOnMacOs": true,
+  "shouldEnsurePathCompatibilityOnWindows": false,
   "shouldShowBackupWarning": false,
-  "shouldUpdateLinks": true,
+  "sidecarNoteNamePattern": "{{fileName}}.md",
   "treatAsAttachmentExtensions": [
     ".excalidraw.md"
   ]

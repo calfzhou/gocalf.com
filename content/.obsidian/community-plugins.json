@@ -6,12 +6,11 @@
   "folder-notes",
   "obsidian-front-matter-title-plugin",
   "obsidian-image-toolkit",
-  "link-opening-restore",
-  "obsidian-linter",
   "obsidian-minimal-settings",
   "omnisearch",
   "open-vscode",
   "obsidian-style-settings",
   "templater-obsidian",
-  "cm-chs-patch"
+  "cm-chs-patch",
+  "advanced-rename-and-delete-handler"
 ]
