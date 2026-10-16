@@ -72,11 +72,32 @@ Ethernet 驱动，[点此下载](http://b.billgong.com/wp-content/uploads/2012/0
 
 装好驱动，进入网络中心，看到有一块新的网卡设备。点击右键查看属性，在 IPv4 选项中，将 IP 地址设置为“192\.168\.15\.200”，子网掩码是默认的“255\.255\.255\.0”。
 
-用 SSH 客户端（我用的是 Putty）登录 Kindle，IP 地址为 192\.168\.15\.244，用户名是 root。密码可以先试试“mario”（针对 4\.0 系统），如果不行，当时可使用序列号计算密码（针对 4\.0\.1 系统）。原计算器现仅提供HTML 文件下载，不再在页面中运行。
+用 SSH 客户端（我用的是 Putty）登录 Kindle，IP 地址为 192\.168\.15\.244，用户名是 root。密码可以先试试“mario”（针对 4\.0 系统），如果不行，就将序列号输入到下面的文本框中得到密码（针对 4.0.1 系统）。
 
-{{< download src="kindle_root_password.html.txt" name="kindle_root_password.html" text="下载计算器（HTML）" >}}
-
-HTML 已包含原来的 MD5 脚本及版权声明，供下载查看。
+```jsx-live {css="kindle.css"}
+import { useId, useState } from 'react';
+import { Row, Stack } from 'sidera/ui';
+import { kindlePassword } from './kindle.js';
+export default function KindlePassword() {
+  const id = useId();
+  const [serial, setSerial] = useState('');
+  let password = '', error = '';
+  try { password = kindlePassword(serial); } catch (problem) { error = problem.message; }
+  return <Stack className="kindle-tool">
+    <Stack gap="small">
+      <label htmlFor={id}>Kindle 序列号</label>
+      <input id={id} type="text" value={serial} onChange={e => setSerial(e.target.value)}
+        placeholder="输入 Kindle 序列号" maxlength="64" aria-invalid={!!error} />
+    </Stack>
+    <p id={`${id}-error`} className="jsx-error" aria-live="polite">{error}</p>
+    <output className="jsx-result" hidden={!password}>
+      <span className="jsx-note">SSH 密码</span>
+      <strong className={password ? 'password-result' : 'jsx-note'}>{password || '输入序列号后显示密码'}</strong>
+    </output>
+    <p id={`${id}-hint`} className="jsx-note">（仅在当前浏览器中计算；不会上传、记录或保存任何序列号）</p>
+  </Stack>;
+}
+```
 
 其实 root 密码就是“fiona”加上序列号 MD5 值中的一部分。生成代码如下（Python
 2\.7\.\*）：

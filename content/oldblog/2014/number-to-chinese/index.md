@@ -274,10 +274,30 @@ for position, digit in reversed(list(_enumerate_digits(number))):
 # End core loop.
 ```
 
-## JavaScript 版本
+## 试试看
 
-代码介绍完了，原先用于试输入数字的 JavaScript 版本现仅提供HTML 文件下载，不再显示或运行表单。历史源码链接：[http://jsfiddle\.net/calfzhou/tGEz7/](http://jsfiddle.net/calfzhou/tGEz7/)。
+代码介绍完了，下面放一个用 JavaScript 实现的版本，可以随便输入一些数字试试看。
 
-{{< download src="number-to-chinese.html.txt" name="number-to-chinese.html" text="下载 JavaScript 版本（HTML）" >}}
-
-HTML 保留原来的 JavaScript 和表单，未包含旧站的 Bootstrap 样式。
+```jsx-live
+import { Row, Stack } from 'sidera/ui';
+import { useId, useState } from 'react';
+import { translateNumber } from './number-chinese.js';
+export default function NumberChinese() {
+  const id = useId();
+  const [input, setInput] = useState('123456789');
+  let result = '', error = '';
+  try { result = translateNumber(input); } catch (problem) { error = problem.message; }
+  return <Stack>
+    <Stack gap="small">
+      <label htmlFor={id}>整数</label>
+      <input id={id} type="text" value={input} onChange={e => setInput(e.target.value)}
+        placeholder="输入整数，如 -100000001" maxlength="53" aria-invalid={!!error} />
+    </Stack>
+    <p id={`${id}-error`} className="jsx-error">{error}</p>
+    <output className="jsx-result" hidden={!result}>
+      <span className="jsx-note">中文读法</span>
+      <strong className="jsx-note">{result || '输入整数后显示对应的中文读法'}</strong>
+    </output>
+  </Stack>;
+}
+```
