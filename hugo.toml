@@ -50,6 +50,8 @@ input_position = 'top'
 [params]
 description = '1/100 ALGO&MATH; 1/100 IT&GAME; 1/100 INFO&SHARING; 1/100 WHO KNOWS'
 color_mode = 'dark'
+# Explicitly trust executable JSX islands authored in this site.
+jsx = true
 # Comments use this site's verified repository and pathname-equivalent identity.
 comments = true
 # Site-owned welcome service; no raw HTML in Markdown is required.
