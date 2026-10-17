@@ -1,0 +1,25 @@
+.calendar-tool .paper-toolbar { gap: .4rem; }
+.calendar-tool .paper-toolbar button { font-size: .75rem; padding: .4rem .6rem; }
+.calendar-tool .paper-viewport { overflow: auto; max-width: 100%; min-width: 0; }
+.prose .calendar-tool .paper-calendar { display: table; table-layout: fixed; width: 628px; min-width: 628px; max-width: none; margin: 0; border-collapse: separate; border-spacing: 2px; font: 15px/1.15 var(--ui); text-align: center; overflow: visible; }
+.calendar-tool .paper-calendar caption { padding: .6rem 0; text-align: center; font-size: 19px; font-weight: 600; color: var(--text); }
+.prose .calendar-tool .paper-calendar :is(td,th) { height: 30px; padding: 0; border: 1px solid var(--line); border-radius: 1px; text-align: center; color: var(--text); font-weight: 400; }
+.prose .calendar-tool .paper-calendar th { font-weight: 600; }
+.prose .calendar-tool .paper-calendar tr:hover { background: transparent; }
+.prose .calendar-tool .paper-calendar .paper-blank { background: none; border: 0; }
+.prose .calendar-tool .paper-years { background: color-mix(in srgb,#43b575 20%,var(--surface)); }
+.prose .calendar-tool .paper-century { background: color-mix(in srgb,#e1bb44 23%,var(--surface)); }
+.prose .calendar-tool .paper-letters { background: var(--panel); }
+.prose .calendar-tool .paper-months { background: color-mix(in srgb,#28bed0 20%,var(--surface)); }
+.prose .calendar-tool .paper-weekdays { background: color-mix(in srgb,#8579d8 22%,var(--surface)); }
+.prose .calendar-tool .paper-days { background: color-mix(in srgb,#d47fae 23%,var(--surface)); }
+.calendar-tool .paper-side-label { writing-mode: vertical-rl; letter-spacing: .1em; }
+.calendar-tool .paper-calendar button { display: block; width: 100%; height: 100%; min-height: 28px; padding: 0; border: 0; border-radius: 0; background: transparent; font: inherit; color: inherit; }
+.calendar-tool .paper-calendar button[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--accent); font-weight: 700; }
+.calendar-tool .paper-calendar button:is(:hover,:focus-visible) { outline: 2px solid var(--text); outline-offset: -3px; }
+.prose .calendar-tool .paper-calendar .paper-path { background: color-mix(in srgb,#f58e77 45%,var(--surface)); }
+.prose .calendar-tool .paper-calendar .paper-junction { box-shadow: inset 0 0 0 2px var(--text); font-weight: 700; }
+.calendar-tool .paper-calendar abbr { text-decoration: none; }
+.calendar-tool .paper-result { gap: .35rem 1rem; }
+.calendar-tool .paper-result strong { color: var(--text); }
+.calendar-tool .paper-result .jsx-error { flex-basis: 100%; }
