@@ -12,10 +12,6 @@
 {{ $contentCSS := resources.Get "css/content.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $contentCSS.RelPermalink }}" integrity="{{ $contentCSS.Data.Integrity }}">
 {{ $cubeContext := dict "page" .Page }}
-{{ with (templates.Defer (dict "data" $cubeContext)) }}
-  {{ with .page.Store.Get "gocalf-cube-sizes" }}
-    {{ range $size, $_ := . }}<script src="{{ printf "js/plugins/AnimCube%s.min.js" $size | relURL }}" defer></script>{{ end }}
-    {{ $script := resources.Get "js/animcube.js" | minify | fingerprint }}
-    <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
-  {{ end }}
-{{ end }}
+{{- with (templates.Defer (dict "data" $cubeContext)) -}}
+  {{- partial "sidera/minify-html.html" (partial "gocalf/animcube-head.html" .page) -}}
+{{- end -}}

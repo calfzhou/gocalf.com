@@ -10,14 +10,15 @@ git submodule update --init --recursive
 make build
 ```
 
-`make build` writes production output to `public/` and excludes drafts, future and
-expired content. It does not clear old output; use a fresh destination for an
-artifact intended for hosting:
+`make build` writes minified production output to `public/` and excludes drafts,
+future and expired content. The Pages workflow uses this same Makefile target.
+It does not clear old output; use a fresh destination for an artifact intended
+for hosting:
 
 ```sh
 mkdir -p var
 run=$(mktemp -d "$PWD/var/hugo-build-XXXXXX")
-hugo --environment production --destination "$run/public" --cacheDir "$run/cache" \
+hugo --environment production --minify --destination "$run/public" --cacheDir "$run/cache" \
   --noBuildLock --panicOnWarning
 ```
 

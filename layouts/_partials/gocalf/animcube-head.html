@@ -1,0 +1,6 @@
+{{/* Render after page content has recorded the required cube sizes. */}}
+{{ with .Store.Get "gocalf-cube-sizes" }}
+  {{ range $size, $_ := . }}<script src="{{ printf "js/plugins/AnimCube%s.min.js" $size | relURL }}" defer></script>{{ end }}
+  {{ $script := resources.Get "js/animcube.js" | minify | fingerprint }}
+  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+{{ end }}
