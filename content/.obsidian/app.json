@@ -19,5 +19,6 @@
   "propertiesInDocument": "source",
   "trashOption": "local",
   "readableLineLength": true,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "./"
 }
