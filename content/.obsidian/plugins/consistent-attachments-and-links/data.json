@@ -17,6 +17,7 @@
   "shouldEnsurePathCompatibilityOnLinux": false,
   "shouldEnsurePathCompatibilityOnMacOs": true,
   "shouldEnsurePathCompatibilityOnWindows": false,
+  "shouldNormalizeUnicodeNames": true,
   "shouldShowBackupWarning": false,
   "sidecarNoteNamePattern": "{{fileName}}.md",
   "treatAsAttachmentExtensions": [
