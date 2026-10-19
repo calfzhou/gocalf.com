@@ -111,7 +111,7 @@
   },
   "hideCollapsingIcon": false,
   "hideCollapsingIconForEmptyFolders": false,
-  "tabManagerEnabled": true,
+  "tabManagerEnabled": false,
   "ignoreAttachmentFolder": true,
   "deleteFilesAction": "obsidianTrash",
   "openSidebar": {

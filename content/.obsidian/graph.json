@@ -8,37 +8,44 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:_posts",
+      "query": "path:blog",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 16753920
       }
     },
     {
       "query": "path:notes",
       "color": {
         "a": 1,
-        "rgb": 14725458
+        "rgb": 1822204
       }
     },
     {
       "query": "path:coding",
       "color": {
         "a": 1,
-        "rgb": 11657298
+        "rgb": 4048208
+      }
+    },
+    {
+      "query": "path:oldblog",
+      "color": {
+        "a": 1,
+        "rgb": 1140473
       }
     }
   ],
   "collapse-display": false,
   "showArrow": true,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
+  "nodeSizeMultiplier": 1.00479222520107,
   "lineSizeMultiplier": 1,
   "collapse-forces": true,
   "centerStrength": 0.518713248970312,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.4917783809433501,
+  "scale": 0.49344284949606937,
   "close": true
 }
