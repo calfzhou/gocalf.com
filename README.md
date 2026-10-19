@@ -42,6 +42,15 @@ the bundled manual. It uses Chinese theme controls around the English manual bod
 the default docs sidebar, explicit dates and AI disclosure. Manual comments remain
 disabled independently of the site's article comment setting.
 
+## Random article
+
+The theme's default sidebars include **Random article**, localized to Chinese on
+this site. It opens another published article across all collections, including
+the mounted manual, while skipping the current page. Pages share one URL index;
+no site-owned script or extra configuration is needed. See the theme's
+[sidebar documentation](themes/sidera/docs/content/customize/navigation.md#random-article)
+for custom region placement and fallback behavior.
+
 ## Create content
 
 ```sh
