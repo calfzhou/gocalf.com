@@ -126,21 +126,21 @@ name = "Email"
 url = "mailto:calf.zhou@gmail.com"
 weight = 1
 [menus.social.params]
-icon = "gocalf-gmail"
+icon = "email"
 
 [[menus.social]]
 name = "GitHub"
 url = "https://github.com/calfzhou"
 weight = 2
 [menus.social.params]
-icon = "gocalf-github"
+icon = "github"
 
 [[menus.social]]
 name = "Facebook"
 url = "https://www.facebook.com/calfzhou"
 weight = 3
 [menus.social.params]
-icon = "gocalf-facebook"
+icon = "facebook"
 
 [[menus.social]]
 name = "PGP"
