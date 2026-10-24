@@ -18,7 +18,7 @@ Given the `root` of a binary tree, return _the maximum **path sum** of any **non
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `root = [1,2,3]`\
 > Output: `6`\
@@ -27,7 +27,7 @@ Given the `root` of a binary tree, return _the maximum **path sum** of any **non
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `root = [-10,9,20,null,null,15,7]`\
 > Output: `42`\

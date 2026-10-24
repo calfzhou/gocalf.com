@@ -19,7 +19,7 @@ Implement the `Solution` class:
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input\
 > `["Solution", "getRandom", "getRandom", "getRandom", "getRandom", "getRandom"]`\

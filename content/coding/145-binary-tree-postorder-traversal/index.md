@@ -18,7 +18,7 @@ Given the `root` of a binary tree, return _the postorder traversal of its nodes
 > Explanation:
 >
 > ![case1|200](case1.png "case1")
-> {.invert-when-dark}
+> {.invert-when-dark .invert-soft}
 
 **Example 2:**
 
@@ -27,7 +27,7 @@ Given the `root` of a binary tree, return _the postorder traversal of its nodes
 > Explanation:
 >
 > ![case2|350](case2.png "case2")
-> {.invert-when-dark}
+> {.invert-when-dark .invert-soft}
 
 **Example 3:**
 

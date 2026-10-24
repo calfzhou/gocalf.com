@@ -27,7 +27,7 @@ Return _the team that will be the **champion** of the tournament if there is a *
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `n = 3, edges = [[0,1],[1,2]]`\
 > Output: `0`\
@@ -36,7 +36,7 @@ Return _the team that will be the **champion** of the tournament if there is a *
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 Input: `n = 4, edges = [[0,2],[1,3],[1,2]]`
 Output: `-1`

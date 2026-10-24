@@ -18,7 +18,7 @@ A cycle is a path that starts and ends at the same node, and each edge in the pa
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `n = 7, edges = [[0,1],[1,2],[2,0],[3,4],[4,5],[5,6],[6,3]]`\
 > Output: `3`\
@@ -27,7 +27,7 @@ A cycle is a path that starts and ends at the same node, and each edge in the pa
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `n = 4, edges = [[0,1],[0,2]]`\
 > Output: `-1`\

@@ -22,7 +22,7 @@ A **valid BST** is defined as follows:
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `root = [2,1,3]`\
 > Output: `true`
@@ -30,7 +30,7 @@ A **valid BST** is defined as follows:
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `root = [5,1,4,null,null,3,6]`\
 > Output: `false`\

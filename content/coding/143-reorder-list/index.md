@@ -22,7 +22,7 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `head = [1,2,3,4]`\
 > Output: `[1,4,2,3]`
@@ -30,7 +30,7 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `head = [1,2,3,4,5]`\
 > Output: `[1,5,2,4,3]`

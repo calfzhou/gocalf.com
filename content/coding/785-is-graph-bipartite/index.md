@@ -23,7 +23,7 @@ Return `true` _if and only if it is **bipartite**_.
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `graph = [[1,2,3],[0,2],[0,1,3],[0,2]]`\
 > Output: `false`\
@@ -32,7 +32,7 @@ Return `true` _if and only if it is **bipartite**_.
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `graph = [[1,3],[0,2],[1,3],[0,2]]`\
 > Output: `true`\

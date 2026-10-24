@@ -46,7 +46,7 @@ The given node will always be the first node with `val = 1`. You must return the
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `adjList = [[]]`\
 > Output: `[[]]`\

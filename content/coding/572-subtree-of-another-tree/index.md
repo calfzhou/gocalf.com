@@ -24,7 +24,7 @@ A subtree of a binary tree `tree` is a tree that consists of a node in `tree` an
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]`\
 > Output: `false`

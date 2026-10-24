@@ -14,7 +14,7 @@ Given the `root` of a binary search tree, and an integer `k`, return _the_ `kᵗ
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `root = [3,1,4,null,2], k = 1`\
 > Output: `1`
@@ -22,7 +22,7 @@ Given the `root` of a binary search tree, and an integer `k`, return _the_ `kᵗ
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `root = [5,3,6,2,4,null,null,1], k = 3`\
 > Output: `3`

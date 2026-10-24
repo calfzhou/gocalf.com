@@ -16,7 +16,7 @@ According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8`\
 > Output: `6`\
@@ -25,7 +25,7 @@ According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/
 **Example 2:**
 
 ![case2](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4`\
 > Output: `2`\

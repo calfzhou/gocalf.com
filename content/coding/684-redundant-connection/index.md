@@ -18,7 +18,7 @@ Return _an edge that can be removed so that the resulting graph is a tree of_ `n
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `edges = [[1,2],[1,3],[2,3]]`\
 > Output: `[2,3]`
@@ -26,7 +26,7 @@ Return _an edge that can be removed so that the resulting graph is a tree of_ `n
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `edges = [[1,2],[2,3],[3,4],[1,4],[1,5]]`\
 > Output: `[1,4]`

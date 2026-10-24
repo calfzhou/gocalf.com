@@ -37,7 +37,7 @@ An **ancestor** of a node is any node on the path from the root to that node (ex
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `pairs = [[1,2],[2,3]]`\
 > Output: `1`\
@@ -46,7 +46,7 @@ An **ancestor** of a node is any node on the path from the root to that node (ex
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `pairs = [[1,2],[2,3],[1,3]]`\
 > Output: `2`\

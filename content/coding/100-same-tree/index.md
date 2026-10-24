@@ -16,7 +16,7 @@ Two binary trees are considered the same if they are structurally identical, and
 **Example 1:**
 
 ![case1](case1.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `p = [1,2,3], q = [1,2,3]`\
 > Output: `true`
@@ -24,7 +24,7 @@ Two binary trees are considered the same if they are structurally identical, and
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `p = [1,2,3], q = [1,2,3]`\
 > Output: `true`
@@ -32,7 +32,7 @@ Two binary trees are considered the same if they are structurally identical, and
 **Example 3:**
 
 ![case3](case3.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `p = [1,2,1], q = [1,1,2]`\
 > Output: `false`

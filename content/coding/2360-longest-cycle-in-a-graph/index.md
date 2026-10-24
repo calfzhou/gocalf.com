@@ -30,7 +30,7 @@ A cycle is a path that starts and ends at the **same** node.
 **Example 2:**
 
 ![case2](case2.png)
-{.invert-when-dark}
+{.invert-when-dark .invert-soft}
 
 > Input: `edges = [2,-1,3,1]`\
 > Output: `-1`\

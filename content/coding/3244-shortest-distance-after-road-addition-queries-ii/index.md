@@ -26,17 +26,17 @@ Return an array `answer` where for each `i` in the range `[0, queries.length - 1
 > Explanation:
 >
 > ![case1-1](../3243-shortest-distance-after-road-addition-queries-i/case1-1.png)
-> {.invert-when-dark}
+> {.invert-when-dark .invert-soft}
 >
 > After the addition of the road from 2 to 4, the length of the shortest path from 0 to 4 is 3.
 >
 > ![case1-2](../3243-shortest-distance-after-road-addition-queries-i/case1-2.png)
-> {.invert-when-dark}
+> {.invert-when-dark .invert-soft}
 >
 > After the addition of the road from 0 to 2, the length of the shortest path from 0 to 4 is 2.
 >
 > ![case1-3](../3243-shortest-distance-after-road-addition-queries-i/case1-3.png)
-> {.invert-when-dark}
+> {.invert-when-dark .invert-soft}
 >
 > After the addition of the road from 0 to 4, the length of the shortest path from 0 to 4 is 1.
 
@@ -47,12 +47,12 @@ Return an array `answer` where for each `i` in the range `[0, queries.length - 1
 > Explanation:
 >
 > ![case2-1](../3243-shortest-distance-after-road-addition-queries-i/case2-1.png)
-> {.invert-when-dark}
+> {.invert-when-dark .invert-soft}
 >
 > After the addition of the road from 0 to 3, the length of the shortest path from 0 to 3 is 1.
 >
 > ![case2-2](../3243-shortest-distance-after-road-addition-queries-i/case2-2.png)
-> {.invert-when-dark}
+> {.invert-when-dark .invert-soft}
 >
 > After the addition of the road from 0 to 2, the length of the shortest path remains 1.
 
