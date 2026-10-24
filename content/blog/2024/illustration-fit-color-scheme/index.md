@@ -34,16 +34,16 @@ filter: invert(1) hue-rotate(180deg);
 
 改变不了别人，就改变自己吧。在选择颜色的时候，尽量选那些反转之后不会太离谱的。以 [Tailwind CSS](https://tailwindcss.com/) 默认调色板为例，看一下不同颜色翻转前后的对比，尽量不要选那些太亮的彩色颜色。
 
-{{% folding title="Color Palette 翻转前后对比" %}}
+{{% folding title="Color Palette 翻转对比" %}}
 {{< grid columns=2 >}}
 {{< cell >}}
-![原始色彩](colors.png)
-{.no-caption}
+![亮主题时翻转](colors.png)
+{.invert-when-light .no-caption}
 {{< /cell >}}
 
 {{< cell >}}
-![翻转的色彩](colors.png)
-{.invert-when-dark .invert-when-light .no-caption}
+![暗主题时翻转](colors.png)
+{.invert-when-dark .no-caption}
 {{< /cell >}}
 {{< /grid >}}
 {{% /folding %}}
