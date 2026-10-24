@@ -25,10 +25,10 @@ keywords:
 to Const 和 Const Pointer。
 
 Pointer to
-Const，顾名思义就是一个指针，指向的数据不能被修改，C\+\+ 语法是 {{< code-inline cpp >}}int const* ptr{{< /code-inline >}}。怎么记忆呢，非常简单，记住要从右往左解读即可。首先这是个变量（{{< code-inline cpp >}}ptr{{< /code-inline >}}）；然后发现它是个指针（{{< code-inline cpp >}}*{{< /code-inline >}}）；接下来看到它所指向的数据是不可修改的（{{< code-inline cpp >}}const{{< /code-inline >}}）；最后这个指针所指向的空间存放的是整数（{{< code-inline cpp >}}int{{< /code-inline >}}）。
+Const，顾名思义就是一个指针，指向的数据不能被修改，C\+\+ 语法是 {{< code-inline lang="cpp" >}}int const* ptr{{< /code-inline >}}。怎么记忆呢，非常简单，记住要从右往左解读即可。首先这是个变量（{{< code-inline lang="cpp" >}}ptr{{< /code-inline >}}）；然后发现它是个指针（{{< code-inline lang="cpp" >}}*{{< /code-inline >}}）；接下来看到它所指向的数据是不可修改的（{{< code-inline lang="cpp" >}}const{{< /code-inline >}}）；最后这个指针所指向的空间存放的是整数（{{< code-inline lang="cpp" >}}int{{< /code-inline >}}）。
 
 Const
-Pointer，也是个指针，但这个指针的值不能被修改（不能再指向其他地方），C\+\+ 语法是 {{< code-inline cpp >}}int* const ptr{{< /code-inline >}}。同样从右往左读，变量（{{< code-inline cpp >}}ptr{{< /code-inline >}}）；变量的值不能被修改（{{< code-inline cpp >}}const{{< /code-inline >}}）；是个指针（{{< code-inline cpp >}}*{{< /code-inline >}}）；这个指针所指向的空间存放的是整数（{{< code-inline cpp >}}int{{< /code-inline >}}）。
+Pointer，也是个指针，但这个指针的值不能被修改（不能再指向其他地方），C\+\+ 语法是 {{< code-inline lang="cpp" >}}int* const ptr{{< /code-inline >}}。同样从右往左读，变量（{{< code-inline lang="cpp" >}}ptr{{< /code-inline >}}）；变量的值不能被修改（{{< code-inline lang="cpp" >}}const{{< /code-inline >}}）；是个指针（{{< code-inline lang="cpp" >}}*{{< /code-inline >}}）；这个指针所指向的空间存放的是整数（{{< code-inline lang="cpp" >}}int{{< /code-inline >}}）。
 
 可见 const 修饰的是它右边紧邻的元素，如果右边是指针 \*，就表明指针指向的是常量，不能被修改；如果右边是变量，就变明这个变量自身不能被修改。
 

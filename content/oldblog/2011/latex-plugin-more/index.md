@@ -27,7 +27,7 @@ keywords:
 
 根据 [LaTeX for WordPress](http://wordpress.org/extend/plugins/latex/) 主页上的说明，如果不想对公式进行渲染，只显示公式的源码，需要在第二个 ` $$ ` 前面加 ` ! `。但在实际使用中发现开启了 MathJax 的时候无法实现这一效果。仔细看了一下 MathJax 的文档，原来虽然插件把 ` $$a^2+b^2+c^2!$$ ` 这样的代码转换成了 ` \(a^2+b^2+c^2!\) `，但后者又被 MathJax 的 JavaScript 给渲染成 $a^2+b^2+c^2$ 了。而要解决这个问题也很简单，只要给页面的 ` body ` 标签添加一个 ` tex2jax_ignore ` 的 class，就可以阻止 MathJax 的处理（参见 [The tex2jax Preprocessor](http://www.mathjax.org/docs/1.1/options/tex2jax.html)）。
 
-以我现在使用的 LightWord 主题为例，修改 ` wp-content/themes/lightword/header.php `，把 {{< code-inline phtml >}}<body <?php body_class(); ?>>{{< /code-inline >}} 改成 {{< code-inline phtml >}}<body <?php body_class('tex2jax_ignore'); ?>>{{< /code-inline >}} 即可。
+以我现在使用的 LightWord 主题为例，修改 ` wp-content/themes/lightword/header.php `，把 {{< code-inline lang="phtml" >}}<body <?php body_class(); ?>>{{< /code-inline >}} 改成 {{< code-inline lang="phtml" >}}<body <?php body_class('tex2jax_ignore'); ?>>{{< /code-inline >}} 即可。
 
 至于公式的修饰符，插件支持 ` \(...\) `、` \[...\] `、` $$...$$ `、` [latex]...[/latex] `、` [tex]...[/tex] `，但我还是担心这样的代码在一些程序源代码中也很容易出现（比如正则表达式），所以还是决定只用 latex 作为标记。这个修改很简单，只要对 ` /wp-content/plugins/latex/latex.php ` （v3\.1）做如下改动即可：
 
