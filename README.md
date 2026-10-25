@@ -100,24 +100,9 @@ only if you separately choose to run it. Replace its demonstration before publis
 Coding example Input/Output/Explanation rows use a single trailing backslash when
 line separation is intentional. Preserve real math; escape literal currency dollars.
 
-### Theme-provided inline code and downloads
+### Local shortcodes
 
-Use Sidera's built-in shortcodes rather than site overrides:
-
-```text
-{{< code-inline lang="cpp" >}}int const* ptr{{< /code-inline >}}
-{{< code-inline lang="phtml" >}}<body <?php body_class(); ?>>{{< /code-inline >}}
-{{< download src="attachment.txt" name="notes.txt" text="Download notes" >}}
-```
-
-`code-inline` uses named `lang`, not a positional language argument. Its body is
-single-line literal code; highlighting never executes it. `download` serves an
-existing page-bundle attachment unchanged, with optional download filename and
-visible label. See the [Sidera shortcode reference](themes/sidera/docs/content/publishing/shortcodes.md)
-for the complete contracts and other inline components.
-
-Only `animcube` and `rich-table` remain site-owned shortcodes. Historical article
-wording and dates are independent of these rendering templates.
+- `animcube` — renders interactive cube animations using the site's bundled AnimCubeJS libraries and adjacent configuration files.
 
 ## Authors
 
