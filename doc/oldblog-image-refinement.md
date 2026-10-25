@@ -38,10 +38,12 @@ not a syntax-equivalent conversion.
 
 ### Width without a viewer: converted
 
-Native next-line image attributes preserve both SVG widths without a shortcode:
+Prefer Sidera's `![caption|width](src)` syntax over separate next-line width
+attributes. Both SVG widths are preserved, and the suffix is excluded from the
+rendered caption and alt text:
 
-- `2011/about-paper-size`, `paper_24k.svg`: `{width="346"}`.
-- `2011/clock-hands-relative-motion`, `4h21m49s.svg`: `{width="284"}`.
+- `2011/about-paper-size`: `![889x1194 24 开本|346](paper_24k.svg)`.
+- `2011/clock-hands-relative-motion`: `![4:21:49.09，时针与分针重合|284](4h21m49s.svg)`.
 
 ### Literal angle brackets: converted and rendering checked
 
