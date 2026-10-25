@@ -61,8 +61,11 @@ taxonomy_hierarchy = ['tags']
 right = ['toc']
 license = '本文由 {page.authors} 原创，采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
 share = ['link', 'wechat', 'email']
-# Optional source-edit URL; leave empty to omit edit links.
-edit_url = ''
+# Sidebar source links open GitHub file views; the mounted manual lives in the theme repo.
+edit_url = [
+  { path = '', url = 'https://github.com/calfzhou/gocalf.com/blob/main/content/' },
+  { path = 'sidera/', url = 'https://github.com/calfzhou/hugo-theme-sidera/blob/main/docs/content/' },
+]
 footer_menu = 'footer'
 footer_text = '''本站所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
 
