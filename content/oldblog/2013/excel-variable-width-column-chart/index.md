@@ -48,7 +48,7 @@ Chart，我没有仔细去考证，二者好像也并不完全一样。
 ## 基础数据和第一次扩展
 
 首先在 Excel 中把原始数据录入进去。我个人比较喜欢把数据组织成 Excel 表（Excel
-2007 才开始有此功能）。这是将一块普通的单元格区域转换成一种有内在联系的表结构，可以更加方便地管理和操作表中的数据。如果你还没有接触过，可以参考 [官方的文档](http://office.microsoft.com/en-us/excel-help/overview-of-excel-tables-HA010048546.aspx)（[中文文档](http://office.microsoft.com/zh-cn/excel-help/overview-of-excel-tables-HA010048546.aspx)），你一定会爱上它。对于今天要做的不等宽柱状图，Excel 表并不是必需的，但它会使得公式更加直观。我今天给出的每一个公式，都会用两种形式（使用 Excel 表和不使用 Excel 表）给出，以方便那些确实不习惯 Excel 表的童鞋。一定要注意，如果你用 Excel 表，那么对于任何一列，其每一行的公式都是一样的。而如果不用 Excel 表，我所给出的公式只是该列第一行的公式，你要特别小心公式中什么地方应该加“\$”，什么时候不加“\$”，后续行的公式会自动根据有没有“\$”进行变换。
+2007 才开始有此功能）。这是将一块普通的单元格区域转换成一种有内在联系的表结构，可以更加方便地管理和操作表中的数据。如果你还没有接触过，可以参考 [官方的文档](http://office.microsoft.com/en-us/excel-help/overview-of-excel-tables-HA010048546.aspx)（[中文文档](http://office.microsoft.com/zh-cn/excel-help/overview-of-excel-tables-HA010048546.aspx)），你一定会爱上它。对于今天要做的不等宽柱状图，Excel 表并不是必需的，但它会使得公式更加直观。我今天给出的每一个公式，都会用两种形式（使用 Excel 表和不使用 Excel 表）给出，以方便那些确实不习惯 Excel 表的童鞋。一定要注意，如果你用 Excel 表，那么对于任何一列，其每一行的公式都是一样的。而如果不用 Excel 表，我所给出的公式只是该列第一行的公式，你要特别小心公式中什么地方应该加「\$」，什么时候不加「\$」，后续行的公式会自动根据有没有「\$」进行变换。
 
 假设我们把上面表格中的基础数据放在从 A1 开始的单元格中（这些数据会占据 A1 到 C6 范围的单元格），选中这些单元格，点击 Ribbon 中 HOME \-\>
 Format as Table，然后随便选择一个样式，将这片区域转换成 Excel 表。给这个表起个名字，比如叫作 TableData，在 Ribbon 中点击（TABLE
@@ -75,7 +75,7 @@ TOOLS）DESIGN，在 Table Name 的文本框中输入 TableData。
 其中 CEILING 函数做了个上取整，这不是必须的，大家可以自行把握。另外注意我是对上面新加的 Width 列求的平均值，而不是原数据中的 X。
 
 为了方便以后引用，我们给存放这个数值的单元格起个名字。比如我现在把它放在 B8 这个单元格里，选中这个单元格，点击 Ribbon 的 FORMULAS \-\>
-Define Name 来为其指定一个名字，比如叫作“Gap”。
+Define Name 来为其指定一个名字，比如叫作「Gap」。
 
 ![给间隔数据所在的单元格定义名字](define_gap_name.png)
 
@@ -158,7 +158,7 @@ TableArea 的第二列叫作 ItemId，用于计算这一行数据对应于原始
 =IF(OR($E11<>H$10,$D11),0,$F11)
 ```
 
-对于其他几列，只要把公式中的“\[A\]”改为对应的列名即可。
+对于其他几列，只要把公式中的「\[A\]」改为对应的列名即可。
 
 ![准备完毕的两个 Excel 表](data_ready.png)
 

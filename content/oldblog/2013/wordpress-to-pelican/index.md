@@ -61,7 +61,7 @@ Pelican 的使用量相对来说少一些（[Pelican Sites](https://github.com/g
 
 Pelican 当前的版本是 3\.3\.0，虽然没有和 Octopress 具体地对比，但它有些功能是我很喜欢的，比如 [linking to internal content](http://docs.getpelican.com/en/latest/getting_started.html#linking-to-internal-content) 用于把不同的文章、或者文章和附件联系起来，而不需要关心它们发布后在什么位置；比如内置了对多语言博客的支持（[translations](http://docs.getpelican.com/en/latest/getting_started.html#translations)）；还有草稿模式等等。
 
-相对的，它的缺点主要是插件还不够丰富，只好用“自己写”来弥补了。另外大多数 Pelican 主题都不好看，这个问题回头再慢慢解决吧。
+相对的，它的缺点主要是插件还不够丰富，只好用「自己写」来弥补了。另外大多数 Pelican 主题都不好看，这个问题回头再慢慢解决吧。
 
 现在我的这个博客看起来有点儿像 Octopress，是因为我用了 [Octopress Theme for Pelican](http://docs.getpelican.com/en/latest/getting_started.html#translations)。这只是暂时的啦，以后有时间了会自己整一个主题。
 

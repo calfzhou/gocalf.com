@@ -7,7 +7,7 @@ tags:
 - Kindle
 categories:
 - 数码电子
-summary: 入手一年的 Kindle 4 突然变成砖头了，屏幕显示“Your Kindle Needs Repair”，花了大半个晚上的时间才修好它，简单记录一下。
+summary: 入手一年的 Kindle 4 突然变成砖头了，屏幕显示「Your Kindle Needs Repair」，花了大半个晚上的时间才修好它，简单记录一下。
 keywords:
 - Kindle 4
 - unbrick
@@ -16,8 +16,8 @@ keywords:
 - 修砖
 ---
 
-入手一年的 Kindle 4 突然不能用了，屏幕显示“Your Kindle Needs
-Repair”，原来就是传说中的变成砖头了。
+入手一年的 Kindle 4 突然不能用了，屏幕显示「Your Kindle Needs
+Repair」，原来就是传说中的变成砖头了。
 
 花了大半个晚上的时间才修好它，简单记录一下。
 
@@ -49,8 +49,8 @@ diags（当时没截图，现在也懒得再折腾一次 Kindle 了）。点击�
 
 需要下载一个叫做 mmcblk0p1\.img 的文件，其实我也不清楚这到底是什么，看起来是个镜像文件。我下载的是 [mmcblk0p1\_410\.img](http://60.211.209.221/cdn.baidupcs.com/file/01589c0ba1f05e9e4f55e35d02ffc05b?xcode=053458c9324860ffda9317ddb745a10aa9749899cf109a05&fid=2601356780-250528-1879823735&time=1374668763&sign=FDTAXER-DCb740ccc5511e5e8fedcff06b081203-7N%2BEg07f9BuUIjG8wPMKIV8gURM%3D&to=cb&fm=N,B,T&expires=8h&rt=sh&r=586640283&logid=1498755034&sh=1&wsiphost=ipdbm)（点击下载），RAR 压缩包的大小是 144MB，解压后 358MB。
 
-在 Kindle 诊断模式菜单中选择“U) USB device
-mode”，电脑就会将 Kindle 识别为 U 盘，将下载解压后的 \.img 文件拷贝到 Kindle 根目录下。
+在 Kindle 诊断模式菜单中选择「U) USB device
+mode」，电脑就会将 Kindle 识别为 U 盘，将下载解压后的 \.img 文件拷贝到 Kindle 根目录下。
 
 虽说整个修砖过程对 Kindle 内的电子书没有影响，我还是趁这个机会赶紧把数据备份了一下。
 
@@ -61,18 +61,18 @@ mode”，电脑就会将 Kindle 识别为 U 盘，将下载解压后的 \.img �
 在 SSH 登录之前，先要确认一下 Kindle 系统的版本和序列号（Serial
 Number），以便获取 root 密码。系统版本我是没注意到，序列号在 Kindle 诊断模式主菜单第一项里就能找到。
 
-记下序列号后，在 Kindle 诊断模式菜单中依次选择：“N) Misc individual
-diagnostics”、“U) Utilities”、“Z) Enable USBnet”，然后按方向键右键返回。
+记下序列号后，在 Kindle 诊断模式菜单中依次选择：「N) Misc individual
+diagnostics」、「U) Utilities」、「Z) Enable USBnet」，然后按方向键右键返回。
 
 在电脑的硬件管理器中可以看到有一个叫 RNDIS\\Ethernet
-card 的硬件，点击升级驱动，然后选择手动浏览驱动 \-\> 自选驱动 \-\> 网络适配器，在厂商中选择“Microsoft
-Corporation”，驱动选择“Remote NDIS Compatible
-Device”，强制安装驱动即可。（如果是 Windows XP，则需要下载安装 RNDIS
+card 的硬件，点击升级驱动，然后选择手动浏览驱动 \-\> 自选驱动 \-\> 网络适配器，在厂商中选择「Microsoft
+Corporation」，驱动选择「Remote NDIS Compatible
+Device」，强制安装驱动即可。（如果是 Windows XP，则需要下载安装 RNDIS
 Ethernet 驱动，[点此下载](http://b.billgong.com/wp-content/uploads/2012/03/RNDIS-Ethernet-Driver.zip)。）
 
-装好驱动，进入网络中心，看到有一块新的网卡设备。点击右键查看属性，在 IPv4 选项中，将 IP 地址设置为“192\.168\.15\.200”，子网掩码是默认的“255\.255\.255\.0”。
+装好驱动，进入网络中心，看到有一块新的网卡设备。点击右键查看属性，在 IPv4 选项中，将 IP 地址设置为「192\.168\.15\.200」，子网掩码是默认的「255\.255\.255\.0」。
 
-用 SSH 客户端（我用的是 Putty）登录 Kindle，IP 地址为 192\.168\.15\.244，用户名是 root。密码可以先试试“mario”（针对 4\.0 系统），如果不行，就将序列号输入到下面的文本框中得到密码（针对 4.0.1 系统）。
+用 SSH 客户端（我用的是 Putty）登录 Kindle，IP 地址为 192\.168\.15\.244，用户名是 root。密码可以先试试「mario」（针对 4\.0 系统），如果不行，就将序列号输入到下面的文本框中得到密码（针对 4.0.1 系统）。
 
 ```jsx-live {css="kindle.css"}
 import { useId, useState } from 'react';
@@ -99,7 +99,7 @@ export default function KindlePassword() {
 }
 ```
 
-其实 root 密码就是“fiona”加上序列号 MD5 值中的一部分。生成代码如下（Python
+其实 root 密码就是「fiona」加上序列号 MD5 值中的一部分。生成代码如下（Python
 2\.7\.\*）：
 
 ```python {linenos=table}

@@ -67,7 +67,7 @@ keywords:
 
 林克根据得到的标志到地图右下角的哨塔找到奥鲁并获得奥鲁的信物（Auru\'s memo），之后再来到湖中间的大炮处并将奥鲁的信物出示给他看，他会将林克发射到戈鲁多沙漠（Gerudo Desert）。
 
-{{< image src="tp_ch04_09.jpg" alt="tp_ch04_09" caption="在湖中央“乘坐”奥鲁的大炮" original="tp_ch04_09.jpg" width=500 >}}
+{{< image src="tp_ch04_09.jpg" alt="tp_ch04_09" caption="在湖中央「乘坐」奥鲁的大炮" original="tp_ch04_09.jpg" width=500 >}}
 
 {{< image src="tp_ch04_10.jpg" alt="tp_ch04_10" caption="来到戈鲁多沙漠（Gerudo Desert）" original="tp_ch04_10.jpg" width=500 >}}
 
