@@ -31,9 +31,9 @@ Legend of Zelda: Twilight Princess](http://www.zelda.com/tp/)），真的是很�
 Twilight Princess
 则有多种翻译，有“曙光公主”、“黎明公主”、“黄昏公主”等等，似乎“黄昏公主”是比较普遍的叫法，但因为我的游戏里显示的是“黎明公主”，我就实在难以接受其他的名称了。所以我整理的攻略中将全部使用“黎明公主”这一说法。
 
-{{< image src="zelda_tp_logo_mid.png" alt="Zelda Twilight Princess Logo" caption="《塞尔达传说：黎明公主》LOGO" >}}
+![《塞尔达传说：黎明公主》LOGO](zelda_tp_logo_mid.png)
 
-{{< image src="zelda_tp_cover-545x700.jpg" alt="Zelda Twilight Princess Cover" caption="《塞尔达传说：黎明公主》封面、海报" >}}
+![《塞尔达传说：黎明公主》封面、海报](zelda_tp_cover-545x700.jpg)
 
 随着美版 Wii 的首发，玩家们期盼已久的《塞尔达传说：黎明公主》终于与大家见面了，这款被任天堂寄予厚望的作品一再延期，也从最初预计的
 NGC 平台转移到了 Wii 上面，其重要性不言而喻。新生的塞尔达，以其卓越的世界观、精巧的迷题，用写实的风格让玩家体验最原始的感动，当你闭上眼睛，一切都会变成脑海里最精美的画面。

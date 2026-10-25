@@ -36,11 +36,11 @@ Tangler），它将输入的光线变成两条向相反方向射出的光线，�
 Teleporter），成对使用时，可以将其中一个接收到的光线传送到另一个。还有逻辑门（Logic
 Gate）、互补器（Complementor）等等。所有的元件如下图示。
 
-{{< image src="chromatron_elems.png" alt="chromatron_elems" caption="Chromatron 中的各种光学元件" >}}
+![Chromatron 中的各种光学元件](chromatron_elems.png)
 
 别的关卡都可以不谈，但有一关是一定要说一下的，这一关太有趣了。虽然它也有传统的解法，但其中有一种解法却非常神奇。见下图：
 
-{{< image src="chromatron_2_49.png" alt="chromatron_2_49" caption="Chromatron 2 代 49 关：反馈消除" >}}
+![Chromatron 2 代 49 关：反馈消除](chromatron_2_49.png)
 
 注意到那几个没有光线经过的反射镜了吗？看起来它们摆在那儿是多余的，但一旦移动它们，你就输了。游戏中对这一关的说明是：
 

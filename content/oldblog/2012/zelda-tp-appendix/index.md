@@ -96,7 +96,7 @@ keywords:
 
 游戏开的时候拥有三颗心。在游戏的八个迷宫里，每打完一个迷宫的 boss 可以获得一颗心。另外海拉尔王国中还有 45 枚心之碎片，这些都获得才能收集到全部 20 颗心。每找到 5 枚心之碎片，就可以得到一个完整的心之容器。一些碎片通过支线事件或小游戏的奖品获得。另外还有一些分布在王国的各个角落，可以去昏暗的洞穴，狭窄的胡同，险峻的高峰搜索这些能提高生命上限的宝藏。
 
-{{< image src="heart_pieces_map.png" alt="heart_pieces_map" caption="45 枚心之碎片的分布图" >}}
+![45 枚心之碎片的分布图](heart_pieces_map.png)
 
 1. **法隆森林 \(Faron Woods\)：** 挥动油灯驱散有毒的沼泽雾气，进入位于西北部的洞穴（在找到通往西部森林之门钥匙的地方）。点亮尽头的两支火把，心之碎片就会出现。（如果在早期完成，那就不会有那些毒雾。）
    {#h01}
@@ -355,7 +355,7 @@ keywords:
 
 ## 金色虫
 
-{{< image src="golden_bugs_map.png" alt="golden_bugs_map" caption="24 只金色虫的位置分布" >}}
+![24 只金色虫的位置分布](golden_bugs_map.png)
 
 1. **蚂蚁♂：** Kakariko Village 墓地的树下。
    {#b01}
@@ -437,7 +437,7 @@ keywords:
 
 ## 鬼魂之魂
 
-{{< image src="ghost_souls_map.png" alt="ghost_souls_map" caption="60 只鬼魂之魂的地理位置" >}}
+![60 只鬼魂之魂的地理位置](ghost_souls_map.png)
 
 ### 详情
 

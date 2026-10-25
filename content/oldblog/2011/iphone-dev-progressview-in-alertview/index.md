@@ -122,7 +122,7 @@ UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:@"Title"
 
 在实际使用中，带进度条的 alert view 大概长得是这样的：
 
-{{< image src="progress_alert.png" alt="progress_alert" caption="带进度条的 alert 窗口" >}}
+![带进度条的 alert 窗口](progress_alert.png)
 
 ---
 

@@ -48,7 +48,7 @@ Slider 的功能）介绍一下。它最多只算是个 toy，还有很多需要
 
 说了这么多，来看看它的样子吧。外表很简单，我用的背景、滑块和滑条图片都跟 UISlider 是一样的：
 
-{{< image src="range_slider.png" alt="range_slider" caption="我的 Range Slider" >}}
+![我的 Range Slider](range_slider.png)
 
 实现起来蛮简单的，因为 SDK 已经提供了足够的支持。我的这个类就叫做 RangeSlider，继承自 [UIControl](http://developer.apple.com/library/ios/#documentation/uikit/reference/UIControl_Class/Reference/Reference.html#//apple_ref/occ/cl/UIControl) 类。另外我还定义了它的委托类，叫做 RangeSliderDelegate。二者的接口如下：
 

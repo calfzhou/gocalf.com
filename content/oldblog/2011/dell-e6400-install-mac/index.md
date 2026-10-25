@@ -60,9 +60,9 @@ system from
 file\.\.\.），选择下载的安装盘镜像，在弹出的对话框里选择 Apple\_HFS 那项。加载之后点击菜单 Tool\-\>Create
 disk image\.\.\.，将生成的文件（\.dmg）保存在某个 NTFS 分区上即可。
 
-{{< image src="hfs_explorer_hfs.png" alt="hfs_explorer_hfs" caption="HFS-Explorer 选择 Partition" >}}
+![HFS-Explorer 选择 Partition](hfs_explorer_hfs.png)
 
-{{< image src="hfs_explorer_view.png" alt="hfs_explorer_view" caption="在 HFS-Explorer 中查看安装盘镜像" >}}
+![在 HFS-Explorer 中查看安装盘镜像](hfs_explorer_view.png)
 
 使用 HFS\-Explorer 把下载的安装盘镜像处理一下生成另外一个镜像，主要有三个作用：
 
@@ -76,7 +76,7 @@ administrator）。载入刚才用 HFS\-Explorer 生成的镜像文件，选择�
 V8）。点击“开始！”按钮，然后耐心等待。当进度条走满，日志中出现“Change
 partition type to AF: Success”、“All done, have fun\!”时就算成功了。
 
-{{< image src="lepoard-inshelper.png" alt="lepoard-inshelper" caption="Leopard 硬盘安装助手" >}}
+![Leopard 硬盘安装助手](lepoard-inshelper.png)
 
 接下来要替换 OSInstall，这需要安装工具 MacDriver（v8\.0\.4\.10），这是个收费软件。装好之后重启系统，就可以进入刚才用硬盘安装助手写入的 HFS 安装分区了。让 Windows 显示隐藏文件和系统文件，下载一个 PC 用的 OSInstall，替换掉
 

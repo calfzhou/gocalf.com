@@ -41,7 +41,7 @@ Matrix67 的这篇博客是一年多之前发的了，后来我又找到了这�
 
 下面这张图是游戏当前版本（v1\.30）的关卡分布图，为了方便查找，我特意用红色字体添加了关卡序号在每关图标的左上角处。其中第 29 到 31 关是隐藏关，要通过了第 24 关才能显示出来。
 
-{{< image src="manufactoria-main.png" alt="manufactoria-main" caption="Manufactoria 主界面（添加了关卡序号）" >}}
+![Manufactoria 主界面（添加了关卡序号）](manufactoria-main.png)
 
 我的各关卡解决方案（第 30 和 31 关没有时间优化了，其他关都是尽可能优化过的）：
 

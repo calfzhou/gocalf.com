@@ -27,9 +27,9 @@ keywords:
 
 下面介绍第一个小软件：ChipGenius。它可以识别出优盘（或其他 USB 设备）的主控芯片型号、制造商、品牌等信息。这个软件绿色小巧，便于携带，是外出选购优盘是必不可少的工具之一。下面两张图是真假金士顿优盘用此软件识别后的对比，真的优盘是公司发的，假的是我在北邮买的。
 
-{{< image src="real_kingston.png" alt="real_kingston" caption="正牌 8G 金士顿优盘在 ChipGenius 中的检测结果" >}}
+![正牌 8G 金士顿优盘在 ChipGenius 中的检测结果](real_kingston.png)
 
-{{< image src="fake_kingston.png" alt="fake_kingston" caption="冒牌扩容 8G 金士顿优盘在 ChipGenius 中的检测结果" >}}
+![冒牌扩容 8G 金士顿优盘在 ChipGenius 中的检测结果](fake_kingston.png)
 
 可见，关键的区别就在产品制造商（Product Vendor）和产品型号（Product
 Model）上，正牌的应该是 Kingston DataTraveler 2\.0，而假冒的通常都是 USB
@@ -39,9 +39,9 @@ Model）上，正牌的应该是 Kingston DataTraveler 2\.0，而假冒的通常
 
 如果只是芯片是冒牌货我也忍了，最可气的是芯片的实际容量只有 4GB。接下来介绍的这个软件就可以检测出来，叫做 MyDiskTest。这个软件功能很强，我最喜欢的就是扩容检测和坏块扫描了，速度很快，比我自己写的程序一点一点扫描快多了。另外它还可以进行速度测试和坏块屏蔽。不说废话，直接上对比图，还是我的一真一假两只优盘。
 
-{{< image src="real_8g_chip.png" alt="real_8g_chip" caption="正牌 8G 金士顿优盘在 MyDiskTest 中的检测结果" >}}
+![正牌 8G 金士顿优盘在 MyDiskTest 中的检测结果](real_8g_chip.png)
 
-{{< image src="fake_8g_chip.png" alt="fake_8g_chip" caption="冒牌扩容 8G 金士顿优盘在 MyDiskTest 中的检测结果" >}}
+![冒牌扩容 8G 金士顿优盘在 MyDiskTest 中的检测结果](fake_8g_chip.png)
 
 可见，我这个假冒的优盘是用杂牌的 4G 机芯改装出来的。由于是在校园里路边买的，虽然要了收据（号称是海龙的来这里搞活动），但收据上的摊位也是假的。目前只好暂时用 MyDiskTest 把坏块屏蔽掉使用了（否则写入的文件超过 4G 后的内容将无法写入但又不会报错，直到读出来的时候才会发现内容全部是 0×00）。
 

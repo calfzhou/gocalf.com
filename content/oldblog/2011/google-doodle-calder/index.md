@@ -25,7 +25,7 @@ Canvas 的浏览器里，可以看到 3D 的动态 Doodle，还可以拖动哦�
 Calder](https://artsy.net/artist/alexander-calder)）诞辰 113 周年，Google 用它的 Doodle 为大家在浏览器上展示了 Calder 的动态雕塑作品 The
 Star (1960)。原作如下图示。
 
-{{< image src="calder_the_star.jpg" alt="calder_the_star" caption="亚历山大 · 考尔德动态雕塑作品 The Star (1960)" >}}
+![亚历山大 · 考尔德动态雕塑作品 The Star (1960)](calder_the_star.jpg)
 
 当然我对艺术是一窍不通了，对 HTML5
 Canvas 也一无所知。就像电视上有个广告词：“我们不生产水，我们只是大自然的搬运工”。我今天也只是把这个 Doodle 从 Google 主页上搬下来，以满足收藏的欲望。由于没有搜索框，我把雕塑阴影的位置调高了一些。

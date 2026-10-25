@@ -87,4 +87,4 @@ stretchableImage 方法有两个整数参数，分别用来指定图片的左边
 
 运行后效果如下图示：
 
-{{< image src="resizable_image.png" alt="resizable_image" caption="UIImage 拉伸示意（左上角：原始图片；上：直接拉伸；下：按照端帽拉伸）" >}}
+![UIImage 拉伸示意（左上角：原始图片；上：直接拉伸；下：按照端帽拉伸）](resizable_image.png)

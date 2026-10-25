@@ -43,7 +43,7 @@ keywords:
 
 毫无疑问，我用的是 [iTerm2](http://www.iterm2.com/)。如果说访问互联网世界的入口是 Chrome，那么访问程序世界的入口就是 iTerm 了。
 
-{{< image src="iterm2_logo.png" alt="iterm2_logo" caption="" >}}
+![](iterm2_logo.png)
 
 字体选择一款好看的等宽字体即可，比如常用的 Consolas、 Curier New 等。我用的是 [Source Code Pro](https://github.com/adobe/source-code-pro)。中文使用 Microsoft YaHei 字体。
 
@@ -112,7 +112,7 @@ ipython 除了 shell console 外，还提供 Qt console，详细的信息查看�
 
 虽然 iTerm 本身已经设置好了 Solarized 配色，但是 ls 的时候并不一定有颜色。ls 没有颜色绝对是让人难以忍受的，在 [bash\_inc/alias](https://github.com/calfzhou/dotfiles/blob/master/bash/bash_inc/aliases) 里除了根据系统中 ls 支持的参数让 ls 的输出显示出颜色外，还通过配置 ` LS_COLOR ` 让色彩更丰富，可以让不同类型的文件有不同的颜色，看起来非常的清晰。推荐使用 [dircolors\-solarized](https://github.com/seebi/dircolors-solarized) 提供的配色文件，在 Mac OS X 的采用了 Solarized Dark 配色的 iTerm2 里看起来会是这个样子：
 
-{{< image src="dircolors_solarized_dark.png" alt="dircolors-solaized-dark" caption="iTerm2 中 Solarized Dark 系的 dircolors 效果" >}}
+![iTerm2 中 Solarized Dark 系的 dircolors 效果](dircolors_solarized_dark.png)
 
 ### Bash Prompt
 
@@ -128,7 +128,7 @@ MYNAME
 
 配合上 iTerm 的配色、ls 的颜色等，我的 shell 看起来是这样的：
 
-{{< image src="my-shell-demo.png" alt="my-shell-demo" caption="我的 iTerm2 的效果" >}}
+![我的 iTerm2 的效果](my-shell-demo.png)
 
 ### Bash Completion
 
@@ -197,7 +197,7 @@ brew install maven30
 
 如果还想用个 GUI 的 Git 客户端，我用的是 [GitX\-dev](http://rowanj.github.io/gitx/)，主要用来直观地观察分支的演化情况。
 
-{{< image src="gitx-dev.png" alt="gitx-dev" caption="GitX-dev 界面演示" >}}
+![GitX-dev 界面演示](gitx-dev.png)
 
 ### SVN
 

@@ -84,7 +84,7 @@ kextcache -v 1 -l -s -n -t -arch i386 -arch x86_64 -m /Volumes/Mac\ OS/System/Li
 
 呼，冒险升了次级，结果还是比较满意的，截图纪念。
 
-{{< image src="mac_10.6.8_screenshot.png" alt="Mac OS 10.6.8 on Dell E6400" caption="Mac OS 10.6.8 on Dell E6400" >}}
+![Mac OS 10.6.8 on Dell E6400](mac_10.6.8_screenshot.png)
 
 最后把用到的 kext 之类的都放在这里吧。
 

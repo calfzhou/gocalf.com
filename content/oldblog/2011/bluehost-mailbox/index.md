@@ -37,4 +37,4 @@ Exchanger（MX）的配置内容有问题，并没有指向 GoCalf 的空间地�
 
 附 GoDaddy 里面 DNS 设置截图：
 
-{{< image src="godaddy_dns.png" alt="GoDaddy 中 DNS 设置" caption="将二级域名 mail 指向 @ 地址；MX 记录指向 mail.<yourdomain>.com" >}}
+![将二级域名 mail 指向 @ 地址；MX 记录指向 mail.&lt;yourdomain&gt;.com](godaddy_dns.png)
