@@ -7,13 +7,13 @@ tags:
 - Windows 7
 categories:
 - 操作系统
-summary: 在 Windows 7 里，「上帝」 能做什么？
+summary: 在 Windows 7 里，「上帝」能做什么？
 keywords:
 - God Mode
 - Control Panel
 ---
 
-在 Windows 7 里，「上帝」 能做什么？
+在 Windows 7 里，「上帝」能做什么？
 
 一个简单的方法就可以调出调整 Windows 7 系统里全部功能的面板，这个小小的技巧可以让你控制你电脑中的一切。
 

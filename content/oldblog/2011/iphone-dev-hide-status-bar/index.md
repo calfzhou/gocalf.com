@@ -53,7 +53,7 @@ in iOS 3\.2）。
 ## 二、App 启动时就隐藏状态栏
 
 用了上面的方法之后，App 在运行过程中，状态栏确实被隐藏起来了，但是我发现在 App 启动的那个瞬间，还是可以看到状态栏的，然后一闪即过。虽然时间很短暂，看着还是很不舒服。为了让状态栏从启动的时候就隐藏起来，可以修改 ` <YOUR_APP>-Info.plist `。如果在 Xcode 中修改，在根结点 Infomation
-Property List 下面新加一项 「Status bar is initially
+Property List 下面新加一项「Status bar is initially
 hidden」（不用手动输入，可以直接在下拉菜单中选取）。这是个 BOOL 类型的键值，将 Value 栏中的复选框勾选上即可。
 
 ![在 Info.plist 中设置状态栏为隐藏](status_bar_initially_hidden.png)

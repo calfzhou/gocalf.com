@@ -162,7 +162,7 @@ def add_tests():
 add_tests()
 ```
 
-上面的示意中，假设测试用例保存在一个叫做「number\_data\.txt」 的 TSV 文件中。每行用 TAB 分割为两列，分别是阿拉伯数字和期望的中文读法。
+上面的示意中，假设测试用例保存在一个叫做「number\_data\.txt」的 TSV 文件中。每行用 TAB 分割为两列，分别是阿拉伯数字和期望的中文读法。
 
 「add\_tests」方法对每一个测试用例，调用「create\_number\_test\_function」创建一个测试方法，添加到测试类「TestTranslateNumberToChinese」中。
 
