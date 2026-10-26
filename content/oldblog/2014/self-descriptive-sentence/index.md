@@ -260,7 +260,7 @@ def decrease(character c):
 
 相关的程序 [在 github 上](https://github.com/calfzhou/self-descriptive-sentence)，目前除了可以生成中文的句子，还可以生成基于数字的句子。比如：
 
-> 1 employs 11 digits, 4 1\'s, 3 2\'s, 2 3\'s, 2 4\'s.
+> 1 employs 11 digits, 4 1's, 3 2's, 2 3's, 2 4's.
 
 以后可能会在两个方面做改进，一是模板化，一是迭代算法。现在是按照语言分的，其实语言只是模板的一个因素。模板化之后可以用同样的方法构造出更多更有趣的句子来。迭代算法方面，目前想到的是利用遗传算法，不过具体怎么操作还没有太多的想法。
 

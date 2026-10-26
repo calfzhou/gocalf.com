@@ -58,7 +58,10 @@ Not every remaining backslash is redundant under the current Sidera configuratio
   the literal character sequence matters, not simply to retain legacy typography.
   In a follow-up refinement, the twelve escaped trailing dots in the Chinese
   blockquote in `self-descriptive-sentence` were normalized to `……`; prose
-  ellipses do not need literal-dot preservation or code formatting.
+  ellipses do not need literal-dot preservation or code formatting. Likewise,
+  the English blockquote beginning “1 employs 11 digits” now uses unescaped
+  apostrophes in `1's`, `2's`, etc.; typographic apostrophes are acceptable in prose.
+  Do not confuse those apostrophes with literal prime marks in mathematical notation.
 - **Automatic links:** ordinary non-link `www.…` references retain an escaped
   first dot to avoid silently adding hyperlinks. URL rewrite examples instead use
   code spans, which need no such escapes.
