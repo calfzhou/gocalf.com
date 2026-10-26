@@ -57,7 +57,7 @@ Princess](http://www.zelda.com/tp/)）是我玩的唯一的一个塞尔达传说
 
 ![伊莉娅（Ilia）](zelda_tp_Ilia.jpg)
 
-## 欧库 &amp; 小欧库（Ooccoo &amp; Ooccoo Jr\.）
+## 欧库 &amp; 小欧库（Ooccoo &amp; Ooccoo Jr.）
 
 天空之城的居民，因为某种原因来到了海拉尔大陆。为了寻找回到天空城的道路，她和自己的孩子不断穿梭在大陆的迷宫中寻找线索，并用魔法帮助林克脱离险境。最后在林克、米德娜和暗影帝国反击队的共同协助下回到了自己的故乡。
 

@@ -8,7 +8,7 @@ tags:
 - SVG
 categories:
 - 建站
-summary: 在 HTMl 页面中用 \<object\> 标签嵌入的 SVG 图片如何能跟随窗口大小自动缩放呢？
+summary: 在 HTMl 页面中用 `<object>` 标签嵌入的 SVG 图片如何能跟随窗口大小自动缩放呢？
 keywords:
 - Scalable Vector Graphics
 - Auto Scale

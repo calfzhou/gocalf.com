@@ -8,7 +8,7 @@ tags:
 - Natural Language
 categories:
 - 算法
-summary: 自描述语句（Self\-Descriptive Sentence），也叫做 autogram，是一种自己描述自己的语句，今天就介绍一种简单的生成这种句子的方法。
+summary: 自描述语句（Self-Descriptive Sentence），也叫做 autogram，是一种自己描述自己的语句，今天就介绍一种简单的生成这种句子的方法。
 keywords:
 - Self Descriptive Sentence
 - Autogram
@@ -16,7 +16,7 @@ keywords:
 - Chinese Sentence
 ---
 
-自描述语句（Self\-Descriptive Sentence），也叫做 [autogram](http://en.wikipedia.org/wiki/Autogram)，是一种自己描述自己的语句。
+自描述语句（Self-Descriptive Sentence），也叫做 [autogram](http://en.wikipedia.org/wiki/Autogram)，是一种自己描述自己的语句。
 
 我在 2004 年的时候（时光飞逝啊）看到这种句子，想了一个简单的方法来用程序生成，效果还可以，但还有很大的不足。后来也没在做什么改进，今天就把这陈年老事拿出来晒晒太阳。
 
@@ -260,7 +260,7 @@ def decrease(character c):
 
 相关的程序 [在 github 上](https://github.com/calfzhou/self-descriptive-sentence)，目前除了可以生成中文的句子，还可以生成基于数字的句子。比如：
 
-> 1 employs 11 digits, 4 1\'s, 3 2\'s, 2 3\'s, 2 4\'s\.
+> 1 employs 11 digits, 4 1\'s, 3 2\'s, 2 3\'s, 2 4\'s.
 
 以后可能会在两个方面做改进，一是模板化，一是迭代算法。现在是按照语言分的，其实语言只是模板的一个因素。模板化之后可以用同样的方法构造出更多更有趣的句子来。迭代算法方面，目前想到的是利用遗传算法，不过具体怎么操作还没有太多的想法。
 

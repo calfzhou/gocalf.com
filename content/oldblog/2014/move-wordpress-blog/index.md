@@ -57,7 +57,7 @@ mysqldump -uDB_USER_NAME -pDB_USER_PASSWORD DB_NAME | gzip > my-worpress.sql.gz
 
 命令中大写的部分需要用自己的用户名、密码和数据库名替换。导出的文件用 gzip 压缩一下以便通过网络复制到目标机器。
 
-附件、插件、主题等都保存在 wp\-content 目录中，直接压缩打包：
+附件、插件、主题等都保存在 wp-content 目录中，直接压缩打包：
 
 ```bash {linenos=table}
 tar -zcf content.tar.gz wp-content

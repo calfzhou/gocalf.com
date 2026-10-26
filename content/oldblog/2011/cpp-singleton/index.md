@@ -22,11 +22,11 @@ keywords:
 单例模式（Singleton
 Pattern）是设计模式中的一种，它用来保证系统中最多只能存在一个它的实例，其做法是由类自身来创建和持有它的对象实例，把对实例的创建权和管理权都控制在自己手中，以便控制实例数目。
 
-关于如何在 C\+\+ 中实现单例模式的讨论已经太多了，我只是简单介绍一下可以继承的单例类。
+关于如何在 C++ 中实现单例模式的讨论已经太多了，我只是简单介绍一下可以继承的单例类。
 
 首先介绍一下通常所见的单例类的写法，不妨设这个类叫做 Singleton。
 
-Singleton\.h：
+Singleton.h：
 
 ```cpp {linenos=table}
 #ifndef _SINGLETON_H_
@@ -55,7 +55,7 @@ private:
 #endif
 ```
 
-Singleton\.cpp：
+Singleton.cpp：
 
 ```cpp {linenos=table}
 #include "Singleton.h"

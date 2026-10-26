@@ -47,11 +47,11 @@ keywords:
 
 字体选择一款好看的等宽字体即可，比如常用的 Consolas、 Curier New 等。我用的是 [Source Code Pro](https://github.com/adobe/source-code-pro)。中文使用 Microsoft YaHei 字体。
 
-配色当然首选 [Solarized](https://github.com/altercation/solarized) 的暗色系，在 Github 上可以找到专门提供给 iTerm2 用的配色文件 [Solarized Dark\.itemcolors](https://github.com/altercation/solarized/blob/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors)。
+配色当然首选 [Solarized](https://github.com/altercation/solarized) 的暗色系，在 Github 上可以找到专门提供给 iTerm2 用的配色文件 [Solarized Dark.itemcolors](https://github.com/altercation/solarized/blob/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors)。
 
 ### Homebrew
 
-[Homebrew](http://brew.sh/) installs the stuff you need that Apple didn\'t\.
+[Homebrew](http://brew.sh/) installs the stuff you need that Apple didn\'t.
 
 我电脑上的大部分工具都是通过 homebrew 安装和管理的，非常方便。虽然提供类似功能的还有 [Fink](http://www.finkproject.org/) 和 [macports](http://www.macports.org/)，但我认为 Homebrew 是最方便的。具体的就不在这里比较了，大家可以自行调研。当然，至少选择一个来帮助自己安装盒管理软件包，会让很多事情变得更容易。
 
@@ -69,7 +69,7 @@ Homebrew 默认会掌控系统中的 ` /usr/local ` 目录，目前我这个目�
 
 ### Python
 
-苹果系统自带了好几个版本的 Python，装在 /Library/Python 中。不过版本都不新，为了便于维护，还是自己装一个 Python 吧。用 ` brew install python ` 可以安装最新的 Python 2\.x，用 ` brew install python3 ` 可以安装最新的 Python 3\.x。
+苹果系统自带了好几个版本的 Python，装在 /Library/Python 中。不过版本都不新，为了便于维护，还是自己装一个 Python 吧。用 ` brew install python ` 可以安装最新的 Python 2.x，用 ` brew install python3 ` 可以安装最新的 Python 3.x。
 
 Homebrew 的 Python 已经安装了 pip，用于管理 Python 的软件包。根据 ` brew info python ` 提供的提示，运行下列命令对 pip 进行更新：
 
@@ -85,7 +85,7 @@ pip install virtualenv
 pip install virtualenvwrapper
 ```
 
-virtualenvwrapper 提供了很多方便的命令，还支持命令的 tab completion，这些都包含在 virtualenvwrapper\.sh 文件中。在 ` ~/.bash_profile ` 中引入该文件来激活相关的命令和功能：
+virtualenvwrapper 提供了很多方便的命令，还支持命令的 tab completion，这些都包含在 virtualenvwrapper.sh 文件中。在 ` ~/.bash_profile ` 中引入该文件来激活相关的命令和功能：
 
 ```bash {linenos=table}
 export VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -106,11 +106,11 @@ ipython 除了 shell console 外，还提供 Qt console，详细的信息查看�
 
 ### Bash Profile
 
-` ~/.bash_profile ` 的作用就不用我多说了，在这里可以对 shell 进行很多的个性化配置。参考 [mathiasbynens 的 dotfiles](https://github.com/mathiasbynens/dotfiles) 项目，我也为自己打造了舒适的 shell 环境，相关的配置保存在 [GitHub \- calfzhou \- dotfiles \- bash](https://github.com/calfzhou/dotfiles/tree/master/bash) 里面，对 Mac 和 Linux 都是可以的，让我在不同的服务器上也有相同的操作体验。涉及到的内容很多，就不逐一介绍了，比较重要的几点下面会提到。
+` ~/.bash_profile ` 的作用就不用我多说了，在这里可以对 shell 进行很多的个性化配置。参考 [mathiasbynens 的 dotfiles](https://github.com/mathiasbynens/dotfiles) 项目，我也为自己打造了舒适的 shell 环境，相关的配置保存在 [GitHub - calfzhou - dotfiles - bash](https://github.com/calfzhou/dotfiles/tree/master/bash) 里面，对 Mac 和 Linux 都是可以的，让我在不同的服务器上也有相同的操作体验。涉及到的内容很多，就不逐一介绍了，比较重要的几点下面会提到。
 
 ### Dir Colors
 
-虽然 iTerm 本身已经设置好了 Solarized 配色，但是 ls 的时候并不一定有颜色。ls 没有颜色绝对是让人难以忍受的，在 [bash\_inc/alias](https://github.com/calfzhou/dotfiles/blob/master/bash/bash_inc/aliases) 里除了根据系统中 ls 支持的参数让 ls 的输出显示出颜色外，还通过配置 ` LS_COLOR ` 让色彩更丰富，可以让不同类型的文件有不同的颜色，看起来非常的清晰。推荐使用 [dircolors\-solarized](https://github.com/seebi/dircolors-solarized) 提供的配色文件，在 Mac OS X 的采用了 Solarized Dark 配色的 iTerm2 里看起来会是这个样子：
+虽然 iTerm 本身已经设置好了 Solarized 配色，但是 ls 的时候并不一定有颜色。ls 没有颜色绝对是让人难以忍受的，在 [`bash_inc/alias`](https://github.com/calfzhou/dotfiles/blob/master/bash/bash_inc/aliases) 里除了根据系统中 ls 支持的参数让 ls 的输出显示出颜色外，还通过配置 ` LS_COLOR ` 让色彩更丰富，可以让不同类型的文件有不同的颜色，看起来非常的清晰。推荐使用 [dircolors-solarized](https://github.com/seebi/dircolors-solarized) 提供的配色文件，在 Mac OS X 的采用了 Solarized Dark 配色的 iTerm2 里看起来会是这个样子：
 
 ![iTerm2 中 Solarized Dark 系的 dircolors 效果](dircolors_solarized_dark.png)
 
@@ -146,17 +146,17 @@ grep 命令不在 coreutils，可以通过 ` brew install grep --default-names `
 
 其实我也不是 VIM 重度使用者，现在写超过两个文件的 Python 代码、Java 代码等都会使用专门的 IDE。我看很多人都喜欢用 VIM 来写复杂的项目代码，但他们的 VIM 都没有做任何额外的设置，自身对 VIM 的快捷键和命令也不熟悉，只是把 VIM 当成一个连移动光标都很费劲的编辑器来用，写代码的效率可想而知。而且像 Python 这种脚本语言，很多错误只有到运行到那句话的时候才会有效果，VIM 没有足够的只能针对某一个语言做太多的静态分析。
 
-` ~/.vimrc ` 用于对 VIM 进行各种设置，如果没有这个文件，赶紧创建一个吧。复杂的语法高亮、配色、插件等都可以放在 ` ~/.vim ` 里面。VIM 自身对插件没有很好地管理，我选择了 [vim\-pathogen](https://github.com/tpope/vim-pathogen) 来管理所需要的 VIM 扩展。只要把 [pathogen\.vim](https://github.com/tpope/vim-pathogen/blob/master/autoload/pathogen.vim) 放在 ` ~/.vim/autoload ` 目录中，把所需的扩展包放在 ` ~/.vim/bundle ` 目录下即可。
+` ~/.vimrc ` 用于对 VIM 进行各种设置，如果没有这个文件，赶紧创建一个吧。复杂的语法高亮、配色、插件等都可以放在 ` ~/.vim ` 里面。VIM 自身对插件没有很好地管理，我选择了 [vim-pathogen](https://github.com/tpope/vim-pathogen) 来管理所需要的 VIM 扩展。只要把 [pathogen.vim](https://github.com/tpope/vim-pathogen/blob/master/autoload/pathogen.vim) 放在 ` ~/.vim/autoload ` 目录中，把所需的扩展包放在 ` ~/.vim/bundle ` 目录下即可。
 
-同样地，我也把自己的 VIM 设置和依赖放在 GitHub 上（[GitHub \- calfzhou \- dotfiles \- vim](https://github.com/calfzhou/dotfiles/tree/master/vim)），在别的 server 上直接 clone 下来保持一致的操作体验。
+同样地，我也把自己的 VIM 设置和依赖放在 GitHub 上（[GitHub - calfzhou - dotfiles - vim](https://github.com/calfzhou/dotfiles/tree/master/vim)），在别的 server 上直接 clone 下来保持一致的操作体验。
 
-我现在使用 [riv\.vim](https://github.com/Rykka/riv.vim) 扩展来写 reStructuredText 文件（\.rst），操作起来非常方便。
+我现在使用 [riv.vim](https://github.com/Rykka/riv.vim) 扩展来写 reStructuredText 文件（.rst），操作起来非常方便。
 
 如果不满意苹果系统自带的较低版本的 VIM，或者想用 GUI 界面的 VIM，可以利用 Homebrew 进行安装，Formula 是 ` vim ` 和 ` macvim `。
 
 ### Sublime Text
 
-[Sublime Text](http://www.sublimetext.com/) 是我现在主要使用的 GUI 编辑器，但看其首页的动画演示就会觉得非常 cool。以前还经常用 Ultra Edit 和 Notepad\+\+，现在基本都不用了。在 GUI 程序中，我一般会使用 Solarized Light 配色方案，总感觉大部分 GUI 程序用暗色系就很丑（PyCharm 系列除外）。
+[Sublime Text](http://www.sublimetext.com/) 是我现在主要使用的 GUI 编辑器，但看其首页的动画演示就会觉得非常 cool。以前还经常用 Ultra Edit 和 Notepad++，现在基本都不用了。在 GUI 程序中，我一般会使用 Solarized Light 配色方案，总感觉大部分 GUI 程序用暗色系就很丑（PyCharm 系列除外）。
 
 具体的配置也就不多说了。注意 Sublime Text 原生不支持 GBK 编码的文件，需要安装扩展包，即使这样，在编辑 GBK 编码的文件时，它会生成一个临时文件进行操作，保存的时候再写回去，体验上还是有些不爽。
 
@@ -172,30 +172,30 @@ PyCharm 里强烈推荐自带的 Darcula 配色，感觉在 GUI 界面中，这�
 
 ### Java IDE
 
-好多人都用 Eclipse 写 Java 代码（包括 Android 开发），真想不通为什么那么难用的 IDE 还那么受欢迎。可能学校里交 Java 的时候都用的 Eclipse 吧，就像直到现在都还有很多人用 VS6 做 C\+\+ 开发一样。对于 Android 开发，可能跟之前 Google 推 Eclipse with ADT 有关吧。不过现在 Google 也认识到了 Eclipse 的不足，转身投入 [JetBrains](http://www.jetbrains.com/) 的 [IntelliJ IDEA](http://www.jetbrains.com/idea/) 的怀抱了。JetBrains 出品的个个都是精品啊，微软里面很多项目组也都在使用 JetBrains 出的 [ReSharper](http://www.jetbrains.com/resharper/)。
+好多人都用 Eclipse 写 Java 代码（包括 Android 开发），真想不通为什么那么难用的 IDE 还那么受欢迎。可能学校里交 Java 的时候都用的 Eclipse 吧，就像直到现在都还有很多人用 VS6 做 C++ 开发一样。对于 Android 开发，可能跟之前 Google 推 Eclipse with ADT 有关吧。不过现在 Google 也认识到了 Eclipse 的不足，转身投入 [JetBrains](http://www.jetbrains.com/) 的 [IntelliJ IDEA](http://www.jetbrains.com/idea/) 的怀抱了。JetBrains 出品的个个都是精品啊，微软里面很多项目组也都在使用 JetBrains 出的 [ReSharper](http://www.jetbrains.com/resharper/)。
 
-我现在也是用 IntelliJ IDEA 来做 Java 开发，使用体验跟 PyCharm 类似。Java 项目的依赖管理用 Maven，Homebrew 里也提供了安装。建议目前使用 Maven 3\.0\.\*：
+我现在也是用 IntelliJ IDEA 来做 Java 开发，使用体验跟 PyCharm 类似。Java 项目的依赖管理用 Maven，Homebrew 里也提供了安装。建议目前使用 Maven `3.0.*`：
 
 ```bash {linenos=table}
 brew tap homebrew/versions
 brew install maven30
 ```
 
-当然如果要用最新的 3\.2\.\*，可以直接 ` brew install maven `。
+当然如果要用最新的 `3.2.*`，可以直接 ` brew install maven `。
 
 ## 版本控制
 
 ### Git
 
-用 Homebrew 可以方便地安装最新的 Git。如果像上面介绍的那样，用 Homebrew 安装并使用了 bash\-completion，那么装好 git 后，git 指令也会按 TAB 键补全了，再也不动担心记不住 git 指令。
+用 Homebrew 可以方便地安装最新的 Git。如果像上面介绍的那样，用 Homebrew 安装并使用了 bash-completion，那么装好 git 后，git 指令也会按 TAB 键补全了，再也不动担心记不住 git 指令。
 
-` ~/.gitconfig ` 可以用来定义很多个性化的设置，可以直接编辑或者通过 ` git config --global ` 进行设置。类似的，我也把我的配置文件保存在 GitHub 上（[GitHub \- calfzhou \- dotfiles \- git](https://github.com/calfzhou/dotfiles/tree/master/git)），以便在不同的地方有同样的操作体验。
+` ~/.gitconfig ` 可以用来定义很多个性化的设置，可以直接编辑或者通过 ` git config --global ` 进行设置。类似的，我也把我的配置文件保存在 GitHub 上（[GitHub - calfzhou - dotfiles - git](https://github.com/calfzhou/dotfiles/tree/master/git)），以便在不同的地方有同样的操作体验。
 
-顺便提一下，用 git 管理项目版本的话，推荐使用 [git\-flow](https://github.com/nvie/gitflow) 管理分支和版本，通过 Homebrew 可以直接安装它，同样也会带有 TAB 自动补全功能。关于这种分支管理的模型，可以阅读 [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)。
+顺便提一下，用 git 管理项目版本的话，推荐使用 [git-flow](https://github.com/nvie/gitflow) 管理分支和版本，通过 Homebrew 可以直接安装它，同样也会带有 TAB 自动补全功能。关于这种分支管理的模型，可以阅读 [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)。
 
-如果想在公开的 git 仓库中保存一些比较隐私的信息，可以利用 [git\-encrypt](https://github.com/shadowhand/git-encrypt) 来加密其中的一部分文件。这个也可以直接通过 Homebrew 安装。大致的介绍在之前的文章 [用 Git 和云存储保存隐私信息](../../2013/git-encrypt/index.md) 中略有介绍。
+如果想在公开的 git 仓库中保存一些比较隐私的信息，可以利用 [git-encrypt](https://github.com/shadowhand/git-encrypt) 来加密其中的一部分文件。这个也可以直接通过 Homebrew 安装。大致的介绍在之前的文章 [用 Git 和云存储保存隐私信息](../../2013/git-encrypt/index.md) 中略有介绍。
 
-如果还想用个 GUI 的 Git 客户端，我用的是 [GitX\-dev](http://rowanj.github.io/gitx/)，主要用来直观地观察分支的演化情况。
+如果还想用个 GUI 的 Git 客户端，我用的是 [GitX-dev](http://rowanj.github.io/gitx/)，主要用来直观地观察分支的演化情况。
 
 ![GitX-dev 界面演示](gitx-dev.png)
 

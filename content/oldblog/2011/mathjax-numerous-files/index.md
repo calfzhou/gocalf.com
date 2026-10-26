@@ -20,7 +20,7 @@ keywords:
 对 MathJax 的安装路径扫描了一下，发现 ` mathjax/fonts/HTML-CSS/TeX/png ` 下面有无数的小文件，都是图片，每个图片是一个字符。非常奇怪，MathJax 不是用 JavaScript、CSS 和 Web
 Font 来显示公式么，怎么会有这么多图片格式的字符。
 
-带着这个疑问到 MathJax 官方网站上看了看，果然找到了这样一个 FAQ：[The MathJax font folder is too big\. Is there any way to compress it?](http://www.mathjax.org/resources/faqs/#fonts-too-big)
+带着这个疑问到 MathJax 官方网站上看了看，果然找到了这样一个 FAQ：[The MathJax font folder is too big. Is there any way to compress it?](http://www.mathjax.org/resources/faqs/#fonts-too-big)
 
 原来这些图片格式的字符是为了让那些古老的不支持 Web
 Font 的浏览器也可以正常地显示 LaTeX 公式，好吧，可怕的向下兼容。在 MathJax 将其改进之前，我决定先删掉这些图片。先要关闭这种图片字体的功能，直接修改插件的源代码 ` blog/wp-content/plugins/latex/latex.php `，找到关于 MathJax 配置的代码，修改为：
@@ -40,6 +40,6 @@ function add_latex_mathjax_code(){
 
 其中第 6 行就是新添加的内容（还有第 5 行末尾的逗号），这样 MathJax 就不会再使用图片字体，然后把上面提到的那个目录整个删掉就可以了。当然 TeX 目录下还有其他几个文件夹，如 eot、otf 和 svg，这些可不要删，要不然在什么浏览器上都无法显示公式了。
 
-试了一下，至少 IE6\+、Chrome、FireFox、Safari（包括 iPhone、iPad 版）都可以正常显示公式。
+试了一下，至少 IE6+、Chrome、FireFox、Safari（包括 iPhone、iPad 版）都可以正常显示公式。
 
 呼，一下子清理掉三万多文件，不错。

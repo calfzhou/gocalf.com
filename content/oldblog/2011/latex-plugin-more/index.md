@@ -29,7 +29,7 @@ keywords:
 
 以我现在使用的 LightWord 主题为例，修改 ` wp-content/themes/lightword/header.php `，把 {{< code-inline lang="phtml" >}}<body <?php body_class(); ?>>{{< /code-inline >}} 改成 {{< code-inline lang="phtml" >}}<body <?php body_class('tex2jax_ignore'); ?>>{{< /code-inline >}} 即可。
 
-至于公式的修饰符，插件支持 ` \(...\) `、` \[...\] `、` $$...$$ `、` [latex]...[/latex] `、` [tex]...[/tex] `，但我还是担心这样的代码在一些程序源代码中也很容易出现（比如正则表达式），所以还是决定只用 latex 作为标记。这个修改很简单，只要对 ` /wp-content/plugins/latex/latex.php ` （v3\.1）做如下改动即可：
+至于公式的修饰符，插件支持 ` \(...\) `、` \[...\] `、` $$...$$ `、` [latex]...[/latex] `、` [tex]...[/tex] `，但我还是担心这样的代码在一些程序源代码中也很容易出现（比如正则表达式），所以还是决定只用 latex 作为标记。这个修改很简单，只要对 ` /wp-content/plugins/latex/latex.php ` （v3.1）做如下改动即可：
 
 ```diff {linenos=false}
 108c108,109

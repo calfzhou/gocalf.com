@@ -41,7 +41,7 @@ headers:
 rows:
 - - 介绍
   - '可以创建 Excel 2007 或更高版本的 XLSX 文件'
-  - '即 [python\-excel](http://www.python-excel.org/)，含 [xlrd](https://pypi.python.org/pypi/xlrd)、[xlwt](https://pypi.python.org/pypi/xlwt) 和 [xlutils](https://pypi.python.org/pypi/xlutils) 三大模块，分别提供读、写和其他功能'
+  - '即 [python-excel](http://www.python-excel.org/)，含 [xlrd](https://pypi.python.org/pypi/xlrd)、[xlwt](https://pypi.python.org/pypi/xlwt) 和 [xlutils](https://pypi.python.org/pypi/xlutils) 三大模块，分别提供读、写和其他功能'
   - '可以读写 Excel 2007 XLSX 和 XLSM 文件'
   - '直接通过 COM 组件与Microsoft Excel 进程通信，调用其各种功能实现对 Excel 文件的操作'
 - - 读
@@ -59,12 +59,12 @@ rows:
   - ❌
   - ⚠️
   - ✅
-- - \.xls
+- - .xls
   - ❌
   - ✅
   - ❌
   - ✅
-- - \.xlsx
+- - .xlsx
   - ✅
   - ⚠️
   - ✅
@@ -88,7 +88,7 @@ rows:
   - 无限制
   - 无限制
   - 无限制
-  - Windows \+ Excel
+  - Windows + Excel
 - - 使用场景
   - '- 要创建 XLSX 文件
 
@@ -132,18 +132,18 @@ rows:
 
 这应该是个比较新的项目，在 GitHub 上看它最早的提交是在 2013 年 1 月份。其官方文档中宣称它支持：
 
-- 100% compatible Excel XLSX files\.
-- Full formatting\.
-- Merged cells\.
-- Defined names\.
-- Charts\.
-- Autofilters\.
-- Data validation and drop down lists\.
-- Conditional formatting\.
-- Worksheet PNG/JPEG images\.
-- Rich multi\-format strings\.
-- Cell comments\.
-- Memory optimisation mode for writing large files\.
+- 100% compatible Excel XLSX files.
+- Full formatting.
+- Merged cells.
+- Defined names.
+- Charts.
+- Autofilters.
+- Data validation and drop down lists.
+- Conditional formatting.
+- Worksheet PNG/JPEG images.
+- Rich multi-format strings.
+- Cell comments.
+- Memory optimisation mode for writing large files.
 
 ### 优点
 
@@ -163,7 +163,7 @@ rows:
 
 作者并没有打算做一个 XlsxReader 来提供读取操作。不能读取，也就无从修改了。它只能用来创建新的文件。我是利用 xlrd 把需要的信息读入后，用 XlsxWriter 创建全新的文件。
 
-另外，即使是创建到一半 Excel 文件，也是无法读取已经创建出来的内容的（信息应该在，但是并没有相应的接口）。因为它的主要方法是 ` write ` 而不是 ` set `。当你在某个单元格写入数据后，除非你自己保存了相关的内容，否则还是没有办法读出已经写入的信息。从这个角度看，你无法做到读出 \-\> 修改 \-\> 写回，只能是写入 \-\> 写入 \-\> 写入。
+另外，即使是创建到一半 Excel 文件，也是无法读取已经创建出来的内容的（信息应该在，但是并没有相应的接口）。因为它的主要方法是 ` write ` 而不是 ` set `。当你在某个单元格写入数据后，除非你自己保存了相关的内容，否则还是没有办法读出已经写入的信息。从这个角度看，你无法做到读出 -> 修改 -> 写回，只能是写入 -> 写入 -> 写入。
 
 二、不支持 XLS 文件
 

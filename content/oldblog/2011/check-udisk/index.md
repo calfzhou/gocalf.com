@@ -32,10 +32,10 @@ keywords:
 ![冒牌扩容 8G 金士顿优盘在 ChipGenius 中的检测结果](fake_kingston.png)
 
 可见，关键的区别就在产品制造商（Product Vendor）和产品型号（Product
-Model）上，正牌的应该是 Kingston DataTraveler 2\.0，而假冒的通常都是 USB
-2\.0 Flash Disk 之类的东西。
+Model）上，正牌的应该是 Kingston DataTraveler 2.0，而假冒的通常都是 USB
+2.0 Flash Disk 之类的东西。
 
-有一点比较奇怪的是，我在英文 Vista 上运行该软件，显示版本是 2\.64，在中文 XP 上运行，则显示 2\.70，呵呵，无视之。
+有一点比较奇怪的是，我在英文 Vista 上运行该软件，显示版本是 2.64，在中文 XP 上运行，则显示 2.70，呵呵，无视之。
 
 如果只是芯片是冒牌货我也忍了，最可气的是芯片的实际容量只有 4GB。接下来介绍的这个软件就可以检测出来，叫做 MyDiskTest。这个软件功能很强，我最喜欢的就是扩容检测和坏块扫描了，速度很快，比我自己写的程序一点一点扫描快多了。另外它还可以进行速度测试和坏块屏蔽。不说废话，直接上对比图，还是我的一真一假两只优盘。
 
@@ -47,7 +47,7 @@ Model）上，正牌的应该是 Kingston DataTraveler 2\.0，而假冒的通常
 
 好在两个软件都非常小，这里就直接提供下载吧（压缩包内有详细使用说明，就不多说了）：
 
-- [ChipGenius v2\.64](ChipGenius_264.zip) （113K） MD5：2628f1748e558bd71ab661ae1ab27aa5
-- [MyDiskTest v2\.50](MyDiskTest_250.zip) （610K） MD5：7d4bfeb1e01f748fe3bd2b6a590bd83b
+- [ChipGenius v2.64](ChipGenius_264.zip) （113K） MD5：2628f1748e558bd71ab661ae1ab27aa5
+- [MyDiskTest v2.50](MyDiskTest_250.zip) （610K） MD5：7d4bfeb1e01f748fe3bd2b6a590bd83b
 
 真想哪天背着本本出来去街边买个优盘，现场检测，揭穿这些奸商的把戏。

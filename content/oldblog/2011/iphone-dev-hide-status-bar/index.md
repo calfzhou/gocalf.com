@@ -22,7 +22,7 @@ keywords:
 
 今天的问题是怎么在 App 中隐藏系统状态栏（Status Bar）。
 
-以下内容适用于 iOS 3\.2\+。
+以下内容适用于 iOS 3.2+。
 
 ## 一、始终隐藏状态栏
 
@@ -43,12 +43,12 @@ keywords:
 
 相关的方法或属性是 [UIApplication](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html) 的：
 
-- [setStatusBarHidden:withAnimation:](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instm/UIApplication/setStatusBarHidden:withAnimation:)（iOS 3\.2\+）
+- [setStatusBarHidden:withAnimation:](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instm/UIApplication/setStatusBarHidden:withAnimation:)（iOS 3.2+）
 
-- [statusBarHidden](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instp/UIApplication/statusBarHidden)（iOS 2\.0\+）
+- [statusBarHidden](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instp/UIApplication/statusBarHidden)（iOS 2.0+）
 
 另外还有一个方法 [setStatusBarHidden:animated:](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/DeprecationAppendix/AppendixADeprecatedAPI.html#//apple_ref/occ/instm/UIApplication/setStatusBarHidden:animated:)，已经不推荐使用了（deprecated
-in iOS 3\.2）。
+in iOS 3.2）。
 
 ## 二、App 启动时就隐藏状态栏
 

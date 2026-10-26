@@ -80,7 +80,7 @@ NGC 平台转移到了 Wii 上面，其重要性不言而喻。新生的塞尔�
   - [钓鱼](../../2012/zelda-tp-appendix/index.md#钓鱼)
   - [试炼的洞窟](../../2012/zelda-tp-appendix/index.md#试炼的洞窟)
 - 附件
-  - 日版金手指文件下载：[GoldenFinger\_JP\.zip](GoldenFinger_JP.zip)
+  - 日版金手指文件下载：[`GoldenFinger_JP.zip`](GoldenFinger_JP.zip)
 
 ---
 

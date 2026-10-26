@@ -23,17 +23,17 @@ keywords:
 我的域名是 [GoDaddy](http://www.godaddy.com) 提供的，而服务器空间则在 [BlueHost](http://www.bluehost.com/) 上，域名解析（DNS）是在 GoDaddy 上进行的。之前已经将二级域名 mail 的 A 记录指向 GoCalf 空间的 IP 地址了，可以登录邮箱，能发出邮件，但怎么都收不到信。在 Gmail（或别的邮件服务器）中给 BlueHost 上的邮件帐户发邮件，会收到无法送达的失败提示：
 
 > Delivery to the following recipient failed permanently:\
->     [xxx@xxxxxxxx\.com](mailto:xxx@xxxxxxxx.com)\
+>     [xxx@xxxxxxxx.com](mailto:xxx@xxxxxxxx.com)\
 > Technical details of permanent failure:\
 > Google tried to deliver your message, but it was rejected by the
-> recipient domain\. We recommend contacting the other email provider
-> for further information about the cause of this error\. The error
-> that the other server returned was: 550 550 \#5\.1\.0 Address rejected
-> [xxx@xxxxxxxx\.com](mailto:xxx@xxxxxxxx.com) \(state 14\)\.
+> recipient domain. We recommend contacting the other email provider
+> for further information about the cause of this error. The error
+> that the other server returned was: 550 550 #5.1.0 Address rejected
+> [xxx@xxxxxxxx.com](mailto:xxx@xxxxxxxx.com) (state 14).
 
 看起来应该是 DNS 的问题（跨服务商就是这点比较麻烦啊）。仔细察看了 GoDaddy 上 DNS
 Manager 里面的内容，发现 Mail
-Exchanger（MX）的配置内容有问题，并没有指向 GoCalf 的空间地址，因此将 MX 记录改为指向 mail\.gocalf\.com。改动大概需要一个小时才能生效，生效之后再次发送邮件就可以在 BlueHost 里收到了。
+Exchanger（MX）的配置内容有问题，并没有指向 GoCalf 的空间地址，因此将 MX 记录改为指向 mail.gocalf.com。改动大概需要一个小时才能生效，生效之后再次发送邮件就可以在 BlueHost 里收到了。
 
 附 GoDaddy 里面 DNS 设置截图：
 

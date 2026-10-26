@@ -7,7 +7,7 @@ tags:
 - Hackintosh
 categories:
 - 操作系统
-summary: 前几天在写 app 的最后阶段要进行本地化（localization），其中要做的一件事就是创建语言文件（Localizable\.strings）。要在控制台运行
+summary: 前几天在写 app 的最后阶段要进行本地化（localization），其中要做的一件事就是创建语言文件（Localizable.strings）。要在控制台运行
   genstrings 命令来扫描源代码中 NSLocalizedString 宏所使用到的文字。由于使用的是黑苹果，在运行 genstrings 时遇到了「Unable
   to Determine UUID」的错误，解决方法倒也容易。
 keywords:
@@ -18,7 +18,7 @@ keywords:
 - 黑苹果
 ---
 
-前几天在写 app 的最后阶段要进行本地化（localization），其中要做的一件事就是创建语言文件（Localizable\.strings）。要在控制台运行 genstrings 命令来扫描源代码中 NSLocalizedString 宏所使用到的文字。由于使用的是黑苹果（安装过程参见 [Dell E6400 安装 MacOS 雪豹 10\.6](../../2011/dell-e6400-install-mac/index.md) 和 [Dell E6400 升级到 MacOS 10\.6\.8](../../2011/dell-e6400-mac-10-6-8/index.md)），在运行 genstrings 时遇到了「Unable
+前几天在写 app 的最后阶段要进行本地化（localization），其中要做的一件事就是创建语言文件（Localizable.strings）。要在控制台运行 genstrings 命令来扫描源代码中 NSLocalizedString 宏所使用到的文字。由于使用的是黑苹果（安装过程参见 [Dell E6400 安装 MacOS 雪豹 10.6](../../2011/dell-e6400-install-mac/index.md) 和 [Dell E6400 升级到 MacOS 10.6.8](../../2011/dell-e6400-mac-10-6-8/index.md)），在运行 genstrings 时遇到了「Unable
 to Determine UUID」的错误，解决方法倒也容易。
 
 运行 genstrings 的语句是：
@@ -33,7 +33,7 @@ genstrings ./Classes/*.m
 genstrings[3851:10b] _CFGetHostUUIDString: unable to determine UUID for host. Error: 35
 ```
 
-虽然想不通这么个小程序为什么需要 UUID，但解决方法是：进入目录 /Library/Preferences/SystemConfiguration，用 root 权限修改其中的 NetworkInterfaces\.plist 文件，在控制台的操作命令为：
+虽然想不通这么个小程序为什么需要 UUID，但解决方法是：进入目录 /Library/Preferences/SystemConfiguration，用 root 权限修改其中的 `NetworkInterfaces.plist` 文件，在控制台的操作命令为：
 
 ```bash {linenos=false}
 cd /Library/Preferences/SystemConfiguration
