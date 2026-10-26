@@ -54,8 +54,11 @@ Not every remaining backslash is redundant under the current Sidera configuratio
   remain literal blanks rather than potential emphasis delimiters.
 - **Smart typography:** unescaping apostrophes/quotes, repeated periods, double
   hyphens or `<<` can change their rendered characters. For example, the current
-  renderer changes unescaped `<<` into `«`. Those opt-out escapes remain where
-  the text was not converted to literal code.
+  renderer changes unescaped `<<` into `«`. Preserve such opt-out escapes when
+  the literal character sequence matters, not simply to retain legacy typography.
+  In a follow-up refinement, the twelve escaped trailing dots in the Chinese
+  blockquote in `self-descriptive-sentence` were normalized to `……`; prose
+  ellipses do not need literal-dot preservation or code formatting.
 - **Automatic links:** ordinary non-link `www.…` references retain an escaped
   first dot to avoid silently adding hyperlinks. URL rewrite examples instead use
   code spans, which need no such escapes.
