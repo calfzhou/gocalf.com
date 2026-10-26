@@ -21,9 +21,7 @@ keywords:
 
 这是个程序设计类的游戏，感觉就像是个状态机吧（有限自动机？），从纸带上读取数据，具有分支和写数据的功能，利用简单的几种元件组装成一台可以识别特定模式或者完成指定运算的机器。
 
-游戏的背景大概是一家工业机器人（Industrial
-Robotics）生产厂请你（机器人工程师，Robotics
-Engineer）来测试和修复他们制造的机器人，所谓的「测试」就是对机器人内部纸带上的红蓝色点进行检测，判断其是否满足指定的模式；「修复」就是对纸带上的红蓝色点进行处理或者运算，产生指定的结果。这个游戏还支持自定义关卡，看到过有人提出求最大公约数之类的问题。
+游戏的背景大概是一家工业机器人（Industrial Robotics）生产厂请你（机器人工程师，Robotics Engineer）来测试和修复他们制造的机器人，所谓的「测试」就是对机器人内部纸带上的红蓝色点进行检测，判断其是否满足指定的模式；「修复」就是对纸带上的红蓝色点进行处理或者运算，产生指定的结果。这个游戏还支持自定义关卡，看到过有人提出求最大公约数之类的问题。
 
 不知道别人是怎么思考的，反正我是先画想好用什么算法，然后在纸上画状态图把细节尤其是边界条件考虑清楚，然后开始布局，通过验证之后再不断地优化（减少使用的元件数量）。
 
@@ -137,7 +135,7 @@ Level 13: Officers! OUTPUT: With blue as 1 and red as 0, add 1 to the binary str
 
     19 个元件，81580 时间。
 
-Level 14: Generals! OUTPUT: Substract 1 from the binary string! (Input>= 1)
+Level 14: Generals! OUTPUT: Substract 1 from the binary string! `(Input>= 1)`
 :   减 1 操作，跟第 13 关其实是一样的，红色和蓝色互换就好了。19 个元件，79750 时间。
 
     但这一关还可以再稍微调整一下布局，变成 18 个元件，81686 时间。
@@ -205,10 +203,10 @@ Level 28: Robomecha! OUTPUT: The input, but with the last symbol moved to the fr
 Level 29: Seraphim! ACCEPT: Two identical strings, separated by a green!
 :   判断由绿色点分开的两个色串是否完全相等。也挺简单的，补一个绿色作为终止符，取出色串一的第一个颜色，把其他的写回纸带，判断色串二的第一个颜色跟它是否一样；这时候两个色串都去掉了第一个颜色，而且刚好色串二跟色串一交换了顺序，再重复用同样的方法判断下去即可。21 个元件，166182 时间。
 
-Level 30: Ophanim! ACCEPT: Read the tape as two numbers, A and B, split by a green: accept if A > B!
+Level 30: Ophanim! ACCEPT: Read the tape as two numbers, A and B, split by a green: accept if `A > B`!
 :   由绿色点分开的两个色串，从二进制数字的角度判断是否前一个数大于后一个数。
 
-    我用的方法是求 B - A，当然不用记录完整的结果，只要记录借位状态即可。不过我没有再进行优化，现在用了 88 个元件，60617 时间。估计能优化掉一小半的元件。
+    我用的方法是求 `B - A`，当然不用记录完整的结果，只要记录借位状态即可。不过我没有再进行优化，现在用了 88 个元件，60617 时间。估计能优化掉一小半的元件。
 
-Level 31: Metatron! OUTPUT: Read the tape as two numbers, A and B, split by a green: output A + B!
+Level 31: Metatron! OUTPUT: Read the tape as two numbers, A and B, split by a green: output `A + B`!
 :   计算被绿色分开的两个数字之和。基本上就是从最低位逐位加上去。同样是还没有优化，应该能减少一半以上的元件。现在用 120 个元件，108630 时间。

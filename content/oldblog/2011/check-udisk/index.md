@@ -31,9 +31,7 @@ keywords:
 
 ![冒牌扩容 8G 金士顿优盘在 ChipGenius 中的检测结果](fake_kingston.png)
 
-可见，关键的区别就在产品制造商（Product Vendor）和产品型号（Product
-Model）上，正牌的应该是 Kingston DataTraveler 2.0，而假冒的通常都是 USB
-2.0 Flash Disk 之类的东西。
+可见，关键的区别就在产品制造商（Product Vendor）和产品型号（Product Model）上，正牌的应该是 Kingston DataTraveler 2.0，而假冒的通常都是 USB 2.0 Flash Disk 之类的东西。
 
 有一点比较奇怪的是，我在英文 Vista 上运行该软件，显示版本是 2.64，在中文 XP 上运行，则显示 2.70，呵呵，无视之。
 

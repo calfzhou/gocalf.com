@@ -8,8 +8,7 @@ tags:
 - Doodle
 categories:
 - 互联网
-summary: 现在 Google 经常会在它的 Doodle 中加入各种有趣的元素，今天这个就用到了 HTML5 的 Canvas，在支持 HTML5 Canvas
-  的浏览器里，可以看到 3D 的动态 Doodle，还可以拖动哦。为了便于以后查看和保存，我把这个 Doodle 相关的脚本扒下来，在此留存。
+summary: 现在 Google 经常会在它的 Doodle 中加入各种有趣的元素，今天这个就用到了 HTML5 的 Canvas，在支持 HTML5 Canvas 的浏览器里，可以看到 3D 的动态 Doodle，还可以拖动哦。为了便于以后查看和保存，我把这个 Doodle 相关的脚本扒下来，在此留存。
 keywords:
 - Google Doodle
 - HTML5
@@ -18,17 +17,13 @@ keywords:
 - Alexander Calder
 ---
 
-现在 Google 经常会在它的 Doodle 中加入各种有趣的元素，今天这个就用到了 HTML5 的 Canvas，在支持 HTML5
-Canvas 的浏览器里，可以看到 3D 的动态 Doodle，还可以拖动哦。为了便于以后查看和保存，我把这个 Doodle 相关的脚本扒下来，在此留存。
+现在 Google 经常会在它的 Doodle 中加入各种有趣的元素，今天这个就用到了 HTML5 的 Canvas，在支持 HTML5 Canvas 的浏览器里，可以看到 3D 的动态 Doodle，还可以拖动哦。为了便于以后查看和保存，我把这个 Doodle 相关的脚本扒下来，在此留存。
 
-今天（2011 年 7 月 22 日）是伟大的动态雕塑发明人 [亚历山大·考尔德](http://en.wikipedia.org/wiki/Alexander_Calder) （[Alexander
-Calder](https://artsy.net/artist/alexander-calder)）诞辰 113 周年，Google 用它的 Doodle 为大家在浏览器上展示了 Calder 的动态雕塑作品 The
-Star (1960)。原作如下图示。
+今天（2011 年 7 月 22 日）是伟大的动态雕塑发明人 [亚历山大·考尔德](http://en.wikipedia.org/wiki/Alexander_Calder) （[Alexander Calder](https://artsy.net/artist/alexander-calder)）诞辰 113 周年，Google 用它的 Doodle 为大家在浏览器上展示了 Calder 的动态雕塑作品 The Star (1960)。原作如下图示。
 
 ![亚历山大 · 考尔德动态雕塑作品 The Star (1960)](calder_the_star.jpg)
 
-当然我对艺术是一窍不通了，对 HTML5
-Canvas 也一无所知。就像电视上有个广告词：「我们不生产水，我们只是大自然的搬运工」。我今天也只是把这个 Doodle 从 Google 主页上搬下来，以满足收藏的欲望。由于没有搜索框，我把雕塑阴影的位置调高了一些。
+当然我对艺术是一窍不通了，对 HTML5 Canvas 也一无所知。就像电视上有个广告词：「我们不生产水，我们只是大自然的搬运工」。我今天也只是把这个 Doodle 从 Google 主页上搬下来，以满足收藏的欲望。由于没有搜索框，我把雕塑阴影的位置调高了一些。
 
 当时的 IE8 或 IE6 无法显示 Canvas，只能看到静态图片。此处现在仅提供保存下来的HTML 文件下载，不再展示或运行 Doodle。
 

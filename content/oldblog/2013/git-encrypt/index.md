@@ -8,8 +8,7 @@ tags:
 - Encrypt
 categories:
 - 有用知识
-summary: 网络越来越发达，各式各样的网盘、云存储也走进日常生活，我也开始在 Dropbox 和 GitHub 中存储一些个人文件和代码。但如果涉及到隐私的信息非要放上去就必须要加密处理，今天我说一下如何用
-  git 来保存这些隐私信息。
+summary: 网络越来越发达，各式各样的网盘、云存储也走进日常生活，我也开始在 Dropbox 和 GitHub 中存储一些个人文件和代码。但如果涉及到隐私的信息非要放上去就必须要加密处理，今天我说一下如何用 git 来保存这些隐私信息。
 keywords:
 - Git Encrypt
 - gitcrypt

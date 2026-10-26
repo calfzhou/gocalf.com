@@ -58,8 +58,7 @@ p & = & \frac{1}{5}+\frac{2}{5}\times\left(\frac{1}{5}+\frac{2}{5}\times\left(\c
 \end{array}
 $$
 
-另外这个插件默认并且推荐使用 [MathJax](http://www.mathjax.org/) 来渲染公式。[MathJax](http://www.mathjax.org/) 是一个开源的基于 JavaScript 的公式渲染引擎。它使用 CSS 和网页中的字体来显示公式，而不是图片或者 Flash。这带来的好处是公式内的文字是可以选取的，而且在缩放网页的时候，公式的字体也可同时被缩放。而且利用它的 JavaScript 还可以很方便地对整个公式进行缩放和拷贝。可以在 MathJax 网站上查看（[http://www\.mathjax.org/demos/copy-and-paste/](http://www.mathjax.org/demos/copy-and-paste/)）如何把 MathJax 渲染出来的公式复制到 Mathematica、Microsoft
-Word、MathType 和 Wikipeida 中。这里简单概括一下：
+另外这个插件默认并且推荐使用 [MathJax](http://www.mathjax.org/) 来渲染公式。[MathJax](http://www.mathjax.org/) 是一个开源的基于 JavaScript 的公式渲染引擎。它使用 CSS 和网页中的字体来显示公式，而不是图片或者 Flash。这带来的好处是公式内的文字是可以选取的，而且在缩放网页的时候，公式的字体也可同时被缩放。而且利用它的 JavaScript 还可以很方便地对整个公式进行缩放和拷贝。可以在 MathJax 网站上查看（[http://www\.mathjax.org/demos/copy-and-paste/](http://www.mathjax.org/demos/copy-and-paste/)）如何把 MathJax 渲染出来的公式复制到 Mathematica、Microsoft Word、MathType 和 Wikipeida 中。这里简单概括一下：
 
 - Mathematica：复制公式的 MathML 源代码（右键点击公式，选择 Format->MathML，然后点击 Show Source，在弹出的代码窗口中全选复制），在 Mathematica 中粘贴，软件将会自动识别出这是一个公式。
 - Microsoft Word：将公式的 MathML 源代码粘贴到 Word 中，然后在粘贴选择器（Paste Options）中选取仅保留文本（Paste Text Only）。

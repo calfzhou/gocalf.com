@@ -17,16 +17,13 @@ keywords:
 - 控件
 ---
 
-前些日子写 app 的时候遇到一个需求，希望有一个类似于 [UISlider](http://developer.apple.com/library/ios/#documentation/uikit/reference/UISlider_Class/Reference/Reference.html) 的东西，但能够选取一个范围，也就是所谓的 Range
-Slider。在网上也能找到很多相关的代码，不过本着学习的态度，还是自己琢磨了一下。
+前些日子写 app 的时候遇到一个需求，希望有一个类似于 [UISlider](http://developer.apple.com/library/ios/#documentation/uikit/reference/UISlider_Class/Reference/Reference.html) 的东西，但能够选取一个范围，也就是所谓的 Range Slider。在网上也能找到很多相关的代码，不过本着学习的态度，还是自己琢磨了一下。
 
 就当是为以后写复杂控件做的练习吧。
 
 以下内容适用于 iOS 2.0+。
 
-需求决定一切，在介绍我的这个 Range
-Slider 之前，先把我的需求（或者说我这个 Range
-Slider 的功能）介绍一下。它最多只算是个 toy，还有很多需要完善的地方。不过聊胜于无，以后继续努力呗。
+需求决定一切，在介绍我的这个 Range Slider 之前，先把我的需求（或者说我这个 Range Slider 的功能）介绍一下。它最多只算是个 toy，还有很多需要完善的地方。不过聊胜于无，以后继续努力呗。
 
 这是一个水平方向的（浮点）数值范围选择器：
 
@@ -146,8 +143,7 @@ Slider 的功能）介绍一下。它最多只算是个 toy，还有很多需要
 @end
 ```
 
-接口中的大部分内容都在需求和功能介绍部分见过了。另外有两个方法，xForValue 和 valueForX，它们用来在 Range
-Slider 内部的坐标值和用户数值之间做转换，内容如下（这里的 insetWidth 是在 UI 上做的小伎俩，主要是为了保证滑块滑到最两端时也能有充足的空间来接受用户的点击）：
+接口中的大部分内容都在需求和功能介绍部分见过了。另外有两个方法，xForValue 和 valueForX，它们用来在 Range Slider 内部的坐标值和用户数值之间做转换，内容如下（这里的 insetWidth 是在 UI 上做的小伎俩，主要是为了保证滑块滑到最两端时也能有充足的空间来接受用户的点击）：
 
 ```objc {linenos=table}
 - (float)xForValue:(float)value {

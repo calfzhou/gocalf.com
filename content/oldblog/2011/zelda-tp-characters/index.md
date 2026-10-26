@@ -20,8 +20,7 @@ keywords:
 - 黎明公主
 ---
 
-《[塞尔达传说：黎明公主](http://www.zelda.com/tp/)》（[The Legend of Zelda: Twilight
-Princess](http://www.zelda.com/tp/)）是我玩的唯一的一个塞尔达传说系列的游戏，之前都没太关注过这个系列。开始的时候一直以为塞尔达（公主）是主角呢，后来发现是林克跟黎明公主。不知道这里面的塞尔达有什么特别的作用，感觉就是弱弱的呢。
+《[塞尔达传说：黎明公主](http://www.zelda.com/tp/)》（[The Legend of Zelda: Twilight Princess](http://www.zelda.com/tp/)）是我玩的唯一的一个塞尔达传说系列的游戏，之前都没太关注过这个系列。开始的时候一直以为塞尔达（公主）是主角呢，后来发现是林克跟黎明公主。不知道这里面的塞尔达有什么特别的作用，感觉就是弱弱的呢。
 
 今天来介绍一下《[塞尔达传说：黎明公主](http://www.zelda.com/tp/)》中的几位角色，有好的也有敌人。
 
@@ -111,5 +110,4 @@ Princess](http://www.zelda.com/tp/)）是我玩的唯一的一个塞尔达传说
 
 参考：
 
-- [《塞尔达传说：黄昏公主》图文全攻略](http://wii.tgbus.com/glmj/gl/200611/20061129114849.shtml) by WiiBBS 攻研部
-  Szh、三代鬼彻、天堂的翅膀
+- [《塞尔达传说：黄昏公主》图文全攻略](http://wii.tgbus.com/glmj/gl/200611/20061129114849.shtml) by WiiBBS 攻研部 Szh、三代鬼彻、天堂的翅膀

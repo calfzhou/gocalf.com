@@ -8,8 +8,7 @@ tags:
 - WordPress Plugin
 categories:
 - 建站
-summary: 对 LaTeX for WordPress 插件做了一点小小的改动，修复了在启用 MathJax 时无法显示公式源码的问题。还将公式的 shortcode
-  限定为 latex。
+summary: 对 LaTeX for WordPress 插件做了一点小小的改动，修复了在启用 MathJax 时无法显示公式源码的问题。还将公式的 shortcode 限定为 latex。
 keywords:
 - MathJax
 - LaTeX for WordPress
@@ -43,7 +42,6 @@ keywords:
 > // $toParse = str_replace(array("\(", "\)", "\[", "\]", "[latex]", "[/latex]", "[tex]", "[/tex]"), array("$$", " $$", "$$!", " $$", "$$", " $$", "$$", " $$"), $toParse);
 ```
 
-这样修改之后，依旧支持插件原本的 inline、single
-line 以及显示源码的处理。要在单独的一行中显示公式，就在 ` [latex] ` 后面加 ` ! `；如果要显示公式源码，就在 ` [/latex] ` 前面加 ` ! `。
+这样修改之后，依旧支持插件原本的 inline、single line 以及显示源码的处理。要在单独的一行中显示公式，就在 ` [latex] ` 后面加 ` ! `；如果要显示公式源码，就在 ` [/latex] ` 前面加 ` ! `。
 
 当然也期待 Zhiqiang 进一步完善插件，给用户提供更方便的设置选项。

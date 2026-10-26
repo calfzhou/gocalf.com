@@ -21,8 +21,7 @@ Chromatron，翻译过来是彩色显像管。顾名思义，这个游戏是关�
 
 这是个相当古老的游戏了，好多年前就玩了它的第一代和第二代，后来又陆续玩了第三代和第四代。第三代有几关是前些日子才玩出来的，整理一下留作纪念。
 
-游戏的官方网站是：[http://silverspaceship.com/chromatron/](http://silverspaceship.com/chromatron/)，可以下载到 Chromatron 第一代到第四代的最新版本，Windows 系统和 Mac
-OS 都支持哦。
+游戏的官方网站是：[http://silverspaceship.com/chromatron/](http://silverspaceship.com/chromatron/)，可以下载到 Chromatron 第一代到第四代的最新版本，Windows 系统和 Mac OS 都支持哦。
 
 我这里也提供 Windows 版的下载：
 
@@ -31,10 +30,7 @@ OS 都支持哦。
 3. [Chromatron 3 代 v1.1](chromatron3_v1.1.zip)
 4. [Chromatron 4 代 v1.0](chromatron4_v1.0.zip)
 
-这个游戏中除了反射镜、三棱镜等传统光学元件外，还有一些现实中不一定存在的非常神奇的元件，比如多普勒仪（Doppler），如果红色光线从一端射入，另一端就会射出绿色光线，类似地，绿色光线会变成蓝色，而蓝色会变成红色。如果反过来使用，颜色的变化也反之。再比如量子纠缠分光器（Quantum
-Tangler），它将输入的光线变成两条向相反方向射出的光线，并且这两条光线是量子纠缠的，其中一条光线被多普勒仪改变颜色时，另外那条光线就会变为相反的颜色。又如可移动的光线传送器（Mobile
-Teleporter），成对使用时，可以将其中一个接收到的光线传送到另一个。还有逻辑门（Logic
-Gate）、互补器（Complementor）等等。所有的元件如下图示。
+这个游戏中除了反射镜、三棱镜等传统光学元件外，还有一些现实中不一定存在的非常神奇的元件，比如多普勒仪（Doppler），如果红色光线从一端射入，另一端就会射出绿色光线，类似地，绿色光线会变成蓝色，而蓝色会变成红色。如果反过来使用，颜色的变化也反之。再比如量子纠缠分光器（Quantum Tangler），它将输入的光线变成两条向相反方向射出的光线，并且这两条光线是量子纠缠的，其中一条光线被多普勒仪改变颜色时，另外那条光线就会变为相反的颜色。又如可移动的光线传送器（Mobile Teleporter），成对使用时，可以将其中一个接收到的光线传送到另一个。还有逻辑门（Logic Gate）、互补器（Complementor）等等。所有的元件如下图示。
 
 ![Chromatron 中的各种光学元件](chromatron_elems.png)
 
@@ -44,8 +40,7 @@ Gate）、互补器（Complementor）等等。所有的元件如下图示。
 
 注意到那几个没有光线经过的反射镜了吗？看起来它们摆在那儿是多余的，但一旦移动它们，你就输了。游戏中对这一关的说明是：
 
-> If the complementor is presented with a logical impossibility, it
-> shuts down in all directions.
+> If the complementor is presented with a logical impossibility, it shuts down in all directions.
 
 想亲自尝试一下？赶紧通过上面的链接下载下来玩吧。
 

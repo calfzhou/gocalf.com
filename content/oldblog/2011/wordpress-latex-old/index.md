@@ -14,8 +14,7 @@ keywords:
 - MimeTex
 ---
 
-注：本文是通过 Google
-Reader 从已故的博客 [钟磬居](http://www.zhongqingju.com)（链接已失效）中恢复出来的（原文地址 [http://www\.zhongqingju.com/?p=604](http://www.zhongqingju.com/?p=604)）。目前在 GoCalf 博客中效力的 LaTeX 插件是 [Zhiqiang](http://zhiqiang.org/) 开发的 [LaTeX for WordPress](http://wordpress.org/extend/plugins/latex/)。相关内容请见：[WordPress 数学公式插件 LaTeX](../latex-wordpress/index.md)。
+注：本文是通过 Google Reader 从已故的博客 [钟磬居](http://www.zhongqingju.com)（链接已失效）中恢复出来的（原文地址 [http://www\.zhongqingju.com/?p=604](http://www.zhongqingju.com/?p=604)）。目前在 GoCalf 博客中效力的 LaTeX 插件是 [Zhiqiang](http://zhiqiang.org/) 开发的 [LaTeX for WordPress](http://wordpress.org/extend/plugins/latex/)。相关内容请见：[WordPress 数学公式插件 LaTeX](../latex-wordpress/index.md)。
 
 ======== 分隔符 ========
 
@@ -39,8 +38,7 @@ Reader 从已故的博客 [钟磬居](http://www.zhongqingju.com)（链接已失
 
 第二个方法比较可靠的，但也相当麻烦（对于我这种新手来说）。需要在服务器上安装 LaTeX 和 ImageMagick 这两个软件，然后 [下载 wp-latexrender 插件](http://sixthform.info/steve/wordpress/wp-content/uploads/wp-latexrender.zip) 并安装，进行一系列配置之后，你的站点就可以解析 LaTeX 并生成图片了。如果你的服务器上已经装了这两个软件，那就不用等了，直接用吧，要不然的话还是看看下一个方法。
 
-第三个方法是用 [`dahnielson_mimetex`](http://en.dahnielson.com/2006/09/mimetex-plugin.html) 插件，它会向指定的服务器发送请求，获取公式所对应的图片。可惜插件默认使用的服务失效了，如果你的站点可以执行 cgi 程序，那么可以访问 [这里](http://www.forkosh.com/mimetex.html) 了解如何安装 cgi
-mimetex。如果你的站点没法执行 cgi 程序，那么可以试一试我现在使用的方法：
+第三个方法是用 [`dahnielson_mimetex`](http://en.dahnielson.com/2006/09/mimetex-plugin.html) 插件，它会向指定的服务器发送请求，获取公式所对应的图片。可惜插件默认使用的服务失效了，如果你的站点可以执行 cgi 程序，那么可以访问 [这里](http://www.forkosh.com/mimetex.html) 了解如何安装 cgi mimetex。如果你的站点没法执行 cgi 程序，那么可以试一试我现在使用的方法：
 
 wordpress.com 的用户都可以在博客中使用一对 ` $ ` 来书写 LaTeX，在 [http://support.wordpress.com/latex/](http://support.wordpress.com/latex/) 中有介绍。我的方法就是修改 `dahnielson_mimetex`，让其调用 wordpress.com 的 LaTeX 服务来生成图片。由于后者比 mimetex 多了一些控制图片颜色和大小的参数，因此要在 `dahnielson_mimetex` 中做出相应的修改。
 

@@ -231,8 +231,7 @@ Excel 的单元格如果是一个公式，它内部会同时保存公式本身�
 
 ## Microsoft Excel API
 
-大部分 Windows 环境的开发人员都会选择 [Microsoft Excel API](http://msdn.microsoft.com/en-us/library/fp179694.aspx)。实际上不仅仅是 Python，几乎各种语言都有相应的方法使用它，因为核心的逻辑完全是由 Microsft
-Excel 自身提供的。语言相关的部分只是负责跟 Windows 的 COM 组件进行通信。
+大部分 Windows 环境的开发人员都会选择 [Microsoft Excel API](http://msdn.microsoft.com/en-us/library/fp179694.aspx)。实际上不仅仅是 Python，几乎各种语言都有相应的方法使用它，因为核心的逻辑完全是由 Microsft Excel 自身提供的。语言相关的部分只是负责跟 Windows 的 COM 组件进行通信。
 
 在 Python 中首先需要安装 [Python for Windows extensions](http://sourceforge.net/projects/pywin32/)（[pywin32](http://sourceforge.net/projects/pywin32/)），具体的文档可以查阅 [Win32 Modules](http://docs.activestate.com/activepython/2.4/pywin32/win32_modules.html) 和 [Python COM](http://docs.activestate.com/activepython/2.4/pywin32/com.html)。
 
