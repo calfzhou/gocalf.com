@@ -164,7 +164,7 @@ def WeightedRandomSample(m=1, rand=None):
         selection[index] = item
 ```
 
-每次拿到一个新的元素，通过 ` key = rand.random() ** (1.0 / weight) ` 产生一个与其权重有关的随机键值 key。当元素个数小于 m 时，直接将新的元素放入堆空间中（但并不建堆），这样只用 `O(1)` 时间；当遇到第 m 个元素后，堆空间放满了，这时候进行建堆操作（` heapify(heap) `），需要 `O(m)` 时间；之后每拿到一个新的元素，用 `O(1)` 时间从堆顶拿出最小值与新元素的键值比较，如果后者更大就用后者替换掉堆顶元素，对堆进行必要的操作（`O(log m)` 时间）以保持其结构（` heapreplace(heap, (key, index)) `）。
+每次拿到一个新的元素，通过 `key = rand.random() ** (1.0 / weight)` 产生一个与其权重有关的随机键值 key。当元素个数小于 m 时，直接将新的元素放入堆空间中（但并不建堆），这样只用 `O(1)` 时间；当遇到第 m 个元素后，堆空间放满了，这时候进行建堆操作（`heapify(heap)`），需要 `O(m)` 时间；之后每拿到一个新的元素，用 `O(1)` 时间从堆顶拿出最小值与新元素的键值比较，如果后者更大就用后者替换掉堆顶元素，对堆进行必要的操作（`O(log m)` 时间）以保持其结构（`heapreplace(heap, (key, index))`）。
 
 关于 Python 中的堆可以参考：[http://docs.python.org/library/heapq.html](http://docs.python.org/library/heapq.html)。
 

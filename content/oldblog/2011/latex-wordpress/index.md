@@ -30,9 +30,9 @@ keywords:
 
 > You can type the formula in LaTeX, in title, posts, pages and comments:
 >
-> - ` \(\alpha+\beta\geq\gamma\) ` or ` $$\alpha+\beta\geq\gamma$$ ` add an inline formula
-> - ` \[\alpha+\beta\geq\gamma\] ` or ` $$!\alpha+\beta\geq\gamma$$ ` add an latex equation in math mode (it will be displayed centerly in a single line).
-> - ` $$\alpha+\beta\geq\gamma!$$ ` display the source of the latex formula. Just add a ` ! ` before the second ` $$ `.
+> - `\(\alpha+\beta\geq\gamma\)` or `$$\alpha+\beta\geq\gamma$$` add an inline formula
+> - `\[\alpha+\beta\geq\gamma\]` or `$$!\alpha+\beta\geq\gamma$$` add an latex equation in math mode (it will be displayed centerly in a single line).
+> - `$$\alpha+\beta\geq\gamma!$$` display the source of the latex formula. Just add a `!` before the second `$$`.
 
 上面的公式显示为： $\alpha+\beta\geq\gamma$
 
@@ -63,7 +63,7 @@ $$
 - Mathematica：复制公式的 MathML 源代码（右键点击公式，选择 Format->MathML，然后点击 Show Source，在弹出的代码窗口中全选复制），在 Mathematica 中粘贴，软件将会自动识别出这是一个公式。
 - Microsoft Word：将公式的 MathML 源代码粘贴到 Word 中，然后在粘贴选择器（Paste Options）中选取仅保留文本（Paste Text Only）。
 - MathType：将公式的 TeX 源代码（在右键菜单中选择 Format->TeX）粘贴到 MathType 中即可。
-- Wikipedia：将公式的 TeX 源码粘贴到 Wikipedia 编辑窗口中，放在 ` <math></math> ` 内即可。
+- Wikipedia：将公式的 TeX 源码粘贴到 Wikipedia 编辑窗口中，放在 `<math></math>` 内即可。
 
 如果是在 Google Reader 中查看公式的文章，MathJax 无法被载入，这种情况下插件还会提供图片格式的公式以便阅读。
 

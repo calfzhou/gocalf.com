@@ -29,7 +29,7 @@ keywords:
 
 一个看起来很直观、用起来很恐怖的算法就是递归法。根据 Fibonacci 的递推公式，对于输入的 n，直接递归地调用相同的函数分别求出 `F(n - 1)` 和 `F(n - 2)`，二者相加就是结果。递归的终止点就是递推方程的初值，即 n 取 0 或 1 的时候。
 
-程序（in Python）写出来那也是相当的简洁直观（为了跟后面的程序区分开来，这里取名 ` SlowFibonacci `）。
+程序（in Python）写出来那也是相当的简洁直观（为了跟后面的程序区分开来，这里取名 `SlowFibonacci`）。
 
 ```python {linenos=table}
 def SlowFibonacci(n):
@@ -229,7 +229,7 @@ $$
 
 ## 六、更快的算法？
 
-试了试 Mathematica 中的 ` Fibonacci ` 函数，发现其运算速度相当惊人，估计时间复杂度在 `O(n log n)` 上下，而且对于相同的 n，运算速度远远高于我的矩阵法。可惜我还不了解它的算法，只是在帮助文档里看到：
+试了试 Mathematica 中的 `Fibonacci` 函数，发现其运算速度相当惊人，估计时间复杂度在 `O(n log n)` 上下，而且对于相同的 n，运算速度远远高于我的矩阵法。可惜我还不了解它的算法，只是在帮助文档里看到：
 
 > Fibonacci[n] uses an iterative method based on the binary digit sequence of n.
 

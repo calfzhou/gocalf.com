@@ -33,14 +33,14 @@ Excel 里面字符串查找用的 [FIND](http://office.microsoft.com/en-au/excel
 
 看起来很复杂，其实一步步拆解开并不是太难，基本的原理是这样的：
 
-1. ` SUBSTITUTE(A1,",","") `：把原字符串中的逗号全部删除（替换成空字符串），得到临时字符串 text1；
-2. ` LEN(A1)-LEN(text1) `：用原字符串的长度减去 text1 的长度，即可知道原字符串中总共有多少个逗号，num2；
-3. ` SUBSTITUTE(A1,",",CHAR(1),num2) `：利用 SUBSTITUE 函数，把原字符串中的最后一个逗号替换成特殊字符 CHAR(1)，得到临时字符串 text3；
-4. ` FIND(CHAR(1),text3) `：在 text3 中查找特殊字符 CHAR(1)，其位置就是原字符串中最后一个逗号的位置 pos。
+1. `SUBSTITUTE(A1,",","")`：把原字符串中的逗号全部删除（替换成空字符串），得到临时字符串 text1；
+2. `LEN(A1)-LEN(text1)`：用原字符串的长度减去 text1 的长度，即可知道原字符串中总共有多少个逗号，num2；
+3. `SUBSTITUTE(A1,",",CHAR(1),num2)`：利用 SUBSTITUE 函数，把原字符串中的最后一个逗号替换成特殊字符 CHAR(1)，得到临时字符串 text3；
+4. `FIND(CHAR(1),text3)`：在 text3 中查找特殊字符 CHAR(1)，其位置就是原字符串中最后一个逗号的位置 pos。
 
 真是一个奇妙的方法。
 
-找到位置后，要取出左边或者右边的内容就很简单了，公式分别是（用 pos 代替那个复杂的 FIND 函数）：` =LEFT(A1,pos-1) `，` =RIGHT(A1,LEN(A1)-pos) `。
+找到位置后，要取出左边或者右边的内容就很简单了，公式分别是（用 pos 代替那个复杂的 FIND 函数）：`=LEFT(A1,pos-1)`，`=RIGHT(A1,LEN(A1)-pos)`。
 
 补充：
 
@@ -52,4 +52,4 @@ Excel 里面字符串查找用的 [FIND](http://office.microsoft.com/en-au/excel
 
 唯一的变化就是上述的第 2 步，原字符串的长度减去 text1 的长度后，要除以分隔符本身的长度，才是分隔符的个数。
 
-在这种情况下，取（最右分隔符）右边的子串的公式也要相应地修改为：` =RIGHT(A1,LEN(A1)+1-LEN(B1)-pos) `。
+在这种情况下，取（最右分隔符）右边的子串的公式也要相应地修改为：`=RIGHT(A1,LEN(A1)+1-LEN(B1)-pos)`。

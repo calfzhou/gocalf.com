@@ -36,7 +36,7 @@ keywords:
 
 再次启动，顺利进入系统，很开心。但是声卡没有驱动起来呢，是因为之前把 `VoodooHDA.kext` 去掉的原因吗？傻乎乎地又把它放回来，竟然没有当机，成功进入系统。这回有声卡了，但是没有声音，汗。换了个 `VoodooHDA.kext`，hoho，有声音了。可是音量无法改变，即使静音状态也是一样大的声音。似乎也有人遇到类似的问题呢，又更新了一下 `VoodooHDA.kext`，这次音量调节也正常了。
 
-在更新我所需要的软件的时候，还有插入优盘的时候，都遇到个错误提示，说是 the system extension `/System/Library/Extensions/IOPCIFamily.kext` was installed improperly and cannot be used.（或者是 `AppleACPIPlatform.kext`）。这不是刚才替换的那两个老版本的文件么，啊，想起来了，刚才在 Win 7 里用 MacDrive 把两个文件复制过去之后，还应该要修改权限并删除缓存呢，这些都还没有做，能让我把系统启动起来就很不错了。赶紧打开 Console，依次输入下面这些命令（如果当前用户不是 root，还需要在命令前面加 sudo）（另外命令中的 ` Mac\ OS ` 需要替换成你的 Mac 系统所在分区的卷标）（忘了试一试直接用 /System/Linrary 行不行了，应该是同一个目录的）：
+在更新我所需要的软件的时候，还有插入优盘的时候，都遇到个错误提示，说是 the system extension `/System/Library/Extensions/IOPCIFamily.kext` was installed improperly and cannot be used.（或者是 `AppleACPIPlatform.kext`）。这不是刚才替换的那两个老版本的文件么，啊，想起来了，刚才在 Win 7 里用 MacDrive 把两个文件复制过去之后，还应该要修改权限并删除缓存呢，这些都还没有做，能让我把系统启动起来就很不错了。赶紧打开 Console，依次输入下面这些命令（如果当前用户不是 root，还需要在命令前面加 sudo）（另外命令中的 `Mac\ OS` 需要替换成你的 Mac 系统所在分区的卷标）（忘了试一试直接用 /System/Linrary 行不行了，应该是同一个目录的）：
 
 ```bash {linenos=false}
 cd /Volumes/Mac\ OS/System/Library

@@ -28,4 +28,4 @@ Cufon（应该写做 Cufón）是通过 JavaScript 在网页中进行文字渲�
 
 关键问题是 Cufon 对中文字体的支持不是很理想（不是做不到，只是中文字体包实在太大了）。目前的 work around 就是暂时禁用 Cufon。我现在使用的主题是大名鼎鼎的 LightWord，它使用了 Cufon。不过在它的配置项中有关于 Cufon 的设置，非常方便，在后台进入 Appearance->LightWord Settings，在 General settings 中就可以看到 Cufon settings，改为 Disabled 即可。
 
-关闭 Cufon 之后，明显感觉到英文标题没有以前好看了，不过为了能显示中文，只好先忍痛割爱了。当然如果愿意，也可以准备一个中文字体，在上面提到的第二个链接中可以自行创建。在 WordPress 的安装目录 ` ./wp-content/themes/lightword/js/ ` 中可以看到相关 JavaScript，比如 LightWord 主题使用的是 vera 字体，在目录中可以看到 ` vera.font.js ` 和 ` vera_extra.font.js ` 两个文件。
+关闭 Cufon 之后，明显感觉到英文标题没有以前好看了，不过为了能显示中文，只好先忍痛割爱了。当然如果愿意，也可以准备一个中文字体，在上面提到的第二个链接中可以自行创建。在 WordPress 的安装目录 `./wp-content/themes/lightword/js/` 中可以看到相关 JavaScript，比如 LightWord 主题使用的是 vera 字体，在目录中可以看到 `vera.font.js` 和 `vera_extra.font.js` 两个文件。

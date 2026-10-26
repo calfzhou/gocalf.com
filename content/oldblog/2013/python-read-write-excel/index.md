@@ -163,7 +163,7 @@ rows:
 
 作者并没有打算做一个 XlsxReader 来提供读取操作。不能读取，也就无从修改了。它只能用来创建新的文件。我是利用 xlrd 把需要的信息读入后，用 XlsxWriter 创建全新的文件。
 
-另外，即使是创建到一半 Excel 文件，也是无法读取已经创建出来的内容的（信息应该在，但是并没有相应的接口）。因为它的主要方法是 ` write ` 而不是 ` set `。当你在某个单元格写入数据后，除非你自己保存了相关的内容，否则还是没有办法读出已经写入的信息。从这个角度看，你无法做到读出 -> 修改 -> 写回，只能是写入 -> 写入 -> 写入。
+另外，即使是创建到一半 Excel 文件，也是无法读取已经创建出来的内容的（信息应该在，但是并没有相应的接口）。因为它的主要方法是 `write` 而不是 `set`。当你在某个单元格写入数据后，除非你自己保存了相关的内容，否则还是没有办法读出已经写入的信息。从这个角度看，你无法做到读出 -> 修改 -> 写回，只能是写入 -> 写入 -> 写入。
 
 二、不支持 XLS 文件
 
@@ -195,7 +195,7 @@ XlsxWriter 和 OpenPyXL 都不支持 XLS 格式，从这个角度看，[xlrd&amp
 
 二、对修改的支持比较差
 
-xlrd 和 xlwt 是两个相对独立的模块，虽然 [xlutils](https://pypi.python.org/pypi/xlutils) 提供方法帮助你把 ` xlrd.Book ` 对象复制到 ` xlwt.Workbook ` 对象，但跟 XlsxWriter 类似，后者只是提供 write 方法，使得你无法很容易地获取当前已经写入的数据并进行有针对性的修改。如果非要这样做，你要不断地保存，然后再用新的 ` xlrd.Book ` 对象读取你要的信息，还是比较麻烦的。
+xlrd 和 xlwt 是两个相对独立的模块，虽然 [xlutils](https://pypi.python.org/pypi/xlutils) 提供方法帮助你把 `xlrd.Book` 对象复制到 `xlwt.Workbook` 对象，但跟 XlsxWriter 类似，后者只是提供 write 方法，使得你无法很容易地获取当前已经写入的数据并进行有针对性的修改。如果非要这样做，你要不断地保存，然后再用新的 `xlrd.Book` 对象读取你要的信息，还是比较麻烦的。
 
 三、功能很弱
 
@@ -299,7 +299,7 @@ excel = win32com.client.DispatchEx('Excel.Application')
 
 窗口不可见也会带来一些麻烦，前面说了，通过 Python 启动的 Excel 进程跟你直接从桌面打开的 Excel 进程没有什么区别，在使用 Excel 的过程中，我们经常会遇到各种弹出的错误、警告或者提示框，这些在用 Python 处理时也有可能遇到。尤其当你的程序还没完全调试好时。
 
-我一般都会让程序控制的 Excel 进程在调试过程中可见，正式使用时不可见，通过类似这样的命令（假设你有一个叫做 ` is_debug ` 的变量记录当前是否在调试状态）：
+我一般都会让程序控制的 Excel 进程在调试过程中可见，正式使用时不可见，通过类似这样的命令（假设你有一个叫做 `is_debug` 的变量记录当前是否在调试状态）：
 
 ```python {linenos=false hl_lines="2 3"}
 excel = win32com.client.DispatchEx('Excel.Application')
@@ -370,7 +370,7 @@ class ExcelConstants(object):
 
 要想知道某一个枚举常量的数值，可以查阅 MSDN 中 [Excel Enumerations](http://msdn.microsoft.com/en-us/library/office/ff838815.aspx) 相关的资料。
 
-【2014 年 7 月 31 日更新】感谢 [@依云](https://blog.gocalf.com/python-read-write-excel.html#comment-1329532357) 提醒，在 Python 也能够直接引用相关的常量，即通过 ` win32com.client.constants ` 获取常量的值。不过这里还有一点比较 tricky 的地方，如果直接用 Dispatch 或者 DispatchEx 得到 Excel 对象，是无法从 constants 中取出常量值的，需要 [手动运行 makepy](http://timgolden.me.uk/python/win32_how_do_i/generate-a-static-com-proxy.html)，或者通过 ` win32com.client.gencache.EnsureDispatch ` 获得 Excel 对象：
+【2014 年 7 月 31 日更新】感谢 [@依云](https://blog.gocalf.com/python-read-write-excel.html#comment-1329532357) 提醒，在 Python 也能够直接引用相关的常量，即通过 `win32com.client.constants` 获取常量的值。不过这里还有一点比较 tricky 的地方，如果直接用 Dispatch 或者 DispatchEx 得到 Excel 对象，是无法从 constants 中取出常量值的，需要 [手动运行 makepy](http://timgolden.me.uk/python/win32_how_do_i/generate-a-static-com-proxy.html)，或者通过 `win32com.client.gencache.EnsureDispatch` 获得 Excel 对象：
 
 ```python {linenos=table}
 import win32com

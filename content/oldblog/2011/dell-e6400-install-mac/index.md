@@ -77,7 +77,7 @@ X:\System\Library\PrivateFrameworks\Install.framework\Frameworks\OSInstall.frame
 
 ## 准备驱动程序
 
-网上那些破解过的 Mac 安装镜像里面通常都包含了各种驱动程序，在安装的时候选择需要的就可以了，但不知道为什么我这次怎么都装不成功，所以才用了原版的镜像。但原版镜像里没有 PC 的驱动程序，这就要借助 BootThink 了。用 BootThink 引导刚才制作的替换了 OSInstall 的硬盘安装分区，它就可以从 ` C:\Darwin\System\LibrarySL\Extensions\ ` （我的是 ` B:\ `）里面加载放在那里的驱动程序和补丁（不同版本的 Mac OS 对应的目录也不太一样，这里就不多说了）。
+网上那些破解过的 Mac 安装镜像里面通常都包含了各种驱动程序，在安装的时候选择需要的就可以了，但不知道为什么我这次怎么都装不成功，所以才用了原版的镜像。但原版镜像里没有 PC 的驱动程序，这就要借助 BootThink 了。用 BootThink 引导刚才制作的替换了 OSInstall 的硬盘安装分区，它就可以从 `C:\Darwin\System\LibrarySL\Extensions\` （我的是 `B:\`）里面加载放在那里的驱动程序和补丁（不同版本的 Mac OS 对应的目录也不太一样，这里就不多说了）。
 
 驱动的选择至关重要啊，选择的不好，轻则某个硬件不工作，重则四国、五国、风火轮（在系统加载时出现用四国或者五国文字写的提示信息，或者风火轮图标一直转却无法进入系统）。这里列出我选择的驱动和补丁。
 
@@ -136,7 +136,7 @@ BootThink 的一些操作：
 - `#g=~`：取消分辨率设置；
 - `-32`：以 32 位模式启动。
 
-我的 E6400 用 64 位总是有些驱动有问题，只好用 32 位了。在安装和启动 Mac 的时候，都要在 BootThink 里输入 ` -x32 `，或者修改 ` B:\Darwin\com.apple.Boot.plist `，添加 Kernel Flags，值为 ` arch=i386 `。我的此文件内容如下：
+我的 E6400 用 64 位总是有些驱动有问题，只好用 32 位了。在安装和启动 Mac 的时候，都要在 BootThink 里输入 `-x32`，或者修改 `B:\Darwin\com.apple.Boot.plist`，添加 Kernel Flags，值为 `arch=i386`。我的此文件内容如下：
 
 ```xml {linenos=table}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -179,6 +179,6 @@ y
 quit
 ```
 
-重启电脑，进入 BootThink，这时候就可以看到安装好的 Mac 系统分区了，引导它启动即可（如果装的是 32 位，也没改 ` com.apple.Boot.plist `，就需要输入 ` -x32 ` 以 32 位模式启动）。
+重启电脑，进入 BootThink，这时候就可以看到安装好的 Mac 系统分区了，引导它启动即可（如果装的是 32 位，也没改 `com.apple.Boot.plist`，就需要输入 `-x32` 以 32 位模式启动）。
 
 运气不背的话就可以顺利进入 Mac 系统了，声音、图像、有线网络、触摸板等全都正常，唯一的遗憾是无线网卡不能使用（也不知道这半年来出了新的驱动没）。可以买个 USB/PCMCIA 无线网卡，也可以像我一样扯根网线。

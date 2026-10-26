@@ -103,7 +103,7 @@ reStructuredText 没有这样的问题，它有明确的扩展方式，通过 ro
 
 reStructuredText 的段落嵌套非常的强大，而 Markdown 似乎忘记了这一点。
 
-当然 Markdown 也有比 reStructuredText 强大的地方，最明显的就是 Markdown 行内格式的嵌套非常方便。用 ` *** ` 包围起来的文字会同时有粗体和斜体效果。reStructuredText 到目前还不太支持 role 的嵌套，想要做出同时粗体和斜体的文字，或者粗体的链接，都是比较困难或者麻烦的。还有其他一些小的细节，我就不具体说了。
+当然 Markdown 也有比 reStructuredText 强大的地方，最明显的就是 Markdown 行内格式的嵌套非常方便。用 `***` 包围起来的文字会同时有粗体和斜体效果。reStructuredText 到目前还不太支持 role 的嵌套，想要做出同时粗体和斜体的文字，或者粗体的链接，都是比较困难或者麻烦的。还有其他一些小的细节，我就不具体说了。
 
 总的来说，Markdown 更简洁，更适合于书写纯文字的东西；reStructuredText 更强大，适合于书写复杂的技术文章。
 
@@ -111,7 +111,7 @@ reStructuredText 的段落嵌套非常的强大，而 Markdown 似乎忘记了�
 
 新版的博客已经上线了，但仍然有一些工作需要进行。
 
-- MathJax 插件：reStructuredText 内置了对 LaTeX 公式的支持，行内公式用 [math role](http://docutils.sourceforge.net/docs/ref/rst/roles.html#math) 实现，区块公式用 [math directive](http://docutils.sourceforge.net/docs/ref/rst/directives.html#math) 实现，而且通过 [` --math-output ` 配置](http://docutils.sourceforge.net/docs/user/config.html#math-output) 可以让它用 MathJax 进行渲染。但是 MathJax 是要在浏览器里执行 JavaScript 的，如果无法执行 JavaScript（比如在 RSS 中）就没法正常显示了。之前在 WordPress 中，利用插件先生成图片，如果无法执行 JavaScript 就会直接显示图片。所以这里也需要一个类似的插件，在编译的时候生成图片备用。
+- MathJax 插件：reStructuredText 内置了对 LaTeX 公式的支持，行内公式用 [math role](http://docutils.sourceforge.net/docs/ref/rst/roles.html#math) 实现，区块公式用 [math directive](http://docutils.sourceforge.net/docs/ref/rst/directives.html#math) 实现，而且通过 [`--math-output` 配置](http://docutils.sourceforge.net/docs/user/config.html#math-output) 可以让它用 MathJax 进行渲染。但是 MathJax 是要在浏览器里执行 JavaScript 的，如果无法执行 JavaScript（比如在 RSS 中）就没法正常显示了。之前在 WordPress 中，利用插件先生成图片，如果无法执行 JavaScript 就会直接显示图片。所以这里也需要一个类似的插件，在编译的时候生成图片备用。
 - Graphviz 插件：Pelican 中似乎没有直接能用的 graphviz directive，需要去找一个或者写一个插件。在编译的时候调用 dot 命令生成好图片就可以了。
 - Chart 插件：有时候提供一些数据的展示，图表是非常必需的。之前都是先用 Excel 或这 Mathematica 之类的软件画好，再把图片放上去。如果有插件直接把数据通过 JavaScript 展示出来就更好了。准备写个插件，调用 [NVD3](http://nvd3.org/) 进行绘图。
 - Featured Image：WordPress 自带了这个，而且大多数主题都支持它，就是每篇文章有一张特色图片。这个需要去考察一下看看有没有现成的插件，当然主题也需要能够支持它。

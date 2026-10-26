@@ -31,10 +31,10 @@ keywords:
 
 如上图所示的一棵二叉树，对应的遍历结果分别是：
 
-- 前序（NLR）：` A B D C E G H F I `
-- 中序（LNR）：` D B A G E H C F I `
-- 后序（LRN）：` D B G H E I F C A `
-- 层序：` A B C D E F G H I `
+- 前序（NLR）：`A B D C E G H F I`
+- 中序（LNR）：`D B A G E H C F I`
+- 后序（LRN）：`D B G H E I F C A`
+- 层序：`A B C D E F G H I`
 
 ## 一、用递归处理二叉树的前序、中序和后序遍历
 

@@ -98,7 +98,7 @@ Singleton& Singleton::GetInstance()
 
 以前的时候我还真不知道该怎么解决这个问题，但 05 年用了 WTL（Windows Template Library）之后，我才意识到模板类可以帮助我（话说我真的是自己想到的，虽然现在搜一下能搜到一大堆）。这里要用的还不是普通的模板类，而是像 ATL、WTL 里面那样把要定义的类自身放入模板参数中，形如 {{< code-inline lang="cpp" >}}class MyClass : public Base<MyClass> {};{{< /code-inline >}}。这样做有很多优点啦，最显著的比如不需要虚表（节省内存哦）、多态函数的调用在编译时就确定了（既加快了运行速度，也有利于编译器对代码进行优化）。
 
-不妨把这个单例基类叫做 ` ISingleton ` 吧，看起来好像是个 interface 呢。代码如下：
+不妨把这个单例基类叫做 `ISingleton` 吧，看起来好像是个 interface 呢。代码如下：
 
 ```cpp {linenos=table}
 #ifndef _ISingleton_H_
@@ -145,7 +145,7 @@ std::auto_ptr<T> ISingleton<T>::s_instance;
 #endif
 ```
 
-要利用 ` ISingleton ` 创建一个自己的单例类，比如 ` MySingleton `，可以使用如下的代码：
+要利用 `ISingleton` 创建一个自己的单例类，比如 `MySingleton`，可以使用如下的代码：
 
 ```cpp {linenos=table}
 #include "Singleton.h"
@@ -178,4 +178,4 @@ private:
 };
 ```
 
-最最重要的，千万不要忘了把 ` MySingleton ` 的构造和析构函数弄成 ` private ` 的，还要添加两个友元。有人说 ` ISingleton ` 和 ` MySingleton ` 的析构函数都要加 ` virtual `，我倒是觉得没有必要呢，你说呢？另外要注意，` MySingleton ` 不能被继承哦。
+最最重要的，千万不要忘了把 `MySingleton` 的构造和析构函数弄成 `private` 的，还要添加两个友元。有人说 `ISingleton` 和 `MySingleton` 的析构函数都要加 `virtual`，我倒是觉得没有必要呢，你说呢？另外要注意，`MySingleton` 不能被继承哦。

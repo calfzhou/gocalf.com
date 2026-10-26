@@ -31,7 +31,7 @@ keywords:
 
 这不，中间两种情况的概率是完全一样的。于是问题的解法就是连续抛两次硬币，如果两次得到的相同则重新抛两次；否则根据第一次（或第二次）的正面反面情况，就可以得到两个概率相等的事件。
 
-用 Python 程序模拟一下这个过程，首先是一个叫做 ` UnbalancedCoin ` 的类，用来模拟这枚不均匀的硬币。Flip 方法表示抛一次硬币，返回值 True 代表正面，False 代表反面。根据要求，这个函数返回 True 和 False 的概率分别是 p 和 `1 - p`。函数 ` MakeEqualProb ` 利用参数 ` coin `（这枚不均匀硬币）构造出两个事件（依旧用 True 和 False 表示），并且这两个事件的概率都是 0.5。
+用 Python 程序模拟一下这个过程，首先是一个叫做 `UnbalancedCoin` 的类，用来模拟这枚不均匀的硬币。Flip 方法表示抛一次硬币，返回值 True 代表正面，False 代表反面。根据要求，这个函数返回 True 和 False 的概率分别是 p 和 `1 - p`。函数 `MakeEqualProb` 利用参数 `coin`（这枚不均匀硬币）构造出两个事件（依旧用 True 和 False 表示），并且这两个事件的概率都是 0.5。
 
 ```python {linenos=table}
 from random import Random

@@ -40,7 +40,7 @@ keywords:
 
 第三个方法是用 [`dahnielson_mimetex`](http://en.dahnielson.com/2006/09/mimetex-plugin.html) 插件，它会向指定的服务器发送请求，获取公式所对应的图片。可惜插件默认使用的服务失效了，如果你的站点可以执行 cgi 程序，那么可以访问 [这里](http://www.forkosh.com/mimetex.html) 了解如何安装 cgi mimetex。如果你的站点没法执行 cgi 程序，那么可以试一试我现在使用的方法：
 
-wordpress.com 的用户都可以在博客中使用一对 ` $ ` 来书写 LaTeX，在 [http://support.wordpress.com/latex/](http://support.wordpress.com/latex/) 中有介绍。我的方法就是修改 `dahnielson_mimetex`，让其调用 wordpress.com 的 LaTeX 服务来生成图片。由于后者比 mimetex 多了一些控制图片颜色和大小的参数，因此要在 `dahnielson_mimetex` 中做出相应的修改。
+wordpress.com 的用户都可以在博客中使用一对 `$` 来书写 LaTeX，在 [http://support.wordpress.com/latex/](http://support.wordpress.com/latex/) 中有介绍。我的方法就是修改 `dahnielson_mimetex`，让其调用 wordpress.com 的 LaTeX 服务来生成图片。由于后者比 mimetex 多了一些控制图片颜色和大小的参数，因此要在 `dahnielson_mimetex` 中做出相应的修改。
 
 首先下载 [`dahnielson_mimetex` v1.2](http://en.dahnielson.com/2006/09/mimetex-plugin.html)，将其安装到博客上，然后对其进行如下的编辑。
 
@@ -57,7 +57,7 @@ wordpress.com 的用户都可以在博客中使用一对 ` $ ` 来书写 LaTeX�
 > Author: Anders Dahnielson; Modified by calf (April 12, 2009)
 ```
 
-这个插件最初的语法只是 ` <tex></tex> `，我给它添加了四个参数：
+这个插件最初的语法只是 `<tex></tex>`，我给它添加了四个参数：
 
 bg
 :   设定图片的背景色，格式为六个十六进制字符，范围 000000 到 ffffff，默认值为 ffffff 即白色
@@ -103,7 +103,7 @@ escaped
 > $formula_filename = 'tex_'.$formula_hash.'.png';
 ```
 
-这里我添加了一个变量 ` $formula_text_html `，用来记录 html 转义过的公式内容，稍后会看到这样做的目的。
+这里我添加了一个变量 `$formula_text_html`，用来记录 html 转义过的公式内容，稍后会看到这样做的目的。
 
 第四处是设置 LaTeX 服务地址，原先 forkosh.dreamhost.com 的服务已经不能用了（很简短的公式还行，稍微复杂的公式都没法得到想要的结果），改成 l.wordpress.com 的服务：
 

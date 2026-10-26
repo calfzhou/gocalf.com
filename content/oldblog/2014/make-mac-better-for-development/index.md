@@ -61,17 +61,17 @@ keywords:
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 
-在使用 Homebrew 的过程中，要注意经常更新它。在 brew 的世界中，24 小时就已经是非常久了。所以在安装某个包或者做其他操作之前，一般都要运行 ` brew update ` 和 ` brew doctor `，前者用于更新 Homebrew 自身和各个软件包，后者用于排查可能会遇到的问题。我之前没注意这个（也是因为那时候还没太依赖于 Homebrew），有一次安装一个程序，总是提示我有一个依赖没有装，但那个依赖明明就在那儿，百思不得其解，还跑到 github 上发 issue 去问，被拍了一顿。其实只要 brew update 一下就知道，我安装的那个依赖包太老了，升级了就好了。
+在使用 Homebrew 的过程中，要注意经常更新它。在 brew 的世界中，24 小时就已经是非常久了。所以在安装某个包或者做其他操作之前，一般都要运行 `brew update` 和 `brew doctor`，前者用于更新 Homebrew 自身和各个软件包，后者用于排查可能会遇到的问题。我之前没注意这个（也是因为那时候还没太依赖于 Homebrew），有一次安装一个程序，总是提示我有一个依赖没有装，但那个依赖明明就在那儿，百思不得其解，还跑到 github 上发 issue 去问，被拍了一顿。其实只要 brew update 一下就知道，我安装的那个依赖包太老了，升级了就好了。
 
-在安装某个程序前，我一般也要先 ` brew info $FORMULA ` 一下看看，了解一下有没有什么值得注意的参数，安装后有什么需要手动进行的后续操作。
+在安装某个程序前，我一般也要先 `brew info $FORMULA` 一下看看，了解一下有没有什么值得注意的参数，安装后有什么需要手动进行的后续操作。
 
-Homebrew 默认会掌控系统中的 ` /usr/local ` 目录，目前我这个目录也就只是给 Homebrew 用了，其他的东西都不往里放。在使用 Homebrew 的过程中，一般都避免使用 sudo 进行操作，实际上现在的版本用了 sudo 也就没法使了。
+Homebrew 默认会掌控系统中的 `/usr/local` 目录，目前我这个目录也就只是给 Homebrew 用了，其他的东西都不往里放。在使用 Homebrew 的过程中，一般都避免使用 sudo 进行操作，实际上现在的版本用了 sudo 也就没法使了。
 
 ### Python
 
-苹果系统自带了好几个版本的 Python，装在 /Library/Python 中。不过版本都不新，为了便于维护，还是自己装一个 Python 吧。用 ` brew install python ` 可以安装最新的 Python 2.x，用 ` brew install python3 ` 可以安装最新的 Python 3.x。
+苹果系统自带了好几个版本的 Python，装在 /Library/Python 中。不过版本都不新，为了便于维护，还是自己装一个 Python 吧。用 `brew install python` 可以安装最新的 Python 2.x，用 `brew install python3` 可以安装最新的 Python 3.x。
 
-Homebrew 的 Python 已经安装了 pip，用于管理 Python 的软件包。根据 ` brew info python ` 提供的提示，运行下列命令对 pip 进行更新：
+Homebrew 的 Python 已经安装了 pip，用于管理 Python 的软件包。根据 `brew info python` 提供的提示，运行下列命令对 pip 进行更新：
 
 ```bash {linenos=table}
 pip install --upgrade setuptools
@@ -85,7 +85,7 @@ pip install virtualenv
 pip install virtualenvwrapper
 ```
 
-virtualenvwrapper 提供了很多方便的命令，还支持命令的 tab completion，这些都包含在 virtualenvwrapper.sh 文件中。在 ` ~/.bash_profile ` 中引入该文件来激活相关的命令和功能：
+virtualenvwrapper 提供了很多方便的命令，还支持命令的 tab completion，这些都包含在 virtualenvwrapper.sh 文件中。在 `~/.bash_profile` 中引入该文件来激活相关的命令和功能：
 
 ```bash {linenos=table}
 export VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -94,9 +94,9 @@ export PROJECT_HOME=$HOME/projects
 [ -f "/usr/local/bin/virtualenvwrapper.sh" ] && source "/usr/local/bin/virtualenvwrapper.sh"
 ```
 
-准备好后就可以用 ` mkvirtualenv ENVNAME ` 来创建一个新的 virtualenv，用 ` workon ` 命令来切换环境，用 ` deactive ` 退出虚拟环境。更多的命令可以查看 [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/) 的文档。
+准备好后就可以用 `mkvirtualenv ENVNAME` 来创建一个新的 virtualenv，用 `workon` 命令来切换环境，用 `deactive` 退出虚拟环境。更多的命令可以查看 [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/) 的文档。
 
-另外，[ipython](http://ipython.org/) 是非常好用的 Python 的交互式终端，比 Python 自身的命令行提供了更丰富和方便的功能，建议使用。通过 ` pip install ipython ` 即可安装。不过目前我还没想清楚要不要把它装在某个虚拟环境中。按理说应该是要在任何一个虚拟环境中都能用 ipython 的，否则就要给每个虚拟环境都装一次，岂不是很浪费空间？这个问题以后再考虑吧。
+另外，[ipython](http://ipython.org/) 是非常好用的 Python 的交互式终端，比 Python 自身的命令行提供了更丰富和方便的功能，建议使用。通过 `pip install ipython` 即可安装。不过目前我还没想清楚要不要把它装在某个虚拟环境中。按理说应该是要在任何一个虚拟环境中都能用 ipython 的，否则就要给每个虚拟环境都装一次，岂不是很浪费空间？这个问题以后再考虑吧。
 
 ipython 除了 shell console 外，还提供 Qt console，详细的信息查看官方的介绍吧。
 
@@ -106,11 +106,11 @@ ipython 除了 shell console 外，还提供 Qt console，详细的信息查看�
 
 ### Bash Profile
 
-` ~/.bash_profile ` 的作用就不用我多说了，在这里可以对 shell 进行很多的个性化配置。参考 [mathiasbynens 的 dotfiles](https://github.com/mathiasbynens/dotfiles) 项目，我也为自己打造了舒适的 shell 环境，相关的配置保存在 [GitHub - calfzhou - dotfiles - bash](https://github.com/calfzhou/dotfiles/tree/master/bash) 里面，对 Mac 和 Linux 都是可以的，让我在不同的服务器上也有相同的操作体验。涉及到的内容很多，就不逐一介绍了，比较重要的几点下面会提到。
+`~/.bash_profile` 的作用就不用我多说了，在这里可以对 shell 进行很多的个性化配置。参考 [mathiasbynens 的 dotfiles](https://github.com/mathiasbynens/dotfiles) 项目，我也为自己打造了舒适的 shell 环境，相关的配置保存在 [GitHub - calfzhou - dotfiles - bash](https://github.com/calfzhou/dotfiles/tree/master/bash) 里面，对 Mac 和 Linux 都是可以的，让我在不同的服务器上也有相同的操作体验。涉及到的内容很多，就不逐一介绍了，比较重要的几点下面会提到。
 
 ### Dir Colors
 
-虽然 iTerm 本身已经设置好了 Solarized 配色，但是 ls 的时候并不一定有颜色。ls 没有颜色绝对是让人难以忍受的，在 [`bash_inc/alias`](https://github.com/calfzhou/dotfiles/blob/master/bash/bash_inc/aliases) 里除了根据系统中 ls 支持的参数让 ls 的输出显示出颜色外，还通过配置 ` LS_COLOR ` 让色彩更丰富，可以让不同类型的文件有不同的颜色，看起来非常的清晰。推荐使用 [dircolors-solarized](https://github.com/seebi/dircolors-solarized) 提供的配色文件，在 Mac OS X 的采用了 Solarized Dark 配色的 iTerm2 里看起来会是这个样子：
+虽然 iTerm 本身已经设置好了 Solarized 配色，但是 ls 的时候并不一定有颜色。ls 没有颜色绝对是让人难以忍受的，在 [`bash_inc/alias`](https://github.com/calfzhou/dotfiles/blob/master/bash/bash_inc/aliases) 里除了根据系统中 ls 支持的参数让 ls 的输出显示出颜色外，还通过配置 `LS_COLOR` 让色彩更丰富，可以让不同类型的文件有不同的颜色，看起来非常的清晰。推荐使用 [dircolors-solarized](https://github.com/seebi/dircolors-solarized) 提供的配色文件，在 Mac OS X 的采用了 Solarized Dark 配色的 iTerm2 里看起来会是这个样子：
 
 ![iTerm2 中 Solarized Dark 系的 dircolors 效果](dircolors_solarized_dark.png)
 
@@ -132,13 +132,13 @@ MYNAME
 
 ### Bash Completion
 
-在 shell 里面输入命令的时候，如果只记得开头几个字母，后面的记不清楚了也没关系，输入几个字母后，按 TAB 键就可以自动补全或者提示出所有可行的命令。在输入文件名的时候也可以通过 TAB 键自动补全或者提示出有效的文件文来，这个功能是非常方便的。Homebrew 又额外提供了一些 bash completion 功能，可以通过 ` brew install bash-completion ` 进行安装，并会生成 ` /usr/local/etc/bash_completion ` 文件，在 ` ~/.bash_profile ` 中 source 一下这个文件，就可以把 Homebrew 提供的命令补全包含进来。如果通过 Homebrew 安装了别的工具包，比如 git、svn 等，它们也会有各自相应的命令补全文件，存放在 ` /usr/local/etc/bash_completion.d ` 目录中，都会被刚才那个文件自动引入。
+在 shell 里面输入命令的时候，如果只记得开头几个字母，后面的记不清楚了也没关系，输入几个字母后，按 TAB 键就可以自动补全或者提示出所有可行的命令。在输入文件名的时候也可以通过 TAB 键自动补全或者提示出有效的文件文来，这个功能是非常方便的。Homebrew 又额外提供了一些 bash completion 功能，可以通过 `brew install bash-completion` 进行安装，并会生成 `/usr/local/etc/bash_completion` 文件，在 `~/.bash_profile` 中 source 一下这个文件，就可以把 Homebrew 提供的命令补全包含进来。如果通过 Homebrew 安装了别的工具包，比如 git、svn 等，它们也会有各自相应的命令补全文件，存放在 `/usr/local/etc/bash_completion.d` 目录中，都会被刚才那个文件自动引入。
 
 ### Shell Commands
 
-用惯了 Linux（CentOS）里面的 shell 命令，就无法忍受 Mac 系统中那些落后的 shell 命令了，像 ls、date、ps、echo、grep 等等，功能都特别少。在忍无可忍之后，终于决定用 [GNU Coreutils](http://www.gnu.org/software/coreutils/) 替换它们。用 ` brew install coreutils ` 就可以搞定了，安装完成后，根据提示，将 ` /usr/local/opt/coreutils/libexec/gnubin ` 和 ` /usr/local/opt/coreutils/libexec/gnuman ` 分别添加到 ` $PATH ` 和 ` $MANPATH ` 中即可。
+用惯了 Linux（CentOS）里面的 shell 命令，就无法忍受 Mac 系统中那些落后的 shell 命令了，像 ls、date、ps、echo、grep 等等，功能都特别少。在忍无可忍之后，终于决定用 [GNU Coreutils](http://www.gnu.org/software/coreutils/) 替换它们。用 `brew install coreutils` 就可以搞定了，安装完成后，根据提示，将 `/usr/local/opt/coreutils/libexec/gnubin` 和 `/usr/local/opt/coreutils/libexec/gnuman` 分别添加到 `$PATH` 和 `$MANPATH` 中即可。
 
-grep 命令不在 coreutils，可以通过 ` brew install grep --default-names ` 搞定（如果说找不到 grep 可以先 ` brew tap homebrew/dupes `）。当然还有很多其他特别有用的命令，就不一一细说了，反正想到什么，只要用 ` brew info ` 或者 ` brew search ` 找找看就行。
+grep 命令不在 coreutils，可以通过 `brew install grep --default-names` 搞定（如果说找不到 grep 可以先 `brew tap homebrew/dupes`）。当然还有很多其他特别有用的命令，就不一一细说了，反正想到什么，只要用 `brew info` 或者 `brew search` 找找看就行。
 
 ## 编辑器和 IDE
 
@@ -146,13 +146,13 @@ grep 命令不在 coreutils，可以通过 ` brew install grep --default-names `
 
 其实我也不是 VIM 重度使用者，现在写超过两个文件的 Python 代码、Java 代码等都会使用专门的 IDE。我看很多人都喜欢用 VIM 来写复杂的项目代码，但他们的 VIM 都没有做任何额外的设置，自身对 VIM 的快捷键和命令也不熟悉，只是把 VIM 当成一个连移动光标都很费劲的编辑器来用，写代码的效率可想而知。而且像 Python 这种脚本语言，很多错误只有到运行到那句话的时候才会有效果，VIM 没有足够的只能针对某一个语言做太多的静态分析。
 
-` ~/.vimrc ` 用于对 VIM 进行各种设置，如果没有这个文件，赶紧创建一个吧。复杂的语法高亮、配色、插件等都可以放在 ` ~/.vim ` 里面。VIM 自身对插件没有很好地管理，我选择了 [vim-pathogen](https://github.com/tpope/vim-pathogen) 来管理所需要的 VIM 扩展。只要把 [pathogen.vim](https://github.com/tpope/vim-pathogen/blob/master/autoload/pathogen.vim) 放在 ` ~/.vim/autoload ` 目录中，把所需的扩展包放在 ` ~/.vim/bundle ` 目录下即可。
+`~/.vimrc` 用于对 VIM 进行各种设置，如果没有这个文件，赶紧创建一个吧。复杂的语法高亮、配色、插件等都可以放在 `~/.vim` 里面。VIM 自身对插件没有很好地管理，我选择了 [vim-pathogen](https://github.com/tpope/vim-pathogen) 来管理所需要的 VIM 扩展。只要把 [pathogen.vim](https://github.com/tpope/vim-pathogen/blob/master/autoload/pathogen.vim) 放在 `~/.vim/autoload` 目录中，把所需的扩展包放在 `~/.vim/bundle` 目录下即可。
 
 同样地，我也把自己的 VIM 设置和依赖放在 GitHub 上（[GitHub - calfzhou - dotfiles - vim](https://github.com/calfzhou/dotfiles/tree/master/vim)），在别的 server 上直接 clone 下来保持一致的操作体验。
 
 我现在使用 [riv.vim](https://github.com/Rykka/riv.vim) 扩展来写 reStructuredText 文件（.rst），操作起来非常方便。
 
-如果不满意苹果系统自带的较低版本的 VIM，或者想用 GUI 界面的 VIM，可以利用 Homebrew 进行安装，Formula 是 ` vim ` 和 ` macvim `。
+如果不满意苹果系统自带的较低版本的 VIM，或者想用 GUI 界面的 VIM，可以利用 Homebrew 进行安装，Formula 是 `vim` 和 `macvim`。
 
 ### Sublime Text
 
@@ -181,7 +181,7 @@ brew tap homebrew/versions
 brew install maven30
 ```
 
-当然如果要用最新的 `3.2.*`，可以直接 ` brew install maven `。
+当然如果要用最新的 `3.2.*`，可以直接 `brew install maven`。
 
 ## 版本控制
 
@@ -189,7 +189,7 @@ brew install maven30
 
 用 Homebrew 可以方便地安装最新的 Git。如果像上面介绍的那样，用 Homebrew 安装并使用了 bash-completion，那么装好 git 后，git 指令也会按 TAB 键补全了，再也不动担心记不住 git 指令。
 
-` ~/.gitconfig ` 可以用来定义很多个性化的设置，可以直接编辑或者通过 ` git config --global ` 进行设置。类似的，我也把我的配置文件保存在 GitHub 上（[GitHub - calfzhou - dotfiles - git](https://github.com/calfzhou/dotfiles/tree/master/git)），以便在不同的地方有同样的操作体验。
+`~/.gitconfig` 可以用来定义很多个性化的设置，可以直接编辑或者通过 `git config --global` 进行设置。类似的，我也把我的配置文件保存在 GitHub 上（[GitHub - calfzhou - dotfiles - git](https://github.com/calfzhou/dotfiles/tree/master/git)），以便在不同的地方有同样的操作体验。
 
 顺便提一下，用 git 管理项目版本的话，推荐使用 [git-flow](https://github.com/nvie/gitflow) 管理分支和版本，通过 Homebrew 可以直接安装它，同样也会带有 TAB 自动补全功能。关于这种分支管理的模型，可以阅读 [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)。
 

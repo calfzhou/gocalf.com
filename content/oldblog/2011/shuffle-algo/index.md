@@ -50,7 +50,7 @@ $$
 
 可见任何元素出现在任何位置的概率都是相等的。
 
-实际上 Python 用户一定知道，在 Random 类中就有现成的 shuffle 方法，处理方法与我上面的程序是一样的。顺便也贴在这里学习一下。以下代码来自于 Python 2.5 ` Lib\random.py `：
+实际上 Python 用户一定知道，在 Random 类中就有现成的 shuffle 方法，处理方法与我上面的程序是一样的。顺便也贴在这里学习一下。以下代码来自于 Python 2.5 `Lib\random.py`：
 
 ```python {linenos=table linenostart=250}
 def shuffle(self, x, random=None, int=int):
