@@ -27,7 +27,7 @@ keywords:
 > Technical details of permanent failure:\
 > Google tried to deliver your message, but it was rejected by the recipient domain. We recommend contacting the other email provider for further information about the cause of this error. The error that the other server returned was: 550 550 #5.1.0 Address rejected [xxx@xxxxxxxx.com](mailto:xxx@xxxxxxxx.com) (state 14).
 
-看起来应该是 DNS 的问题（跨服务商就是这点比较麻烦啊）。仔细察看了 GoDaddy 上 DNS Manager 里面的内容，发现 Mail Exchanger（MX）的配置内容有问题，并没有指向 GoCalf 的空间地址，因此将 MX 记录改为指向 mail.gocalf.com。改动大概需要一个小时才能生效，生效之后再次发送邮件就可以在 BlueHost 里收到了。
+看起来应该是 DNS 的问题（跨服务商就是这点比较麻烦啊）。仔细察看了 GoDaddy 上 DNS Manager 里面的内容，发现 Mail Exchanger（MX）的配置内容有问题，并没有指向 GoCalf 的空间地址，因此将 MX 记录改为指向 `mail.gocalf.com`。改动大概需要一个小时才能生效，生效之后再次发送邮件就可以在 BlueHost 里收到了。
 
 附 GoDaddy 里面 DNS 设置截图：
 

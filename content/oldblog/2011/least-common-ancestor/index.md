@@ -229,6 +229,6 @@ def FindLCA(root, node1, node2):
   return None if nodeset else lca
 ```
 
-可以跟 [程序基本功之遍历二叉树](../../2012/traversing-binary-tree/index.md) 中的  **非递归前序遍历**  的程序对比一下，会发现改动之处是非常小的。
+可以跟 [程序基本功之遍历二叉树](../../2012/traversing-binary-tree/index.md) 中的 **非递归前序遍历** 的程序对比一下，会发现改动之处是非常小的。
 
 这段程序时间复杂度都是 `O(n)`，空间复杂度是 `O(h)`，这些都是遍历二叉树所需的时间和空间消耗。在遍历之外，就只剩下常数量的时空开销了。

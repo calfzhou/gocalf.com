@@ -26,7 +26,7 @@ keywords:
 
 我们知道黑苹果常见的启动错误形式有：白苹果（灰白色背景上一个灰色的苹果图标，再无进展）、无限风火轮（在刚才那个苹果图片下面有一个风火轮在转动，但再无进展）和四国 / 五国（以四种 / 五种语言书写的当机提示）。这种情况下就只能长按电源键强制关机了。
 
-再次开机，在 BootThink 引导的时候输入 `-v` 进入 verbose 模式，查看系统 hang 在什么地方。发现在显示了 [PCI configuration end] 之后就停住了，这似乎是 Snow Leopard 10.6.8 和 Lion 10.7.1 都会遇到的问题呢，原来是 `IOPCIFamily.kext` 和 `AppleACPIPlatform.kext` 被更新了，解决办法简单粗暴，直接找个老版本（10.6.7）的替换回去就好了。不过我把它们放在 BootThink 的 `Darwain\System\LibrarySL\Extensions\` 里面并不能解决问题，得要放到 Mac 分区去。如果有安装盘，可以用 BootThink 引导安装盘，在 Console 里面进行复制的操作，但我上次用来安装的硬盘分区早就格式化掉了，只好用 [MacDrive（v8.0.5.31）](http://bbs.pcbeta.com/forum-viewthread-tid-860881-highlight-macdriver.html) 来操作。把那两个 kext 复制到 Mac 所在分区的 /System/Library/Extensions 里。
+再次开机，在 BootThink 引导的时候输入 `-v` 进入 verbose 模式，查看系统 hang 在什么地方。发现在显示了 [PCI configuration end] 之后就停住了，这似乎是 Snow Leopard 10.6.8 和 Lion 10.7.1 都会遇到的问题呢，原来是 `IOPCIFamily.kext` 和 `AppleACPIPlatform.kext` 被更新了，解决办法简单粗暴，直接找个老版本（10.6.7）的替换回去就好了。不过我把它们放在 BootThink 的 `Darwain\System\LibrarySL\Extensions\` 里面并不能解决问题，得要放到 Mac 分区去。如果有安装盘，可以用 BootThink 引导安装盘，在 Console 里面进行复制的操作，但我上次用来安装的硬盘分区早就格式化掉了，只好用 [MacDrive（v8.0.5.31）](http://bbs.pcbeta.com/forum-viewthread-tid-860881-highlight-macdriver.html) 来操作。把那两个 kext 复制到 Mac 所在分区的 `/System/Library/Extensions` 里。
 
 再次启动 Mac OS，刚才的问题没有了，这次遇到的是 Can\'t load kext com.apple.driver.AudioIPCDriver, link fail。要删掉 BootThink 里的 `VoodooHDA.kext`。不过这样不就不能驱动声卡了吗？先不管它了。
 
@@ -91,7 +91,7 @@ kextcache -v 1 -l -s -n -t -arch i386 -arch x86_64 -m /Volumes/Mac\ OS/System/Li
     - [`ApplePS2Controller.kext`](ApplePS2Controller.kext_.zip)
     - [`AppleACPIPS2Nub.kext`](AppleACPIPS2Nub.kext_.zip)
   - 电源管理、Battery
-    - [`AppleACPIPlatform.kext`](AppleACPIPlatform.kext_.zip)：（升级到 10.6.8 后要复制到 Mac 分区的 /System/Library/Extensions，修改权限并更新缓存）这是 Advanced Configuration and Power Interface 高级配置和电源管理接口驱动，进行电源管理，睡眠，Real-Time Clock 控制等，其下还包含 `AppleACPIButtons.kext`，`AppleACPIEC.kext`，`AppleACPIPCI.kext`。
+    - [`AppleACPIPlatform.kext`](AppleACPIPlatform.kext_.zip)：（升级到 10.6.8 后要复制到 Mac 分区的 `/System/Library/Extensions`，修改权限并更新缓存）这是 Advanced Configuration and Power Interface 高级配置和电源管理接口驱动，进行电源管理，睡眠，Real-Time Clock 控制等，其下还包含 `AppleACPIButtons.kext`，`AppleACPIEC.kext`，`AppleACPIPCI.kext`。
     - [`IOACPIFamily.kext`](IOACPIFamily.kext_.zip)：作用于支持 ACPI 电源管理标准的驱动，例如电源按钮、电池、PS/2、USB、HPET 等。这里的这个解决了部分笔记本风扇不正常问题，只支持 32 位。
     - [`VoodooBattery.kext`](VoodooBattery.kext_.zip)
   - Bluetooth
@@ -99,7 +99,7 @@ kextcache -v 1 -l -s -n -t -arch i386 -arch x86_64 -m /Volumes/Mac\ OS/System/Li
   - SD Reader
     - [`VoodooSDHC.kext`](VoodooSDHC.kext_.zip)
   - PCMCIA
-    - [`IOPCIFamily.kext`](IOPCIFamily.kext_.zip)：（升级到 10.6.8 后要复制到 Mac 分区的 /System/Library/Extensions，修改权限并更新缓存）PCI 设备的基本驱动。
+    - [`IOPCIFamily.kext`](IOPCIFamily.kext_.zip)：（升级到 10.6.8 后要复制到 Mac 分区的 `/System/Library/Extensions`，修改权限并更新缓存）PCI 设备的基本驱动。
   - Chip set
     - [`AHCIPortInjector.kext`](AHCIPortInjector.kext_.zip)：可以识别 Intel 芯片组的 AHCI（如果无法正确识别 AHCI，启动时有可能会 hang 在 Still Waiting for Root Device）。
 

@@ -33,7 +33,7 @@ UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:@"Title"
 [alertView show];
 ```
 
-如果要添加一个进度条，只要先创建并设置好一个 [UIProgressView](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIProgressView_Class/Reference/Reference.html) 的实例，再利用 addSubbiew 方法添加到 alertView 中即可。
+如果要添加一个进度条，只要先创建并设置好一个 [UIProgressView](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIProgressView_Class/Reference/Reference.html) 的实例，再利用 addSubview 方法添加到 alertView 中即可。
 
 在实际应用中，我可能需要在类中保存进度条的对象实例，以便更新其状态，因此先在自己的 ViewController 类中添加成员变量：
 

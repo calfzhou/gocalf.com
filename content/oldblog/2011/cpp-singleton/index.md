@@ -23,9 +23,9 @@ keywords:
 
 关于如何在 C++ 中实现单例模式的讨论已经太多了，我只是简单介绍一下可以继承的单例类。
 
-首先介绍一下通常所见的单例类的写法，不妨设这个类叫做 Singleton。
+首先介绍一下通常所见的单例类的写法，不妨设这个类叫做 `Singleton`。
 
-Singleton.h：
+`Singleton.h`：
 
 ```cpp {linenos=table}
 #ifndef _SINGLETON_H_
@@ -54,7 +54,7 @@ private:
 #endif
 ```
 
-Singleton.cpp：
+`Singleton.cpp`：
 
 ```cpp {linenos=table}
 #include "Singleton.h"

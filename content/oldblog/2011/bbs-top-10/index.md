@@ -18,7 +18,7 @@ keywords:
 - 饮水思源
 ---
 
-如果你喜欢订阅几大校园 BBS 全站十大，强烈推荐 [gdh](http://www.truevue.org/) 做的十大博客（需翻墙）：
+如果你喜欢订阅几大校园 BBS 全站十大，强烈推荐 [gdh](http://www.truevue.org/) 做的十大博客：
 
 - 水木十大：[http://smthot.blogspot.com/](http://smthot.blogspot.com/)
 - 小百合十大：[http://lilytop.blogspot.com/](http://lilytop.blogspot.com/)
