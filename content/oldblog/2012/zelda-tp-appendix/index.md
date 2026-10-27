@@ -647,7 +647,7 @@ keywords:
 
 - [《塞尔达传说 黄昏公主》研究部分](http://www.cngba.com/viewthread.php?tid=16520313&page=1#pid15114268) by 鸡蛋
 - [全部 60 个幽灵之魂的位置](http://bbs.wiibbs.com/read.php?tid=11978) by exercises
-- [塞尔达黎明公主 - 补完篇（24 只黄金虫子，60 个灯笼怪位置）](http://bbs.pspchina.net/redirect.php?tid=169231) by www\.pspchina.com tidus-rike
+- [塞尔达黎明公主 - 补完篇（24 只黄金虫子，60 个灯笼怪位置）](http://bbs.pspchina.net/redirect.php?tid=169231) by www.pspchina.com tidus-rike
 
 ## 钓鱼
 

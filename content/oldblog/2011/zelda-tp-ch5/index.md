@@ -127,7 +127,7 @@ keywords:
 
 {{< image src="tp_ch05_19.jpg" alt="tp_ch05_19" caption="利用大炮干掉大冰怪" original="tp_ch05_19.jpg" width=500 >}}
 
- **房间 18：** 干掉房间里的全部冰骷髅后北面的门可以打开，随后终于取得了大钥匙，出门后亚塔也刚到这里，然后她会带林克去卧室拿镜子，跟着她去卧室，结果因为亚塔太沉迷于照镜子，被镜子的魔力所影响，而成为了冰怪——布里泽塔（Twilit Ice\-\-Blizzeta）。
+ **房间 18：** 干掉房间里的全部冰骷髅后北面的门可以打开，随后终于取得了大钥匙，出门后亚塔也刚到这里，然后她会带林克去卧室拿镜子，跟着她去卧室，结果因为亚塔太沉迷于照镜子，被镜子的魔力所影响，而成为了冰怪——布里泽塔（Twilit Ice--Blizzeta）。
 
  **BOSS 战：** 冰怪——布里泽塔
 
@@ -142,4 +142,4 @@ keywords:
 参考：
 
 - [《塞尔达传说：黄昏公主》图文全攻略](http://wii.tgbus.com/glmj/gl/200611/20061129114849.shtml) by WiiBbs 攻研部 Szh、三代鬼彻、天堂的翅膀
-- [《塞尔达传说 黄昏公主》完美攻略研究](http://www.cngba.com/thread-16520313-1-1.html) by www\.cngba.com 鸡蛋
+- [《塞尔达传说 黄昏公主》完美攻略研究](http://www.cngba.com/thread-16520313-1-1.html) by www.cngba.com 鸡蛋

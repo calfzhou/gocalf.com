@@ -24,7 +24,7 @@ keywords:
 
 1. 确认当前固件版本是 iOS 4.3.3 (8J2)（Settings->General->About->Version）。
 2. 开启浏览器 Safari。
-3. 在地址栏中敲入 [http://www\.jailbreakme.com](http://www.jailbreakme.com) （上次 iPhone 4 也是这样的），打开页面。
+3. 在地址栏中敲入 [http://www.jailbreakme.com](http://www.jailbreakme.com) （上次 iPhone 4 也是这样的），打开页面。
 4. 在左侧 Cydia 图标下方可以看到有个 FREE 按钮（据说以后 iOS 越狱将要收费，似乎看到前兆了），点击。
 5. FREE 按钮变成 INSTALL，再点击。
 6. Safari 被自动关闭，在桌面上可以看到出现了 Cydia 的图标，并且正在下载中。

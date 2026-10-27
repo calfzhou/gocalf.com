@@ -33,7 +33,7 @@ keywords:
 
 找到了两个实现此功能的工具，分别是
 
-- git-crypt: [https://www\.agwa.name/projects/git-crypt/](https://www.agwa.name/projects/git-crypt/)
+- git-crypt: [https://www.agwa.name/projects/git-crypt/](https://www.agwa.name/projects/git-crypt/)
 - git-encrypt: [https://github.com/shadowhand/git-encrypt](https://github.com/shadowhand/git-encrypt)
 
 分别是用 C++ 和 Shell 写的。最后我选择了后者，当然以后也许会改变，反正加密解密算法跟工具是分离的，换工具并不会带来太多问题。

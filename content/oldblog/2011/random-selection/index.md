@@ -58,7 +58,7 @@ class RandomSelector:
     self._count += 1
 ```
 
-在 Python 2.5 中，`yield` 不仅是个语句，更是一个表达式（详见 [PEP 342 \-\- Coroutines via Enhanced Generators](http://www.python.org/dev/peps/pep-0342/)，查阅 Generator 和 Coroutine，中文叫做「生成器」和「协程」），利用 `yield` 可以把程序写的更简洁一些：
+在 Python 2.5 中，`yield` 不仅是个语句，更是一个表达式（详见 [PEP 342 -- Coroutines via Enhanced Generators](http://www.python.org/dev/peps/pep-0342/)，查阅 Generator 和 Coroutine，中文叫做「生成器」和「协程」），利用 `yield` 可以把程序写的更简洁一些：
 
 ```python {linenos=table}
 from random import Random

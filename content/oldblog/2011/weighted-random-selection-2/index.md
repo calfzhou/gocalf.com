@@ -76,7 +76,7 @@ $$
 
 当 m 取任意值时，概率公式变得非常复杂，在前一篇文章中使用了第 i 个元素不被选到的概率来简化表达式。现在的证明也从同样的角度进行。
 
-第 i 个元素不被选到的概率，显然等于这 n 个元素中，至少存在 m 个元素的键值大于 `key(i)`，与之前的讨论一样，不妨设这 m 个元素的下标（按键值从大到小）依次为 j₁, j₂, \.\.\., jₘ，$\forall 1\leq k\leq m,j_k\notin\{i,j_1,j_2,\cdots,j_{k-1}\}$，满足 $\forall 1\leq t_k\leq n,t_k\notin\{j_1,j_2,\cdots,j_{k}\},key(j_k) > key(t_k)$。注意 jₖ 和 tₖ 的取值范围，为了简单起见，下面的式子中就不再重复了。
+第 i 个元素不被选到的概率，显然等于这 n 个元素中，至少存在 m 个元素的键值大于 `key(i)`，与之前的讨论一样，不妨设这 m 个元素的下标（按键值从大到小）依次为 `j₁, j₂, ..., jₘ`，$\forall 1\leq k\leq m,j_k\notin\{i,j_1,j_2,\cdots,j_{k-1}\}$，满足 $\forall 1\leq t_k\leq n,t_k\notin\{j_1,j_2,\cdots,j_{k}\},key(j_k) > key(t_k)$。注意 jₖ 和 tₖ 的取值范围，为了简单起见，下面的式子中就不再重复了。
 
 $$
 \bar p_i(m)=p(\exists j_1,j_2,...,j_m\neq i,key(j_1) > key(j_2) > ... > key(j_m) > key(i))

@@ -14,7 +14,7 @@ keywords:
 - MimeTex
 ---
 
-注：本文是通过 Google Reader 从已故的博客 [钟磬居](http://www.zhongqingju.com)（链接已失效）中恢复出来的（原文地址 [http://www\.zhongqingju.com/?p=604](http://www.zhongqingju.com/?p=604)）。目前在 GoCalf 博客中效力的 LaTeX 插件是 [Zhiqiang](http://zhiqiang.org/) 开发的 [LaTeX for WordPress](http://wordpress.org/extend/plugins/latex/)。相关内容请见：[WordPress 数学公式插件 LaTeX](../latex-wordpress/index.md)。
+注：本文是通过 Google Reader 从已故的博客 [钟磬居](http://www.zhongqingju.com)（链接已失效）中恢复出来的（原文地址 [http://www.zhongqingju.com/?p=604](http://www.zhongqingju.com/?p=604)）。目前在 GoCalf 博客中效力的 LaTeX 插件是 [Zhiqiang](http://zhiqiang.org/) 开发的 [LaTeX for WordPress](http://wordpress.org/extend/plugins/latex/)。相关内容请见：[WordPress 数学公式插件 LaTeX](../latex-wordpress/index.md)。
 
 ======== 分隔符 ========
 
