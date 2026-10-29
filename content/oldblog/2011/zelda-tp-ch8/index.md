@@ -27,9 +27,9 @@ keywords:
 
 ### 黎明宫殿迷宫
 
-{{< image src="tp_ch08_02.jpg" alt="tp_ch08_02" caption="黎明宫殿迷宫第一层地图" >}}
+![黎明宫殿迷宫第一层地图](tp_ch08_02.jpg)
 
-{{< image src="tp_ch08_03.jpg" alt="tp_ch08_03" caption="黎明宫殿迷宫二层到四层地图" >}}
+![黎明宫殿迷宫二层到四层地图](tp_ch08_03.jpg)
 
  **房间 1：** 刚进黎明世界，目前只有一条路可以通行，朝右上的门前进并进入房间 2。
 
@@ -100,4 +100,4 @@ keywords:
 参考：
 
 - [《塞尔达传说：黄昏公主》图文全攻略](http://wii.tgbus.com/glmj/gl/200611/20061129114849.shtml) by WiiBbs 攻研部 Szh、三代鬼彻、天堂的翅膀
-- [《塞尔达传说 黄昏公主》完美攻略研究](http://www.cngba.com/thread-16520313-1-1.html) by www\.cngba\.com 鸡蛋
+- [《塞尔达传说 黄昏公主》完美攻略研究](http://www.cngba.com/thread-16520313-1-1.html) by www.cngba.com 鸡蛋

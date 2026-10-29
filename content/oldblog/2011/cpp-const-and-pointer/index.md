@@ -8,7 +8,7 @@ tags:
 - C++
 categories:
 - 程序开发
-summary: 仔细回忆一下 C\+\+ 中的指针常量与常量指针的区别，记录于此。
+summary: 仔细回忆一下 C++ 中的指针常量与常量指针的区别，记录于此。
 keywords:
 - Const Pointer
 - Pointer to Const
@@ -17,22 +17,19 @@ keywords:
 - C++ Pointer
 ---
 
-太久不用 C\+\+ 了，竟然连最基本的东西都记不清楚了。今天干活的时候突然想要用指针常量，但突然就忘了指针常量跟常量指针的区别。花了一点儿时间仔细回想了一下几年前上课时老师讲的，总算又回忆起来了，赶紧记录下来备忘。
+太久不用 C++ 了，竟然连最基本的东西都记不清楚了。今天干活的时候突然想要用指针常量，但突然就忘了指针常量跟常量指针的区别。花了一点儿时间仔细回想了一下几年前上课时老师讲的，总算又回忆起来了，赶紧记录下来备忘。
 
 这可能会被当作面试题，不过不是算法，故而不放在面试算法题系列中。
 
-我觉得容易混淆的罪魁祸首在于中文的翻译问题，如果改叫“常量的指针”和“指针常量”可能会好些。先不管这些，看看英文的叫法：Pointer
-to Const 和 Const Pointer。
+我觉得容易混淆的罪魁祸首在于中文的翻译问题，如果改叫「常量的指针」和「指针常量」可能会好些。先不管这些，看看英文的叫法：Pointer to Const 和 Const Pointer。
 
-Pointer to
-Const，顾名思义就是一个指针，指向的数据不能被修改，C\+\+ 语法是 {{< code-inline lang="cpp" >}}int const* ptr{{< /code-inline >}}。怎么记忆呢，非常简单，记住要从右往左解读即可。首先这是个变量（{{< code-inline lang="cpp" >}}ptr{{< /code-inline >}}）；然后发现它是个指针（{{< code-inline lang="cpp" >}}*{{< /code-inline >}}）；接下来看到它所指向的数据是不可修改的（{{< code-inline lang="cpp" >}}const{{< /code-inline >}}）；最后这个指针所指向的空间存放的是整数（{{< code-inline lang="cpp" >}}int{{< /code-inline >}}）。
+Pointer to Const，顾名思义就是一个指针，指向的数据不能被修改，C++ 语法是 {{< code-inline lang="cpp" >}}int const* ptr{{< /code-inline >}}。怎么记忆呢，非常简单，记住要从右往左解读即可。首先这是个变量（{{< code-inline lang="cpp" >}}ptr{{< /code-inline >}}）；然后发现它是个指针（{{< code-inline lang="cpp" >}}*{{< /code-inline >}}）；接下来看到它所指向的数据是不可修改的（{{< code-inline lang="cpp" >}}const{{< /code-inline >}}）；最后这个指针所指向的空间存放的是整数（{{< code-inline lang="cpp" >}}int{{< /code-inline >}}）。
 
-Const
-Pointer，也是个指针，但这个指针的值不能被修改（不能再指向其他地方），C\+\+ 语法是 {{< code-inline lang="cpp" >}}int* const ptr{{< /code-inline >}}。同样从右往左读，变量（{{< code-inline lang="cpp" >}}ptr{{< /code-inline >}}）；变量的值不能被修改（{{< code-inline lang="cpp" >}}const{{< /code-inline >}}）；是个指针（{{< code-inline lang="cpp" >}}*{{< /code-inline >}}）；这个指针所指向的空间存放的是整数（{{< code-inline lang="cpp" >}}int{{< /code-inline >}}）。
+Const Pointer，也是个指针，但这个指针的值不能被修改（不能再指向其他地方），C++ 语法是 {{< code-inline lang="cpp" >}}int* const ptr{{< /code-inline >}}。同样从右往左读，变量（{{< code-inline lang="cpp" >}}ptr{{< /code-inline >}}）；变量的值不能被修改（{{< code-inline lang="cpp" >}}const{{< /code-inline >}}）；是个指针（{{< code-inline lang="cpp" >}}*{{< /code-inline >}}）；这个指针所指向的空间存放的是整数（{{< code-inline lang="cpp" >}}int{{< /code-inline >}}）。
 
-可见 const 修饰的是它右边紧邻的元素，如果右边是指针 \*，就表明指针指向的是常量，不能被修改；如果右边是变量，就变明这个变量自身不能被修改。
+可见 const 修饰的是它右边紧邻的元素，如果右边是指针 `*`，就表明指针指向的是常量，不能被修改；如果右边是变量，就变明这个变量自身不能被修改。
 
-下面这段 C\+\+ 程序示意了两种指针的区别，其中被注释掉的两行（高亮显示）是因为会无法编译。
+下面这段 C++ 程序示意了两种指针的区别，其中被注释掉的两行（高亮显示）是因为会无法编译。
 
 ```cpp {linenos=table hl_lines="14 17"}
 int a1 = 1;
@@ -67,9 +64,7 @@ cout << "*pointer = " << *pointer << "\n"
 *constPointer = 103
 ```
 
-对英文名称理解清楚了，记不记中文名字也就无所谓了吧。我的记忆方法就是“Pointer
-to Const”翻译为“常量的指针”，简称“常量指针”；“Const
-Pointer”翻译为“指针常量”。
+对英文名称理解清楚了，记不记中文名字也就无所谓了吧。我的记忆方法就是「Pointer to Const」翻译为「常量的指针」，简称「常量指针」；「Const Pointer」翻译为「指针常量」。
 
 最后简单总结一下跟 const 相关的变量的写法：
 

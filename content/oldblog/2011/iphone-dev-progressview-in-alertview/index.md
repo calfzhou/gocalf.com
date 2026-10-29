@@ -7,8 +7,7 @@ tags:
 - iOS Develop
 categories:
 - 程序开发
-summary: 今天这个问题是，在一个 iPhone 程序中，我要在后台做大量的数据处理，希望在界面上显示一个进度条（Progress Bar）使得用户了解处理进度。这个进度条应该是在一个模态的窗口中，使界面上其他控件无法被操作。怎么用最简单的方法来实现这个功能？UIAlertView
-  是一个现成的模态窗口，如果能把进度条嵌入到它里面就好了。
+summary: 今天这个问题是，在一个 iPhone 程序中，我要在后台做大量的数据处理，希望在界面上显示一个进度条（Progress Bar）使得用户了解处理进度。这个进度条应该是在一个模态的窗口中，使界面上其他控件无法被操作。怎么用最简单的方法来实现这个功能？UIAlertView 是一个现成的模态窗口，如果能把进度条嵌入到它里面就好了。
 keywords:
 - iPhone 开发
 - ObjC
@@ -18,10 +17,9 @@ keywords:
 - 进度条
 ---
 
-今天这个问题是，在一个 iPhone 程序中，我要在后台做大量的数据处理，希望在界面上显示一个进度条（Progress
-Bar）使得用户了解处理进度。这个进度条应该是在一个模态的窗口中，使界面上其他控件无法被操作。怎么用最简单的方法来实现这个功能？[UIAlertView](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIAlertView_Class/UIAlertView/UIAlertView.html) 是一个现成的模态窗口，如果能把进度条嵌入到它里面就好了。
+今天这个问题是，在一个 iPhone 程序中，我要在后台做大量的数据处理，希望在界面上显示一个进度条（Progress Bar）使得用户了解处理进度。这个进度条应该是在一个模态的窗口中，使界面上其他控件无法被操作。怎么用最简单的方法来实现这个功能？[UIAlertView](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIAlertView_Class/UIAlertView/UIAlertView.html) 是一个现成的模态窗口，如果能把进度条嵌入到它里面就好了。
 
-以下内容适用于 iOS 2\.0\+。
+以下内容适用于 iOS 2.0+。
 
 我们知道，如果要显示一个 alert 窗口（比如用来显示错误或警告信息、询问用户是否确认某操作等等），只要简单地创建一个 UIAlertView 对象，再调用其 show 方法即可。示意代码如下：
 
@@ -35,7 +33,7 @@ UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:@"Title"
 [alertView show];
 ```
 
-如果要添加一个进度条，只要先创建并设置好一个 [UIProgressView](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIProgressView_Class/Reference/Reference.html) 的实例，再利用 addSubbiew 方法添加到 alertView 中即可。
+如果要添加一个进度条，只要先创建并设置好一个 [UIProgressView](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIProgressView_Class/Reference/Reference.html) 的实例，再利用 addSubview 方法添加到 alertView 中即可。
 
 在实际应用中，我可能需要在类中保存进度条的对象实例，以便更新其状态，因此先在自己的 ViewController 类中添加成员变量：
 
@@ -122,7 +120,7 @@ UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:@"Title"
 
 在实际使用中，带进度条的 alert view 大概长得是这样的：
 
-{{< image src="progress_alert.png" alt="progress_alert" caption="带进度条的 alert 窗口" >}}
+![带进度条的 alert 窗口](progress_alert.png)
 
 ---
 

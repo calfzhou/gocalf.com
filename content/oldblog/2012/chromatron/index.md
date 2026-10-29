@@ -21,37 +21,32 @@ Chromatron，翻译过来是彩色显像管。顾名思义，这个游戏是关�
 
 这是个相当古老的游戏了，好多年前就玩了它的第一代和第二代，后来又陆续玩了第三代和第四代。第三代有几关是前些日子才玩出来的，整理一下留作纪念。
 
-游戏的官方网站是：[http://silverspaceship\.com/chromatron/](http://silverspaceship.com/chromatron/)，可以下载到 Chromatron 第一代到第四代的最新版本，Windows 系统和 Mac
-OS 都支持哦。
+游戏的官方网站是：[http://silverspaceship.com/chromatron/](http://silverspaceship.com/chromatron/)，可以下载到 Chromatron 第一代到第四代的最新版本，Windows 系统和 Mac OS 都支持哦。
 
 我这里也提供 Windows 版的下载：
 
-1. [Chromatron 1 代 v1\.14](chromatron1_v1.14.zip)
-2. [Chromatron 2 代 v1\.5](chromatron2_v1.5.zip)
-3. [Chromatron 3 代 v1\.1](chromatron3_v1.1.zip)
-4. [Chromatron 4 代 v1\.0](chromatron4_v1.0.zip)
+1. [Chromatron 1 代 v1.14](chromatron1_v1.14.zip)
+2. [Chromatron 2 代 v1.5](chromatron2_v1.5.zip)
+3. [Chromatron 3 代 v1.1](chromatron3_v1.1.zip)
+4. [Chromatron 4 代 v1.0](chromatron4_v1.0.zip)
 
-这个游戏中除了反射镜、三棱镜等传统光学元件外，还有一些现实中不一定存在的非常神奇的元件，比如多普勒仪（Doppler），如果红色光线从一端射入，另一端就会射出绿色光线，类似地，绿色光线会变成蓝色，而蓝色会变成红色。如果反过来使用，颜色的变化也反之。再比如量子纠缠分光器（Quantum
-Tangler），它将输入的光线变成两条向相反方向射出的光线，并且这两条光线是量子纠缠的，其中一条光线被多普勒仪改变颜色时，另外那条光线就会变为相反的颜色。又如可移动的光线传送器（Mobile
-Teleporter），成对使用时，可以将其中一个接收到的光线传送到另一个。还有逻辑门（Logic
-Gate）、互补器（Complementor）等等。所有的元件如下图示。
+这个游戏中除了反射镜、三棱镜等传统光学元件外，还有一些现实中不一定存在的非常神奇的元件，比如多普勒仪（Doppler），如果红色光线从一端射入，另一端就会射出绿色光线，类似地，绿色光线会变成蓝色，而蓝色会变成红色。如果反过来使用，颜色的变化也反之。再比如量子纠缠分光器（Quantum Tangler），它将输入的光线变成两条向相反方向射出的光线，并且这两条光线是量子纠缠的，其中一条光线被多普勒仪改变颜色时，另外那条光线就会变为相反的颜色。又如可移动的光线传送器（Mobile Teleporter），成对使用时，可以将其中一个接收到的光线传送到另一个。还有逻辑门（Logic Gate）、互补器（Complementor）等等。所有的元件如下图示。
 
-{{< image src="chromatron_elems.png" alt="chromatron_elems" caption="Chromatron 中的各种光学元件" >}}
+![Chromatron 中的各种光学元件](chromatron_elems.png)
 
 别的关卡都可以不谈，但有一关是一定要说一下的，这一关太有趣了。虽然它也有传统的解法，但其中有一种解法却非常神奇。见下图：
 
-{{< image src="chromatron_2_49.png" alt="chromatron_2_49" caption="Chromatron 2 代 49 关：反馈消除" >}}
+![Chromatron 2 代 49 关：反馈消除](chromatron_2_49.png)
 
 注意到那几个没有光线经过的反射镜了吗？看起来它们摆在那儿是多余的，但一旦移动它们，你就输了。游戏中对这一关的说明是：
 
-> If the complementor is presented with a logical impossibility, it
-> shuts down in all directions\.
+> If the complementor is presented with a logical impossibility, it shuts down in all directions.
 
 想亲自尝试一下？赶紧通过上面的链接下载下来玩吧。
 
-最后放上我的各关解法，需要的可以参考之。用的时候，找到你要解决的关卡（比如 3 代第 9 关），复制对应的解法代码（如 ` 3-09-nIIAnqNtOvNPtNsJOx `），注意复制的时候要包括开头的 ` 3-09- `，而代码首尾都不要包含任何其他字符（如空格、回车等）。在游戏中进入此关卡，按 Ctrl\-V 即可。如果你要向别人分享你的解法，就可以在游戏中进入关卡，按 Ctrl\-C，然后在任何文本编辑器中按 Ctrl\-V 粘贴。
+最后放上我的各关解法，需要的可以参考之。用的时候，找到你要解决的关卡（比如 3 代第 9 关），复制对应的解法代码（如 `3-09-nIIAnqNtOvNPtNsJOx`），注意复制的时候要包括开头的 `3-09-`，而代码首尾都不要包含任何其他字符（如空格、回车等）。在游戏中进入此关卡，按 Ctrl-V 即可。如果你要向别人分享你的解法，就可以在游戏中进入关卡，按 Ctrl-C，然后在任何文本编辑器中按 Ctrl-V 粘贴。
 
-- Chromatron 1 代 v1\.14
+- Chromatron 1 代 v1.14
 
 ```text {linenos=false}
 1-01-hI
@@ -106,7 +101,7 @@ Gate）、互补器（Complementor）等等。所有的元件如下图示。
 1-50-CbNiHScQhwxKoEzwDVCZhTwJxM
 ```
 
-- Chromatron 2 代 v1\.5
+- Chromatron 2 代 v1.5
 
 ```text {linenos=false}
 2-01-BRgqgZhjqZ
@@ -161,7 +156,7 @@ Gate）、互补器（Complementor）等等。所有的元件如下图示。
 2-50-OtMzBDBwNdCsNurGuGjHtvjJQKPYubIIochxDhNLsPcCCbym
 ```
 
-- Chromatron 3 代 v1\.1
+- Chromatron 3 代 v1.1
 
 ```text {linenos=false}
 3-01-oCcmcO
@@ -216,7 +211,7 @@ Gate）、互补器（Complementor）等等。所有的元件如下图示。
 3-50-OnNlCrNyCICbioCWtYDnjijWiUtwtIiChgNKCNixtiesEiey
 ```
 
-- Chromatron 4 代 v1\.0
+- Chromatron 4 代 v1.0
 
 ```text {linenos=false}
 4-01-OqHQhHOi

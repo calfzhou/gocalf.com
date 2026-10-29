@@ -25,7 +25,7 @@ keywords:
 
 没试过在不同版本的 WordPress 之间做数据迁移，感觉如果没有特别的原因，还是尽量保持两边的版本一致吧。
 
-当然需要给 WordPress 创建一个数据库（比如叫做 ` my_wordpress `）以及用户（比如 ` wp_user `）：
+当然需要给 WordPress 创建一个数据库（比如叫做 `my_wordpress`）以及用户（比如 `wp_user`）：
 
 ```text {linenos=table}
 $ mysql -uroot -p
@@ -37,15 +37,15 @@ mysql> EXIT
 
 ## 暂停博客
 
-在对源博客数据打包前，先要暂停它的服务，避免不必要的数据错误或者遗失。我选择了 [最省事的方法](http://sivel.net/2009/06/wordpress-maintenance-mode-without-a-plugin/)，直接在博客根目录下创建一个名为 ` .maintenance ` 的文件，内容为：
+在对源博客数据打包前，先要暂停它的服务，避免不必要的数据错误或者遗失。我选择了 [最省事的方法](http://sivel.net/2009/06/wordpress-maintenance-mode-without-a-plugin/)，直接在博客根目录下创建一个名为 `.maintenance` 的文件，内容为：
 
 ```php {linenos=table}
 <?php $upgrading = time(); ?>
 ```
 
-这样再访问源博客的时候，页面会提示“正在执行例行维护，请一分钟后回来”。当然了，这里的“一分钟”是写死的，什么时候来看都是同样的提示。
+这样再访问源博客的时候，页面会提示「正在执行例行维护，请一分钟后回来」。当然了，这里的「一分钟」是写死的，什么时候来看都是同样的提示。
 
-原理是 WordPress 会检查根目录下是否存在名为 ` .maintenance ` 的文件，如果存在，则会检查当前时刻与该文件提供的 ` $upgrading ` 数值之间的差异，如果当前时刻减去 ` $upgrading ` 小于十分钟，则会显示正在维护，否则就正常访问。现在 ` $upgrading ` 的值永远跟当前时刻一致，计算出来的差值一直都是 0，所以会一致在维护状态中。
+原理是 WordPress 会检查根目录下是否存在名为 `.maintenance` 的文件，如果存在，则会检查当前时刻与该文件提供的 `$upgrading` 数值之间的差异，如果当前时刻减去 `$upgrading` 小于十分钟，则会显示正在维护，否则就正常访问。现在 `$upgrading` 的值永远跟当前时刻一致，计算出来的差值一直都是 0，所以会一致在维护状态中。
 
 ## 打包源博客数据
 
@@ -57,7 +57,7 @@ mysqldump -uDB_USER_NAME -pDB_USER_PASSWORD DB_NAME | gzip > my-worpress.sql.gz
 
 命令中大写的部分需要用自己的用户名、密码和数据库名替换。导出的文件用 gzip 压缩一下以便通过网络复制到目标机器。
 
-附件、插件、主题等都保存在 wp\-content 目录中，直接压缩打包：
+附件、插件、主题等都保存在 wp-content 目录中，直接压缩打包：
 
 ```bash {linenos=table}
 tar -zcf content.tar.gz wp-content
@@ -75,7 +75,7 @@ cp -Rp wp-content/* PATH-TO-YOUR-WORDPRESS-wp-content-FOLDER
 
 ## 配置文件
 
-如果源博客的 ` wp-config.php ` 里面做过一些特别的修改，把它们也写到新博客的配置文件里即可。
+如果源博客的 `wp-config.php` 里面做过一些特别的修改，把它们也写到新博客的配置文件里即可。
 
 ## 善后
 

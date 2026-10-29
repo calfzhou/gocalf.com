@@ -41,7 +41,7 @@ headers:
 rows:
 - - 介绍
   - '可以创建 Excel 2007 或更高版本的 XLSX 文件'
-  - '即 [python\-excel](http://www.python-excel.org/)，含 [xlrd](https://pypi.python.org/pypi/xlrd)、[xlwt](https://pypi.python.org/pypi/xlwt) 和 [xlutils](https://pypi.python.org/pypi/xlutils) 三大模块，分别提供读、写和其他功能'
+  - '即 [python-excel](http://www.python-excel.org/)，含 [xlrd](https://pypi.python.org/pypi/xlrd)、[xlwt](https://pypi.python.org/pypi/xlwt) 和 [xlutils](https://pypi.python.org/pypi/xlutils) 三大模块，分别提供读、写和其他功能'
   - '可以读写 Excel 2007 XLSX 和 XLSM 文件'
   - '直接通过 COM 组件与Microsoft Excel 进程通信，调用其各种功能实现对 Excel 文件的操作'
 - - 读
@@ -59,12 +59,12 @@ rows:
   - ❌
   - ⚠️
   - ✅
-- - \.xls
+- - .xls
   - ❌
   - ✅
   - ❌
   - ✅
-- - \.xlsx
+- - .xlsx
   - ✅
   - ⚠️
   - ✅
@@ -88,7 +88,7 @@ rows:
   - 无限制
   - 无限制
   - 无限制
-  - Windows \+ Excel
+  - Windows + Excel
 - - 使用场景
   - '- 要创建 XLSX 文件
 
@@ -132,18 +132,18 @@ rows:
 
 这应该是个比较新的项目，在 GitHub 上看它最早的提交是在 2013 年 1 月份。其官方文档中宣称它支持：
 
-- 100% compatible Excel XLSX files\.
-- Full formatting\.
-- Merged cells\.
-- Defined names\.
-- Charts\.
-- Autofilters\.
-- Data validation and drop down lists\.
-- Conditional formatting\.
-- Worksheet PNG/JPEG images\.
-- Rich multi\-format strings\.
-- Cell comments\.
-- Memory optimisation mode for writing large files\.
+- 100% compatible Excel XLSX files.
+- Full formatting.
+- Merged cells.
+- Defined names.
+- Charts.
+- Autofilters.
+- Data validation and drop down lists.
+- Conditional formatting.
+- Worksheet PNG/JPEG images.
+- Rich multi-format strings.
+- Cell comments.
+- Memory optimisation mode for writing large files.
 
 ### 优点
 
@@ -163,7 +163,7 @@ rows:
 
 作者并没有打算做一个 XlsxReader 来提供读取操作。不能读取，也就无从修改了。它只能用来创建新的文件。我是利用 xlrd 把需要的信息读入后，用 XlsxWriter 创建全新的文件。
 
-另外，即使是创建到一半 Excel 文件，也是无法读取已经创建出来的内容的（信息应该在，但是并没有相应的接口）。因为它的主要方法是 ` write ` 而不是 ` set `。当你在某个单元格写入数据后，除非你自己保存了相关的内容，否则还是没有办法读出已经写入的信息。从这个角度看，你无法做到读出 \-\> 修改 \-\> 写回，只能是写入 \-\> 写入 \-\> 写入。
+另外，即使是创建到一半 Excel 文件，也是无法读取已经创建出来的内容的（信息应该在，但是并没有相应的接口）。因为它的主要方法是 `write` 而不是 `set`。当你在某个单元格写入数据后，除非你自己保存了相关的内容，否则还是没有办法读出已经写入的信息。从这个角度看，你无法做到读出 -> 修改 -> 写回，只能是写入 -> 写入 -> 写入。
 
 二、不支持 XLS 文件
 
@@ -195,7 +195,7 @@ XlsxWriter 和 OpenPyXL 都不支持 XLS 格式，从这个角度看，[xlrd&amp
 
 二、对修改的支持比较差
 
-xlrd 和 xlwt 是两个相对独立的模块，虽然 [xlutils](https://pypi.python.org/pypi/xlutils) 提供方法帮助你把 ` xlrd.Book ` 对象复制到 ` xlwt.Workbook ` 对象，但跟 XlsxWriter 类似，后者只是提供 write 方法，使得你无法很容易地获取当前已经写入的数据并进行有针对性的修改。如果非要这样做，你要不断地保存，然后再用新的 ` xlrd.Book ` 对象读取你要的信息，还是比较麻烦的。
+xlrd 和 xlwt 是两个相对独立的模块，虽然 [xlutils](https://pypi.python.org/pypi/xlutils) 提供方法帮助你把 `xlrd.Book` 对象复制到 `xlwt.Workbook` 对象，但跟 XlsxWriter 类似，后者只是提供 write 方法，使得你无法很容易地获取当前已经写入的数据并进行有针对性的修改。如果非要这样做，你要不断地保存，然后再用新的 `xlrd.Book` 对象读取你要的信息，还是比较麻烦的。
 
 三、功能很弱
 
@@ -211,7 +211,7 @@ xlrd 和 xlwt 是两个相对独立的模块，虽然 [xlutils](https://pypi.pyt
 
 OpenPyXL 的工作模式跟 XlsxWriter 和 xlwt 有很大的区别，它用的是 getter/setter 模式。你可以随时读取某个单元格的内容，并根据其内容进行相应的修改，OpenPyXL 会帮你记住每个单元格的状态。
 
- **特别需要注意的一点：** 虽然它支持修改已有文件，但由于其所支持的功能有限，读入文件时会忽略掉它所不支持的内容，再写入时，这些内容就丢失了。因此使用时一定要慎重。比如下面的缺点中提到它无法读入公式，那如果你修改一个带有公式的文件，保存之后，所有的公式就都没有了。
+ **特别需要注意的一点**：虽然它支持修改已有文件，但由于其所支持的功能有限，读入文件时会忽略掉它所不支持的内容，再写入时，这些内容就丢失了。因此使用时一定要慎重。比如下面的缺点中提到它无法读入公式，那如果你修改一个带有公式的文件，保存之后，所有的公式就都没有了。
 
 二、功能还算可以
 
@@ -231,8 +231,7 @@ Excel 的单元格如果是一个公式，它内部会同时保存公式本身�
 
 ## Microsoft Excel API
 
-大部分 Windows 环境的开发人员都会选择 [Microsoft Excel API](http://msdn.microsoft.com/en-us/library/fp179694.aspx)。实际上不仅仅是 Python，几乎各种语言都有相应的方法使用它，因为核心的逻辑完全是由 Microsft
-Excel 自身提供的。语言相关的部分只是负责跟 Windows 的 COM 组件进行通信。
+大部分 Windows 环境的开发人员都会选择 [Microsoft Excel API](http://msdn.microsoft.com/en-us/library/fp179694.aspx)。实际上不仅仅是 Python，几乎各种语言都有相应的方法使用它，因为核心的逻辑完全是由 Microsft Excel 自身提供的。语言相关的部分只是负责跟 Windows 的 COM 组件进行通信。
 
 在 Python 中首先需要安装 [Python for Windows extensions](http://sourceforge.net/projects/pywin32/)（[pywin32](http://sourceforge.net/projects/pywin32/)），具体的文档可以查阅 [Win32 Modules](http://docs.activestate.com/activepython/2.4/pywin32/win32_modules.html) 和 [Python COM](http://docs.activestate.com/activepython/2.4/pywin32/com.html)。
 
@@ -300,7 +299,7 @@ excel = win32com.client.DispatchEx('Excel.Application')
 
 窗口不可见也会带来一些麻烦，前面说了，通过 Python 启动的 Excel 进程跟你直接从桌面打开的 Excel 进程没有什么区别，在使用 Excel 的过程中，我们经常会遇到各种弹出的错误、警告或者提示框，这些在用 Python 处理时也有可能遇到。尤其当你的程序还没完全调试好时。
 
-我一般都会让程序控制的 Excel 进程在调试过程中可见，正式使用时不可见，通过类似这样的命令（假设你有一个叫做 ` is_debug ` 的变量记录当前是否在调试状态）：
+我一般都会让程序控制的 Excel 进程在调试过程中可见，正式使用时不可见，通过类似这样的命令（假设你有一个叫做 `is_debug` 的变量记录当前是否在调试状态）：
 
 ```python {linenos=false hl_lines="2 3"}
 excel = win32com.client.DispatchEx('Excel.Application')
@@ -371,7 +370,7 @@ class ExcelConstants(object):
 
 要想知道某一个枚举常量的数值，可以查阅 MSDN 中 [Excel Enumerations](http://msdn.microsoft.com/en-us/library/office/ff838815.aspx) 相关的资料。
 
-【2014 年 7 月 31 日更新】感谢 [@依云](https://blog.gocalf.com/python-read-write-excel.html#comment-1329532357) 提醒，在 Python 也能够直接引用相关的常量，即通过 ` win32com.client.constants ` 获取常量的值。不过这里还有一点比较 tricky 的地方，如果直接用 Dispatch 或者 DispatchEx 得到 Excel 对象，是无法从 constants 中取出常量值的，需要 [手动运行 makepy](http://timgolden.me.uk/python/win32_how_do_i/generate-a-static-com-proxy.html)，或者通过 ` win32com.client.gencache.EnsureDispatch ` 获得 Excel 对象：
+【2014 年 7 月 31 日更新】感谢 [@依云](https://blog.gocalf.com/python-read-write-excel.html#comment-1329532357) 提醒，在 Python 也能够直接引用相关的常量，即通过 `win32com.client.constants` 获取常量的值。不过这里还有一点比较 tricky 的地方，如果直接用 Dispatch 或者 DispatchEx 得到 Excel 对象，是无法从 constants 中取出常量值的，需要 [手动运行 makepy](http://timgolden.me.uk/python/win32_how_do_i/generate-a-static-com-proxy.html)，或者通过 `win32com.client.gencache.EnsureDispatch` 获得 Excel 对象：
 
 ```python {linenos=table}
 import win32com

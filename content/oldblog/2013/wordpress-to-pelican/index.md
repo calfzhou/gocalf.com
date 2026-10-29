@@ -21,7 +21,7 @@ keywords:
 
 经过一段时间的整理，现在正式把 [GoCalf 博客](https://blog.gocalf.com/) 从 [WordPress](http://wordpress.org/) 迁移到 [Pelican](http://blog.getpelican.com/) 了，简单记录一下，还有一些未完成的事情等着以后再慢慢搞。
 
-## WordPress vs\. 静态博客
+## WordPress vs. 静态博客
 
 最开始的动机只是想寻找一个最适合自己的个人 wiki 系统，之前把一些备忘信息用 [TiddlyWiki](http://tiddlywiki.com/) 保存在 U 盘上，这样在任何地方，用任何操作系统的电脑都可以查看和编辑。但是后来懒到每次都懒的把 U 盘拿过来插上，所以并没有发挥太大的作用。后来开始用 [DropBox](https://www.dropbox.com/)，其他很多东西都移到 DropBox 里了，这个却一直没有动。现在 [OneNote](http://office.microsoft.com/en-us/onenote/) 和 [Evernote](https://evernote.com/) 和 [有道云笔记](http://note.youdao.com/) 同时在用，却没有一个是我真正想要的。
 
@@ -51,7 +51,7 @@ keywords:
 
 总的来说，静态博客的好处是，你只需要关注要写的内容本身。
 
-## Octopress vs\. Pelican
+## Octopress vs. Pelican
 
 刚开始接触到的静态博客是 [Octopress](http://octopress.org/)，是基于 [Jekyll](http://jekyllrb.com/) 的，后者是用 Ruby 写的静态博客系统。据说 Octopress 与 Jekyll 的关系就像 jQuery 与 JavaScript 的关系一样。
 
@@ -59,15 +59,15 @@ keywords:
 
 Pelican 的使用量相对来说少一些（[Pelican Sites](https://github.com/getpelican/pelican/wiki/Powered-by-Pelican)），选择它的主要原因是我更熟悉 Python。Ruby 的代码我几乎没有看过，也没有尝试去读或者写，这样如果在使用 Octopress 过程中，需要做一些修改，或者写一些插件，就会比较困难。但如果使用 Pelican，我可以自己修改它的代码，可以自己写插件。后来发现这个选择是对的，我已经对 Pelican 及其插件做了一些修改，而且已经计划写一些至少自己能用的上的新插件。
 
-Pelican 当前的版本是 3\.3\.0，虽然没有和 Octopress 具体地对比，但它有些功能是我很喜欢的，比如 [linking to internal content](http://docs.getpelican.com/en/latest/getting_started.html#linking-to-internal-content) 用于把不同的文章、或者文章和附件联系起来，而不需要关心它们发布后在什么位置；比如内置了对多语言博客的支持（[translations](http://docs.getpelican.com/en/latest/getting_started.html#translations)）；还有草稿模式等等。
+Pelican 当前的版本是 3.3.0，虽然没有和 Octopress 具体地对比，但它有些功能是我很喜欢的，比如 [linking to internal content](http://docs.getpelican.com/en/latest/getting_started.html#linking-to-internal-content) 用于把不同的文章、或者文章和附件联系起来，而不需要关心它们发布后在什么位置；比如内置了对多语言博客的支持（[translations](http://docs.getpelican.com/en/latest/getting_started.html#translations)）；还有草稿模式等等。
 
-相对的，它的缺点主要是插件还不够丰富，只好用“自己写”来弥补了。另外大多数 Pelican 主题都不好看，这个问题回头再慢慢解决吧。
+相对的，它的缺点主要是插件还不够丰富，只好用「自己写」来弥补了。另外大多数 Pelican 主题都不好看，这个问题回头再慢慢解决吧。
 
 现在我的这个博客看起来有点儿像 Octopress，是因为我用了 [Octopress Theme for Pelican](http://docs.getpelican.com/en/latest/getting_started.html#translations)。这只是暂时的啦，以后有时间了会自己整一个主题。
 
 有一个问题是比较讨厌的，不知道 Octopress 是否也一样，就是编译速度比较慢。静态博客是要把用标记语言书写的文章转换成 HTML 页面，用 Pelican 的时候，几十篇文章就需要几秒钟的时间才能编译完成，如果有上百篇文章，等待过程会让人焦虑的。目前即使只是一篇文章中改变了一个字，编译的时候也会重新编译所有的页面。这一点期待开发团队的改进吧。感觉一个可行的方案是生成一些中间文件，把每篇文章对应的 HTML 片段单独保存，如果文章内容和相关的参数都没变，这一部分就不用重新生成。最终的 HTML 页面，是把框架跟内容片段连在一起生成的，这个过程应该会很快。
 
-## Markdown vs\. reStructuredText
+## Markdown vs. reStructuredText
 
 [Markdown](http://daringfireball.net/projects/markdown/) 和 [reStructuredText](http://docutils.sourceforge.net/rst.html) 都是非常不错的标记语言，也是众多静态博客玩家首选的语言之一二。开始我一直准备用 Markdown，GitHub 对它的强力支持是很主要的原因。当然 Markdown 自身确实也有很多的优势，它非常的简洁，书写和阅读都非常舒服。我甚至已经把所有的文章都转成 Markdown 格式了，但最后还是转投 reStructuredText 的怀抱。
 
@@ -75,7 +75,7 @@ Markdown 很简洁，如果是写文学的东西，用它最合适不过了。�
 
 reStructuredText 则要强大的多，也并没有失去太多的简便性。Python 的官方文档就是用它写出来的。很多技术博客或者技术书籍是用它写出来的。
 
-Markdown 的扩展性也让人难以忍受，它天生似乎就没打算让别人对它做太多的扩展。它没有一个约定俗成的扩展语法。在 Octopress 中广泛使用的是 Liquid\-style Tags，大多数 Octopress 插件的语法都是基于这个的。我没有仔细研究过，看起来这个是从 Ruby 那里来的。当然在 Pelican 里面也有相应的 liquid tags 插件，但我实在不能忍受 liquid tag 常用的语法。以 Octopress 中 [Image Tag](http://octopress.org/docs/plugins/image-tag/) 插件为例，它的语法是：
+Markdown 的扩展性也让人难以忍受，它天生似乎就没打算让别人对它做太多的扩展。它没有一个约定俗成的扩展语法。在 Octopress 中广泛使用的是 Liquid-style Tags，大多数 Octopress 插件的语法都是基于这个的。我没有仔细研究过，看起来这个是从 Ruby 那里来的。当然在 Pelican 里面也有相应的 liquid tags 插件，但我实在不能忍受 liquid tag 常用的语法。以 Octopress 中 [Image Tag](http://octopress.org/docs/plugins/image-tag/) 插件为例，它的语法是：
 
 ```text {linenos=false}
 {% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
@@ -103,7 +103,7 @@ reStructuredText 没有这样的问题，它有明确的扩展方式，通过 ro
 
 reStructuredText 的段落嵌套非常的强大，而 Markdown 似乎忘记了这一点。
 
-当然 Markdown 也有比 reStructuredText 强大的地方，最明显的就是 Markdown 行内格式的嵌套非常方便。用 ` *** ` 包围起来的文字会同时有粗体和斜体效果。reStructuredText 到目前还不太支持 role 的嵌套，想要做出同时粗体和斜体的文字，或者粗体的链接，都是比较困难或者麻烦的。还有其他一些小的细节，我就不具体说了。
+当然 Markdown 也有比 reStructuredText 强大的地方，最明显的就是 Markdown 行内格式的嵌套非常方便。用 `***` 包围起来的文字会同时有粗体和斜体效果。reStructuredText 到目前还不太支持 role 的嵌套，想要做出同时粗体和斜体的文字，或者粗体的链接，都是比较困难或者麻烦的。还有其他一些小的细节，我就不具体说了。
 
 总的来说，Markdown 更简洁，更适合于书写纯文字的东西；reStructuredText 更强大，适合于书写复杂的技术文章。
 
@@ -111,10 +111,10 @@ reStructuredText 的段落嵌套非常的强大，而 Markdown 似乎忘记了�
 
 新版的博客已经上线了，但仍然有一些工作需要进行。
 
-- MathJax 插件：reStructuredText 内置了对 LaTeX 公式的支持，行内公式用 [math role](http://docutils.sourceforge.net/docs/ref/rst/roles.html#math) 实现，区块公式用 [math directive](http://docutils.sourceforge.net/docs/ref/rst/directives.html#math) 实现，而且通过 [` --math-output ` 配置](http://docutils.sourceforge.net/docs/user/config.html#math-output) 可以让它用 MathJax 进行渲染。但是 MathJax 是要在浏览器里执行 JavaScript 的，如果无法执行 JavaScript（比如在 RSS 中）就没法正常显示了。之前在 WordPress 中，利用插件先生成图片，如果无法执行 JavaScript 就会直接显示图片。所以这里也需要一个类似的插件，在编译的时候生成图片备用。
+- MathJax 插件：reStructuredText 内置了对 LaTeX 公式的支持，行内公式用 [math role](http://docutils.sourceforge.net/docs/ref/rst/roles.html#math) 实现，区块公式用 [math directive](http://docutils.sourceforge.net/docs/ref/rst/directives.html#math) 实现，而且通过 [`--math-output` 配置](http://docutils.sourceforge.net/docs/user/config.html#math-output) 可以让它用 MathJax 进行渲染。但是 MathJax 是要在浏览器里执行 JavaScript 的，如果无法执行 JavaScript（比如在 RSS 中）就没法正常显示了。之前在 WordPress 中，利用插件先生成图片，如果无法执行 JavaScript 就会直接显示图片。所以这里也需要一个类似的插件，在编译的时候生成图片备用。
 - Graphviz 插件：Pelican 中似乎没有直接能用的 graphviz directive，需要去找一个或者写一个插件。在编译的时候调用 dot 命令生成好图片就可以了。
 - Chart 插件：有时候提供一些数据的展示，图表是非常必需的。之前都是先用 Excel 或这 Mathematica 之类的软件画好，再把图片放上去。如果有插件直接把数据通过 JavaScript 展示出来就更好了。准备写个插件，调用 [NVD3](http://nvd3.org/) 进行绘图。
 - Featured Image：WordPress 自带了这个，而且大多数主题都支持它，就是每篇文章有一张特色图片。这个需要去考察一下看看有没有现成的插件，当然主题也需要能够支持它。
 - 系列文章插件：系列文章是个很好的东西，把一系列非常相关的文章按照时间组织在一起。之前就一直在用，Pelican 倒是也有一个相关的插件，但还不完全是我想要的。等有空的时候再研究研究。
 - 主题：对 CSS 的把控力几乎为零，所以主题的制作还是很让人头疼的一件事情。我会继续寻找一个更好的主题，或者如果有精力，会考虑自己做一个主题。
-  - \[2013\-11\-12\] 现在改用 [Elegant](http://oncrashreboot.com/elegant-best-pelican-theme-features) 主题，非常的清新，而且作者很活跃，一直在不断地完善该主题。
+  - 【2013-11-12】现在改用 [Elegant](http://oncrashreboot.com/elegant-best-pelican-theme-features) 主题，非常的清新，而且作者很活跃，一直在不断地完善该主题。

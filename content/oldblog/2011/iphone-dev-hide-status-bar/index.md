@@ -7,8 +7,7 @@ tags:
 - iOS Develop
 categories:
 - 程序开发
-summary: 最近在写 iPhone 上的程序，第一次在 Mac 下进行开发，也是第一次写手机上的程序，虽然之前看了少许相关的书籍，但在开发的过程中还是遇到了很多的问题。在这个系列中记录一些遇到的实际的问题，方便淡忘了之后再次查阅。今天的问题是怎么在
-  App 中隐藏系统状态栏（Status Bar）。
+summary: 最近在写 iPhone 上的程序，第一次在 Mac 下进行开发，也是第一次写手机上的程序，虽然之前看了少许相关的书籍，但在开发的过程中还是遇到了很多的问题。在这个系列中记录一些遇到的实际的问题，方便淡忘了之后再次查阅。今天的问题是怎么在 App 中隐藏系统状态栏（Status Bar）。
 keywords:
 - iPhone 开发
 - ObjC
@@ -22,11 +21,11 @@ keywords:
 
 今天的问题是怎么在 App 中隐藏系统状态栏（Status Bar）。
 
-以下内容适用于 iOS 3\.2\+。
+以下内容适用于 iOS 3.2+。
 
 ## 一、始终隐藏状态栏
 
-如果在 App 中需要状态栏一直是隐藏着的，可以在 ` <YOUR_APP>AppDelegate ` 的 ` application:didFinishLaunchingWithOptions: ` 函数中进行设置，比如下面这段示意代码可以让状态栏以淡出的方式隐藏起来：
+如果在 App 中需要状态栏一直是隐藏着的，可以在 `<YOUR_APP>AppDelegate` 的 `application:didFinishLaunchingWithOptions:` 函数中进行设置，比如下面这段示意代码可以让状态栏以淡出的方式隐藏起来：
 
 ```objc {linenos=table hl_lines="3"}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -43,20 +42,16 @@ keywords:
 
 相关的方法或属性是 [UIApplication](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html) 的：
 
-- [setStatusBarHidden:withAnimation:](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instm/UIApplication/setStatusBarHidden:withAnimation:)（iOS 3\.2\+）
+- [setStatusBarHidden:withAnimation:](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instm/UIApplication/setStatusBarHidden:withAnimation:)（iOS 3.2+）
+- [statusBarHidden](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instp/UIApplication/statusBarHidden)（iOS 2.0+）
 
-- [statusBarHidden](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instp/UIApplication/statusBarHidden)（iOS 2\.0\+）
-
-另外还有一个方法 [setStatusBarHidden:animated:](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/DeprecationAppendix/AppendixADeprecatedAPI.html#//apple_ref/occ/instm/UIApplication/setStatusBarHidden:animated:)，已经不推荐使用了（deprecated
-in iOS 3\.2）。
+另外还有一个方法 [setStatusBarHidden:animated:](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/DeprecationAppendix/AppendixADeprecatedAPI.html#//apple_ref/occ/instm/UIApplication/setStatusBarHidden:animated:)，已经不推荐使用了（deprecated in iOS 3.2）。
 
 ## 二、App 启动时就隐藏状态栏
 
-用了上面的方法之后，App 在运行过程中，状态栏确实被隐藏起来了，但是我发现在 App 启动的那个瞬间，还是可以看到状态栏的，然后一闪即过。虽然时间很短暂，看着还是很不舒服。为了让状态栏从启动的时候就隐藏起来，可以修改 ` <YOUR_APP>-Info.plist `。如果在 Xcode 中修改，在根结点 Infomation
-Property List 下面新加一项 “Status bar is initially
-hidden”（不用手动输入，可以直接在下拉菜单中选取）。这是个 BOOL 类型的键值，将 Value 栏中的复选框勾选上即可。
+用了上面的方法之后，App 在运行过程中，状态栏确实被隐藏起来了，但是我发现在 App 启动的那个瞬间，还是可以看到状态栏的，然后一闪即过。虽然时间很短暂，看着还是很不舒服。为了让状态栏从启动的时候就隐藏起来，可以修改 `<YOUR_APP>-Info.plist`。如果在 Xcode 中修改，在根结点 Infomation Property List 下面新加一项「Status bar is initially hidden」（不用手动输入，可以直接在下拉菜单中选取）。这是个 BOOL 类型的键值，将 Value 栏中的复选框勾选上即可。
 
-{{< image src="status_bar_initially_hidden.png" alt="status_bar_initially_hidden" caption="在 Info.plist 中设置状态栏为隐藏" >}}
+![在 Info.plist 中设置状态栏为隐藏](status_bar_initially_hidden.png)
 
 也可以以文本方式修改，在根节点中添加 UIStatusBarHidden 键值，值设为 true 即可：
 

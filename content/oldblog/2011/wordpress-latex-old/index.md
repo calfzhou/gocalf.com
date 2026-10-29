@@ -14,8 +14,7 @@ keywords:
 - MimeTex
 ---
 
-注：本文是通过 Google
-Reader 从已故的博客 [钟磬居](http://www.zhongqingju.com)（链接已失效）中恢复出来的（原文地址 [http://www\.zhongqingju\.com/?p=604](http://www.zhongqingju.com/?p=604)）。目前在 GoCalf 博客中效力的 LaTeX 插件是 [Zhiqiang](http://zhiqiang.org/) 开发的 [LaTeX for WordPress](http://wordpress.org/extend/plugins/latex/)。相关内容请见：[WordPress 数学公式插件 LaTeX](../latex-wordpress/index.md)。
+注：本文是通过 Google Reader 从已故的博客 [钟磬居](http://www.zhongqingju.com)（链接已失效）中恢复出来的（原文地址 [http://www.zhongqingju.com/?p=604](http://www.zhongqingju.com/?p=604)）。目前在 GoCalf 博客中效力的 LaTeX 插件是 [Zhiqiang](http://zhiqiang.org/) 开发的 [LaTeX for WordPress](http://wordpress.org/extend/plugins/latex/)。相关内容请见：[WordPress 数学公式插件 LaTeX](../latex-wordpress/index.md)。
 
 ======== 分隔符 ========
 
@@ -23,7 +22,7 @@ Reader 从已故的博客 [钟磬居](http://www.zhongqingju.com)（链接已失
 
 - 适用人群：了解 LaTex，需要在 WordPress 搭建的 Blog 内用 LaTeX 书写数学公式的人；
 
-- 平台：WordPress 2\.x。
+- 平台：WordPress 2.x。
 
 如果你的博客跟我们这个一样，也是用 WordPress 系统搭建的；如果你跟我一样，也希望可以在 Blog 中用 LaTeX 书写数学公式，那么这篇文章或许对你有所帮助。
 
@@ -33,18 +32,17 @@ Reader 从已故的博客 [钟磬居](http://www.zhongqingju.com)（链接已失
 
 2. 为自己的站点安装 LaTeX 的相关软件，使其可以解析 LaTeX 并生成图片；
 
-3. 利用插件（[dahnielson\_mimetex](http://en.dahnielson.com/2006/09/mimetex-plugin.html)），动态地向公开的服务发出请求，获取公式图片并显示。
+3. 利用插件（[`dahnielson_mimetex`](http://en.dahnielson.com/2006/09/mimetex-plugin.html)），动态地向公开的服务发出请求，获取公式图片并显示。
 
 如果你一年也写不了一两个数学公式，那么用第一种方法最方便了，避免了在服务器上安装各种各样的软件或插件。但如果需要频繁写公式，那这个方法显然太麻烦，每个公式要到生成一张图片，上传，插入；修改公式的时候还要再重复一遍。
 
-第二个方法比较可靠的，但也相当麻烦（对于我这种新手来说）。需要在服务器上安装 LaTeX 和 ImageMagick 这两个软件，然后 [下载 wp\-latexrender 插件](http://sixthform.info/steve/wordpress/wp-content/uploads/wp-latexrender.zip) 并安装，进行一系列配置之后，你的站点就可以解析 LaTeX 并生成图片了。如果你的服务器上已经装了这两个软件，那就不用等了，直接用吧，要不然的话还是看看下一个方法。
+第二个方法比较可靠的，但也相当麻烦（对于我这种新手来说）。需要在服务器上安装 LaTeX 和 ImageMagick 这两个软件，然后 [下载 wp-latexrender 插件](http://sixthform.info/steve/wordpress/wp-content/uploads/wp-latexrender.zip) 并安装，进行一系列配置之后，你的站点就可以解析 LaTeX 并生成图片了。如果你的服务器上已经装了这两个软件，那就不用等了，直接用吧，要不然的话还是看看下一个方法。
 
-第三个方法是用 [dahnielson\_mimetex](http://en.dahnielson.com/2006/09/mimetex-plugin.html) 插件，它会向指定的服务器发送请求，获取公式所对应的图片。可惜插件默认使用的服务失效了，如果你的站点可以执行 cgi 程序，那么可以访问 [这里](http://www.forkosh.com/mimetex.html) 了解如何安装 cgi
-mimetex。如果你的站点没法执行 cgi 程序，那么可以试一试我现在使用的方法：
+第三个方法是用 [`dahnielson_mimetex`](http://en.dahnielson.com/2006/09/mimetex-plugin.html) 插件，它会向指定的服务器发送请求，获取公式所对应的图片。可惜插件默认使用的服务失效了，如果你的站点可以执行 cgi 程序，那么可以访问 [这里](http://www.forkosh.com/mimetex.html) 了解如何安装 cgi mimetex。如果你的站点没法执行 cgi 程序，那么可以试一试我现在使用的方法：
 
-wordpress\.com 的用户都可以在博客中使用一对 ` $ ` 来书写 LaTeX，在 [http://support\.wordpress\.com/latex/](http://support.wordpress.com/latex/) 中有介绍。我的方法就是修改 dahnielson\_mimetex，让其调用 wordpress\.com 的 LaTeX 服务来生成图片。由于后者比 mimetex 多了一些控制图片颜色和大小的参数，因此要在 dahnielson\_mimetex 中做出相应的修改。
+wordpress.com 的用户都可以在博客中使用一对 `$` 来书写 LaTeX，在 [http://support.wordpress.com/latex/](http://support.wordpress.com/latex/) 中有介绍。我的方法就是修改 `dahnielson_mimetex`，让其调用 wordpress.com 的 LaTeX 服务来生成图片。由于后者比 mimetex 多了一些控制图片颜色和大小的参数，因此要在 `dahnielson_mimetex` 中做出相应的修改。
 
-首先下载 [dahnielson\_mimetex v1\.2](http://en.dahnielson.com/2006/09/mimetex-plugin.html)，将其安装到博客上，然后对其进行如下的编辑。
+首先下载 [`dahnielson_mimetex` v1.2](http://en.dahnielson.com/2006/09/mimetex-plugin.html)，将其安装到博客上，然后对其进行如下的编辑。
 
 一共只有五处简单的修改，第一处是修改 description，把新加的参数写进去，以免日后忘记：
 
@@ -59,21 +57,21 @@ wordpress\.com 的用户都可以在博客中使用一对 ` $ ` 来书写 LaTeX�
 > Author: Anders Dahnielson; Modified by calf (April 12, 2009)
 ```
 
-这个插件最初的语法只是 ` <tex></tex> `，我给它添加了四个参数：
+这个插件最初的语法只是 `<tex></tex>`，我给它添加了四个参数：
 
 bg
-:   设定图片的背景色，格式为六个十六进制字符，范围 000000 到 ffffff，默认值为 ffffff 即白色
+:   设定图片的背景色，格式为六个十六进制字符，范围 `000000` 到 `ffffff`，默认值为 `ffffff` 即白色
 
 fg
-:   设定图片的前景色，格式为六个十六进制字符，范围 000000 到 ffffff，默认值为 000000 即黑色
+:   设定图片的前景色，格式为六个十六进制字符，范围 `000000` 到 `ffffff`，默认值为 `000000` 即黑色
 
 sz
-:   设定图片的大小，格式为整数，范围 \-4 到 4，默认值为 0 即正常大小
+:   设定图片的大小，格式为整数，范围 -4 到 4，默认值为 0 即正常大小
 
 escaped
-:   设定公式中的 \<、\>、&amp; 等符号是否是 html 转义的（即用 &amp;lt;、&amp;gt;、&amp;amp; 表示），可取值为 true 或 false，默认值为 false 即未转义的
+:   设定公式中的 `<`、`>`、`&` 等符号是否是 html 转义的（即用 `&lt;`、`&gt;`、`&amp;` 表示），可取值为 true 或 false，默认值为 false 即未转义的
 
-第二处修改是正则表达式，在 dahnielson\_mimetex 类的 parse 函数中，修改过的正则表达式可以匹配刚刚提到的四个参数：
+第二处修改是正则表达式，在 `dahnielson_mimetex` 类的 parse 函数中，修改过的正则表达式可以匹配刚刚提到的四个参数：
 
 ```diff {linenos=false}
 32c32,33
@@ -105,9 +103,9 @@ escaped
 > $formula_filename = 'tex_'.$formula_hash.'.png';
 ```
 
-这里我添加了一个变量 ` $formula_text_html `，用来记录 html 转义过的公式内容，稍后会看到这样做的目的。
+这里我添加了一个变量 `$formula_text_html`，用来记录 html 转义过的公式内容，稍后会看到这样做的目的。
 
-第四处是设置 LaTeX 服务地址，原先 forkosh\.dreamhost\.com 的服务已经不能用了（很简短的公式还行，稍微复杂的公式都没法得到想要的结果），改成 l\.wordpress\.com 的服务：
+第四处是设置 LaTeX 服务地址，原先 `forkosh.dreamhost.com` 的服务已经不能用了（很简短的公式还行，稍微复杂的公式都没法得到想要的结果），改成 `l.wordpress.com` 的服务：
 
 ```diff {linenos=false}
 49c59,61
@@ -131,7 +129,7 @@ escaped
 
 - 下载 [修改后的插件](dahnielson_mimetex_v121.zip)（MD5：3d17d45b6f2375d9ded05988bfa470c0）。
 
-修改好后就可以使用了，如果是第一次用这个插件，别忘了给你的站点开一个有写权限的 cache 目录（/wp\-content/cache/）。
+修改好后就可以使用了，如果是第一次用这个插件，别忘了给你的站点开一个有写权限的 cache 目录（`/wp-content/cache/`）。
 
 试用一下吧，在文章中输入这样的内容：
 

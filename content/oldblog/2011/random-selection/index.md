@@ -9,8 +9,7 @@ tags:
 - Random Sample
 categories:
 - 算法
-summary: 问题描述：假设我们有一堆数据（可能在一个链表里，也可能在文件里），数量未知。要求只遍历一次这些数据，随机选取其中的一个元素，任何一个元素被选到的概率相等。O\(n\)
-  时间，O\(1\) 辅助空间（n 是数据总数，但事先不知道）。
+summary: 问题描述：假设我们有一堆数据（可能在一个链表里，也可能在文件里），数量未知。要求只遍历一次这些数据，随机选取其中的一个元素，任何一个元素被选到的概率相等。`O(n)` 时间，`O(1)` 辅助空间（n 是数据总数，但事先不知道）。
 series:
 - random-selection
 keywords:
@@ -24,17 +23,17 @@ keywords:
 
 又是一道概率问题，不过跟之前的题目一样，这也是一道非常简单的题目。
 
-问题描述：假设我们有一堆数据（可能在一个链表里，也可能在文件里），数量未知。要求只遍历一次这些数据，随机选取其中的一个元素，任何一个元素被选到的概率相等。O\(n\) 时间，O\(1\) 辅助空间（n 是数据总数，但事先不知道）。
+问题描述：假设我们有一堆数据（可能在一个链表里，也可能在文件里），数量未知。要求只遍历一次这些数据，随机选取其中的一个元素，任何一个元素被选到的概率相等。`O(n)` 时间，`O(1)` 辅助空间（n 是数据总数，但事先不知道）。
 
-如果元素总数为 n，那么每个元素被选到的概率应该是 1/n。然而 n 只有在遍历结束的时候才能知道，在遍历的过程中，n 的值还不知道，可以利用乘法规则来逐渐凑出这个概率值。在 [《利用等概率 Rand5 产生等概率 Rand3》](../build-rand3-from-rand5/index.md) 中提到过，如果要通过有限步概率的加法和乘法运算，最终得到分子为 1、分母为 n 的概率，那必须在某一次运算中引入一个 n 在分母上，而分母和分子上其他的因数则通过加法、乘法、约分等规则去除。
+如果元素总数为 n，那么每个元素被选到的概率应该是 `1/n`。然而 n 只有在遍历结束的时候才能知道，在遍历的过程中，n 的值还不知道，可以利用乘法规则来逐渐凑出这个概率值。在 [《利用等概率 Rand5 产生等概率 Rand3》](../build-rand3-from-rand5/index.md) 中提到过，如果要通过有限步概率的加法和乘法运算，最终得到分子为 1、分母为 n 的概率，那必须在某一次运算中引入一个 n 在分母上，而分母和分子上其他的因数则通过加法、乘法、约分等规则去除。
 
-很容易能够想到这样一个简单的式子来凑出 1/n：
+很容易能够想到这样一个简单的式子来凑出 `1/n`：
 
 $$
 p_i=\frac{1}{i}\times\frac{i}{i+1}\times\frac{i+1}{i+2}\times\cdots\times\frac{n-1}{n}=\frac{1}{n}
 $$
 
-下面用一段 Python 程序来实现这个过程，这里设计了一个类，叫做 ` RandomSelector `，提供方法 ` AddItem `，在遍历数据的时候把每个元素通过这个函数传进来，最后通过 ` SelectedItem ` 获取随机选择的元素。这么做主要是为了强调事先不知道元素的总数。
+下面用一段 Python 程序来实现这个过程，这里设计了一个类，叫做 `RandomSelector`，提供方法 `AddItem`，在遍历数据的时候把每个元素通过这个函数传进来，最后通过 `SelectedItem` 获取随机选择的元素。这么做主要是为了强调事先不知道元素的总数。
 
 ```python {linenos=table}
 from random import Random
@@ -59,7 +58,7 @@ class RandomSelector:
     self._count += 1
 ```
 
-在 Python 2\.5 中，` yield ` 不仅是个语句，更是一个表达式（详见 [PEP 342 \-\- Coroutines via Enhanced Generators](http://www.python.org/dev/peps/pep-0342/)，查阅 Generator 和 Coroutine，中文叫做“生成器”和“协程”），利用 ` yield ` 可以把程序写的更简洁一些：
+在 Python 2.5 中，`yield` 不仅是个语句，更是一个表达式（详见 [PEP 342 -- Coroutines via Enhanced Generators](http://www.python.org/dev/peps/pep-0342/)，查阅 Generator 和 Coroutine，中文叫做「生成器」和「协程」），利用 `yield` 可以把程序写的更简洁一些：
 
 ```python {linenos=table}
 from random import Random
@@ -77,7 +76,7 @@ def RandomSelect(rand=None):
     count += 1
 ```
 
-下面这段程序示意了如何调用 ` RandomSelect ` 函数来测验其随机效果：
+下面这段程序示意了如何调用 `RandomSelect` 函数来测验其随机效果：
 
 ```python {linenos=table}
 # Sample code to use RandomSelect function
@@ -103,7 +102,7 @@ print occurrences
 
 可见每个元素被选中的次数相差不大，是等概率的。
 
-如果用 C\#，就可以利用 ` IEnumerable ` 来实现，比如：
+如果用 C#，就可以利用 `IEnumerable` 来实现，比如：
 
 ```c# {linenos=table}
 public static bool RandomSelect(
@@ -134,16 +133,13 @@ public static bool RandomSelect(
 }
 ```
 
-核心代码也就那么两三行而已，时间复杂度为 O\(n\)（并且只遍历一次），空间复杂度为 O\(1\)。其中 Python 的 ` random.randint(x, y) ` 返回 \[x,
-y\] 之间的随机整数；C\# 的 ` Random.Next(x) ` 返回 \[0,
-x\) 之间的随机整数。
+核心代码也就那么两三行而已，时间复杂度为 `O(n)`（并且只遍历一次），空间复杂度为 `O(1)`。其中 Python 的 `random.randint(x, y)` 返回 `[x, y]` 之间的随机整数；C# 的 `Random.Next(x)` 返回 `[0, x)` 之间的随机整数。
 
-看一下概率，如果最终被选取的是第 i 个元素（1 \<= i \<=
-n），那就必须是遍历到它的时候，恰好被选中（` random.randint(0, i - 1) == 0 ` 或者 ` Random.Next(i) == 0 `），并且从此之后都恰好再也没有被其他元素替换掉。这些事件彼此独立，计算概率的方法正好是上面提到的式子，最终的概率就是 1/n。
+看一下概率，如果最终被选取的是第 i 个元素（`1 <= i <= n`），那就必须是遍历到它的时候，恰好被选中（`random.randint(0, i - 1) == 0` 或者 `Random.Next(i) == 0`），并且从此之后都恰好再也没有被其他元素替换掉。这些事件彼此独立，计算概率的方法正好是上面提到的式子，最终的概率就是 `1/n`。
 
-OK，问题解决了。结束之前再做个简单的扩展，改成等概率随机选取 m 个元素（可知每个元素被选中的概率都是 m/n）。
+OK，问题解决了。结束之前再做个简单的扩展，改成等概率随机选取 m 个元素（可知每个元素被选中的概率都是 `m/n`）。
 
-解决办法也非常简单，只要在上面的代码中，把 ` selectedItem `（` selection `）改成一个长度为 m 的数组，稍作调整就可以了。
+解决办法也非常简单，只要在上面的代码中，把 `selectedItem`（`selection`）改成一个长度为 m 的数组，稍作调整就可以了。
 
 这里就给出 Python 的程序片段：
 
@@ -167,7 +163,7 @@ def RandomSample(m=1, rand=None):
     count += 1
 ```
 
-时间复杂度 O\(n\)，空间复杂度 O\(m\)（不可能是 O\(1\) 的）。概率的计算方法为：
+时间复杂度 `O(n)`，空间复杂度 `O(m)`（不可能是 `O(1)` 的）。概率的计算方法为：
 
 $$
 p_i=\left\{\begin{array}{ll} \frac{m}{i}\times\frac{i}{i+1}\times\frac{i+1}{i+2}\times\cdots\times\frac{n-1}{n}=\frac{m}{n} & i > m \\

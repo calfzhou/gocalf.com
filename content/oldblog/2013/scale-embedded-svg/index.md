@@ -8,7 +8,7 @@ tags:
 - SVG
 categories:
 - 建站
-summary: 在 HTMl 页面中用 \<object\> 标签嵌入的 SVG 图片如何能跟随窗口大小自动缩放呢？
+summary: 在 HTMl 页面中用 `<object>` 标签嵌入的 SVG 图片如何能跟随窗口大小自动缩放呢？
 keywords:
 - Scalable Vector Graphics
 - Auto Scale
@@ -38,7 +38,7 @@ keywords:
 
 通常情况下，还是推荐使用 `<object>` 标签来嵌入 SVG 图片，[reStructuredText](http://docutils.sourceforge.net/rst.html) 中默认的 [figure directive](http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure) 和 [image directive](http://docutils.sourceforge.net/docs/ref/rst/directives.html#image) 在遇到 SVG 图片时也是使用 `<object>` 标签的。
 
-用 `<object>` 标签的时候，SVG 图片似乎就不会随着该标签的宽度和高度设置而有任何缩放。本文保留当时的处理方法，不再展示交互示例。
+用 `<object>` 标签的时候，SVG 图片似乎就不会随着该标签的宽度和高度设置而有任何缩放。
 
 在询问了万能的 Google 之后，发现了解决的办法。原来如果 SVG 的根结点如果设置了 `width` 和 `height` 属性，图片就不会自动缩放，所要做的就是去掉这两个属性（在 [Inkscape](http://inkscape.org/) 中删除它们会使得它们被修改为 `100%`），然后根据图片中内容所占用的区域，设置 `viewBox`。有人说还要设置 `preserveAspectRatio`，不过我还没有仔细研究这个属性的具体影响，反正目前看起来加不加都行。
 

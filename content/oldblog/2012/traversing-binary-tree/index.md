@@ -9,7 +9,7 @@ tags:
 - Binary Tree
 categories:
 - 算法
-summary: 最近工作忙，没时间思考复杂的问题了。正好要招人就得有面试的嘛，自己也温习一下，要不然怎么去问别人。今天复习一下二叉树的遍历，前序（pre\-order，NLR）、中序（in\-order，LNR）、后序（post\-order，LRN）、层序（level\-order），用和不用递归。
+summary: 最近工作忙，没时间思考复杂的问题了。正好要招人就得有面试的嘛，自己也温习一下，要不然怎么去问别人。今天复习一下二叉树的遍历，前序（pre-order，NLR）、中序（in-order，LNR）、后序（post-order，LRN）、层序（level-order），用和不用递归。
 keywords:
 - 二叉树
 - 栈
@@ -22,7 +22,7 @@ keywords:
 
 最近工作忙，没时间思考复杂的问题了。正好要招人就得有面试的嘛，自己也温习一下，要不然怎么去问别人。
 
-今天复习一下二叉树的遍历，前序（pre\-order，NLR）、中序（in\-order，LNR）、后序（post\-order，LRN）、层序（level\-order），用和不用递归。
+今天复习一下二叉树的遍历，前序（pre-order，NLR）、中序（in-order，LNR）、后序（post-order，LRN）、层序（level-order），用和不用递归。
 
 概念就不用多解释了，前、中、后是指根结点的访问时机，在左、右子树之前、中间、或之后。层序就是从根结点开始从上至下、从左到右地依次访问。
 
@@ -31,10 +31,10 @@ keywords:
 
 如上图所示的一棵二叉树，对应的遍历结果分别是：
 
-- 前序（NLR）：` A B D C E G H F I `
-- 中序（LNR）：` D B A G E H C F I `
-- 后序（LRN）：` D B G H E I F C A `
-- 层序：` A B C D E F G H I `
+- 前序（NLR）：`A B D C E G H F I`
+- 中序（LNR）：`D B A G E H C F I`
+- 后序（LRN）：`D B G H E I F C A`
+- 层序：`A B C D E F G H I`
 
 ## 一、用递归处理二叉树的前序、中序和后序遍历
 
@@ -113,7 +113,7 @@ def VisitTree_LevelOrder(root):
 
 ## 附录
 
-上面的 python 代码基于 v2\.7。另外可以用下面这段代码来定义最简单的二叉树结点类，生成最上面图示的二叉树：
+上面的 python 代码基于 v2.7。另外可以用下面这段代码来定义最简单的二叉树结点类，生成最上面图示的二叉树：
 
 ```python {linenos=table}
 class Node:

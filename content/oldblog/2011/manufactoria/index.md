@@ -21,9 +21,7 @@ keywords:
 
 这是个程序设计类的游戏，感觉就像是个状态机吧（有限自动机？），从纸带上读取数据，具有分支和写数据的功能，利用简单的几种元件组装成一台可以识别特定模式或者完成指定运算的机器。
 
-游戏的背景大概是一家工业机器人（Industrial
-Robotics）生产厂请你（机器人工程师，Robotics
-Engineer）来测试和修复他们制造的机器人，所谓的“测试”就是对机器人内部纸带上的红蓝色点进行检测，判断其是否满足指定的模式；“修复”就是对纸带上的红蓝色点进行处理或者运算，产生指定的结果。这个游戏还支持自定义关卡，看到过有人提出求最大公约数之类的问题。
+游戏的背景大概是一家工业机器人（Industrial Robotics）生产厂请你（机器人工程师，Robotics Engineer）来测试和修复他们制造的机器人，所谓的「测试」就是对机器人内部纸带上的红蓝色点进行检测，判断其是否满足指定的模式；「修复」就是对纸带上的红蓝色点进行处理或者运算，产生指定的结果。这个游戏还支持自定义关卡，看到过有人提出求最大公约数之类的问题。
 
 不知道别人是怎么思考的，反正我是先画想好用什么算法，然后在纸上画状态图把细节尤其是边界条件考虑清楚，然后开始布局，通过验证之后再不断地优化（减少使用的元件数量）。
 
@@ -31,7 +29,7 @@ Engineer）来测试和修复他们制造的机器人，所谓的“测试”就
 
 我的建议是每个程序员都应该玩一下这个游戏，我甚至考虑可以把它用在第一轮面试上，跟 candidate 随便聊聊天，让他玩一两关看看他的思路如何。
 
-Matrix67 的这篇博客是一年多之前发的了，后来我又找到了这个游戏的 [官方网站](http://pleasingfungus.com/)（[http://pleasingfungus\.com/#!/Manufactoria](http://pleasingfungus.com/#!/Manufactoria)），发现游戏版本更新了，细节上有不少改进，增加了不少测试用例，统计出来的运行时间也有所变化（另外要注意的是，在新版本中如果想让两个传送带正交于某个方格，需要按 Shift 键，否则就会替换）。
+Matrix67 的这篇博客是一年多之前发的了，后来我又找到了这个游戏的 [官方网站](http://pleasingfungus.com/)（[http://pleasingfungus.com/#!/Manufactoria](http://pleasingfungus.com/#!/Manufactoria)），发现游戏版本更新了，细节上有不少改进，增加了不少测试用例，统计出来的运行时间也有所变化（另外要注意的是，在新版本中如果想让两个传送带正交于某个方格，需要按 Shift 键，否则就会替换）。
 
 {{< download src="Manufactoria.swf" text="下载 Manufactoria.swf" >}}
 
@@ -39,9 +37,9 @@ Matrix67 的这篇博客是一年多之前发的了，后来我又找到了这�
 
 分享一下我在各关的解法（进入一个关卡，点击磁盘图标，在文本框中粘贴解法代码即可；注意贴入的代码中的关卡序号不需要与当前所在的关卡序号一致，游戏会自动跳转到正确的关卡，除非你还没有激活那一关）。另外很多关卡都有无数种解法，我一般会尽量优化使之元件个数最少（比较测试时间没有太大意义，一旦下一个版本的测试用例变化，测试时间就不一样了）。也推荐参考 [@837951602 的解法整理](https://github.com/837951602/Blog/blob/master/Implements/MANUFACTORIA%20cheapest%20designs.md)。
 
-下面这张图是游戏当前版本（v1\.30）的关卡分布图，为了方便查找，我特意用红色字体添加了关卡序号在每关图标的左上角处。其中第 29 到 31 关是隐藏关，要通过了第 24 关才能显示出来。
+下面这张图是游戏当前版本（v1.30）的关卡分布图，为了方便查找，我特意用红色字体添加了关卡序号在每关图标的左上角处。其中第 29 到 31 关是隐藏关，要通过了第 24 关才能显示出来。
 
-{{< image src="manufactoria-main.png" alt="manufactoria-main" caption="Manufactoria 主界面（添加了关卡序号）" >}}
+![Manufactoria 主界面（添加了关卡序号）](manufactoria-main.png)
 
 我的各关卡解决方案（第 30 和 31 关没有时间优化了，其他关都是尽可能优化过的）：
 
@@ -97,9 +95,9 @@ Matrix67 的这篇博客是一年多之前发的了，后来我又找到了这�
 ～～～～～～～～～～ 分隔符 ～～～～～～～～～～
 
 Level 1: Robotoast! ACCEPT: Move robots from the entrance (top) to the exit (bottom)!
-:   没有任何悬念，用 3 个元件，耗时 32764（注意这是 v1\.30 里的计时单位，在老版本中大概是 0:02）。
+:   没有任何悬念，用 3 个元件，耗时 32764（注意这是 v1.30 里的计时单位，在老版本中大概是 0:02）。
 
-Level 2: Robocoffee! If a robot\'s string starts with blue, accept\. Otherwise, reject!
+Level 2: Robocoffee! If a robot's string starts with blue, accept. Otherwise, reject!
 :   要求接受以蓝色开头的机器人。也没有任何可以商量的，3 个元件，耗时 24572。
 
 Level 3: Robolamp! ACCEPT: if there are three or more blues!
@@ -137,12 +135,12 @@ Level 13: Officers! OUTPUT: With blue as 1 and red as 0, add 1 to the binary str
 
     19 个元件，81580 时间。
 
-Level 14: Generals! OUTPUT: Substract 1 from the binary string! (Input\>= 1)
+Level 14: Generals! OUTPUT: Substract 1 from the binary string! `(Input>= 1)`
 :   减 1 操作，跟第 13 关其实是一样的，红色和蓝色互换就好了。19 个元件，79750 时间。
 
     但这一关还可以再稍微调整一下布局，变成 18 个元件，81686 时间。
 
-Level 15: Robotanks! ACCEPT: With blue as 1 and red as 0, accept binary strings \> 15!
+Level 15: Robotanks! ACCEPT: With blue as 1 and red as 0, accept binary strings > 15!
 :   要求接受大于 15 的数字。也就是要求大于或等于 16，即 1 后面至少有四个二进制位。于是就是要判断第一个蓝色后面是否至少有四个色点，不论颜色。25 个元件，19958 时间。
 
 Level 16: Robospies! ACCEPT: With blue as 1 and red as 0, accept natural powers of four!
@@ -151,17 +149,17 @@ Level 16: Robospies! ACCEPT: With blue as 1 and red as 0, accept natural powers 
 Level 17: Androids! ACCEPT: Some number of blue, then the same number of red!
 :   要求纸带上的色点必须是若干个蓝色后面跟着同样数量的红色。开始也是觉得很难，主要是没有办法计数。当然解决办法就是一次一次循环，每次循环中判断一对红蓝色点。对于这种需要循环处理的问题，我一般都用一个黄色作为分隔符作为字符串的终结标记。12 个元件，63041 时间。
 
-Level 18: Robo\-children! ACCEPT: An equal number of blue and red, in any order!
+Level 18: Robo-children! ACCEPT: An equal number of blue and red, in any order!
 :   判断色带上蓝色和红色的数量是否恰好相等。依旧是每次循环检查一对。23 个元件，266582 时间。
 
-    PS：2024\-10 [@837951602](https://github.com/837951602) 在评论中提供了一个更优的解法，只用 20 个元件。
+    PS：2024-10 [@837951602](https://github.com/837951602) 在评论中提供了一个更优的解法，只用 20 个元件。
 
-Level 19: Police! OUTPUT: Put a yellow in the middle of the (even\-length) string!
+Level 19: Police! OUTPUT: Put a yellow in the middle of the (even-length) string!
 :   输入的色带上有偶数个色点（不用判断是否满足），要求在中间位置插入一个黄色。这一关开始想了好久，排满了整个棋盘才搞定，后来一直优化到 40 个元件。想到了两种方案，一种是在颜色串的首尾各放一个色点，每次循环的时候让两个色点分别向中间移动一格，直到二者相遇。另一种是用起始位置放两个色点，每次循环的时候一个色点往后移动一格，另一个色点往后移动两个。我最后的优化版是采用第二种方法的。40 个元件，291584 时间。
 
     如果输入的色带上有奇数个色点，那我的算法会在中间色点的后方插入黄色。
 
-Level 20: Judiciary! ACCEPT: (Even\-length) strings that repeat midway through!
+Level 20: Judiciary! ACCEPT: (Even-length) strings that repeat midway through!
 :   判断色带上的色点（偶数个）是否恰好前半部分与后半部分的排列完全一样。比如如果前半部分是红蓝红红蓝，后半部分也必须是红蓝红红蓝。这一关我是直接利用了第 19 关和第 29 关（恰好我是先完成了第 29 关才回过头玩的这关），即先给这个颜色串的中间位置添加一个黄色（直接照搬第 19 关的布局），然后利用第 29 关的布局判断黄色分割的两个子串是否完全一致。
 
     52 个元件，319428 时间。
@@ -205,10 +203,10 @@ Level 28: Robomecha! OUTPUT: The input, but with the last symbol moved to the fr
 Level 29: Seraphim! ACCEPT: Two identical strings, separated by a green!
 :   判断由绿色点分开的两个色串是否完全相等。也挺简单的，补一个绿色作为终止符，取出色串一的第一个颜色，把其他的写回纸带，判断色串二的第一个颜色跟它是否一样；这时候两个色串都去掉了第一个颜色，而且刚好色串二跟色串一交换了顺序，再重复用同样的方法判断下去即可。21 个元件，166182 时间。
 
-Level 30: Ophanim! ACCEPT: Read the tape as two numbers, A and B, split by a green: accept if A \> B!
+Level 30: Ophanim! ACCEPT: Read the tape as two numbers, A and B, split by a green: accept if `A > B`!
 :   由绿色点分开的两个色串，从二进制数字的角度判断是否前一个数大于后一个数。
 
-    我用的方法是求 B \- A，当然不用记录完整的结果，只要记录借位状态即可。不过我没有再进行优化，现在用了 88 个元件，60617 时间。估计能优化掉一小半的元件。
+    我用的方法是求 `B - A`，当然不用记录完整的结果，只要记录借位状态即可。不过我没有再进行优化，现在用了 88 个元件，60617 时间。估计能优化掉一小半的元件。
 
-Level 31: Metatron! OUTPUT: Read the tape as two numbers, A and B, split by a green: output A + B!
+Level 31: Metatron! OUTPUT: Read the tape as two numbers, A and B, split by a green: output `A + B`!
 :   计算被绿色分开的两个数字之和。基本上就是从最低位逐位加上去。同样是还没有优化，应该能减少一半以上的元件。现在用 120 个元件，108630 时间。

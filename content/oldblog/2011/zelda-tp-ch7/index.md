@@ -91,11 +91,11 @@ keywords:
 
 ### 天空之城迷宫
 
-{{< image src="tp_ch07_11.jpg" alt="tp_ch07_11" caption="天空之城迷宫第一层地图" >}}
+![天空之城迷宫第一层地图](tp_ch07_11.jpg)
 
-{{< image src="tp_ch07_12.jpg" alt="tp_ch07_12" caption="天空之城第二层地图" >}}
+![天空之城第二层地图](tp_ch07_12.jpg)
 
-{{< image src="tp_ch07_13.jpg" alt="tp_ch07_13" caption="天空之城第三层到第五层地图" >}}
+![天空之城第三层到第五层地图](tp_ch07_13.jpg)
 
 来到天空城，林克在北边不远见到个池塘，水里有一个炸弹和卢比，西边的房间是欧库的商店，这里可以得到欧库。之后回到外面向北前进，要注意在起风的时候是有被吹下去的危险的，而且在起风的时候是不能用弓箭的，攻击门上面的机关可以打开大门，然后朝北进入房间 1。
 
@@ -178,4 +178,4 @@ keywords:
 参考：
 
 - [《塞尔达传说：黄昏公主》图文全攻略](http://wii.tgbus.com/glmj/gl/200611/20061129114849.shtml) by WiiBbs 攻研部 Szh、三代鬼彻、天堂的翅膀
-- [《塞尔达传说 黄昏公主》完美攻略研究](http://www.cngba.com/thread-16520313-1-1.html) by www\.cngba\.com 鸡蛋
+- [《塞尔达传说 黄昏公主》完美攻略研究](http://www.cngba.com/thread-16520313-1-1.html) by www.cngba.com 鸡蛋

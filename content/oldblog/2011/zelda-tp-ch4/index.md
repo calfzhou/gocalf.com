@@ -65,9 +65,9 @@ keywords:
 
 ### 海利亚湖
 
-林克根据得到的标志到地图右下角的哨塔找到奥鲁并获得奥鲁的信物（Auru\'s memo），之后再来到湖中间的大炮处并将奥鲁的信物出示给他看，他会将林克发射到戈鲁多沙漠（Gerudo Desert）。
+林克根据得到的标志到地图右下角的哨塔找到奥鲁并获得奥鲁的信物（Auru's memo），之后再来到湖中间的大炮处并将奥鲁的信物出示给他看，他会将林克发射到戈鲁多沙漠（Gerudo Desert）。
 
-{{< image src="tp_ch04_09.jpg" alt="tp_ch04_09" caption="在湖中央“乘坐”奥鲁的大炮" original="tp_ch04_09.jpg" width=500 >}}
+{{< image src="tp_ch04_09.jpg" alt="tp_ch04_09" caption="在湖中央「乘坐」奥鲁的大炮" original="tp_ch04_09.jpg" width=500 >}}
 
 {{< image src="tp_ch04_10.jpg" alt="tp_ch04_10" caption="来到戈鲁多沙漠（Gerudo Desert）" original="tp_ch04_10.jpg" width=500 >}}
 
@@ -77,17 +77,17 @@ keywords:
 
 {{< image src="tp_ch04_11.jpg" alt="tp_ch04_11" caption="戈鲁多沙漠（Gerudo Desert）北方的营地" original="tp_ch04_11.jpg" width=500 >}}
 
-### 仲裁者之地外围（Outside Arbiter\'s Grounds）
+### 仲裁者之地外围（Outside Arbiter's Grounds）
 
-一路朝西北方向前进，林克在最里面干掉一个腰部闪闪发亮的兽人卫兵后掉落一把小钥匙，林克将广场上的烤猪打掉会掉落一片 [心之碎片 18]({{< relref "../../2012/zelda-tp-appendix/index.md#h18" >}})。随后回到路上的一个锁住的门，打开进入后和兽人头领布尔布林决斗（用背斩很容易就能解决掉），战胜后用猪冲破栅栏来到仲裁者之地（Arbiter\'s Grounds）。
+一路朝西北方向前进，林克在最里面干掉一个腰部闪闪发亮的兽人卫兵后掉落一把小钥匙，林克将广场上的烤猪打掉会掉落一片 [心之碎片 18]({{< relref "../../2012/zelda-tp-appendix/index.md#h18" >}})。随后回到路上的一个锁住的门，打开进入后和兽人头领布尔布林决斗（用背斩很容易就能解决掉），战胜后用猪冲破栅栏来到仲裁者之地（Arbiter's Grounds）。
 
 {{< image src="tp_ch04_12.jpg" alt="tp_ch04_12" caption="在仲裁者之地外围" original="tp_ch04_12.jpg" width=500 >}}
 
 ### 仲裁者之地（沙漠刑场迷宫）
 
-{{< image src="tp_ch04_13.jpg" alt="tp_ch04_13" caption="仲裁者之地（沙漠刑场迷宫）一层、二层地图" >}}
+![仲裁者之地（沙漠刑场迷宫）一层、二层地图](tp_ch04_13.jpg)
 
-{{< image src="tp_ch04_14.jpg" alt="tp_ch04_14" caption="仲裁者之地（沙漠刑场迷宫）地下一层、二层地图" >}}
+![仲裁者之地（沙漠刑场迷宫）地下一层、二层地图](tp_ch04_14.jpg)
 
 这里到处都是流沙，林克站在上面会不断下沉，所以要尽量快速通过，另外中间的旋涡状的流沙碰到就会直接沉下去。右边墙上有一个可以抓的地方，用飞爪抓过去，然后朝房间左边走，在房间左上角能看到开关，用飞爪抓过来可以打开北面的门，进去后来到房间 1。
 
@@ -158,4 +158,4 @@ keywords:
 参考：
 
 - [《塞尔达传说：黄昏公主》图文全攻略](http://wii.tgbus.com/glmj/gl/200611/20061129114849.shtml) by WiiBbs 攻研部 Szh、三代鬼彻、天堂的翅膀
-- [《塞尔达传说 黄昏公主》完美攻略研究](http://www.cngba.com/thread-16520313-1-1.html) by www\.cngba\.com 鸡蛋
+- [《塞尔达传说 黄昏公主》完美攻略研究](http://www.cngba.com/thread-16520313-1-1.html) by www.cngba.com 鸡蛋

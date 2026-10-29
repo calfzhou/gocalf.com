@@ -25,11 +25,11 @@ keywords:
 
 ### 王城迷宫
 
-{{< image src="tp_ch09_02.jpg" alt="tp_ch09_02" caption="海拉尔城堡迷宫第一层地图" >}}
+![海拉尔城堡迷宫第一层地图](tp_ch09_02.jpg)
 
-{{< image src="tp_ch09_03.jpg" alt="tp_ch09_03" caption="海拉尔城堡迷宫第二层和第三层地图" >}}
+![海拉尔城堡迷宫第二层和第三层地图](tp_ch09_03.jpg)
 
-{{< image src="tp_ch09_04.jpg" alt="tp_ch09_04" caption="海拉尔城堡迷宫第四层地图" >}}
+![海拉尔城堡迷宫第四层地图](tp_ch09_04.jpg)
 
  **房间 1：** 先去东面，在门前会被一个结界所困住并会出现大量的小怪物，碰到结界的周围是会受伤的，把他们全部消灭掉后结界会消失，并且之后几乎大部分战斗都会以结界来困住林克，所以必须消灭掉结界中的怪物才能继续前进进入房间 2。
 
@@ -138,4 +138,4 @@ keywords:
 参考：
 
 - [《塞尔达传说：黄昏公主》图文全攻略](http://wii.tgbus.com/glmj/gl/200611/20061129114849.shtml) by WiiBbs 攻研部 Szh、三代鬼彻、天堂的翅膀
-- [《塞尔达传说 黄昏公主》完美攻略研究](http://www.cngba.com/thread-16520313-1-1.html) by www\.cngba\.com 鸡蛋
+- [《塞尔达传说 黄昏公主》完美攻略研究](http://www.cngba.com/thread-16520313-1-1.html) by www.cngba.com 鸡蛋
