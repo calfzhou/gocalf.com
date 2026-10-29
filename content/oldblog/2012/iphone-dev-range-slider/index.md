@@ -320,7 +320,7 @@ beginTracking 和 endTracking 都很简单，在 beginTracking 的时候判断�
 }
 ```
 
-最后就是修改 smallValue、largeValue 和整个选取范围的方法，这些方法会在滑动过程中由上面的 continueTrackingWithTouch:withEvent: 调用，也可以由其他程序直接调用。
+最后就是修改 smallValue、largeValue 和整个选取范围的方法，这些方法会在滑动过程中由上面的 `continueTrackingWithTouch:withEvent:` 调用，也可以由其他程序直接调用。
 
 不但要保证 smallValue 和 largeValue 都在最小值和最大值范围之内，还要根据最小范围和最大范围的限制来进行适当的调整。
 

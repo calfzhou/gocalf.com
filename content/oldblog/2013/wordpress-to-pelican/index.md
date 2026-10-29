@@ -117,4 +117,4 @@ reStructuredText 的段落嵌套非常的强大，而 Markdown 似乎忘记了�
 - Featured Image：WordPress 自带了这个，而且大多数主题都支持它，就是每篇文章有一张特色图片。这个需要去考察一下看看有没有现成的插件，当然主题也需要能够支持它。
 - 系列文章插件：系列文章是个很好的东西，把一系列非常相关的文章按照时间组织在一起。之前就一直在用，Pelican 倒是也有一个相关的插件，但还不完全是我想要的。等有空的时候再研究研究。
 - 主题：对 CSS 的把控力几乎为零，所以主题的制作还是很让人头疼的一件事情。我会继续寻找一个更好的主题，或者如果有精力，会考虑自己做一个主题。
-  - [2013-11-12] 现在改用 [Elegant](http://oncrashreboot.com/elegant-best-pelican-theme-features) 主题，非常的清新，而且作者很活跃，一直在不断地完善该主题。
+  - 【2013-11-12】现在改用 [Elegant](http://oncrashreboot.com/elegant-best-pelican-theme-features) 主题，非常的清新，而且作者很活跃，一直在不断地完善该主题。

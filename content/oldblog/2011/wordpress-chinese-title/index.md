@@ -23,7 +23,6 @@ keywords:
 Cufon（应该写做 Cufón）是通过 JavaScript 在网页中进行文字渲染的，可通过以下两个链接了解它：
 
 - [http://en.wikipedia.org/wiki/Scalable_Inman_Flash_Replacement](http://en.wikipedia.org/wiki/Scalable_Inman_Flash_Replacement)
-
 - [http://cufon.shoqolate.com/generate/](http://cufon.shoqolate.com/generate/)
 
 关键问题是 Cufon 对中文字体的支持不是很理想（不是做不到，只是中文字体包实在太大了）。目前的 work around 就是暂时禁用 Cufon。我现在使用的主题是大名鼎鼎的 LightWord，它使用了 Cufon。不过在它的配置项中有关于 Cufon 的设置，非常方便，在后台进入 Appearance->LightWord Settings，在 General settings 中就可以看到 Cufon settings，改为 Disabled 即可。

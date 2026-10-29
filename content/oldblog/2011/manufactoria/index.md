@@ -97,7 +97,7 @@ Matrix67 的这篇博客是一年多之前发的了，后来我又找到了这�
 Level 1: Robotoast! ACCEPT: Move robots from the entrance (top) to the exit (bottom)!
 :   没有任何悬念，用 3 个元件，耗时 32764（注意这是 v1.30 里的计时单位，在老版本中大概是 0:02）。
 
-Level 2: Robocoffee! If a robot\'s string starts with blue, accept. Otherwise, reject!
+Level 2: Robocoffee! If a robot's string starts with blue, accept. Otherwise, reject!
 :   要求接受以蓝色开头的机器人。也没有任何可以商量的，3 个元件，耗时 24572。
 
 Level 3: Robolamp! ACCEPT: if there are three or more blues!

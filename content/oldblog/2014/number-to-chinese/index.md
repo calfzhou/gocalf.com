@@ -162,11 +162,11 @@ def add_tests():
 add_tests()
 ```
 
-上面的示意中，假设测试用例保存在一个叫做「`number_data.txt`」的 TSV 文件中。每行用 TAB 分割为两列，分别是阿拉伯数字和期望的中文读法。
+上面的示意中，假设测试用例保存在一个叫做 `number_data.txt` 的 TSV 文件中。每行用 TAB 分割为两列，分别是阿拉伯数字和期望的中文读法。
 
-「`add_tests`」方法对每一个测试用例，调用「`create_number_test_function`」创建一个测试方法，添加到测试类「TestTranslateNumberToChinese」中。
+`add_tests` 方法对每一个测试用例，调用 `create_number_test_function` 创建一个测试方法，添加到测试类 `TestTranslateNumberToChinese` 中。
 
-假设这段测试代码所在的文件叫做「`test_translate_number_to_chinese.py`」，那么在命令行运行如下命令就可以把所有的测试用例都测一遍。
+假设这段测试代码所在的文件叫做 `test_translate_number_to_chinese.py`，那么在命令行运行如下命令就可以把所有的测试用例都测一遍。
 
 ```shell {linenos=table}
 python -m unittest test_translate_number_to_chinese
@@ -186,7 +186,7 @@ python -m unittest test_translate_number_to_chinese
 
 一个万组内，如果高位数字是 0，那么是否需要读出来就看更高的万组是什么情况了。如果没有更高的万组，就不用读，否则就需要。比如 0200（实际上首位的 0 就不出现了）：二百、10200：一万零二百。
 
-添加两个局部变量来记录一下状态，一个是「`group_is_zero`」记录当前处理的万组是否仍然是全 0，另一个是「`need_zero`」记录是否需要添加一个「零」。
+添加两个局部变量来记录一下状态，一个是 `group_is_zero` 记录当前处理的万组是否仍然是全 0，另一个是 `need_zero` 记录是否需要添加一个「零」。
 
 把上面 `translate_number_to_chinese` 中的 core loop 修改一下，得到：
 

@@ -129,4 +129,4 @@ $ cat private-diary.txt
 
 当然也有反对的声音，所以建议大家先多了解了解再决定要不要使用这个方法。
 
-- [Don\'t do this](http://article.gmane.org/gmane.comp.version-control.git/113221)
+- [Don't do this](http://article.gmane.org/gmane.comp.version-control.git/113221)

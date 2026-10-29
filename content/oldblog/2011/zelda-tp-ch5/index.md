@@ -35,7 +35,7 @@ keywords:
 
 ### 雪山
 
-找到阿雪后，她告诉林克，前面的暴风雪太大，普通人根本不可能通过，只有一种叫 Reekfish 的特殊红鱼能通过前面的暴风雪地带。拿到阿雪的草图（Ashei\'s Sketch），林克决定找到这种鱼。
+找到阿雪后，她告诉林克，前面的暴风雪太大，普通人根本不可能通过，只有一种叫 Reekfish 的特殊红鱼能通过前面的暴风雪地带。拿到阿雪的草图（Ashei's Sketch），林克决定找到这种鱼。
 
 {{< image src="tp_ch05_03.jpg" alt="tp_ch05_03" caption="得到阿雪的草图" original="tp_ch05_03.jpg" width=500 >}}
 

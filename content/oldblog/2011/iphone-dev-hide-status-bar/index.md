@@ -43,7 +43,6 @@ keywords:
 相关的方法或属性是 [UIApplication](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html) 的：
 
 - [setStatusBarHidden:withAnimation:](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instm/UIApplication/setStatusBarHidden:withAnimation:)（iOS 3.2+）
-
 - [statusBarHidden](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/Reference/Reference.html#//apple_ref/occ/instp/UIApplication/statusBarHidden)（iOS 2.0+）
 
 另外还有一个方法 [setStatusBarHidden:animated:](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/DeprecationAppendix/AppendixADeprecatedAPI.html#//apple_ref/occ/instm/UIApplication/setStatusBarHidden:animated:)，已经不推荐使用了（deprecated in iOS 3.2）。

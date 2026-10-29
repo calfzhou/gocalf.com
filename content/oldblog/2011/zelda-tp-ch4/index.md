@@ -65,7 +65,7 @@ keywords:
 
 ### 海利亚湖
 
-林克根据得到的标志到地图右下角的哨塔找到奥鲁并获得奥鲁的信物（Auru\'s memo），之后再来到湖中间的大炮处并将奥鲁的信物出示给他看，他会将林克发射到戈鲁多沙漠（Gerudo Desert）。
+林克根据得到的标志到地图右下角的哨塔找到奥鲁并获得奥鲁的信物（Auru's memo），之后再来到湖中间的大炮处并将奥鲁的信物出示给他看，他会将林克发射到戈鲁多沙漠（Gerudo Desert）。
 
 {{< image src="tp_ch04_09.jpg" alt="tp_ch04_09" caption="在湖中央「乘坐」奥鲁的大炮" original="tp_ch04_09.jpg" width=500 >}}
 
@@ -77,9 +77,9 @@ keywords:
 
 {{< image src="tp_ch04_11.jpg" alt="tp_ch04_11" caption="戈鲁多沙漠（Gerudo Desert）北方的营地" original="tp_ch04_11.jpg" width=500 >}}
 
-### 仲裁者之地外围（Outside Arbiter\'s Grounds）
+### 仲裁者之地外围（Outside Arbiter's Grounds）
 
-一路朝西北方向前进，林克在最里面干掉一个腰部闪闪发亮的兽人卫兵后掉落一把小钥匙，林克将广场上的烤猪打掉会掉落一片 [心之碎片 18]({{< relref "../../2012/zelda-tp-appendix/index.md#h18" >}})。随后回到路上的一个锁住的门，打开进入后和兽人头领布尔布林决斗（用背斩很容易就能解决掉），战胜后用猪冲破栅栏来到仲裁者之地（Arbiter\'s Grounds）。
+一路朝西北方向前进，林克在最里面干掉一个腰部闪闪发亮的兽人卫兵后掉落一把小钥匙，林克将广场上的烤猪打掉会掉落一片 [心之碎片 18]({{< relref "../../2012/zelda-tp-appendix/index.md#h18" >}})。随后回到路上的一个锁住的门，打开进入后和兽人头领布尔布林决斗（用背斩很容易就能解决掉），战胜后用猪冲破栅栏来到仲裁者之地（Arbiter's Grounds）。
 
 {{< image src="tp_ch04_12.jpg" alt="tp_ch04_12" caption="在仲裁者之地外围" original="tp_ch04_12.jpg" width=500 >}}
 

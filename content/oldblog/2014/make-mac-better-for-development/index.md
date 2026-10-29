@@ -51,7 +51,7 @@ keywords:
 
 ### Homebrew
 
-[Homebrew](http://brew.sh/) installs the stuff you need that Apple didn\'t.
+[Homebrew](http://brew.sh/) installs the stuff you need that Apple didn't.
 
 我电脑上的大部分工具都是通过 homebrew 安装和管理的，非常方便。虽然提供类似功能的还有 [Fink](http://www.finkproject.org/) 和 [macports](http://www.macports.org/)，但我认为 Homebrew 是最方便的。具体的就不在这里比较了，大家可以自行调研。当然，至少选择一个来帮助自己安装盒管理软件包，会让很多事情变得更容易。
 
@@ -69,7 +69,7 @@ Homebrew 默认会掌控系统中的 `/usr/local` 目录，目前我这个目录
 
 ### Python
 
-苹果系统自带了好几个版本的 Python，装在 /Library/Python 中。不过版本都不新，为了便于维护，还是自己装一个 Python 吧。用 `brew install python` 可以安装最新的 Python 2.x，用 `brew install python3` 可以安装最新的 Python 3.x。
+苹果系统自带了好几个版本的 Python，装在 `/Library/Python` 中。不过版本都不新，为了便于维护，还是自己装一个 Python 吧。用 `brew install python` 可以安装最新的 Python 2.x，用 `brew install python3` 可以安装最新的 Python 3.x。
 
 Homebrew 的 Python 已经安装了 pip，用于管理 Python 的软件包。根据 `brew info python` 提供的提示，运行下列命令对 pip 进行更新：
 
@@ -85,7 +85,7 @@ pip install virtualenv
 pip install virtualenvwrapper
 ```
 
-virtualenvwrapper 提供了很多方便的命令，还支持命令的 tab completion，这些都包含在 virtualenvwrapper.sh 文件中。在 `~/.bash_profile` 中引入该文件来激活相关的命令和功能：
+virtualenvwrapper 提供了很多方便的命令，还支持命令的 tab completion，这些都包含在 `virtualenvwrapper.sh` 文件中。在 `~/.bash_profile` 中引入该文件来激活相关的命令和功能：
 
 ```bash {linenos=table}
 export VIRTUAL_ENV_DISABLE_PROMPT=1
