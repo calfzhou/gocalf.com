@@ -61,26 +61,22 @@ keywords:
 用 SSH 客户端（我用的是 Putty）登录 Kindle，IP 地址为 `192.168.15.244`，用户名是 `root`。密码可以先试试 `mario`（针对 4.0 系统），如果不行，就将序列号输入到下面的文本框中得到密码（针对 4.0.1 系统）。
 
 ```jsx-live {css="kindle.css"}
-import { useId, useState } from 'react';
-import { Row, Stack } from 'sidera/ui';
+import { useState } from 'react';
+import { Field, Result, Stack } from 'sidera/ui';
 import { kindlePassword } from './kindle.js';
 export default function KindlePassword() {
-  const id = useId();
   const [serial, setSerial] = useState('');
   let password = '', error = '';
   try { password = kindlePassword(serial); } catch (problem) { error = problem.message; }
   return <Stack className="kindle-tool">
-    <Stack gap="small">
-      <label htmlFor={id}>Kindle 序列号</label>
-      <input id={id} type="text" value={serial} onChange={e => setSerial(e.target.value)}
-        placeholder="输入 Kindle 序列号" maxlength="64" aria-invalid={!!error} />
-    </Stack>
-    <p id={`${id}-error`} className="jsx-error" aria-live="polite">{error}</p>
-    <output className="jsx-result" hidden={!password}>
-      <span className="jsx-note">SSH 密码</span>
-      <strong className={password ? 'password-result' : 'jsx-note'}>{password || '输入序列号后显示密码'}</strong>
-    </output>
-    <p id={`${id}-hint`} className="jsx-note">（仅在当前浏览器中计算；不会上传、记录或保存任何序列号）</p>
+    <Field label="Kindle 序列号" error={error}
+      hint="仅在当前浏览器中计算；不会上传、记录或保存任何序列号。">
+      {control => <input {...control} type="text" value={serial} autoComplete="off" autoCapitalize="characters" spellCheck={false}
+        placeholder="输入 Kindle 序列号" maxlength="64" onChange={event => setSerial(event.target.value)} />}
+    </Field>
+    <Result label="SSH 密码" hidden={!password}>
+      <output aria-live="polite"><strong className="password-result">{password}</strong></output>
+    </Result>
   </Stack>;
 }
 ```

@@ -279,25 +279,21 @@ for position, digit in reversed(list(_enumerate_digits(number))):
 代码介绍完了，下面放一个用 JavaScript 实现的版本，可以随便输入一些数字试试看。
 
 ```jsx-live
-import { Row, Stack } from 'sidera/ui';
-import { useId, useState } from 'react';
+import { useState } from 'react';
+import { Field, Result, Stack } from 'sidera/ui';
 import { translateNumber } from './number-chinese.js';
 export default function NumberChinese() {
-  const id = useId();
   const [input, setInput] = useState('123456789');
   let result = '', error = '';
   try { result = translateNumber(input); } catch (problem) { error = problem.message; }
   return <Stack>
-    <Stack gap="small">
-      <label htmlFor={id}>整数</label>
-      <input id={id} type="text" value={input} onChange={e => setInput(e.target.value)}
-        placeholder="输入整数，如 -100000001" maxlength="53" aria-invalid={!!error} />
-    </Stack>
-    <p id={`${id}-error`} className="jsx-error">{error}</p>
-    <output className="jsx-result" hidden={!result}>
-      <span className="jsx-note">中文读法</span>
-      <strong className="jsx-note">{result || '输入整数后显示对应的中文读法'}</strong>
-    </output>
+    <Field label="整数" error={error}>
+      {control => <input {...control} type="text" maxlength="53" value={input} spellCheck={false}
+        placeholder="输入整数，如 -100000001" onChange={event => setInput(event.target.value)} />}
+    </Field>
+    <Result label="中文读法">
+      <output><strong>{result}</strong></output>
+    </Result>
   </Stack>;
 }
 ```

@@ -1,5 +1,5 @@
-import { Row, Stack } from 'sidera/ui';
 import { useEffect, useId, useRef, useState } from 'react';
+import { Button, Row, Stack } from 'sidera/ui';
 import { centuryRows, localToday, mod7, paperMonths, paperPath, paperSelection, weekdays, yearRows } from './calendar.js';
 const columns = [0, 1, 2, 3, 4, 5, 6];
 const blank = { century: null, ending: null, month: null, day: null };
@@ -98,9 +98,9 @@ export default function Calendar() {
       {trace.warning && <span className="jsx-error">{trace.warning}</span>}
     </output>
     <Row className="paper-toolbar" role="group" aria-label="Paper calendar controls">
-      <button type="button" data-paper-action="today" onClick={() => reset(paperSelection(localToday()))}>今天</button>
-      <button type="button" data-paper-action="clear" onClick={() => reset(blank)}>清除选择</button>
-      <button type="button" data-paper-action="size" aria-pressed={!fit} onClick={() => setFit(value => !value)}>{fit ? '实际大小' : '适应页面'}</button>
+      <Button data-paper-action="today" onClick={() => reset(paperSelection(localToday()))}>今天</Button>
+      <Button data-paper-action="clear" onClick={() => reset(blank)}>清除选择</Button>
+      <Button data-paper-action="size" aria-pressed={!fit} onClick={() => setFit(value => !value)}>{fit ? '实际大小' : '适应页面'}</Button>
     </Row>
   </Stack>;
 }
