@@ -61,6 +61,24 @@ params:
 - Prefer PowerShell for terminal commands. Avoid Bash unless explicitly requested.
 ```
 
+### Work Notes
+
+```markdown
+## Work Notes Reference
+
+My work notes live at `{PATH}`, an Obsidian Markdown repository shared across projects and general topics.
+
+- Use proactively when relevant: Decide whether notes would help with the task, then discover and read the relevant files without asking me to supply individual paths. Do not load the entire repository.
+- Navigation:
+    - `{TEAM}/`: My current team, including project/workstream subfolders.
+    - `{TEAM}/{PROJECT}/`: My current {PROJECT} workstream.
+    - `General/`, `{COMPANY}/`, `Glossary/`: General technical knowledge, {COMPANY}-specific references, and terminology.
+    - `Work/`, `Journal/`: Work summaries and chronological context; consult when relevant.
+- Search selectively: Start with the likely folder and filenames, then search contents and follow relevant note links as needed. Skip metadata, trash, and assets unless specifically needed.
+- Check freshness: Old projects and notes remain in the repository; their presence does not imply active work or current guidance. Consider dates, status, and context, and verify time-sensitive claims against current code or authoritative sources.
+- Read-only by default.
+```
+
 ### Project Shortcuts
 
 ```markdown
